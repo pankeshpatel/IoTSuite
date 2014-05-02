@@ -1,0 +1,73 @@
+devices:
+    D1 :
+        region :
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
+        type : JavaSE;
+        resources : TemperatureSensor, BadgeReader;   
+        mobile : false;
+    D2:
+        region :
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
+        type : JavaSE;    
+        resources : TemperatureSensor, Heater;
+        mobile : false;
+    D3 :
+        region :
+            Building : 15;
+            Floor : 1511;
+            Room : 15111;
+        type : JavaSE;
+        resources : TemperatureSensor, BadgeReader;   
+        mobile : false;
+    D4:
+        region :
+            Building : 15;
+            Floor : 1511;
+            Room : 15111;
+        type : JavaSE;    
+        resources : TemperatureSensor, Heater;
+        mobile : false;	    
+    D5 :
+        region :
+            Building : 15;
+            Floor : 1512;
+            Room : 15122;
+        type : JavaSE;
+        resources : TemperatureSensor, BadgeReader;   
+        mobile : false;
+    D6:
+        region :
+            Building : 15;
+            Floor : 1512;
+            Room : 15122;
+        type : JavaSE;    
+        resources : TemperatureSensor, Heater;
+        mobile : false;	    	    
+    D7 :
+        region :
+            Building : 15;
+            Floor : 1512;
+            Room : 15123;
+            type : JavaSE;
+            resources : TemperatureSensor, BadgeReader;   
+        mobile : false;
+    D8:
+        region :
+            Building : 15;
+            Floor : 1512;
+            Room : 15123;
+        type : JavaSE;    
+        resources : TemperatureSensor, Heater;
+        mobile : false;	        
+    D9 :
+        region :
+            Building : 15;
+            Floor : 1513;
+            Room : 15134;
+        type : JavaSE;
+        resources : ProfileDB;   
+        mobile : false;

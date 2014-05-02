@@ -1,0 +1,218 @@
+package iotsuite.compiler;
+
+import iotsuite.codegenerator.CompilationUnit;
+import iotsuite.codegenerator.JavaFrameworkFromST;
+import iotsuite.codegenerator.SourceFileDumper;
+import iotsuite.common.GlobalVariable;
+import iotsuite.parser.SymbolTable;
+import iotsuite.semanticmodel.Action;
+import iotsuite.semanticmodel.Command;
+import iotsuite.semanticmodel.DataAccess;
+import iotsuite.semanticmodel.DataType;
+import iotsuite.semanticmodel.UserInterface;
+import iotsuite.semanticmodel.Information;
+import iotsuite.semanticmodel.Parameter;
+import iotsuite.semanticmodel.Widget;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class UserInterfaceCompiler {
+
+	private UserInterface guiDriver;
+	private Set<Action> actions = new HashSet<Action>();
+	private Set<Command> commands = new HashSet<Command>();
+	private Parameter actionParameter;
+	private Parameter commandParameter;
+	private Set<Information> generatedInfo = new HashSet<Information>();
+	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
+	private String GUIName;
+	private String struct;
+	private Widget widget;
+
+	public UserInterfaceCompiler() {
+
+	}
+
+	public String getGUIName() {
+		return GUIName;
+	}
+
+	public String getLowerCaseGUIName() {
+		return GUIName.toLowerCase();
+	}
+
+	public void setGUIName(String computationalServiceName) {
+		this.GUIName = computationalServiceName;
+	}
+
+	public void createGUIObject() {
+		/*
+		 * guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
+		 * getActionList(), getCommandList(), getAttributeSet(), generatedInfo,
+		 * null, getDataAccessList(), getRequestType(), getReqWidget());
+		 */
+
+		guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(), getActionList(), getCommandList(), generatedInfo, null, getDataAccessList(), getRequestType(), getReqWidget());
+	}
+
+	// Code generator of the abstract classes and Logic files
+
+	public void generateCode() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceInteraction(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
+		if (GlobalVariable.activity.equals("generateDD")) {
+
+			generateGUI(); // This function call will create a partial Logic
+							// files
+			generateGUIInterface(); // This function call will create Interface
+									// of
+									// GUI.
+			generateGUIFactory();
+
+			generateGUIFactoryImpl();
+
+			// generateGUILayout();
+			// generateGUIManifest();
+		}
+
+		if (GlobalVariable.activity.equals("generateMapping")) {
+			generateGUILayout();
+			// generateGUIManifest();
+		}
+	}
+
+	private void generateGUIFactoryImpl() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver.generateAndroidUserInterfaceImpl(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
+	}
+
+	private void generateGUIFactory() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceFactory(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+	}
+
+	private void generateGUIInterface() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceInterface(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
+	}
+
+	private void generateGUILayout() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver.generateAndroidUserInterfaceLayout(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
+	}
+
+	/*
+	 * private void generateGUIManifest() { JavaFrameworkFromST
+	 * generatedGUIDriver = new JavaFrameworkFromST(); CompilationUnit
+	 * generatedCU = generatedGUIDriver.buildGUIManifest(guiDriver);
+	 * SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+	 * dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+	 * 
+	 * }
+	 */
+
+	public void generateGUI() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceLogic(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
+	}
+
+	public String getDatafromSymblTable(String variableName) {
+		return SymbolTable.getSymblTableData(variableName);
+	}
+
+	public void getDataAccessListFromSymblTable(String dataAccessStr) {
+		this.dataAccessList = SymbolTable.getDataAccessSymblTable(dataAccessStr);
+	}
+
+	public Set<DataAccess> getDataAccessList() {
+		return dataAccessList;
+	}
+
+	public void setRequestType(String struct) {
+		this.struct = struct;
+	}
+
+	public String getRequestType() {
+		return struct;
+	}
+
+	// Getter and Setter of Command
+
+	public void addCommand(String actionName, Widget widget) {
+		Command command = new Command(actionName, getCommandParameter(), widget);
+		commands.add(command);
+	}
+
+	private Set<Command> getCommandList() {
+		return commands;
+	}
+
+	// Getter and Setter of Action Parameters
+	private Parameter getActionParameter() {
+		return actionParameter;
+	}
+
+	public void addActionParameter(String parameterName, String parameterType) {
+		actionParameter = new Parameter(parameterName, new DataType(parameterType));
+	}
+
+	// Getter and Setter of Command Parameters
+
+	public void addCommandParameter(String parameterName) {
+		commandParameter = new Parameter(parameterName, new DataType(getDatafromSymblTable(parameterName)));
+	}
+
+	public Parameter getCommandParameter() {
+		return commandParameter;
+	}
+
+	// Getter and Setter of Action
+	public void addAction(String actionName, String widgetName) {
+		Action action = new Action(actionName, getActionParameter(), widgetName);
+		actions.add(action);
+	}
+
+	private Set<Action> getActionList() {
+		return actions;
+	}
+
+	// Getter and Setter of Attribute
+
+	/*
+	 * private Set<Attribute> attributeSet = new HashSet<Attribute>();
+	 * 
+	 * public void addAttribute(String fieldName, String fieldType) { Attribute
+	 * attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
+	 * attributeSet.add(attribute); }
+	 * 
+	 * public Set<Attribute> getAttributeSet() { return attributeSet; }
+	 */
+
+	public void setReqWidget(String textbox, String button, String textview) {
+		widget = new Widget(textbox, button, textview);
+	}
+
+	public Widget getReqWidget() {
+
+		return widget;
+	}
+
+}
