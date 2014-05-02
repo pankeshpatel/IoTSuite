@@ -42,7 +42,7 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
 		
 				driver$GUIdriver.name$.$action.name$GUI($action.allParameter:{ param | arg }; separator=", "$);
 				
-			}
+			} 
 		});
 			
 	}
