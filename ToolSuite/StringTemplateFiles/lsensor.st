@@ -40,8 +40,10 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 		
 		$SensorDriver.allGeneratedInfo:{ generatedInfo | 	
 		
-		$generatedInfo.type.name$ s$generatedInfo.type.name$ = obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$();
-		set$generatedInfo.name; format="capital"$(s$generatedInfo.type.name$);		
+		obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$($generatedInfo.name; format="capital"$Event);
+		
+		//$generatedInfo.type.name$ s$generatedInfo.type.name$ = obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$();
+		//set$generatedInfo.name; format="capital"$(s$generatedInfo.type.name$);		
 	   
 	}; separator="\n"$
 	
@@ -66,8 +68,11 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 						
 						$SensorDriver.allGeneratedInfo:{ generatedInfo | 	
 						
-						$generatedInfo.type.name$ s$generatedInfo.type.name$ = obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$();
-						set$generatedInfo.name; format="capital"$(s$generatedInfo.type.name$);		
+						obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$($generatedInfo.name; format="capital"$Event);
+
+						
+						//$generatedInfo.type.name$ s$generatedInfo.type.name$ = obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$();
+						//set$generatedInfo.name; format="capital"$(s$generatedInfo.type.name$);		
 					   
 					}; separator="\n"$
 					

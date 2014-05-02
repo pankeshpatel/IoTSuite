@@ -40,7 +40,7 @@ $SensorDriver.name$Keys, ISensorListener  {
   
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
    
-   @Override
+   /*@Override
    public  $generatedInfo.type.name$ get$generatedInfo.name; format="avoidCapital"$(){
 	   //TODO: Device Developer write here device logic.
 	   //Sample code for reference.   
@@ -53,7 +53,7 @@ $SensorDriver.name$Keys, ISensorListener  {
 		
 	   
        return null;
-   }
+   }*/
       
    @Override
    public void get$generatedInfo.name; format="avoidCapital"$(Listener$generatedInfo.name$ handler){

@@ -13,10 +13,10 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
   
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
    
-   @Override
+  /* @Override
    public  $generatedInfo.type.name$ get$generatedInfo.name; format="avoidCapital"$(){
 		   return null;
-   }
+   }*/
       
    @Override
    public void get$generatedInfo.name; format="avoidCapital"$(Listener$generatedInfo.name$ handler){
