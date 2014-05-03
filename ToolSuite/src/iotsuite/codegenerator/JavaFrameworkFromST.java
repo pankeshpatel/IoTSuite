@@ -92,12 +92,20 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit("Logic" + sensorDriver.getName() + ".java", templateOfSensorDriver, "Logic", "sensor", sensorDriver);
 	}
 
-	// Actuator
-	public CompilationUnit generateActuatorLogic(Actuator actuatorDriver) {
+	//JavaSE Actuator
+	public CompilationUnit generateJavaSEActuatorLogic(Actuator actuatorDriver) {
 
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("lactuator");
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("ljavaseactuator");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
-		return new CompilationUnit("Logic" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "Logic", "actuator", actuatorDriver);
+		return new CompilationUnit("Logic" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "JavaSELogic", "actuator", actuatorDriver);
+	}
+	
+	//Android Actuator
+	public CompilationUnit generateAndroidActuatorLogic(Actuator actuatorDriver) {
+
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("landroidactuator");
+		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
+		return new CompilationUnit("Logic" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "AndroidLogic", "actuator", actuatorDriver);
 	}
 
 	// Storage

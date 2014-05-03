@@ -76,7 +76,15 @@ public class SourceFileDumper {
 		 * "logic" package Logic files for Sensor, Actuator, Storage.
 		 */
 
-		if (unit.getFileCategory().equals("Logic")) {
+		if (unit.getFileCategory().equals("JavaSELogic")) {
+
+
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
+
+		}
+		
+		else if (unit.getFileCategory().equals("Logic")) {
 
 
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
@@ -97,8 +105,10 @@ public class SourceFileDumper {
 
 		}
 		
+		
+		
 		else if (unit.getFileCategory().equals("AndroidFactory") || unit.getFileCategory().equals("AndroidSensorImpl") 
-				|| unit.getFileCategory().equals("AndroidActuatorImpl") ) {
+				|| unit.getFileCategory().equals("AndroidActuatorImpl") || unit.getFileCategory().equals("AndroidLogic") ) {
 
 				//Do nothing
 
@@ -166,7 +176,15 @@ public class SourceFileDumper {
 		 * "logic" package Logic files for Sensor, Actuator, Storage.
 		 */
 
-		if (unit.getFileCategory().equals("Logic")) {
+		if (unit.getFileCategory().equals("AndroidLogic")) {
+
+
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
+
+		}
+		
+		else if (unit.getFileCategory().equals("Logic")) {
 
 
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
@@ -188,7 +206,7 @@ public class SourceFileDumper {
 		}
 		
 		else if (unit.getFileCategory().equals("JavaSEFactory") || unit.getFileCategory().equals("JavaSESensorImpl") 
-				|| unit.getFileCategory().equals("JavaSEActuatorImpl")) {
+				|| unit.getFileCategory().equals("JavaSEActuatorImpl") ||  unit.getFileCategory().equals("JavaSELogic")) {
 
 			//Do nothing
 

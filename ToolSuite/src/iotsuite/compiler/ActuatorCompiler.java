@@ -74,24 +74,24 @@ public class ActuatorCompiler {
 
 		if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
-			// Actuator's ApplicationLogic
-			generateActuatorLogic_ActuatorCompiler();
-
-			
-			
-
 			// Actuator's JavaSE-enabled
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
-				
+
+				// JavaSE Actuator's ApplicationLogic
+				generateJavaSEActuatorLogic_ActuatorCompiler();
+
 				generateJavaSEActuatorFactory_ActuatorCompiler();
-				
+
 				generateActuatorJavaSE_ActuatorCompiler();
 
 			}
 
 			// Actuator's Android-enabled
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
-				
+
+				// Android Actuator's ApplicationLogic
+				generateAndroidActuatorLogic_ActuatorCompiler();
+
 				generateAndroidActuatorFactory_ActuatorCompiler();
 
 				generateActuatorAndroid_ActuatorCompiler();
@@ -136,14 +136,13 @@ public class ActuatorCompiler {
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 	}
-	
+
 	private void generateAndroidActuatorFactory_ActuatorCompiler() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedActuatorDriver.generateAndroidActuatorFactory(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 	}
-	
 
 	private void generateActuatorInterface_ActuatorCompiler() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
@@ -153,9 +152,17 @@ public class ActuatorCompiler {
 
 	}
 
-	public void generateActuatorLogic_ActuatorCompiler() {
+	public void generateJavaSEActuatorLogic_ActuatorCompiler() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedActuatorDriver.generateActuatorLogic(actuatorDriver);
+		CompilationUnit generatedCU = generatedActuatorDriver.generateJavaSEActuatorLogic(actuatorDriver);
+		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
+		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
+
+	}
+
+	public void generateAndroidActuatorLogic_ActuatorCompiler() {
+		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedActuatorDriver.generateAndroidActuatorLogic(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 
