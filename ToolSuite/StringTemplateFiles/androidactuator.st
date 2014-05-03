@@ -1,33 +1,36 @@
 package $Actuatordriver.factoryDeviceImplActuator$;
 
+import iotsuite.android.localmiddleware.IDataListener;
+import iotsuite.android.localmiddleware.PubSubsSensingFramework;
+import android.app.Activity;
 import framework.*;
-import android.content.Context;
+
 import logic.*;
 import android.os.Bundle;
-import android.app.Dialog;
 
-/* Rename class-name with Implementation.   */
 
-public class Android$Actuatordriver.name$ extends Dialog implements I$Actuatordriver.name$ {
 
-     private Context myContext;
-  
-   public Android$Actuatordriver.name$(Context context, Logic$Actuatordriver.name$  obj) {
-		super(context);
-		this.myContext = context;
-		//this.fn = (Fake$Actuatordriver.name$) obj;
-	}
+public class Android$Actuatordriver.name$ extends Activity implements I$Actuatordriver.name$, IDataListener {
+
+	private PubSubsSensingFramework pubSubSensingFramework = null;
+
+ 
 	
 	public void onCreate(Bundle savedInstanceState) {
-
-		//setContentView(R.layout.activity_main);
 		super.onCreate(savedInstanceState);
+		//setContentView(R.layout.activity_main);
+		
+		pubSubSensingFramework = PubSubsSensingFramework.getInstance();
+
+		$Actuatordriver.allActions:{ action |   
+		  
+		pubSubSensingFramework.registerForSensorData(this,"$action.name$"); 
+	  }; separator="\n"$ 
+		
+		
 
 	
-	}
-    
-
-   
+	}   
 
   $Actuatordriver.allActions:{ action |   
   
@@ -38,6 +41,12 @@ public class Android$Actuatordriver.name$ extends Dialog implements I$Actuatordr
    } 
     
    }; separator="\n"$ 
+   
+	@Override
+	public void onDataReceived(String eventName, Object data) {
+		System.out.println("Received Data");
+
+	}
  
 }
 
