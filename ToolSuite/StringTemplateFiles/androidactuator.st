@@ -14,7 +14,7 @@ public class Android$Actuatordriver.name$ extends Activity implements I$Actuator
 
 	private PubSubsSensingFramework pubSubSensingFramework = null;
 
- 
+	// Device Developer has to update manifest file.
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

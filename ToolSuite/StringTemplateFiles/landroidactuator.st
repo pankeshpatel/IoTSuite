@@ -1,6 +1,5 @@
 package $Actuatordriver.logicPackageName$;
 
-import iotsuite.pubsubmiddleware.*;
 import iotsuite.semanticmodel.*;
 import $Actuatordriver.PackageName$.*;
 import deviceImpl.*;
@@ -17,6 +16,9 @@ public  class  Logic$Actuatordriver.name$ extends $Actuatordriver.name$  {
 
 	public Logic$Actuatordriver.name$(PubSubMiddleware myPubSubMiddleware, Device deviceInfo, Context myContext) {
 		super(myPubSubMiddleware, deviceInfo);
+		
+		pubSubSensingFramework = PubSubsSensingFramework.getInstance();
+
 		
 		Intent intent = new Intent(myContext, Android$Actuatordriver.name$.class);
 		myContext.startActivity(intent);

@@ -13,7 +13,7 @@ public  class  Logic$Actuatordriver.name$ extends $Actuatordriver.name$  {
 	public String deviceType;
 	//public static PubSubsSensingFramework pubSubSensingFramework;
 
-	public Logic$Actuatordriver.name$(PubSubMiddleware myPubSubMiddleware, Device deviceInfo, Context myContext) {
+	public Logic$Actuatordriver.name$(PubSubMiddleware myPubSubMiddleware, Device deviceInfo, Object myContext) {
 		super(myPubSubMiddleware, deviceInfo);
 		
 		//Intent intent = new Intent(myContext, Android$Actuatordriver.name$.class);

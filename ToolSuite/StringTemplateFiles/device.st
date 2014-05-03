@@ -9,10 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.HashSet;
 import $device.logicPackageName$.*;
+import android.content.Context;
 
 public class Startup implements DeviceStartup {
 	
-	private static Object ui;
+	private static Context ui;
 	private static String name ;
 	private static String softwarePlatform;
 	private static String networkAddress;
@@ -30,8 +31,8 @@ private static void setUpNode(Device deviceInfo)	{
 	
 	
 	$device.abilities:{ sc |	
-	Logic$sc$ fake$sc$Impl = new Logic$sc$(myPubSub, deviceInfo, ui); 
-	new Thread(fake$sc$Impl).start();
+	Logic$sc$ logic$sc$Impl = new Logic$sc$(myPubSub, deviceInfo, ui); 
+	new Thread(logic$sc$Impl).start();
     }; separator="\n"$
 	
 }
@@ -58,7 +59,7 @@ private static Device setUpDeviceInfo() {
 
 @Override
 public void startDevice(Object obj, Object context) {
-	ui= obj;
+	ui= (Context) obj;
 	myContext=context;
 	setUpNode(setUpDeviceInfo());
 	
