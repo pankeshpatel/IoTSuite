@@ -24,7 +24,7 @@ networkspec:
       'devices' ':'
       { context = new SymbolTable();
       }
-       (device_def)*   
+       (device_def)*     
     ;
     
 device_def:

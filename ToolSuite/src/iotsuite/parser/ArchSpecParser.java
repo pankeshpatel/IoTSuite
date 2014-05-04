@@ -19,7 +19,7 @@ public class ArchSpecParser extends Parser {
 	public static final int T__8 = 8;
 	public static final int T__9 = 9;
 	public static final int T__10 = 10;
-	public static final int T__11 = 11;
+	public static final int T__11 = 11; 
 	public static final int T__12 = 12;
 	public static final int T__13 = 13;
 	public static final int T__14 = 14;

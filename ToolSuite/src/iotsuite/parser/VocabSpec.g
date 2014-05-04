@@ -29,7 +29,7 @@ vocabSpec :
     }
     ':' (region_def)+  
     { context.currentRegion.generateRegionCode(); }     
-    'structs' ':' (struct_def)+ 
+    'structs' ':' (struct_def)+  
    // ('widgets' ':' widget_def)*
     'resources' ':' abilities_def   
 ;
@@ -66,7 +66,7 @@ structField_def:
 // Structure Definition *** End 
 //************************************************************************************************
 
-abilities_def :
+abilities_def : 
   ('sensors' ':'   sensor_def)+
   ('actuators' ':' actuator_def)+
   ('storages'  ':' ss_def)*

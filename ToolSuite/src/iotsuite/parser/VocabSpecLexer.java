@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g 2014-05-02 15:03:06
+// $ANTLR 3.5.1 D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g 2014-05-05 00:35:30
 
   package iotsuite.parser; 
   
@@ -56,15 +56,15 @@ public class VocabSpecLexer extends Lexer {
 	public VocabSpecLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g"; }
+	@Override public String getGrammarFileName() { return "D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g"; }
 
 	// $ANTLR start "T__8"
 	public final void mT__8() throws RecognitionException {
 		try {
 			int _type = T__8;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:12:6: ( '(' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:12:8: '('
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:12:6: ( '(' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:12:8: '('
 			{
 			match('('); 
 			}
@@ -83,8 +83,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__9;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:13:6: ( ')' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:13:8: ')'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:13:6: ( ')' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:13:8: ')'
 			{
 			match(')'); 
 			}
@@ -103,8 +103,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:14:7: ( ',' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:14:9: ','
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:14:7: ( ',' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:14:9: ','
 			{
 			match(','); 
 			}
@@ -123,8 +123,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__11;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:15:7: ( ':' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:15:9: ':'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:15:7: ( ':' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:15:9: ':'
 			{
 			match(':'); 
 			}
@@ -143,8 +143,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__12;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:16:7: ( ';' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:16:9: ';'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:16:7: ( ';' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:16:9: ';'
 			{
 			match(';'); 
 			}
@@ -163,8 +163,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:17:7: ( 'Boolean' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:17:9: 'Boolean'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:17:7: ( 'Boolean' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:17:9: 'Boolean'
 			{
 			match("Boolean"); 
 
@@ -184,8 +184,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__14;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:18:7: ( 'Button' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:18:9: 'Button'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:18:7: ( 'Button' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:18:9: 'Button'
 			{
 			match("Button"); 
 
@@ -205,8 +205,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:19:7: ( 'Integer' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:19:9: 'Integer'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:19:7: ( 'Integer' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:19:9: 'Integer'
 			{
 			match("Integer"); 
 
@@ -226,8 +226,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:20:7: ( 'String' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:20:9: 'String'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:20:7: ( 'String' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:20:9: 'String'
 			{
 			match("String"); 
 
@@ -247,8 +247,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__17;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:21:7: ( 'TextBox' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:21:9: 'TextBox'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:21:7: ( 'TextBox' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:21:9: 'TextBox'
 			{
 			match("TextBox"); 
 
@@ -268,8 +268,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:22:7: ( 'TextView' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:22:9: 'TextView'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:22:7: ( 'TextView' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:22:9: 'TextView'
 			{
 			match("TextView"); 
 
@@ -289,8 +289,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__19;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:23:7: ( 'accessed-by' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:23:9: 'accessed-by'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:23:7: ( 'accessed-by' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:23:9: 'accessed-by'
 			{
 			match("accessed-by"); 
 
@@ -310,8 +310,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:24:7: ( 'action' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:24:9: 'action'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:24:7: ( 'action' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:24:9: 'action'
 			{
 			match("action"); 
 
@@ -331,8 +331,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:25:7: ( 'actuators' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:25:9: 'actuators'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:25:7: ( 'actuators' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:25:9: 'actuators'
 			{
 			match("actuators"); 
 
@@ -352,8 +352,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:7: ( 'boolean' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:9: 'boolean'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:7: ( 'boolean' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:9: 'boolean'
 			{
 			match("boolean"); 
 
@@ -373,8 +373,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:27:7: ( 'command' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:27:9: 'command'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:27:7: ( 'command' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:27:9: 'command'
 			{
 			match("command"); 
 
@@ -394,8 +394,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:28:7: ( 'double' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:28:9: 'double'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:28:7: ( 'double' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:28:9: 'double'
 			{
 			match("double"); 
 
@@ -415,8 +415,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__25;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:29:7: ( 'generate' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:29:9: 'generate'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:29:7: ( 'generate' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:29:9: 'generate'
 			{
 			match("generate"); 
 
@@ -436,8 +436,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:7: ( 'long' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:9: 'long'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:7: ( 'long' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:9: 'long'
 			{
 			match("long"); 
 
@@ -457,8 +457,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__27;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:31:7: ( 'regions' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:31:9: 'regions'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:31:7: ( 'regions' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:31:9: 'regions'
 			{
 			match("regions"); 
 
@@ -478,8 +478,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__28;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:7: ( 'request' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:9: 'request'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:7: ( 'request' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:9: 'request'
 			{
 			match("request"); 
 
@@ -499,8 +499,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__29;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:33:7: ( 'resources' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:33:9: 'resources'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:33:7: ( 'resources' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:33:9: 'resources'
 			{
 			match("resources"); 
 
@@ -520,8 +520,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__30;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:34:7: ( 'sensors' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:34:9: 'sensors'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:34:7: ( 'sensors' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:34:9: 'sensors'
 			{
 			match("sensors"); 
 
@@ -541,8 +541,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__31;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:35:7: ( 'storages' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:35:9: 'storages'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:35:7: ( 'storages' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:35:9: 'storages'
 			{
 			match("storages"); 
 
@@ -562,8 +562,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__32;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:36:7: ( 'structs' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:36:9: 'structs'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:36:7: ( 'structs' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:36:9: 'structs'
 			{
 			match("structs"); 
 
@@ -583,8 +583,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__33;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:37:7: ( 'with' )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:37:9: 'with'
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:37:7: ( 'with' )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:37:9: 'with'
 			{
 			match("with"); 
 
@@ -604,11 +604,11 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:192:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:192:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:192:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:192:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			matchRange('a','z'); 
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:192:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:192:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -619,7 +619,7 @@ public class VocabSpecLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:
+					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -653,11 +653,11 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:195:5: ( '0' .. '9' ( '0' .. '9' )* )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:195:7: '0' .. '9' ( '0' .. '9' )*
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:195:5: ( '0' .. '9' ( '0' .. '9' )* )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:195:7: '0' .. '9' ( '0' .. '9' )*
 			{
 			matchRange('0','9'); 
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:195:15: ( '0' .. '9' )*
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:195:15: ( '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -668,7 +668,7 @@ public class VocabSpecLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:
+					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -702,11 +702,11 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = CAPITALIZED_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:197:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:197:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:197:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:197:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
 			{
 			matchRange('A','Z'); 
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:197:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:197:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -717,7 +717,7 @@ public class VocabSpecLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:
+					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:
 					{
 					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -751,10 +751,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:199:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:199:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:199:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:199:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:199:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:199:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -766,7 +766,7 @@ public class VocabSpecLexer extends Lexer {
 
 				switch (alt4) {
 				case 1 :
-					// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:
+					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
 						input.consume();
@@ -801,215 +801,215 @@ public class VocabSpecLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | ID | INT | CAPITALIZED_ID | WS )
+		// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | ID | INT | CAPITALIZED_ID | WS )
 		int alt5=30;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:10: T__8
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:10: T__8
 				{
 				mT__8(); 
 
 				}
 				break;
 			case 2 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:15: T__9
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:15: T__9
 				{
 				mT__9(); 
 
 				}
 				break;
 			case 3 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:20: T__10
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:20: T__10
 				{
 				mT__10(); 
 
 				}
 				break;
 			case 4 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:26: T__11
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:26: T__11
 				{
 				mT__11(); 
 
 				}
 				break;
 			case 5 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:32: T__12
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:32: T__12
 				{
 				mT__12(); 
 
 				}
 				break;
 			case 6 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:38: T__13
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:38: T__13
 				{
 				mT__13(); 
 
 				}
 				break;
 			case 7 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:44: T__14
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:44: T__14
 				{
 				mT__14(); 
 
 				}
 				break;
 			case 8 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:50: T__15
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:50: T__15
 				{
 				mT__15(); 
 
 				}
 				break;
 			case 9 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:56: T__16
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:56: T__16
 				{
 				mT__16(); 
 
 				}
 				break;
 			case 10 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:62: T__17
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:62: T__17
 				{
 				mT__17(); 
 
 				}
 				break;
 			case 11 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:68: T__18
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:68: T__18
 				{
 				mT__18(); 
 
 				}
 				break;
 			case 12 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:74: T__19
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:74: T__19
 				{
 				mT__19(); 
 
 				}
 				break;
 			case 13 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:80: T__20
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:80: T__20
 				{
 				mT__20(); 
 
 				}
 				break;
 			case 14 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:86: T__21
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:86: T__21
 				{
 				mT__21(); 
 
 				}
 				break;
 			case 15 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:92: T__22
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:92: T__22
 				{
 				mT__22(); 
 
 				}
 				break;
 			case 16 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:98: T__23
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:98: T__23
 				{
 				mT__23(); 
 
 				}
 				break;
 			case 17 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:104: T__24
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:104: T__24
 				{
 				mT__24(); 
 
 				}
 				break;
 			case 18 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:110: T__25
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:110: T__25
 				{
 				mT__25(); 
 
 				}
 				break;
 			case 19 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:116: T__26
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:116: T__26
 				{
 				mT__26(); 
 
 				}
 				break;
 			case 20 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:122: T__27
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:122: T__27
 				{
 				mT__27(); 
 
 				}
 				break;
 			case 21 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:128: T__28
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:128: T__28
 				{
 				mT__28(); 
 
 				}
 				break;
 			case 22 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:134: T__29
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:134: T__29
 				{
 				mT__29(); 
 
 				}
 				break;
 			case 23 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:140: T__30
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:140: T__30
 				{
 				mT__30(); 
 
 				}
 				break;
 			case 24 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:146: T__31
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:146: T__31
 				{
 				mT__31(); 
 
 				}
 				break;
 			case 25 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:152: T__32
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:152: T__32
 				{
 				mT__32(); 
 
 				}
 				break;
 			case 26 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:158: T__33
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:158: T__33
 				{
 				mT__33(); 
 
 				}
 				break;
 			case 27 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:164: ID
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:164: ID
 				{
 				mID(); 
 
 				}
 				break;
 			case 28 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:167: INT
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:167: INT
 				{
 				mINT(); 
 
 				}
 				break;
 			case 29 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:171: CAPITALIZED_ID
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:171: CAPITALIZED_ID
 				{
 				mCAPITALIZED_ID(); 
 
 				}
 				break;
 			case 30 :
-				// D:\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:186: WS
+				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:186: WS
 				{
 				mWS(); 
 

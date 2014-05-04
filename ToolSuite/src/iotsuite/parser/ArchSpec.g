@@ -27,22 +27,19 @@ archSpec :
     }
      { context.currentRegion.generateCode(); }    
     ('structs' ':' struct_def)*  
-     'softwarecomponents' ':' component_def 
+     'softwarecomponents' ':' (component_def)+
 ;   
- 
+  
 component_def :
     'computationalService' ':' (cs_def)+   
 ;
 
-
-//*************************************************************************************************
-
-// Structure Definition *** Start
+ 
 
 struct_def: 
     CAPITALIZED_ID 
     {context.currentStruct = new StructCompiler($CAPITALIZED_ID.text);}
-    (structField_def ';')*   
+    (structField_def ';')+   
     {context.currentStruct.generateStructureCode();}
 ; 
 structField_def:  
@@ -52,30 +49,22 @@ structField_def:
 ; 
 
 
-// Structure Definition *** End 
-//*************************************************************************************************
 
-
-//*************************************************************************************************
- 
-// ComputationalService Definition *** Start
 
 cs_def:
   CAPITALIZED_ID
     { 
      context.currentComputationalService = new ComputationalServiceCompiler(); 
      context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);}
-   // (csAttribute_def ';')*
-    (csGeneratedInfo_def ';')* 
+     (csGeneratedInfo_def ';')+ 
     (csConsumeInfo_def ';')* 
     (csRequest_def  ';')*
     (cntrlCommand_def ';')* 
-    (partition_def ';')* 
+    (partition_def ';')+
     { 
      context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
      context.currentComputationalService.createCSObject();
     context.currentComputationalService.generateComputationalServiceCode(); 
-    // Next line is for Software Component Name
     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
     context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
     
@@ -90,19 +79,21 @@ csGeneratedInfo_def:
 ;
   
 csConsumeInfo_def:
-  'consume' lc_id ('from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?  
+    //'consume' lc_id ('from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
+     'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID        
    { context.currentComputationalService.addConsumedInfo($lc_id.text);  
     
-   }
+   }   
 ;
 
 csRequest_def :
    'request' lc_id 
    { context.currentComputationalService.getDataAccessListFromSymblTable($lc_id.text);}
-;
-
+; 
+ 
 cntrlCommand_def :
-    'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'region-hops' ':' INT ':' CAPITALIZED_ID 
+    'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'region-hops' ':' INT ':' CAPITALIZED_ID
+    //'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'hops' ':' INT ':' CAPITALIZED_ID  
     { 
       context.currentComputationalService.addCommand($name.text);  
     }
@@ -113,7 +104,7 @@ cntrlParameter_def :
     { context.currentComputationalService.addParameter($lc_id.text); }  
 ; 
   
-partition_def:
+partition_def:  
     csDeploymentConstraint='partition-per' ':' CAPITALIZED_ID 
     { 
     context.currentComputationalService.addPartitionAttribute($CAPITALIZED_ID.text);   
@@ -121,11 +112,7 @@ partition_def:
     context.currentMappingConstraint.setAttributeName($csDeploymentConstraint.text);  
     context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text); 
    }
-;
-
-// ComputationalService Definition *** End 
-//*************************************************************************************************
-
+; 
 
 lc_id: ID  
 ;
