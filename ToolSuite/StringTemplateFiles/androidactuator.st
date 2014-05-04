@@ -26,11 +26,7 @@ public class Android$Actuatordriver.name$ extends Activity implements I$Actuator
 		  
 		pubSubSensingFramework.registerForSensorData(this,"$action.name$"); 
 	  }; separator="\n"$ 
-		
-		
-
-	
-	}   
+}   
 
   $Actuatordriver.allActions:{ action |   
   
