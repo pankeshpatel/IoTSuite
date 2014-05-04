@@ -27,7 +27,7 @@ public class MappingAlgoCompiler {
 		Map<String, Set<Device>> deviceListByRegion = new HashMap<String, Set<Device>>();
 		Set<String> regionLabelSet = new HashSet<String>();
 
-		// Construct regionLabelSet --- O/p: [center, floor, room]
+		// Construct regionLabelSet --- O/p: [Building, Floor, Room]
 		for (Device deviceObj : deviceList) {
 			regionLabelSet.addAll(deviceObj.getRegionLabels());
 		}
@@ -38,21 +38,15 @@ public class MappingAlgoCompiler {
 			List<String> setOfRegion = deviceObj.getRegion();
 
 			for (String r : setOfRegion) {
-
 				if (deviceListByRegion.containsKey(r)) {
-
 					Set<Device> tempSet = deviceListByRegion.get(r);
 					tempSet.add(deviceObj);
-
 				} else {
-
 					Set<Device> newSet = new HashSet<Device>();
 					newSet.add(deviceObj);
 					deviceListByRegion.put(r, newSet);
 				}
-
 			}
-
 		}
 
 		final Map<String, Set<String>> regionMap = new HashMap<String, Set<String>>();
@@ -83,31 +77,13 @@ public class MappingAlgoCompiler {
 
 		for (String regionLabel : regionMap.keySet()) {
 			for (DeploymentScope mc : mappingConstraintList) {
-				//
-				// if (mc.getAttributeName().equals("deployment-instance")
-				// && mc.getAttributeValue().equals("singleton")) {
-				//
-				// List<Device> selectedDeviceWithAbility =
-				// pickDevicesWithAbilities(
-				// "DBServer", deviceList);
-				//
-				// for (Device ds : selectedDeviceWithAbility) {
-				//
-				// String tempSoftwareComponent = mc
-				// .getSoftwareComponentName();
-				// finalMapping.get(ds).add(tempSoftwareComponent);
-				//
-				// }
-				//
-				// } else {
+				
 
 				if (regionLabel.equals(mc.getAttributeValue())) {
 
 					String tempSoftWareComponent = mc.getSoftwareComponentName();
 
-					// for (String regionID : regionMap.keySet()) {
-					// Random selection
-
+				
 					String[] tempkey = regionMap.get(regionLabel).toArray(new String[regionMap.get(regionLabel).size()]);
 
 					for (int i = 0; i < tempkey.length; i++) {
@@ -116,31 +92,20 @@ public class MappingAlgoCompiler {
 							Set<Device> tempDeviceSet = deviceListByRegion.get(tempkey[i]);
 							Device selectedDevice = pickOneFrom(tempDeviceSet);
 
-							/*
-							 * for (String ability :
-							 * selectedDevice.getAbilities()) { if
-							 * (ability.contains("GUI")) {
-							 * 
-							 * } else { finalMapping.get(selectedDevice).add(
-							 * tempSoftWareComponent); }
-							 * 
-							 * }
-							 */
-
-							if (selectedDevice.getMobileFlag().equals("true")) {
+				
+							//if (selectedDevice.getMobileFlag().equals("true")) {
 								
 								// Do not allocate any software component 
 								// if the device mobileFlag = true (mobile device).
 
-							} else {
+							//} else {
 								finalMapping.get(selectedDevice).add(tempSoftWareComponent);
-							}
+							//}
 
 						}
 					}
 
-					// }
-					// }
+				
 
 				}
 
