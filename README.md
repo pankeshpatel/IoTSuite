@@ -11,12 +11,12 @@ to specify high-level specifications.
 
 * A **compiler**  parses the high-level specification and supports the application development phase 
 by producing programming framework that reduces development effort in specifying the details 
-of components of an IoT application, 
+of components of an IoT application.
 
 
 * A **deployment module**  is supported by mapper and linker modules. They together  support 
  the deployment phase by producing device-specific code to result in a distributed 
- system collaboratively hosted by individual devices, and 
+ system collaboratively hosted by individual devices.
 
 * A **runtime system**, which leverages existing middleware platforms and 
 responsible for a distributed execution of an IoT application. 
