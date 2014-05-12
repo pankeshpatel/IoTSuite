@@ -24,5 +24,6 @@ responsible for a distributed execution of an IoT application.
 The current implementation of IoTSuite targets both Android and JavaSE-enabled 
 devices and MQTT middleware. 
 
+For more detail documentations, readers are advised to refer the wiki pages.
 
 [IoT Application Development Process](https://github.com/pankeshlinux/IoTSuite/wiki/IoTApplication_Development_Process)
