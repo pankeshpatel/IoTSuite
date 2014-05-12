@@ -1,4 +1,4 @@
-A ToolSuite for Prototyping Internet of Things Applications
+ ** A ToolSuite for Prototyping Internet of Things Applications **
 
 IoTSuite is a suite of tools for  developing Internet of  Things  applications. 
 The main aim is of this toolkit is to reduce development efforts at various stages 
