@@ -15,7 +15,8 @@ public class GenFiller {
 
 		
 		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "DeviceDrivers");
-		// Directory path, where the template is placed.
+		// Directory path, where the template is placed.em
+		
 				
 			
 		File destFolder = new File(GlobalVariable.templatePath + "DeviceDrivers");
