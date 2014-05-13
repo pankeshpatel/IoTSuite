@@ -3,6 +3,7 @@ package iotsuite.semanticmodel;
 public class DataType {
 
 	String name;
+	String NEW_LINE;
 
 	public DataType(String name) {
 		super();
@@ -15,7 +16,7 @@ public class DataType {
 
 	public String toString() {
 		StringBuilder result = new StringBuilder();
-		String NEW_LINE = System.getProperty("line.separator");
+		NEW_LINE = System.getProperty("line.separator");
 
 		result.append(name);
 
