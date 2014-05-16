@@ -18,12 +18,12 @@ public class Main {
 
 		if (GlobalVariable.DEVELOPMENT_METHODOLOGY) {
 
-			GlobalVariable.vocabSpec = args[0];
+		/*	GlobalVariable.vocabSpec = args[0];
 			GlobalVariable.archSpec = args[1];
 			GlobalVariable.deploymentSpec = args[2];
 			GlobalVariable.stringTemplatePath = args[3];
 			GlobalVariable.activity = args[4];
-			GlobalVariable.templatePath = args[5]; 
+			GlobalVariable.templatePath = args[5]; */
 
 			/*
 			 * The following code generates code in the following sequence and
@@ -32,10 +32,11 @@ public class Main {
 			 * Actuator => ActuatorCompiler (5) Storage, => StorageCompiler (6)
 			 * User Interface => UserInterfaceCompiler // for future extension
 			 */
+			
+			GlobalVariable.activity = args[0];
+			GlobalVariable.templatePath = args[1];
 
 			if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
-
-				//GlobalVariable.frameworkRootDir = args[5]; // Directory path, where the template is placed.
 				
 				ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
 				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
@@ -47,9 +48,8 @@ public class Main {
 			}
 
 			if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK)) {
-
-				//GlobalVariable.frameworkRootDir = args[5];
-
+				
+							
 				ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
 				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
@@ -67,9 +67,7 @@ public class Main {
 			}
 
 			if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
-
-				//GlobalVariable.frameworkRootDir = args[5];
-
+				
 				ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
 				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
@@ -101,8 +99,7 @@ public class Main {
 			}
 
 			if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_LINKING)) {
-
-				//GlobalVariable.frameworkRootDir = args[5];
+								
 				LinkerCompiler.linkerAlgo();
 				GenFiller.copyLinking();
 			}

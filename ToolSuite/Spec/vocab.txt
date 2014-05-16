@@ -1,0 +1,17 @@
+regions :
+	Building : Integer ;
+	Floor :  Integer;
+	Room : Integer;
+structs:	    
+    TempStruct
+        tempValue : double;
+        unitOfMeasurement : String;			
+resources:
+    sensors:
+        TemperatureSensor 
+            generate  tempMeasurement : TempStruct;           
+    actuators:
+        Heater
+			action SetTemp(setTemp : TempStruct);
+			
+		

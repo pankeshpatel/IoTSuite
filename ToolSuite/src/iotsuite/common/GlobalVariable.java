@@ -2,9 +2,10 @@ package iotsuite.common;
 
 public class GlobalVariable {
 
-	public static String vocabSpec;
-	public static String archSpec;
-	public static String deploymentSpec;
+	public static String vocabSpec = "./Spec/vocab.txt";
+	public static String archSpec = "./Spec/arch.txt";
+	public static String deploymentSpec = "./Spec/deply.txt";
+	public static String stringTemplatePath = "./StringTemplateFiles";
 
 	public static String frameworkRootDir;
 
@@ -17,7 +18,6 @@ public class GlobalVariable {
 	public static String utilDirPath = "/util";
 	public static String factoryDirPath = "/factory";
 	public static String deviceImplDirPath = "/deviceImpl";
-	public static String stringTemplatePath;
 	public static String activity;
 	// public static String devicePCType = "/" + "DeviceDrivers" + "/" + "PC" +
 	// "/";
@@ -41,10 +41,12 @@ public class GlobalVariable {
 	public static final boolean DEVELOPMENT_METHODOLOGY = true;
 	// set "yes" if you want to use development methodology
 
-	public static final String ACTIVITY_GENERATE_DEVICEDRIVER = "compile-vocab";
-	public static final String ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK = "compile-arch";
+	public static final String ACTIVITY_GENERATE_DEVICEDRIVER = "compile-vocab-spec";
+	public static final String ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK = "compile-arch-spec";
 	public static final String ACTIVITY_GENERATE_MAPPING = "invoke-mapper";
 	public static final String ACTIVITY_GENERATE_LINKING = "invoke-linker";
+	
+	
 
 	public static String convertPathTopackage(String pathName) {
 
