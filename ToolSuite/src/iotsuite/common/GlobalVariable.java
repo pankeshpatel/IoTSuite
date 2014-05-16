@@ -41,10 +41,10 @@ public class GlobalVariable {
 	public static final boolean DEVELOPMENT_METHODOLOGY = true;
 	// set "yes" if you want to use development methodology
 
-	public static final String ACTIVITY_GENERATE_DEVICEDRIVER = "dd";
-	public static final String ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK = "af";
-	public static final String ACTIVITY_GENERATE_MAPPING = "mapping";
-	public static final String ACTIVITY_GENERATE_LINKING = "linking";
+	public static final String ACTIVITY_GENERATE_DEVICEDRIVER = "compile-vocab";
+	public static final String ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK = "compile-arch";
+	public static final String ACTIVITY_GENERATE_MAPPING = "invoke-mapper";
+	public static final String ACTIVITY_GENERATE_LINKING = "invoke-linker";
 
 	public static String convertPathTopackage(String pathName) {
 
