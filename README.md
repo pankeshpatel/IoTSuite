@@ -6,8 +6,6 @@ The main aim is of this toolkit is to reduce development efforts at various stag
 of  application development. For this,  It consists of the following components 
 to aid stakeholders: 
 
-* An **editor**  supports application design phase by allowing stakeholders 
-to specify high-level specifications.
 
 * A **compiler**  parses the high-level specification and supports the application development phase 
 by producing programming framework that reduces development effort in specifying the details 
@@ -24,6 +22,7 @@ responsible for a distributed execution of an IoT application.
 The current implementation of IoTSuite targets both Android and JavaSE-enabled 
 devices and MQTT middleware. 
 
-For more detail documentations, readers are advised to refer the wiki pages - available [here](https://github.com/pankeshlinux/IoTSuite/wiki/Home).
+For more detail documentations, readers are advised to refer the wiki pages - 
+available [here](https://github.com/pankeshlinux/IoTSuite/wiki/Home).
 
 
