@@ -117,12 +117,12 @@ public class JavaFrameworkFromST {
 	}
 
 	// User interface
-	public CompilationUnit generateUserInterfaceLogic(UserInterface guiDriver) {
+	/*public CompilationUnit generateUserInterfaceLogic(UserInterface guiDriver) {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("lgui");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("Logic" + guiDriver.getName() + ".java", templateOfGUIDriver, "Logic", "gui", guiDriver);
-	}
+	}*/
 
 	// ComputationalService
 	public CompilationUnit generateComputationalServiceLogic(ComputationalService computationalService) {
@@ -171,15 +171,15 @@ public class JavaFrameworkFromST {
 
 		StringTemplate templateOfStorageService = group.getInstanceOf("storagefactory");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
-		return new CompilationUnit(storageService.getName() + "Factory" + ".java", templateOfStorageService, "Factory", "Future", storageService);
+		return new CompilationUnit(storageService.getName() + "Factory" + ".java", templateOfStorageService, "ImplFactory", "Future", storageService);
 	}
 
-	// UserInterface
+	/*// UserInterface
 	public CompilationUnit generateUserInterfaceFactory(UserInterface guiDriver) {
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("guifactory");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java", templateOfGUIDriver, "Factory", "gui", guiDriver);
-	}
+	}*/
 
 	/*******************************************************************************
 	 * 
@@ -221,24 +221,30 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit(GlobalVariable.ANDROID_ENABLED_DEVICES + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "AndroidActuatorImpl", "actuator", actuatorDriver);
 	}
 
-	// JavaSE Storage
+	// JavaSE Storage Factory
 	public CompilationUnit generateWindowOSStorageImpl(Storage storageService) {
 
 		StringTemplate templateOfStorageService = group.getInstanceOf("implstorage");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
-		return new CompilationUnit("Impl" + storageService.getName() + ".java", templateOfStorageService, "ImplFactory", "actuator", storageService);
+		return new CompilationUnit("Impl" + storageService.getName() + ".java", templateOfStorageService, "deviceImpl", "actuator", storageService);
 	}
+	
+	
+	
+	
+	
+	
 
 	
 	
 
 	// Android User interface
-	public CompilationUnit generateAndroidUserInterfaceImpl(UserInterface guiDriver) {
+	/*public CompilationUnit generateAndroidUserInterfaceImpl(UserInterface guiDriver) {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("implgui");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("Impl" + guiDriver.getName() + ".java", templateOfGUIDriver, "ImplFactory", "java", guiDriver);
-	}
+	}*/
 
 	// Android gui layout
 	public CompilationUnit generateAndroidUserInterfaceLayout(UserInterface guiDriver) {

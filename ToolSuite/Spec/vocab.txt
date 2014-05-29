@@ -13,5 +13,6 @@ resources:
     actuators:
         Heater
 			action SetTemp(setTemp : TempStruct);
-			
-		
+	storages:
+		ProfileDB
+			generate profile: TempStruct accessed-by badgeID: String;

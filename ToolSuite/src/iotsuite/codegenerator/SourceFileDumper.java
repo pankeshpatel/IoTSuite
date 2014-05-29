@@ -105,6 +105,19 @@ public class SourceFileDumper {
 
 		}
 		
+
+		else if (unit.getFileCategory().equals("deviceImpl")){
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());			
+		}
+		
+		else if (unit.getFileCategory().equals("ImplFactory")) {
+
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath + "/" + unit.getFileNameToGenerate());
+
+		}
+		
 		
 		
 		else if (unit.getFileCategory().equals("AndroidFactory") || unit.getFileCategory().equals("AndroidSensorImpl") 
@@ -205,12 +218,26 @@ public class SourceFileDumper {
 
 		}
 		
+		else if (unit.getFileCategory().equals("deviceImpl")){
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());			
+		}
+		
+		else if (unit.getFileCategory().equals("ImplFactory")) {
+
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath + "/" + unit.getFileNameToGenerate());
+
+		}
+		
+		
+		
 		else if (unit.getFileCategory().equals("JavaSEFactory") || unit.getFileCategory().equals("JavaSESensorImpl") 
 				|| unit.getFileCategory().equals("JavaSEActuatorImpl") ||  unit.getFileCategory().equals("JavaSELogic")) {
 
 			//Do nothing
 
-	}
+	   }
 
 		/*
 		 * The following if...condition code generates programming framework for

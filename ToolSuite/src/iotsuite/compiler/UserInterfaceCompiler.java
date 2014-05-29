@@ -66,14 +66,14 @@ public class UserInterfaceCompiler {
 
 		if (GlobalVariable.activity.equals("generateDD")) {
 
-			generateGUI(); // This function call will create a partial Logic
+		//	generateGUI(); // This function call will create a partial Logic
 							// files
-			generateGUIInterface(); // This function call will create Interface
+		//	generateGUIInterface(); // This function call will create Interface
 									// of
 									// GUI.
-			generateGUIFactory();
+		//	generateGUIFactory();
 
-			generateGUIFactoryImpl();
+		//	generateGUIFactoryImpl();
 
 			// generateGUILayout();
 			// generateGUIManifest();
@@ -85,20 +85,20 @@ public class UserInterfaceCompiler {
 		}
 	}
 
-	private void generateGUIFactoryImpl() {
+	/*private void generateGUIFactoryImpl() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver.generateAndroidUserInterfaceImpl(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
-	}
+	}*/
 
-	private void generateGUIFactory() {
+	/*private void generateGUIFactory() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceFactory(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
-	}
+	}*/
 
 	private void generateGUIInterface() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
@@ -126,13 +126,13 @@ public class UserInterfaceCompiler {
 	 * }
 	 */
 
-	public void generateGUI() {
+	/*public void generateGUI() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceLogic(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
-	}
+	}*/
 
 	public String getDatafromSymblTable(String variableName) {
 		return SymbolTable.getSymblTableData(variableName);
