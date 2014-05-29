@@ -22,11 +22,7 @@ public class Impl$Storageservice.name$ implements I$Storageservice.name$ {
   
 }$
 
-	@Override
-	public boolean isEventDriven() {
 	
-	return false;	
-	}
 
 
 }

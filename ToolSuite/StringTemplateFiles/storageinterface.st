@@ -15,7 +15,7 @@ public interface  I$Storageservice.name$   {
   
 }$
 
-  public abstract boolean isEventDriven();   
+  
 
 }
     

@@ -42,9 +42,7 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 		
 		obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$($generatedInfo.name; format="capital"$Event);
 		
-		//$generatedInfo.type.name$ s$generatedInfo.type.name$ = obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$();
-		//set$generatedInfo.name; format="capital"$(s$generatedInfo.type.name$);		
-	   
+			   
 	}; separator="\n"$
 	
 	}
@@ -55,7 +53,7 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 		   this.ui.runOnUiThread(new Runnable() {
 				public void run() {
 					obj$SensorDriver.name$ = $SensorDriver.name$Factory.get$SensorDriver.name$(deviceInfo.getType(), (Activity) ui, obj);
-				//	((Dialog) obj$SensorDriver.name$).show();
+		
 					if (obj$SensorDriver.name$.isEventDriven()) {
 
 						$SensorDriver.allGeneratedInfo:{ generatedInfo | 
@@ -71,8 +69,7 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 						obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$($generatedInfo.name; format="capital"$Event);
 
 						
-						//$generatedInfo.type.name$ s$generatedInfo.type.name$ = obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$();
-						//set$generatedInfo.name; format="capital"$(s$generatedInfo.type.name$);		
+		
 					   
 					}; separator="\n"$
 					
@@ -108,21 +105,6 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 		
 	};
    
-}; separator="\n"$
-
-		
+}; separator="\n"$	
 
 }
-	
-	
-	
-	
-	
-
-
-    
-	
-	
-    
-
-    
