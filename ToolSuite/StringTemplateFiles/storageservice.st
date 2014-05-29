@@ -31,19 +31,16 @@ public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
   
 	$Storageservice.allDataAccess:{ dataAccess | 
 	
-  	private HashMap<$dataAccess.query.type.name; format="capital" $, $dataAccess.generatedInfo.type.name$ > $dataAccess.dataAccessName$ 
-	= new HashMap<$dataAccess.query.type.name; format="capital" $, $dataAccess.generatedInfo.type.name$>();
+  	
 	
 	protected void set$dataAccess.dataAccessName; format="capital"$ 
-			($dataAccess.query.type.name; format="capital" $ newIndex  , $dataAccess.generatedInfo.type.name$  new$dataAccess.dataAccessName; format="capital"$Value ) {
-		$dataAccess.dataAccessName$.put(newIndex, new$dataAccess.dataAccessName; format="capital"$Value );
-			myPubSubMiddleware.publish("$dataAccess.dataAccessName$Received", new$dataAccess.dataAccessName$Value, myDeviceInfo);
+			($dataAccess.generatedInfo.type.name$  new$dataAccess.dataAccessName; format="capital"$Value ) {
+		
+			myPubSubMiddleware.publish("$dataAccess.dataAccessName$", new$dataAccess.dataAccessName$Value, myDeviceInfo);
 		
 	}
 	
-	protected $dataAccess.generatedInfo.type.name$ get$dataAccess.dataAccessName$($dataAccess.query.type.name; format="capital" $ index) {
-	      return $dataAccess.dataAccessName$.get(index);   
-	      }
+	
 	    
 	public void notifyReceived(String eventName, Object arg, Device deviceInfo) {
 		try {
