@@ -117,12 +117,21 @@ public class JavaFrameworkFromST {
 	}
 
 	// User interface
-	/*public CompilationUnit generateUserInterfaceLogic(UserInterface guiDriver) {
+	public CompilationUnit generateUserInterfaceLogic(UserInterface guiDriver) {		
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("lgui");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("Logic" + guiDriver.getName() + ".java", templateOfGUIDriver, "Logic", "gui", guiDriver);
-	}*/
+	}
+	
+	// For generating listener for GUI.
+	public CompilationUnit generateUserInterfaceListener(UserInterface guiDriver) {		
+
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("guilistener");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		return new CompilationUnit("Listener" + guiDriver.getName() + ".java", templateOfGUIDriver, "Listener", "gui", guiDriver);
+
+	}
 
 	// ComputationalService
 	public CompilationUnit generateComputationalServiceLogic(ComputationalService computationalService) {
@@ -174,12 +183,12 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit(storageService.getName() + "Factory" + ".java", templateOfStorageService, "ImplFactory", "Future", storageService);
 	}
 
-	/*// UserInterface
+	// UserInterface
 	public CompilationUnit generateUserInterfaceFactory(UserInterface guiDriver) {
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("guifactory");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java", templateOfGUIDriver, "Factory", "gui", guiDriver);
-	}*/
+		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java", templateOfGUIDriver, "AndroidFactory", "gui", guiDriver);
+	}
 
 	/*******************************************************************************
 	 * 
@@ -230,21 +239,13 @@ public class JavaFrameworkFromST {
 	}
 	
 	
-	
-	
-	
-	
-
-	
-	
-
 	// Android User interface
-	/*public CompilationUnit generateAndroidUserInterfaceImpl(UserInterface guiDriver) {
+	public CompilationUnit generateAndroidUserInterfaceImpl(UserInterface guiDriver) {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("implgui");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-		return new CompilationUnit("Impl" + guiDriver.getName() + ".java", templateOfGUIDriver, "ImplFactory", "java", guiDriver);
-	}*/
+		return new CompilationUnit("Android" + guiDriver.getName() + ".java", templateOfGUIDriver, "deviceImpl", "java", guiDriver);
+	}
 
 	// Android gui layout
 	public CompilationUnit generateAndroidUserInterfaceLayout(UserInterface guiDriver) {

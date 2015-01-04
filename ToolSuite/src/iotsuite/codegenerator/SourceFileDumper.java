@@ -199,7 +199,7 @@ public class SourceFileDumper {
 		
 		else if (unit.getFileCategory().equals("Logic")) {
 
-
+			
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
 			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
 
@@ -228,9 +228,7 @@ public class SourceFileDumper {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath).mkdirs();
 			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath + "/" + unit.getFileNameToGenerate());
 
-		}
-		
-		
+		}		
 		
 		else if (unit.getFileCategory().equals("JavaSEFactory") || unit.getFileCategory().equals("JavaSESensorImpl") 
 				|| unit.getFileCategory().equals("JavaSEActuatorImpl") ||  unit.getFileCategory().equals("JavaSELogic")) {

@@ -16,3 +16,8 @@ resources:
 	storages:
 		ProfileDB
 			generate profile: TempStruct accessed-by badgeID: String;
+    gui:
+		EndUserGUI
+			command Off();
+			command SetTemp(setTemp);
+           

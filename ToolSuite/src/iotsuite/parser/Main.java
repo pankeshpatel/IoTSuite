@@ -35,7 +35,7 @@ public class Main {
 			
 			GlobalVariable.activity = args[0];
 			GlobalVariable.templatePath = args[1];
-
+			
 			if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 				
 				ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);

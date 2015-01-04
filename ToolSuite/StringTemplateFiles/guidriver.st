@@ -1,9 +1,9 @@
 package $GUIdriver.packageName$;
 
-import fr.inria.arles.pankesh.pubsubmiddleware.*;
-import fr.inria.arles.pankesh.semanticmodel.*;
-import fr.inria.arles.pankesh.common.*;
-import java.util.List;
+import iotsuite.pubsubmiddleware.PubSubMiddleware;
+import iotsuite.pubsubmiddleware.Subscriber;
+import iotsuite.semanticmodel.Device;
+
 
 public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  { 
   

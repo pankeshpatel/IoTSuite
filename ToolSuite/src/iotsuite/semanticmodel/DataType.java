@@ -14,6 +14,7 @@ public class DataType {
 		return name;
 	}
 
+	@Override
 	public String toString() {
 		StringBuilder result = new StringBuilder();
 		NEW_LINE = System.getProperty("line.separator");

@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2014-05-05 00:35:39
+// $ANTLR 3.5.1 C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2014-12-26 15:01:00
 
   package iotsuite.parser; 
 
@@ -38,15 +38,15 @@ public class NetworkSpecLexer extends Lexer {
 	public NetworkSpecLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g"; }
 
 	// $ANTLR start "T__9"
 	public final void mT__9() throws RecognitionException {
 		try {
 			int _type = T__9;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:6: ( ',' )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:8: ','
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:6: ( ',' )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:8: ','
 			{
 			match(','); 
 			}
@@ -65,8 +65,8 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:7: ( ':' )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:9: ':'
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:7: ( ':' )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:9: ':'
 			{
 			match(':'); 
 			}
@@ -85,8 +85,8 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__11;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:7: ( ';' )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:9: ';'
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:7: ( ';' )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:9: ';'
 			{
 			match(';'); 
 			}
@@ -105,8 +105,8 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__12;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:7: ( 'devices' )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:9: 'devices'
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:7: ( 'devices' )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:9: 'devices'
 			{
 			match("devices"); 
 
@@ -126,8 +126,8 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:7: ( 'mobile' )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:9: 'mobile'
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:7: ( 'mobile' )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:9: 'mobile'
 			{
 			match("mobile"); 
 
@@ -147,8 +147,8 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__14;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:7: ( 'region' )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:9: 'region'
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:7: ( 'region' )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:9: 'region'
 			{
 			match("region"); 
 
@@ -168,8 +168,8 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:7: ( 'resources' )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:9: 'resources'
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:7: ( 'resources' )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:9: 'resources'
 			{
 			match("resources"); 
 
@@ -189,8 +189,8 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:7: ( 'type' )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:9: 'type'
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:7: ( 'type' )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:9: 'type'
 			{
 			match("type"); 
 
@@ -210,7 +210,7 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = MOBILEFLAG;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:82:12: ( 'true' | 'false' )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:82:12: ( 'true' | 'false' )
 			int alt1=2;
 			int LA1_0 = input.LA(1);
 			if ( (LA1_0=='t') ) {
@@ -228,14 +228,14 @@ public class NetworkSpecLexer extends Lexer {
 
 			switch (alt1) {
 				case 1 :
-					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:82:15: 'true'
+					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:82:15: 'true'
 					{
 					match("true"); 
 
 					}
 					break;
 				case 2 :
-					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:82:24: 'false'
+					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:82:24: 'false'
 					{
 					match("false"); 
 
@@ -257,11 +257,11 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:85:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:85:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:85:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:85:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
 			{
 			matchRange('a','z'); 
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:85:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:85:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -272,7 +272,7 @@ public class NetworkSpecLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
 					{
 					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -290,7 +290,7 @@ public class NetworkSpecLexer extends Lexer {
 				}
 			}
 
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:85:41: ( '0' .. '9' )*
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:85:41: ( '0' .. '9' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -301,7 +301,7 @@ public class NetworkSpecLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -335,11 +335,11 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:88:5: ( '0' .. '9' ( '0' .. '9' )* )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:88:7: '0' .. '9' ( '0' .. '9' )*
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:88:5: ( '0' .. '9' ( '0' .. '9' )* )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:88:7: '0' .. '9' ( '0' .. '9' )*
 			{
 			matchRange('0','9'); 
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:88:15: ( '0' .. '9' )*
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:88:15: ( '0' .. '9' )*
 			loop4:
 			while (true) {
 				int alt4=2;
@@ -350,7 +350,7 @@ public class NetworkSpecLexer extends Lexer {
 
 				switch (alt4) {
 				case 1 :
-					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -384,11 +384,11 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = CAPITALIZED_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
 			{
 			matchRange('A','Z'); 
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop5:
 			while (true) {
 				int alt5=2;
@@ -399,7 +399,7 @@ public class NetworkSpecLexer extends Lexer {
 
 				switch (alt5) {
 				case 1 :
-					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
 					{
 					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -417,7 +417,7 @@ public class NetworkSpecLexer extends Lexer {
 				}
 			}
 
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:50: ( '0' .. '9' )*
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:50: ( '0' .. '9' )*
 			loop6:
 			while (true) {
 				int alt6=2;
@@ -428,7 +428,7 @@ public class NetworkSpecLexer extends Lexer {
 
 				switch (alt6) {
 				case 1 :
-					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -462,10 +462,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:92:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:92:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:92:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:92:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:92:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:92:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt7=0;
 			loop7:
 			while (true) {
@@ -477,7 +477,7 @@ public class NetworkSpecLexer extends Lexer {
 
 				switch (alt7) {
 				case 1 :
-					// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
 						input.consume();
@@ -512,7 +512,7 @@ public class NetworkSpecLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | MOBILEFLAG | ID | INT | CAPITALIZED_ID | WS )
+		// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | MOBILEFLAG | ID | INT | CAPITALIZED_ID | WS )
 		int alt8=13;
 		switch ( input.LA(1) ) {
 		case ',':
@@ -954,91 +954,91 @@ public class NetworkSpecLexer extends Lexer {
 		}
 		switch (alt8) {
 			case 1 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:10: T__9
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:10: T__9
 				{
 				mT__9(); 
 
 				}
 				break;
 			case 2 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:15: T__10
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:15: T__10
 				{
 				mT__10(); 
 
 				}
 				break;
 			case 3 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:21: T__11
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:21: T__11
 				{
 				mT__11(); 
 
 				}
 				break;
 			case 4 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:27: T__12
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:27: T__12
 				{
 				mT__12(); 
 
 				}
 				break;
 			case 5 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:33: T__13
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:33: T__13
 				{
 				mT__13(); 
 
 				}
 				break;
 			case 6 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:39: T__14
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:39: T__14
 				{
 				mT__14(); 
 
 				}
 				break;
 			case 7 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:45: T__15
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:45: T__15
 				{
 				mT__15(); 
 
 				}
 				break;
 			case 8 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:51: T__16
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:51: T__16
 				{
 				mT__16(); 
 
 				}
 				break;
 			case 9 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:57: MOBILEFLAG
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:57: MOBILEFLAG
 				{
 				mMOBILEFLAG(); 
 
 				}
 				break;
 			case 10 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:68: ID
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:68: ID
 				{
 				mID(); 
 
 				}
 				break;
 			case 11 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:71: INT
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:71: INT
 				{
 				mINT(); 
 
 				}
 				break;
 			case 12 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:75: CAPITALIZED_ID
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:75: CAPITALIZED_ID
 				{
 				mCAPITALIZED_ID(); 
 
 				}
 				break;
 			case 13 :
-				// D:\\ToolSuite\\Toolkitwork\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:90: WS
+				// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:90: WS
 				{
 				mWS(); 
 

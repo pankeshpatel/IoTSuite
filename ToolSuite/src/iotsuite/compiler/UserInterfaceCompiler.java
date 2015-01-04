@@ -53,56 +53,81 @@ public class UserInterfaceCompiler {
 		 * null, getDataAccessList(), getRequestType(), getReqWidget());
 		 */
 
-		guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(), getActionList(), getCommandList(), generatedInfo, null, getDataAccessList(), getRequestType(), getReqWidget());
+		// guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
+		// getActionList(), getCommandList(), generatedInfo, null,
+		// getDataAccessList(), getRequestType(), getReqWidget());
+
+		guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
+				null, getCommandList(), null, null, null, null, null);
 	}
 
 	// Code generator of the abstract classes and Logic files
 
 	public void generateCode() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceInteraction(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateUserInterfaceInteraction(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
-		if (GlobalVariable.activity.equals("generateDD")) {
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
-		//	generateGUI(); // This function call will create a partial Logic
-							// files
-		//	generateGUIInterface(); // This function call will create Interface
-									// of
-									// GUI.
-		//	generateGUIFactory();
-
-		//	generateGUIFactoryImpl();
+			generateGUI(); // This function call will create a partial Logic files
+			generateGUIListener();  // This function call will create Listener files
+			generateGUIInterface(); // This function call will create Interface of GUI.
+			generateGUIFactory();
+			generateGUIImpl();
 
 			// generateGUILayout();
 			// generateGUIManifest();
 		}
 
-		if (GlobalVariable.activity.equals("generateMapping")) {
-			generateGUILayout();
-			// generateGUIManifest();
-		}
+		/*
+		 * if (GlobalVariable.activity.equals("generateMapping")) {
+		 * generateGUILayout(); // generateGUIManifest(); }
+		 */
+	}	
+
+	public void generateGUI() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceLogic(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
+	}
+	
+  private void generateGUIListener() {
+	
+	JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+	CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceListener(guiDriver);
+	SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+	dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+		
+		
 	}
 
-	/*private void generateGUIFactoryImpl() {
+	private void generateGUIImpl() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver.generateAndroidUserInterfaceImpl(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateAndroidUserInterfaceImpl(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
-	}*/
+	}
 
-	/*private void generateGUIFactory() {
+	private void generateGUIFactory() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceFactory(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateUserInterfaceFactory(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
-	}*/
+	}
 
 	private void generateGUIInterface() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceInterface(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateUserInterfaceInterface(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
@@ -110,7 +135,8 @@ public class UserInterfaceCompiler {
 
 	private void generateGUILayout() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver.generateAndroidUserInterfaceLayout(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateAndroidUserInterfaceLayout(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
@@ -126,20 +152,13 @@ public class UserInterfaceCompiler {
 	 * }
 	 */
 
-	/*public void generateGUI() {
-		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceLogic(guiDriver);
-		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
-		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
-
-	}*/
-
 	public String getDatafromSymblTable(String variableName) {
 		return SymbolTable.getSymblTableData(variableName);
 	}
 
 	public void getDataAccessListFromSymblTable(String dataAccessStr) {
-		this.dataAccessList = SymbolTable.getDataAccessSymblTable(dataAccessStr);
+		this.dataAccessList = SymbolTable
+				.getDataAccessSymblTable(dataAccessStr);
 	}
 
 	public Set<DataAccess> getDataAccessList() {
@@ -156,8 +175,15 @@ public class UserInterfaceCompiler {
 
 	// Getter and Setter of Command
 
-	public void addCommand(String actionName, Widget widget) {
-		Command command = new Command(actionName, getCommandParameter(), widget);
+	/*
+	 * public void addCommand(String actionName, Widget widget) { Command
+	 * command = new Command(actionName, getCommandParameter(), widget);
+	 * commands.add(command); }
+	 */
+
+	public void addCommand(String actionName) {
+		System.out.println("ActionName>>>" + actionName);
+		Command command = new Command(actionName, getCommandParameter(), null);
 		commands.add(command);
 	}
 
@@ -171,13 +197,16 @@ public class UserInterfaceCompiler {
 	}
 
 	public void addActionParameter(String parameterName, String parameterType) {
-		actionParameter = new Parameter(parameterName, new DataType(parameterType));
+		actionParameter = new Parameter(parameterName, new DataType(
+				parameterType));
 	}
 
 	// Getter and Setter of Command Parameters
 
 	public void addCommandParameter(String parameterName) {
-		commandParameter = new Parameter(parameterName, new DataType(getDatafromSymblTable(parameterName)));
+		System.out.println("Add Command Parametere:" + parameterName);
+		commandParameter = new Parameter(parameterName, new DataType(
+				getDatafromSymblTable(parameterName)));
 	}
 
 	public Parameter getCommandParameter() {
