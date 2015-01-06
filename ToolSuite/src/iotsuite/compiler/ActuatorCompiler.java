@@ -82,7 +82,7 @@ public class ActuatorCompiler {
 
 				generateJavaSEActuatorFactory_ActuatorCompiler();
 
-				generateActuatorJavaSE_ActuatorCompiler();
+				generateJavaSEActuator_ActuatorCompiler();
 
 			}
 
@@ -115,7 +115,7 @@ public class ActuatorCompiler {
 	}
 
 	// This framework will generate a device framework for PC
-	private void generateActuatorJavaSE_ActuatorCompiler() {
+	private void generateJavaSEActuator_ActuatorCompiler() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedActuatorDriver.generateJavaSEActuatorImpl(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();

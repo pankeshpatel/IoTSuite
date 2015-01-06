@@ -100,15 +100,23 @@ public class StorageCompiler {
 
 			// Storage's ApplicationLogic
 			generateStorageLogic_StorageCompiler();
+			
+			if(GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
+				
+				// Storage's Factory
+				generateJavaSEStorageFactory_StorageCompiler();
+				// Storage's WindowOS
+				generateJavaSEStorage_StorageCompiler();
+				// Storage's Interface
+				generateStorageInterface_StorageCompiler();
+				
+				
+			}
+			
+			
+			
 
-			// Storage's Factory
-			generateStorageFactory_StorageCompiler();
-
-			// Storage's WindowOS
-			generateStorageWindowOS_StorageCompiler();
-
-			// Storage's Interface
-			generateStorageInterface_StorageCompiler();
+			
 
 		}
 
@@ -122,23 +130,23 @@ public class StorageCompiler {
 
 	}
 
-	private void generateStorageWindowOS_StorageCompiler() {
+	private void generateJavaSEStorage_StorageCompiler() {
 		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateStorageFactory.generateWindowOSStorageImpl(storageService);
+		CompilationUnit generatedCU = generateStorageFactory.generateJavaSEStorageImpl(storageService);
 		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
 		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
 	}
 
-	private void generateStorageFactory_StorageCompiler() {
+	private void generateJavaSEStorageFactory_StorageCompiler() {
 		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateStorageFactory.generateStorageFactory(storageService);
+		CompilationUnit generatedCU = generateStorageFactory.generateJavaSEStorageFactory(storageService);
 		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
 		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
 	}
 
 	private void generateStorageInterface_StorageCompiler() {
 		JavaFrameworkFromST generateStorageInterface = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateStorageInterface.generateStorageInterface(storageService);
+		CompilationUnit generatedCU = generateStorageInterface.generateJavaSEStorageInterface(storageService);
 		SourceFileDumper dumpGeneratedStorageInterface = new SourceFileDumper();
 		dumpGeneratedStorageInterface.dumpCompilationUnit(generatedCU);
 
@@ -146,7 +154,7 @@ public class StorageCompiler {
 
 	private void generateStorageLogic_StorageCompiler() {
 		JavaFrameworkFromST generatedStorageService = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedStorageService.generateStorageLogic(storageService);
+		CompilationUnit generatedCU = generatedStorageService.generateJavaSEStorageLogic(storageService);
 		SourceFileDumper dumpGeneratedStorageService = new SourceFileDumper();
 		dumpGeneratedStorageService.dumpCompilationUnit(generatedCU);
 	}

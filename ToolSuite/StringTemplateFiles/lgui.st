@@ -2,7 +2,6 @@ package $GUIdriver.logicPackageName$;
 
 import iotsuite.pubsubmiddleware.PubSubMiddleware;
 import android.app.Activity;
-import android.app.Dialog;
 import iotsuite.semanticmodel.*;
 import $GUIdriver.PackageName$.*;
 import factory.*;
@@ -50,8 +49,9 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
 			$command.name; format="capital"$FromGUI($command.allParameter:{ param | newValue}; separator=" , "$);
 		}
 		
+		
 		 	 		
-	}; separator="\n"$
+	};separator="\n"$
 	
 	
 	

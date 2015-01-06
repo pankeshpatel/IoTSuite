@@ -73,11 +73,31 @@ public class UserInterfaceCompiler {
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
+			
+			//For  JavaSE code generation
+			if(GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
+					
+				//Factory
+				generateJavaSEGUIFactory();
+				//Device Driver code
+				generateJavaSEGUIImpl();
+			}
+			
+			
+			
+			if(GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
+			
 			generateGUI(); // This function call will create a partial Logic files
 			generateGUIListener();  // This function call will create Listener files
 			generateGUIInterface(); // This function call will create Interface of GUI.
-			generateGUIFactory();
-			generateGUIImpl();
+			generateAndroidGUIFactory();
+			generateAndroidGUIImpl();
+		}
+        
+			
+		
+			
+			
 
 			// generateGUILayout();
 			// generateGUIManifest();
@@ -107,7 +127,7 @@ public class UserInterfaceCompiler {
 		
 	}
 
-	private void generateGUIImpl() {
+	private void generateAndroidGUIImpl() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
 				.generateAndroidUserInterfaceImpl(guiDriver);
@@ -115,11 +135,28 @@ public class UserInterfaceCompiler {
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
-
-	private void generateGUIFactory() {
+	
+	private void generateJavaSEGUIImpl() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
-				.generateUserInterfaceFactory(guiDriver);
+				.generateJavaSEUserInterfaceImpl(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
+	}
+
+	private void generateAndroidGUIFactory() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateAndroidUserInterfaceFactory(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+	}
+	
+	private void generateJavaSEGUIFactory() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateJavaSEUserInterfaceFactory(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}

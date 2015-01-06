@@ -109,7 +109,7 @@ public class JavaFrameworkFromST {
 	}
 
 	// Storage
-	public CompilationUnit generateStorageLogic(Storage storageService) {
+	public CompilationUnit generateJavaSEStorageLogic(Storage storageService) {
 
 		StringTemplate templateOfStorageService = group.getInstanceOf("lstorage");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
@@ -176,19 +176,28 @@ public class JavaFrameworkFromST {
 	}
 
 	// Storage
-	public CompilationUnit generateStorageFactory(Storage storageService) {
+	public CompilationUnit generateJavaSEStorageFactory(Storage storageService) {
 
-		StringTemplate templateOfStorageService = group.getInstanceOf("storagefactory");
+		StringTemplate templateOfStorageService = group.getInstanceOf("storageJavaSEFactory");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit(storageService.getName() + "Factory" + ".java", templateOfStorageService, "ImplFactory", "Future", storageService);
 	}
 
-	// UserInterface
-	public CompilationUnit generateUserInterfaceFactory(UserInterface guiDriver) {
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("guifactory");
+	// Factory for the Android GUI
+	public CompilationUnit generateAndroidUserInterfaceFactory(UserInterface guiDriver) {
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("guiAndroidFactory");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java", templateOfGUIDriver, "AndroidFactory", "gui", guiDriver);
 	}
+	
+	//Factory for the JavaSE device 
+	public CompilationUnit generateJavaSEUserInterfaceFactory(UserInterface guiDriver) {
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("guiJavaseFactory");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java", templateOfGUIDriver, "JavaSEFactory", "gui", guiDriver);
+	}
+	
+	
 
 	/*******************************************************************************
 	 * 
@@ -231,20 +240,29 @@ public class JavaFrameworkFromST {
 	}
 
 	// JavaSE Storage Factory
-	public CompilationUnit generateWindowOSStorageImpl(Storage storageService) {
+	public CompilationUnit generateJavaSEStorageImpl(Storage storageService) {
 
-		StringTemplate templateOfStorageService = group.getInstanceOf("implstorage");
+		StringTemplate templateOfStorageService = group.getInstanceOf("implJavaSEStorage");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
-		return new CompilationUnit("Impl" + storageService.getName() + ".java", templateOfStorageService, "deviceImpl", "actuator", storageService);
+		return new CompilationUnit("JavaSE" + storageService.getName() + ".java", templateOfStorageService, "deviceImpl", "actuator", storageService);
 	}
 	
 	
 	// Android User interface
 	public CompilationUnit generateAndroidUserInterfaceImpl(UserInterface guiDriver) {
 
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("implgui");
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("implAndroidGui");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-		return new CompilationUnit("Android" + guiDriver.getName() + ".java", templateOfGUIDriver, "deviceImpl", "java", guiDriver);
+		return new CompilationUnit("Android" + guiDriver.getName() + ".java", templateOfGUIDriver, "AndroidGuiImpl", "java", guiDriver);
+	}
+	
+	
+	// Android User interface
+	public CompilationUnit generateJavaSEUserInterfaceImpl(UserInterface guiDriver) {
+
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("implJavaSEGui");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		return new CompilationUnit("JavaSE" + guiDriver.getName() + ".java", templateOfGUIDriver, "JavaSEGuiImpl", "java", guiDriver);
 	}
 
 	// Android gui layout
@@ -287,8 +305,8 @@ public class JavaFrameworkFromST {
 	}
 
 	// Storage
-	public CompilationUnit generateStorageInterface(Storage storageService) {
-		StringTemplate templateOfStorageService = group.getInstanceOf("storageinterface");
+	public CompilationUnit generateJavaSEStorageInterface(Storage storageService) {
+		StringTemplate templateOfStorageService = group.getInstanceOf("storageInterface");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit("I" + storageService.getName() + ".java", templateOfStorageService, "storageService", "Future", storageService);
 	}

@@ -111,6 +111,11 @@ public class SourceFileDumper {
 			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());			
 		}
 		
+		else if (unit.getFileCategory().equals("JavaSEGuiImpl")){
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());			
+		}
+		
 		else if (unit.getFileCategory().equals("ImplFactory")) {
 
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath).mkdirs();
@@ -121,7 +126,8 @@ public class SourceFileDumper {
 		
 		
 		else if (unit.getFileCategory().equals("AndroidFactory") || unit.getFileCategory().equals("AndroidSensorImpl") 
-				|| unit.getFileCategory().equals("AndroidActuatorImpl") || unit.getFileCategory().equals("AndroidLogic") ) {
+				|| unit.getFileCategory().equals("AndroidActuatorImpl") || unit.getFileCategory().equals("AndroidLogic")
+				|| unit.getFileCategory().equals("AndroidGuiImpl")) {
 
 				//Do nothing
 
@@ -146,6 +152,11 @@ public class SourceFileDumper {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
 			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());
 			
+		}
+		
+		else if (unit.getFileCategory().equals("AndroidGuiImpl")){
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());			
 		}
 		
 		
@@ -231,7 +242,8 @@ public class SourceFileDumper {
 		}		
 		
 		else if (unit.getFileCategory().equals("JavaSEFactory") || unit.getFileCategory().equals("JavaSESensorImpl") 
-				|| unit.getFileCategory().equals("JavaSEActuatorImpl") ||  unit.getFileCategory().equals("JavaSELogic")) {
+				|| unit.getFileCategory().equals("JavaSEActuatorImpl") ||  unit.getFileCategory().equals("JavaSELogic")
+				|| unit.getFileCategory().equals("JavaSEGuiImpl")) {
 
 			//Do nothing
 
