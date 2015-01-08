@@ -93,7 +93,7 @@ public class StorageCompiler {
 
 	public void generateStorageCode() {
 
-		// Storage Interaction
+		// Storage Interaction with other entities
 		generateStorageInteraction_StorageCompiler();
 
 		if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
@@ -102,24 +102,17 @@ public class StorageCompiler {
 			generateStorageLogic_StorageCompiler();
 			
 			if(GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
-				
-				// Storage's Factory
 				generateJavaSEStorageFactory_StorageCompiler();
-				// Storage's WindowOS
-				generateJavaSEStorage_StorageCompiler();
-				// Storage's Interface
+				generateJavaSEStorageImpl_StorageCompiler(); 
 				generateStorageInterface_StorageCompiler();
-				
 				
 			}
 			
-			
-			
-
-			
-
+			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
+				generateAndroidStorageImpl_StorageCompiler();
+				generateAndroidStorageFactory_StorageCompiler();
+			}			
 		}
-
 	}
 
 	private void generateStorageInteraction_StorageCompiler() {
@@ -130,9 +123,16 @@ public class StorageCompiler {
 
 	}
 
-	private void generateJavaSEStorage_StorageCompiler() {
+	private void generateJavaSEStorageImpl_StorageCompiler() {
 		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generateStorageFactory.generateJavaSEStorageImpl(storageService);
+		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
+		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
+	}
+	
+	private void generateAndroidStorageImpl_StorageCompiler() {
+		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generateStorageFactory.generateAndroidStorageImpl(storageService);
 		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
 		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
 	}
@@ -140,6 +140,15 @@ public class StorageCompiler {
 	private void generateJavaSEStorageFactory_StorageCompiler() {
 		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generateStorageFactory.generateJavaSEStorageFactory(storageService);
+		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
+		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
+	}
+	
+	
+	
+	private void generateAndroidStorageFactory_StorageCompiler() {
+		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generateStorageFactory.generateAndroidStorageFactory(storageService);
 		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
 		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
 	}

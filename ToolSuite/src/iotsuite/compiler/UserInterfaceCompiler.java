@@ -73,32 +73,26 @@ public class UserInterfaceCompiler {
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
-			
-			//For  JavaSE code generation
-			if(GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
-					
-				//Factory
+			// For JavaSE code generation
+			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
+
+				// Factory
 				generateJavaSEGUIFactory();
-				//Device Driver code
+				// Device Driver code
 				generateJavaSEGUIImpl();
 			}
-			
-			
-			
-			if(GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
-			
-			generateGUI(); // This function call will create a partial Logic files
-			generateGUIListener();  // This function call will create Listener files
-			generateGUIInterface(); // This function call will create Interface of GUI.
-			generateAndroidGUIFactory();
-			generateAndroidGUIImpl();
-		}
-        
-			
-		
-			
-			
 
+			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
+
+				generateGUI(); // This function call will create a partial Logic
+								// files
+				generateGUIListener(); // This function call will create
+										// Listener files
+				generateGUIInterface(); // This function call will create
+										// Interface of GUI.
+				generateAndroidGUIFactory();
+				generateAndroidGUIImpl();
+			}
 			// generateGUILayout();
 			// generateGUIManifest();
 		}
@@ -107,24 +101,25 @@ public class UserInterfaceCompiler {
 		 * if (GlobalVariable.activity.equals("generateMapping")) {
 		 * generateGUILayout(); // generateGUIManifest(); }
 		 */
-	}	
+	}
 
 	public void generateGUI() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceLogic(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateUserInterfaceLogic(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
-	
-  private void generateGUIListener() {
-	
-	JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-	CompilationUnit generatedCU = generatedGUIDriver.generateUserInterfaceListener(guiDriver);
-	SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
-	dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
-		
-		
+
+	private void generateGUIListener() {
+
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateUserInterfaceListener(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
 	}
 
 	private void generateAndroidGUIImpl() {
@@ -135,7 +130,7 @@ public class UserInterfaceCompiler {
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
-	
+
 	private void generateJavaSEGUIImpl() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -152,7 +147,7 @@ public class UserInterfaceCompiler {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
-	
+
 	private void generateJavaSEGUIFactory() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -170,14 +165,14 @@ public class UserInterfaceCompiler {
 
 	}
 
-	private void generateGUILayout() {
+	/*private void generateGUILayout() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
 				.generateAndroidUserInterfaceLayout(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
-	}
+	}*/
 
 	/*
 	 * private void generateGUIManifest() { JavaFrameworkFromST
@@ -219,7 +214,6 @@ public class UserInterfaceCompiler {
 	 */
 
 	public void addCommand(String actionName) {
-		System.out.println("ActionName>>>" + actionName);
 		Command command = new Command(actionName, getCommandParameter(), null);
 		commands.add(command);
 	}
@@ -241,7 +235,6 @@ public class UserInterfaceCompiler {
 	// Getter and Setter of Command Parameters
 
 	public void addCommandParameter(String parameterName) {
-		System.out.println("Add Command Parametere:" + parameterName);
 		commandParameter = new Parameter(parameterName, new DataType(
 				getDatafromSymblTable(parameterName)));
 	}
@@ -256,9 +249,11 @@ public class UserInterfaceCompiler {
 		actions.add(action);
 	}
 
+	/*
 	private Set<Action> getActionList() {
 		return actions;
 	}
+	*/
 
 	// Getter and Setter of Attribute
 
@@ -272,6 +267,7 @@ public class UserInterfaceCompiler {
 	 * public Set<Attribute> getAttributeSet() { return attributeSet; }
 	 */
 
+	
 	public void setReqWidget(String textbox, String button, String textview) {
 		widget = new Widget(textbox, button, textview);
 	}

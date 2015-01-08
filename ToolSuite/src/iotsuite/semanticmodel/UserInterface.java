@@ -24,28 +24,33 @@ public class UserInterface extends SoftwareComponent<Information> {
 	 * Set<DataAccess> dataAccess, String struct, Widget reqWidgets) {
 	 */
 
-	public UserInterface(String name, String lowername, Set<Action> actionsList, Set<Command> commandsList, Set<Information> generateInfo, Set<Information> consumeInfo, Set<DataAccess> dataAccess,
+	public UserInterface(String name, String lowername, Set<Action> actionsList, Set<Command> commandsList, 
+			Set<Information> generateInfo, Set<Information> consumeInfo, Set<DataAccess> dataAccess,
 			String struct, Widget reqWidgets) {
 		// super(name, attributes, generateInfo, consumeInfo, "NoInstance");
 		super(name, generateInfo, consumeInfo, "NoInstance");
 		this.lowername = lowername;
-		this.actions = actionsList;
+		//this.actions = actionsList;
+		this.actions = null;
 		this.commands = commandsList;
-		this.dataAccess = dataAccess;
+		//this.dataAccess = dataAccess;
 		this.struct = struct;
 		this.reqWidgets = reqWidgets;
 
 	}
+	
 
+	/*
 	public Set<DataAccess> getDataAccess() {
 		return dataAccess;
 	}
+	*/
 
-	public List<DataAccess> getAllDataAccess() {
+	/*public List<DataAccess> getAllDataAccess() {
 		ArrayList<DataAccess> allDataAccess = new ArrayList<DataAccess>();
 		allDataAccess.addAll(getDataAccess());
 		return allDataAccess;
-	}
+	} */
 
 	public Set<Command> getCommands() {
 		return commands;
@@ -59,11 +64,11 @@ public class UserInterface extends SoftwareComponent<Information> {
 		return reqWidgets;
 	}
 
-	public List<Action> getAllActions() {
+	/*public List<Action> getAllActions() {
 		ArrayList<Action> allGeneratedInfo = new ArrayList<Action>();
 		allGeneratedInfo.addAll(getActions());
 		return allGeneratedInfo;
-	}
+	} */ 
 
 	private String packageName;
 
