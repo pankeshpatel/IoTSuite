@@ -32,56 +32,56 @@ public class JavaFrameworkFromST {
 	
 	// JavaSE Sensor Impl
 	public CompilationUnit generateJavaSESensorImpl(Sensor sensorDriver) {
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("JavaSE/implsensor");
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("JavaSE/implSensorJavaSE");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit(GlobalVariable.JAVASE_ENABLED_DEVICES + sensorDriver.getName() + ".java", templateOfSensorDriver, "JavaSESensorImpl", "sensor", sensorDriver);
 	}
 	
 	// JavaSE Sensor Factory
 	public CompilationUnit generateJavaSESensorFactory(Sensor sensorDriver) {
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("JavaSE/javasesensorfactory");
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("JavaSE/factorySensorJavaSE");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit(sensorDriver.getName() + "Factory" + ".java", templateOfSensorDriver, "JavaSEFactory", "Sensor", sensorDriver);
 	}
 	
 	//JavaSE Actuator Impl
 	public CompilationUnit generateJavaSEActuatorImpl(Actuator actuatorDriver) {
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("JavaSE/implactuator");
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("JavaSE/implActuatorJavaSE");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit(GlobalVariable.JAVASE_ENABLED_DEVICES + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "JavaSEActuatorImpl", "actuator", actuatorDriver);
 	}
 	
 	// JavaSE Actuator Factory
 	public CompilationUnit generateJavaSEActuatorFactory(Actuator actuatorDriver) {
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("JavaSE/javaseactuatorfactory");
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("JavaSE/factoryActuatorJavaSE");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit(actuatorDriver.getName() + "Factory" + ".java", templateOfActuatorDriver, "JavaSEFactory", "Actuator", actuatorDriver);
 	}	
 	
 	// JavaSE Storage Impl
 	public CompilationUnit generateJavaSEStorageImpl(Storage storageService) {
-		StringTemplate templateOfStorageService = group.getInstanceOf("JavaSE/implJavaSEStorage");
+		StringTemplate templateOfStorageService = group.getInstanceOf("JavaSE/implStorageJavaSE");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit("JavaSE" + storageService.getName() + ".java", templateOfStorageService, "JavaSEStorageImpl", "actuator", storageService);
 	}
 	
 	// JavaSE Storage Factory
 	public CompilationUnit generateJavaSEStorageFactory(Storage storageService) {
-		StringTemplate templateOfStorageService = group.getInstanceOf("JavaSE/storageJavaSEFactory");
+		StringTemplate templateOfStorageService = group.getInstanceOf("JavaSE/factoryStorageJavaSE");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit(storageService.getName() + "Factory" + ".java", templateOfStorageService, "JavaSEFactory", "Future", storageService);
 	}	
 	
 	// JavaSE Userinterface Impl
 	public CompilationUnit generateJavaSEUserInterfaceImpl(UserInterface guiDriver) {
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("JavaSE/implJavaSEGui");
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("JavaSE/implGuiJavaSE");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("JavaSE" + guiDriver.getName() + ".java", templateOfGUIDriver, "JavaSEGuiImpl", "java", guiDriver);
 	}
 	
 	//JavaSE  Userinterface Factory 
 	public CompilationUnit generateJavaSEUserInterfaceFactory(UserInterface guiDriver) {
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("JavaSE/guiJavaseFactory");
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("JavaSE/factoryGuiJavaSE");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java", templateOfGUIDriver, "JavaSEFactory", "gui", guiDriver);
 	}
@@ -89,7 +89,7 @@ public class JavaFrameworkFromST {
 	//JavaSE Actuator
 	public CompilationUnit generateJavaSEActuatorLogic(Actuator actuatorDriver) {
 
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("JavaSE/ljavaseactuator");
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Common/logicActuatorJavaSE");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit("Logic" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "JavaSELogic", "actuator", actuatorDriver);
 	}
@@ -102,53 +102,53 @@ public class JavaFrameworkFromST {
 	
 	// Android Sensor
 	public CompilationUnit generateAndroidSensorFactory(Sensor sensorDriver) {
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("Android/androidsensorfactory");
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("Android/factorySensorAndroid");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit(sensorDriver.getName() + "Factory" + ".java", templateOfSensorDriver, "AndroidFactory", "Sensor", sensorDriver);
 	}
 
 	// Android Actuator
 	public CompilationUnit generateAndroidActuatorFactory(Actuator actuatorDriver) {
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Android/androidactuatorfactory");
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Android/factoryActuatorAndroid");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit(actuatorDriver.getName() + "Factory" + ".java", templateOfActuatorDriver, "AndroidFactory", "Actuator", actuatorDriver);
 	}
 	
 	public CompilationUnit generateAndroidStorageFactory(Storage storageService) {
-		StringTemplate templateOfStorageService = group.getInstanceOf("Android/storageAndroidFactory");
+		StringTemplate templateOfStorageService = group.getInstanceOf("Android/factoryStorageAndroid");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit(storageService.getName() + "Factory" + ".java", templateOfStorageService, "AndroidFactory", "Future", storageService);
 	}
 
 	// Factory for the Android GUI
 	public CompilationUnit generateAndroidUserInterfaceFactory(UserInterface guiDriver) {
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("Android/guiAndroidFactory");
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("Android/factoryGuiAndroid");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java", templateOfGUIDriver, "AndroidFactory", "gui", guiDriver);
 	}
 	
 	// Android Sensor
 	public CompilationUnit generateAndroidSensorImpl(Sensor sensorDriver) {
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("Android/androidsensor");
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("Android/implSensorAndroid");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit(GlobalVariable.ANDROID_ENABLED_DEVICES + sensorDriver.getName() + ".java", templateOfSensorDriver, "AndroidSensorImpl", "sensor", sensorDriver);
 	}
 	
 	// Android Actuator
 	public CompilationUnit generateAndroidActuatorImpl(Actuator actuatorDriver) {
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Android/androidactuator");
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Android/implActuatorAndroid");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit(GlobalVariable.ANDROID_ENABLED_DEVICES + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "AndroidActuatorImpl", "actuator", actuatorDriver);
 	}
 
 	public CompilationUnit generateAndroidStorageImpl(Storage storageService) {
-		StringTemplate templateOfStorageService = group.getInstanceOf("Android/implAndroidStorage");
+		StringTemplate templateOfStorageService = group.getInstanceOf("Android/implStorageAndroid");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit("Android" + storageService.getName() + ".java", templateOfStorageService, "AndroidStorageImpl", "actuator", storageService);
 	}	
 	// Android User interface
 	public CompilationUnit generateAndroidUserInterfaceImpl(UserInterface guiDriver) {
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("Android/implAndroidGui");
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("Android/implGuiAndroid");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("Android" + guiDriver.getName() + ".java", templateOfGUIDriver, "AndroidGuiImpl", "java", guiDriver);
 	}
@@ -156,7 +156,7 @@ public class JavaFrameworkFromST {
 	//Android manifest
 	public CompilationUnit generateAndroidManifest(Device device) {
 
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("Android/devicemanifest");
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("Android/deviceManifestAndroid");
 		templateOfGUIDriver.setAttribute("device", device);
 		return new CompilationUnit("AndroidManifest.xml", templateOfGUIDriver, "AndroidManifest", "manifest", device);
 	}
@@ -173,14 +173,14 @@ public class JavaFrameworkFromST {
 	
 	// User interface
 	public CompilationUnit generateUserInterfaceLogic(UserInterface guiDriver) {		
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("Common/lgui");
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("Common/logicGui");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("Logic" + guiDriver.getName() + ".java", templateOfGUIDriver, "Logic", "gui", guiDriver);
 	}
 	
 	// For generating listener for GUI.
 	public CompilationUnit generateUserInterfaceListener(UserInterface guiDriver) {		
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("Common/guilistener");
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("Common/listenerGui");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("Listener" + guiDriver.getName() + ".java", templateOfGUIDriver, "Listener", "gui", guiDriver);
 	}
@@ -188,7 +188,7 @@ public class JavaFrameworkFromST {
 	// ComputationalService
 	public CompilationUnit generateComputationalServiceLogic(ComputationalService computationalService) {
 
-		StringTemplate templateOfComputationalService = group.getInstanceOf("Common/lcomputation");
+		StringTemplate templateOfComputationalService = group.getInstanceOf("Common/logicComputationalService");
 		templateOfComputationalService.setAttribute("CS", computationalService);
 		return new CompilationUnit("Logic" + computationalService.getName() + ".java", templateOfComputationalService, "Logic", "Future", computationalService);
 	}
@@ -196,7 +196,7 @@ public class JavaFrameworkFromST {
 	// Sensor
 	public CompilationUnit generateSensorInterface(Sensor sensorDriver) {
 
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("Common/isensor");
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("Common/interfaceSensor");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit("I" + sensorDriver.getName() + ".java", templateOfSensorDriver, "Interface", "sensor", sensorDriver);
 	}
@@ -204,7 +204,7 @@ public class JavaFrameworkFromST {
 	// Actuator
 	public CompilationUnit generateActuatorInterface(Actuator actuatorDriver) {
 
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Common/iactuator");
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Common/interfaceActuator");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit("I" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "Interface", "actuator", actuatorDriver);
 	}
@@ -212,14 +212,14 @@ public class JavaFrameworkFromST {
 	// User Interface
 	public CompilationUnit generateUserInterfaceInterface(UserInterface guiDriver) {
 
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("Common/igui");
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("Common/interfaceGui");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("I" + guiDriver.getName() + ".java", templateOfGUIDriver, "Interface", "gui", guiDriver);
 	}
 
 	
 	public CompilationUnit generateSensorListener(SensorMeasurement sensorMeasurement) {
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("Common/sensorlistener");
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("Common/listenerSensor");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorMeasurement);
 		return new CompilationUnit("Listener" + sensorMeasurement.getName() + ".java", templateOfSensorDriver, "Listener", "sensor", sensorMeasurement);
 	}
@@ -232,26 +232,21 @@ public class JavaFrameworkFromST {
 	
 	// Sensor
 	public CompilationUnit generateSensorLogic(Sensor sensorDriver) {
-
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("Common/lsensor");
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("Common/logicSensor");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit("Logic" + sensorDriver.getName() + ".java", templateOfSensorDriver, "Logic", "sensor", sensorDriver);
 	}
 
-	
-	
 	//Android Actuator
 	public CompilationUnit generateAndroidActuatorLogic(Actuator actuatorDriver) {
-
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Android/landroidactuator");
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Common/logicActuatorAndroid");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit("Logic" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "AndroidLogic", "actuator", actuatorDriver);
 	}
 
 	// Storage
 	public CompilationUnit generateJavaSEStorageLogic(Storage storageService) {
-
-		StringTemplate templateOfStorageService = group.getInstanceOf("JavaSE/lstorage");
+		StringTemplate templateOfStorageService = group.getInstanceOf("Common/logicStorage");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit("Logic" + storageService.getName() + ".java", templateOfStorageService, "Logic", "storage", storageService);
 	}
@@ -265,7 +260,7 @@ public class JavaFrameworkFromST {
 	
 	// Sensor
 	public CompilationUnit generateSensorInteraction(Sensor sensorDriver) {
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("Common/sensordriver");
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("Common/frameworkSensorInteraction");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit(sensorDriver.getName() + ".java", templateOfSensorDriver, "sensorDriver", "Future", sensorDriver);
 	}
@@ -273,7 +268,7 @@ public class JavaFrameworkFromST {
 	// Actuator
 	public CompilationUnit generateActuatorInteraction(Actuator actuatorDriver) {
 
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Common/actuatordriver");
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Common/frameworkActuatorInteraction");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit(actuatorDriver.getName() + ".java", templateOfActuatorDriver, "actuatorDriver", "Future", actuatorDriver);
 	}
@@ -281,14 +276,14 @@ public class JavaFrameworkFromST {
 	// Storage
 	public CompilationUnit generateStorageInteraction(Storage storageService) {
 
-		StringTemplate templateOfStorageService = group.getInstanceOf("Common/storageservice");
+		StringTemplate templateOfStorageService = group.getInstanceOf("Common/frameworkStorageInteraction");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit(storageService.getName() + ".java", templateOfStorageService, "storageService", "Future", storageService);
 	}	
 	
 	// User interface
 	public CompilationUnit generateUserInterfaceInteraction(UserInterface guiDriver) {
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("Common/guidriver");
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("Common/frameworkGuiInteraction");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit(guiDriver.getName() + ".java", templateOfGUIDriver, "guiDriver", "Future", guiDriver);
 	}
@@ -296,21 +291,17 @@ public class JavaFrameworkFromST {
 	// ComputationalService
 	public CompilationUnit generateComputationalServiceInteraction(ComputationalService computationalService) {
 
-		StringTemplate templateOfComputationalService = group.getInstanceOf("Common/cs");
+		StringTemplate templateOfComputationalService = group.getInstanceOf("Common/frameworkComputationalServiceInteraction");
 		templateOfComputationalService.setAttribute("CS", computationalService);
 		return new CompilationUnit(computationalService.getName() + ".java", templateOfComputationalService, "computationalService", "Future", computationalService);
 	}
 	
 	// Storage  - interface
 	public CompilationUnit generateJavaSEStorageInterface(Storage storageService) {
-		StringTemplate templateOfStorageService = group.getInstanceOf("Common/storageInterface");
+		StringTemplate templateOfStorageService = group.getInstanceOf("Common/interfaceStorage");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit("I" + storageService.getName() + ".java", templateOfStorageService, "storageService", "Future", storageService);
 	}
-
-
-
-	
 
 	public CompilationUnit generatePlatformSpecificProjectFile(Device device) {
 
