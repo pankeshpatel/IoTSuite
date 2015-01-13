@@ -15,6 +15,7 @@ import iotsuite.semanticmodel.Parameter;
 import iotsuite.semanticmodel.Widget;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class UserInterfaceCompiler {
@@ -28,7 +29,7 @@ public class UserInterfaceCompiler {
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private String GUIName;
 	private String struct;
-	private Widget widget;
+	//private Widget widget;
 
 	public UserInterfaceCompiler() {
 
@@ -58,7 +59,7 @@ public class UserInterfaceCompiler {
 		// getDataAccessList(), getRequestType(), getReqWidget());
 
 		guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
-				null, getCommandList(), null, null, null, null, null);
+				null, getCommandList(), null, null, getDataAccessList(), null, null);
 	}
 
 	// Code generator of the abstract classes and Logic files
@@ -76,6 +77,7 @@ public class UserInterfaceCompiler {
 			// For JavaSE code generation
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 
+				generateJavaSEGUI();
 				// Factory
 				generateJavaSEGUIFactory();
 				// Device Driver code
@@ -84,12 +86,9 @@ public class UserInterfaceCompiler {
 
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
 
-				generateGUI(); // This function call will create a partial Logic
-								// files
-				generateGUIListener(); // This function call will create
-										// Listener files
-				generateGUIInterface(); // This function call will create
-										// Interface of GUI.
+				generateAndroidGUI(); // This function call will create a partial Logic  files
+				generateGUIListener(); // This function call will create  Listener files
+				generateGUIInterface(); // This function call will create Interface of GUI.
 				generateAndroidGUIFactory();
 				generateAndroidGUIImpl();
 			}
@@ -103,10 +102,19 @@ public class UserInterfaceCompiler {
 		 */
 	}
 
-	public void generateGUI() {
+	public void generateAndroidGUI() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
-				.generateUserInterfaceLogic(guiDriver);
+				.generateAndroidUserInterfaceLogic(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
+	}
+	
+	public void generateJavaSEGUI() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateJavaSEUserInterfaceLogic(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
@@ -198,10 +206,12 @@ public class UserInterfaceCompiler {
 	}
 
 	public void setRequestType(String struct) {
+	
 		this.struct = struct;
 	}
 
 	public String getRequestType() {
+		
 		return struct;
 	}
 
@@ -267,7 +277,7 @@ public class UserInterfaceCompiler {
 	 * public Set<Attribute> getAttributeSet() { return attributeSet; }
 	 */
 
-	
+	/*
 	public void setReqWidget(String textbox, String button, String textview) {
 		widget = new Widget(textbox, button, textview);
 	}
@@ -276,5 +286,6 @@ public class UserInterfaceCompiler {
 
 		return widget;
 	}
+	*/
 
 }

@@ -12,12 +12,13 @@ resources:
             generate  tempMeasurement : TempStruct;           
     actuators:
         Heater
-			action SetTemp(setTemp : TempStruct);
+			action SetTemp(setTemp:TempStruct);
 	storages:
 		ProfileDB
-			generate profile: TempStruct accessed-by badgeID: String;
+			generate profile:TempStruct accessed-by badgeID:String;
     gui:
 		EndUserGUI
 			command Off();
 			command SetTemp(setTemp);
+			request profile;
            

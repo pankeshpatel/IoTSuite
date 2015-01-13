@@ -1,13 +1,8 @@
 package $CS.packageName$;
-
-
 import iotsuite.pubsubmiddleware.*;
 import iotsuite.semanticmodel.*;
 import iotsuite.common.*;
 import java.util.List;
-
-
-
 
 public abstract class  $CS.name$ implements Subscriber, Runnable{ 
 			
@@ -45,8 +40,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
       if ($generatedInfo.name; format="avoidCapital"$ != newValue) {
         $generatedInfo.name; format="avoidCapital"$ = newValue; 
         
-        Logger.log(myDeviceInfo.getName(),"$CS.name$",
-				"Publishing $generatedInfo.name$");
+        Logger.log(myDeviceInfo.getName(),"$CS.name$", "Publishing $generatedInfo.name$");
         
      
         this.myPubSubMiddleware.publish("$generatedInfo.name; format="capital"$", newValue, myDeviceInfo);		

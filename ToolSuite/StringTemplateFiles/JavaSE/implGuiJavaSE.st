@@ -12,6 +12,14 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$ {
 		  private Listener$GUIdriver.name$  listener$command.name$Command = null;    
  
   }; separator="\n"$
+  
+   $GUIdriver.allDataAccess:{ dataAccess |
+          private Listener$GUIdriver.name$  listener$dataAccess.dataAccessName; format="capital"$Request = null;
+        
+           
+    }$
+  
+  
 
 	public JavaSE$GUIdriver.name$(Context context, Logic$GUIdriver.name$ obj) {
 		
@@ -26,6 +34,21 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$ {
 	   }
  
   }; separator="\n"$
+  
+    $GUIdriver.allDataAccess:{ dataAccess |
+         @Override
+         public void $dataAccess.dataAccessName; format="capital"$GUI(Listener$GUIdriver.name$ handler) {
+              listener$dataAccess.dataAccessName; format="capital"$Request = handler; 
+         }    
+    }$
+    
+     $GUIdriver.allDataAccess:{ dataAccess |
+         public void $dataAccess.dataAccessName; format="capital"$ResponseReceived($GUIdriver.AllDataAccess:{ dataAcc |$dataAcc.GeneratedInfo.type$}$ response){
+         
+         }  
+    }$
+    
+    
 
 	
 			

@@ -19,17 +19,7 @@ public class JavaFrameworkFromST {
 
 	private StringTemplateGroup group = new StringTemplateGroup("myGroup", GlobalVariable.stringTemplatePath, DefaultTemplateLexer.class);
 
-	/**
-	 * @param JavaSE Platform Code - Start
-	 * Date : 8th December, 2015 @author : Pankesh Patel
-	 */
-	
-	
-	/*  
-	 * JavaSE Sensor Code
-	 *  
-	 */
-	
+
 	// JavaSE Sensor Impl
 	public CompilationUnit generateJavaSESensorImpl(Sensor sensorDriver) {
 		StringTemplate templateOfSensorDriver = group.getInstanceOf("JavaSE/implSensorJavaSE");
@@ -172,10 +162,17 @@ public class JavaFrameworkFromST {
 	 */
 	
 	// User interface
-	public CompilationUnit generateUserInterfaceLogic(UserInterface guiDriver) {		
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("Common/logicGui");
+	public CompilationUnit generateJavaSEUserInterfaceLogic(UserInterface guiDriver) {	
+		
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("JavaSE/logicGuiJavaSE");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-		return new CompilationUnit("Logic" + guiDriver.getName() + ".java", templateOfGUIDriver, "Logic", "gui", guiDriver);
+		return new CompilationUnit("Logic" + guiDriver.getName() + ".java", templateOfGUIDriver, "JavaSEGuiLogic", "gui", guiDriver);
+	}
+	
+	public CompilationUnit generateAndroidUserInterfaceLogic(UserInterface guiDriver) {		
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("Android/logicGuiAndroid");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		return new CompilationUnit("Logic" + guiDriver.getName() + ".java", templateOfGUIDriver, "AndroidGuiLogic", "gui", guiDriver);
 	}
 	
 	// For generating listener for GUI.

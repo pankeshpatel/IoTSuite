@@ -10,11 +10,11 @@ import java.util.Set;
 
 public class UserInterface extends SoftwareComponent<Information> {
 
-	private Set<Action> actions = new HashSet<Action>();
+	//private Set<Action> actions = new HashSet<Action>();
 	private Set<Command> commands = new HashSet<Command>();
 	private Set<DataAccess> dataAccess = new HashSet<DataAccess>();
 	public String struct;
-	private Widget reqWidgets;
+	//private Widget reqWidgets;
 	private String lowername;
 
 	/*
@@ -31,38 +31,38 @@ public class UserInterface extends SoftwareComponent<Information> {
 		super(name, generateInfo, consumeInfo, "NoInstance");
 		this.lowername = lowername;
 		//this.actions = actionsList;
-		this.actions = null;
+		//this.actions = null;
 		this.commands = commandsList;
-		//this.dataAccess = dataAccess;
+		this.dataAccess = dataAccess;
 		this.struct = struct;
-		this.reqWidgets = reqWidgets;
+		//this.reqWidgets = reqWidgets;
 
 	}
 	
 
-	/*
+	
 	public Set<DataAccess> getDataAccess() {
 		return dataAccess;
 	}
-	*/
+	
 
-	/*public List<DataAccess> getAllDataAccess() {
+	public List<DataAccess> getAllDataAccess() {
 		ArrayList<DataAccess> allDataAccess = new ArrayList<DataAccess>();
 		allDataAccess.addAll(getDataAccess());
 		return allDataAccess;
-	} */
+	} 
 
 	public Set<Command> getCommands() {
 		return commands;
 	}
 
-	public Set<Action> getActions() {
+	/*public Set<Action> getActions() {
 		return actions;
-	}
+	}*/
 
-	public Widget getReqWidgets() {
+	/*public Widget getReqWidgets() {
 		return reqWidgets;
-	}
+	} */
 
 	/*public List<Action> getAllActions() {
 		ArrayList<Action> allGeneratedInfo = new ArrayList<Action>();
@@ -87,21 +87,16 @@ public class UserInterface extends SoftwareComponent<Information> {
 	}
 
 	public String getFactoryPackageName() {
-
 		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.factoryDirPath);
 		return packageName;
-
 	}
 
 	public String getFactoryDeviceImplGUI() {
 		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.deviceImplDirPath);
-
 		return packageName;
-
 	}
 
 	public String getDeviceImplPackageName() {
-
 		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.deviceImplDirPath);
 		return packageName;
 	}

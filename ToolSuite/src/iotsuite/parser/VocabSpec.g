@@ -212,7 +212,7 @@ gui_def:
    //(gui_action_def ';')*  
     // User interaction - Action. Action (e.g., receiving notification is not a user interaction.
    (gui_command_def ';')*   // User interaction - Command
-  // (gui_request_def  ';')*   //User interaction - Request/Response
+   (gui_request_def  ';')*   //User interaction - Request/Response
    {context.currentGUI.setGUIName($CAPITALIZED_ID.text); 
     context.currentGUI.createGUIObject();
     context.currentGUI.generateCode();}   
@@ -255,13 +255,20 @@ gui_action_parameter_def :
     }
 ; 
 
-
-
 gui_request_def :
-   'request' lc_id 'with' button = bt_id ',' textbox = txtbx_id ',' textview = txtview_id 
+   'request' lc_id 
    { context.currentGUI.getDataAccessListFromSymblTable($lc_id.text);
      context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
 ;
+
+
+
+//gui_request_def :
+//   'request' lc_id 'with' button = bt_id ',' textbox = txtbx_id ',' textview = txtview_id 
+//   { context.currentGUI.getDataAccessListFromSymblTable($lc_id.text);
+//     context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
+//;
+
 
 
 
@@ -291,12 +298,12 @@ txtbx_id :  ID ;
 txtview_id :  ID ;
 
  
-req_ui_parameter :
-    textbox = CAPITALIZED_ID button = CAPITALIZED_ID textview = CAPITALIZED_ID 
-    {context.currentGUI.setReqWidget($textbox.text,$button.text,$textview.text);}
-;
+//req_ui_parameter :
+//    textbox = CAPITALIZED_ID button = CAPITALIZED_ID textview = CAPITALIZED_ID 
+//    {context.currentGUI.setReqWidget($textbox.text,$button.text,$textview.text);}
+//;
 
-
+ 
 
 // EndUSerGUI Definition *** End 
 //************************************************************************************************

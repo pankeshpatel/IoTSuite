@@ -10,6 +10,13 @@ public abstract class  Listener$GUIdriver.name$  {
     
     
   }; separator="\n"$
+  
+  
+  $GUIdriver.allDataAccess:{ dataAccess | 
+      public abstract void onNew$dataAccess.dataAccessName; format="capital"$Request(String request); 
+  }; separator="\n"$
+  
+  
      
         
 }
