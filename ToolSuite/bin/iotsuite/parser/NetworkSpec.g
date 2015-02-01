@@ -35,7 +35,7 @@ device_def:
    }  
     'region' ':' (location_def)* 
     'type' ':' (device_type)* ';'
-    'resources' ':' (abilities_def)* ';'
+    'resources' ':' (abilities_def)?  ';'
     (mobileFlag_def)* ';'
     { context.currentNetwork.addDeviceObj();}
 ;

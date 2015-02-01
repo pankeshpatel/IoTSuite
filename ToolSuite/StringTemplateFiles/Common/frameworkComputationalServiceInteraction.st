@@ -73,7 +73,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         }$
         
         $CS.allDataAccess:{ dataAccess |
-        if (eventName.equals("$dataAccess.dataAccessName; format="capital"$Received")) {
+        if (eventName.equals("$dataAccess.dataAccessName; format="capital"$")) {
 				Logger.log(myDeviceInfo.getName(), "Proximity",
 						"Notification Received Profile");
 
@@ -115,7 +115,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	   		
 	   		
 	   		
-         		this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="capital"$Received", regionInfo);
+         		this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="capital"$", regionInfo);
 		}
 		    
 		    

@@ -5,6 +5,13 @@ import framework.*;
 
 public class JavaSE$Actuatordriver.name$ implements I$Actuatordriver.name$ {
 
+
+  public JavaSE$Actuatordriver.name$() {
+  
+  
+  
+  }
+
   $Actuatordriver.allActions:{ action |   
   
   @Override

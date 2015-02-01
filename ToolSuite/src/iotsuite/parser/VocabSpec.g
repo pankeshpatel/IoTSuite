@@ -67,10 +67,10 @@ structField_def:
 //************************************************************************************************
 
 abilities_def : 
-  ('sensors' ':'   sensor_def)+
-  ('actuators' ':' actuator_def)+
+  'sensors' ':'   (sensor_def)+
+  'actuators' ':' (actuator_def)+
   ('storages'  ':' ss_def)*
-  ('gui' ':' (gui_def)+ )*
+ // ('gui' ':' (gui_def)+ )*
 ;  
 
 

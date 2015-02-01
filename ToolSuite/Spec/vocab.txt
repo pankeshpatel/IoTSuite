@@ -1,24 +1,23 @@
-regions :
-	Building : Integer ;
-	Floor :  Integer;
-	Room : Integer;
-structs:	    
-    TempStruct
-        tempValue : double;
-        unitOfMeasurement : String;			
-resources:
-    sensors:
-        TemperatureSensor 
-            generate  tempMeasurement : TempStruct;           
-    actuators:
-        Heater
-			action SetTemp(setTemp:TempStruct);
-	storages:
-		ProfileDB
-			generate profile:TempStruct accessed-by badgeID:String;
-    gui:
-		EndUserGUI
-			command Off();
-			command SetTemp(setTemp);
-			request profile;
-           
+regions: 
+    Building: Integer;
+    Floor: Integer;
+    Room: Integer;
+structs:                 
+    BadgeStruct    
+        badgeID: String;
+        badgeEvent:String;   
+    TempStruct            
+        tempValue: double;
+        unitOfMeasurement: String;  
+resources:   
+    sensors:                        
+        BadgeReader                
+            generate badgeDetected: BadgeStruct;
+			generate badgeDisappeared: BadgeStruct;	         
+    actuators:                   
+        Heater 
+        	action Off();                
+            action SetTemp(setTemp: TempStruct);              
+    storages:       
+        ProfileDB   
+            generate  profile: TempStruct accessed-by badgeID: String;

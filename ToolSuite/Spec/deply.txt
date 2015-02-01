@@ -5,39 +5,37 @@ devices:
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources : TemperatureSensor;
+        resources : BadgeReader;
         mobile : false;	
-	D2:
+    D2:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources : TemperatureSensor;
-        mobile : false;	
+        resources : ProfileDB ;
+        mobile : false;		
 	D3:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources : TemperatureSensor;
-        mobile : false;			
-    D4:
+        resources :  ;
+        mobile : false;	
+	D4:
+        region :
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
+        type: JavaSE;    
+        resources :  ;
+        mobile : false;
+	D5:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
         resources : Heater;
-        mobile : false;			
-    D6:
-		region:
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
-        type : Android;
-        resources : TemperatureSensor;   
-        mobile : false;
-   
-      
+        mobile : false;	  
