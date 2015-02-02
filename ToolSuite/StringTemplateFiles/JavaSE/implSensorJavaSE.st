@@ -7,7 +7,11 @@ import framework.*;
 public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 
    
-
+   public JavaSE$SensorDriver.name$() {
+  
+  
+  
+  }
 
 
   
