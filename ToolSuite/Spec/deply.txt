@@ -5,7 +5,7 @@ devices:
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources : SmokeDetector;
+        resources : BadgeReader;
         mobile : false;	
     D2:
         region :
@@ -13,7 +13,7 @@ devices:
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources : TemperatureSensor;
+        resources : ProfileDB ;
         mobile : false;		
 	D3:
         region :
@@ -37,13 +37,5 @@ devices:
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources : ;
-        mobile : false;	
-	D6:
-        region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
-        type: JavaSE;    
-        resources : Alarm;
-        mobile : false;
+        resources : Heater;
+        mobile : false;	  
