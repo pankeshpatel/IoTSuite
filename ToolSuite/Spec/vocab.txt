@@ -3,21 +3,18 @@ regions:
     Floor: Integer;
     Room: Integer;
 structs:                 
-    BadgeStruct    
-        badgeID: String;
-        badgeEvent:String;   
     TempStruct            
         tempValue: double;
-        unitOfMeasurement: String;  
+        unitOfMeasurement: String; 
+	PresenceStruct
+		presence : boolean;
 resources:   
     sensors:                        
-        BadgeReader                
-            generate badgeDetected: BadgeStruct;
-			generate badgeDisappeared: BadgeStruct;	         
+		TemperatureSensor 
+            generate  tempMeasurement : TempStruct;	
+		SmokeDetector
+            generate smokePresence : PresenceStruct;	
     actuators:                   
-        Heater
-        	action Off(); 
-            action SetTemp(setTemp: TempStruct);			                      
-    storages:       
-        ProfileDB   
-            generate  profile: TempStruct accessed-by badgeID: String;
+        Alarm
+            action Activate();
+            action DeActivate();

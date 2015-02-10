@@ -45,20 +45,15 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
      
         this.myPubSubMiddleware.publish("$generatedInfo.name; format="capital"$", newValue, myDeviceInfo);		
       }
-    }    
+    } 
+    /*   
     protected  $generatedInfo.type.name$ get$generatedInfo.name; format="capital"$() {
       return  $generatedInfo.name; format="avoidCapital"$;
-    }
-    
-  
-        
+    } */
+       
 }; separator="\n"$
 		
-		
-		
-		
-		
-       
+
         
         public void notifyReceived(String eventName, Object arg, Device deviceInfo) { 
         try {	
