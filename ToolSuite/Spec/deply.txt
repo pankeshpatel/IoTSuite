@@ -1,49 +1,37 @@
 devices: 
 	D1:
         region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
+            Sector:15;            
         type: JavaSE;    
-        resources : SmokeDetector;
+        resources: SpeedSensor;
         mobile : false;	
     D2:
         region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
+            Sector:15; 
         type: JavaSE;    
-        resources : TemperatureSensor;
+        resources: PresenceSensor;
         mobile : false;		
 	D3:
         region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
+            Sector:15; 
         type: JavaSE;    
-        resources :  ;
+        resources:  ;
         mobile : false;	
 	D4:
         region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
+           Sector:15; 
         type: JavaSE;    
-        resources :  ;
+        resources:  ;
         mobile : false;
 	D5:
         region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
-        type: JavaSE;    
-        resources : ;
-        mobile : false;	
+            Sector:15;
+		type: JavaSE;    
+        resources: ;
+        mobile : false;
 	D6:
         region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
-        type: JavaSE;    
-        resources : Alarm;
+            Sector:15;
+		type: JavaSE;    
+        resources : RampSignal;
         mobile : false;

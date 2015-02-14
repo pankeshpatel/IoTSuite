@@ -1,20 +1,18 @@
 regions: 
-    Building: Integer;
-    Floor: Integer;
-    Room: Integer;
+    Sector: Integer;   
 structs:                 
-    TempStruct            
-        tempValue: double;
-        unitOfMeasurement: String; 
+    SpeedStruct            
+        speedValue: double;
 	PresenceStruct
-		presence : boolean;
+		presenceValue:boolean;
+	SignalStruct
+		signalValue: Integer;		
 resources:   
     sensors:                        
-		TemperatureSensor 
-            generate  tempMeasurement : TempStruct;	
-		SmokeDetector
-            generate smokePresence : PresenceStruct;	
+		SpeedSensor 
+            generate  speedMeasurement:SpeedStruct;	
+		PresenceSensor
+            generate vehiclePresence:PresenceStruct;	
     actuators:                   
-        Alarm
-            action Activate();
-            action DeActivate();
+        RampSignal
+            action Signal(signal:SignalStruct);

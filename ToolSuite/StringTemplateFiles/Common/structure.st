@@ -1,5 +1,3 @@
-//package fr.inria.arles.pankesh.gen;
-
 package $struct.packageName$;
 
 import java.io.Serializable;
