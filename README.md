@@ -25,4 +25,9 @@ devices and MQTT middleware.
 For more detail documentations, readers are advised to refer the wiki pages - 
 available [here](https://github.com/pankeshlinux/IoTSuite/wiki/Home).
 
+License
+-------
+
+GNU GPL v2.0, check LICENSE.txt
+
 
