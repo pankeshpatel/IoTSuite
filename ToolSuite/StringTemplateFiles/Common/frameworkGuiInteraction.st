@@ -40,7 +40,7 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
 	       
 	       public void  $dataAccess.dataAccessName; format="capital"$Request(String arg) {
        
-        this.myPubSubMiddleware.publish( "$dataAccess.dataAccessName; format="capital"$Request", arg, myDeviceInfo); 
+        this.myPubSubMiddleware.publish( "get$dataAccess.dataAccessName; format="capital"$", arg, myDeviceInfo); 
         
         }
        }$
@@ -51,7 +51,7 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
           try {  
           
       $GUIdriver.allDataAccess:{ dataAccess |
-        if (eventName.equals("$dataAccess.dataAccessName; format="capital"$Response")) {
+        if (eventName.equals("$dataAccess.dataAccessName; format="capital"$")) {
         Logger.log(myDeviceInfo.getName(), "$GUIdriver.name$", "Notification Received Profile");
         onNew$dataAccess.dataAccessName; format="capital"$Response(($GUIdriver.AllDataAccess:{ dataAcc |$dataAcc.GeneratedInfo.type$}$) arg);
         }
@@ -72,7 +72,7 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
             
       List<String> regionInfo = RegionSubscription.getSubscriptionRequest(partitionAttribute, 
                myDeviceInfo.getRegionLabels(), myDeviceInfo.getRegion());
-         this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="capital"$Response", regionInfo);
+         this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="capital"$", regionInfo);
     }
         
         

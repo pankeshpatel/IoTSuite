@@ -28,8 +28,8 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
 		 
 		 
    pubSubSensingFramework = PubSubsSensingFramework.getInstance();
-   Intent intent = new Intent(myContext, Android$GUIdriver.name$.class);
-   myContext.startActivity(intent);
+   //Intent intent = new Intent(myContext, Android$GUIdriver.name$.class);
+   //myContext.startActivity(intent);
 		 
 	
 		
@@ -69,7 +69,7 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
 	
 	 $GUIdriver.allDataAccess:{ dataAccess |
      public void onNew$dataAccess.dataAccessName; format="capital"$Response($GUIdriver.AllDataAccess:{ dataAcc |$dataAcc.GeneratedInfo.type$}$ arg){
-        pubSubSensingFramework.publish("$dataAccess.dataAccessName; format="capital"$Response", arg);
+        pubSubSensingFramework.publish("$dataAccess.dataAccessName; format="capital"$", arg);
     
     
     }  

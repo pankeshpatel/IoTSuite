@@ -4,16 +4,20 @@ import logic.*;
 import framework.*;
 import android.content.Context;
 import iotsuite.android.localmiddleware.IDataListener;
+import iotsuite.android.localmiddleware.PubSubsSensingFramework;
 
 
 
 public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener {
+
 
 	
 	$GUIdriver.commands:{ command |
 		  private Listener$GUIdriver.name$  listener$command.name$Command = null;    
  
   }; separator="\n"$
+  
+  public static PubSubsSensingFramework pubSubSensingFramework;
   
    $GUIdriver.allDataAccess:{ dataAccess |
           private Listener$GUIdriver.name$  listener$dataAccess.dataAccessName; format="capital"$Request = null;
@@ -24,6 +28,12 @@ public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener
  
 
 	public Android$GUIdriver.name$(Context context, Logic$GUIdriver.name$ obj) {
+	
+	 pubSubSensingFramework = PubSubsSensingFramework.getInstance();
+	 
+	  $GUIdriver.allDataAccess:{ dataAccess |
+      pubSubSensingFramework.registerForSensorData(this, "$dataAccess.dataAccessName; format="capital"$");
+    }$
 		
 	}
 	
