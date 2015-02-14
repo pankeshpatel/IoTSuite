@@ -2,6 +2,7 @@ package $Storageservice.logicPackageName$;
 
 import iotsuite.pubsubmiddleware.*;
 import iotsuite.semanticmodel.*;
+import android.content.Context;
 import $Storageservice.PackageName$.*;
 import iotsuite.common.GlobalVariable;
 import factory.*;
@@ -13,7 +14,7 @@ public class  Logic$Storageservice.name$  extends $Storageservice.name$  {
 	public String deviceType;
 
 	
-	public Logic$Storageservice.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui) {
+	public Logic$Storageservice.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui,Context myContext) {
 		super(pubSubM, deviceInfo);
 		
 		deviceType = deviceInfo.getType();

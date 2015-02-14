@@ -13,8 +13,8 @@ public  class  Logic$Actuatordriver.name$ extends $Actuatordriver.name$  {
 	public String deviceType;
 	
 
-	public Logic$Actuatordriver.name$(PubSubMiddleware myPubSubMiddleware, Device deviceInfo, Object myContext) {
-		super(myPubSubMiddleware, deviceInfo);
+	public Logic$Actuatordriver.name$(PubSubMiddleware myPubSubMiddleware, Device deviceInfo, final Object ui, Context myContext) {
+  		super(myPubSubMiddleware, deviceInfo);
 		
 		
 

@@ -31,7 +31,7 @@ private static void setUpNode(Device deviceInfo)	{
 	
 	
 	$device.abilities:{ sc |	
-	Logic$sc$ logic$sc$Impl = new Logic$sc$(myPubSub, deviceInfo, ui); 
+	Logic$sc$ logic$sc$Impl = new Logic$sc$(myPubSub, deviceInfo, ui, (Context) myContext); 
 	new Thread(logic$sc$Impl).start();
     }; separator="\n"$
 	

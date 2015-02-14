@@ -1,18 +1,13 @@
-structs:
-	QueueStruct
-		queueValue: Integer;
 softwarecomponents:           
    computationalService :       
-		CalculateAvgSpeed 
-            generate avgSpeedMeasurement:SpeedStruct;
-            consume speedMeasurement from region-hops:0:Sector;
-            partition-per:Sector;
-		CalculateAvgQueueLength 
-            generate avgQueueLengthMeasurement:QueueStruct;
-            consume vehiclePresence from region-hops:0:Sector;
-            partition-per:Sector;
-		RampSignalController
-			consume  avgSpeedMeasurement from region-hops:0:Sector;
-			consume  avgQueueLengthMeasurement from region-hops:0:Sector;
-			command Signal(signal) to region-hops:0:Sector; 
-			partition-per:Sector;
+		Proximity                                   
+			generate tempPref:TempStruct;
+			consume badgeDetected from region-hops:0:Room;
+			consume badgeDisappeared from region-hops:0:Room; 
+			request profile;                        
+			partition-per:Room;               
+		TemperatureController                            
+			consume tempPref from region-hops:0:Room;
+			command Off() to region-hops:0:Room;
+			command SetTemp(setTemp) to region-hops:0:Room;
+			partition-per:Room;		

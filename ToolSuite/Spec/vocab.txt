@@ -1,18 +1,28 @@
-regions: 
-    Sector: Integer;   
-structs:                 
-    SpeedStruct            
-        speedValue: double;
-	PresenceStruct
-		presenceValue:boolean;
-	SignalStruct
-		signalValue: Integer;		
-resources:   
-    sensors:                        
-		SpeedSensor 
-            generate  speedMeasurement:SpeedStruct;	
-		PresenceSensor
-            generate vehiclePresence:PresenceStruct;	
-    actuators:                   
-        RampSignal
-            action Signal(signal:SignalStruct);
+regions :
+	Building : Integer ;
+	Floor :  Integer;
+	Room : Integer;
+structs:	    
+    BadgeStruct    
+        badgeID: String;
+        badgeEvent:String; 
+    TempStruct            
+        tempValue: double;
+        unitOfMeasurement: String;    			
+resources:
+    sensors:
+        BadgeReader                
+            generate badgeDetected: BadgeStruct;
+			generate badgeDisappeared: BadgeStruct;	            
+    actuators:
+        Heater
+        	action Off();        	
+			action SetTemp(setTemp : TempStruct);
+	storages:
+		ProfileDB
+			generate profile: TempStruct accessed-by badgeID: String;
+    interactions:
+		EndUserInteraction
+			command Off();
+            command SetTemp(setTemp);
+            request profile;

@@ -131,6 +131,7 @@ public class UserInterfaceCompiler {
 	}
 
 	private void generateAndroidGUIImpl() {
+		
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
 				.generateAndroidUserInterfaceImpl(guiDriver);

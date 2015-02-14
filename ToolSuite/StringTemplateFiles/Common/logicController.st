@@ -1,5 +1,6 @@
 package $CS.logicPackageName$;
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
+import android.content.Context;
 import fr.inria.arles.pankesh.semanticmodel.*;
 import $CS.PackageName$.*;
 
@@ -7,7 +8,7 @@ import $CS.PackageName$.*;
 
 public class Logic$CS.name$ extends $CS.name$ {
 
-	public Fake$CS.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui) {
+	public Fake$CS.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui,Context myContext) {
 		super(pubSubM, deviceInfo);
 	}
 	

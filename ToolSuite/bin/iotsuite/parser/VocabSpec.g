@@ -70,7 +70,7 @@ abilities_def :
   'sensors' ':'   (sensor_def)+
   'actuators' ':' (actuator_def)+
   ('storages'  ':' ss_def)*
- // ('gui' ':' (gui_def)+ )*
+  ('interactions' ':' (gui_def)+ )*     
 ;  
 
 

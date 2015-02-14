@@ -1,37 +1,49 @@
 devices: 
 	D1:
         region :
-            Sector:15;            
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
         type: JavaSE;    
-        resources: SpeedSensor;
+        resources : BadgeReader;
         mobile : false;	
     D2:
         region :
-            Sector:15; 
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
         type: JavaSE;    
-        resources: PresenceSensor;
+        resources : ProfileDB ;
         mobile : false;		
 	D3:
         region :
-            Sector:15; 
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
         type: JavaSE;    
-        resources:  ;
+        resources :  ;
         mobile : false;	
 	D4:
         region :
-           Sector:15; 
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
         type: JavaSE;    
-        resources:  ;
+        resources :  ;
         mobile : false;
 	D5:
         region :
-            Sector:15;
-		type: JavaSE;    
-        resources: ;
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
+        type: JavaSE;    
+        resources : Heater;
         mobile : false;
-	D6:
+    D6:
         region :
-            Sector:15;
-		type: JavaSE;    
-        resources : RampSignal;
-        mobile : false;
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
+        type: Android;    
+        resources : EndUserInteraction;
+        mobile : false;		  

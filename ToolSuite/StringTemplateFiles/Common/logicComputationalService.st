@@ -2,6 +2,7 @@
 package $CS.logicPackageName$;
 
 import iotsuite.pubsubmiddleware.PubSubMiddleware;
+import android.content.Context;
 import iotsuite.semanticmodel.*;
 import $CS.PackageName$.*;
 	   	
@@ -10,7 +11,7 @@ import $CS.PackageName$.*;
 public class  Logic$CS.name$ extends $CS.name$  { 
 
 
-   public Logic$CS.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui) {
+   public Logic$CS.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui,Context myContext) {
 		super(pubSubM, deviceInfo);
 	}   
     		

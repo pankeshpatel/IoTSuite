@@ -2,6 +2,7 @@ package $SensorDriver.logicPackageName$;
 
 import iotsuite.pubsubmiddleware.*;
 import iotsuite.common.GlobalVariable;
+import android.content.Context;
 import iotsuite.semanticmodel.*;
 import android.app.Activity;
 import android.app.Dialog;
@@ -18,7 +19,7 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 	Device deviceInfo;	
 	public String deviceType;
    
-	public Logic$SensorDriver.name$(PubSubMiddleware pubSubM, final Device deviceInfo, final Object ui) {
+	public Logic$SensorDriver.name$(PubSubMiddleware pubSubM, final Device deviceInfo, final Object ui,Context myContext) {
 		super(pubSubM, deviceInfo);
 		
 		deviceType = deviceInfo.getType();

@@ -222,6 +222,7 @@ public class JavaFrameworkFromST {
 	}
 
 	public CompilationUnit generateDeviceStartup(Device device) {
+			
 		StringTemplate templateOfDevice = group.getInstanceOf("Common/device");
 		templateOfDevice.setAttribute("device", device);
 		return new CompilationUnit("Startup" + ".java", templateOfDevice, "device", device.getName(), device);

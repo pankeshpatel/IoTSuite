@@ -35,6 +35,7 @@ public class LinkerCompiler {
 
 				} else {  // For Android-enabled devices.
 
+					System.out.println( "Linked code for " + listOfFiles[i].getName() + " device");
 					
 					copyDeviceDrivers(GlobalVariable.ANDROID_ENABLED_DEVICES, listOfFiles[i].getName());
 					copyFactory(GlobalVariable.ANDROID_ENABLED_DEVICES, listOfFiles[i].getName());
