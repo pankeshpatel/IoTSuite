@@ -79,7 +79,7 @@ public class JavaFrameworkFromST {
 	//JavaSE Actuator
 	public CompilationUnit generateJavaSEActuatorLogic(Actuator actuatorDriver) {
 
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Common/logicActuatorJavaSE");
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("JavaSE/logicActuatorJavaSE");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit("Logic" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "JavaSELogic", "actuator", actuatorDriver);
 	}
@@ -229,15 +229,22 @@ public class JavaFrameworkFromST {
 	}
 	
 	// Sensor
-	public CompilationUnit generateSensorLogic(Sensor sensorDriver) {
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("Common/logicSensor");
+	public CompilationUnit generateJavaSESensorLogic(Sensor sensorDriver) {
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("JavaSE/logicSensorJavaSE");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
-		return new CompilationUnit("Logic" + sensorDriver.getName() + ".java", templateOfSensorDriver, "Logic", "sensor", sensorDriver);
+		return new CompilationUnit("Logic" + sensorDriver.getName() + ".java", templateOfSensorDriver, "JavaSESensorLogic", "sensor", sensorDriver);
+	}
+	
+	// Sensor
+	public CompilationUnit generateAndroidSensorLogic(Sensor sensorDriver) {
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("Android/logicSensorAndroid");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
+		return new CompilationUnit("Logic" + sensorDriver.getName() + ".java", templateOfSensorDriver, "AndroidSensorLogic", "sensor", sensorDriver);
 	}
 
 	//Android Actuator
 	public CompilationUnit generateAndroidActuatorLogic(Actuator actuatorDriver) {
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Common/logicActuatorAndroid");
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("Android/logicActuatorAndroid");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit("Logic" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "AndroidLogic", "actuator", actuatorDriver);
 	}

@@ -65,10 +65,12 @@ public class SensorCompiler {
 		if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
 			// Sensor's Application Logic
-			generateSensorLogic_SensorCompiler();
 
 		
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
+				
+				// Sensor's Application Logic
+				generateJavaSESensorLogic_SensorCompiler();
 				
 				// JavaSE SensorFactory
 				generateJavaSESensorFactory_SensorCompiler();
@@ -78,6 +80,11 @@ public class SensorCompiler {
 			}
 
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
+				
+				
+				// Sensor's Application Logic
+				generateAndroidSensorLogic_SensorCompiler();
+
 				
 				// Android SensorFactory
 				generateAndroidSensorFactory_SensorCompiler();
@@ -109,9 +116,16 @@ public class SensorCompiler {
 	}
 
 	// Sensor's Application Logic
-	public void generateSensorLogic_SensorCompiler() {
+	public void generateJavaSESensorLogic_SensorCompiler() {
 		JavaFrameworkFromST generateSensor = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensor.generateSensorLogic(sensorDriver);
+		CompilationUnit generateCU = generateSensor.generateJavaSESensorLogic(sensorDriver);
+		SourceFileDumper dumpGenerateSensor = new SourceFileDumper();
+		dumpGenerateSensor.dumpCompilationUnit(generateCU);
+	}
+	
+	public void generateAndroidSensorLogic_SensorCompiler() {
+		JavaFrameworkFromST generateSensor = new JavaFrameworkFromST();
+		CompilationUnit generateCU = generateSensor.generateAndroidSensorLogic(sensorDriver);
 		SourceFileDumper dumpGenerateSensor = new SourceFileDumper();
 		dumpGenerateSensor.dumpCompilationUnit(generateCU);
 	}
