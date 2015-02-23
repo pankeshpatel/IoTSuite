@@ -73,7 +73,7 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 			set$generatedInfo.name; format="capital"$(s$generatedInfo.type.name$);
 		}
 		
-		
+		 
 	};
    
 }; separator="\n"$	
