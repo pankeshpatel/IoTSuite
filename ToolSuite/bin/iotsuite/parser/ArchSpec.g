@@ -6,7 +6,7 @@ options {
 
 @lexer::header {   
   package iotsuite.parser; 
-  
+   
 }  
 
 @parser::header {
@@ -25,8 +25,8 @@ archSpec :
    context.currentRegion = new RegionCompiler();
     context.currentMappingConstraint = new MapperCompiler(); 
     }
-     { context.currentRegion.generateCode(); }    
-    ('structs' ':' struct_def)*  
+     { context.currentRegion.generateRegionCode(); }    
+    ('structs' ':' struct_def)* // see this is *. so, it is optional. :)  
      'softwarecomponents' ':' (component_def)+
 ;   
   
@@ -56,11 +56,11 @@ cs_def:
     { 
      context.currentComputationalService = new ComputationalServiceCompiler(); 
      context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);}
-     (csGeneratedInfo_def ';')+ 
+     (csGeneratedInfo_def ';')*  
     (csConsumeInfo_def ';')* 
     (csRequest_def  ';')*
     (cntrlCommand_def ';')* 
-    (partition_def ';')+
+    (partition_def ';')+  
     { 
      context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
      context.currentComputationalService.createCSObject();
@@ -70,7 +70,7 @@ cs_def:
     
     }
 ;
-
+ 
  
 csGeneratedInfo_def:
     'generate' lc_id ':'  CAPITALIZED_ID
@@ -91,6 +91,7 @@ csRequest_def :
    { context.currentComputationalService.getDataAccessListFromSymblTable($lc_id.text);}
 ; 
  
+
 cntrlCommand_def :
     'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'region-hops' ':' INT ':' CAPITALIZED_ID
     //'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'hops' ':' INT ':' CAPITALIZED_ID  
@@ -100,9 +101,14 @@ cntrlCommand_def :
 ;
 
 cntrlParameter_def :
-    lc_id  (',' parameter_def )?
+    lc_id  
     { context.currentComputationalService.addParameter($lc_id.text); }  
-; 
+;
+
+//cntrlParameter_def :
+//    lc_id  (',' parameter_def )?
+//    { context.currentComputationalService.addParameter($lc_id.text); }  
+//; 
   
 partition_def:  
     csDeploymentConstraint='partition-per' ':' CAPITALIZED_ID 
@@ -111,8 +117,8 @@ partition_def:
     // Next two lines are for  Mapping constraints
     context.currentMappingConstraint.setAttributeName($csDeploymentConstraint.text);  
     context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text); 
-   }
-; 
+   } 
+;  
 
 lc_id: ID  
 ;
@@ -130,7 +136,6 @@ ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' )*
    
 INT : '0'..'9'('0'..'9')*  ; 
 
-CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )*;
+CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )*;   
 
 WS: ('\t' | ' ' | '\r' | '\n' | '\u000C')+ {$channel = HIDDEN;};
- 

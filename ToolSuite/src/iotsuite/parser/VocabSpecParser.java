@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-02-23 09:15:57
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-07-01 09:21:55
  
 package iotsuite.parser;
 import iotsuite.compiler.*;  
@@ -70,7 +70,7 @@ public class VocabSpecParser extends Parser {
 	}
 
 	@Override public String[] getTokenNames() { return VocabSpecParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g"; }
+	@Override public String getGrammarFileName() { return "S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g"; }
 
 
 	  //Initialize the context
@@ -79,11 +79,11 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "vocabSpec"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:24:1: vocabSpec : 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'resources' ':' abilities_def ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:24:1: vocabSpec : 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'resources' ':' abilities_def ;
 	public final void vocabSpec() throws RecognitionException {
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:24:11: ( 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'resources' ':' abilities_def )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:25:5: 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'resources' ':' abilities_def
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:24:11: ( 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'resources' ':' abilities_def )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:25:5: 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'resources' ':' abilities_def
 			{
 			match(input,28,FOLLOW_28_in_vocabSpec67); 
 			 context = new SymbolTable();
@@ -91,7 +91,7 @@ public class VocabSpecParser extends Parser {
 			    // context.currentMappingConstraint = new MappingConstraint(); 
 			    
 			match(input,11,FOLLOW_11_in_vocabSpec79); 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:9: ( region_def )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:9: ( region_def )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -103,7 +103,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt1) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:10: region_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:10: region_def
 					{
 					pushFollow(FOLLOW_region_def_in_vocabSpec82);
 					region_def();
@@ -123,7 +123,7 @@ public class VocabSpecParser extends Parser {
 			 context.currentRegion.generateRegionCode(); 
 			match(input,33,FOLLOW_33_in_vocabSpec103); 
 			match(input,11,FOLLOW_11_in_vocabSpec105); 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:19: ( struct_def )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:19: ( struct_def )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -135,7 +135,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt2) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:20: struct_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:20: struct_def
 					{
 					pushFollow(FOLLOW_struct_def_in_vocabSpec108);
 					struct_def();
@@ -174,14 +174,14 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "region_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:40:1: region_def : CAPITALIZED_ID ':' dataType ';' ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:40:1: region_def : CAPITALIZED_ID ':' dataType ';' ;
 	public final void region_def() throws RecognitionException {
 		Token CAPITALIZED_ID1=null;
 		ParserRuleReturnScope dataType2 =null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:40:12: ( CAPITALIZED_ID ':' dataType ';' )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:42:6: CAPITALIZED_ID ':' dataType ';'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:40:12: ( CAPITALIZED_ID ':' dataType ';' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:42:6: CAPITALIZED_ID ':' dataType ';'
 			{
 			CAPITALIZED_ID1=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_region_def156); 
 			match(input,11,FOLLOW_11_in_region_def158); 
@@ -209,17 +209,17 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "struct_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:55:1: struct_def : CAPITALIZED_ID ( structField_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:55:1: struct_def : CAPITALIZED_ID ( structField_def ';' )* ;
 	public final void struct_def() throws RecognitionException {
 		Token CAPITALIZED_ID3=null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:55:11: ( CAPITALIZED_ID ( structField_def ';' )* )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:56:5: CAPITALIZED_ID ( structField_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:55:11: ( CAPITALIZED_ID ( structField_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:56:5: CAPITALIZED_ID ( structField_def ';' )*
 			{
 			CAPITALIZED_ID3=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_struct_def188); 
 			context.currentStruct = new StructCompiler((CAPITALIZED_ID3!=null?CAPITALIZED_ID3.getText():null));
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:58:5: ( structField_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:58:5: ( structField_def ';' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -230,7 +230,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:58:6: structField_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:58:6: structField_def ';'
 					{
 					pushFollow(FOLLOW_structField_def_in_struct_def202);
 					structField_def();
@@ -262,14 +262,14 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "structField_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:61:1: structField_def : lc_id ':' dataType ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:61:1: structField_def : lc_id ':' dataType ;
 	public final void structField_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id4 =null;
 		ParserRuleReturnScope dataType5 =null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:61:16: ( lc_id ':' dataType )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:62:3: lc_id ':' dataType
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:61:16: ( lc_id ':' dataType )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:62:3: lc_id ':' dataType
 			{
 			pushFollow(FOLLOW_lc_id_in_structField_def227);
 			lc_id4=lc_id();
@@ -298,15 +298,15 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "abilities_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:69:1: abilities_def : 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ( 'storages' ':' ss_def )* ( 'interactions' ':' ( gui_def )+ )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:69:1: abilities_def : 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ( 'storages' ':' ss_def )* ( 'interactions' ':' ( gui_def )+ )* ;
 	public final void abilities_def() throws RecognitionException {
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:69:15: ( 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ( 'storages' ':' ss_def )* ( 'interactions' ':' ( gui_def )+ )* )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:70:3: 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ( 'storages' ':' ss_def )* ( 'interactions' ':' ( gui_def )+ )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:69:15: ( 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ( 'storages' ':' ss_def )* ( 'interactions' ':' ( gui_def )+ )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:70:3: 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ( 'storages' ':' ss_def )* ( 'interactions' ':' ( gui_def )+ )*
 			{
 			match(input,31,FOLLOW_31_in_abilities_def253); 
 			match(input,11,FOLLOW_11_in_abilities_def255); 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:70:19: ( sensor_def )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:70:19: ( sensor_def )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -318,7 +318,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt4) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:70:20: sensor_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:70:20: sensor_def
 					{
 					pushFollow(FOLLOW_sensor_def_in_abilities_def260);
 					sensor_def();
@@ -337,7 +337,7 @@ public class VocabSpecParser extends Parser {
 
 			match(input,21,FOLLOW_21_in_abilities_def266); 
 			match(input,11,FOLLOW_11_in_abilities_def268); 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:71:19: ( actuator_def )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:71:19: ( actuator_def )+
 			int cnt5=0;
 			loop5:
 			while (true) {
@@ -349,7 +349,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt5) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:71:20: actuator_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:71:20: actuator_def
 					{
 					pushFollow(FOLLOW_actuator_def_in_abilities_def271);
 					actuator_def();
@@ -366,7 +366,7 @@ public class VocabSpecParser extends Parser {
 				cnt5++;
 			}
 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:72:3: ( 'storages' ':' ss_def )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:72:3: ( 'storages' ':' ss_def )*
 			loop6:
 			while (true) {
 				int alt6=2;
@@ -377,7 +377,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt6) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:72:4: 'storages' ':' ss_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:72:4: 'storages' ':' ss_def
 					{
 					match(input,32,FOLLOW_32_in_abilities_def278); 
 					match(input,11,FOLLOW_11_in_abilities_def281); 
@@ -393,7 +393,7 @@ public class VocabSpecParser extends Parser {
 				}
 			}
 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:73:3: ( 'interactions' ':' ( gui_def )+ )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:73:3: ( 'interactions' ':' ( gui_def )+ )*
 			loop8:
 			while (true) {
 				int alt8=2;
@@ -404,11 +404,11 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt8) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:73:4: 'interactions' ':' ( gui_def )+
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:73:4: 'interactions' ':' ( gui_def )+
 					{
 					match(input,26,FOLLOW_26_in_abilities_def290); 
 					match(input,11,FOLLOW_11_in_abilities_def292); 
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:73:23: ( gui_def )+
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:73:23: ( gui_def )+
 					int cnt7=0;
 					loop7:
 					while (true) {
@@ -420,7 +420,7 @@ public class VocabSpecParser extends Parser {
 
 						switch (alt7) {
 						case 1 :
-							// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:73:24: gui_def
+							// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:73:24: gui_def
 							{
 							pushFollow(FOLLOW_gui_def_in_abilities_def295);
 							gui_def();
@@ -461,17 +461,17 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "sensor_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:80:1: sensor_def : CAPITALIZED_ID ( sensorMeasurement_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:80:1: sensor_def : CAPITALIZED_ID ( sensorMeasurement_def ';' )* ;
 	public final void sensor_def() throws RecognitionException {
 		Token CAPITALIZED_ID6=null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:80:11: ( CAPITALIZED_ID ( sensorMeasurement_def ';' )* )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:81:5: CAPITALIZED_ID ( sensorMeasurement_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:80:11: ( CAPITALIZED_ID ( sensorMeasurement_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:81:5: CAPITALIZED_ID ( sensorMeasurement_def ';' )*
 			{
 			CAPITALIZED_ID6=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensor_def323); 
 			context.currentSensor = new SensorCompiler((CAPITALIZED_ID6!=null?CAPITALIZED_ID6.getText():null));
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:83:5: ( sensorMeasurement_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:83:5: ( sensorMeasurement_def ';' )*
 			loop9:
 			while (true) {
 				int alt9=2;
@@ -482,7 +482,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt9) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:83:6: sensorMeasurement_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:83:6: sensorMeasurement_def ';'
 					{
 					pushFollow(FOLLOW_sensorMeasurement_def_in_sensor_def336);
 					sensorMeasurement_def();
@@ -514,14 +514,14 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "sensorMeasurement_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:88:1: sensorMeasurement_def : 'generate' lc_id ':' CAPITALIZED_ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:88:1: sensorMeasurement_def : 'generate' lc_id ':' CAPITALIZED_ID ;
 	public final void sensorMeasurement_def() throws RecognitionException {
 		Token CAPITALIZED_ID8=null;
 		ParserRuleReturnScope lc_id7 =null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:88:23: ( 'generate' lc_id ':' CAPITALIZED_ID )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:89:5: 'generate' lc_id ':' CAPITALIZED_ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:88:23: ( 'generate' lc_id ':' CAPITALIZED_ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:89:5: 'generate' lc_id ':' CAPITALIZED_ID
 			{
 			match(input,25,FOLLOW_25_in_sensorMeasurement_def362); 
 			pushFollow(FOLLOW_lc_id_in_sensorMeasurement_def364);
@@ -548,17 +548,17 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "actuator_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:101:1: actuator_def : CAPITALIZED_ID ( action_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:101:1: actuator_def : CAPITALIZED_ID ( action_def ';' )* ;
 	public final void actuator_def() throws RecognitionException {
 		Token CAPITALIZED_ID9=null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:101:13: ( CAPITALIZED_ID ( action_def ';' )* )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:102:4: CAPITALIZED_ID ( action_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:101:13: ( CAPITALIZED_ID ( action_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:102:4: CAPITALIZED_ID ( action_def ';' )*
 			{
 			CAPITALIZED_ID9=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_actuator_def394); 
 			context.currentActuator = new ActuatorCompiler((CAPITALIZED_ID9!=null?CAPITALIZED_ID9.getText():null));
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:104:4: ( action_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:104:4: ( action_def ';' )*
 			loop10:
 			while (true) {
 				int alt10=2;
@@ -569,7 +569,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt10) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:104:5: action_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:104:5: action_def ';'
 					{
 					pushFollow(FOLLOW_action_def_in_actuator_def405);
 					action_def();
@@ -601,18 +601,18 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "action_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:109:1: action_def : 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:109:1: action_def : 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' ;
 	public final void action_def() throws RecognitionException {
 		Token CAPITALIZED_ID10=null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:109:11: ( 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:110:5: 'action' CAPITALIZED_ID '(' ( parameter_def )? ')'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:109:11: ( 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:110:5: 'action' CAPITALIZED_ID '(' ( parameter_def )? ')'
 			{
 			match(input,20,FOLLOW_20_in_action_def431); 
 			CAPITALIZED_ID10=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_action_def433); 
 			match(input,8,FOLLOW_8_in_action_def435); 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:110:33: ( parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:110:33: ( parameter_def )?
 			int alt11=2;
 			int LA11_0 = input.LA(1);
 			if ( (LA11_0==ID) ) {
@@ -620,7 +620,7 @@ public class VocabSpecParser extends Parser {
 			}
 			switch (alt11) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:110:34: parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:110:34: parameter_def
 					{
 					pushFollow(FOLLOW_parameter_def_in_action_def438);
 					parameter_def();
@@ -649,14 +649,14 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "parameter_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:114:1: parameter_def : lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:114:1: parameter_def : lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? ;
 	public final void parameter_def() throws RecognitionException {
 		Token CAPITALIZED_ID12=null;
 		ParserRuleReturnScope lc_id11 =null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:114:15: ( lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:115:5: lc_id ':' CAPITALIZED_ID ( ',' parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:114:15: ( lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:115:5: lc_id ':' CAPITALIZED_ID ( ',' parameter_def )?
 			{
 			pushFollow(FOLLOW_lc_id_in_parameter_def462);
 			lc_id11=lc_id();
@@ -664,7 +664,7 @@ public class VocabSpecParser extends Parser {
 
 			match(input,11,FOLLOW_11_in_parameter_def464); 
 			CAPITALIZED_ID12=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_parameter_def467); 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:115:31: ( ',' parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:115:31: ( ',' parameter_def )?
 			int alt12=2;
 			int LA12_0 = input.LA(1);
 			if ( (LA12_0==10) ) {
@@ -672,7 +672,7 @@ public class VocabSpecParser extends Parser {
 			}
 			switch (alt12) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:115:32: ',' parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:115:32: ',' parameter_def
 					{
 					match(input,10,FOLLOW_10_in_parameter_def470); 
 					pushFollow(FOLLOW_parameter_def_in_parameter_def472);
@@ -704,19 +704,19 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "ss_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:129:1: ss_def : CAPITALIZED_ID ( storageDataAccess_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:129:1: ss_def : CAPITALIZED_ID ( storageDataAccess_def ';' )* ;
 	public final void ss_def() throws RecognitionException {
 		Token CAPITALIZED_ID13=null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:129:7: ( CAPITALIZED_ID ( storageDataAccess_def ';' )* )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:130:3: CAPITALIZED_ID ( storageDataAccess_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:129:7: ( CAPITALIZED_ID ( storageDataAccess_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:130:3: CAPITALIZED_ID ( storageDataAccess_def ';' )*
 			{
 			CAPITALIZED_ID13=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_ss_def499); 
 			 context.currentStorageService = new StorageCompiler();
 			      //context.currentStorageService = new Storage((CAPITALIZED_ID13!=null?CAPITALIZED_ID13.getText():null));
 			      
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:135:5: ( storageDataAccess_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:135:5: ( storageDataAccess_def ';' )*
 			loop13:
 			while (true) {
 				int alt13=2;
@@ -727,7 +727,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt13) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:135:6: storageDataAccess_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:135:6: storageDataAccess_def ';'
 					{
 					pushFollow(FOLLOW_storageDataAccess_def_in_ss_def516);
 					storageDataAccess_def();
@@ -765,11 +765,11 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "storageDataAccess_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:148:1: storageDataAccess_def : storageGeneratedInfo_def 'accessed-by' storagedataIndex_def ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:148:1: storageDataAccess_def : storageGeneratedInfo_def 'accessed-by' storagedataIndex_def ;
 	public final void storageDataAccess_def() throws RecognitionException {
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:148:23: ( storageGeneratedInfo_def 'accessed-by' storagedataIndex_def )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:149:6: storageGeneratedInfo_def 'accessed-by' storagedataIndex_def
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:148:23: ( storageGeneratedInfo_def 'accessed-by' storagedataIndex_def )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:149:6: storageGeneratedInfo_def 'accessed-by' storagedataIndex_def
 			{
 			pushFollow(FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def549);
 			storageGeneratedInfo_def();
@@ -797,14 +797,14 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "storageGeneratedInfo_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:153:1: storageGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:153:1: storageGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
 	public final void storageGeneratedInfo_def() throws RecognitionException {
 		Token CAPITALIZED_ID15=null;
 		ParserRuleReturnScope lc_id14 =null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:153:26: ( 'generate' lc_id ':' CAPITALIZED_ID )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:154:5: 'generate' lc_id ':' CAPITALIZED_ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:153:26: ( 'generate' lc_id ':' CAPITALIZED_ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:154:5: 'generate' lc_id ':' CAPITALIZED_ID
 			{
 			match(input,25,FOLLOW_25_in_storageGeneratedInfo_def573); 
 			pushFollow(FOLLOW_lc_id_in_storageGeneratedInfo_def575);
@@ -832,14 +832,14 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "storagedataIndex_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:160:1: storagedataIndex_def : lc_id ':' dataType ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:160:1: storagedataIndex_def : lc_id ':' dataType ;
 	public final void storagedataIndex_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id16 =null;
 		ParserRuleReturnScope dataType17 =null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:160:21: ( lc_id ':' dataType )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:161:9: lc_id ':' dataType
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:160:21: ( lc_id ':' dataType )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:161:9: lc_id ':' dataType
 			{
 			pushFollow(FOLLOW_lc_id_in_storagedataIndex_def602);
 			lc_id16=lc_id();
@@ -870,14 +870,14 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "lc_id"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:180:1: lc_id : ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:180:1: lc_id : ID ;
 	public final VocabSpecParser.lc_id_return lc_id() throws RecognitionException {
 		VocabSpecParser.lc_id_return retval = new VocabSpecParser.lc_id_return();
 		retval.start = input.LT(1);
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:180:6: ( ID )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:180:8: ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:180:6: ( ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:180:8: ID
 			{
 			match(input,ID,FOLLOW_ID_in_lc_id634); 
 			}
@@ -902,14 +902,14 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "dataType"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:183:1: dataType : primitiveType ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:183:1: dataType : primitiveType ;
 	public final VocabSpecParser.dataType_return dataType() throws RecognitionException {
 		VocabSpecParser.dataType_return retval = new VocabSpecParser.dataType_return();
 		retval.start = input.LT(1);
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:183:9: ( primitiveType )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:184:3: primitiveType
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:183:9: ( primitiveType )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:184:3: primitiveType
 			{
 			pushFollow(FOLLOW_primitiveType_in_dataType647);
 			primitiveType();
@@ -934,15 +934,15 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "primitiveType"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:187:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:187:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) ;
 	public final void primitiveType() throws RecognitionException {
 		Token id=null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:187:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:187:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
 			{
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
 			int alt14=6;
 			switch ( input.LA(1) ) {
 			case 15:
@@ -982,37 +982,37 @@ public class VocabSpecParser extends Parser {
 			}
 			switch (alt14) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:4: id= 'Integer'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:4: id= 'Integer'
 					{
 					id=(Token)match(input,15,FOLLOW_15_in_primitiveType662); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:19: id= 'Boolean'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:19: id= 'Boolean'
 					{
 					id=(Token)match(input,13,FOLLOW_13_in_primitiveType668); 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:34: id= 'String'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:34: id= 'String'
 					{
 					id=(Token)match(input,16,FOLLOW_16_in_primitiveType674); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:49: id= 'double'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:49: id= 'double'
 					{
 					id=(Token)match(input,24,FOLLOW_24_in_primitiveType683); 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:65: id= 'long'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:65: id= 'long'
 					{
 					id=(Token)match(input,27,FOLLOW_27_in_primitiveType691); 
 					}
 					break;
 				case 6 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:79: id= 'boolean'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:79: id= 'boolean'
 					{
 					id=(Token)match(input,22,FOLLOW_22_in_primitiveType697); 
 					}
@@ -1036,17 +1036,17 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:209:1: gui_def : CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:209:1: gui_def : CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* ;
 	public final void gui_def() throws RecognitionException {
 		Token CAPITALIZED_ID18=null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:209:8: ( CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:210:3: CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:209:8: ( CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:210:3: CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )*
 			{
 			context.currentGUI = new UserInterfaceCompiler();
 			CAPITALIZED_ID18=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_def834); 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:214:4: ( gui_command_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:214:4: ( gui_command_def ';' )*
 			loop15:
 			while (true) {
 				int alt15=2;
@@ -1057,7 +1057,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt15) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:214:5: gui_command_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:214:5: gui_command_def ';'
 					{
 					pushFollow(FOLLOW_gui_command_def_in_gui_def860);
 					gui_command_def();
@@ -1072,7 +1072,7 @@ public class VocabSpecParser extends Parser {
 				}
 			}
 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:215:4: ( gui_request_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:215:4: ( gui_request_def ';' )*
 			loop16:
 			while (true) {
 				int alt16=2;
@@ -1083,7 +1083,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt16) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:215:5: gui_request_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:215:5: gui_request_def ';'
 					{
 					pushFollow(FOLLOW_gui_request_def_in_gui_def873);
 					gui_request_def();
@@ -1117,18 +1117,18 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_command_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:221:1: gui_command_def : 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:221:1: gui_command_def : 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' ;
 	public final void gui_command_def() throws RecognitionException {
 		Token name=null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:221:17: ( 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:222:5: 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:221:17: ( 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:222:5: 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')'
 			{
 			match(input,23,FOLLOW_23_in_gui_command_def902); 
 			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_command_def909); 
 			match(input,8,FOLLOW_8_in_gui_command_def911); 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:222:42: ( gui_command_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:222:42: ( gui_command_parameter_def )?
 			int alt17=2;
 			int LA17_0 = input.LA(1);
 			if ( (LA17_0==ID) ) {
@@ -1136,7 +1136,7 @@ public class VocabSpecParser extends Parser {
 			}
 			switch (alt17) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:222:43: gui_command_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:222:43: gui_command_parameter_def
 					{
 					pushFollow(FOLLOW_gui_command_parameter_def_in_gui_command_def914);
 					gui_command_parameter_def();
@@ -1167,19 +1167,19 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_command_parameter_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:229:1: gui_command_parameter_def : lc_id ( ',' gui_command_parameter_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:229:1: gui_command_parameter_def : lc_id ( ',' gui_command_parameter_def )? ;
 	public final void gui_command_parameter_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id19 =null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:229:27: ( lc_id ( ',' gui_command_parameter_def )? )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:230:5: lc_id ( ',' gui_command_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:229:27: ( lc_id ( ',' gui_command_parameter_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:230:5: lc_id ( ',' gui_command_parameter_def )?
 			{
 			pushFollow(FOLLOW_lc_id_in_gui_command_parameter_def941);
 			lc_id19=lc_id();
 			state._fsp--;
 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:230:11: ( ',' gui_command_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:230:11: ( ',' gui_command_parameter_def )?
 			int alt18=2;
 			int LA18_0 = input.LA(1);
 			if ( (LA18_0==10) ) {
@@ -1187,7 +1187,7 @@ public class VocabSpecParser extends Parser {
 			}
 			switch (alt18) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:230:12: ',' gui_command_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:230:12: ',' gui_command_parameter_def
 					{
 					match(input,10,FOLLOW_10_in_gui_command_parameter_def944); 
 					pushFollow(FOLLOW_gui_command_parameter_def_in_gui_command_parameter_def946);
@@ -1218,19 +1218,19 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_action_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:239:1: gui_action_def : 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:239:1: gui_action_def : 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id ;
 	public final void gui_action_def() throws RecognitionException {
 		Token name=null;
 		ParserRuleReturnScope ui =null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:239:15: ( 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:240:5: 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:239:15: ( 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:240:5: 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id
 			{
 			match(input,20,FOLLOW_20_in_gui_action_def970); 
 			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_action_def976); 
 			match(input,8,FOLLOW_8_in_gui_action_def978); 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:240:40: ( gui_action_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:240:40: ( gui_action_parameter_def )?
 			int alt19=2;
 			int LA19_0 = input.LA(1);
 			if ( (LA19_0==ID) ) {
@@ -1238,7 +1238,7 @@ public class VocabSpecParser extends Parser {
 			}
 			switch (alt19) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:240:41: gui_action_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:240:41: gui_action_parameter_def
 					{
 					pushFollow(FOLLOW_gui_action_parameter_def_in_gui_action_def981);
 					gui_action_parameter_def();
@@ -1272,14 +1272,14 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_action_parameter_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:250:1: gui_action_parameter_def : lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:250:1: gui_action_parameter_def : lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? ;
 	public final void gui_action_parameter_def() throws RecognitionException {
 		Token CAPITALIZED_ID21=null;
 		ParserRuleReturnScope lc_id20 =null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:250:26: ( lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:251:5: lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:250:26: ( lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:251:5: lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )?
 			{
 			pushFollow(FOLLOW_lc_id_in_gui_action_parameter_def1019);
 			lc_id20=lc_id();
@@ -1287,7 +1287,7 @@ public class VocabSpecParser extends Parser {
 
 			match(input,11,FOLLOW_11_in_gui_action_parameter_def1021); 
 			CAPITALIZED_ID21=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_action_parameter_def1024); 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:251:31: ( ',' gui_action_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:251:31: ( ',' gui_action_parameter_def )?
 			int alt20=2;
 			int LA20_0 = input.LA(1);
 			if ( (LA20_0==10) ) {
@@ -1295,7 +1295,7 @@ public class VocabSpecParser extends Parser {
 			}
 			switch (alt20) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:251:32: ',' gui_action_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:251:32: ',' gui_action_parameter_def
 					{
 					match(input,10,FOLLOW_10_in_gui_action_parameter_def1027); 
 					pushFollow(FOLLOW_gui_action_parameter_def_in_gui_action_parameter_def1029);
@@ -1327,13 +1327,13 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_request_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:258:1: gui_request_def : 'request' lc_id ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:258:1: gui_request_def : 'request' lc_id ;
 	public final void gui_request_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id22 =null;
 
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:258:17: ( 'request' lc_id )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:259:4: 'request' lc_id
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:258:17: ( 'request' lc_id )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:259:4: 'request' lc_id
 			{
 			match(input,29,FOLLOW_29_in_gui_request_def1051); 
 			pushFollow(FOLLOW_lc_id_in_gui_request_def1053);
@@ -1358,11 +1358,11 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "bt_id"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:294:1: bt_id : ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:294:1: bt_id : ID ;
 	public final void bt_id() throws RecognitionException {
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:294:7: ( ID )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:294:10: ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:294:7: ( ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:294:10: ID
 			{
 			match(input,ID,FOLLOW_ID_in_bt_id1099); 
 			}
@@ -1381,11 +1381,11 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "txtbx_id"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:296:1: txtbx_id : ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:296:1: txtbx_id : ID ;
 	public final void txtbx_id() throws RecognitionException {
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:296:10: ( ID )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:296:13: ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:296:10: ( ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:296:13: ID
 			{
 			match(input,ID,FOLLOW_ID_in_txtbx_id1109); 
 			}
@@ -1404,11 +1404,11 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "txtview_id"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:298:1: txtview_id : ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:298:1: txtview_id : ID ;
 	public final void txtview_id() throws RecognitionException {
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:298:12: ( ID )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:298:15: ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:298:12: ( ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:298:15: ID
 			{
 			match(input,ID,FOLLOW_ID_in_txtview_id1119); 
 			}
@@ -1427,13 +1427,13 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "widget_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:316:1: widget_def : ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:316:1: widget_def : ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )* ;
 	public final void widget_def() throws RecognitionException {
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:316:12: ( ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )* )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:317:5: ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:316:12: ( ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:317:5: ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )*
 			{
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:317:5: ( 'TextView' textview_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:317:5: ( 'TextView' textview_def ';' )*
 			loop21:
 			while (true) {
 				int alt21=2;
@@ -1444,7 +1444,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt21) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:317:6: 'TextView' textview_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:317:6: 'TextView' textview_def ';'
 					{
 					match(input,18,FOLLOW_18_in_widget_def1151); 
 					pushFollow(FOLLOW_textview_def_in_widget_def1153);
@@ -1460,7 +1460,7 @@ public class VocabSpecParser extends Parser {
 				}
 			}
 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:318:5: ( 'Button' button_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:318:5: ( 'Button' button_def ';' )*
 			loop22:
 			while (true) {
 				int alt22=2;
@@ -1471,7 +1471,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt22) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:318:6: 'Button' button_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:318:6: 'Button' button_def ';'
 					{
 					match(input,14,FOLLOW_14_in_widget_def1164); 
 					pushFollow(FOLLOW_button_def_in_widget_def1167);
@@ -1487,7 +1487,7 @@ public class VocabSpecParser extends Parser {
 				}
 			}
 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:319:5: ( 'TextBox' textbox_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:319:5: ( 'TextBox' textbox_def ';' )*
 			loop23:
 			while (true) {
 				int alt23=2;
@@ -1498,7 +1498,7 @@ public class VocabSpecParser extends Parser {
 
 				switch (alt23) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:319:6: 'TextBox' textbox_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:319:6: 'TextBox' textbox_def ';'
 					{
 					match(input,17,FOLLOW_17_in_widget_def1178); 
 					pushFollow(FOLLOW_textbox_def_in_widget_def1180);
@@ -1530,17 +1530,17 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "textview_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:326:1: textview_def : lc_id ( ',' textview_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:326:1: textview_def : lc_id ( ',' textview_def )? ;
 	public final void textview_def() throws RecognitionException {
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:326:14: ( lc_id ( ',' textview_def )? )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:327:5: lc_id ( ',' textview_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:326:14: ( lc_id ( ',' textview_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:327:5: lc_id ( ',' textview_def )?
 			{
 			pushFollow(FOLLOW_lc_id_in_textview_def1207);
 			lc_id();
 			state._fsp--;
 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:327:12: ( ',' textview_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:327:12: ( ',' textview_def )?
 			int alt24=2;
 			int LA24_0 = input.LA(1);
 			if ( (LA24_0==10) ) {
@@ -1548,7 +1548,7 @@ public class VocabSpecParser extends Parser {
 			}
 			switch (alt24) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:327:13: ',' textview_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:327:13: ',' textview_def
 					{
 					match(input,10,FOLLOW_10_in_textview_def1211); 
 					pushFollow(FOLLOW_textview_def_in_textview_def1213);
@@ -1576,17 +1576,17 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "button_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:330:1: button_def : lc_id ( ',' button_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:330:1: button_def : lc_id ( ',' button_def )? ;
 	public final void button_def() throws RecognitionException {
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:330:12: ( lc_id ( ',' button_def )? )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:331:5: lc_id ( ',' button_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:330:12: ( lc_id ( ',' button_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:331:5: lc_id ( ',' button_def )?
 			{
 			pushFollow(FOLLOW_lc_id_in_button_def1228);
 			lc_id();
 			state._fsp--;
 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:331:12: ( ',' button_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:331:12: ( ',' button_def )?
 			int alt25=2;
 			int LA25_0 = input.LA(1);
 			if ( (LA25_0==10) ) {
@@ -1594,7 +1594,7 @@ public class VocabSpecParser extends Parser {
 			}
 			switch (alt25) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:331:13: ',' button_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:331:13: ',' button_def
 					{
 					match(input,10,FOLLOW_10_in_button_def1232); 
 					pushFollow(FOLLOW_button_def_in_button_def1234);
@@ -1622,17 +1622,17 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "textbox_def"
-	// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:334:1: textbox_def : lc_id ( ',' textbox_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:334:1: textbox_def : lc_id ( ',' textbox_def )? ;
 	public final void textbox_def() throws RecognitionException {
 		try {
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:334:13: ( lc_id ( ',' textbox_def )? )
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:335:5: lc_id ( ',' textbox_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:334:13: ( lc_id ( ',' textbox_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:335:5: lc_id ( ',' textbox_def )?
 			{
 			pushFollow(FOLLOW_lc_id_in_textbox_def1250);
 			lc_id();
 			state._fsp--;
 
-			// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:335:11: ( ',' textbox_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:335:11: ( ',' textbox_def )?
 			int alt26=2;
 			int LA26_0 = input.LA(1);
 			if ( (LA26_0==10) ) {
@@ -1640,7 +1640,7 @@ public class VocabSpecParser extends Parser {
 			}
 			switch (alt26) {
 				case 1 :
-					// C:\\Users\\inpapat4\\git\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:335:12: ',' textbox_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:335:12: ',' textbox_def
 					{
 					match(input,10,FOLLOW_10_in_textbox_def1253); 
 					pushFollow(FOLLOW_textbox_def_in_textbox_def1255);
