@@ -1,0 +1,38 @@
+
+package $CS.logicPackageName$;
+
+import iotsuite.pubsubmiddleware.PubSubMiddleware;
+import android.content.Context;
+import iotsuite.semanticmodel.*;
+import $CS.PackageName$.*;
+	   	
+
+
+public class  Logic$CS.name$ extends $CS.name$  { 
+
+
+   public Logic$CS.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui,Context myContext) {
+		super(pubSubM, deviceInfo);
+	}   
+    		
+	
+	    $CS.allConsumedInfo:{ consumedInfo |
+	   
+	    public  void onNew$consumedInfo.name; format="capital"$( $consumedInfo.type.name$ arg){	    
+	    //TODO : write code here.
+	    
+	    }	   		
+	   	
+		}; separator="\n"$ 
+		
+		
+		$CS.allDataAccess:{ dataAccess |	   
+	    public void onNew$dataAccess.dataAccessName; format="capital"$Received( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type.name$}$ arg)
+	    {
+	    	//TODO : write code here
+	    }	   	
+	}$
+		
+		
+		
+}
