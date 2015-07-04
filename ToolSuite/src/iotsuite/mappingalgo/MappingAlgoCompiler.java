@@ -26,6 +26,9 @@ public class MappingAlgoCompiler {
 
 		Map<String, Set<Device>> deviceListByRegion = new HashMap<String, Set<Device>>();
 		Set<String> regionLabelSet = new HashSet<String>();
+		Set<Device> nullResourseDeviceSet = new HashSet<Device>();
+		boolean flag  = true;
+		
 
 		// Construct regionLabelSet --- O/p: [Building, Floor, Room]
 		for (Device deviceObj : deviceList) {
@@ -90,7 +93,24 @@ public class MappingAlgoCompiler {
 
 						if (tempkey[i] != null) {
 							Set<Device> tempDeviceSet = deviceListByRegion.get(tempkey[i]);
-							Device selectedDevice = pickOneFrom(tempDeviceSet);
+							
+							
+						
+						  for  (Device d  : tempDeviceSet){
+							 if(d.getAbilities().isEmpty()){
+								 nullResourseDeviceSet.add(d);
+							 }
+						  }
+						  
+						  if(flag){
+							  for (Device d1 : nullResourseDeviceSet ) {
+								  Device selectedDevice = pickOneFrom(nullResourseDeviceSet);
+								  finalMapping.get(d1).add(tempSoftWareComponent);
+								  
+								  flag = false;
+							  }
+						  }
+							
 
 				
 							//if (selectedDevice.getMobileFlag().equals("true")) {
@@ -99,7 +119,7 @@ public class MappingAlgoCompiler {
 								// if the device mobileFlag = true (mobile device).
 
 							//} else {
-								finalMapping.get(selectedDevice).add(tempSoftWareComponent);
+								//finalMapping.get(selectedDevice).add(tempSoftWareComponent);
 							//}
 
 						}
