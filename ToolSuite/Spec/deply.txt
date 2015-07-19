@@ -1,29 +1,45 @@
-devices: 
-	D1:
+devices: 	
+ D1:
         region :
-          
-            Room : computerlab13;
+            Building : *;
+            Floor : *;
+            Room : *;
         type: JavaSE;    
-        resources : TemperatureSensor;
-        mobile : false;	
+        resources :TS;
+       
 	D2:
         region :
-            
-            Room :computerlab13;
+            Building :*;
+            Floor : *;
+            Room : *;
         type: JavaSE;    
-        resources :  ;
-        mobile : false;	
+        resources :ProfileDB;
+       
 	D3:
         region :
-           
-            Room : computerlab13;
+            Building :15;
+            Floor : 1511;
+            Room : 15110;
         type: JavaSE;    
-        resources :  ;
-        mobile : false;			
-    D4:
+        resources : RoomAvg  ;
+        	
+   
+   D4:
         region :
-            
-            Room : computerlab13;
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
         type: JavaSE;    
-        resources : Heater;
-        mobile : false;	 
+        resources : ;
+        	
+   
+   D5:
+        region :
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
+        type: JavaSE;    
+        resources :Heater;
+        
+        
+     
