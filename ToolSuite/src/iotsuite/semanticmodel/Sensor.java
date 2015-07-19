@@ -13,7 +13,8 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 	// public Sensor(String name, Set<Attribute> attributes,
 	// Set<SensorMeasurement> generateInfo, Set<SensorMeasurement> consumeInfo)
 	// {
-	public Sensor(String name, Set<SensorMeasurement> generateInfo, Set<SensorMeasurement> consumeInfo) {
+	public Sensor(String name, Set<SensorMeasurement> generateInfo,
+			Set<SensorMeasurement> consumeInfo) {
 		// super(name, attributes, generateInfo, consumeInfo, "NoInstance");
 		super(name, generateInfo, consumeInfo, "NoInstance");
 
@@ -23,25 +24,29 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 
 	public String getPackageName() {
 
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.frameworkDirPath);
 		return packageName;
 	}
 
 	public String getLogicPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.logicDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.logicDirPath);
 		return packageName;
 	}
 
 	public String getFactoryPackageName() {
 
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.factoryDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.factoryDirPath);
 		return packageName;
 
 	}
 
 	public String getDeviceImplPackageName() {
 
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.deviceImplDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.deviceImplDirPath);
 		return packageName;
 	}
 

@@ -14,7 +14,8 @@ public class Actuator extends SoftwareComponent<Information> {
 	// public Actuator(String name, Set<Action> actionsList, Set<Attribute>
 	// attributes, Set<Information> generateInfo, Set<Information> consumeInfo)
 	// {
-	public Actuator(String name, Set<Action> actionsList, Set<Information> generateInfo, Set<Information> consumeInfo) {
+	public Actuator(String name, Set<Action> actionsList,
+			Set<Information> generateInfo, Set<Information> consumeInfo) {
 		// super(name, attributes, generateInfo, consumeInfo, "NoInstance");
 		super(name, generateInfo, consumeInfo, "NoInstance");
 		this.actions = actionsList;
@@ -33,24 +34,28 @@ public class Actuator extends SoftwareComponent<Information> {
 	private String packageName;
 
 	public String getPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.frameworkDirPath);
 		return packageName;
 	}
 
 	public String getLogicPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.logicDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.logicDirPath);
 		return packageName;
 	}
 
 	public String getFactoryPackageName() {
 
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.factoryDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.factoryDirPath);
 		return packageName;
 
 	}
 
 	public String getFactoryDeviceImplActuator() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.deviceImplDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.deviceImplDirPath);
 
 		return packageName;
 

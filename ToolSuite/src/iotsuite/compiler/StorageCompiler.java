@@ -36,7 +36,8 @@ public class StorageCompiler {
 	public void createStorageObject() {
 		// storageService = new Storage(getStorageServiceName(),
 		// getAttributeSet(), getDataAccessList(), null);
-		storageService = new Storage(getStorageServiceName(), getDataAccessList(), null);
+		storageService = new Storage(getStorageServiceName(),
+				getDataAccessList(), null);
 	}
 
 	// Getter and Setter of Data Access List
@@ -46,16 +47,19 @@ public class StorageCompiler {
 	}
 
 	public void addDataAccess() {
-		DataAccess dataAccess = new DataAccess(getDataAccessIndex(), getGeneratedInfo());
+		DataAccess dataAccess = new DataAccess(getDataAccessIndex(),
+				getGeneratedInfo());
 		dataAccessList.add(dataAccess);
-		SymbolTable.constructDataAccessSymblTable(getGeneratedInfo().getName(), dataAccessList);
+		SymbolTable.constructDataAccessSymblTable(getGeneratedInfo().getName(),
+				dataAccessList);
 
 	}
 
 	// getter and Setter of generatedInfo
 
 	public void addGeneratedInfo(String variableName, String variableType) {
-		generatedInfo = new Information(variableName, new DataType(variableType));
+		generatedInfo = new Information(variableName,
+				new DataType(variableType));
 	}
 
 	public Information getGeneratedInfo() {
@@ -96,28 +100,30 @@ public class StorageCompiler {
 		// Storage Interaction with other entities
 		generateStorageInteraction_StorageCompiler();
 
-		if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
 			// Storage's ApplicationLogic
 			generateStorageLogic_StorageCompiler();
-			
-			if(GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
+
+			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 				generateJavaSEStorageFactory_StorageCompiler();
-				generateJavaSEStorageImpl_StorageCompiler(); 
+				generateJavaSEStorageImpl_StorageCompiler();
 				generateStorageInterface_StorageCompiler();
-				
+
 			}
-			
+
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
 				generateAndroidStorageImpl_StorageCompiler();
 				generateAndroidStorageFactory_StorageCompiler();
-			}			
+			}
 		}
 	}
 
 	private void generateStorageInteraction_StorageCompiler() {
 		JavaFrameworkFromST generatedStorageService = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedStorageService.generateStorageInteraction(storageService);
+		CompilationUnit generatedCU = generatedStorageService
+				.generateStorageInteraction(storageService);
 		SourceFileDumper dumpGeneratedStorageService = new SourceFileDumper();
 		dumpGeneratedStorageService.dumpCompilationUnit(generatedCU);
 
@@ -125,37 +131,40 @@ public class StorageCompiler {
 
 	private void generateJavaSEStorageImpl_StorageCompiler() {
 		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateStorageFactory.generateJavaSEStorageImpl(storageService);
+		CompilationUnit generatedCU = generateStorageFactory
+				.generateJavaSEStorageImpl(storageService);
 		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
 		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
 	}
-	
+
 	private void generateAndroidStorageImpl_StorageCompiler() {
 		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateStorageFactory.generateAndroidStorageImpl(storageService);
+		CompilationUnit generatedCU = generateStorageFactory
+				.generateAndroidStorageImpl(storageService);
 		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
 		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
 	}
 
 	private void generateJavaSEStorageFactory_StorageCompiler() {
 		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateStorageFactory.generateJavaSEStorageFactory(storageService);
+		CompilationUnit generatedCU = generateStorageFactory
+				.generateJavaSEStorageFactory(storageService);
 		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
 		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
 	}
-	
-	
-	
+
 	private void generateAndroidStorageFactory_StorageCompiler() {
 		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateStorageFactory.generateAndroidStorageFactory(storageService);
+		CompilationUnit generatedCU = generateStorageFactory
+				.generateAndroidStorageFactory(storageService);
 		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
 		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
 	}
 
 	private void generateStorageInterface_StorageCompiler() {
 		JavaFrameworkFromST generateStorageInterface = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateStorageInterface.generateJavaSEStorageInterface(storageService);
+		CompilationUnit generatedCU = generateStorageInterface
+				.generateJavaSEStorageInterface(storageService);
 		SourceFileDumper dumpGeneratedStorageInterface = new SourceFileDumper();
 		dumpGeneratedStorageInterface.dumpCompilationUnit(generatedCU);
 
@@ -163,7 +172,8 @@ public class StorageCompiler {
 
 	private void generateStorageLogic_StorageCompiler() {
 		JavaFrameworkFromST generatedStorageService = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedStorageService.generateJavaSEStorageLogic(storageService);
+		CompilationUnit generatedCU = generatedStorageService
+				.generateJavaSEStorageLogic(storageService);
 		SourceFileDumper dumpGeneratedStorageService = new SourceFileDumper();
 		dumpGeneratedStorageService.dumpCompilationUnit(generatedCU);
 	}

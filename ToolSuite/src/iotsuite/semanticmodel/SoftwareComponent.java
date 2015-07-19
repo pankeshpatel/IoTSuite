@@ -17,7 +17,8 @@ public abstract class SoftwareComponent<I extends Information> {
 
 	// public SoftwareComponent(String name, Set<Attribute> attributes, Set<I>
 	// generateInfo, Set<I> consumeInfo, String partitionAttributeVal) {
-	public SoftwareComponent(String name, Set<I> generateInfo, Set<I> consumeInfo, String partitionAttributeVal) {
+	public SoftwareComponent(String name, Set<I> generateInfo,
+			Set<I> consumeInfo, String partitionAttributeVal) {
 
 		super();
 		this.name = name;

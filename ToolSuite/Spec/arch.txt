@@ -1,11 +1,22 @@
-softwarecomponents:           
-   computationalService :       
-		KitchenState
-            generate kitchenMeasurement:PresenseStruct;
-            consume stoveMeasurement from region-hops:0:Room;
-			consume personPresence from region-hops:0:Room;
+softwarecomponents:
+    computationalService:
+             
+            
+            RoomAvgTemp 
+            generate roomAvgTempMeasurement:TempStruct;
+            consume tempMeasurement from region-hops:0:Room;
             partition-per : Room;
-		KitchenController
-			consume kitchenMeasurement from region-hops:0:Room;
-			command Activate() to region-hops:0:Room;
-			partition-per:Room;
+      		
+      		RoomController
+      		consume roomAvgTempMeasurement from region-hops:0:Room;
+            command SetTemp(setTemp) to region-hops:0:Room;
+      		partition-per : Room;
+      		
+      		
+      		
+             
+            
+            
+            
+            
+                     

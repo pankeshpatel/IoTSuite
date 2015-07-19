@@ -31,8 +31,10 @@ public class SensorCompiler {
 		return generatedInfo;
 	}
 
-	public void addSensorMeasurement(String measurementName, String measurementStruct, StructCompiler struct) {
-		SensorMeasurement sensorMeasurement = new SensorMeasurement(measurementName, new DataType(measurementStruct), struct);
+	public void addSensorMeasurement(String measurementName,
+			String measurementStruct, StructCompiler struct) {
+		SensorMeasurement sensorMeasurement = new SensorMeasurement(
+				measurementName, new DataType(measurementStruct), struct);
 		generatedInfo.add(sensorMeasurement);
 	}
 
@@ -62,36 +64,34 @@ public class SensorCompiler {
 		// Sensor's Interaction
 		generateSensorInteraction_SensorCompiler();
 
-		if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
 			// Sensor's Application Logic
 
-		
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
-				
+
 				// Sensor's Application Logic
 				generateJavaSESensorLogic_SensorCompiler();
-				
+
 				// JavaSE SensorFactory
 				generateJavaSESensorFactory_SensorCompiler();
-			
+
 				// Sensor's JavaSE Implementation
 				generateSensorJavaSE_SensorCompiler();
 			}
 
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
-				
-				
+
 				// Sensor's Application Logic
 				generateAndroidSensorLogic_SensorCompiler();
 
-				
 				// Android SensorFactory
 				generateAndroidSensorFactory_SensorCompiler();
 
 				// Sensor's Android Implementation
 				generateSensorAndroid_SensorCompiler();
-				//generateSensorAndroidService_SensorCompiler();
+				// generateSensorAndroidService_SensorCompiler();
 			}
 
 			// Sensor's Interface
@@ -99,7 +99,8 @@ public class SensorCompiler {
 
 			// Sensor's Listener
 			for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
-				generateSensorListener_SensorCompiler(sensorDriver.getAllGeneratedInfo().get(i));
+				generateSensorListener_SensorCompiler(sensorDriver
+						.getAllGeneratedInfo().get(i));
 			}
 
 		}
@@ -109,7 +110,8 @@ public class SensorCompiler {
 	// Sensor's Interaction
 	public void generateSensorInteraction_SensorCompiler() {
 		JavaFrameworkFromST generatedSensorDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedSensorDriver.generateSensorInteraction(sensorDriver);
+		CompilationUnit generatedCU = generatedSensorDriver
+				.generateSensorInteraction(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorDriver = new SourceFileDumper();
 		dumpGeneratedSensorDriver.dumpCompilationUnit(generatedCU);
 
@@ -118,14 +120,16 @@ public class SensorCompiler {
 	// Sensor's Application Logic
 	public void generateJavaSESensorLogic_SensorCompiler() {
 		JavaFrameworkFromST generateSensor = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensor.generateJavaSESensorLogic(sensorDriver);
+		CompilationUnit generateCU = generateSensor
+				.generateJavaSESensorLogic(sensorDriver);
 		SourceFileDumper dumpGenerateSensor = new SourceFileDumper();
 		dumpGenerateSensor.dumpCompilationUnit(generateCU);
 	}
-	
+
 	public void generateAndroidSensorLogic_SensorCompiler() {
 		JavaFrameworkFromST generateSensor = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensor.generateAndroidSensorLogic(sensorDriver);
+		CompilationUnit generateCU = generateSensor
+				.generateAndroidSensorLogic(sensorDriver);
 		SourceFileDumper dumpGenerateSensor = new SourceFileDumper();
 		dumpGenerateSensor.dumpCompilationUnit(generateCU);
 	}
@@ -133,26 +137,28 @@ public class SensorCompiler {
 	// JavaSESensor's Factory
 	private void generateJavaSESensorFactory_SensorCompiler() {
 		JavaFrameworkFromST generateJavaSESensorFactory = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateJavaSESensorFactory.generateJavaSESensorFactory(sensorDriver);
+		CompilationUnit generateCU = generateJavaSESensorFactory
+				.generateJavaSESensorFactory(sensorDriver);
 		SourceFileDumper dumpGeneratedJavaSESensorFacotry = new SourceFileDumper();
 		dumpGeneratedJavaSESensorFacotry.dumpCompilationUnit(generateCU);
 
 	}
-	
+
 	// Android Sensor Factory
 	private void generateAndroidSensorFactory_SensorCompiler() {
 		JavaFrameworkFromST generateAndroidSensorFactory = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateAndroidSensorFactory.generateAndroidSensorFactory(sensorDriver);
+		CompilationUnit generateCU = generateAndroidSensorFactory
+				.generateAndroidSensorFactory(sensorDriver);
 		SourceFileDumper dumpGeneratedAndroidSensorFacotry = new SourceFileDumper();
 		dumpGeneratedAndroidSensorFacotry.dumpCompilationUnit(generateCU);
 
 	}
-	
 
 	// Sensor's JavaSE Implementation
 	private void generateSensorJavaSE_SensorCompiler() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensorImplFactory.generateJavaSESensorImpl(sensorDriver);
+		CompilationUnit generateCU = generateSensorImplFactory
+				.generateJavaSESensorImpl(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}
@@ -160,30 +166,36 @@ public class SensorCompiler {
 	// Sensor's Android Implementation
 	private void generateSensorAndroid_SensorCompiler() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensorImplFactory.generateAndroidSensorImpl(sensorDriver);
+		CompilationUnit generateCU = generateSensorImplFactory
+				.generateAndroidSensorImpl(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}
 
-/*	private void generateSensorAndroidService_SensorCompiler() {
-		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensorImplFactory.generateAndroidSensorServiceImpl(sensorDriver);
-		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
-		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
-	}*/
+	/*
+	 * private void generateSensorAndroidService_SensorCompiler() {
+	 * JavaFrameworkFromST generateSensorImplFactory = new
+	 * JavaFrameworkFromST(); CompilationUnit generateCU =
+	 * generateSensorImplFactory.generateAndroidSensorServiceImpl(sensorDriver);
+	 * SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
+	 * dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU); }
+	 */
 
 	// Sensor's Interface
 	private void generateSensorInterface_SensorCompiler() {
 		JavaFrameworkFromST generateSensorInterface = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensorInterface.generateSensorInterface(sensorDriver);
+		CompilationUnit generateCU = generateSensorInterface
+				.generateSensorInterface(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorInterface = new SourceFileDumper();
 		dumpGeneratedSensorInterface.dumpCompilationUnit(generateCU);
 	}
 
 	// Sensor's Listener
-	public void generateSensorListener_SensorCompiler(SensorMeasurement sensorMeasurement) {
+	public void generateSensorListener_SensorCompiler(
+			SensorMeasurement sensorMeasurement) {
 		JavaFrameworkFromST generateSensorListener = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensorListener.generateSensorListener(sensorMeasurement);
+		CompilationUnit generateCU = generateSensorListener
+				.generateSensorListener(sensorMeasurement);
 		SourceFileDumper dumpGeneratedSensorListener = new SourceFileDumper();
 		dumpGeneratedSensorListener.dumpCompilationUnit(generateCU);
 	}

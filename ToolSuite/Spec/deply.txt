@@ -1,31 +1,29 @@
 devices: 
 	D1:
-        region:
-            Room:1;
+        region :
+          
+            Room : computerlab13;
         type: JavaSE;    
-        resources : StoveSensor;
+        resources : TemperatureSensor;
         mobile : false;	
-    D2:
-        region :           
-            Room:1;
+	D2:
+        region :
+            
+            Room :computerlab13;
         type: JavaSE;    
-        resources : MotionSensor;
-        mobile : false;		
+        resources :  ;
+        mobile : false;	
 	D3:
         region :
-           Room:1;
+           
+            Room : computerlab13;
         type: JavaSE;    
         resources :  ;
-        mobile : false;	
-	D4:
+        mobile : false;			
+    D4:
         region :
-            Room:1;
+            
+            Room : computerlab13;
         type: JavaSE;    
-        resources :  ;
-        mobile : false;
-	D5:
-        region :            
-            Room:1;
-        type: JavaSE;    
-        resources : Alarm;
-        mobile : false;
+        resources : Heater;
+        mobile : false;	 

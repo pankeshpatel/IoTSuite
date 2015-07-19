@@ -20,7 +20,9 @@ public class ComputationalService extends SoftwareComponent<Information> {
 	 * partitionAttributeValue) {
 	 */
 
-	public ComputationalService(String name, Set<Information> generateInfo, Set<Information> consumeInfo, Set<DataAccess> dataAccess, Set<Action> actions, String partitionAttributeValue) {
+	public ComputationalService(String name, Set<Information> generateInfo,
+			Set<Information> consumeInfo, Set<DataAccess> dataAccess,
+			Set<Action> actions, String partitionAttributeValue) {
 		// super(name, attributes, generateInfo, consumeInfo,
 		// partitionAttributeValue);
 		super(name, generateInfo, consumeInfo, partitionAttributeValue);
@@ -51,17 +53,20 @@ public class ComputationalService extends SoftwareComponent<Information> {
 	private String packageName;
 
 	public String getPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.frameworkDirPath);
 		return packageName;
 	}
 
 	public String getLogicPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.logicDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.logicDirPath);
 		return packageName;
 	}
 
 	public String getUtilPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.utilDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.utilDirPath);
 		return packageName;
 	}
 }

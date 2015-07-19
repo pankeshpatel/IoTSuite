@@ -12,37 +12,60 @@ import iotsuite.common.GlobalVariable;
 public class LinkerCompiler {
 
 	public static void linkerAlgo() {
-		
-		
-		//File folder = new File(GlobalVariable.frameworkRootDir + GlobalVariable.deploymentFolderPath);
-		File folder = new File(GlobalVariable.templatePath + "/" +  GlobalVariable.deploymentFolderPath + "/");
+
+		// File folder = new File(GlobalVariable.frameworkRootDir +
+		// GlobalVariable.deploymentFolderPath);
+		File folder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/");
 		File[] listOfFiles = folder.listFiles();
-		
 
 		for (int i = 0; i < listOfFiles.length; i++) {
 
 			if (listOfFiles[i].isDirectory()) { // For JavaSE-enabled devices
-				if (listOfFiles[i].getName().startsWith(GlobalVariable.JAVASE_ENABLED_DEVICES)) {
-					
-					System.out.println( "Linked code for " + listOfFiles[i].getName() + " device");
+				if (listOfFiles[i].getName().startsWith(
+						GlobalVariable.JAVASE_ENABLED_DEVICES)) {
 
-					copyDeviceDrivers(GlobalVariable.JAVASE_ENABLED_DEVICES, listOfFiles[i].getName());
-					copyFactory(GlobalVariable.JAVASE_ENABLED_DEVICES, listOfFiles[i].getName());
-					copyFrameworkGeneratedFromVocabulary(GlobalVariable.JAVASE_ENABLED_DEVICES, listOfFiles[i].getName());
-					copyLogicGeneratedFromVocabulary(GlobalVariable.JAVASE_ENABLED_DEVICES, listOfFiles[i].getName());
-					copyApplicationLogicArchitectureSpecification(GlobalVariable.JAVASE_ENABLED_DEVICES, listOfFiles[i].getName());
-					copyFrameworkArchitectureSpecification(GlobalVariable.JAVASE_ENABLED_DEVICES, listOfFiles[i].getName());
+					System.out.println("Linked code for "
+							+ listOfFiles[i].getName() + " device");
 
-				} else {  // For Android-enabled devices.
+					copyDeviceDrivers(GlobalVariable.JAVASE_ENABLED_DEVICES,
+							listOfFiles[i].getName());
+					copyFactory(GlobalVariable.JAVASE_ENABLED_DEVICES,
+							listOfFiles[i].getName());
+					copyFrameworkGeneratedFromVocabulary(
+							GlobalVariable.JAVASE_ENABLED_DEVICES,
+							listOfFiles[i].getName());
+					copyLogicGeneratedFromVocabulary(
+							GlobalVariable.JAVASE_ENABLED_DEVICES,
+							listOfFiles[i].getName());
+					copyApplicationLogicArchitectureSpecification(
+							GlobalVariable.JAVASE_ENABLED_DEVICES,
+							listOfFiles[i].getName());
+					copyFrameworkArchitectureSpecification(
+							GlobalVariable.JAVASE_ENABLED_DEVICES,
+							listOfFiles[i].getName());
 
-					System.out.println( "Linked code for " + listOfFiles[i].getName() + " device");
-					
-					copyDeviceDrivers(GlobalVariable.ANDROID_ENABLED_DEVICES, listOfFiles[i].getName());
-					copyFactory(GlobalVariable.ANDROID_ENABLED_DEVICES, listOfFiles[i].getName());
-					copyFrameworkGeneratedFromVocabulary(GlobalVariable.ANDROID_ENABLED_DEVICES, listOfFiles[i].getName());
-					copyLogicGeneratedFromVocabulary(GlobalVariable.ANDROID_ENABLED_DEVICES, listOfFiles[i].getName());
-					copyApplicationLogicArchitectureSpecification(GlobalVariable.ANDROID_ENABLED_DEVICES, listOfFiles[i].getName());
-					copyFrameworkArchitectureSpecification(GlobalVariable.ANDROID_ENABLED_DEVICES, listOfFiles[i].getName());
+				} else { // For Android-enabled devices.
+
+					System.out.println("Linked code for "
+							+ listOfFiles[i].getName() + " device");
+
+					copyDeviceDrivers(GlobalVariable.ANDROID_ENABLED_DEVICES,
+							listOfFiles[i].getName());
+					copyFactory(GlobalVariable.ANDROID_ENABLED_DEVICES,
+							listOfFiles[i].getName());
+					copyFrameworkGeneratedFromVocabulary(
+							GlobalVariable.ANDROID_ENABLED_DEVICES,
+							listOfFiles[i].getName());
+					copyLogicGeneratedFromVocabulary(
+							GlobalVariable.ANDROID_ENABLED_DEVICES,
+							listOfFiles[i].getName());
+					copyApplicationLogicArchitectureSpecification(
+							GlobalVariable.ANDROID_ENABLED_DEVICES,
+							listOfFiles[i].getName());
+					copyFrameworkArchitectureSpecification(
+							GlobalVariable.ANDROID_ENABLED_DEVICES,
+							listOfFiles[i].getName());
 
 				}
 			}
@@ -50,82 +73,113 @@ public class LinkerCompiler {
 	}
 
 	public static void copyDeviceDrivers(String type, String name) {
-		
-		//File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "DeviceDrivers" + "/" + type + "/src/deviceImpl/");
-		File srcFolder = new File(GlobalVariable.templatePath + "/" + type + "DeviceDrivers" + "/src/deviceImpl/" );
-		
-		
-		
-		//File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/");
-		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/deviceImpl");
-		
-		
+
+		// File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// "DeviceDrivers" + "/" + type + "/src/deviceImpl/");
+		File srcFolder = new File(GlobalVariable.templatePath + "/" + type
+				+ "DeviceDrivers" + "/src/deviceImpl/");
+
+		// File destFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// GlobalVariable.deploymentFolderPath + "/" + name + "/src/");
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name
+				+ "/src/deviceImpl");
+
 		copyFiles(srcFolder, destFolder);
 
 	}
 
 	public static void copyFactory(String type, String name) {
-		
-		
-		//File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "DeviceDrivers" + "/" + type + "/src/factory");
-		File srcFolder = new File(GlobalVariable.templatePath + "/" + type + "DeviceDrivers" + "/src/factory/");
-		
-		
-		//File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/" + "factory");
-		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/" + "factory");
-		
+
+		// File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// "DeviceDrivers" + "/" + type + "/src/factory");
+		File srcFolder = new File(GlobalVariable.templatePath + "/" + type
+				+ "DeviceDrivers" + "/src/factory/");
+
+		// File destFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// GlobalVariable.deploymentFolderPath + "/" + name + "/src/" +
+		// "factory");
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
+				+ "factory");
+
 		copyFiles(srcFolder, destFolder);
 
 	}
 
-	public static void copyFrameworkGeneratedFromVocabulary(String type, String name) {
-		
-		
-		//File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "ApplicationLogic/src/framework");
-		//File srcFolder = new File(GlobalVariable.activityGenPath + "/ApplicationLogic/src/framework");
-		File srcFolder = new File(GlobalVariable.templatePath + "/" + type + "DeviceDrivers" + "/src/framework/");
-		//File srcFolder = new File(GlobalVariable.activityGenPath + "/" + "ApplicationLogic/src/framework");
-		
-		//File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/" + "framework");
-		
-		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/" + "framework");
+	public static void copyFrameworkGeneratedFromVocabulary(String type,
+			String name) {
+
+		// File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// "ApplicationLogic/src/framework");
+		// File srcFolder = new File(GlobalVariable.activityGenPath +
+		// "/ApplicationLogic/src/framework");
+		File srcFolder = new File(GlobalVariable.templatePath + "/" + type
+				+ "DeviceDrivers" + "/src/framework/");
+		// File srcFolder = new File(GlobalVariable.activityGenPath + "/" +
+		// "ApplicationLogic/src/framework");
+
+		// File destFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// GlobalVariable.deploymentFolderPath + "/" + name + "/src/" +
+		// "framework");
+
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
+				+ "framework");
 		copyFiles(srcFolder, destFolder);
 
 	}
 
 	public static void copyLogicGeneratedFromVocabulary(String type, String name) {
 
-		//File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "DeviceDrivers" + "/" + type + "/src/logic");
-		File srcFolder = new File(GlobalVariable.templatePath + "/" + type + "DeviceDrivers" + "/src/logic/");
-		
-		//File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/" + "logic");
-		
-		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/" + "logic");
+		// File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// "DeviceDrivers" + "/" + type + "/src/logic");
+		File srcFolder = new File(GlobalVariable.templatePath + "/" + type
+				+ "DeviceDrivers" + "/src/logic/");
+
+		// File destFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// GlobalVariable.deploymentFolderPath + "/" + name + "/src/" +
+		// "logic");
+
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
+				+ "logic");
 		copyFiles(srcFolder, destFolder);
 
 	}
-	
+
 	/*
-	 * The following function will copy the written application 
-	 * logic by application developer. 
+	 * The following function will copy the written application logic by
+	 * application developer.
 	 */
 
-	public static void copyApplicationLogicArchitectureSpecification(String type, String name) {
+	public static void copyApplicationLogicArchitectureSpecification(
+			String type, String name) {
 
-		//File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "ApplicationLogic/src/logic");
-		File srcFolder = new File(GlobalVariable.templatePath + "/" + "ApplicationLogic/src/logic");
-		
-		//File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/" + "logic");
-		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/" + "logic");
-		
+		// File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// "ApplicationLogic/src/logic");
+		File srcFolder = new File(GlobalVariable.templatePath + "/"
+				+ "ApplicationLogic/src/logic");
+
+		// File destFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// GlobalVariable.deploymentFolderPath + "/" + name + "/src/" +
+		// "logic");
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
+				+ "logic");
+
 		copyFiles(srcFolder, destFolder);
 
 	}
-	
-	public static void copyFrameworkArchitectureSpecification(String type, String name){
-		File srcFolder = new File(GlobalVariable.templatePath + "/" + "ApplicationLogic/src/framework");
-		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" +  name + "/src/" + "framework");
-		
+
+	public static void copyFrameworkArchitectureSpecification(String type,
+			String name) {
+		File srcFolder = new File(GlobalVariable.templatePath + "/"
+				+ "ApplicationLogic/src/framework");
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
+				+ "framework");
+
 		copyFiles(srcFolder, destFolder);
 	}
 
@@ -135,7 +189,7 @@ public class LinkerCompiler {
 
 			System.out.println("Directory does not exist.");
 			// just exit
-	 	System.exit(0);
+			System.exit(0);
 
 		} else {
 

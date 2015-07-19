@@ -13,40 +13,44 @@ public class GenFiller {
 
 	public static void copyDeviceDrivers() {
 
-		
-		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "DeviceDrivers");
+		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/"
+				+ "DeviceDrivers");
 		// Directory path, where the template is placed.em
-		
-				
-			
-		File destFolder = new File(GlobalVariable.templatePath + "DeviceDrivers");
+
+		File destFolder = new File(GlobalVariable.templatePath
+				+ "DeviceDrivers");
 		// Directory where the development activity is performed
-		
-		
+
 		copyFiles(srcFolder, destFolder);
 
 	}
 
 	public static void copyApplicationLogic() {
 
-		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "ApplicationLogic");
-		File destFolder = new File(GlobalVariable.templatePath + "ApplicationLogic");
+		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/"
+				+ "ApplicationLogic");
+		File destFolder = new File(GlobalVariable.templatePath
+				+ "ApplicationLogic");
 		copyFiles(srcFolder, destFolder);
 
 	}
 
 	public static void copyMapping() {
 
-		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "CodeForDeployment");
-		File destFolder = new File(GlobalVariable.templatePath + "CodeForDeployment");
+		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/"
+				+ "CodeForDeployment");
+		File destFolder = new File(GlobalVariable.templatePath
+				+ "CodeForDeployment");
 		copyFiles(srcFolder, destFolder);
 
 	}
 
 	public static void copyLinking() {
 
-		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "CodeForDeployment");
-		File destFolder = new File(GlobalVariable.templatePath + "CodeForDeployment");
+		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/"
+				+ "CodeForDeployment");
+		File destFolder = new File(GlobalVariable.templatePath
+				+ "CodeForDeployment");
 		copyFiles(srcFolder, destFolder);
 
 	}

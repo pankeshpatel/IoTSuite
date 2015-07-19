@@ -14,7 +14,8 @@ public class CompilationUnit {
 	private final String objectName;
 	private Object objClass; // SensorDriver/ActuatorDriver/StorageService/GuiDriver
 
-	public CompilationUnit(String fileNameToGenerate, StringTemplate template, String type, String objectName, Object obj) {
+	public CompilationUnit(String fileNameToGenerate, StringTemplate template,
+			String type, String objectName, Object obj) {
 		super();
 		this.fileNameToGenerate = fileNameToGenerate;
 		this.stringTemplateName = template;

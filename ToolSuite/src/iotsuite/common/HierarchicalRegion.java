@@ -4,7 +4,8 @@ import java.util.List;
 
 public class HierarchicalRegion {
 
-	public static int getPartitionIndex(String partionAttrVal, List<String> regionLabelArray) {
+	public static int getPartitionIndex(String partionAttrVal,
+			List<String> regionLabelArray) {
 
 		for (int i = 0; i <= regionLabelArray.size(); i++) {
 

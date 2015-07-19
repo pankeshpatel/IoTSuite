@@ -29,7 +29,8 @@ public class UserInterfaceCompiler {
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private String GUIName;
 	private String struct;
-	//private Widget widget;
+
+	// private Widget widget;
 
 	public UserInterfaceCompiler() {
 
@@ -59,7 +60,8 @@ public class UserInterfaceCompiler {
 		// getDataAccessList(), getRequestType(), getReqWidget());
 
 		guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
-				null, getCommandList(), null, null, getDataAccessList(), null, null);
+				null, getCommandList(), null, null, getDataAccessList(), null,
+				null);
 	}
 
 	// Code generator of the abstract classes and Logic files
@@ -86,9 +88,12 @@ public class UserInterfaceCompiler {
 
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
 
-				generateAndroidGUI(); // This function call will create a partial Logic  files
-				generateGUIListener(); // This function call will create  Listener files
-				generateGUIInterface(); // This function call will create Interface of GUI.
+				generateAndroidGUI(); // This function call will create a
+										// partial Logic files
+				generateGUIListener(); // This function call will create
+										// Listener files
+				generateGUIInterface(); // This function call will create
+										// Interface of GUI.
 				generateAndroidGUIFactory();
 				generateAndroidGUIImpl();
 			}
@@ -110,7 +115,7 @@ public class UserInterfaceCompiler {
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
-	
+
 	public void generateJavaSEGUI() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -131,7 +136,7 @@ public class UserInterfaceCompiler {
 	}
 
 	private void generateAndroidGUIImpl() {
-		
+
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
 				.generateAndroidUserInterfaceImpl(guiDriver);
@@ -174,14 +179,15 @@ public class UserInterfaceCompiler {
 
 	}
 
-	/*private void generateGUILayout() {
-		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver
-				.generateAndroidUserInterfaceLayout(guiDriver);
-		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
-		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
-
-	}*/
+	/*
+	 * private void generateGUILayout() { JavaFrameworkFromST generatedGUIDriver
+	 * = new JavaFrameworkFromST(); CompilationUnit generatedCU =
+	 * generatedGUIDriver .generateAndroidUserInterfaceLayout(guiDriver);
+	 * SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+	 * dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+	 * 
+	 * }
+	 */
 
 	/*
 	 * private void generateGUIManifest() { JavaFrameworkFromST
@@ -207,12 +213,12 @@ public class UserInterfaceCompiler {
 	}
 
 	public void setRequestType(String struct) {
-	
+
 		this.struct = struct;
 	}
 
 	public String getRequestType() {
-		
+
 		return struct;
 	}
 
@@ -261,10 +267,8 @@ public class UserInterfaceCompiler {
 	}
 
 	/*
-	private Set<Action> getActionList() {
-		return actions;
-	}
-	*/
+	 * private Set<Action> getActionList() { return actions; }
+	 */
 
 	// Getter and Setter of Attribute
 
@@ -279,14 +283,12 @@ public class UserInterfaceCompiler {
 	 */
 
 	/*
-	public void setReqWidget(String textbox, String button, String textview) {
-		widget = new Widget(textbox, button, textview);
-	}
-
-	public Widget getReqWidget() {
-
-		return widget;
-	}
-	*/
+	 * public void setReqWidget(String textbox, String button, String textview)
+	 * { widget = new Widget(textbox, button, textview); }
+	 * 
+	 * public Widget getReqWidget() {
+	 * 
+	 * return widget; }
+	 */
 
 }

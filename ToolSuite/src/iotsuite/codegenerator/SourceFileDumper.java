@@ -20,15 +20,18 @@ public class SourceFileDumper {
 		 * "Generate Device Driver"
 		 */
 
-		if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
 			// For JavaSE enabled devices
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
-				generateCodeForJavaSEDeviceDriverActivity(template, GlobalVariable.deviceJAVASEType, null);
+				generateCodeForJavaSEDeviceDriverActivity(template,
+						GlobalVariable.deviceJAVASEType, null);
 			}
 			// For Android-enabled devices
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
-			generateCodeForAndroidDeviceDriverActivity(template, GlobalVariable.deviceAndroidType, null);
+				generateCodeForAndroidDeviceDriverActivity(template,
+						GlobalVariable.deviceAndroidType, null);
 			}
 		}
 
@@ -37,8 +40,10 @@ public class SourceFileDumper {
 		 * "Generate Architecture Framework"
 		 */
 
-		if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK)) {
-			generateCodeForArchitectureFrameworkActivity(template, "ApplicationLogic", null);
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK)) {
+			generateCodeForArchitectureFrameworkActivity(template,
+					"ApplicationLogic", null);
 		}
 
 		/*
@@ -46,27 +51,30 @@ public class SourceFileDumper {
 		 * "mapping"
 		 */
 
-		if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
 
 			// For Android enabled devices
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
-				generateCodeForMappingActivitity(template, "deviceMapping", "Android");
+				generateCodeForMappingActivitity(template, "deviceMapping",
+						"Android");
 			}
 			// For JavaSE enabled devices
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
-				generateCodeForMappingActivitity(template, GlobalVariable.deviceJAVASEType, GlobalVariable.templatePath);
+				generateCodeForMappingActivitity(template,
+						GlobalVariable.deviceJAVASEType,
+						GlobalVariable.templatePath);
 			}
 		}
 	}
-	
-	/*
-	 * The following function will generate for (1) factory,
-	 * (2) deviceImp, (3) Logic, and (4) framework. 
-	 */
-	
-	
 
-	private void generateCodeForJavaSEDeviceDriverActivity(CompilationUnit unit, String deviceType, String str) {
+	/*
+	 * The following function will generate for (1) factory, (2) deviceImp, (3)
+	 * Logic, and (4) framework.
+	 */
+
+	private void generateCodeForJavaSEDeviceDriverActivity(
+			CompilationUnit unit, String deviceType, String str) {
 
 		String content = unit.getStringTemplateName();
 
@@ -76,23 +84,43 @@ public class SourceFileDumper {
 		 */
 
 		if (unit.getFileCategory().equals("JavaSELogic")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
-		
+
 		else if (unit.getFileCategory().equals("Logic")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
-		
+
 		else if (unit.getFileCategory().equals("JavaSESensorLogic")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
-		
+
 		else if (unit.getFileCategory().equals("JavaSEGuiLogic")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
 
 		/*
@@ -101,50 +129,85 @@ public class SourceFileDumper {
 		 */
 
 		else if (unit.getFileCategory().equals("JavaSEFactory")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath + "/" + unit.getFileNameToGenerate());
-		}
-		else if (unit.getFileCategory().equals("JavaSEStorageImpl")){
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());			
-		}
-		else if (unit.getFileCategory().equals("JavaSEGuiImpl")){
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());			
-		}
-		else if (unit.getFileCategory().equals("JavaSEFactory")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath + "/" + unit.getFileNameToGenerate());
-		}
-		else if (unit.getFileCategory().equals("AndroidFactory") || unit.getFileCategory().equals("AndroidSensorImpl") 
-				|| unit.getFileCategory().equals("AndroidActuatorImpl") || unit.getFileCategory().equals("AndroidLogic")
-				|| unit.getFileCategory().equals("AndroidGuiImpl") 
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.factoryDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.factoryDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		} else if (unit.getFileCategory().equals("JavaSEStorageImpl")) {
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		} else if (unit.getFileCategory().equals("JavaSEGuiImpl")) {
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		} else if (unit.getFileCategory().equals("JavaSEFactory")) {
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.factoryDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.factoryDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		} else if (unit.getFileCategory().equals("AndroidFactory")
+				|| unit.getFileCategory().equals("AndroidSensorImpl")
+				|| unit.getFileCategory().equals("AndroidActuatorImpl")
+				|| unit.getFileCategory().equals("AndroidLogic")
+				|| unit.getFileCategory().equals("AndroidGuiImpl")
 				|| unit.getFileCategory().equals("AndroidStorageImpl")
-				|| unit.getFileCategory().equals("AndroidFactory") 
-				||  unit.getFileCategory().equals("AndroidGuiLogic")
-				||  unit.getFileCategory().equals("AndroidSensorLogic")
-		        ) {
-				//Do nothing
-		}	
+				|| unit.getFileCategory().equals("AndroidFactory")
+				|| unit.getFileCategory().equals("AndroidGuiLogic")
+				|| unit.getFileCategory().equals("AndroidSensorLogic")) {
+			// Do nothing
+		}
 
 		else if (unit.getFileCategory().equals("JavaSESensorImpl")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
-		
+
 		else if (unit.getFileCategory().equals("JavaSEActuatorImpl")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
-		
-		else if (unit.getFileCategory().equals("AndroidGuiImpl")){
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());			
-		}
-		else 
-		{
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath + "/" + unit.getFileNameToGenerate());
+
+		else if (unit.getFileCategory().equals("AndroidGuiImpl")) {
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		} else {
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.frameworkDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.frameworkDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
 		if (file != null) {
 			try {
@@ -160,7 +223,8 @@ public class SourceFileDumper {
 		}
 	}
 
-	private void generateCodeForAndroidDeviceDriverActivity(CompilationUnit unit, String deviceType, String str) {
+	private void generateCodeForAndroidDeviceDriverActivity(
+			CompilationUnit unit, String deviceType, String str) {
 		String content = unit.getStringTemplateName();
 
 		/*
@@ -169,61 +233,107 @@ public class SourceFileDumper {
 		 */
 
 		if (unit.getFileCategory().equals("AndroidLogic")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		} else if (unit.getFileCategory().equals("Logic")) {
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		} else if (unit.getFileCategory().equals("AndroidSensorLogic")) {
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
-		else if (unit.getFileCategory().equals("Logic")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
-		}
-		else if (unit.getFileCategory().equals("AndroidSensorLogic")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
-		}
-		
-		else if (unit.getFileCategory().equals("AndroidGuiLogic")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
-		}
-		
-		else if (unit.getFileCategory().equals("AndroidFactory")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath + "/" + unit.getFileNameToGenerate());
-		}
-		else if (unit.getFileCategory().equals("AndroidStorageImpl")){
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());			
-		}
-		else if (unit.getFileCategory().equals("AndroidFactory")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath + "/" + unit.getFileNameToGenerate());
-		}		
-		else if (unit.getFileCategory().equals("JavaSEFactory") || unit.getFileCategory().equals("JavaSESensorImpl") 
-				|| unit.getFileCategory().equals("JavaSEActuatorImpl") ||  unit.getFileCategory().equals("JavaSELogic")
-				|| unit.getFileCategory().equals("JavaSEGuiImpl")
-				|| unit.getFileCategory().equals("JavaSEFactory") 
-				|| unit.getFileCategory().equals("JavaSEStorageImpl")
-				||  unit.getFileCategory().equals("JavaSEGuiLogic")
-				||  unit.getFileCategory().equals("JavaSESensorLogic")
-				){
-			
-			//Do nothing  
 
-	   }
+		else if (unit.getFileCategory().equals("AndroidGuiLogic")) {
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		}
+
+		else if (unit.getFileCategory().equals("AndroidFactory")) {
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.factoryDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.factoryDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		} else if (unit.getFileCategory().equals("AndroidStorageImpl")) {
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		} else if (unit.getFileCategory().equals("AndroidFactory")) {
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.factoryDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.factoryDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		} else if (unit.getFileCategory().equals("JavaSEFactory")
+				|| unit.getFileCategory().equals("JavaSESensorImpl")
+				|| unit.getFileCategory().equals("JavaSEActuatorImpl")
+				|| unit.getFileCategory().equals("JavaSELogic")
+				|| unit.getFileCategory().equals("JavaSEGuiImpl")
+				|| unit.getFileCategory().equals("JavaSEFactory")
+				|| unit.getFileCategory().equals("JavaSEStorageImpl")
+				|| unit.getFileCategory().equals("JavaSEGuiLogic")
+				|| unit.getFileCategory().equals("JavaSESensorLogic")) {
+
+			// Do nothing
+
+		}
 
 		else if (unit.getFileCategory().equals("AndroidSensorImpl")) {
-		new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
-		file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
-		
+
 		else if (unit.getFileCategory().equals("AndroidActuatorImpl")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
-		
+
 		else if (unit.getFileCategory().equals("AndroidGuiImpl")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getFileNameToGenerate());
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
 
 		/*
@@ -233,9 +343,14 @@ public class SourceFileDumper {
 		 */
 
 		else {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" + GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath + "/" + unit.getFileNameToGenerate());
-								
+			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.frameworkDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.frameworkDirPath + "/"
+					+ unit.getFileNameToGenerate());
+
 		}
 
 		if (file != null) {
@@ -250,19 +365,29 @@ public class SourceFileDumper {
 				e.printStackTrace();
 			}
 		}
-	}	
+	}
 
-	private void generateCodeForArchitectureFrameworkActivity(CompilationUnit unit, String deviceType, String str) {
+	private void generateCodeForArchitectureFrameworkActivity(
+			CompilationUnit unit, String deviceType, String str) {
 
 		String content = unit.getStringTemplateName();
 
 		if (unit.getFileCategory().equals("Logic")) {
-			new File(GlobalVariable.templatePath + "ApplicationLogic" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + "ApplicationLogic" + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getFileNameToGenerate());
-		}
-		else {
-		new File(GlobalVariable.templatePath + "ApplicationLogic" + GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath).mkdirs();
-		file = new File(GlobalVariable.templatePath + "ApplicationLogic" + GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath + "/" + unit.getFileNameToGenerate());
+			new File(GlobalVariable.templatePath + "ApplicationLogic"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + "ApplicationLogic"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		} else {
+			new File(GlobalVariable.templatePath + "ApplicationLogic"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.frameworkDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + "ApplicationLogic"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.frameworkDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		}
 		if (file != null) {
 			try {
@@ -278,34 +403,57 @@ public class SourceFileDumper {
 		}
 	}
 
-	private void generateCodeForMappingActivitity(CompilationUnit unit, String deviceType, String str) {
+	private void generateCodeForMappingActivitity(CompilationUnit unit,
+			String deviceType, String str) {
 		String content = unit.getStringTemplateName();
 
 		if ((unit.getFileCategory()).equals("device")) {
-			new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.getObjectClass().getType() + unit.getObjectName() + GlobalVariable.outputDirPath
-					+ GlobalVariable.deviceDirPath + unit.getObjectClass().getName()).mkdirs();
-			String dirName = GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.getObjectClass().getType() + unit.getObjectName() + GlobalVariable.outputDirPath
-					+ GlobalVariable.deviceDirPath + unit.getObjectClass().getName();
+			new File(GlobalVariable.templatePath + "/"
+					+ GlobalVariable.deploymentFolderPath + "/"
+					+ unit.getObjectClass().getType() + unit.getObjectName()
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceDirPath
+					+ unit.getObjectClass().getName()).mkdirs();
+			String dirName = GlobalVariable.templatePath + "/"
+					+ GlobalVariable.deploymentFolderPath + "/"
+					+ unit.getObjectClass().getType() + unit.getObjectName()
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceDirPath
+					+ unit.getObjectClass().getName();
 			File dir = new File(dirName);
 			file = new File(dir, unit.getFileNameToGenerate());
 		}
-		
+
 		// generate MainActivity.java files for Android devices
-		if((unit.getFileCategory()).equals("AndroidDevice")){
-			new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.getObjectClass().getType() + unit.getObjectName() + GlobalVariable.outputDirPath + GlobalVariable.AndroidDeviceDirPath).mkdirs();
-			String dirName = GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.getObjectClass().getType() + unit.getObjectName() + GlobalVariable.outputDirPath + GlobalVariable.AndroidDeviceDirPath;
+		if ((unit.getFileCategory()).equals("AndroidDevice")) {
+			new File(GlobalVariable.templatePath + "/"
+					+ GlobalVariable.deploymentFolderPath + "/"
+					+ unit.getObjectClass().getType() + unit.getObjectName()
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.AndroidDeviceDirPath).mkdirs();
+			String dirName = GlobalVariable.templatePath + "/"
+					+ GlobalVariable.deploymentFolderPath + "/"
+					+ unit.getObjectClass().getType() + unit.getObjectName()
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.AndroidDeviceDirPath;
 			File dir = new File(dirName);
 			file = new File(dir, unit.getFileNameToGenerate());
-		}		
-		
-		// This is for generating .project file
-		if((unit.getFileCategory()).equals("deviceProject")){
+		}
 
-		file = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.getObjectClass().getType() +
-			  unit.getObjectClass().getName() + "/" + unit.getFileNameToGenerate());
-		  
-	     file = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.getObjectClass().getType() + unit.getObjectClass().getName() + "/" +
-			  unit.getFileNameToGenerate());					 
+		// This is for generating .project file
+		if ((unit.getFileCategory()).equals("deviceProject")) {
+
+			file = new File(GlobalVariable.templatePath + "/"
+					+ GlobalVariable.deploymentFolderPath + "/"
+					+ unit.getObjectClass().getType()
+					+ unit.getObjectClass().getName() + "/"
+					+ unit.getFileNameToGenerate());
+
+			file = new File(GlobalVariable.templatePath + "/"
+					+ GlobalVariable.deploymentFolderPath + "/"
+					+ unit.getObjectClass().getType()
+					+ unit.getObjectClass().getName() + "/"
+					+ unit.getFileNameToGenerate());
 		}
 		if (file != null) {
 			try {
@@ -321,6 +469,3 @@ public class SourceFileDumper {
 		}
 	}
 }
-
-
-

@@ -25,7 +25,8 @@ public class StructCompiler {
 	}
 
 	public void addField(String fieldName, String fieldType) {
-		StructField Field = new StructField(fieldName, new PrimitiveType(fieldType));
+		StructField Field = new StructField(fieldName, new PrimitiveType(
+				fieldType));
 		StructFieldSet.add(Field);
 	}
 
@@ -39,7 +40,8 @@ public class StructCompiler {
 
 	public void generateStructureCode() {
 		JavaFrameworkFromST generatedStruct = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedStruct.generateDataStructure(createdStructure);
+		CompilationUnit generatedCU = generatedStruct
+				.generateDataStructure(createdStructure);
 		SourceFileDumper dumpGeneratedStruct = new SourceFileDumper();
 		dumpGeneratedStruct.dumpCompilationUnit(generatedCU);
 	}

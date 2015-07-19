@@ -26,10 +26,11 @@ public class DeviceCompiler {
 	}
 
 	public void addDeviceObj() {
-		device = new Device(getDeviceName(), getDeviceType(), getNetworkAddress(), getRegionValues(), getRegionLabel(), deviceAbilities, getMobileFlag());
+		device = new Device(getDeviceName(), getDeviceType(),
+				getNetworkAddress(), getRegionValues(), getRegionLabel(),
+				deviceAbilities, getMobileFlag());
 		SymbolTable.addDeviceinSymblTable(device);
 	}
-
 
 	public void setMobileFlag(String mobileFlag) {
 		this.myMobileFlag = mobileFlag;

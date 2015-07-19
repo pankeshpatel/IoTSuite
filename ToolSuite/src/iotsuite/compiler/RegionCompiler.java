@@ -1,6 +1,5 @@
 package iotsuite.compiler;
 
-
 import iotsuite.common.GlobalVariable;
 import iotsuite.semanticmodel.PrimitiveType;
 import iotsuite.semanticmodel.RegionField;
@@ -19,7 +18,8 @@ public class RegionCompiler {
 	}
 
 	public void addRegion(String regionLabel, String regionType) {
-		RegionField Field = new RegionField(regionLabel, new PrimitiveType(regionType));
+		RegionField Field = new RegionField(regionLabel, new PrimitiveType(
+				regionType));
 		regions.add(Field);
 
 	}
@@ -32,7 +32,8 @@ public class RegionCompiler {
 
 		// Region region = new Region(getRegionType());
 
-		if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 			// generateRegionCode_RegionCompiler(region, "RegionID");
 			// generateRegionCode_RegionCompiler(region, "RegionLabel");
 			// generateRegionCode_RegionCompiler(region, "DSConvert");
@@ -40,13 +41,17 @@ public class RegionCompiler {
 		}
 	}
 
-	/*private void generateRegionCode_RegionCompiler(Region region, String className) {
-
-		JavaFrameworkFromST generatedRegion = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedRegion.buildAbstractClassOFRegion(region, className);
-		SourceFileDumper dumpGeneratedRegion = new SourceFileDumper();
-		dumpGeneratedRegion.dumpCompilationUnit(generatedCU);
-
-	}*/
+	/*
+	 * private void generateRegionCode_RegionCompiler(Region region, String
+	 * className) {
+	 * 
+	 * JavaFrameworkFromST generatedRegion = new JavaFrameworkFromST();
+	 * CompilationUnit generatedCU =
+	 * generatedRegion.buildAbstractClassOFRegion(region, className);
+	 * SourceFileDumper dumpGeneratedRegion = new SourceFileDumper();
+	 * dumpGeneratedRegion.dumpCompilationUnit(generatedCU);
+	 * 
+	 * }
+	 */
 
 }

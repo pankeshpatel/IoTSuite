@@ -39,7 +39,8 @@ public class ComputationalServiceCompiler {
 	}
 
 	public void addParameter(String parameterName) {
-		parameter = new Parameter(parameterName, new DataType(getDatafromSymblTable(parameterName)));
+		parameter = new Parameter(parameterName, new DataType(
+				getDatafromSymblTable(parameterName)));
 	}
 
 	public ComputationalServiceCompiler() {
@@ -60,7 +61,10 @@ public class ComputationalServiceCompiler {
 		 * getAttributeSet(), getGeneratedInfo(), getConsumedInfo(),
 		 * getDataAccessList(), getActionList(), getPartitionAttributeVal());
 		 */
-		computationalService = new ComputationalService(getComputationalServiceName(), getGeneratedInfo(), getConsumedInfo(), getDataAccessList(), getActionList(), getPartitionAttributeVal());
+		computationalService = new ComputationalService(
+				getComputationalServiceName(), getGeneratedInfo(),
+				getConsumedInfo(), getDataAccessList(), getActionList(),
+				getPartitionAttributeVal());
 	}
 
 	/*
@@ -74,7 +78,8 @@ public class ComputationalServiceCompiler {
 	}
 
 	public void getDataAccessListFromSymblTable(String dataAccessStr) {
-		this.dataAccessList = SymbolTable.getDataAccessSymblTable(dataAccessStr);
+		this.dataAccessList = SymbolTable
+				.getDataAccessSymblTable(dataAccessStr);
 	}
 
 	// Getter and Setter of Partition Attribute
@@ -94,7 +99,8 @@ public class ComputationalServiceCompiler {
 	}
 
 	public void addConsumedInfo(String variableName) {
-		consumedInfo.add(new Information(variableName, new DataType(getDatafromSymblTable(variableName))));
+		consumedInfo.add(new Information(variableName, new DataType(
+				getDatafromSymblTable(variableName))));
 	}
 
 	public String getDatafromSymblTable(String variableName) {
@@ -107,7 +113,8 @@ public class ComputationalServiceCompiler {
 	}
 
 	public void addGeneratedInfo(String variableName, String variableType) {
-		generatedInfo.add(new Information(variableName, new DataType(variableType)));
+		generatedInfo.add(new Information(variableName, new DataType(
+				variableType)));
 	}
 
 	// Getter and Setter of Attribute
@@ -136,7 +143,8 @@ public class ComputationalServiceCompiler {
 	public void generateComputationalServiceInteraction_ComputationalServiceCompiler() {
 
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedComputationalService.generateComputationalServiceInteraction(computationalService);
+		CompilationUnit generatedCU = generatedComputationalService
+				.generateComputationalServiceInteraction(computationalService);
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 
@@ -144,7 +152,8 @@ public class ComputationalServiceCompiler {
 
 	public void generateComputationalServiceLogic_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedComputationalService.generateComputationalServiceLogic(computationalService);
+		CompilationUnit generatedCU = generatedComputationalService
+				.generateComputationalServiceLogic(computationalService);
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}

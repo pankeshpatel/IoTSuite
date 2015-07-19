@@ -13,7 +13,7 @@ public class Device implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String name;
-	//private String id;
+	// private String id;
 	private String type;
 	private String networkAddress;
 
@@ -24,7 +24,9 @@ public class Device implements Serializable {
 
 	private String myMobileFlag;
 
-	public Device(String name, String type, String networkAddress, List<String> regionIDs, List<String> regionLabels, Set<String> abilities, String mobileFlag) {
+	public Device(String name, String type, String networkAddress,
+			List<String> regionIDs, List<String> regionLabels,
+			Set<String> abilities, String mobileFlag) {
 
 		this.name = name;
 
@@ -50,10 +52,13 @@ public class Device implements Serializable {
 	}
 
 	public List<String> getRegionLabels() {
+		System.out.println("Region labels are "+ regionLabels+"in Device.java file");
 		return regionLabels;
 	}
 
 	public List<String> getRegion() {
+		
+		System.out.println("Value of region is"+regionIDs+"In Device.java file");
 		return regionIDs;
 	}
 
@@ -68,17 +73,20 @@ public class Device implements Serializable {
 	private String packageName;
 
 	public String getPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.deviceDirPath) + getName();
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.deviceDirPath) + getName();
 		return packageName;
 	}
 
 	public String getLogicPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.logicDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.logicDirPath);
 		return packageName;
 	}
 
 	public String getUtilPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.utilDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.utilDirPath);
 		return packageName;
 	}
 

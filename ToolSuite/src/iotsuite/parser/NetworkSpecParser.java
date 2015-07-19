@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-07-04 23:43:01
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-07-19 08:14:40
 
 package iotsuite.parser;
 import iotsuite.compiler.*; 
@@ -13,11 +13,12 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class NetworkSpecParser extends Parser {
 	public static final String[] tokenNames = new String[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "INT", 
-		"MOBILEFLAG", "WS", "','", "':'", "';'", "'devices'", "'mobile'", "'region'", 
-		"'resources'", "'type'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "MOBILEFLAG", 
+		"WS", "','", "':'", "';'", "'devices'", "'mobile'", "'region'", "'resources'", 
+		"'type'"
 	};
 	public static final int EOF=-1;
+	public static final int T__8=8;
 	public static final int T__9=9;
 	public static final int T__10=10;
 	public static final int T__11=11;
@@ -25,12 +26,10 @@ public class NetworkSpecParser extends Parser {
 	public static final int T__13=13;
 	public static final int T__14=14;
 	public static final int T__15=15;
-	public static final int T__16=16;
 	public static final int CAPITALIZED_ID=4;
 	public static final int ID=5;
-	public static final int INT=6;
-	public static final int MOBILEFLAG=7;
-	public static final int WS=8;
+	public static final int MOBILEFLAG=6;
+	public static final int WS=7;
 
 	// delegates
 	public Parser[] getDelegates() {
@@ -63,8 +62,8 @@ public class NetworkSpecParser extends Parser {
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:23:12: ( 'devices' ':' ( device_def )* )
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:24:7: 'devices' ':' ( device_def )*
 			{
-			match(input,12,FOLLOW_12_in_networkspec58); 
-			match(input,10,FOLLOW_10_in_networkspec60); 
+			match(input,11,FOLLOW_11_in_networkspec58); 
+			match(input,9,FOLLOW_9_in_networkspec60); 
 			 context = new SymbolTable();
 			      
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:27:8: ( device_def )*
@@ -125,13 +124,13 @@ public class NetworkSpecParser extends Parser {
 				MismatchedSetException mse = new MismatchedSetException(null,input);
 				throw mse;
 			}
-			match(input,10,FOLLOW_10_in_device_def114); 
+			match(input,9,FOLLOW_9_in_device_def114); 
 			 
 			   context.currentNetwork = new DeviceCompiler();
 			   context.currentNetwork.setDeviceName((deviceName!=null?deviceName.getText():null));
 			   
-			match(input,14,FOLLOW_14_in_device_def128); 
-			match(input,10,FOLLOW_10_in_device_def130); 
+			match(input,13,FOLLOW_13_in_device_def128); 
+			match(input,9,FOLLOW_9_in_device_def130); 
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:36:18: ( location_def )*
 			loop2:
 			while (true) {
@@ -157,8 +156,8 @@ public class NetworkSpecParser extends Parser {
 				}
 			}
 
-			match(input,16,FOLLOW_16_in_device_def142); 
-			match(input,10,FOLLOW_10_in_device_def144); 
+			match(input,15,FOLLOW_15_in_device_def142); 
+			match(input,9,FOLLOW_9_in_device_def144); 
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:37:16: ( device_type )*
 			loop3:
 			while (true) {
@@ -184,9 +183,9 @@ public class NetworkSpecParser extends Parser {
 				}
 			}
 
-			match(input,11,FOLLOW_11_in_device_def151); 
-			match(input,15,FOLLOW_15_in_device_def157); 
-			match(input,10,FOLLOW_10_in_device_def159); 
+			match(input,10,FOLLOW_10_in_device_def151); 
+			match(input,14,FOLLOW_14_in_device_def157); 
+			match(input,9,FOLLOW_9_in_device_def159); 
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:38:21: ( abilities_def )?
 			int alt4=2;
 			int LA4_0 = input.LA(1);
@@ -206,13 +205,13 @@ public class NetworkSpecParser extends Parser {
 
 			}
 
-			match(input,11,FOLLOW_11_in_device_def167); 
+			match(input,10,FOLLOW_10_in_device_def167); 
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:39:5: ( mobileFlag_def )*
 			loop5:
 			while (true) {
 				int alt5=2;
 				int LA5_0 = input.LA(1);
-				if ( (LA5_0==13) ) {
+				if ( (LA5_0==12) ) {
 					alt5=1;
 				}
 
@@ -232,7 +231,7 @@ public class NetworkSpecParser extends Parser {
 				}
 			}
 
-			match(input,11,FOLLOW_11_in_device_def178); 
+			match(input,10,FOLLOW_10_in_device_def178); 
 			 context.currentNetwork.addDeviceObj();
 			}
 
@@ -250,21 +249,21 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "location_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:45:1: location_def : CAPITALIZED_ID ':' INT ';' ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:45:1: location_def : CAPITALIZED_ID ':' ID ';' ;
 	public final void location_def() throws RecognitionException {
 		Token CAPITALIZED_ID1=null;
-		Token INT2=null;
+		Token ID2=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:45:14: ( CAPITALIZED_ID ':' INT ';' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:46:5: CAPITALIZED_ID ':' INT ';'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:45:14: ( CAPITALIZED_ID ':' ID ';' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:47:5: CAPITALIZED_ID ':' ID ';'
 			{
-			CAPITALIZED_ID1=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_location_def199); 
-			match(input,10,FOLLOW_10_in_location_def201); 
-			INT2=(Token)match(input,INT,FOLLOW_INT_in_location_def203); 
-			match(input,11,FOLLOW_11_in_location_def205); 
+			CAPITALIZED_ID1=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_location_def203); 
+			match(input,9,FOLLOW_9_in_location_def205); 
+			ID2=(Token)match(input,ID,FOLLOW_ID_in_location_def207); 
+			match(input,10,FOLLOW_10_in_location_def209); 
 			context.currentNetwork.addRegionLabel((CAPITALIZED_ID1!=null?CAPITALIZED_ID1.getText():null));
-			    context.currentNetwork.addRegionValue((INT2!=null?INT2.getText():null));
+			    context.currentNetwork.addRegionValue((ID2!=null?ID2.getText():null));
 			}
 
 		}
@@ -281,15 +280,15 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "device_type"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:52:1: device_type : CAPITALIZED_ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:53:1: device_type : CAPITALIZED_ID ;
 	public final void device_type() throws RecognitionException {
 		Token CAPITALIZED_ID3=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:52:13: ( CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:53:6: CAPITALIZED_ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:53:13: ( CAPITALIZED_ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:54:6: CAPITALIZED_ID
 			{
-			CAPITALIZED_ID3=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_device_type226); 
+			CAPITALIZED_ID3=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_device_type234); 
 			context.currentNetwork.setDeviceType((CAPITALIZED_ID3!=null?CAPITALIZED_ID3.getText():null));
 			}
 
@@ -307,27 +306,27 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "abilities_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:58:1: abilities_def : CAPITALIZED_ID ( ',' abilities_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:59:1: abilities_def : CAPITALIZED_ID ( ',' abilities_def )? ;
 	public final void abilities_def() throws RecognitionException {
 		Token CAPITALIZED_ID4=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:58:15: ( CAPITALIZED_ID ( ',' abilities_def )? )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:59:4: CAPITALIZED_ID ( ',' abilities_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:59:15: ( CAPITALIZED_ID ( ',' abilities_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:60:4: CAPITALIZED_ID ( ',' abilities_def )?
 			{
-			CAPITALIZED_ID4=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_abilities_def246); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:59:19: ( ',' abilities_def )?
+			CAPITALIZED_ID4=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_abilities_def254); 
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:60:19: ( ',' abilities_def )?
 			int alt6=2;
 			int LA6_0 = input.LA(1);
-			if ( (LA6_0==9) ) {
+			if ( (LA6_0==8) ) {
 				alt6=1;
 			}
 			switch (alt6) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:59:20: ',' abilities_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:60:20: ',' abilities_def
 					{
-					match(input,9,FOLLOW_9_in_abilities_def249); 
-					pushFollow(FOLLOW_abilities_def_in_abilities_def251);
+					match(input,8,FOLLOW_8_in_abilities_def257); 
+					pushFollow(FOLLOW_abilities_def_in_abilities_def259);
 					abilities_def();
 					state._fsp--;
 
@@ -354,17 +353,17 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "mobileFlag_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:65:1: mobileFlag_def : 'mobile' ':' MOBILEFLAG ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:66:1: mobileFlag_def : 'mobile' ':' MOBILEFLAG ;
 	public final void mobileFlag_def() throws RecognitionException {
 		Token MOBILEFLAG5=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:65:16: ( 'mobile' ':' MOBILEFLAG )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:66:4: 'mobile' ':' MOBILEFLAG
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:66:16: ( 'mobile' ':' MOBILEFLAG )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:67:4: 'mobile' ':' MOBILEFLAG
 			{
-			match(input,13,FOLLOW_13_in_mobileFlag_def270); 
-			match(input,10,FOLLOW_10_in_mobileFlag_def272); 
-			MOBILEFLAG5=(Token)match(input,MOBILEFLAG,FOLLOW_MOBILEFLAG_in_mobileFlag_def274); 
+			match(input,12,FOLLOW_12_in_mobileFlag_def278); 
+			match(input,9,FOLLOW_9_in_mobileFlag_def280); 
+			MOBILEFLAG5=(Token)match(input,MOBILEFLAG,FOLLOW_MOBILEFLAG_in_mobileFlag_def282); 
 			context.currentNetwork.setMobileFlag((MOBILEFLAG5!=null?MOBILEFLAG5.getText():null));
 			}
 
@@ -383,33 +382,33 @@ public class NetworkSpecParser extends Parser {
 
 
 
-	public static final BitSet FOLLOW_12_in_networkspec58 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_networkspec60 = new BitSet(new long[]{0x0000000000000032L});
+	public static final BitSet FOLLOW_11_in_networkspec58 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_networkspec60 = new BitSet(new long[]{0x0000000000000032L});
 	public static final BitSet FOLLOW_device_def_in_networkspec78 = new BitSet(new long[]{0x0000000000000032L});
-	public static final BitSet FOLLOW_set_in_device_def108 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_device_def114 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_14_in_device_def128 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_device_def130 = new BitSet(new long[]{0x0000000000010010L});
-	public static final BitSet FOLLOW_location_def_in_device_def133 = new BitSet(new long[]{0x0000000000010010L});
-	public static final BitSet FOLLOW_16_in_device_def142 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_device_def144 = new BitSet(new long[]{0x0000000000000810L});
-	public static final BitSet FOLLOW_device_type_in_device_def147 = new BitSet(new long[]{0x0000000000000810L});
-	public static final BitSet FOLLOW_11_in_device_def151 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_15_in_device_def157 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_device_def159 = new BitSet(new long[]{0x0000000000000810L});
-	public static final BitSet FOLLOW_abilities_def_in_device_def162 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_device_def167 = new BitSet(new long[]{0x0000000000002800L});
-	public static final BitSet FOLLOW_mobileFlag_def_in_device_def174 = new BitSet(new long[]{0x0000000000002800L});
-	public static final BitSet FOLLOW_11_in_device_def178 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_location_def199 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_location_def201 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_INT_in_location_def203 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_location_def205 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_device_type226 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_abilities_def246 = new BitSet(new long[]{0x0000000000000202L});
-	public static final BitSet FOLLOW_9_in_abilities_def249 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_abilities_def_in_abilities_def251 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_13_in_mobileFlag_def270 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_mobileFlag_def272 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_MOBILEFLAG_in_mobileFlag_def274 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_set_in_device_def108 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_device_def114 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_13_in_device_def128 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_device_def130 = new BitSet(new long[]{0x0000000000008010L});
+	public static final BitSet FOLLOW_location_def_in_device_def133 = new BitSet(new long[]{0x0000000000008010L});
+	public static final BitSet FOLLOW_15_in_device_def142 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_device_def144 = new BitSet(new long[]{0x0000000000000410L});
+	public static final BitSet FOLLOW_device_type_in_device_def147 = new BitSet(new long[]{0x0000000000000410L});
+	public static final BitSet FOLLOW_10_in_device_def151 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_14_in_device_def157 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_device_def159 = new BitSet(new long[]{0x0000000000000410L});
+	public static final BitSet FOLLOW_abilities_def_in_device_def162 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_device_def167 = new BitSet(new long[]{0x0000000000001400L});
+	public static final BitSet FOLLOW_mobileFlag_def_in_device_def174 = new BitSet(new long[]{0x0000000000001400L});
+	public static final BitSet FOLLOW_10_in_device_def178 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_location_def203 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_location_def205 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_ID_in_location_def207 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_location_def209 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_device_type234 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_abilities_def254 = new BitSet(new long[]{0x0000000000000102L});
+	public static final BitSet FOLLOW_8_in_abilities_def257 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_abilities_def_in_abilities_def259 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_12_in_mobileFlag_def278 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_mobileFlag_def280 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_MOBILEFLAG_in_mobileFlag_def282 = new BitSet(new long[]{0x0000000000000002L});
 }

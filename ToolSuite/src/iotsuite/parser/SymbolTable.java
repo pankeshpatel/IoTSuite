@@ -41,7 +41,8 @@ public class SymbolTable {
 
 	}
 
-	public static void constructDataAccessSymblTable(String dataAccessKey, Set<DataAccess> dataAccessObj) {
+	public static void constructDataAccessSymblTable(String dataAccessKey,
+			Set<DataAccess> dataAccessObj) {
 		dataAccessSymblTable.put(dataAccessKey, dataAccessObj);
 	}
 
@@ -68,7 +69,8 @@ public class SymbolTable {
 		return symblTable.get(variableName);
 	}
 
-	public static void constructSymbTable(String variableName, String variableType) {
+	public static void constructSymbTable(String variableName,
+			String variableType) {
 
 		if (symblTable.containsKey(variableName)) {
 
@@ -79,7 +81,8 @@ public class SymbolTable {
 
 	// Getter and Setter of structSymblTable
 
-	public static void constructStructSymblTable(String structAccessKey, StructCompiler structAccessObj) {
+	public static void constructStructSymblTable(String structAccessKey,
+			StructCompiler structAccessObj) {
 		structSymblTable.put(structAccessKey, structAccessObj);
 	}
 
@@ -88,7 +91,8 @@ public class SymbolTable {
 
 	}
 
-	public static void constructResponseTypeSymblTable(String structAccessKey, String structAccessObj) {
+	public static void constructResponseTypeSymblTable(String structAccessKey,
+			String structAccessObj) {
 		responseSymblTable.put(structAccessKey, structAccessObj);
 	}
 
@@ -110,7 +114,7 @@ public class SymbolTable {
 
 	public ComputationalServiceCompiler currentComputationalService;
 
-	//public ControllerCompiler currentController;
+	// public ControllerCompiler currentController;
 
 	public RegionCompiler currentRegion;
 

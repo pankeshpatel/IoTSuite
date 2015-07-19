@@ -1,14 +1,14 @@
-regions: 
-    Room: Integer;
-structs:	
-    PresenseStruct
-		presenceValue:boolean;    	
-resources:   
-    sensors:                        
-		StoveSensor 
-            generate  stoveMeasurement:PresenseStruct;	
-		MotionSensor
-            generate personPresence:PresenseStruct;	
-    actuators:                   
-        Alarm
-            action Activate();		
+regions :
+	
+	Room : String;
+structs:	    
+    TempStruct
+        tempValue : double;
+        unitOfMeasurement : String;			
+resources:
+    sensors:
+        TemperatureSensor 
+            generate  tempMeasurement : TempStruct;           
+    actuators:
+        Heater
+			action SetTemp(setTemp:TempStruct);

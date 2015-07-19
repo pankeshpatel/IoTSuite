@@ -14,7 +14,8 @@ public class Storage extends SoftwareComponent {
 
 	// public Storage(String name, Set<Attribute> attributes, Set<DataAccess>
 	// dataAccess, Set<Information> consumeInfo) {
-	public Storage(String name, Set<DataAccess> dataAccess, Set<Information> consumeInfo) {
+	public Storage(String name, Set<DataAccess> dataAccess,
+			Set<Information> consumeInfo) {
 		// super(name, attributes, null, null, "NoInstance");
 		super(name, null, null, "NoInstance");
 
@@ -35,23 +36,27 @@ public class Storage extends SoftwareComponent {
 	private String packageName;
 
 	public String getPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.frameworkDirPath);
 		return packageName;
 	}
 
 	public String getLogicPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.logicDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.logicDirPath);
 		return packageName;
 	}
 
 	public String getFactoryPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.factoryDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.factoryDirPath);
 		return packageName;
 	}
 
 	public String getDeviceImplPackageName() {
 
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.deviceImplDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.deviceImplDirPath);
 		return packageName;
 	}
 

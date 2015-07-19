@@ -21,10 +21,11 @@ public class GlobalVariable {
 	public static String activity;
 	// public static String devicePCType = "/" + "DeviceDrivers" + "/" + "PC" +
 	// "/";
-	//public static String deviceJAVASEType = "/";
+	// public static String deviceJAVASEType = "/";
 	public static String deviceJAVASEType = "JavaSE";
 	public static String deviceAndroidType = "Android";
-	//public static String deviceAndroidType = "/" + "DeviceDrivers" + "/" + "Android" + "/";
+	// public static String deviceAndroidType = "/" + "DeviceDrivers" + "/" +
+	// "Android" + "/";
 	public static String deploymentFolderPath = "CodeForDeployment";
 	// public static String androidDevicepath = "AndroidDNine";
 	public static String templatePath;
@@ -45,14 +46,13 @@ public class GlobalVariable {
 	public static final String ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK = "compile-arch-spec";
 	public static final String ACTIVITY_GENERATE_MAPPING = "invoke-mapper";
 	public static final String ACTIVITY_GENERATE_LINKING = "invoke-linker";
-	
-	
 
 	public static String convertPathTopackage(String pathName) {
 
 		String modifiedPathName;
 
-		if (pathName.substring(0, 1).equals(".") || pathName.substring(0, 1).equals(".")) {
+		if (pathName.substring(0, 1).equals(".")
+				|| pathName.substring(0, 1).equals(".")) {
 			modifiedPathName = pathName.substring(2).replace("/", ".");
 		} else {
 			modifiedPathName = pathName.replace("/", ".").substring(1);

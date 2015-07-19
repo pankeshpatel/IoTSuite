@@ -9,7 +9,8 @@ public class DeploymentScope {
 	public DeploymentScope() {
 	}
 
-	public DeploymentScope(String softwareComponentName, String attributeName, String attributeValue) {
+	public DeploymentScope(String softwareComponentName, String attributeName,
+			String attributeValue) {
 		super();
 		this.softwareComponentName = softwareComponentName;
 		this.attributeName = attributeName;
@@ -18,6 +19,7 @@ public class DeploymentScope {
 	}
 
 	public String getSoftwareComponentName() {
+		System.out.println("Software component name "+softwareComponentName+"  In deploymentscope.java ");
 		return softwareComponentName;
 	}
 
@@ -35,6 +37,7 @@ public class DeploymentScope {
 	}
 
 	public String getAttributeValue() {
+		System.out.println("Attribute value is "+attributeValue+"  In deploymentscope.java ");
 		return attributeValue;
 	}
 

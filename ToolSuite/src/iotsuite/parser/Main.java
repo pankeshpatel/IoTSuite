@@ -15,15 +15,16 @@ import org.antlr.runtime.CommonTokenStream;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		
+
 		if (GlobalVariable.DEVELOPMENT_METHODOLOGY) {
 
-		/*	GlobalVariable.vocabSpec = args[0];
-			GlobalVariable.archSpec = args[1];
-			GlobalVariable.deploymentSpec = args[2];
-			GlobalVariable.stringTemplatePath = args[3];
-			GlobalVariable.activity = args[4];
-			GlobalVariable.templatePath = args[5]; */
+			/*
+			 * GlobalVariable.vocabSpec = args[0]; GlobalVariable.archSpec =
+			 * args[1]; GlobalVariable.deploymentSpec = args[2];
+			 * GlobalVariable.stringTemplatePath = args[3];
+			 * GlobalVariable.activity = args[4]; GlobalVariable.templatePath =
+			 * args[5];
+			 */
 
 			/*
 			 * The following code generates code in the following sequence and
@@ -32,13 +33,15 @@ public class Main {
 			 * Actuator => ActuatorCompiler (5) Storage, => StorageCompiler (6)
 			 * User Interface => UserInterfaceCompiler // for future extension
 			 */
-			
+
 			GlobalVariable.activity = args[0];
 			GlobalVariable.templatePath = args[1];
-			
-			if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
-				
-				ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
+
+			if (GlobalVariable.activity
+					.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
+
+				ANTLRFileStream vocStream = new ANTLRFileStream(
+						GlobalVariable.vocabSpec);
 				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
@@ -47,16 +50,18 @@ public class Main {
 				GenFiller.copyDeviceDrivers();
 			}
 
-			if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK)) {
-				
-							
-				ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
+			if (GlobalVariable.activity
+					.equals(GlobalVariable.ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK)) {
+
+				ANTLRFileStream vocStream = new ANTLRFileStream(
+						GlobalVariable.vocabSpec);
 				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
 
-				ANTLRFileStream archStream = new ANTLRFileStream(GlobalVariable.archSpec);
+				ANTLRFileStream archStream = new ANTLRFileStream(
+						GlobalVariable.archSpec);
 				ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
 				CommonTokenStream archTokens = new CommonTokenStream(archLexer);
 				ArchSpecParser archParser = new ArchSpecParser(archTokens);
@@ -66,15 +71,18 @@ public class Main {
 
 			}
 
-			if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
-				
-				ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
+			if (GlobalVariable.activity
+					.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
+
+				ANTLRFileStream vocStream = new ANTLRFileStream(
+						GlobalVariable.vocabSpec);
 				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
 
-				ANTLRFileStream archStream = new ANTLRFileStream(GlobalVariable.archSpec);
+				ANTLRFileStream archStream = new ANTLRFileStream(
+						GlobalVariable.archSpec);
 				ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
 				CommonTokenStream archTokens = new CommonTokenStream(archLexer);
 				ArchSpecParser archParser = new ArchSpecParser(archTokens);
@@ -83,23 +91,29 @@ public class Main {
 				List<Device> deviceList;
 				List<DeploymentScope> mappingConstraintList;
 
-				mappingConstraintList = SymbolTable.getDeploymentConstrainsList();
+				mappingConstraintList = SymbolTable
+						.getDeploymentConstrainsList();
 
-				ANTLRFileStream deploymentStream = new ANTLRFileStream(GlobalVariable.deploymentSpec);
-				NetworkSpecLexer deploymentLexer = new NetworkSpecLexer(deploymentStream);
-				CommonTokenStream deploymentTokens = new CommonTokenStream(deploymentLexer);
-				NetworkSpecParser deploymentParser = new NetworkSpecParser(deploymentTokens);
+				ANTLRFileStream deploymentStream = new ANTLRFileStream(
+						GlobalVariable.deploymentSpec);
+				NetworkSpecLexer deploymentLexer = new NetworkSpecLexer(
+						deploymentStream);
+				CommonTokenStream deploymentTokens = new CommonTokenStream(
+						deploymentLexer);
+				NetworkSpecParser deploymentParser = new NetworkSpecParser(
+						deploymentTokens);
 				deploymentParser.networkspec();
 				deviceList = SymbolTable.getDeviceList();
-				
 
-				MapperCompiler.mappingFileGenerator(deviceList, mappingConstraintList);
+				MapperCompiler.mappingFileGenerator(deviceList,
+						mappingConstraintList);
 				GenFiller.copyMapping();
 
 			}
 
-			if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_LINKING)) {
-								
+			if (GlobalVariable.activity
+					.equals(GlobalVariable.ACTIVITY_GENERATE_LINKING)) {
+
 				LinkerCompiler.linkerAlgo();
 				GenFiller.copyLinking();
 			}
@@ -115,13 +129,15 @@ public class Main {
 
 			List<Device> deviceList;
 			List<DeploymentScope> mappingConstraintList;
-			ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
+			ANTLRFileStream vocStream = new ANTLRFileStream(
+					GlobalVariable.vocabSpec);
 			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 			vocParser.vocabSpec();
 
-			ANTLRFileStream archStream = new ANTLRFileStream(GlobalVariable.archSpec);
+			ANTLRFileStream archStream = new ANTLRFileStream(
+					GlobalVariable.archSpec);
 			ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
 			CommonTokenStream archTokens = new CommonTokenStream(archLexer);
 			ArchSpecParser archParser = new ArchSpecParser(archTokens);
@@ -129,14 +145,19 @@ public class Main {
 
 			mappingConstraintList = SymbolTable.getDeploymentConstrainsList();
 
-			ANTLRFileStream deploymentStream = new ANTLRFileStream(GlobalVariable.deploymentSpec);
-			NetworkSpecLexer networkLexer = new NetworkSpecLexer(deploymentStream);
-			CommonTokenStream networkTokens = new CommonTokenStream(networkLexer);
-			NetworkSpecParser networkParser = new NetworkSpecParser(networkTokens);
+			ANTLRFileStream deploymentStream = new ANTLRFileStream(
+					GlobalVariable.deploymentSpec);
+			NetworkSpecLexer networkLexer = new NetworkSpecLexer(
+					deploymentStream);
+			CommonTokenStream networkTokens = new CommonTokenStream(
+					networkLexer);
+			NetworkSpecParser networkParser = new NetworkSpecParser(
+					networkTokens);
 			networkParser.networkspec();
 			deviceList = SymbolTable.getDeviceList();
 
-			MapperCompiler.mappingFileGenerator(deviceList, mappingConstraintList);
+			MapperCompiler.mappingFileGenerator(deviceList,
+					mappingConstraintList);
 
 		}
 

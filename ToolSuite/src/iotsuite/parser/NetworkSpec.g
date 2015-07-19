@@ -43,9 +43,10 @@ device_def:
 // Region Definition
 
 location_def :
-    CAPITALIZED_ID ':' INT ';'
+   // CAPITALIZED_ID ':' REGION_LOCATION ';' 
+    CAPITALIZED_ID ':' ID ';'
     {context.currentNetwork.addRegionLabel($CAPITALIZED_ID.text);
-    context.currentNetwork.addRegionValue($INT.text);}
+    context.currentNetwork.addRegionValue($ID.text);}    
 ;
 
 // Device Type
@@ -76,16 +77,23 @@ mobileFlag_def :
 
 
 
+//REGION_LOCATION:
+//      ('a'..'z' | 'A'..'Z' )? ('0'..'9')*
+//;
 
-
-
+ 
 MOBILEFLAG :  'true' | 'false'
-   ;
-
-ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' )* ('0'..'9')*
-   ;
+   ; 
    
-INT : '0'..'9'('0'..'9')*  ; 
+
+
+ID  : ('a'..'z'  ('a'..'z' | 'A'..'Z' )* ('0'..'9')*)| '0'..'9'('0'..'9')* ; 
+   
+//REGION_LOCATION: ('a'..'z' | 'A'..'Z' )* | '0'..'9' ('0'..'9')*  ; 
+
+  
+   
+//INT : '0'..'9'('0'..'9')*  ; 
 
 CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )* ('0'..'9')*;
 

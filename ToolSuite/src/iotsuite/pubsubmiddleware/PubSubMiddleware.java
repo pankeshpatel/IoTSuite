@@ -32,7 +32,8 @@ public class PubSubMiddleware {
 		return singletonInstance;
 	}
 
-	public void subscribe(Subscriber s, String eventSignature, List<String> regionInfo) {
+	public void subscribe(Subscriber s, String eventSignature,
+			List<String> regionInfo) {
 
 		registerNewSubscriber(s, eventSignature, regionInfo);
 	}
@@ -45,7 +46,8 @@ public class PubSubMiddleware {
 
 		for (int i = 0; i <= pubSubRegionIDList.size(); i++) {
 
-			List<String> regionIDResult = regionIDtb.getRegionIDField(i, pubSubRegionIDList);
+			List<String> regionIDResult = regionIDtb.getRegionIDField(i,
+					pubSubRegionIDList);
 
 			Set<Subscriber> s = regionSubscriber.get(regionIDResult);
 
@@ -57,7 +59,8 @@ public class PubSubMiddleware {
 
 		Set<Subscriber> subscriberEventSet = getSubscribersForEvent(eventName);
 
-		subscriberSet = SetOperations.intersection(subscriberEventSet, subscriberPatternSet);
+		subscriberSet = SetOperations.intersection(subscriberEventSet,
+				subscriberPatternSet);
 
 		if (subscriberSet != null) {
 			for (Subscriber s : subscriberSet) {
@@ -72,7 +75,8 @@ public class PubSubMiddleware {
 		return subscriberMap.get(eventName);
 	}
 
-	private void registerNewSubscriber(Subscriber s, String eSig, List<String> regionInfo) {
+	private void registerNewSubscriber(Subscriber s, String eSig,
+			List<String> regionInfo) {
 
 		if (regionSubscriber.containsKey(regionInfo)) {
 			Set<Subscriber> tempSet = regionSubscriber.get(regionInfo);
@@ -121,7 +125,8 @@ public class PubSubMiddleware {
 	private void registerNewInstance(CommandListener s, String listnerSignature) {
 
 		if (registeredInstanceMap.containsKey(listnerSignature)) {
-			Set<CommandListener> tempSet = registeredInstanceMap.get(listnerSignature);
+			Set<CommandListener> tempSet = registeredInstanceMap
+					.get(listnerSignature);
 			tempSet.add(s);
 		} else {
 			Set<CommandListener> newSet = new HashSet<CommandListener>();

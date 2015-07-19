@@ -30,7 +30,8 @@ public class MapperCompiler {
 	}
 
 	public void addDeployementConstraintObj() {
-		deploymentConstraint = new DeploymentScope(getSoftwareComponentName(), getAttributeName(), getAttributeValue());
+		deploymentConstraint = new DeploymentScope(getSoftwareComponentName(),
+				getAttributeName(), getAttributeValue());
 
 		SymbolTable.addDeploymentConstraints(deploymentConstraint);
 	}
@@ -59,11 +60,13 @@ public class MapperCompiler {
 		this.attributeValue = attributeValue;
 	}
 
-	public static void mappingFileGenerator(List<Device> deviceList, List<DeploymentScope> mappingConstraintList) throws IOException {
+	public static void mappingFileGenerator(List<Device> deviceList,
+			List<DeploymentScope> mappingConstraintList) throws IOException {
 
 		// Mapping Algorithm
-		Map<Device, Set<String>> taskMapper = MappingAlgoCompiler.mapTasks(deviceList, mappingConstraintList);
-		
+		Map<Device, Set<String>> taskMapper = MappingAlgoCompiler.mapTasks(
+				deviceList, mappingConstraintList);
+
 		/*
 		 * The following for loop will take each device individually and do the
 		 * following
@@ -76,20 +79,22 @@ public class MapperCompiler {
 		 */
 
 		for (Entry<Device, Set<String>> entry : taskMapper.entrySet()) {
-			
 
-			Device device = MergeDeviceAbilities(entry.getKey(), entry.getValue(), "DBServer");
+			Device device = MergeDeviceAbilities(entry.getKey(),
+					entry.getValue(), "DBServer");
 
-			// The following function generates "template" according to type(JavaSE/Android).
-			multiplyTemplate(device);			
-			genearateStartupCode(device); 
-			genearateExecutionCode(device); 
+			// The following function generates "template" according to
+			// type(JavaSE/Android).
+			multiplyTemplate(device);
+			genearateStartupCode(device);
+			genearateExecutionCode(device);
 			genearateProjectFileCode(device);
 
 		}
 	}
 
-	private static Device MergeDeviceAbilities(Device device, Set<String> swComponentName, String filterAbility) {
+	private static Device MergeDeviceAbilities(Device device,
+			Set<String> swComponentName, String filterAbility) {
 
 		List<String> forLoopAbilities = new ArrayList<String>();
 		forLoopAbilities.addAll(device.getAbilities());
@@ -106,7 +111,10 @@ public class MapperCompiler {
 			}
 		}
 
-		return new Device(device.getName(), device.getType(), device.getNetworkAddress(), device.getRegion(), device.getRegionLabels(), resultAbilities, device.getMobileFlag());
+		return new Device(device.getName(), device.getType(),
+				device.getNetworkAddress(), device.getRegion(),
+				device.getRegionLabels(), resultAbilities,
+				device.getMobileFlag());
 	}
 
 	/*
@@ -128,13 +136,18 @@ public class MapperCompiler {
 
 		// The following line take the template from the
 		// GlobalVariable.frameworkRootDir
-		File srcFolder = new File(GlobalVariable.templatePath + "/" + "DeviceDrivers" + "/" + unit.getType());
-		//File srcFolder = new File(GlobalVariable.activityGenPath + "/" + "JavaSEDeviceDrivers" );
-		//new File(GlobalVariable.frameworkRootDir).mkdirs();
+		File srcFolder = new File(GlobalVariable.templatePath + "/"
+				+ "DeviceDrivers" + "/" + unit.getType());
+		// File srcFolder = new File(GlobalVariable.activityGenPath + "/" +
+		// "JavaSEDeviceDrivers" );
+		// new File(GlobalVariable.frameworkRootDir).mkdirs();
 		new File(GlobalVariable.templatePath).mkdirs();
-		//File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + unit.getType() + unit.getName());
-		
-		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath   + "/" + unit.getType() + unit.getName());
+		// File destFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// unit.getType() + unit.getName());
+
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + unit.getType()
+				+ unit.getName());
 
 		if (!srcFolder.exists()) {
 
@@ -155,28 +168,32 @@ public class MapperCompiler {
 
 	private static void genearateStartupCode(Device device) {
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateDevice.generateDeviceStartup(device);
+		CompilationUnit generatedCU = generateDevice
+				.generateDeviceStartup(device);
 		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
 	}
 
 	private static void genearateExecutionCode(Device device) {
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateDevice.generatePlatformSpecificExecutionStartup(device);
+		CompilationUnit generatedCU = generateDevice
+				.generatePlatformSpecificExecutionStartup(device);
 		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
 	}
 
 	private static void genearateProjectFileCode(Device device) {
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateDevice.generatePlatformSpecificProjectFile(device);
+		CompilationUnit generatedCU = generateDevice
+				.generatePlatformSpecificProjectFile(device);
 		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
 	}
 
 	private static void generateDeviceManifest(Device device) {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver.generateAndroidManifest(device);
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateAndroidManifest(device);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 

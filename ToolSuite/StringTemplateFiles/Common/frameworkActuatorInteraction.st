@@ -48,18 +48,18 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
     	
     	List<String> regionInfo = new ArrayList<String>();
 
-		regionInfo.add("*");
-		regionInfo.add("*");
-		regionInfo.add("*");
+		//regionInfo.add("*");
+		//regionInfo.add("*");
+		//regionInfo.add("*");
 
 		this.myPubSubMiddleware.subscribe(this, "$action.name$", regionInfo);
     	
     		
-    		/*List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
+    		 regionInfo = RegionSubscription.getSubscriptionRequest(
 				partitionAttribute, myDeviceInfo.getRegionLabels(),
 				myDeviceInfo.getRegion());
 				
-           this.myPubSubMiddleware.subscribe(this,"$action.name$",regionInfo); */
+           this.myPubSubMiddleware.subscribe(this,"$action.name$",regionInfo); 
    		}
     }$  		
    		  		
