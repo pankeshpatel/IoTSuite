@@ -1,12 +1,13 @@
 regions :
-	Room : String;
+	Building : Integer ;
+	Floor :  Integer;
+	Room : Integer;
+	
 structs:	    
     TempStruct
         tempValue : double;
-        unitOfMeasurement : String;
-        date:String;
-        time:String;
-          
+        unitOfMeasurement : String;		
+        
 resources:
     sensors:
         TemperatureSensor
@@ -15,6 +16,6 @@ resources:
     actuators:
        Heater
 			action SetTemp(setTemp:TempStruct);
-			
+		
 		
 			

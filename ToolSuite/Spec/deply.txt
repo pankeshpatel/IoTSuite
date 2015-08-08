@@ -1,26 +1,34 @@
 devices: 	
  D1:
         region :
-           Room : computerLab13;
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
         type: JavaSE;    
         resources :TemperatureSensor;
         
 	D2:
         region :
-            Room : computerLab13;
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
         type: JavaSE;    
         resources : ;
        
 	D3:
         region :
-            Room : computerLab13;
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
         type: JavaSE;    
         resources :  ;
-      
+       	
    
     D4:
         region :
-            Room : computerLab13;
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
         type: JavaSE;    
         resources : Heater;
        

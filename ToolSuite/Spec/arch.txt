@@ -4,7 +4,7 @@ softwarecomponents:
             
             RoomAvgTemp 
             consume tempMeasurement from region-hops:0:Room;
-            generate roomAvgTempMeasurement:TempStruct;           
+            generate roomAvgTempMeasurement:TempStruct;
             partition-per : Room;
       		
       		RoomController

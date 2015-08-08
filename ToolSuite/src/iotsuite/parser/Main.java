@@ -7,14 +7,19 @@ import iotsuite.compiler.MapperCompiler;
 import iotsuite.semanticmodel.DeploymentScope;
 import iotsuite.semanticmodel.Device;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
+import org.antlr.runtime.RecognitionException;
 
 public class Main {
 
 	public static void main(String[] args) throws Exception {
+		
+		
+	//Main main = new Main();
 
 		if (GlobalVariable.DEVELOPMENT_METHODOLOGY) {
 
@@ -46,8 +51,10 @@ public class Main {
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
-
+							
 				GenFiller.copyDeviceDrivers();
+				
+			
 			}
 
 			if (GlobalVariable.activity
@@ -74,6 +81,7 @@ public class Main {
 			if (GlobalVariable.activity
 					.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
 
+				
 				ANTLRFileStream vocStream = new ANTLRFileStream(
 						GlobalVariable.vocabSpec);
 				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
@@ -104,19 +112,29 @@ public class Main {
 						deploymentTokens);
 				deploymentParser.networkspec();
 				deviceList = SymbolTable.getDeviceList();
+				
+				
+			
 
 				MapperCompiler.mappingFileGenerator(deviceList,
 						mappingConstraintList);
+				//System.out.println("I am in Mapping Acitivity");
+				LinkerCompiler.linkerAlgo();
+				GenFiller.copyLinking();
 				GenFiller.copyMapping();
+			
+			
 
 			}
 
-			if (GlobalVariable.activity
+			
+			/*if (GlobalVariable.activity
 					.equals(GlobalVariable.ACTIVITY_GENERATE_LINKING)) {
 
 				LinkerCompiler.linkerAlgo();
 				GenFiller.copyLinking();
-			}
+			}*/
+			
 
 		} else {
 
@@ -162,4 +180,19 @@ public class Main {
 		}
 
 	}
+	
+	/*public  void linker()
+	{
+	if (GlobalVariable.activity
+			.equals(GlobalVariable.ACTIVITY_GENERATE_LINKING)) {
+
+		System.out.println("I am in Linker");
+		LinkerCompiler.linkerAlgo();
+		GenFiller.copyLinking();
+		
+	}
+	}*/
+	
+	
+	
 }

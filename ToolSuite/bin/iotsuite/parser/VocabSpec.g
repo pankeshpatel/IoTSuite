@@ -185,7 +185,7 @@ dataType:
 ;
  
 primitiveType:
-  (id='Integer' | id='Boolean' | id='String' |  id = 'double' | id = 'long' | id='boolean' )
+  (id='Integer' | id='Boolean' | id='String' |  id = 'double' | id = 'long' | id='boolean')
 ;
 
 

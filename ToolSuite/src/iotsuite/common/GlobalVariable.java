@@ -44,8 +44,8 @@ public class GlobalVariable {
 
 	public static final String ACTIVITY_GENERATE_DEVICEDRIVER = "compile-vocab-spec";
 	public static final String ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK = "compile-arch-spec";
-	public static final String ACTIVITY_GENERATE_MAPPING = "invoke-mapper";
-	public static final String ACTIVITY_GENERATE_LINKING = "invoke-linker";
+	public static final String ACTIVITY_GENERATE_MAPPING = "invoke-mapper-linker";
+	//public static final String ACTIVITY_GENERATE_LINKING = "invoke-linker";
 
 	public static String convertPathTopackage(String pathName) {
 
