@@ -20,10 +20,21 @@ public class JavaFrameworkFromST {
 	private StringTemplateGroup group = new StringTemplateGroup("myGroup",
 			GlobalVariable.stringTemplatePath, DefaultTemplateLexer.class);
 
-	// JavaSE Sensor Impl
-	public CompilationUnit generateJavaSESensorImpl(Sensor sensorDriver) {
+	// JavaSE Periodic Sensor Impl
+	public CompilationUnit generateJavaSEPeriodicSensorImpl(Sensor sensorDriver) {
 		StringTemplate templateOfSensorDriver = group
-				.getInstanceOf("JavaSE/implSensorJavaSE");
+				.getInstanceOf("JavaSE/implPeriodicSensorJavaSE");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
+		return new CompilationUnit(GlobalVariable.JAVASE_ENABLED_DEVICES
+				+ sensorDriver.getName() + ".java", templateOfSensorDriver,
+				"JavaSESensorImpl", "sensor", sensorDriver);
+	}
+	
+	
+	//JavaSE Event Driven Sensor Impl
+	public CompilationUnit generateJavaSEEventDrivenSensorImpl(Sensor sensorDriver) {
+		StringTemplate templateOfSensorDriver = group
+				.getInstanceOf("JavaSE/implEventDrivenSensorJavaSE");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit(GlobalVariable.JAVASE_ENABLED_DEVICES
 				+ sensorDriver.getName() + ".java", templateOfSensorDriver,

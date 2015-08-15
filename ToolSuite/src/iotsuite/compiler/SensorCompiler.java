@@ -58,8 +58,10 @@ public class SensorCompiler {
 	 * Android-enabled device Implementation (6) Sensor's Interface (7) Sensor's
 	 * Listener
 	 */
-
-	public void generateSensorCode() {
+	
+	
+	//  This function will generate code for Periodic Sensor
+	public void generatePeriodicSensorCode() {
 
 		// Sensor's Interaction
 		generateSensorInteraction_SensorCompiler();
@@ -78,8 +80,64 @@ public class SensorCompiler {
 				generateJavaSESensorFactory_SensorCompiler();
 
 				// Sensor's JavaSE Implementation
-				generateSensorJavaSE_SensorCompiler();
+				generateSensorJavaSE_PeriodicSensorCompiler();
 			}
+			
+			
+			
+
+			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
+
+				// Sensor's Application Logic
+				generateAndroidSensorLogic_SensorCompiler();
+
+				// Android SensorFactory
+				generateAndroidSensorFactory_SensorCompiler();
+
+				// Sensor's Android Implementation
+				generateSensorAndroid_SensorCompiler();
+				// generateSensorAndroidService_SensorCompiler();
+			}
+
+			// Sensor's Interface
+			generateSensorInterface_SensorCompiler();
+
+			// Sensor's Listener
+			for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
+				generateSensorListener_SensorCompiler(sensorDriver
+						.getAllGeneratedInfo().get(i));
+			}
+
+		}
+
+	}
+	
+	
+	
+	//  This function will generate code for Event Driven Sensor
+	public void generateEventDrivenSensorCode() {
+
+		// Sensor's Interaction
+		generateSensorInteraction_SensorCompiler();
+
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
+
+			// Sensor's Application Logic
+
+			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
+
+				// Sensor's Application Logic
+				generateJavaSESensorLogic_SensorCompiler();
+
+				// JavaSE SensorFactory
+				generateJavaSESensorFactory_SensorCompiler();
+
+				// Sensor's JavaSE Implementation
+				generateSensorJavaSE_EventDrivenSensorCompiler();
+			}
+			
+		
 
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
 
@@ -155,14 +213,32 @@ public class SensorCompiler {
 	}
 
 	// Sensor's JavaSE Implementation
-	private void generateSensorJavaSE_SensorCompiler() {
+	private void generateSensorJavaSE_PeriodicSensorCompiler() {
+		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
+		CompilationUnit generateCU = generateSensorImplFactory
+				.generateJavaSEPeriodicSensorImpl(sensorDriver);
+		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
+		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
+	}
+	
+	
+	private void generateSensorJavaSE_EventDrivenSensorCompiler() {
+		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
+		CompilationUnit generateCU = generateSensorImplFactory
+				.generateJavaSEEventDrivenSensorImpl(sensorDriver);
+		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
+		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
+	}
+	
+	
+	/*private void generateSensorJavaSE_SensorCompiler() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorImplFactory
 				.generateJavaSESensorImpl(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}
-
+*/
 	// Sensor's Android Implementation
 	private void generateSensorAndroid_SensorCompiler() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();

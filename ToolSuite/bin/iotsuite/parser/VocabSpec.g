@@ -67,28 +67,67 @@ structField_def:
 //************************************************************************************************
 
 abilities_def : 
-  'sensors' ':'   (sensor_def)+
+  // 'periodicsensors' ':'   (sensor_def)+
+  ('sensors' ':'   sensor_def)+
   'actuators' ':' (actuator_def)+
   ('storages'  ':' ss_def)*
   ('interactions' ':' (gui_def)+ )*     
-;  
+;   
 
 
 // Sensor Definition *** Start 
 //************************************************************************************************
-
+ 
 sensor_def:
-    CAPITALIZED_ID
+ 
+      ('periodicsensors' ':' periodicsensor_def)*
+     // 'periodicsensors' ':' (periodicsensor_def|eventsensor_def)
+     //'sensor_def' ':' (periodicsensor_def | eventsensor_def )+ 
+      ('eventdriven' ':' eventsensor_def)*
+   /* CAPITALIZED_ID
     {context.currentSensor = new SensorCompiler($CAPITALIZED_ID.text);}
     (sensorMeasurement_def ';')* 
-    {context.currentSensor.generateSensorCode();}
+    (sensorperiodicMeasurement_def ';')*
+    {context.currentSensor.generateSensorCode();}*/
 ; 
 
+periodicsensor_def:
+ CAPITALIZED_ID
+    {context.currentSensor = new SensorCompiler($CAPITALIZED_ID.text);}
+    (sensorMeasurement_def ';')* 
+    (sensorperiodicMeasurement_def ';')*
+    {context.currentSensor.generatePeriodicSensorCode();}
+;
 
-sensorMeasurement_def :
-    'generate' lc_id ':'  CAPITALIZED_ID
+eventsensor_def:
+ CAPITALIZED_ID
+    {context.currentSensor = new SensorCompiler($CAPITALIZED_ID.text);}
+    (sensorMeasurement_def ';')* 
+    (sensoreventMeasurement_def ';')*
+    {context.currentSensor.generateEventDrivenSensorCode();}
+
+;
+
+
+
+
+sensorMeasurement_def : 
+    'generate' lc_id ':'  CAPITALIZED_ID  
+    //'sample' 'period' dataType 'for' dataType
     { context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text ,context.getStructSymblTable($CAPITALIZED_ID.text) ); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text); } 
+;
+
+
+sensorperiodicMeasurement_def:
+ 'sample' 'period' 'SAMPLEPERIOD' 'for' 'SAMPLEDURATION'  
+  
+;
+
+
+sensoreventMeasurement_def: 
+('onCondition' ID ',' ID)*
+
 ;
 
 // Sensor Definition *** End 
@@ -185,7 +224,7 @@ dataType:
 ;
  
 primitiveType:
-  (id='Integer' | id='Boolean' | id='String' |  id = 'double' | id = 'long' | id='boolean')
+  (id='Integer' | id='Boolean' | id='String' |  id = 'double' | id = 'long' | id='boolean'|id ='_')
 ;
 
 

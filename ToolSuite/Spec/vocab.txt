@@ -2,20 +2,30 @@ regions :
 	Building : Integer ;
 	Floor :  Integer;
 	Room : Integer;
-	
 structs:	    
     TempStruct
         tempValue : double;
         unitOfMeasurement : String;		
-        
+   	  BadgeStruct
+   	    badgeID:String;
+   	    badgEvent:String;
+   	    
 resources:
     sensors:
-        TemperatureSensor
-            generate  tempMeasurement : TempStruct;     
+    eventdriven:
+        BadgeSensor		
+            generate badgeDetected: BadgeStruct; 
+			generate badgeDisappered: BadgeStruct;
+			onCondition badgeDetectedCondition,badgeDisappearedCondition;
+			
               
     actuators:
-       Heater
+      Heater			
+			action Off();
 			action SetTemp(setTemp:TempStruct);
-		
+	storages:
+		ProfileDB
+			generate profile:TempStruct accessed-by badgeID:String;
+		   
 		
 			

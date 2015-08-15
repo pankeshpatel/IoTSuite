@@ -5,16 +5,16 @@ devices:
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources :TemperatureSensor;
-        
+        resources :BadgeReader;
+       
 	D2:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources : ;
-       
+        resources :ProfileDB;
+        
 	D3:
         region :
             Building : 15;
@@ -22,14 +22,24 @@ devices:
             Room : 15110;
         type: JavaSE;    
         resources :  ;
-       	
+      	
    
-    D4:
+   D4:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources : Heater;
-       
-    	 
+        resources : ;
+       	
+   
+   D5:
+        region :
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
+        type: JavaSE;    
+        resources :Heater;
+        
+        
+     

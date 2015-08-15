@@ -110,6 +110,13 @@ public class MappingAlgoCompiler {
 							Set<Device> tempDeviceSet = deviceListByRegion
 									.get(tempkey[i]);
 							Device selectedDevice = pickOneFrom(tempDeviceSet);
+							
+						/*	if(selectedDevice.getAbilities().equals(tempDeviceSet))
+							{
+								
+								finalMapping.get(selectedDevice).add(
+										tempSoftWareComponent);
+							}*/
 
 							// if
 							// (selectedDevice.getMobileFlag().equals("true")) {

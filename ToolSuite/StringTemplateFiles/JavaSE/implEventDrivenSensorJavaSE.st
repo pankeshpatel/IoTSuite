@@ -4,16 +4,18 @@ import framework.*;
 
 
 
+
+
+
 public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 
+	
    
-   public JavaSE$SensorDriver.name$() {
+   /*public JavaSE$SensorDriver.name$() { 
   
   
-  
-  }
-
-
+  }*/
+	
   
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
    
@@ -21,10 +23,13 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
    public  $generatedInfo.type.name$ get$generatedInfo.name; format="avoidCapital"$(){
 		   return null;
    }*/
+	  
+	  
       
    @Override
    public void get$generatedInfo.name; format="avoidCapital"$(Listener$generatedInfo.name$ handler){
-   
+	// continueFlag = true;
+      
    }   
       
 }; separator="\n"$
