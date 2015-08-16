@@ -50,10 +50,35 @@ public class Main {
 				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
-				vocParser.vocabSpec();
-							
-				GenFiller.copyDeviceDrivers();
+				vocParser.vocabSpec();	
 				
+				// User Interaction
+				
+			/*	ANTLRFileStream interactionStream = new ANTLRFileStream(GlobalVariable.interactionSpec);
+				InteractionSpecLexer  interactionLexer = new InteractionSpecLexer(interactionStream);
+				CommonTokenStream interactionTokens = new CommonTokenStream(interactionLexer);
+                InteractionSpecParser  interactionParser = new InteractionSpecParser(interactionTokens);
+                interactionParser.interactionSpec();*/				
+			    GenFiller.copyDeviceDrivers();		
+			
+			}
+			
+			if (GlobalVariable.activity
+					.equals(GlobalVariable.ACTIVITY_GENERATE_USERINTERACTION)) {
+				
+				ANTLRFileStream vocStream = new ANTLRFileStream(
+						GlobalVariable.vocabSpec);
+				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+				vocParser.vocabSpec();
+				
+				ANTLRFileStream interactionStream = new ANTLRFileStream(GlobalVariable.interactionSpec);
+				InteractionSpecLexer  interactionLexer = new InteractionSpecLexer(interactionStream);
+				CommonTokenStream interactionTokens = new CommonTokenStream(interactionLexer);
+                InteractionSpecParser  interactionParser = new InteractionSpecParser(interactionTokens);
+                interactionParser.interactionSpec();				
+			    GenFiller.copyDeviceDrivers();		
 			
 			}
 

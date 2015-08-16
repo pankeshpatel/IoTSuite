@@ -12,10 +12,7 @@ import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.UserInterface;
 import iotsuite.semanticmodel.Information;
 import iotsuite.semanticmodel.Parameter;
-import iotsuite.semanticmodel.Widget;
-
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 public class UserInterfaceCompiler {
@@ -33,6 +30,7 @@ public class UserInterfaceCompiler {
 	// private Widget widget;
 
 	public UserInterfaceCompiler() {
+		
 
 	}
 
@@ -45,6 +43,7 @@ public class UserInterfaceCompiler {
 	}
 
 	public void setGUIName(String computationalServiceName) {
+		
 		this.GUIName = computationalServiceName;
 	}
 
@@ -74,7 +73,7 @@ public class UserInterfaceCompiler {
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 		if (GlobalVariable.activity
-				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
+				.equals(GlobalVariable.ACTIVITY_GENERATE_USERINTERACTION)) {
 
 			// For JavaSE code generation
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
