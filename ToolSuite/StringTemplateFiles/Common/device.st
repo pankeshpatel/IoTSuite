@@ -21,12 +21,13 @@ public class Startup implements DeviceStartup {
 	private static PubSubMiddleware myPubSub;
 	public static Object myContext = null;
 	public static String mobileFlag;
+	public static String protocol;
 
 private static void setUpNode(Device deviceInfo)	{	
 
 	
 	
-	myPubSub = (PubSubMiddleware) IoTSuiteFactory.getInstance("mqtt", setUpDeviceInfo(), myContext);
+	myPubSub = (PubSubMiddleware) IoTSuiteFactory.getInstance(deviceInfo.getProtocol(), setUpDeviceInfo(), myContext);
 
 	
 	
@@ -42,7 +43,7 @@ private static Device setUpDeviceInfo() {
 	 name = "$device.name$";
 	 softwarePlatform = "$device.type$";
 	 networkAddress =  "$device.networkAddress$";
-	
+	 protocol = "$device.Protocol$";
 		
 	$device.abilities:{ sc | abilities.add("$sc$"); }$ 
 	
@@ -53,7 +54,7 @@ private static Device setUpDeviceInfo() {
   
   $device.RegionLabels:{ region | regionLabels.add("$region$"); } $
 	
-	Device device = new Device(name, softwarePlatform, networkAddress, regionIDs, regionLabels , abilities, mobileFlag);
+	Device device = new Device(name, softwarePlatform, networkAddress, regionIDs, regionLabels , abilities, mobileFlag, protocol);
 	return device;    
 }
 

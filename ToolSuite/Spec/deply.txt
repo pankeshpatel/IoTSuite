@@ -1,19 +1,34 @@
-devices: 
-	D1:
+devices:	
+ D1:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
-        type: Android;    
-        resources : ProximitySensor;
-        
-    D2:
+        platform: JavaSE;    
+        resources :TemperatureSensor;   
+        protocol : mqtt;     
+	D2:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
-        type: JavaSE;    
-        resources : ;
-    
+        platform: JavaSE;    
+        resources : ; 
+        protocol : mqtt;        
+	D3:
+        region :
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
+        platform: JavaSE;    
+        resources :  ;  
+        protocol : mqtt;     	
    
-       
+    D4:
+        region :
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
+        platform: JavaSE;    
+        resources : Heater;
+        protocol : mqtt; 

@@ -1,27 +1,11 @@
 softwarecomponents:
     computationalService:
-             
-            
-            Proximity 
-            generate tempPreference:TempStruct;
-            consume  badgeDetected  from region-hops:0:Room;
-            consume  badgeDisappered from region-hops:0:Room;
-            request profile;
-            partition-per : Room;
-            
-            
-               		
-      		TempController
-      		consume tempPreference from region-hops:0:Room;
-            command Off() to region-hops:0:Room;
-            command SetTemp(setTemp) to region-hops:0:Room;
-      		partition-per : Room;
-      		
-      		
-      		
-             
-            
-            
-            
-            
-                     
+        RoomAvgTemp 
+          consume tempMeasurement from region-hops:0:Room;
+          generate roomAvgTempMeasurement:TempStruct;
+          partition-per : Room;     		
+        RoomController
+      	  consume roomAvgTempMeasurement from region-hops:0:Room;
+          command SetTemp(setTemp) to region-hops:0:Room;
+          command Off() to region-hops:0:Room;
+      	  partition-per : Room;

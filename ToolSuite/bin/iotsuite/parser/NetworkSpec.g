@@ -34,11 +34,14 @@ device_def:
    context.currentNetwork.setDeviceName($deviceName.text);
    }  
     'region' ':' (location_def)* 
-    'type' ':' (device_type)* ';'
+    'platform' ':' (device_type)* ';'
     'resources' ':' (abilities_def)?  ';'
-   // (mobileFlag_def)* ';'
+    'protocol' ':' (protocol_value)* ';' 
+   // (mobileFlag_def)* ';' 
     { context.currentNetwork.addDeviceObj();}
 ;
+  
+
 
 // Region Definition
 
@@ -66,7 +69,12 @@ abilities_def :
 mobileFlag_def :
    'mobile' ':' MOBILEFLAG 
    {context.currentNetwork.setMobileFlag($MOBILEFLAG.text);}
-; 
+;
+
+protocol_value:
+  ID
+  {context.currentNetwork.setProtocol($ID.text);}
+;  
 
 
 //networkAddress_def :
