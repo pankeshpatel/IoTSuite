@@ -16,8 +16,9 @@ public class Android$SensorDriver.name$ implements I$SensorDriver.name$,
 $SensorDriver.name$Keys, ISensorListener  {
 	
 	private PubSubsSensingFramework pubSubSensingFramework = null;
-	private static int  SAMPLE_PERIOD = 1000;
-	private static  int SAMPLE_DURATION = 10000;
+	//TODO : Device developer will configure values  here.
+	private static int  SAMPLE_PERIOD = 0;
+	private static  int SAMPLE_DURATION = 0;
 	private static int  duration=0;
 	private static JsonObject $SensorDriver.name$Data = new JsonObject();
 	

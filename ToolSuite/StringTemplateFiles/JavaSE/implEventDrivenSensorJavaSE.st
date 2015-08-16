@@ -10,9 +10,16 @@ import framework.*;
 public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 
 	// TODO : Developer will configure the following appropriately.
-			private boolean badgeDetectedCondition = false;
-			private boolean badgeDisappearedCondition = false;
-   
+	
+	 $SensorDriver.allGeneratedInfo:{ generatedInfo | 
+	  private boolean $generatedInfo.name; format="avoidCapital"$Condition = false;    
+	     
+	}; separator="\n"$
+	
+	
+	
+			
+  
    /*public JavaSE$SensorDriver.name$() { 
   
   
@@ -30,7 +37,6 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
       
    @Override
    public void get$generatedInfo.name; format="avoidCapital"$(Listener$generatedInfo.name$ handler){
-	// continueFlag = true;
       
    }   
       

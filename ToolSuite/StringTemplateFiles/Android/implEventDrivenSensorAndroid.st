@@ -15,7 +15,11 @@ public class Android$SensorDriver.name$ implements I$SensorDriver.name$,
 $SensorDriver.name$Keys, ISensorListener  {
 	
 	private PubSubsSensingFramework pubSubSensingFramework = null;
-	private static boolean proximityCondition=true;
+	
+	$SensorDriver.allGeneratedInfo:{ generatedInfo | 
+		   	   
+      private static boolean $generatedInfo.name; format="avoidCapital"$Condition= false;
+	};separator="\n"$
 	private static JsonObject $SensorDriver.name$Data = new JsonObject();
 	
 	
@@ -75,15 +79,6 @@ $SensorDriver.name$Keys, ISensorListener  {
     	// Sample code for reference.
 		//listener.onNewtempMeasurement(new TempStruct(Double.parseDouble(dataEvent.get(DISTANCE).toString()), "C"));
 		$SensorDriver.name$Data = dataEvent;
-    	proximityCondition=(Double.parseDouble(dataEvent.get(DISTANCE).toString()) >1);
-    	System.out.println("Proximity Condition"+proximityCondition);
-    	if(proximityCondition)
-    	{
-    		listenerproximityMeasurement.onNewproximityMeasurement(new Proximitystruct(Double.parseDouble(dataEvent.get(DISTANCE).toString())));
-    	}
-    	else{
-    		System.out.println("Dont Send data");
-    	}
     	
     }
 
