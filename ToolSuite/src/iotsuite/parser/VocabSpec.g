@@ -69,7 +69,8 @@ structField_def:
 abilities_def : 
   // 'periodicsensors' ':'   (sensor_def)+
   ('sensors' ':'   sensor_def)+
-  'actuators' ':' (actuator_def)+
+ // 'actuators' ':' (actuator_def)+
+   ('actuators' ':' actuator_def)*
   ('storages'  ':' ss_def)*
   ('interactions' ':' (gui_def)+ )*     
 ;   
@@ -126,7 +127,8 @@ sensorperiodicMeasurement_def:
 
 
 sensoreventMeasurement_def: 
-('onCondition' ID ',' ID)*
+//('onCondition' ID ',' ID)*
+('onCondition' (ID |',' ID)*)*
 
 ;
 

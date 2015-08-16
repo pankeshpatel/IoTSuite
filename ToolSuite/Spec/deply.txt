@@ -4,38 +4,16 @@ devices:
             Building : 15;
             Floor : 1511;
             Room : 15110;
-        type: JavaSE;    
-        resources : BadgeReader;
-    
+        type: Android;    
+        resources : ProximitySensor;
+        
     D2:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources : ProfileDB ;
-     	
-	D3:
-        region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
-        type: JavaSE;    
-        resources :  ;
-      
-	D4:
-        region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
-        type: JavaSE;    
-        resources :  ;
-       
-	D5:
-        region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
-        type: JavaSE;    
-        resources : Heater;
+        resources : ;
+    
+   
        

@@ -3,24 +3,16 @@ regions:
     Floor: Integer;
     Room: Integer;
 structs:                 
-    BadgeStruct    
-        badgeID: String;
-        badgeEvent:String;   
-    TempStruct            
-        tempValue: double;
-        unitOfMeasurement: String;  
+    
+    Proximitystruct            
+        proximityvalue: double;
+          
+        
 resources:   
     sensors:   
-    eventdriven:                     
-        BadgeReader                
-            generate badgeDetected: BadgeStruct;
-			generate badgeDisappeared: BadgeStruct;	 
-			onCondition badgeDetectedCondition, badgeDisappearedCondition; 
+    eventdriven:	
+    ProximitySensor
+	  generate proximityMeasurement : Proximitystruct;
+	  onCondition proximityCondition;	
 			       
-    actuators:                   
-        Heater
-        	action Off(); 
-            action SetTemp(setTemp: TempStruct);			                      
-    storages:       
-        ProfileDB   
-            generate  profile: TempStruct accessed-by badgeID: String;
+    

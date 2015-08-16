@@ -95,7 +95,7 @@ public class SensorCompiler {
 				generateAndroidSensorFactory_SensorCompiler();
 
 				// Sensor's Android Implementation
-				generateSensorAndroid_SensorCompiler();
+				generateSensorAndroid_PeriodicSensorCompiler();
 				// generateSensorAndroidService_SensorCompiler();
 			}
 
@@ -148,7 +148,7 @@ public class SensorCompiler {
 				generateAndroidSensorFactory_SensorCompiler();
 
 				// Sensor's Android Implementation
-				generateSensorAndroid_SensorCompiler();
+				generateSensorAndroid_EventDrivenSensorCompiler();
 				// generateSensorAndroidService_SensorCompiler();
 			}
 
@@ -240,10 +240,19 @@ public class SensorCompiler {
 	}
 */
 	// Sensor's Android Implementation
-	private void generateSensorAndroid_SensorCompiler() {
+	private void generateSensorAndroid_PeriodicSensorCompiler() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorImplFactory
-				.generateAndroidSensorImpl(sensorDriver);
+				.generateAndroidPeriodicSensorImpl(sensorDriver);
+		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
+		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
+	}
+	
+	
+	private void generateSensorAndroid_EventDrivenSensorCompiler() {
+		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
+		CompilationUnit generateCU = generateSensorImplFactory
+				.generateAndroidEventDrivenSensorImpl(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}

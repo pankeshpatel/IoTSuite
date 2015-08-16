@@ -168,10 +168,21 @@ public class JavaFrameworkFromST {
 				templateOfGUIDriver, "AndroidFactory", "gui", guiDriver);
 	}
 
-	// Android Sensor
-	public CompilationUnit generateAndroidSensorImpl(Sensor sensorDriver) {
+	// Android Periodic Sensor
+	public CompilationUnit generateAndroidPeriodicSensorImpl(Sensor sensorDriver) {
 		StringTemplate templateOfSensorDriver = group
-				.getInstanceOf("Android/implSensorAndroid");
+				.getInstanceOf("Android/implPeriodicSensorAndroid");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
+		return new CompilationUnit(GlobalVariable.ANDROID_ENABLED_DEVICES
+				+ sensorDriver.getName() + ".java", templateOfSensorDriver,
+				"AndroidSensorImpl", "sensor", sensorDriver);
+	}
+	
+	
+	//Android Event Driven Sensor
+	public CompilationUnit generateAndroidEventDrivenSensorImpl(Sensor sensorDriver) {
+		StringTemplate templateOfSensorDriver = group
+				.getInstanceOf("Android/implEventDrivenSensorAndroid");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit(GlobalVariable.ANDROID_ENABLED_DEVICES
 				+ sensorDriver.getName() + ".java", templateOfSensorDriver,
