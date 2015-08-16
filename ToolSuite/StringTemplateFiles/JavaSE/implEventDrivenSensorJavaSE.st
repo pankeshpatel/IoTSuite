@@ -9,7 +9,9 @@ import framework.*;
 
 public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 
-	
+	// TODO : Developer will configure the following appropriately.
+			private boolean badgeDetectedCondition = false;
+			private boolean badgeDisappearedCondition = false;
    
    /*public JavaSE$SensorDriver.name$() { 
   
