@@ -1,20 +1,20 @@
-devices: 	
- D1:
+devices: 
+	D1:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources :BadgeReader;
-       
-	D2:
+        resources : BadgeReader;
+    
+    D2:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources :ProfileDB;
-        
+        resources : ProfileDB ;
+     	
 	D3:
         region :
             Building : 15;
@@ -22,24 +22,20 @@ devices:
             Room : 15110;
         type: JavaSE;    
         resources :  ;
-      	
-   
-   D4:
+      
+	D4:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources : ;
-       	
-   
-   D5:
+        resources :  ;
+       
+	D5:
         region :
             Building : 15;
             Floor : 1511;
             Room : 15110;
         type: JavaSE;    
-        resources :Heater;
-        
-        
-     
+        resources : Heater;
+       

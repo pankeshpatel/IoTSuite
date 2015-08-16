@@ -1,31 +1,26 @@
-regions :
-	Building : Integer ;
-	Floor :  Integer;
-	Room : Integer;
-structs:	    
-    TempStruct
-        tempValue : double;
-        unitOfMeasurement : String;		
-   	  BadgeStruct
-   	    badgeID:String;
-   	    badgEvent:String;
-   	    
-resources:
-    sensors:
-    eventdriven:
-        BadgeSensor		
-            generate badgeDetected: BadgeStruct; 
-			generate badgeDisappered: BadgeStruct;
-			onCondition badgeDetectedCondition,badgeDisappearedCondition;
-			
-              
-    actuators:
-      Heater			
-			action Off();
-			action SetTemp(setTemp:TempStruct);
-	storages:
-		ProfileDB
-			generate profile:TempStruct accessed-by badgeID:String;
-		   
-		
-			
+regions: 
+    Building: Integer;
+    Floor: Integer;
+    Room: Integer;
+structs:                 
+    BadgeStruct    
+        badgeID: String;
+        badgeEvent:String;   
+    TempStruct            
+        tempValue: double;
+        unitOfMeasurement: String;  
+resources:   
+    sensors:   
+    eventdriven:                     
+        BadgeReader                
+            generate badgeDetected: BadgeStruct;
+			generate badgeDisappeared: BadgeStruct;	 
+			onCondition badgeDetectedCondition, badgeDisappearedCondition; 
+			       
+    actuators:                   
+        Heater
+        	action Off(); 
+            action SetTemp(setTemp: TempStruct);			                      
+    storages:       
+        ProfileDB   
+            generate  profile: TempStruct accessed-by badgeID: String;
