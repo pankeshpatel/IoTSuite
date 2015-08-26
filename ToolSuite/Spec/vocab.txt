@@ -13,12 +13,8 @@ resources:
      periodicsensors:
         TemperatureSensor
             generate  tempMeasurement : TempStruct;
-             sample period SAMPLEPERIOD for SAMPLEDURATION;     	
-              
+             sample period SAMPLEPERIOD for SAMPLEDURATION;              
               
     actuators:
        Heater
-			action SetTemp(setTemp:TempStruct);
-		
-		
-			
+			action SetTemp(setTemp:TempStruct);		

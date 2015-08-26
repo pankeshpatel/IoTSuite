@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-08-25 09:19:20
+=======
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-08-16 19:36:51
+>>>>>>> 49d43d0e707fb9ee09e08b49fa217722e374bb14
 
 package iotsuite.parser;
 import iotsuite.compiler.*; 
