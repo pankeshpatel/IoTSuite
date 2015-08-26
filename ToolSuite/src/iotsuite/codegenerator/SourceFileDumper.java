@@ -437,7 +437,6 @@ public class SourceFileDumper {
 		
 		
 		else if (unit.getFileCategory().equals("JavaSEFactory")) {
-			System.out.println("I am  in  JavaSEComputationalFactory");
 			new File(GlobalVariable.templatePath + "ApplicationLogic"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.factoryDirPath).mkdirs();
@@ -457,14 +456,26 @@ public class SourceFileDumper {
 		
 		 
 				
-			else if (unit.getFileCategory().equals("JavaSEComputationalImpl")) {
-				new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+			else if (unit.getFileCategory().equals("JavaSEImpl")) {
+				
+				
+				new File(GlobalVariable.templatePath + "ApplicationLogic"
+						+ GlobalVariable.outputDirPath
+						+ GlobalVariable.deviceImplDirPath).mkdirs();
+				file = new File(GlobalVariable.templatePath + "ApplicationLogic"
+						+ GlobalVariable.outputDirPath
+						+ GlobalVariable.deviceImplDirPath + "/"
+						+ unit.getFileNameToGenerate());
+				
+				
+				
+				/*new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 						+ GlobalVariable.outputDirPath
 						+ GlobalVariable.deviceImplDirPath).mkdirs();
 				file = new File(GlobalVariable.templatePath + deviceType
 						+ "DeviceDrivers" + GlobalVariable.outputDirPath
 						+ GlobalVariable.deviceImplDirPath + "/"
-						+ unit.getFileNameToGenerate());
+						+ unit.getFileNameToGenerate());*/
 			}
 		else {
 			

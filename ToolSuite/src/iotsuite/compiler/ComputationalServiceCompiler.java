@@ -165,7 +165,7 @@ public class ComputationalServiceCompiler {
 		generateComputationalServiceListener_ComputationalServiceCompiler(computationalService.getAllConsumedInfo().get(i));
 		}
 		// Impl
-		// generateImplComputationalServiceLogic_ComputationalServiceCompiler();
+		 generateImplComputationalService_ComputationalServiceCompiler();
 	}
 
 	public void generateComputationalServiceInteraction_ComputationalServiceCompiler() {
@@ -205,7 +205,6 @@ public class ComputationalServiceCompiler {
 	}
 
 	public void generateComputationalServiceListener_ComputationalServiceCompiler(Information infoConsumeInfo) {
-		System.out.println("I am in Computational Service Listener......");
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
 				.generateComputationalServiceListener(infoConsumeInfo);
@@ -213,7 +212,7 @@ public class ComputationalServiceCompiler {
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
 
-	public void generateImplComputationalServiceLogic_ComputationalServiceCompiler() {
+	public void generateImplComputationalService_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
 				.generateImplComputationalService(computationalService);

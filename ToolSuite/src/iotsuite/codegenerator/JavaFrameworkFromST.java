@@ -90,7 +90,7 @@ public class JavaFrameworkFromST {
 	public CompilationUnit generateComputationalServiceListener(
 			Information infoConsumeInfo) {
 
-		System.out.println("I am in JavaFrameFromST in ComputationalService Listener....."+infoConsumeInfo.getName());
+	
 		StringTemplate templateOfComputationalService = group
 				.getInstanceOf("Common/listenerComputational");
 		templateOfComputationalService.setAttribute("INFO", infoConsumeInfo);
@@ -120,15 +120,18 @@ public class JavaFrameworkFromST {
 		
 	}
 
+	//For Computational  DeviceImpl
 	public CompilationUnit generateImplComputationalService(
 			ComputationalService computationalService) {
+
+		
 		StringTemplate templateOfComputationalService = group
 				.getInstanceOf("JavaSE/implComputationalJavaSE");
 		templateOfComputationalService.setAttribute("CS", computationalService);
-		return new CompilationUnit(GlobalVariable.JAVASE_ENABLED_DEVICES
-				+ computationalService.getName() + ".java",
-				templateOfComputationalService, "JavaSEComputationalImpl",
-				"Future", computationalService);
+		return new CompilationUnit("JavaSE" + computationalService.getName()
+				+ ".java", templateOfComputationalService, "JavaSEImpl",
+				"Computational", computationalService);
+		
 	}
 
 	// JavaSE Sensor Factory
