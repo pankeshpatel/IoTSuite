@@ -2,28 +2,23 @@ regions :
 	Building : Integer ;
 	Floor :  Integer;
 	Room : Integer;
+	
 structs:	    
     TempStruct
         tempValue : double;
         unitOfMeasurement : String;		
-   	  BadgeStruct
-   	    badgeID:String;
-   	    badgEvent:String;
-   	    
+        
 resources:
-    sensors:
-    eventdriven:
-        ProximitySensor
-            generate proximityvalue: TempStruct; 
-			onCondition proximityCondition;
+	sensors:
+     periodicsensors:
+        TemperatureSensor
+            generate  tempMeasurement : TempStruct;
+             sample period SAMPLEPERIOD for SAMPLEDURATION;     	
+              
               
     actuators:
-      Heater			
-			action Off();
+       Heater
 			action SetTemp(setTemp:TempStruct);
-	storages:
-		ProfileDB
-			generate profile:TempStruct accessed-by badgeID:String;
-		   
+		
 		
 			

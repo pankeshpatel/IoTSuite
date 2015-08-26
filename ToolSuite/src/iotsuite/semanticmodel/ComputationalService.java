@@ -30,6 +30,8 @@ public class ComputationalService extends SoftwareComponent<Information> {
 		this.actions = actions;
 	}
 
+	
+
 	public Set<Action> getActions() {
 		return actions;
 	}

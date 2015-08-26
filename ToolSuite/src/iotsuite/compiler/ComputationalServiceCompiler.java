@@ -10,13 +10,17 @@ import iotsuite.semanticmodel.DataAccess;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Information;
 import iotsuite.semanticmodel.Parameter;
+import iotsuite.semanticmodel.Sensor;
+import iotsuite.semanticmodel.SensorMeasurement;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class ComputationalServiceCompiler {
 
 	private ComputationalService computationalService;
+
 	private Set<Information> generatedInfo = new HashSet<Information>();
 	private Set<Information> consumedInfo = new HashSet<Information>();
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
@@ -43,9 +47,6 @@ public class ComputationalServiceCompiler {
 				getDatafromSymblTable(parameterName)));
 	}
 
-	public ComputationalServiceCompiler() {
-	}
-
 	public String getComputationalServiceName() {
 		return computationalServiceName;
 	}
@@ -61,10 +62,18 @@ public class ComputationalServiceCompiler {
 		 * getAttributeSet(), getGeneratedInfo(), getConsumedInfo(),
 		 * getDataAccessList(), getActionList(), getPartitionAttributeVal());
 		 */
+		/*
+		 * computationalService = new ComputationalService(
+		 * getComputationalServiceName(), getGeneratedInfo(),getConsumedInfo(),
+		 * getConsumedInfo(), getDataAccessList(), getActionList(),
+		 * getPartitionAttributeVal());
+		 */
+
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
 				getPartitionAttributeVal());
+
 	}
 
 	/*
@@ -138,13 +147,32 @@ public class ComputationalServiceCompiler {
 	public void generateComputationalServiceCode() {
 		generateComputationalServiceInteraction_ComputationalServiceCompiler();
 		generateComputationalServiceLogic_ComputationalServiceCompiler();
+		generateComputationalServiceFactory_ComputationalServiceCompiler();
+
+		// Interface
+		generateComputationalServiceInterface_ComputationalServiceCompiler();
+		// Listener
+
+		// generateSensorListener_SensorCompiler(sensorDriver
+		// .getAllGeneratedInfo().get(i));
+		/*for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
+			generateSensorListener_SensorCompiler(sensorDriver
+					.getAllGeneratedInfo().get(i));
+		}*/
+		
+		for(int i=0;i<computationalService.getAllConsumedInfo().size();i++)
+		{
+		generateComputationalServiceListener_ComputationalServiceCompiler(computationalService.getAllConsumedInfo().get(i));
+		}
+		// Impl
+		// generateImplComputationalServiceLogic_ComputationalServiceCompiler();
 	}
 
 	public void generateComputationalServiceInteraction_ComputationalServiceCompiler() {
 
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
-				.generateComputationalServiceInteraction(computationalService);
+				.generateComputationalServiceInteraction(computationalService); 
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 
@@ -154,6 +182,41 @@ public class ComputationalServiceCompiler {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
 				.generateComputationalServiceLogic(computationalService);
+		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
+		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
+	}
+
+	public void generateComputationalServiceFactory_ComputationalServiceCompiler() {
+
+		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedComputationalService
+				.generateComputationalServiceFactory(computationalService);
+		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
+		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
+	}
+
+	public void generateComputationalServiceInterface_ComputationalServiceCompiler() {
+
+		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedComputationalService
+				.generateComputationalServiceInterface(computationalService);
+		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
+		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
+	}
+
+	public void generateComputationalServiceListener_ComputationalServiceCompiler(Information infoConsumeInfo) {
+		System.out.println("I am in Computational Service Listener......");
+		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedComputationalService
+				.generateComputationalServiceListener(infoConsumeInfo);
+		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
+		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
+	}
+
+	public void generateImplComputationalServiceLogic_ComputationalServiceCompiler() {
+		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedComputationalService
+				.generateImplComputationalService(computationalService);
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}

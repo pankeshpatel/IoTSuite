@@ -19,6 +19,7 @@ public class DeviceCompiler {
 	private String deviceName;
 	private String softwarePlatform;
 	private List<Device> deviceList = new ArrayList<Device>();
+	private String myProtocol;
 
 	private String myMobileFlag;
 
@@ -28,9 +29,18 @@ public class DeviceCompiler {
 	public void addDeviceObj() {
 		device = new Device(getDeviceName(), getDeviceType(),
 				getNetworkAddress(), getRegionValues(), getRegionLabel(),
-				deviceAbilities, getMobileFlag());
+				deviceAbilities, getMobileFlag(), getProtocol());
 		SymbolTable.addDeviceinSymblTable(device);
 	}
+	
+	public void setProtocol(String protocol){
+		this.myProtocol = protocol;
+	}
+	
+	public String getProtocol(){
+		return myProtocol;
+	}
+	
 
 	public void setMobileFlag(String mobileFlag) {
 		this.myMobileFlag = mobileFlag;

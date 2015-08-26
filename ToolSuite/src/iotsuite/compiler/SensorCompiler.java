@@ -13,8 +13,8 @@ import java.util.Set;
 
 public class SensorCompiler {
 
+	//private Sensor sensorDriver;
 	private Sensor sensorDriver;
-
 	private Set<SensorMeasurement> generatedInfo = new HashSet<SensorMeasurement>();
 
 	public SensorCompiler() {
