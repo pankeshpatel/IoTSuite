@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g 2015-08-24 19:19:52
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g 2015-08-27 19:18:15
    
   package iotsuite.parser; 
    
@@ -33,6 +33,7 @@ public class ArchSpecLexer extends Lexer {
 	public static final int T__26=26;
 	public static final int T__27=27;
 	public static final int T__28=28;
+	public static final int T__29=29;
 	public static final int CAPITALIZED_ID=4;
 	public static final int ID=5;
 	public static final int INT=6;
@@ -159,10 +160,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:17:7: ( 'Integer' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:17:9: 'Integer'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:17:7: ( 'COMPUTE(' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:17:9: 'COMPUTE('
 			{
-			match("Integer"); 
+			match("COMPUTE("); 
 
 			}
 
@@ -180,10 +181,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__14;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:18:7: ( 'String' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:18:9: 'String'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:18:7: ( 'Integer' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:18:9: 'Integer'
 			{
-			match("String"); 
+			match("Integer"); 
 
 			}
 
@@ -201,10 +202,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:19:7: ( 'boolean' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:19:9: 'boolean'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:19:7: ( 'String' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:19:9: 'String'
 			{
-			match("boolean"); 
+			match("String"); 
 
 			}
 
@@ -222,10 +223,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:20:7: ( 'command' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:20:9: 'command'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:20:7: ( 'boolean' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:20:9: 'boolean'
 			{
-			match("command"); 
+			match("boolean"); 
 
 			}
 
@@ -243,10 +244,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__17;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:21:7: ( 'computationalService' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:21:9: 'computationalService'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:21:7: ( 'command' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:21:9: 'command'
 			{
-			match("computationalService"); 
+			match("command"); 
 
 			}
 
@@ -264,10 +265,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:22:7: ( 'consume' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:22:9: 'consume'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:22:7: ( 'computationalService' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:22:9: 'computationalService'
 			{
-			match("consume"); 
+			match("computationalService"); 
 
 			}
 
@@ -285,10 +286,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__19;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:23:7: ( 'double' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:23:9: 'double'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:23:7: ( 'consume' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:23:9: 'consume'
 			{
-			match("double"); 
+			match("consume"); 
 
 			}
 
@@ -306,10 +307,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:24:7: ( 'from' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:24:9: 'from'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:24:7: ( 'double' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:24:9: 'double'
 			{
-			match("from"); 
+			match("double"); 
 
 			}
 
@@ -327,10 +328,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:25:7: ( 'generate' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:25:9: 'generate'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:25:7: ( 'from' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:25:9: 'from'
 			{
-			match("generate"); 
+			match("from"); 
 
 			}
 
@@ -348,10 +349,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:26:7: ( 'long' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:26:9: 'long'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:26:7: ( 'generate' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:26:9: 'generate'
 			{
-			match("long"); 
+			match("generate"); 
 
 			}
 
@@ -369,10 +370,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:27:7: ( 'partition-per' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:27:9: 'partition-per'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:27:7: ( 'long' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:27:9: 'long'
 			{
-			match("partition-per"); 
+			match("long"); 
 
 			}
 
@@ -390,10 +391,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:28:7: ( 'region-hops' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:28:9: 'region-hops'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:28:7: ( 'partition-per' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:28:9: 'partition-per'
 			{
-			match("region-hops"); 
+			match("partition-per"); 
 
 			}
 
@@ -411,10 +412,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__25;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:29:7: ( 'request' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:29:9: 'request'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:29:7: ( 'region-hops' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:29:9: 'region-hops'
 			{
-			match("request"); 
+			match("region-hops"); 
 
 			}
 
@@ -432,10 +433,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:30:7: ( 'softwarecomponents' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:30:9: 'softwarecomponents'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:30:7: ( 'request' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:30:9: 'request'
 			{
-			match("softwarecomponents"); 
+			match("request"); 
 
 			}
 
@@ -453,10 +454,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__27;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:31:7: ( 'structs' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:31:9: 'structs'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:31:7: ( 'softwarecomponents' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:31:9: 'softwarecomponents'
 			{
-			match("structs"); 
+			match("softwarecomponents"); 
 
 			}
 
@@ -474,10 +475,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__28;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:32:7: ( 'to' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:32:9: 'to'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:32:7: ( 'structs' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:32:9: 'structs'
 			{
-			match("to"); 
+			match("structs"); 
 
 			}
 
@@ -490,16 +491,37 @@ public class ArchSpecLexer extends Lexer {
 	}
 	// $ANTLR end "T__28"
 
+	// $ANTLR start "T__29"
+	public final void mT__29() throws RecognitionException {
+		try {
+			int _type = T__29;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:33:7: ( 'to' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:33:9: 'to'
+			{
+			match("to"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__29"
+
 	// $ANTLR start "ID"
 	public final void mID() throws RecognitionException {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:134:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:134:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:139:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:139:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )*
 			{
 			matchRange('a','z'); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:134:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:139:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -544,11 +566,11 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:137:5: ( '0' .. '9' ( '0' .. '9' )* )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:137:7: '0' .. '9' ( '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:142:5: ( '0' .. '9' ( '0' .. '9' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:142:7: '0' .. '9' ( '0' .. '9' )*
 			{
 			matchRange('0','9'); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:137:15: ( '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:142:15: ( '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -593,11 +615,11 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = CAPITALIZED_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:139:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:139:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:144:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:144:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
 			{
 			matchRange('A','Z'); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:139:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:144:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -642,10 +664,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:141:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:141:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:146:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:146:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:141:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:146:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -692,8 +714,8 @@ public class ArchSpecLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | ID | INT | CAPITALIZED_ID | WS )
-		int alt5=25;
+		// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | ID | INT | CAPITALIZED_ID | WS )
+		int alt5=26;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
@@ -844,28 +866,35 @@ public class ArchSpecLexer extends Lexer {
 				}
 				break;
 			case 22 :
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:134: ID
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:134: T__29
+				{
+				mT__29(); 
+
+				}
+				break;
+			case 23 :
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:140: ID
 				{
 				mID(); 
 
 				}
 				break;
-			case 23 :
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:137: INT
+			case 24 :
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:143: INT
 				{
 				mINT(); 
 
 				}
 				break;
-			case 24 :
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:141: CAPITALIZED_ID
+			case 25 :
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:147: CAPITALIZED_ID
 				{
 				mCAPITALIZED_ID(); 
 
 				}
 				break;
-			case 25 :
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:156: WS
+			case 26 :
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:162: WS
 				{
 				mWS(); 
 
@@ -878,56 +907,57 @@ public class ArchSpecLexer extends Lexer {
 
 	protected DFA5 dfa5 = new DFA5(this);
 	static final String DFA5_eotS =
-		"\5\uffff\3\24\12\22\4\uffff\3\24\12\22\1\63\3\24\14\22\1\uffff\3\24\5"+
-		"\22\1\114\1\22\1\116\5\22\3\24\5\22\1\uffff\1\22\1\uffff\5\22\2\24\1\144"+
-		"\4\22\1\151\6\22\1\160\1\161\1\uffff\1\162\1\163\1\22\1\165\1\uffff\2"+
-		"\22\1\uffff\1\170\1\22\1\172\4\uffff\1\22\1\uffff\1\174\1\22\1\uffff\1"+
-		"\22\1\uffff\1\22\1\uffff\3\22\1\uffff\20\22\1\u0093\1\22\1\uffff\1\u0095"+
-		"\1\uffff";
+		"\5\uffff\4\25\12\23\4\uffff\4\25\12\23\1\66\4\25\14\23\1\uffff\4\25\5"+
+		"\23\1\121\1\23\1\123\5\23\4\25\5\23\1\uffff\1\23\1\uffff\5\23\3\25\1\153"+
+		"\4\23\1\160\6\23\1\167\1\25\1\171\1\uffff\1\172\1\173\1\23\1\175\1\uffff"+
+		"\2\23\1\uffff\1\u0080\1\23\1\u0082\5\uffff\1\23\1\uffff\1\u0084\1\23\1"+
+		"\uffff\1\23\1\uffff\1\23\1\uffff\3\23\1\uffff\20\23\1\u009b\1\23\1\uffff"+
+		"\1\u009d\1\uffff";
 	static final String DFA5_eofS =
-		"\u0096\uffff";
+		"\u009e\uffff";
 	static final String DFA5_minS =
-		"\1\11\4\uffff\1\157\1\156\1\164\3\157\1\162\1\145\1\157\1\141\1\145\2"+
-		"\157\4\uffff\1\157\1\164\1\162\1\157\1\155\1\165\1\157\2\156\1\162\1\147"+
-		"\1\146\1\162\1\101\1\154\1\145\1\151\1\154\1\155\1\163\1\142\1\155\1\145"+
-		"\1\147\1\164\1\151\1\165\1\164\1\165\1\uffff\1\145\1\147\1\156\1\145\1"+
-		"\141\2\165\1\154\1\101\1\162\1\101\1\151\1\157\1\145\1\167\1\143\1\141"+
-		"\1\145\1\147\1\141\1\156\1\164\1\155\1\145\1\uffff\1\141\1\uffff\1\164"+
-		"\1\156\1\163\1\141\1\164\1\156\1\162\1\101\1\156\1\144\1\141\1\145\1\101"+
-		"\1\164\1\151\1\55\1\164\1\162\1\163\2\101\1\uffff\2\101\1\164\1\101\1"+
-		"\uffff\1\145\1\157\1\uffff\1\101\1\145\1\101\4\uffff\1\151\1\uffff\1\101"+
-		"\1\156\1\uffff\1\143\1\uffff\1\157\1\uffff\1\55\1\157\1\156\1\uffff\1"+
-		"\155\1\141\1\160\1\154\1\157\1\123\1\156\2\145\1\162\1\156\1\166\1\164"+
-		"\1\151\1\163\1\143\1\101\1\145\1\uffff\1\101\1\uffff";
+		"\1\11\4\uffff\1\157\1\117\1\156\1\164\3\157\1\162\1\145\1\157\1\141\1"+
+		"\145\2\157\4\uffff\1\157\1\115\1\164\1\162\1\157\1\155\1\165\1\157\2\156"+
+		"\1\162\1\147\1\146\1\162\1\101\1\154\1\120\1\145\1\151\1\154\1\155\1\163"+
+		"\1\142\1\155\1\145\1\147\1\164\1\151\1\165\1\164\1\165\1\uffff\1\145\1"+
+		"\125\1\147\1\156\1\145\1\141\2\165\1\154\1\101\1\162\1\101\1\151\1\157"+
+		"\1\145\1\167\1\143\1\141\1\124\1\145\1\147\1\141\1\156\1\164\1\155\1\145"+
+		"\1\uffff\1\141\1\uffff\1\164\1\156\1\163\1\141\1\164\1\156\1\105\1\162"+
+		"\1\101\1\156\1\144\1\141\1\145\1\101\1\164\1\151\1\55\1\164\1\162\1\163"+
+		"\1\101\1\50\1\101\1\uffff\2\101\1\164\1\101\1\uffff\1\145\1\157\1\uffff"+
+		"\1\101\1\145\1\101\5\uffff\1\151\1\uffff\1\101\1\156\1\uffff\1\143\1\uffff"+
+		"\1\157\1\uffff\1\55\1\157\1\156\1\uffff\1\155\1\141\1\160\1\154\1\157"+
+		"\1\123\1\156\2\145\1\162\1\156\1\166\1\164\1\151\1\163\1\143\1\101\1\145"+
+		"\1\uffff\1\101\1\uffff";
 	static final String DFA5_maxS =
-		"\1\172\4\uffff\1\157\1\156\1\164\3\157\1\162\1\145\1\157\1\141\1\145\1"+
-		"\164\1\157\4\uffff\1\157\1\164\1\162\1\157\1\156\1\165\1\157\2\156\1\162"+
-		"\1\161\1\146\1\162\1\172\1\154\1\145\1\151\1\154\1\160\1\163\1\142\1\155"+
-		"\1\145\1\147\1\164\1\151\1\165\1\164\1\165\1\uffff\1\145\1\147\1\156\1"+
-		"\145\1\141\2\165\1\154\1\172\1\162\1\172\1\151\1\157\1\145\1\167\1\143"+
-		"\1\141\1\145\1\147\1\141\1\156\1\164\1\155\1\145\1\uffff\1\141\1\uffff"+
-		"\1\164\1\156\1\163\1\141\1\164\1\156\1\162\1\172\1\156\1\144\1\141\1\145"+
-		"\1\172\1\164\1\151\1\55\1\164\1\162\1\163\2\172\1\uffff\2\172\1\164\1"+
-		"\172\1\uffff\1\145\1\157\1\uffff\1\172\1\145\1\172\4\uffff\1\151\1\uffff"+
-		"\1\172\1\156\1\uffff\1\143\1\uffff\1\157\1\uffff\1\55\1\157\1\156\1\uffff"+
-		"\1\155\1\141\1\160\1\154\1\157\1\123\1\156\2\145\1\162\1\156\1\166\1\164"+
-		"\1\151\1\163\1\143\1\172\1\145\1\uffff\1\172\1\uffff";
+		"\1\172\4\uffff\1\157\1\117\1\156\1\164\3\157\1\162\1\145\1\157\1\141\1"+
+		"\145\1\164\1\157\4\uffff\1\157\1\115\1\164\1\162\1\157\1\156\1\165\1\157"+
+		"\2\156\1\162\1\161\1\146\1\162\1\172\1\154\1\120\1\145\1\151\1\154\1\160"+
+		"\1\163\1\142\1\155\1\145\1\147\1\164\1\151\1\165\1\164\1\165\1\uffff\1"+
+		"\145\1\125\1\147\1\156\1\145\1\141\2\165\1\154\1\172\1\162\1\172\1\151"+
+		"\1\157\1\145\1\167\1\143\1\141\1\124\1\145\1\147\1\141\1\156\1\164\1\155"+
+		"\1\145\1\uffff\1\141\1\uffff\1\164\1\156\1\163\1\141\1\164\1\156\1\105"+
+		"\1\162\1\172\1\156\1\144\1\141\1\145\1\172\1\164\1\151\1\55\1\164\1\162"+
+		"\1\163\1\172\1\50\1\172\1\uffff\2\172\1\164\1\172\1\uffff\1\145\1\157"+
+		"\1\uffff\1\172\1\145\1\172\5\uffff\1\151\1\uffff\1\172\1\156\1\uffff\1"+
+		"\143\1\uffff\1\157\1\uffff\1\55\1\157\1\156\1\uffff\1\155\1\141\1\160"+
+		"\1\154\1\157\1\123\1\156\2\145\1\162\1\156\1\166\1\164\1\151\1\163\1\143"+
+		"\1\172\1\145\1\uffff\1\172\1\uffff";
 	static final String DFA5_acceptS =
-		"\1\uffff\1\1\1\2\1\3\1\4\15\uffff\1\26\1\27\1\30\1\31\35\uffff\1\25\30"+
-		"\uffff\1\15\1\uffff\1\17\25\uffff\1\7\4\uffff\1\14\2\uffff\1\21\3\uffff"+
-		"\1\5\1\6\1\10\1\11\1\uffff\1\13\2\uffff\1\22\1\uffff\1\24\1\uffff\1\16"+
-		"\3\uffff\1\20\22\uffff\1\23\1\uffff\1\12";
+		"\1\uffff\1\1\1\2\1\3\1\4\16\uffff\1\27\1\30\1\31\1\32\37\uffff\1\26\32"+
+		"\uffff\1\16\1\uffff\1\20\27\uffff\1\10\4\uffff\1\15\2\uffff\1\22\3\uffff"+
+		"\1\5\1\6\1\7\1\11\1\12\1\uffff\1\14\2\uffff\1\23\1\uffff\1\25\1\uffff"+
+		"\1\17\3\uffff\1\21\22\uffff\1\24\1\uffff\1\13";
 	static final String DFA5_specialS =
-		"\u0096\uffff}>";
+		"\u009e\uffff}>";
 	static final String[] DFA5_transitionS = {
-			"\2\25\1\uffff\2\25\22\uffff\1\25\7\uffff\1\1\1\2\6\uffff\12\23\1\3\1"+
-			"\4\5\uffff\1\24\1\5\6\24\1\6\11\24\1\7\7\24\6\uffff\1\22\1\10\1\11\1"+
-			"\12\1\22\1\13\1\14\4\22\1\15\3\22\1\16\1\22\1\17\1\20\1\21\6\22",
+			"\2\26\1\uffff\2\26\22\uffff\1\26\7\uffff\1\1\1\2\6\uffff\12\24\1\3\1"+
+			"\4\5\uffff\1\25\1\5\1\6\5\25\1\7\11\25\1\10\7\25\6\uffff\1\23\1\11\1"+
+			"\12\1\13\1\23\1\14\1\15\4\23\1\16\3\23\1\17\1\23\1\20\1\21\1\22\6\23",
 			"",
 			"",
 			"",
 			"",
-			"\1\26",
 			"\1\27",
 			"\1\30",
 			"\1\31",
@@ -938,58 +968,58 @@ public class ArchSpecLexer extends Lexer {
 			"\1\36",
 			"\1\37",
 			"\1\40",
-			"\1\41\4\uffff\1\42",
-			"\1\43",
-			"",
-			"",
-			"",
-			"",
-			"\1\44",
+			"\1\41",
+			"\1\42",
+			"\1\43\4\uffff\1\44",
 			"\1\45",
+			"",
+			"",
+			"",
+			"",
 			"\1\46",
 			"\1\47",
-			"\1\50\1\51",
+			"\1\50",
+			"\1\51",
 			"\1\52",
-			"\1\53",
-			"\1\54",
+			"\1\53\1\54",
 			"\1\55",
 			"\1\56",
-			"\1\57\11\uffff\1\60",
+			"\1\57",
+			"\1\60",
 			"\1\61",
-			"\1\62",
-			"\32\22\6\uffff\32\22",
+			"\1\62\11\uffff\1\63",
 			"\1\64",
 			"\1\65",
-			"\1\66",
+			"\32\23\6\uffff\32\23",
 			"\1\67",
-			"\1\70\2\uffff\1\71",
+			"\1\70",
+			"\1\71",
 			"\1\72",
 			"\1\73",
-			"\1\74",
-			"\1\75",
+			"\1\74\2\uffff\1\75",
 			"\1\76",
 			"\1\77",
 			"\1\100",
 			"\1\101",
 			"\1\102",
 			"\1\103",
-			"",
 			"\1\104",
 			"\1\105",
 			"\1\106",
 			"\1\107",
+			"",
 			"\1\110",
 			"\1\111",
 			"\1\112",
 			"\1\113",
-			"\32\22\6\uffff\32\22",
+			"\1\114",
 			"\1\115",
-			"\32\22\6\uffff\32\22",
+			"\1\116",
 			"\1\117",
 			"\1\120",
-			"\1\121",
+			"\32\23\6\uffff\32\23",
 			"\1\122",
-			"\1\123",
+			"\32\23\6\uffff\32\23",
 			"\1\124",
 			"\1\125",
 			"\1\126",
@@ -998,67 +1028,68 @@ public class ArchSpecLexer extends Lexer {
 			"\1\131",
 			"\1\132",
 			"\1\133",
-			"",
 			"\1\134",
-			"",
 			"\1\135",
 			"\1\136",
 			"\1\137",
 			"\1\140",
 			"\1\141",
+			"",
 			"\1\142",
+			"",
 			"\1\143",
-			"\32\24\6\uffff\32\24",
+			"\1\144",
 			"\1\145",
 			"\1\146",
 			"\1\147",
 			"\1\150",
-			"\32\22\6\uffff\32\22",
+			"\1\151",
 			"\1\152",
-			"\1\153",
+			"\32\25\6\uffff\32\25",
 			"\1\154",
 			"\1\155",
 			"\1\156",
 			"\1\157",
-			"\32\24\6\uffff\32\24",
-			"\32\24\6\uffff\32\24",
-			"",
-			"\32\22\6\uffff\32\22",
-			"\32\22\6\uffff\32\22",
+			"\32\23\6\uffff\32\23",
+			"\1\161",
+			"\1\162",
+			"\1\163",
 			"\1\164",
-			"\32\22\6\uffff\32\22",
-			"",
+			"\1\165",
 			"\1\166",
-			"\1\167",
+			"\32\25\6\uffff\32\25",
+			"\1\170",
+			"\32\25\6\uffff\32\25",
 			"",
-			"\32\22\6\uffff\32\22",
-			"\1\171",
-			"\32\22\6\uffff\32\22",
-			"",
-			"",
-			"",
-			"",
-			"\1\173",
-			"",
-			"\32\22\6\uffff\32\22",
-			"\1\175",
+			"\32\23\6\uffff\32\23",
+			"\32\23\6\uffff\32\23",
+			"\1\174",
+			"\32\23\6\uffff\32\23",
 			"",
 			"\1\176",
-			"",
 			"\1\177",
 			"",
-			"\1\u0080",
+			"\32\23\6\uffff\32\23",
 			"\1\u0081",
-			"\1\u0082",
+			"\32\23\6\uffff\32\23",
+			"",
+			"",
+			"",
+			"",
 			"",
 			"\1\u0083",
-			"\1\u0084",
+			"",
+			"\32\23\6\uffff\32\23",
 			"\1\u0085",
+			"",
 			"\1\u0086",
+			"",
 			"\1\u0087",
+			"",
 			"\1\u0088",
 			"\1\u0089",
 			"\1\u008a",
+			"",
 			"\1\u008b",
 			"\1\u008c",
 			"\1\u008d",
@@ -1067,10 +1098,18 @@ public class ArchSpecLexer extends Lexer {
 			"\1\u0090",
 			"\1\u0091",
 			"\1\u0092",
-			"\32\22\6\uffff\32\22",
+			"\1\u0093",
 			"\1\u0094",
+			"\1\u0095",
+			"\1\u0096",
+			"\1\u0097",
+			"\1\u0098",
+			"\1\u0099",
+			"\1\u009a",
+			"\32\23\6\uffff\32\23",
+			"\1\u009c",
 			"",
-			"\32\22\6\uffff\32\22",
+			"\32\23\6\uffff\32\23",
 			""
 	};
 
@@ -1105,7 +1144,7 @@ public class ArchSpecLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | ID | INT | CAPITALIZED_ID | WS );";
+			return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | ID | INT | CAPITALIZED_ID | WS );";
 		}
 	}
 

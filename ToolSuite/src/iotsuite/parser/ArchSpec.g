@@ -58,8 +58,9 @@ cs_def:
      context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);} 
     (csConsumeInfo_def ';')* 
     (csRequest_def  ';')*
+   (csOperation_def ';')*
      (csGeneratedInfo_def ';')*
-    (cntrlCommand_def ';')* 
+    (cntrlCommand_def ';')*   
     (partition_def ';')+  
     { 
      context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
@@ -70,8 +71,12 @@ cs_def:
    
     }
 ;
- 
- 
+  
+csOperation_def :
+    'COMPUTE(' CAPITALIZED_ID')'  
+    { context.currentComputationalService.addOperation($CAPITALIZED_ID.text);  }  
+;
+  
 csGeneratedInfo_def:
     'generate' lc_id ':'  CAPITALIZED_ID
     { context.currentComputationalService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text); 

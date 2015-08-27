@@ -10,14 +10,15 @@ import iotsuite.localmiddleware.PubSubsSensingFramework;
 public class JavaSE$CS.name$ implements I$CS.name$, IDataListener{
 
     $CS.allConsumedInfo:{ consumedInfo |
-  public static Listener$consumedInfo.name$ listener$consumedInfo.name$ = null;
+  public static Listener$consumedInfo.name$ listener$consumedInfo.name$ = null ;
    }; separator="\n"$ 
   private PubSubsSensingFramework pubSubSensingFramework = null;
 
 public JavaSE$CS.name$() {
     pubSubSensingFramework = PubSubsSensingFramework.getInstance();
-    pubSubSensingFramework.registerForSensorData(this, "AVG-RESULT");
-    ComputationalFactory.initializeCompuatioanlComponent("AVG-CALCULATE");
+    pubSubSensingFramework.registerForSensorData(this,  "$CS.operation$-RESULT");  
+    ComputationalFactory.initializeCompuatioanlComponent("$CS.operation$-CALCULATE");
+    
   } 
 
 

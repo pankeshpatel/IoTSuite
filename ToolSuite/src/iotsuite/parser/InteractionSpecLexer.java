@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-08-24 19:19:51
-=======
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-08-16 19:21:04
->>>>>>> 49d43d0e707fb9ee09e08b49fa217722e374bb14
 
   package iotsuite.parser; 
   

@@ -10,11 +10,7 @@ import iotsuite.semanticmodel.DataAccess;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Information;
 import iotsuite.semanticmodel.Parameter;
-import iotsuite.semanticmodel.Sensor;
-import iotsuite.semanticmodel.SensorMeasurement;
-
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class ComputationalServiceCompiler {
@@ -23,11 +19,14 @@ public class ComputationalServiceCompiler {
 
 	private Set<Information> generatedInfo = new HashSet<Information>();
 	private Set<Information> consumedInfo = new HashSet<Information>();
+	//private Set<Operation> operation = new HashSet<Operation>();
+	private  String operationType;
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private Set<Action> actions = new HashSet<Action>();
 	private String partitionAttributeValue;
 	private String computationalServiceName;
 	private Parameter parameter;
+	
 
 	public void addCommand(String actionName) {
 		Action action = new Action(actionName, getParameters(), null);
@@ -42,11 +41,17 @@ public class ComputationalServiceCompiler {
 		return parameter;
 	}
 
+	
+	
 	public void addParameter(String parameterName) {
 		parameter = new Parameter(parameterName, new DataType(
 				getDatafromSymblTable(parameterName)));
 	}
 
+	
+
+	
+	
 	public String getComputationalServiceName() {
 		return computationalServiceName;
 	}
@@ -69,10 +74,15 @@ public class ComputationalServiceCompiler {
 		 * getPartitionAttributeVal());
 		 */
 
+		/*computationalService = new ComputationalService(
+				getComputationalServiceName(), getGeneratedInfo(),
+				getConsumedInfo(), getDataAccessList(), getActionList(),
+				getPartitionAttributeVal(), computationalServiceName);*/
+		
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
-				getPartitionAttributeVal());
+				getPartitionAttributeVal(), getOperation());
 
 	}
 
@@ -96,7 +106,8 @@ public class ComputationalServiceCompiler {
 		partitionAttributeValue = regionName;
 
 	}
-
+	
+	
 	public String getPartitionAttributeVal() {
 		return partitionAttributeValue;
 	}
@@ -105,6 +116,19 @@ public class ComputationalServiceCompiler {
 
 	public Set<Information> getConsumedInfo() {
 		return consumedInfo;
+	}
+	
+	public String getOperation()
+	{
+		
+		return operationType;
+	}
+	
+	public void addOperation(String variableName) {
+		
+		this.operationType = variableName;
+				
+		
 	}
 
 	public void addConsumedInfo(String variableName) {
@@ -219,4 +243,10 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
+
+	
+
+	
+
+	
 }

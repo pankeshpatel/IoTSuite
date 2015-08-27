@@ -7,12 +7,10 @@ import iotsuite.compiler.MapperCompiler;
 import iotsuite.semanticmodel.DeploymentScope;
 import iotsuite.semanticmodel.Device;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
-import org.antlr.runtime.RecognitionException;
 
 public class Main {
 

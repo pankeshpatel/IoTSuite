@@ -7,7 +7,6 @@ import iotsuite.semanticmodel.ComputationalService;
 import iotsuite.semanticmodel.Device;
 import iotsuite.semanticmodel.Information;
 import iotsuite.semanticmodel.UserInterface;
-import iotsuite.semanticmodel.Region;
 import iotsuite.semanticmodel.Sensor;
 import iotsuite.semanticmodel.SensorMeasurement;
 import iotsuite.semanticmodel.Storage;

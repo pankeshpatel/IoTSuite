@@ -12,6 +12,7 @@ public class ComputationalService extends SoftwareComponent<Information> {
 
 	private Set<DataAccess> dataAccess = new HashSet<DataAccess>();
 	private Set<Action> actions = new HashSet<Action>();
+	private String operatation;
 
 	/*
 	 * public ComputationalService(String name, Set<Attribute> attributes,
@@ -22,13 +23,19 @@ public class ComputationalService extends SoftwareComponent<Information> {
 
 	public ComputationalService(String name, Set<Information> generateInfo,
 			Set<Information> consumeInfo, Set<DataAccess> dataAccess,
-			Set<Action> actions, String partitionAttributeValue) {
+			Set<Action> actions, String partitionAttributeValue, String operation) {
 		// super(name, attributes, generateInfo, consumeInfo,
 		// partitionAttributeValue);
 		super(name, generateInfo, consumeInfo, partitionAttributeValue);
 		this.dataAccess = dataAccess;
 		this.actions = actions;
+		this.operatation = operation;
 	}
+	
+	public String getOperation(){
+		return operatation;
+	}
+	
 
 	
 
@@ -40,7 +47,7 @@ public class ComputationalService extends SoftwareComponent<Information> {
 		ArrayList<Action> allGeneratedInfo = new ArrayList<Action>();
 		allGeneratedInfo.addAll(getActions());
 		return allGeneratedInfo;
-	}
+	}	
 
 	public Set<DataAccess> getDataAccess() {
 		return dataAccess;

@@ -8,17 +8,21 @@ public class Command {
 	private String name;
 	private Parameter parameters;
 	private Widget widget;
+	
 
 	public Command(String name, Parameter parameters, Widget widget) {
 		super();
 		this.name = name;
 		this.parameters = parameters;
 		this.widget = widget;
+		
 	}
 
 	public Widget getWidget() {
 		return widget;
 	}
+	
+	
 
 	public void setWidget(Widget widget) {
 		this.widget = widget;

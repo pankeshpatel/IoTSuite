@@ -42,7 +42,7 @@ public class  Logic$CS.name$ extends $CS.name$  {
      $CS.allConsumedInfo:{ consumedInfo |
     public void onNew$consumedInfo.name; format="capital"$( $consumedInfo.type.name$ arg)
     {
-     pubSubSensingFramework.publish("AVG-REQUEST", arg);
+     pubSubSensingFramework.publish("$CS.operation$-REQUEST", arg);
     }
     
      }; separator="\n"$ 
