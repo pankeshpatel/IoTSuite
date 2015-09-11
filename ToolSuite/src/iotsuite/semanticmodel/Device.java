@@ -23,7 +23,7 @@ public class Device implements Serializable {
 	private Set<String> abilities = new HashSet<String>();
 
 	private String myMobileFlag;
-	
+
 	private String myProtocol;
 
 	public Device(String name, String type, String networkAddress,
@@ -41,8 +41,8 @@ public class Device implements Serializable {
 		this.myProtocol = protocol;
 
 	}
-	
-	public String getProtocol(){
+
+	public String getProtocol() {
 		return myProtocol;
 	}
 
@@ -59,13 +59,14 @@ public class Device implements Serializable {
 	}
 
 	public List<String> getRegionLabels() {
-		//System.out.println("Region labels are "+ regionLabels+"in Device.java file");
+		// System.out.println("Region labels are "+
+		// regionLabels+"in Device.java file");
 		return regionLabels;
 	}
 
 	public List<String> getRegion() {
-		
-		//System.out.println("Value of region is"+regionIDs+"In Device.java file");
+
+		// System.out.println("Value of region is"+regionIDs+"In Device.java file");
 		return regionIDs;
 	}
 

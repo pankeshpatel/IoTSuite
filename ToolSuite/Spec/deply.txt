@@ -15,7 +15,7 @@ devices:
             Floor : 1511;
             Room : 15110;
         platform: JavaSE;    
-        resources : ;
+        resources :  ;
 		  protocol : mqtt;  
 
 	D3:
@@ -34,6 +34,14 @@ devices:
             Floor : 1511;
             Room : 15110;
         platform: JavaSE;    
-        resources : Heater;
+        resources : ;
 		  protocol : mqtt;  
  
+   D4:
+        region :
+            Building : 15;
+            Floor : 1511;
+            Room : 15110;
+        platform: JavaSE;    
+        resources : Heater;
+		  protocol : mqtt;  

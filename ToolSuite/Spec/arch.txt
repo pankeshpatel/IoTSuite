@@ -1,8 +1,10 @@
 softwarecomponents:
     computationalService:
+             
+            
             RoomAvgTemp 
-            consume tempMeasurement from region-hops:0:Room;
-            COMPUTE(AVG);
+		    consume tempMeasurement from region-hops:0:Room;
+			COMPUTE(AVG);
             generate roomAvgTempMeasurement:TempStruct;
             partition-per : Room;
       		
@@ -10,3 +12,12 @@ softwarecomponents:
       		consume roomAvgTempMeasurement from region-hops:0:Room;
             command SetTemp(setTemp) to region-hops:0:Room;
       		partition-per : Room;
+      		
+      		
+      		
+             
+            
+            
+            
+            
+                     

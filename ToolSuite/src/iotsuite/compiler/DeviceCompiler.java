@@ -32,15 +32,14 @@ public class DeviceCompiler {
 				deviceAbilities, getMobileFlag(), getProtocol());
 		SymbolTable.addDeviceinSymblTable(device);
 	}
-	
-	public void setProtocol(String protocol){
+
+	public void setProtocol(String protocol) {
 		this.myProtocol = protocol;
 	}
-	
-	public String getProtocol(){
+
+	public String getProtocol() {
 		return myProtocol;
 	}
-	
 
 	public void setMobileFlag(String mobileFlag) {
 		this.myMobileFlag = mobileFlag;

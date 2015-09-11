@@ -23,7 +23,8 @@ public class ComputationalService extends SoftwareComponent<Information> {
 
 	public ComputationalService(String name, Set<Information> generateInfo,
 			Set<Information> consumeInfo, Set<DataAccess> dataAccess,
-			Set<Action> actions, String partitionAttributeValue, String operation) {
+			Set<Action> actions, String partitionAttributeValue,
+			String operation) {
 		// super(name, attributes, generateInfo, consumeInfo,
 		// partitionAttributeValue);
 		super(name, generateInfo, consumeInfo, partitionAttributeValue);
@@ -31,13 +32,10 @@ public class ComputationalService extends SoftwareComponent<Information> {
 		this.actions = actions;
 		this.operatation = operation;
 	}
-	
-	public String getOperation(){
+
+	public String getOperation() {
 		return operatation;
 	}
-	
-
-	
 
 	public Set<Action> getActions() {
 		return actions;
@@ -47,7 +45,7 @@ public class ComputationalService extends SoftwareComponent<Information> {
 		ArrayList<Action> allGeneratedInfo = new ArrayList<Action>();
 		allGeneratedInfo.addAll(getActions());
 		return allGeneratedInfo;
-	}	
+	}
 
 	public Set<DataAccess> getDataAccess() {
 		return dataAccess;

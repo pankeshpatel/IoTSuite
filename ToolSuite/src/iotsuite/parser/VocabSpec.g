@@ -54,13 +54,23 @@ region_def :
 
 struct_def:
     CAPITALIZED_ID 
-    {context.currentStruct = new StructCompiler($CAPITALIZED_ID.text);}
+    {context.currentStruct = new StructCompiler($CAPITALIZED_ID.text);
+    context.constructStructNameSymblTable($CAPITALIZED_ID.text);}
     (structField_def ';')*   
-    {context.currentStruct.generateStructureCode();} 
+    {
+     
+     context.currentStruct.generateStructureCode();
+    
+    
+  
+    } 
 ;
 structField_def:  
   lc_id ':' dataType 
   { context.currentStruct.addField($lc_id.text, $dataType.text);
+   //context.constructStructureSymbTable($lc_id.text,$dataType.text);
+   // context.constructStructResponseTypeSymblTable($lc_id.text,$dataType.text);
+   context.constructStructFieldSymblTable($lc_id.text,$dataType.text);
     context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
 ; 
 // Structure Definition *** End 
@@ -194,13 +204,17 @@ storageDataAccess_def :
 storageGeneratedInfo_def :
     'generate' lc_id ':'  CAPITALIZED_ID
     { context.currentStorageService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text);  
-    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
-    context.constructResponseTypeSymblTable($lc_id.text, $CAPITALIZED_ID.text);}
+      context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
+    context.constructResponseTypeSymblTable($lc_id.text, $CAPITALIZED_ID.text);
+    }
 ;
 
 storagedataIndex_def:
         lc_id ':' dataType
-        { context.currentStorageService.addDataAccessIndex($lc_id.text, $dataType.text);  }
+        { context.currentStorageService.addDataAccessIndex($lc_id.text, $dataType.text); 
+        context.constructStorageInfoSymblTable($lc_id.text, $dataType.text);
+        
+         }
 ;  
 
 /*storagePartition_def :

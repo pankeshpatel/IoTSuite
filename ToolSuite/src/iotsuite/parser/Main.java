@@ -15,9 +15,8 @@ import org.antlr.runtime.CommonTokenStream;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		
-		
-	//Main main = new Main();
+
+		// Main main = new Main();
 
 		if (GlobalVariable.DEVELOPMENT_METHODOLOGY) {
 
@@ -48,36 +47,45 @@ public class Main {
 				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
-				vocParser.vocabSpec();	
-				
+				vocParser.vocabSpec();
+
 				// User Interaction
-				
-			/*	ANTLRFileStream interactionStream = new ANTLRFileStream(GlobalVariable.interactionSpec);
-				InteractionSpecLexer  interactionLexer = new InteractionSpecLexer(interactionStream);
-				CommonTokenStream interactionTokens = new CommonTokenStream(interactionLexer);
-                InteractionSpecParser  interactionParser = new InteractionSpecParser(interactionTokens);
-                interactionParser.interactionSpec();*/				
-			    GenFiller.copyDeviceDrivers();		
-			
+
+				/*
+				 * ANTLRFileStream interactionStream = new
+				 * ANTLRFileStream(GlobalVariable.interactionSpec);
+				 * InteractionSpecLexer interactionLexer = new
+				 * InteractionSpecLexer(interactionStream); CommonTokenStream
+				 * interactionTokens = new CommonTokenStream(interactionLexer);
+				 * InteractionSpecParser interactionParser = new
+				 * InteractionSpecParser(interactionTokens);
+				 * interactionParser.interactionSpec();
+				 */
+				GenFiller.copyDeviceDrivers();
+
 			}
-			
+
 			if (GlobalVariable.activity
 					.equals(GlobalVariable.ACTIVITY_GENERATE_USERINTERACTION)) {
-				
+
 				ANTLRFileStream vocStream = new ANTLRFileStream(
 						GlobalVariable.vocabSpec);
 				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
-				
-				ANTLRFileStream interactionStream = new ANTLRFileStream(GlobalVariable.interactionSpec);
-				InteractionSpecLexer  interactionLexer = new InteractionSpecLexer(interactionStream);
-				CommonTokenStream interactionTokens = new CommonTokenStream(interactionLexer);
-                InteractionSpecParser  interactionParser = new InteractionSpecParser(interactionTokens);
-                interactionParser.interactionSpec();				
-			    GenFiller.copyDeviceDrivers();		
-			
+
+				ANTLRFileStream interactionStream = new ANTLRFileStream(
+						GlobalVariable.interactionSpec);
+				InteractionSpecLexer interactionLexer = new InteractionSpecLexer(
+						interactionStream);
+				CommonTokenStream interactionTokens = new CommonTokenStream(
+						interactionLexer);
+				InteractionSpecParser interactionParser = new InteractionSpecParser(
+						interactionTokens);
+				interactionParser.interactionSpec();
+				GenFiller.copyDeviceDrivers();
+
 			}
 
 			if (GlobalVariable.activity
@@ -104,7 +112,6 @@ public class Main {
 			if (GlobalVariable.activity
 					.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
 
-				
 				ANTLRFileStream vocStream = new ANTLRFileStream(
 						GlobalVariable.vocabSpec);
 				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
@@ -135,29 +142,22 @@ public class Main {
 						deploymentTokens);
 				deploymentParser.networkspec();
 				deviceList = SymbolTable.getDeviceList();
-				
-				
-			
 
 				MapperCompiler.mappingFileGenerator(deviceList,
 						mappingConstraintList);
-				//System.out.println("I am in Mapping Acitivity");
+				// System.out.println("I am in Mapping Acitivity");
 				LinkerCompiler.linkerAlgo();
 				GenFiller.copyLinking();
 				GenFiller.copyMapping();
-			
-			
 
 			}
 
-			
-			/*if (GlobalVariable.activity
-					.equals(GlobalVariable.ACTIVITY_GENERATE_LINKING)) {
-
-				LinkerCompiler.linkerAlgo();
-				GenFiller.copyLinking();
-			}*/
-			
+			/*
+			 * if (GlobalVariable.activity
+			 * .equals(GlobalVariable.ACTIVITY_GENERATE_LINKING)) {
+			 * 
+			 * LinkerCompiler.linkerAlgo(); GenFiller.copyLinking(); }
+			 */
 
 		} else {
 
@@ -203,19 +203,15 @@ public class Main {
 		}
 
 	}
-	
-	/*public  void linker()
-	{
-	if (GlobalVariable.activity
-			.equals(GlobalVariable.ACTIVITY_GENERATE_LINKING)) {
 
-		System.out.println("I am in Linker");
-		LinkerCompiler.linkerAlgo();
-		GenFiller.copyLinking();
-		
-	}
-	}*/
-	
-	
-	
+	/*
+	 * public void linker() { if (GlobalVariable.activity
+	 * .equals(GlobalVariable.ACTIVITY_GENERATE_LINKING)) {
+	 * 
+	 * System.out.println("I am in Linker"); LinkerCompiler.linkerAlgo();
+	 * GenFiller.copyLinking();
+	 * 
+	 * } }
+	 */
+
 }

@@ -19,14 +19,13 @@ public class ComputationalServiceCompiler {
 
 	private Set<Information> generatedInfo = new HashSet<Information>();
 	private Set<Information> consumedInfo = new HashSet<Information>();
-	//private Set<Operation> operation = new HashSet<Operation>();
-	private  String operationType;
+	// private Set<Operation> operation = new HashSet<Operation>();
+	private String operationType;
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private Set<Action> actions = new HashSet<Action>();
 	private String partitionAttributeValue;
 	private String computationalServiceName;
 	private Parameter parameter;
-	
 
 	public void addCommand(String actionName) {
 		Action action = new Action(actionName, getParameters(), null);
@@ -41,17 +40,11 @@ public class ComputationalServiceCompiler {
 		return parameter;
 	}
 
-	
-	
 	public void addParameter(String parameterName) {
 		parameter = new Parameter(parameterName, new DataType(
 				getDatafromSymblTable(parameterName)));
 	}
 
-	
-
-	
-	
 	public String getComputationalServiceName() {
 		return computationalServiceName;
 	}
@@ -74,11 +67,13 @@ public class ComputationalServiceCompiler {
 		 * getPartitionAttributeVal());
 		 */
 
-		/*computationalService = new ComputationalService(
-				getComputationalServiceName(), getGeneratedInfo(),
-				getConsumedInfo(), getDataAccessList(), getActionList(),
-				getPartitionAttributeVal(), computationalServiceName);*/
-		
+		/*
+		 * computationalService = new ComputationalService(
+		 * getComputationalServiceName(), getGeneratedInfo(), getConsumedInfo(),
+		 * getDataAccessList(), getActionList(), getPartitionAttributeVal(),
+		 * computationalServiceName);
+		 */
+
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
@@ -106,8 +101,7 @@ public class ComputationalServiceCompiler {
 		partitionAttributeValue = regionName;
 
 	}
-	
-	
+
 	public String getPartitionAttributeVal() {
 		return partitionAttributeValue;
 	}
@@ -117,18 +111,16 @@ public class ComputationalServiceCompiler {
 	public Set<Information> getConsumedInfo() {
 		return consumedInfo;
 	}
-	
-	public String getOperation()
-	{
-		
+
+	public String getOperation() {
+
 		return operationType;
 	}
-	
+
 	public void addOperation(String variableName) {
-		
+
 		this.operationType = variableName;
-				
-		
+
 	}
 
 	public void addConsumedInfo(String variableName) {
@@ -179,24 +171,25 @@ public class ComputationalServiceCompiler {
 
 		// generateSensorListener_SensorCompiler(sensorDriver
 		// .getAllGeneratedInfo().get(i));
-		/*for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
-			generateSensorListener_SensorCompiler(sensorDriver
-					.getAllGeneratedInfo().get(i));
-		}*/
-		
-		for(int i=0;i<computationalService.getAllConsumedInfo().size();i++)
-		{
-		generateComputationalServiceListener_ComputationalServiceCompiler(computationalService.getAllConsumedInfo().get(i));
+		/*
+		 * for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
+		 * generateSensorListener_SensorCompiler(sensorDriver
+		 * .getAllGeneratedInfo().get(i)); }
+		 */
+
+		for (int i = 0; i < computationalService.getAllConsumedInfo().size(); i++) {
+			generateComputationalServiceListener_ComputationalServiceCompiler(computationalService
+					.getAllConsumedInfo().get(i));
 		}
 		// Impl
-		 generateImplComputationalService_ComputationalServiceCompiler();
+		generateImplComputationalService_ComputationalServiceCompiler();
 	}
 
 	public void generateComputationalServiceInteraction_ComputationalServiceCompiler() {
 
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
-				.generateComputationalServiceInteraction(computationalService); 
+				.generateComputationalServiceInteraction(computationalService);
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 
@@ -228,7 +221,8 @@ public class ComputationalServiceCompiler {
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
 
-	public void generateComputationalServiceListener_ComputationalServiceCompiler(Information infoConsumeInfo) {
+	public void generateComputationalServiceListener_ComputationalServiceCompiler(
+			Information infoConsumeInfo) {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
 				.generateComputationalServiceListener(infoConsumeInfo);
@@ -244,9 +238,4 @@ public class ComputationalServiceCompiler {
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
 
-	
-
-	
-
-	
 }

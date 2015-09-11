@@ -44,93 +44,96 @@ public class JavaFrameworkFromST {
 	public CompilationUnit generateComputationalServiceFactory(
 			ComputationalService computationalService) {
 
-		
 		StringTemplate templateOfComputationalService = group
 				.getInstanceOf("JavaSE/factoryComputationalJavaSE");
 		templateOfComputationalService.setAttribute("CS", computationalService);
-		
-		return new CompilationUnit(computationalService.getName() +  "Factory" +  ".java", templateOfComputationalService, "JavaSEFactory" , 
+
+		return new CompilationUnit(computationalService.getName() + "Factory"
+				+ ".java", templateOfComputationalService, "JavaSEFactory",
 				"Computational", computationalService);
-		
-		// Name of file, templateType,  Name , Name based on package Name ,  , functionargument)
-		
-		// fileNameToGenerate, stringTemplateName , fileCategory, objectName , objClass 
-		
+
+		// Name of file, templateType, Name , Name based on package Name , ,
+		// functionargument)
+
+		// fileNameToGenerate, stringTemplateName , fileCategory, objectName ,
+		// objClass
+
 		/*
-		 return new CompilationUnit(
-				sensorDriver.getName() + "Factory" + ".java",
-				templateOfSensorDriver, "JavaSEFactory", "Sensor", sensorDriver);
+		 * return new CompilationUnit( sensorDriver.getName() + "Factory" +
+		 * ".java", templateOfSensorDriver, "JavaSEFactory", "Sensor",
+		 * sensorDriver);
 		 */
-			
-		
-		/*return new CompilationUnit(computationalService.getName() + "Factory"
-				+ ".java", templateOfComputationalService,
-				"JavaSEComputationalFactoryImpl", "Future",
-				computationalService);*/
-		
-		/*return new CompilationUnit("I" + guiDriver.getName() + ".java",
-				templateOfGUIDriver, "Interface", "gui", guiDriver);*/
+
+		/*
+		 * return new CompilationUnit(computationalService.getName() + "Factory"
+		 * + ".java", templateOfComputationalService,
+		 * "JavaSEComputationalFactoryImpl", "Future", computationalService);
+		 */
+
+		/*
+		 * return new CompilationUnit("I" + guiDriver.getName() + ".java",
+		 * templateOfGUIDriver, "Interface", "gui", guiDriver);
+		 */
 	}
-	
-	//For Interface
+
+	// For Interface
 	public CompilationUnit generateComputationalServiceInterface(
 			ComputationalService computationalService) {
 
-		
 		StringTemplate templateOfComputationalService = group
 				.getInstanceOf("Common/interfaceComputational");
 		templateOfComputationalService.setAttribute("CS", computationalService);
-	
-		return new CompilationUnit("I"+computationalService.getName()+".java",templateOfComputationalService,"Interface","Computational",computationalService);
+
+		return new CompilationUnit("I" + computationalService.getName()
+				+ ".java", templateOfComputationalService, "Interface",
+				"Computational", computationalService);
 	}
-	
-	//For Listener	
-	
+
+	// For Listener
+
 	public CompilationUnit generateComputationalServiceListener(
 			Information infoConsumeInfo) {
 
-	
 		StringTemplate templateOfComputationalService = group
 				.getInstanceOf("Common/listenerComputational");
 		templateOfComputationalService.setAttribute("INFO", infoConsumeInfo);
-		
-	return new CompilationUnit("Listener"+infoConsumeInfo.getName()+".java",templateOfComputationalService,"Listener","Computational",infoConsumeInfo);
-			
-		/*	
+
+		return new CompilationUnit("Listener" + infoConsumeInfo.getName()
+				+ ".java", templateOfComputationalService, "Listener",
+				"Computational", infoConsumeInfo);
+
+		/*
 		 * 
 		 * 
-		 * public CompilationUnit generateSensorListener(
-			SensorMeasurement sensorMeasurement) {
-		StringTemplate templateOfSensorDriver = group
-				.getInstanceOf("Common/listenerSensor");
-		templateOfSensorDriver.setAttribute("SensorDriver", sensorMeasurement);
-		return new CompilationUnit("Listener" + sensorMeasurement.getName()
-				+ ".java", templateOfSensorDriver, "Listener", "sensor",
-				sensorMeasurement);
-	}
+		 * public CompilationUnit generateSensorListener( SensorMeasurement
+		 * sensorMeasurement) { StringTemplate templateOfSensorDriver = group
+		 * .getInstanceOf("Common/listenerSensor");
+		 * templateOfSensorDriver.setAttribute("SensorDriver",
+		 * sensorMeasurement); return new CompilationUnit("Listener" +
+		 * sensorMeasurement.getName() + ".java", templateOfSensorDriver,
+		 * "Listener", "sensor", sensorMeasurement); }
 		 * 
-			return new CompilationUnit("Listener" + guiDriver.getName() + ".java",
-				templateOfGUIDriver, "Listener", "gui", guiDriver);
-				
-			return new CompilationUnit("Listener" + sensorMeasurement.getName()
-				+ ".java", templateOfSensorDriver, "Listener", "sensor",
-				sensorMeasurement);	
-				*/
-		
+		 * return new CompilationUnit("Listener" + guiDriver.getName() +
+		 * ".java", templateOfGUIDriver, "Listener", "gui", guiDriver);
+		 * 
+		 * return new CompilationUnit("Listener" + sensorMeasurement.getName() +
+		 * ".java", templateOfSensorDriver, "Listener", "sensor",
+		 * sensorMeasurement);
+		 */
+
 	}
 
-	//For Computational  DeviceImpl
+	// For Computational DeviceImpl
 	public CompilationUnit generateImplComputationalService(
 			ComputationalService computationalService) {
 
-		
 		StringTemplate templateOfComputationalService = group
 				.getInstanceOf("JavaSE/implComputationalJavaSE");
 		templateOfComputationalService.setAttribute("CS", computationalService);
 		return new CompilationUnit("JavaSE" + computationalService.getName()
 				+ ".java", templateOfComputationalService, "JavaSEImpl",
 				"Computational", computationalService);
-		
+
 	}
 
 	// JavaSE Sensor Factory

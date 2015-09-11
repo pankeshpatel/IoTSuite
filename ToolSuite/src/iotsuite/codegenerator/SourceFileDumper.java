@@ -5,8 +5,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-
-
 public class SourceFileDumper {
 
 	private File file;
@@ -36,9 +34,9 @@ public class SourceFileDumper {
 						GlobalVariable.deviceAndroidType, null);
 			}
 		}
-		
+
 		if (GlobalVariable.activity
-				.equals(GlobalVariable.ACTIVITY_GENERATE_USERINTERACTION)  ) {
+				.equals(GlobalVariable.ACTIVITY_GENERATE_USERINTERACTION)) {
 
 			// For JavaSE enabled devices
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
@@ -51,9 +49,6 @@ public class SourceFileDumper {
 						GlobalVariable.deviceAndroidType, null);
 			}
 		}
-		
-		
-		
 
 		/*
 		 * The following part of the code is evaluated true, when activity =
@@ -62,30 +57,25 @@ public class SourceFileDumper {
 
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK)) {
-			
-			
-			
-			
-			generateCodeForArchitectureFrameworkActivity(template, "ApplicationLogic", null);
+
+			generateCodeForArchitectureFrameworkActivity(template,
+					"ApplicationLogic", null);
 		}
-			
-			// For JavaSE
-			
-			/*if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
-				generateCodeForArchitectureFrameworkActivity(template,
-						GlobalVariable.deviceJAVASEType, null);
-				
-			}
-			
-			// For  Android
-			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
-				generateCodeForArchitectureFrameworkActivity(template,
-						GlobalVariable.deviceAndroidType, null);
-			}*/
-			
-			
-		
-	
+
+		// For JavaSE
+
+		/*
+		 * if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
+		 * generateCodeForArchitectureFrameworkActivity(template,
+		 * GlobalVariable.deviceJAVASEType, null);
+		 * 
+		 * }
+		 * 
+		 * // For Android if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
+		 * generateCodeForArchitectureFrameworkActivity(template,
+		 * GlobalVariable.deviceAndroidType, null); }
+		 */
+
 		/*
 		 * The following part of the code is evaluated true, when activity =
 		 * "mapping"
@@ -176,11 +166,9 @@ public class SourceFileDumper {
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.factoryDirPath + "/"
 					+ unit.getFileNameToGenerate());
-			
-		} 
-		
-		
-		
+
+		}
+
 		else if (unit.getFileCategory().equals("JavaSEStorageImpl")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -245,7 +233,7 @@ public class SourceFileDumper {
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
-		} else {			
+		} else {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.frameworkDirPath).mkdirs();
@@ -414,14 +402,15 @@ public class SourceFileDumper {
 
 	private void generateCodeForArchitectureFrameworkActivity(
 			CompilationUnit unit, String deviceType, String str) {
-		
-		//return new CompilationUnit(computationalService.getName() +  "Factory" +  ".java", templateOfComputationalService, "JavaSEFactory" , 
-		//		"Computational", computationalService);
-		
-		// Name of file, templateType,  Name , Name based on package Name ,  , functionargument)
-		// fileNameToGenerate, stringTemplateName , fileCategory, objectName , objClass 
-		
-		
+
+		// return new CompilationUnit(computationalService.getName() + "Factory"
+		// + ".java", templateOfComputationalService, "JavaSEFactory" ,
+		// "Computational", computationalService);
+
+		// Name of file, templateType, Name , Name based on package Name , ,
+		// functionargument)
+		// fileNameToGenerate, stringTemplateName , fileCategory, objectName ,
+		// objClass
 
 		String content = unit.getStringTemplateName();
 
@@ -433,9 +422,8 @@ public class SourceFileDumper {
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.logicDirPath + "/"
 					+ unit.getFileNameToGenerate());
-		} 
-		
-		
+		}
+
 		else if (unit.getFileCategory().equals("JavaSEFactory")) {
 			new File(GlobalVariable.templatePath + "ApplicationLogic"
 					+ GlobalVariable.outputDirPath
@@ -444,43 +432,39 @@ public class SourceFileDumper {
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.factoryDirPath + "/"
 					+ unit.getFileNameToGenerate());
-			
-			/*new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
-					+ GlobalVariable.outputDirPath
-					+ GlobalVariable.factoryDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType
-					+ "DeviceDrivers" + GlobalVariable.outputDirPath
-					+ GlobalVariable.factoryDirPath + "/"
-					+ unit.getFileNameToGenerate());*/
+
+			/*
+			 * new File(GlobalVariable.templatePath + deviceType +
+			 * "DeviceDrivers" + GlobalVariable.outputDirPath +
+			 * GlobalVariable.factoryDirPath).mkdirs(); file = new
+			 * File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" +
+			 * GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath +
+			 * "/" + unit.getFileNameToGenerate());
+			 */
 		}
-		
-		 
-				
-			else if (unit.getFileCategory().equals("JavaSEImpl")) {
-				
-				
-				new File(GlobalVariable.templatePath + "ApplicationLogic"
-						+ GlobalVariable.outputDirPath
-						+ GlobalVariable.deviceImplDirPath).mkdirs();
-				file = new File(GlobalVariable.templatePath + "ApplicationLogic"
-						+ GlobalVariable.outputDirPath
-						+ GlobalVariable.deviceImplDirPath + "/"
-						+ unit.getFileNameToGenerate());
-				
-				
-				
-				/*new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
-						+ GlobalVariable.outputDirPath
-						+ GlobalVariable.deviceImplDirPath).mkdirs();
-				file = new File(GlobalVariable.templatePath + deviceType
-						+ "DeviceDrivers" + GlobalVariable.outputDirPath
-						+ GlobalVariable.deviceImplDirPath + "/"
-						+ unit.getFileNameToGenerate());*/
-			}
-		else {
-			
-			// I think this else part generate code inti framework reposiroty. 
-			//So, you do not need to write "else if"  for the Interaction.
+
+		else if (unit.getFileCategory().equals("JavaSEImpl")) {
+
+			new File(GlobalVariable.templatePath + "ApplicationLogic"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + "ApplicationLogic"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
+
+			/*
+			 * new File(GlobalVariable.templatePath + deviceType +
+			 * "DeviceDrivers" + GlobalVariable.outputDirPath +
+			 * GlobalVariable.deviceImplDirPath).mkdirs(); file = new
+			 * File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" +
+			 * GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath +
+			 * "/" + unit.getFileNameToGenerate());
+			 */
+		} else {
+
+			// I think this else part generate code inti framework reposiroty.
+			// So, you do not need to write "else if" for the Interaction.
 			new File(GlobalVariable.templatePath + "ApplicationLogic"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.frameworkDirPath).mkdirs();
@@ -489,9 +473,7 @@ public class SourceFileDumper {
 					+ GlobalVariable.frameworkDirPath + "/"
 					+ unit.getFileNameToGenerate());
 		}
-		
-		
-		
+
 		if (file != null) {
 			try {
 				file.createNewFile();
@@ -526,9 +508,6 @@ public class SourceFileDumper {
 			File dir = new File(dirName);
 			file = new File(dir, unit.getFileNameToGenerate());
 		}
-		
-     
-		
 
 		// generate MainActivity.java files for Android devices
 		if ((unit.getFileCategory()).equals("AndroidDevice")) {

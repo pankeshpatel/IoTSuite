@@ -8,9 +8,17 @@ import iotsuite.parser.SymbolTable;
 import iotsuite.semanticmodel.DataAccess;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Information;
+import iotsuite.semanticmodel.PrimitiveType;
+import iotsuite.semanticmodel.StructField;
+
 import iotsuite.semanticmodel.Storage;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+
 import java.util.Set;
 
 public class StorageCompiler {
@@ -20,6 +28,17 @@ public class StorageCompiler {
 	private Information queryIndex;
 	private Information generatedInfo;
 	private String storageServiceName;
+
+	private List<String> fieldWithSQL = new ArrayList<String>();
+	// Storage Store Field Type  ex-String,double
+	private List<String> fieldType = new ArrayList<String>();
+	
+	// Store Field Name ex-tempValue,unitOfMeasurement
+	private List<String> fieldName = new ArrayList<String>(); 
+	private List<String> structFieldName = new ArrayList<String>();
+	private List<String> structField = new ArrayList<String>();
+	// Static  Table used  for Mapping from high level specification datatype to SQL datatype
+	HashMap<String, String> SQLtype = new HashMap<String, String>(); 
 
 	public StorageCompiler() {
 
@@ -37,12 +56,60 @@ public class StorageCompiler {
 		// storageService = new Storage(getStorageServiceName(),
 		// getAttributeSet(), getDataAccessList(), null);
 		storageService = new Storage(getStorageServiceName(),
-				getDataAccessList(), null);
+				getDataAccessList(), null, getAllFieldName(),
+				getAllFieldSQLvariable(), getStructField(),
+				getStructFieldName());
+	}
+
+	private List<String> getAllFieldType() {
+		this.fieldType = iotsuite.parser.SymbolTable.listStorageFieldType;
+		return fieldType;
+	}
+
+	private List<String> getAllFieldName() {
+
+		this.fieldName = iotsuite.parser.SymbolTable.listStorageFieldName;
+		getAllFieldType();
+		getStructField();
+		getStructFieldName();
+		return fieldName;
+	}
+
+	private List<String> getStructFieldName() {
+
+		this.structFieldName = iotsuite.parser.SymbolTable.tempListStorageFieldName;
+		return structFieldName;
+	}
+
+	private List<String> getStructField() {
+
+		this.structField = iotsuite.parser.SymbolTable.structField;
+		return structField;
+	}
+
+	public static void Mapping(Map<String, String> SQLtype) {
+
+		SQLtype.put("String", "VARCHAR(255)");
+		SQLtype.put("double", "DOUBLE");
+		SQLtype.put("integer", "INTEGER");
+
+	}
+
+	private List<String> getAllFieldSQLvariable() {
+
+		Mapping(SQLtype);
+		for (int i = 0; i < fieldName.size(); i++) {
+			fieldWithSQL.add(fieldName.get(i) + " "
+					+ SQLtype.get(fieldType.get(i)));
+
+		}
+		return fieldWithSQL;
 	}
 
 	// Getter and Setter of Data Access List
 
 	public Set<DataAccess> getDataAccessList() {
+		// SymblTable(iotsuite.parser.SymbolTable.structureSymblTable);
 		return dataAccessList;
 	}
 
@@ -60,9 +127,11 @@ public class StorageCompiler {
 	public void addGeneratedInfo(String variableName, String variableType) {
 		generatedInfo = new Information(variableName,
 				new DataType(variableType));
+
 	}
 
 	public Information getGeneratedInfo() {
+
 		return generatedInfo;
 	}
 

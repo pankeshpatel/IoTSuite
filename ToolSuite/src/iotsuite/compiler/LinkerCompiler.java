@@ -27,7 +27,6 @@ public class LinkerCompiler {
 
 					System.out.println("Linked code for "
 							+ listOfFiles[i].getName() + " device");
-					
 
 					copyDeviceDrivers(GlobalVariable.JAVASE_ENABLED_DEVICES,
 							listOfFiles[i].getName());

@@ -2,6 +2,7 @@ package iotsuite.semanticmodel;
 
 public class Variable {
 
+	// static String name;
 	String name;
 	DataType type;
 

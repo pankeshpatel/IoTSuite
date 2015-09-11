@@ -33,13 +33,14 @@ public class MappingAlgoCompiler {
 			regionLabelSet.addAll(deviceObj.getRegionLabels());
 		}
 
-		System.out.println("Device list is " + deviceList + " in Mapping Algo");
+		/*System.out.println("Device list is " + deviceList + " in Mapping Algo");
 		System.out.println("Region label  is " + regionLabelSet
 				+ " in Mapping Algo");
 		System.out.println("Device Deployment List  is "
 				+ mappingConstraintList + " in Mapping Algo");
-		
-		System.out.println("Device list by region is"+ deviceListByRegion+"in Mapping algo");
+
+		System.out.println("Device list by region is" + deviceListByRegion
+				+ "in Mapping algo");*/
 
 		// --O/p : 21 (regionLabel) -> device List.
 		for (Device deviceObj : deviceList) {
@@ -58,18 +59,17 @@ public class MappingAlgoCompiler {
 			}
 		}
 
-		System.out.println("Device list is " + deviceList + " in Mapping Algo");
+		/*System.out.println("Device list is " + deviceList + " in Mapping Algo");
 		System.out.println("Region label  is " + regionLabelSet
 				+ " in Mapping Algo");
-		System.out.println("Device list by region is"+ deviceListByRegion+"in Mapping algo");
+		System.out.println("Device list by region is" + deviceListByRegion
+				+ "in Mapping algo");*/
 
 		final Map<String, Set<String>> regionMap = new HashMap<String, Set<String>>();
 
 		for (String regionLabel : regionLabelSet) {
 			regionMap.put(regionLabel, new HashSet<String>());
 		}
-		
-		
 
 		for (Device deviceObj : deviceList) {
 
@@ -78,14 +78,16 @@ public class MappingAlgoCompiler {
 
 			int i, j;
 			for (i = 0, j = 0; i < setOfRegionLabels.size(); i++, j++) {
-				regionMap.get(setOfRegionLabels.get(i)).add(setOfRegionIDs.get(j));
+				regionMap.get(setOfRegionLabels.get(i)).add(
+						setOfRegionIDs.get(j));
 
 			}
 
 		}
-		System.out.println("Device list is " + deviceList + " in Mapping Algo");
-		System.out.println("Region label  is " + regionLabelSet + " in Mapping Algo");
-		System.out.println("Region Map is "+regionMap+"in Mapping Algo");
+		/*System.out.println("Device list is " + deviceList + " in Mapping Algo");
+		System.out.println("Region label  is " + regionLabelSet
+				+ " in Mapping Algo");
+		System.out.println("Region Map is " + regionMap + "in Mapping Algo");*/
 
 		final Map<Device, Set<String>> finalMapping = new HashMap<Device, Set<String>>();
 
@@ -110,13 +112,14 @@ public class MappingAlgoCompiler {
 							Set<Device> tempDeviceSet = deviceListByRegion
 									.get(tempkey[i]);
 							Device selectedDevice = pickOneFrom(tempDeviceSet);
-							
-						/*	if(selectedDevice.getAbilities().equals(tempDeviceSet))
-							{
-								
-								finalMapping.get(selectedDevice).add(
-										tempSoftWareComponent);
-							}*/
+
+							/*
+							 * if(selectedDevice.getAbilities().equals(tempDeviceSet
+							 * )) {
+							 * 
+							 * finalMapping.get(selectedDevice).add(
+							 * tempSoftWareComponent); }
+							 */
 
 							// if
 							// (selectedDevice.getMobileFlag().equals("true")) {

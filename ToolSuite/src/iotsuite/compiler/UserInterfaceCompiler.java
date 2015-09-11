@@ -30,7 +30,6 @@ public class UserInterfaceCompiler {
 	// private Widget widget;
 
 	public UserInterfaceCompiler() {
-		
 
 	}
 
@@ -43,7 +42,7 @@ public class UserInterfaceCompiler {
 	}
 
 	public void setGUIName(String computationalServiceName) {
-		
+
 		this.GUIName = computationalServiceName;
 	}
 
