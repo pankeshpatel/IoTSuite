@@ -1,20 +1,22 @@
-regions :
-	Building : Integer ;
-	Floor :  Integer;
-	Room : Integer;
-structs:	    
-    TempStruct
-        tempValue : double;
-        unitOfMeasurement : String;		   
-resources:
-    sensors:
-	  periodicsensors:
-        TemperatureSensor
-            generate  tempMeasurement : TempStruct;     
-              
-    actuators:
-       Heater
-			action SetTemp(setTemp:TempStruct);
-			
-		
-			
+regions: 
+    Building: Integer;
+    Floor: Integer;
+    Room: Integer;
+structs:                 
+    TempStruct            
+        tempValue: double;
+        unitOfMeasurement: String; 
+	PresenceStruct
+		presence : boolean;
+resources:   
+    sensors:    
+    eventdriven:                    
+		TemperatureSensor 
+            generate  tempMeasurement : TempStruct;	
+		SmokeDetector
+            generate smokePresence : PresenceStruct;
+            onCondition smokeDetected;	
+    actuators:                   
+        Alarm
+            action Activate();
+            action DeActivate(); 

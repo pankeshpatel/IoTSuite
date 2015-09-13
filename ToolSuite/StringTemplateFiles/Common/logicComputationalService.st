@@ -51,6 +51,7 @@ public class  Logic$CS.name$ extends $CS.name$  {
       public void onNew$dataAccess.dataAccessName; format="capital"$Received( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type.name$}$ arg)
       {
         //TODO : write code here
+        
       }     
   }$
     

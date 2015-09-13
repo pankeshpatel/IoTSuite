@@ -18,31 +18,25 @@ public class  Logic$Storageservice.name$  extends $Storageservice.name$  {
 	public Logic$Storageservice.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui,Context myContext) {
 		super(pubSubM, deviceInfo);
 		
-		if (deviceType.equals(GlobalVariable.deviceJAVASEType)) {
-		
 		deviceType = deviceInfo.getType();
-      
-      I$Storageservice.name$ obj$Storageservice.name$ = $Storageservice.name$Factory.get$Storageservice.name$(myDeviceInfo.getType(), null, null);
-   
-       }else{
-        // This is reserved for Android Devices.
-       }
 		
-		
-		
-		
-		
-
-	}
+			}
 	
 	$Storageservice.allDataAccess:{ dataAccess |
 	
 	@Override
 	public void onNew$dataAccess.dataAccessName; format="capital"$RequestReceived(String arg) {
 		
-	   set$dataAccess.dataAccessName; format="capital"$(obj$Storageservice.name$.get$dataAccess.dataAccessName; format="capital"$(arg));
 		
-	}
+    if (deviceType.equals(GlobalVariable.deviceJAVASEType)) {
+       
+        I$Storageservice.name$ obj$Storageservice.name$ = $Storageservice.name$Factory.get$Storageservice.name$(myDeviceInfo.getType(), null, null);
+       set$dataAccess.dataAccessName; format="capital"$(obj$Storageservice.name$.get$dataAccess.dataAccessName; format="capital"$(arg));
+       }
+       else{
+        // This is reserved for Android Devices.
+       }
+      }
 	
 	}$
 

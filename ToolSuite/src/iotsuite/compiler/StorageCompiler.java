@@ -8,9 +8,6 @@ import iotsuite.parser.SymbolTable;
 import iotsuite.semanticmodel.DataAccess;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Information;
-import iotsuite.semanticmodel.PrimitiveType;
-import iotsuite.semanticmodel.StructField;
-
 import iotsuite.semanticmodel.Storage;
 
 import java.util.ArrayList;
@@ -91,6 +88,7 @@ public class StorageCompiler {
 
 		SQLtype.put("String", "VARCHAR(255)");
 		SQLtype.put("double", "DOUBLE");
+		SQLtype.put("Double", "DOUBLE");
 		SQLtype.put("integer", "INTEGER");
 
 	}

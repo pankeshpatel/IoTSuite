@@ -86,6 +86,19 @@ public class LinkerCompiler {
 				+ "/src/deviceImpl");
 
 		copyFiles(srcFolder, destFolder);
+		
+		
+		File srcFolder1 = new File(GlobalVariable.templatePath + "/"
+				+ "ApplicationLogic/src/deviceImpl");
+
+		// File destFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// GlobalVariable.deploymentFolderPath + "/" + name + "/src/" +
+		// "logic");
+		File destFolder1 = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
+				+ "deviceImpl");
+
+		copyFiles(srcFolder1, destFolder1);
 
 	}
 
@@ -95,7 +108,7 @@ public class LinkerCompiler {
 		// "DeviceDrivers" + "/" + type + "/src/factory");
 		File srcFolder = new File(GlobalVariable.templatePath + "/" + type
 				+ "DeviceDrivers" + "/src/factory/");
-
+		
 		// File destFolder = new File(GlobalVariable.frameworkRootDir + "/" +
 		// GlobalVariable.deploymentFolderPath + "/" + name + "/src/" +
 		// "factory");
@@ -104,6 +117,18 @@ public class LinkerCompiler {
 				+ "factory");
 
 		copyFiles(srcFolder, destFolder);
+		
+		File srcFolder1 = new File(GlobalVariable.templatePath + "/"
+				+ "ApplicationLogic/src/factory");
+
+		// File destFolder = new File(GlobalVariable.frameworkRootDir + "/" +
+		// GlobalVariable.deploymentFolderPath + "/" + name + "/src/" +
+		// "logic");
+		File destFolder1 = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
+				+ "factory");
+
+		copyFiles(srcFolder1, destFolder1);
 
 	}
 

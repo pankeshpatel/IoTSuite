@@ -49,6 +49,10 @@ public class Main {
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
 
+				
+				
+				
+					
 				// User Interaction
 
 				/*
@@ -145,10 +149,9 @@ public class Main {
 
 				MapperCompiler.mappingFileGenerator(deviceList,
 						mappingConstraintList);
-				// System.out.println("I am in Mapping Acitivity");
 				LinkerCompiler.linkerAlgo();
 				GenFiller.copyLinking();
-				GenFiller.copyMapping();
+				//GenFiller.copyMapping();
 
 			}
 
@@ -161,12 +164,15 @@ public class Main {
 
 		} else {
 
-			GlobalVariable.vocabSpec = args[0];
-			GlobalVariable.archSpec = args[1];
-			GlobalVariable.deploymentSpec = args[2];
-			GlobalVariable.stringTemplatePath = args[3];
-			GlobalVariable.templatePath = args[4];
-			GlobalVariable.frameworkRootDir = GlobalVariable.templatePath;
+			
+			
+			//GlobalVariable.vocabSpec = args[0];
+			//GlobalVariable.archSpec = args[1];
+			//GlobalVariable.deploymentSpec = args[2];
+			//GlobalVariable.stringTemplatePath = args[3];
+			//GlobalVariable.templatePath = args[4];
+			//GlobalVariable.frameworkRootDir = GlobalVariable.templatePath;
+			
 
 			List<Device> deviceList;
 			List<DeploymentScope> mappingConstraintList;

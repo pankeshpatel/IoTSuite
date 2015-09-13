@@ -100,7 +100,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 	  try {  
 			ps = 
 				connect.prepareStatement("INSERT INTO $Storageservice.name$ " +
-						"($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUE" +
+						"($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
 						" ("+newIndex+"$Storageservice.allStructFieldName:{structFieldName |,"+newprofileValue.get$structFieldName$()+"}$)");
 			/*pstmt.setString(1, newIndex);
   			pstmt.setDouble(2, newprofileValue.gettempValue());

@@ -16,7 +16,7 @@ public class JavaSE$CS.name$ implements I$CS.name$, IDataListener{
 
 public JavaSE$CS.name$() {
     pubSubSensingFramework = PubSubsSensingFramework.getInstance();
-    pubSubSensingFramework.registerForSensorData(this,  "$CS.operation$-RESULT");  
+    pubSubSensingFramework.registerForSensorData(this,"$CS.operation$-RESULT");  
     ComputationalFactory.initializeCompuatioanlComponent("$CS.operation$-CALCULATE");
     
   } 
@@ -31,20 +31,28 @@ public JavaSE$CS.name$() {
       this.listener$consumedInfo.name$ = handler;
       
       }
-         
+            @Override
+ public void onDataReceived(String eventName, Object data) {
+ 
+ 
+ 
+ $consumedInfo.type.name$ arg = ($consumedInfo.type.name$) data;
+   listener$consumedInfo.name$.onNew$consumedInfo.name$(arg);
+  
+ }
+    
       
     
     
    
-    @Override
-  public void onDataReceived(String eventName, Object data) {
-    $consumedInfo.type.name$ arg = ($consumedInfo.type.name$) data;
-    listener$consumedInfo.name$.onNew$consumedInfo.name$(arg);
-  }
+   // @Override
+  //public void onDataReceived(String eventName, Object data) {
+    //$consumedInfo.type.name$ arg = ($consumedInfo.type.name$) data;
+    //listener$consumedInfo.name$.onNew$consumedInfo.name$(arg);
+ // }
   }; separator="\n"$ 
     
     
-   
-    
+ 
 
 }

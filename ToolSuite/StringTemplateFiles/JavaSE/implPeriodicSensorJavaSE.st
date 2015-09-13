@@ -8,9 +8,11 @@ import java.util.Random;
 
 public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 
+
+  //TODO:Device developer will configure following parameters according to requirement
 	private static int  SAMPLE_PERIOD = 1000;
 	private static  int SAMPLE_DURATION = 10000;
-	private static int  duration=0;
+	private static int  temp=0;
 	
 	
    /*public JavaSE$SensorDriver.name$() { 
@@ -31,11 +33,11 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
    public void get$generatedInfo.name; format="avoidCapital"$(Listener$generatedInfo.name$ handler){
 	   
 	   
-	   while (duration <= SAMPLE_DURATION) {
+	   while (temp <= SAMPLE_DURATION) {
            try {
                handler.onNewtempMeasurement(this.gettempMeasurement());
                Thread.sleep(SAMPLE_PERIOD);
-				duration  = duration  + SAMPLE_PERIOD;
+				temp  = temp  + SAMPLE_PERIOD;
            } catch (InterruptedException e) {
                e.printStackTrace();
                // continueFlag = false;

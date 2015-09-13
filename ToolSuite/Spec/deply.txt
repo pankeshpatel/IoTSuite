@@ -1,47 +1,45 @@
 devices: 	
 
- D1:
+    D1:
         region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
+            Room  : 1;
         platform: JavaSE;    
-        resources :TemperatureSensor;
+        resources :SmokeDetector;
 		  protocol : mqtt;  
 
 	D2:
         region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
+            Room  : 1;
         platform: JavaSE;    
-        resources :  ;
+        resources :TemperatureSensor ;
 		  protocol : mqtt;  
 
+	
 	D3:
         region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
+             Room  : 1;
+        platform: JavaSE;    
+        resources :  ;
+		  protocol : mqtt;
+		    
+	D4:
+        region :
+             Room  : 1;
         platform: JavaSE;    
         resources :  ;
 		  protocol : mqtt;  
 
+ 	D5:
+        region :
+             Room  : 1;
+        platform: JavaSE;    
+        resources :  ;
+		  protocol : mqtt;  
+	D6:
+        region :
+             Room  : 1;
+        platform: JavaSE;    
+        resources :Alarm;
+		  protocol : mqtt;  
    
-    D4:
-        region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
-        platform: JavaSE;    
-        resources : ;
-		  protocol : mqtt;  
- 
-   D4:
-        region :
-            Building : 15;
-            Floor : 1511;
-            Room : 15110;
-        platform: JavaSE;    
-        resources : Heater;
-		  protocol : mqtt;  
+   

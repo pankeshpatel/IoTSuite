@@ -151,7 +151,7 @@ sensoreventMeasurement_def:
 
 actuator_def:
    CAPITALIZED_ID
-   {context.currentActuator = new ActuatorCompiler($CAPITALIZED_ID.text);}
+    {context.currentActuator = new ActuatorCompiler($CAPITALIZED_ID.text);}
    (action_def ';')*
    {context.currentActuator.generateActuatorCode();}    
 ;
@@ -165,8 +165,11 @@ action_def:
 parameter_def :
     lc_id ':'  CAPITALIZED_ID (',' parameter_def )?
     { 
+     context.constructActuatorSymblTable($CAPITALIZED_ID.text);
+    
     context.currentActuator.addParameter($lc_id.text, $CAPITALIZED_ID.text); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
+   
     }
 ; 
 

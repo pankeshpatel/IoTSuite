@@ -9,6 +9,8 @@ public class GlobalVariable {
 	public static String stringTemplatePath = "./StringTemplateFiles";
 
 	public static String frameworkRootDir;
+	
+	public static String factoryRootDir;
 
 	public static String frameworkDirPath = "/framework";
 	// public static String outputDirPath = "./gen";

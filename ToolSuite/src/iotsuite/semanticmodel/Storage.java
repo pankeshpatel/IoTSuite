@@ -1,16 +1,13 @@
 package iotsuite.semanticmodel;
 
 import iotsuite.common.GlobalVariable;
-import iotsuite.compiler.StructCompiler;
+
 
 //import iotsuite.compiler.Attribute;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
 import java.util.Set;
 
 public class Storage extends SoftwareComponent {

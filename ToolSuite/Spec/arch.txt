@@ -1,23 +1,16 @@
-softwarecomponents:
-    computationalService:
-             
-            
-            RoomAvgTemp 
-		    consume tempMeasurement from region-hops:0:Room;
-			COMPUTE(AVG);
-            generate roomAvgTempMeasurement:TempStruct;
+softwarecomponents:           
+   computationalService :       
+		CalculateAvgTemp 
+            consume tempMeasurement from region-hops:0:Room;
+            generate avgTempMeasurement:TempStruct;
             partition-per : Room;
-      		
-      		RoomController
-      		consume roomAvgTempMeasurement from region-hops:0:Room;
-            command SetTemp(setTemp) to region-hops:0:Room;
-      		partition-per : Room;
-      		
-      		
-      		
-             
-            
-            
-            
-            
-                     
+		FireState
+		    consume smokePresence from region-hops:0:Room;
+			consume avgTempMeasurement from region-hops:0:Room;
+		    generate fireStateMeasurement:PresenceStruct;
+		    partition-per : Room;
+		FireController
+			consume fireStateMeasurement from region-hops:0:Room;
+			command Activate() to region-hops:0:Room;
+			command DeActivate() to region-hops:0:Room;
+			partition-per:Room;
