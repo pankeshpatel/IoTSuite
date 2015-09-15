@@ -41,6 +41,9 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
     	this.myPubSubMiddleware.publish("$action.name; format="capital"$", $if(action.Parameter)$ $action.allParameter: { param | arg }; separator=" , "$ $else$ null $endif$ , myDeviceInfo );     
     }
 }; separator="\n"$        
+
+
+
         public void notifyReceived(String eventName, Object arg, Device deviceInfo) { 
 	    try {
 	      $CS.allConsumedInfo:{ consumedInfo | if (eventName.equals("$consumedInfo.name$"))  
@@ -54,6 +57,10 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
               e.printStackTrace();
         }
         }	  
+        
+        
+        
+        
 	    $CS.allConsumedInfo:{ consumedInfo | 	   
 	    public abstract void onNew$consumedInfo.name; format="capital"$( $consumedInfo.type.name$ arg);	   		
 	   	

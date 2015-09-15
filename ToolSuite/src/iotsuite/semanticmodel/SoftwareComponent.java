@@ -26,6 +26,8 @@ public abstract class SoftwareComponent<I extends Information> {
 		this.generateInfo = generateInfo;
 		this.consumeInfo = consumeInfo;
 		this.partitionAttributeVal = partitionAttributeVal;
+		
+		
 
 	}
 

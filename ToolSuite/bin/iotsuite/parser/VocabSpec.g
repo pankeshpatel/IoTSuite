@@ -69,7 +69,7 @@ structField_def:
   lc_id ':' dataType 
   { context.currentStruct.addField($lc_id.text, $dataType.text);
    //context.constructStructureSymbTable($lc_id.text,$dataType.text);
-   // context.constructStructResponseTypeSymblTable($lc_id.text,$dataType.text);
+   //context.constructStructResponseTypeSymblTable($lc_id.text,$dataType.text);
    context.constructStructFieldSymblTable($lc_id.text,$dataType.text);
     context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
 ; 
@@ -91,10 +91,10 @@ abilities_def :
  
 sensor_def:
  
-      ('periodicsensors' ':' periodicsensor_def)*
+      ('periodicsensors' ':'(periodicsensor_def)*)*
      // 'periodicsensors' ':' (periodicsensor_def|eventsensor_def)
      //'sensor_def' ':' (periodicsensor_def | eventsensor_def )+ 
-      ('eventdriven' ':' eventsensor_def)*
+      ('eventdriven' ':' (eventsensor_def)*)*
    /* CAPITALIZED_ID
     {context.currentSensor = new SensorCompiler($CAPITALIZED_ID.text);}
     (sensorMeasurement_def ';')* 

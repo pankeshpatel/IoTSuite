@@ -126,7 +126,8 @@ public class JavaFrameworkFromST {
 	// For Computational DeviceImpl
 	public CompilationUnit generateImplComputationalService(
 			ComputationalService computationalService) {
-
+		
+		
 		StringTemplate templateOfComputationalService = group
 				.getInstanceOf("JavaSE/implComputationalJavaSE");
 		templateOfComputationalService.setAttribute("CS", computationalService);
@@ -136,6 +137,22 @@ public class JavaFrameworkFromST {
 
 	}
 
+	
+	public CompilationUnit generateImplAggComputationalService(
+			ComputationalService computationalService) {
+		
+		System.out.println("I am in new implAgg");
+		StringTemplate templateOfComputationalService = group
+				.getInstanceOf("JavaSE/implAggComputationalJavaSE");
+		templateOfComputationalService.setAttribute("CS", computationalService);
+		return new CompilationUnit("JavaSE" + computationalService.getName()
+				+ ".java", templateOfComputationalService, "JavaSEImplAgg",
+				"Computational", computationalService);
+
+	}
+	
+	
+	
 	// JavaSE Sensor Factory
 	public CompilationUnit generateJavaSESensorFactory(Sensor sensorDriver) {
 		StringTemplate templateOfSensorDriver = group
@@ -361,9 +378,24 @@ public class JavaFrameworkFromST {
 	}
 
 	// ComputationalService
+	public CompilationUnit generateAggregatorComputationalServiceLogic(
+			ComputationalService computationalService) {
+
+		
+		StringTemplate templateOfComputationalService = group
+				.getInstanceOf("Common/logicAggComputationalService");
+		templateOfComputationalService.setAttribute("CS", computationalService);
+		return new CompilationUnit("Logic" + computationalService.getName()
+				+ ".java", templateOfComputationalService, "Logic", "Future",
+				computationalService);
+	}
+	
+	
+	
 	public CompilationUnit generateComputationalServiceLogic(
 			ComputationalService computationalService) {
 
+		
 		StringTemplate templateOfComputationalService = group
 				.getInstanceOf("Common/logicComputationalService");
 		templateOfComputationalService.setAttribute("CS", computationalService);

@@ -442,9 +442,12 @@ public class SourceFileDumper {
 			 * "/" + unit.getFileNameToGenerate());
 			 */
 		}
-
+		
+		
+		//Generate code in deviceImpl for ApplicationLogic
 		else if (unit.getFileCategory().equals("JavaSEImpl")) {
 
+		
 			new File(GlobalVariable.templatePath + "ApplicationLogic"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath).mkdirs();

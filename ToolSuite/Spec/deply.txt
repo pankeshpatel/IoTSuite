@@ -4,42 +4,29 @@ devices:
         region :
             Room  : 1;
         platform: JavaSE;    
-        resources :SmokeDetector;
+        resources :TemperatureSensor;
 		  protocol : mqtt;  
 
 	D2:
         region :
             Room  : 1;
         platform: JavaSE;    
-        resources :TemperatureSensor ;
+        resources : ;
 		  protocol : mqtt;  
 
-	
 	D3:
         region :
              Room  : 1;
         platform: JavaSE;    
         resources :  ;
-		  protocol : mqtt;
-		    
+		  protocol : mqtt;  
+
+
 	D4:
         region :
              Room  : 1;
         platform: JavaSE;    
-        resources :  ;
-		  protocol : mqtt;  
-
- 	D5:
-        region :
-             Room  : 1;
-        platform: JavaSE;    
-        resources :  ;
-		  protocol : mqtt;  
-	D6:
-        region :
-             Room  : 1;
-        platform: JavaSE;    
-        resources :Alarm;
+        resources :Heater;
 		  protocol : mqtt;  
    
    

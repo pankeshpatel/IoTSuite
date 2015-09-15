@@ -19,7 +19,7 @@ public class  Logic$Storageservice.name$  extends $Storageservice.name$  {
 		super(pubSubM, deviceInfo);
 		
 		deviceType = deviceInfo.getType();
-		
+		  obj$Storageservice.name$ = $Storageservice.name$Factory.get$Storageservice.name$(myDeviceInfo.getType(), null, null);
 			}
 	
 	$Storageservice.allDataAccess:{ dataAccess |
@@ -30,7 +30,7 @@ public class  Logic$Storageservice.name$  extends $Storageservice.name$  {
 		
     if (deviceType.equals(GlobalVariable.deviceJAVASEType)) {
        
-        I$Storageservice.name$ obj$Storageservice.name$ = $Storageservice.name$Factory.get$Storageservice.name$(myDeviceInfo.getType(), null, null);
+      
        set$dataAccess.dataAccessName; format="capital"$(obj$Storageservice.name$.get$dataAccess.dataAccessName; format="capital"$(arg));
        }
        else{

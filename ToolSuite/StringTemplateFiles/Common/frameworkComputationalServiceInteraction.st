@@ -44,6 +44,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         
      
         this.myPubSubMiddleware.publish("$generatedInfo.name; format="capital"$", newValue, myDeviceInfo);		
+       
       }
     } 
     /*   
@@ -57,23 +58,27 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         
         public void notifyReceived(String eventName, Object arg, Device deviceInfo) { 
         try {	
-        $CS.allConsumedInfo:{ consumedInfo | 
+         $CS.allConsumedInfo:{ consumedInfo | 
         if (eventName.equals("$consumedInfo.name$"))  
         { 
-        	 Logger.log(myDeviceInfo.getName(),"$CS.name$",
-     				"Notification Received $consumedInfo.name$");
-        	
+           Logger.log(myDeviceInfo.getName(),"$CS.name$",
+            "Notification Received $consumedInfo.name$");
+          
            onNew$consumedInfo.name; format="capital"$(($consumedInfo.type.name$) arg); 
+           
+         //  onNew$consumedInfo.name; format="capital"$Received(($CS.allConsumedInfo:{ consumedInfo | $consumedInfo.type.name$}$) arg);
         }
         }$
+      
         
-        $CS.allDataAccess:{ dataAccess |
+          
+         $CS.allDataAccess:{ dataAccess |
         if (eventName.equals("$dataAccess.dataAccessName; format="capital"$")) {
-				Logger.log(myDeviceInfo.getName(), "Proximity",
-						"Notification Received Profile");
+        Logger.log(myDeviceInfo.getName(), "Proximity",
+            "Notification Received Profile");
 
-				onNew$dataAccess.dataAccessName; format="capital"$Received(($CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type.name$}$) arg);
-		}
+        onNew$dataAccess.dataAccessName; format="capital"$Received(( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type.name$}; separator="\n"$) arg);
+       }
         }$
         
         

@@ -31,7 +31,7 @@ archSpec :
 ;   
   
 component_def :
-    'computationalService' ':' (cs_def)+   
+    'computationalService' ':' (cs_def)   
 ;
 
  
@@ -52,22 +52,53 @@ structField_def:
 
 
 cs_def:
-  CAPITALIZED_ID
+
+    (agg_cs_def)*
+    (computatinal_def)+ 
+
+   
+;
+
+ 
+agg_cs_def:
+
+ ('AGG'':') CAPITALIZED_ID
+    { 
+     context.currentComputationalService = new ComputationalServiceCompiler(); 
+     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);} 
+    (csConsumeInfo_def ';')* 
+    (csOperation_def ';')*
+     (csGeneratedInfo_def ';')*
+    (partition_def ';')+  
+    {  
+     context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
+     context.currentComputationalService.createCSObject();
+   context.currentComputationalService.generateAggregatorComputationalServiceCode(); 
+    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
+   
+    }
+;
+
+
+
+computatinal_def:
+
+ CAPITALIZED_ID
     { 
      context.currentComputationalService = new ComputationalServiceCompiler(); 
      context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);} 
     (csConsumeInfo_def ';')* 
     (csRequest_def  ';')*
-   (csOperation_def ';')*
-     (csGeneratedInfo_def ';')*
+    (csGeneratedInfo_def ';')*
     (cntrlCommand_def ';')*   
     (partition_def ';')+  
     { 
-     context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
+    context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
      context.currentComputationalService.createCSObject();
     context.currentComputationalService.generateComputationalServiceCode(); 
-    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
-    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
+   context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+   context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
    
     }
 ;

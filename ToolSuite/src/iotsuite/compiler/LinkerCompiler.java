@@ -102,6 +102,9 @@ public class LinkerCompiler {
 
 	}
 
+	
+	
+	
 	public static void copyFactory(String type, String name) {
 
 		// File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" +
@@ -131,7 +134,6 @@ public class LinkerCompiler {
 		copyFiles(srcFolder1, destFolder1);
 
 	}
-
 	public static void copyFrameworkGeneratedFromVocabulary(String type,
 			String name) {
 

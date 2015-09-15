@@ -57,7 +57,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 				 
 				 System.out.println("Table exisits in the database.....");	
 				 $Storageservice.allDataAccess:{dataAccess |
-						setprofile("-400", new $dataAccess.generatedInfo.type.name$(-400.0,"C"));
+						//setprofile("-400", new $dataAccess.generatedInfo.type.name$(-400.0,"C"));
 						}$
 				}
 				else{				
@@ -76,7 +76,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 				
 				$Storageservice.allDataAccess:{dataAccess |
 					
-				setprofile("-300", new $dataAccess.generatedInfo.type.name$(-100.0,"C"));
+				//setprofile("-300", new $dataAccess.generatedInfo.type.name$(-100.0,"C"));
 				}$
 				}
 				

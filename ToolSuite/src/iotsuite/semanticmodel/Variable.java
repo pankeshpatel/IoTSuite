@@ -10,6 +10,7 @@ public class Variable {
 		super();
 		this.name = name;
 		this.type = type;
+		
 
 	}
 

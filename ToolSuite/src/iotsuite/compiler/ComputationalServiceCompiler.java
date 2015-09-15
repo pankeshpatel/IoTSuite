@@ -160,13 +160,13 @@ public class ComputationalServiceCompiler {
 	 * ApplicationLogic
 	 */
 
-	public void generateComputationalServiceCode() {
+	public void generateAggregatorComputationalServiceCode() {
 		generateComputationalServiceInteraction_ComputationalServiceCompiler();
-		generateComputationalServiceLogic_ComputationalServiceCompiler();
-		generateComputationalServiceFactory_ComputationalServiceCompiler();
+		generateAggregatorComputationalServiceLogic_ComputationalServiceCompiler();
+		generateAggregatorComputationalServiceFactory_ComputationalServiceCompiler();
 
 		// Interface
-		generateComputationalServiceInterface_ComputationalServiceCompiler();
+		generateAggregatorComputationalServiceInterface_ComputationalServiceCompiler();
 		// Listener
 
 		// generateSensorListener_SensorCompiler(sensorDriver
@@ -183,7 +183,22 @@ public class ComputationalServiceCompiler {
 		}
 		// Impl
 		generateImplComputationalService_ComputationalServiceCompiler();
+		
 	}
+
+	
+	public void generateComputationalServiceCode() {
+		// TODO Auto-generated method stub
+		
+		generateComputationalServiceInteraction_ComputationalServiceCompiler();
+		generateComputationalServiceLogic_ComputationalServiceCompiler();
+	}
+
+	
+	/*public void generateComputational12ServiceCode() {
+		// TODO Auto-generated method stub
+		generateAggregatorComputationalServiceLogic_ComputationalServiceCompiler();
+	}*/
 
 	public void generateComputationalServiceInteraction_ComputationalServiceCompiler() {
 
@@ -195,6 +210,14 @@ public class ComputationalServiceCompiler {
 
 	}
 
+	public void generateAggregatorComputationalServiceLogic_ComputationalServiceCompiler() {
+		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedComputationalService
+				.generateAggregatorComputationalServiceLogic(computationalService);
+		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
+		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
+	}
+	
 	public void generateComputationalServiceLogic_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
@@ -203,7 +226,7 @@ public class ComputationalServiceCompiler {
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
 
-	public void generateComputationalServiceFactory_ComputationalServiceCompiler() {
+	public void generateAggregatorComputationalServiceFactory_ComputationalServiceCompiler() {
 
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
@@ -212,7 +235,7 @@ public class ComputationalServiceCompiler {
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
 
-	public void generateComputationalServiceInterface_ComputationalServiceCompiler() {
+	public void generateAggregatorComputationalServiceInterface_ComputationalServiceCompiler() {
 
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
@@ -237,5 +260,11 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
+	
+	
+	
+	
+
+	
 
 }

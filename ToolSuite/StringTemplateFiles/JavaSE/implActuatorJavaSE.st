@@ -30,8 +30,8 @@ public class JavaSE$Actuatordriver.name$ implements I$Actuatordriver.name$ {
   @Override
   public void $action.name$($action.allParameter:{ param | $param.type.name$ arg }; 
    separator=", "$) {
-   jlabel1.setText("Heater is $action.name$ "+$Actuatordriver.allFieldName:{ fieldName | arg.get$fieldName$() };separator="+" $);
-
+   //jlabel1.setText("Heater is $action.name$ "+$Actuatordriver.allFieldName:{ fieldName | arg.get$fieldName$() };separator="+" $);
+jlabel1.setText(" $action.name$ command is fired");
    } 
     
    }; separator="\n"$ 
