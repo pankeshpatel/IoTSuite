@@ -2,11 +2,16 @@ softwarecomponents:
     computationalService:
              
             
-            AGG: RoomAvgTemp 
+            Aggregator: 
+            
+            RoomAvgTemp 
 		    consume tempMeasurement from region-hops:0:Room;
 			COMPUTE(AVG);
             generate roomAvgTempMeasurement:TempStruct;
             partition-per : Room;
+      		
+      		
+      		Controller:
       		
       		RoomController
       		consume roomAvgTempMeasurement from region-hops:0:Room;

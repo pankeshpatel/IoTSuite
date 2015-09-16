@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g 2015-09-15 16:07:54
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g 2015-09-16 16:32:16
 
 package iotsuite.parser;
 import iotsuite.compiler.*; 
@@ -15,10 +15,11 @@ import java.util.ArrayList;
 public class ArchSpecParser extends Parser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "INT", 
-		"WS", "'('", "')'", "':'", "';'", "'AGG'", "'Boolean'", "'COMPUTE('", 
-		"'Integer'", "'String'", "'boolean'", "'command'", "'computationalService'", 
-		"'consume'", "'double'", "'from'", "'generate'", "'long'", "'partition-per'", 
-		"'region-hops'", "'request'", "'softwarecomponents'", "'structs'", "'to'"
+		"WS", "'('", "')'", "':'", "';'", "'Aggregator'", "'Boolean'", "'COMPUTE('", 
+		"'Controller'", "'Coordinator'", "'Integer'", "'String'", "'boolean'", 
+		"'command'", "'computationalService'", "'consume'", "'double'", "'from'", 
+		"'generate'", "'long'", "'partition-per'", "'region-hops'", "'request'", 
+		"'softwarecomponents'", "'structs'", "'to'"
 	};
 	public static final int EOF=-1;
 	public static final int T__8=8;
@@ -44,6 +45,8 @@ public class ArchSpecParser extends Parser {
 	public static final int T__28=28;
 	public static final int T__29=29;
 	public static final int T__30=30;
+	public static final int T__31=31;
+	public static final int T__32=32;
 	public static final int CAPITALIZED_ID=4;
 	public static final int ID=5;
 	public static final int INT=6;
@@ -89,7 +92,7 @@ public class ArchSpecParser extends Parser {
 			while (true) {
 				int alt1=2;
 				int LA1_0 = input.LA(1);
-				if ( (LA1_0==29) ) {
+				if ( (LA1_0==31) ) {
 					alt1=1;
 				}
 
@@ -97,7 +100,7 @@ public class ArchSpecParser extends Parser {
 				case 1 :
 					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:29:6: 'structs' ':' struct_def
 					{
-					match(input,29,FOLLOW_29_in_archSpec90); 
+					match(input,31,FOLLOW_31_in_archSpec90); 
 					match(input,10,FOLLOW_10_in_archSpec92); 
 					pushFollow(FOLLOW_struct_def_in_archSpec94);
 					struct_def();
@@ -111,7 +114,7 @@ public class ArchSpecParser extends Parser {
 				}
 			}
 
-			match(input,28,FOLLOW_28_in_archSpec104); 
+			match(input,30,FOLLOW_30_in_archSpec104); 
 			match(input,10,FOLLOW_10_in_archSpec106); 
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:30:31: ( component_def )+
 			int cnt2=0;
@@ -119,7 +122,7 @@ public class ArchSpecParser extends Parser {
 			while (true) {
 				int alt2=2;
 				int LA2_0 = input.LA(1);
-				if ( (LA2_0==19) ) {
+				if ( (LA2_0==21) ) {
 					alt2=1;
 				}
 
@@ -164,7 +167,7 @@ public class ArchSpecParser extends Parser {
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:33:15: ( 'computationalService' ':' ( cs_def ) )
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:34:5: 'computationalService' ':' ( cs_def )
 			{
-			match(input,19,FOLLOW_19_in_component_def129); 
+			match(input,21,FOLLOW_21_in_component_def129); 
 			match(input,10,FOLLOW_10_in_component_def131); 
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:34:32: ( cs_def )
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:34:33: cs_def
@@ -284,64 +287,154 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "cs_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:54:1: cs_def : ( agg_cs_def )* ( computatinal_def )+ ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:54:1: cs_def : ( 'Aggregator' ':' ( agg_cs_def )* )* ( 'Coordinator' ':' ( coordinator_def )* )* ( 'Controller' ':' ( computatinal_def )* )* ;
 	public final void cs_def() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:54:7: ( ( agg_cs_def )* ( computatinal_def )+ )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:56:5: ( agg_cs_def )* ( computatinal_def )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:54:7: ( ( 'Aggregator' ':' ( agg_cs_def )* )* ( 'Coordinator' ':' ( coordinator_def )* )* ( 'Controller' ':' ( computatinal_def )* )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:56:5: ( 'Aggregator' ':' ( agg_cs_def )* )* ( 'Coordinator' ':' ( coordinator_def )* )* ( 'Controller' ':' ( computatinal_def )* )*
 			{
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:56:5: ( agg_cs_def )*
-			loop4:
-			while (true) {
-				int alt4=2;
-				int LA4_0 = input.LA(1);
-				if ( (LA4_0==12) ) {
-					alt4=1;
-				}
-
-				switch (alt4) {
-				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:56:6: agg_cs_def
-					{
-					pushFollow(FOLLOW_agg_cs_def_in_cs_def222);
-					agg_cs_def();
-					state._fsp--;
-
-					}
-					break;
-
-				default :
-					break loop4;
-				}
-			}
-
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:57:5: ( computatinal_def )+
-			int cnt5=0;
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:56:5: ( 'Aggregator' ':' ( agg_cs_def )* )*
 			loop5:
 			while (true) {
 				int alt5=2;
 				int LA5_0 = input.LA(1);
-				if ( (LA5_0==CAPITALIZED_ID) ) {
+				if ( (LA5_0==12) ) {
 					alt5=1;
 				}
 
 				switch (alt5) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:57:6: computatinal_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:56:6: 'Aggregator' ':' ( agg_cs_def )*
 					{
-					pushFollow(FOLLOW_computatinal_def_in_cs_def231);
-					computatinal_def();
-					state._fsp--;
+					match(input,12,FOLLOW_12_in_cs_def228); 
+					match(input,10,FOLLOW_10_in_cs_def229); 
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:56:23: ( agg_cs_def )*
+					loop4:
+					while (true) {
+						int alt4=2;
+						int LA4_0 = input.LA(1);
+						if ( (LA4_0==CAPITALIZED_ID) ) {
+							alt4=1;
+						}
+
+						switch (alt4) {
+						case 1 :
+							// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:56:24: agg_cs_def
+							{
+							pushFollow(FOLLOW_agg_cs_def_in_cs_def233);
+							agg_cs_def();
+							state._fsp--;
+
+							}
+							break;
+
+						default :
+							break loop4;
+						}
+					}
 
 					}
 					break;
 
 				default :
-					if ( cnt5 >= 1 ) break loop5;
-					EarlyExitException eee = new EarlyExitException(5, input);
-					throw eee;
+					break loop5;
 				}
-				cnt5++;
+			}
+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:58:5: ( 'Coordinator' ':' ( coordinator_def )* )*
+			loop7:
+			while (true) {
+				int alt7=2;
+				int LA7_0 = input.LA(1);
+				if ( (LA7_0==16) ) {
+					alt7=1;
+				}
+
+				switch (alt7) {
+				case 1 :
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:58:6: 'Coordinator' ':' ( coordinator_def )*
+					{
+					match(input,16,FOLLOW_16_in_cs_def248); 
+					match(input,10,FOLLOW_10_in_cs_def249); 
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:58:23: ( coordinator_def )*
+					loop6:
+					while (true) {
+						int alt6=2;
+						int LA6_0 = input.LA(1);
+						if ( (LA6_0==CAPITALIZED_ID) ) {
+							alt6=1;
+						}
+
+						switch (alt6) {
+						case 1 :
+							// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:58:24: coordinator_def
+							{
+							pushFollow(FOLLOW_coordinator_def_in_cs_def252);
+							coordinator_def();
+							state._fsp--;
+
+							}
+							break;
+
+						default :
+							break loop6;
+						}
+					}
+
+					}
+					break;
+
+				default :
+					break loop7;
+				}
+			}
+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:60:5: ( 'Controller' ':' ( computatinal_def )* )*
+			loop9:
+			while (true) {
+				int alt9=2;
+				int LA9_0 = input.LA(1);
+				if ( (LA9_0==15) ) {
+					alt9=1;
+				}
+
+				switch (alt9) {
+				case 1 :
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:60:6: 'Controller' ':' ( computatinal_def )*
+					{
+					match(input,15,FOLLOW_15_in_cs_def269); 
+					match(input,10,FOLLOW_10_in_cs_def270); 
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:60:22: ( computatinal_def )*
+					loop8:
+					while (true) {
+						int alt8=2;
+						int LA8_0 = input.LA(1);
+						if ( (LA8_0==CAPITALIZED_ID) ) {
+							alt8=1;
+						}
+
+						switch (alt8) {
+						case 1 :
+							// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:60:23: computatinal_def
+							{
+							pushFollow(FOLLOW_computatinal_def_in_cs_def273);
+							computatinal_def();
+							state._fsp--;
+
+							}
+							break;
+
+						default :
+							break loop8;
+						}
+					}
+
+					}
+					break;
+
+				default :
+					break loop9;
+				}
 			}
 
 			}
@@ -360,131 +453,124 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "agg_cs_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:63:1: agg_cs_def : ( 'AGG' ':' ) CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+ ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:67:1: agg_cs_def : CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+ ;
 	public final void agg_cs_def() throws RecognitionException {
 		Token CAPITALIZED_ID4=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:63:11: ( ( 'AGG' ':' ) CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+ )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:65:2: ( 'AGG' ':' ) CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:67:11: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+ )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:69:2: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+
 			{
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:65:2: ( 'AGG' ':' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:65:3: 'AGG' ':'
-			{
-			match(input,12,FOLLOW_12_in_agg_cs_def252); 
-			match(input,10,FOLLOW_10_in_agg_cs_def253); 
-			}
-
-			CAPITALIZED_ID4=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_agg_cs_def256); 
+			CAPITALIZED_ID4=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_agg_cs_def300); 
 			 
 			     context.currentComputationalService = new ComputationalServiceCompiler(); 
 			     context.currentMappingConstraint.setSoftwareComponentName((CAPITALIZED_ID4!=null?CAPITALIZED_ID4.getText():null));
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:69:5: ( csConsumeInfo_def ';' )*
-			loop6:
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:73:5: ( csConsumeInfo_def ';' )*
+			loop10:
 			while (true) {
-				int alt6=2;
-				int LA6_0 = input.LA(1);
-				if ( (LA6_0==20) ) {
-					alt6=1;
+				int alt10=2;
+				int LA10_0 = input.LA(1);
+				if ( (LA10_0==22) ) {
+					alt10=1;
 				}
 
-				switch (alt6) {
+				switch (alt10) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:69:6: csConsumeInfo_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:73:6: csConsumeInfo_def ';'
 					{
-					pushFollow(FOLLOW_csConsumeInfo_def_in_agg_cs_def270);
+					pushFollow(FOLLOW_csConsumeInfo_def_in_agg_cs_def314);
 					csConsumeInfo_def();
 					state._fsp--;
 
-					match(input,11,FOLLOW_11_in_agg_cs_def272); 
+					match(input,11,FOLLOW_11_in_agg_cs_def316); 
 					}
 					break;
 
 				default :
-					break loop6;
+					break loop10;
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:70:5: ( csOperation_def ';' )*
-			loop7:
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:74:5: ( csOperation_def ';' )*
+			loop11:
 			while (true) {
-				int alt7=2;
-				int LA7_0 = input.LA(1);
-				if ( (LA7_0==14) ) {
-					alt7=1;
+				int alt11=2;
+				int LA11_0 = input.LA(1);
+				if ( (LA11_0==14) ) {
+					alt11=1;
 				}
 
-				switch (alt7) {
+				switch (alt11) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:70:6: csOperation_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:74:6: csOperation_def ';'
 					{
-					pushFollow(FOLLOW_csOperation_def_in_agg_cs_def282);
+					pushFollow(FOLLOW_csOperation_def_in_agg_cs_def326);
 					csOperation_def();
 					state._fsp--;
 
-					match(input,11,FOLLOW_11_in_agg_cs_def284); 
+					match(input,11,FOLLOW_11_in_agg_cs_def328); 
 					}
 					break;
 
 				default :
-					break loop7;
+					break loop11;
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:71:6: ( csGeneratedInfo_def ';' )*
-			loop8:
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:75:6: ( csGeneratedInfo_def ';' )*
+			loop12:
 			while (true) {
-				int alt8=2;
-				int LA8_0 = input.LA(1);
-				if ( (LA8_0==23) ) {
-					alt8=1;
+				int alt12=2;
+				int LA12_0 = input.LA(1);
+				if ( (LA12_0==25) ) {
+					alt12=1;
 				}
 
-				switch (alt8) {
+				switch (alt12) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:71:7: csGeneratedInfo_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:75:7: csGeneratedInfo_def ';'
 					{
-					pushFollow(FOLLOW_csGeneratedInfo_def_in_agg_cs_def294);
+					pushFollow(FOLLOW_csGeneratedInfo_def_in_agg_cs_def338);
 					csGeneratedInfo_def();
 					state._fsp--;
 
-					match(input,11,FOLLOW_11_in_agg_cs_def296); 
+					match(input,11,FOLLOW_11_in_agg_cs_def340); 
 					}
 					break;
 
 				default :
-					break loop8;
+					break loop12;
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:72:5: ( partition_def ';' )+
-			int cnt9=0;
-			loop9:
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:76:5: ( partition_def ';' )+
+			int cnt13=0;
+			loop13:
 			while (true) {
-				int alt9=2;
-				int LA9_0 = input.LA(1);
-				if ( (LA9_0==25) ) {
-					alt9=1;
+				int alt13=2;
+				int LA13_0 = input.LA(1);
+				if ( (LA13_0==27) ) {
+					alt13=1;
 				}
 
-				switch (alt9) {
+				switch (alt13) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:72:6: partition_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:76:6: partition_def ';'
 					{
-					pushFollow(FOLLOW_partition_def_in_agg_cs_def305);
+					pushFollow(FOLLOW_partition_def_in_agg_cs_def349);
 					partition_def();
 					state._fsp--;
 
-					match(input,11,FOLLOW_11_in_agg_cs_def307); 
+					match(input,11,FOLLOW_11_in_agg_cs_def351); 
 					}
 					break;
 
 				default :
-					if ( cnt9 >= 1 ) break loop9;
-					EarlyExitException eee = new EarlyExitException(9, input);
+					if ( cnt13 >= 1 ) break loop13;
+					EarlyExitException eee = new EarlyExitException(13, input);
 					throw eee;
 				}
-				cnt9++;
+				cnt13++;
 			}
 
 			  
@@ -510,151 +596,125 @@ public class ArchSpecParser extends Parser {
 
 
 
-	// $ANTLR start "computatinal_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:85:1: computatinal_def : CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+ ;
-	public final void computatinal_def() throws RecognitionException {
+	// $ANTLR start "coordinator_def"
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:87:1: coordinator_def : CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+ ;
+	public final void coordinator_def() throws RecognitionException {
 		Token CAPITALIZED_ID5=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:85:17: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+ )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:87:2: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:87:16: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+ )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:89:1: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+
 			{
-			CAPITALIZED_ID5=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_computatinal_def329); 
+			CAPITALIZED_ID5=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_coordinator_def370); 
 			 
 			     context.currentComputationalService = new ComputationalServiceCompiler(); 
 			     context.currentMappingConstraint.setSoftwareComponentName((CAPITALIZED_ID5!=null?CAPITALIZED_ID5.getText():null));
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:91:5: ( csConsumeInfo_def ';' )*
-			loop10:
-			while (true) {
-				int alt10=2;
-				int LA10_0 = input.LA(1);
-				if ( (LA10_0==20) ) {
-					alt10=1;
-				}
-
-				switch (alt10) {
-				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:91:6: csConsumeInfo_def ';'
-					{
-					pushFollow(FOLLOW_csConsumeInfo_def_in_computatinal_def343);
-					csConsumeInfo_def();
-					state._fsp--;
-
-					match(input,11,FOLLOW_11_in_computatinal_def345); 
-					}
-					break;
-
-				default :
-					break loop10;
-				}
-			}
-
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:92:5: ( csRequest_def ';' )*
-			loop11:
-			while (true) {
-				int alt11=2;
-				int LA11_0 = input.LA(1);
-				if ( (LA11_0==27) ) {
-					alt11=1;
-				}
-
-				switch (alt11) {
-				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:92:6: csRequest_def ';'
-					{
-					pushFollow(FOLLOW_csRequest_def_in_computatinal_def355);
-					csRequest_def();
-					state._fsp--;
-
-					match(input,11,FOLLOW_11_in_computatinal_def358); 
-					}
-					break;
-
-				default :
-					break loop11;
-				}
-			}
-
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:93:5: ( csGeneratedInfo_def ';' )*
-			loop12:
-			while (true) {
-				int alt12=2;
-				int LA12_0 = input.LA(1);
-				if ( (LA12_0==23) ) {
-					alt12=1;
-				}
-
-				switch (alt12) {
-				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:93:6: csGeneratedInfo_def ';'
-					{
-					pushFollow(FOLLOW_csGeneratedInfo_def_in_computatinal_def367);
-					csGeneratedInfo_def();
-					state._fsp--;
-
-					match(input,11,FOLLOW_11_in_computatinal_def369); 
-					}
-					break;
-
-				default :
-					break loop12;
-				}
-			}
-
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:94:5: ( cntrlCommand_def ';' )*
-			loop13:
-			while (true) {
-				int alt13=2;
-				int LA13_0 = input.LA(1);
-				if ( (LA13_0==18) ) {
-					alt13=1;
-				}
-
-				switch (alt13) {
-				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:94:6: cntrlCommand_def ';'
-					{
-					pushFollow(FOLLOW_cntrlCommand_def_in_computatinal_def378);
-					cntrlCommand_def();
-					state._fsp--;
-
-					match(input,11,FOLLOW_11_in_computatinal_def380); 
-					}
-					break;
-
-				default :
-					break loop13;
-				}
-			}
-
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:95:5: ( partition_def ';' )+
-			int cnt14=0;
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:93:5: ( csConsumeInfo_def ';' )*
 			loop14:
 			while (true) {
 				int alt14=2;
 				int LA14_0 = input.LA(1);
-				if ( (LA14_0==25) ) {
+				if ( (LA14_0==22) ) {
 					alt14=1;
 				}
 
 				switch (alt14) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:95:6: partition_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:93:6: csConsumeInfo_def ';'
 					{
-					pushFollow(FOLLOW_partition_def_in_computatinal_def392);
-					partition_def();
+					pushFollow(FOLLOW_csConsumeInfo_def_in_coordinator_def384);
+					csConsumeInfo_def();
 					state._fsp--;
 
-					match(input,11,FOLLOW_11_in_computatinal_def394); 
+					match(input,11,FOLLOW_11_in_coordinator_def386); 
 					}
 					break;
 
 				default :
-					if ( cnt14 >= 1 ) break loop14;
-					EarlyExitException eee = new EarlyExitException(14, input);
+					break loop14;
+				}
+			}
+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:94:5: ( csRequest_def ';' )*
+			loop15:
+			while (true) {
+				int alt15=2;
+				int LA15_0 = input.LA(1);
+				if ( (LA15_0==29) ) {
+					alt15=1;
+				}
+
+				switch (alt15) {
+				case 1 :
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:94:6: csRequest_def ';'
+					{
+					pushFollow(FOLLOW_csRequest_def_in_coordinator_def396);
+					csRequest_def();
+					state._fsp--;
+
+					match(input,11,FOLLOW_11_in_coordinator_def398); 
+					}
+					break;
+
+				default :
+					break loop15;
+				}
+			}
+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:95:7: ( csGeneratedInfo_def ';' )*
+			loop16:
+			while (true) {
+				int alt16=2;
+				int LA16_0 = input.LA(1);
+				if ( (LA16_0==25) ) {
+					alt16=1;
+				}
+
+				switch (alt16) {
+				case 1 :
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:95:8: csGeneratedInfo_def ';'
+					{
+					pushFollow(FOLLOW_csGeneratedInfo_def_in_coordinator_def409);
+					csGeneratedInfo_def();
+					state._fsp--;
+
+					match(input,11,FOLLOW_11_in_coordinator_def411); 
+					}
+					break;
+
+				default :
+					break loop16;
+				}
+			}
+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:96:4: ( partition_def ';' )+
+			int cnt17=0;
+			loop17:
+			while (true) {
+				int alt17=2;
+				int LA17_0 = input.LA(1);
+				if ( (LA17_0==27) ) {
+					alt17=1;
+				}
+
+				switch (alt17) {
+				case 1 :
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:96:5: partition_def ';'
+					{
+					pushFollow(FOLLOW_partition_def_in_coordinator_def419);
+					partition_def();
+					state._fsp--;
+
+					match(input,11,FOLLOW_11_in_coordinator_def421); 
+					}
+					break;
+
+				default :
+					if ( cnt17 >= 1 ) break loop17;
+					EarlyExitException eee = new EarlyExitException(17, input);
 					throw eee;
 				}
-				cnt14++;
+				cnt17++;
 			}
 
 			 
@@ -676,23 +736,141 @@ public class ArchSpecParser extends Parser {
 			// do for sure before leaving
 		}
 	}
+	// $ANTLR end "coordinator_def"
+
+
+
+	// $ANTLR start "computatinal_def"
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:107:1: computatinal_def : CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+ ;
+	public final void computatinal_def() throws RecognitionException {
+		Token CAPITALIZED_ID6=null;
+
+		try {
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:107:17: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+ )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:109:2: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+
+			{
+			CAPITALIZED_ID6=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_computatinal_def441); 
+			 
+			     context.currentComputationalService = new ComputationalServiceCompiler(); 
+			     context.currentMappingConstraint.setSoftwareComponentName((CAPITALIZED_ID6!=null?CAPITALIZED_ID6.getText():null));
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:113:5: ( csConsumeInfo_def ';' )*
+			loop18:
+			while (true) {
+				int alt18=2;
+				int LA18_0 = input.LA(1);
+				if ( (LA18_0==22) ) {
+					alt18=1;
+				}
+
+				switch (alt18) {
+				case 1 :
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:113:6: csConsumeInfo_def ';'
+					{
+					pushFollow(FOLLOW_csConsumeInfo_def_in_computatinal_def455);
+					csConsumeInfo_def();
+					state._fsp--;
+
+					match(input,11,FOLLOW_11_in_computatinal_def457); 
+					}
+					break;
+
+				default :
+					break loop18;
+				}
+			}
+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:114:5: ( cntrlCommand_def ';' )*
+			loop19:
+			while (true) {
+				int alt19=2;
+				int LA19_0 = input.LA(1);
+				if ( (LA19_0==20) ) {
+					alt19=1;
+				}
+
+				switch (alt19) {
+				case 1 :
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:114:6: cntrlCommand_def ';'
+					{
+					pushFollow(FOLLOW_cntrlCommand_def_in_computatinal_def467);
+					cntrlCommand_def();
+					state._fsp--;
+
+					match(input,11,FOLLOW_11_in_computatinal_def469); 
+					}
+					break;
+
+				default :
+					break loop19;
+				}
+			}
+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:115:5: ( partition_def ';' )+
+			int cnt20=0;
+			loop20:
+			while (true) {
+				int alt20=2;
+				int LA20_0 = input.LA(1);
+				if ( (LA20_0==27) ) {
+					alt20=1;
+				}
+
+				switch (alt20) {
+				case 1 :
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:115:6: partition_def ';'
+					{
+					pushFollow(FOLLOW_partition_def_in_computatinal_def481);
+					partition_def();
+					state._fsp--;
+
+					match(input,11,FOLLOW_11_in_computatinal_def483); 
+					}
+					break;
+
+				default :
+					if ( cnt20 >= 1 ) break loop20;
+					EarlyExitException eee = new EarlyExitException(20, input);
+					throw eee;
+				}
+				cnt20++;
+			}
+
+			 
+			    context.currentComputationalService.setComputationalServiceName((CAPITALIZED_ID6!=null?CAPITALIZED_ID6.getText():null));
+			     context.currentComputationalService.createCSObject();
+			    context.currentComputationalService.generateComputationalServiceCode(); 
+			   context.currentMappingConstraint.setSoftwareComponentName((CAPITALIZED_ID6!=null?CAPITALIZED_ID6.getText():null));
+			   context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
+			   
+			    
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
 	// $ANTLR end "computatinal_def"
 
 
 
 	// $ANTLR start "csOperation_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:106:1: csOperation_def : 'COMPUTE(' CAPITALIZED_ID ')' ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:126:1: csOperation_def : 'COMPUTE(' CAPITALIZED_ID ')' ;
 	public final void csOperation_def() throws RecognitionException {
-		Token CAPITALIZED_ID6=null;
+		Token CAPITALIZED_ID7=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:106:17: ( 'COMPUTE(' CAPITALIZED_ID ')' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:107:5: 'COMPUTE(' CAPITALIZED_ID ')'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:126:17: ( 'COMPUTE(' CAPITALIZED_ID ')' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:127:5: 'COMPUTE(' CAPITALIZED_ID ')'
 			{
-			match(input,14,FOLLOW_14_in_csOperation_def419); 
-			CAPITALIZED_ID6=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csOperation_def421); 
-			match(input,9,FOLLOW_9_in_csOperation_def422); 
-			 context.currentComputationalService.addOperation((CAPITALIZED_ID6!=null?CAPITALIZED_ID6.getText():null));  
+			match(input,14,FOLLOW_14_in_csOperation_def508); 
+			CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csOperation_def510); 
+			match(input,9,FOLLOW_9_in_csOperation_def511); 
+			 context.currentComputationalService.addOperation((CAPITALIZED_ID7!=null?CAPITALIZED_ID7.getText():null));  
 			}
 
 		}
@@ -709,24 +887,24 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "csGeneratedInfo_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:111:1: csGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:131:1: csGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
 	public final void csGeneratedInfo_def() throws RecognitionException {
-		Token CAPITALIZED_ID8=null;
-		ParserRuleReturnScope lc_id7 =null;
+		Token CAPITALIZED_ID9=null;
+		ParserRuleReturnScope lc_id8 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:111:20: ( 'generate' lc_id ':' CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:112:5: 'generate' lc_id ':' CAPITALIZED_ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:131:20: ( 'generate' lc_id ':' CAPITALIZED_ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:132:5: 'generate' lc_id ':' CAPITALIZED_ID
 			{
-			match(input,23,FOLLOW_23_in_csGeneratedInfo_def446); 
-			pushFollow(FOLLOW_lc_id_in_csGeneratedInfo_def448);
-			lc_id7=lc_id();
+			match(input,25,FOLLOW_25_in_csGeneratedInfo_def535); 
+			pushFollow(FOLLOW_lc_id_in_csGeneratedInfo_def537);
+			lc_id8=lc_id();
 			state._fsp--;
 
-			match(input,10,FOLLOW_10_in_csGeneratedInfo_def450); 
-			CAPITALIZED_ID8=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def453); 
-			 context.currentComputationalService.addGeneratedInfo((lc_id7!=null?input.toString(lc_id7.start,lc_id7.stop):null), (CAPITALIZED_ID8!=null?CAPITALIZED_ID8.getText():null)); 
-			    context.constructSymbTable((lc_id7!=null?input.toString(lc_id7.start,lc_id7.stop):null), (CAPITALIZED_ID8!=null?CAPITALIZED_ID8.getText():null)); 
+			match(input,10,FOLLOW_10_in_csGeneratedInfo_def539); 
+			CAPITALIZED_ID9=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def542); 
+			 context.currentComputationalService.addGeneratedInfo((lc_id8!=null?input.toString(lc_id8.start,lc_id8.stop):null), (CAPITALIZED_ID9!=null?CAPITALIZED_ID9.getText():null)); 
+			    context.constructSymbTable((lc_id8!=null?input.toString(lc_id8.start,lc_id8.stop):null), (CAPITALIZED_ID9!=null?CAPITALIZED_ID9.getText():null)); 
 			}
 
 		}
@@ -743,26 +921,26 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "csConsumeInfo_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:117:1: csConsumeInfo_def : 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:137:1: csConsumeInfo_def : 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID ;
 	public final void csConsumeInfo_def() throws RecognitionException {
-		ParserRuleReturnScope lc_id9 =null;
+		ParserRuleReturnScope lc_id10 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:117:18: ( 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:119:6: 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:137:18: ( 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:139:6: 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID
 			{
-			match(input,20,FOLLOW_20_in_csConsumeInfo_def479); 
-			pushFollow(FOLLOW_lc_id_in_csConsumeInfo_def481);
-			lc_id9=lc_id();
+			match(input,22,FOLLOW_22_in_csConsumeInfo_def568); 
+			pushFollow(FOLLOW_lc_id_in_csConsumeInfo_def570);
+			lc_id10=lc_id();
 			state._fsp--;
 
-			match(input,22,FOLLOW_22_in_csConsumeInfo_def483); 
-			match(input,26,FOLLOW_26_in_csConsumeInfo_def485); 
-			match(input,10,FOLLOW_10_in_csConsumeInfo_def487); 
-			match(input,INT,FOLLOW_INT_in_csConsumeInfo_def489); 
-			match(input,10,FOLLOW_10_in_csConsumeInfo_def491); 
-			match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def493); 
-			 context.currentComputationalService.addConsumedInfo((lc_id9!=null?input.toString(lc_id9.start,lc_id9.stop):null));  
+			match(input,24,FOLLOW_24_in_csConsumeInfo_def572); 
+			match(input,28,FOLLOW_28_in_csConsumeInfo_def574); 
+			match(input,10,FOLLOW_10_in_csConsumeInfo_def576); 
+			match(input,INT,FOLLOW_INT_in_csConsumeInfo_def578); 
+			match(input,10,FOLLOW_10_in_csConsumeInfo_def580); 
+			match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def582); 
+			 context.currentComputationalService.addConsumedInfo((lc_id10!=null?input.toString(lc_id10.start,lc_id10.stop):null));  
 			    
 			   
 			}
@@ -781,20 +959,20 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "csRequest_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:125:1: csRequest_def : 'request' lc_id ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:145:1: csRequest_def : 'request' lc_id ;
 	public final void csRequest_def() throws RecognitionException {
-		ParserRuleReturnScope lc_id10 =null;
+		ParserRuleReturnScope lc_id11 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:125:15: ( 'request' lc_id )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:126:4: 'request' lc_id
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:145:15: ( 'request' lc_id )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:146:4: 'request' lc_id
 			{
-			match(input,27,FOLLOW_27_in_csRequest_def521); 
-			pushFollow(FOLLOW_lc_id_in_csRequest_def523);
-			lc_id10=lc_id();
+			match(input,29,FOLLOW_29_in_csRequest_def610); 
+			pushFollow(FOLLOW_lc_id_in_csRequest_def612);
+			lc_id11=lc_id();
 			state._fsp--;
 
-			 context.currentComputationalService.getDataAccessListFromSymblTable((lc_id10!=null?input.toString(lc_id10.start,lc_id10.stop):null));
+			 context.currentComputationalService.getDataAccessListFromSymblTable((lc_id11!=null?input.toString(lc_id11.start,lc_id11.stop):null));
 			}
 
 		}
@@ -811,28 +989,28 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "cntrlCommand_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:131:1: cntrlCommand_def : 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:151:1: cntrlCommand_def : 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID ;
 	public final void cntrlCommand_def() throws RecognitionException {
 		Token name=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:131:18: ( 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:132:5: 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:151:18: ( 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:152:5: 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID
 			{
-			match(input,18,FOLLOW_18_in_cntrlCommand_def545); 
-			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def552); 
-			match(input,8,FOLLOW_8_in_cntrlCommand_def554); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:132:42: ( cntrlParameter_def )?
-			int alt15=2;
-			int LA15_0 = input.LA(1);
-			if ( (LA15_0==ID) ) {
-				alt15=1;
+			match(input,20,FOLLOW_20_in_cntrlCommand_def634); 
+			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def641); 
+			match(input,8,FOLLOW_8_in_cntrlCommand_def643); 
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:152:42: ( cntrlParameter_def )?
+			int alt21=2;
+			int LA21_0 = input.LA(1);
+			if ( (LA21_0==ID) ) {
+				alt21=1;
 			}
-			switch (alt15) {
+			switch (alt21) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:132:43: cntrlParameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:152:43: cntrlParameter_def
 					{
-					pushFollow(FOLLOW_cntrlParameter_def_in_cntrlCommand_def557);
+					pushFollow(FOLLOW_cntrlParameter_def_in_cntrlCommand_def646);
 					cntrlParameter_def();
 					state._fsp--;
 
@@ -841,13 +1019,13 @@ public class ArchSpecParser extends Parser {
 
 			}
 
-			match(input,9,FOLLOW_9_in_cntrlCommand_def561); 
-			match(input,30,FOLLOW_30_in_cntrlCommand_def563); 
-			match(input,26,FOLLOW_26_in_cntrlCommand_def566); 
-			match(input,10,FOLLOW_10_in_cntrlCommand_def568); 
-			match(input,INT,FOLLOW_INT_in_cntrlCommand_def570); 
-			match(input,10,FOLLOW_10_in_cntrlCommand_def572); 
-			match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def574); 
+			match(input,9,FOLLOW_9_in_cntrlCommand_def650); 
+			match(input,32,FOLLOW_32_in_cntrlCommand_def652); 
+			match(input,28,FOLLOW_28_in_cntrlCommand_def655); 
+			match(input,10,FOLLOW_10_in_cntrlCommand_def657); 
+			match(input,INT,FOLLOW_INT_in_cntrlCommand_def659); 
+			match(input,10,FOLLOW_10_in_cntrlCommand_def661); 
+			match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def663); 
 			 
 			      context.currentComputationalService.addCommand((name!=null?name.getText():null));  
 			    
@@ -867,19 +1045,19 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "cntrlParameter_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:139:1: cntrlParameter_def : lc_id ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:159:1: cntrlParameter_def : lc_id ;
 	public final void cntrlParameter_def() throws RecognitionException {
-		ParserRuleReturnScope lc_id11 =null;
+		ParserRuleReturnScope lc_id12 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:139:20: ( lc_id )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:140:5: lc_id
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:159:20: ( lc_id )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:160:5: lc_id
 			{
-			pushFollow(FOLLOW_lc_id_in_cntrlParameter_def598);
-			lc_id11=lc_id();
+			pushFollow(FOLLOW_lc_id_in_cntrlParameter_def687);
+			lc_id12=lc_id();
 			state._fsp--;
 
-			 context.currentComputationalService.addParameter((lc_id11!=null?input.toString(lc_id11.start,lc_id11.stop):null)); 
+			 context.currentComputationalService.addParameter((lc_id12!=null?input.toString(lc_id12.start,lc_id12.stop):null)); 
 			}
 
 		}
@@ -896,23 +1074,23 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "partition_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:149:1: partition_def : csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:169:1: partition_def : csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID ;
 	public final void partition_def() throws RecognitionException {
 		Token csDeploymentConstraint=null;
-		Token CAPITALIZED_ID12=null;
+		Token CAPITALIZED_ID13=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:149:14: (csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:150:5: csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:169:14: (csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:170:5: csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID
 			{
-			csDeploymentConstraint=(Token)match(input,25,FOLLOW_25_in_partition_def631); 
-			match(input,10,FOLLOW_10_in_partition_def633); 
-			CAPITALIZED_ID12=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_partition_def635); 
+			csDeploymentConstraint=(Token)match(input,27,FOLLOW_27_in_partition_def720); 
+			match(input,10,FOLLOW_10_in_partition_def722); 
+			CAPITALIZED_ID13=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_partition_def724); 
 			 
-			    context.currentComputationalService.addPartitionAttribute((CAPITALIZED_ID12!=null?CAPITALIZED_ID12.getText():null));   
+			    context.currentComputationalService.addPartitionAttribute((CAPITALIZED_ID13!=null?CAPITALIZED_ID13.getText():null));   
 			    // Next two lines are for  Mapping constraints
 			    context.currentMappingConstraint.setAttributeName((csDeploymentConstraint!=null?csDeploymentConstraint.getText():null));  
-			    context.currentMappingConstraint.setAttributeValue((CAPITALIZED_ID12!=null?CAPITALIZED_ID12.getText():null)); 
+			    context.currentMappingConstraint.setAttributeValue((CAPITALIZED_ID13!=null?CAPITALIZED_ID13.getText():null)); 
 			   
 			}
 
@@ -933,16 +1111,16 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "lc_id"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:159:1: lc_id : ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:179:1: lc_id : ID ;
 	public final ArchSpecParser.lc_id_return lc_id() throws RecognitionException {
 		ArchSpecParser.lc_id_return retval = new ArchSpecParser.lc_id_return();
 		retval.start = input.LT(1);
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:159:6: ( ID )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:159:8: ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:179:6: ( ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:179:8: ID
 			{
-			match(input,ID,FOLLOW_ID_in_lc_id653); 
+			match(input,ID,FOLLOW_ID_in_lc_id742); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -965,16 +1143,16 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "dataType"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:162:1: dataType : primitiveType ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:182:1: dataType : primitiveType ;
 	public final ArchSpecParser.dataType_return dataType() throws RecognitionException {
 		ArchSpecParser.dataType_return retval = new ArchSpecParser.dataType_return();
 		retval.start = input.LT(1);
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:162:9: ( primitiveType )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:163:3: primitiveType
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:182:9: ( primitiveType )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:183:3: primitiveType
 			{
-			pushFollow(FOLLOW_primitiveType_in_dataType667);
+			pushFollow(FOLLOW_primitiveType_in_dataType756);
 			primitiveType();
 			state._fsp--;
 
@@ -997,87 +1175,87 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "primitiveType"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:166:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:186:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) ;
 	public final void primitiveType() throws RecognitionException {
 		Token id=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:166:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:167:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:186:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:187:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
 			{
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:167:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
-			int alt16=6;
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:187:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
+			int alt22=6;
 			switch ( input.LA(1) ) {
-			case 15:
+			case 17:
 				{
-				alt16=1;
+				alt22=1;
 				}
 				break;
 			case 13:
 				{
-				alt16=2;
+				alt22=2;
 				}
 				break;
-			case 16:
+			case 18:
 				{
-				alt16=3;
+				alt22=3;
 				}
 				break;
-			case 21:
+			case 23:
 				{
-				alt16=4;
+				alt22=4;
 				}
 				break;
-			case 24:
+			case 26:
 				{
-				alt16=5;
+				alt22=5;
 				}
 				break;
-			case 17:
+			case 19:
 				{
-				alt16=6;
+				alt22=6;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 16, 0, input);
+					new NoViableAltException("", 22, 0, input);
 				throw nvae;
 			}
-			switch (alt16) {
+			switch (alt22) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:167:4: id= 'Integer'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:187:4: id= 'Integer'
 					{
-					id=(Token)match(input,15,FOLLOW_15_in_primitiveType682); 
+					id=(Token)match(input,17,FOLLOW_17_in_primitiveType771); 
 					}
 					break;
 				case 2 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:167:19: id= 'Boolean'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:187:19: id= 'Boolean'
 					{
-					id=(Token)match(input,13,FOLLOW_13_in_primitiveType688); 
+					id=(Token)match(input,13,FOLLOW_13_in_primitiveType777); 
 					}
 					break;
 				case 3 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:167:34: id= 'String'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:187:34: id= 'String'
 					{
-					id=(Token)match(input,16,FOLLOW_16_in_primitiveType694); 
+					id=(Token)match(input,18,FOLLOW_18_in_primitiveType783); 
 					}
 					break;
 				case 4 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:167:49: id= 'double'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:187:49: id= 'double'
 					{
-					id=(Token)match(input,21,FOLLOW_21_in_primitiveType703); 
+					id=(Token)match(input,23,FOLLOW_23_in_primitiveType792); 
 					}
 					break;
 				case 5 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:167:65: id= 'long'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:187:65: id= 'long'
 					{
-					id=(Token)match(input,24,FOLLOW_24_in_primitiveType711); 
+					id=(Token)match(input,26,FOLLOW_26_in_primitiveType800); 
 					}
 					break;
 				case 6 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:167:79: id= 'boolean'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:187:79: id= 'boolean'
 					{
-					id=(Token)match(input,17,FOLLOW_17_in_primitiveType717); 
+					id=(Token)match(input,19,FOLLOW_19_in_primitiveType806); 
 					}
 					break;
 
@@ -1100,83 +1278,93 @@ public class ArchSpecParser extends Parser {
 
 
 
-	public static final BitSet FOLLOW_29_in_archSpec90 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_31_in_archSpec90 = new BitSet(new long[]{0x0000000000000400L});
 	public static final BitSet FOLLOW_10_in_archSpec92 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_struct_def_in_archSpec94 = new BitSet(new long[]{0x0000000030000000L});
-	public static final BitSet FOLLOW_28_in_archSpec104 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_archSpec106 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_component_def_in_archSpec109 = new BitSet(new long[]{0x0000000000080002L});
-	public static final BitSet FOLLOW_19_in_component_def129 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_component_def131 = new BitSet(new long[]{0x0000000000001010L});
+	public static final BitSet FOLLOW_struct_def_in_archSpec94 = new BitSet(new long[]{0x00000000C0000000L});
+	public static final BitSet FOLLOW_30_in_archSpec104 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_archSpec106 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_component_def_in_archSpec109 = new BitSet(new long[]{0x0000000000200002L});
+	public static final BitSet FOLLOW_21_in_component_def129 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_component_def131 = new BitSet(new long[]{0x0000000000019000L});
 	public static final BitSet FOLLOW_cs_def_in_component_def134 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_CAPITALIZED_ID_in_struct_def154 = new BitSet(new long[]{0x0000000000000020L});
 	public static final BitSet FOLLOW_structField_def_in_struct_def168 = new BitSet(new long[]{0x0000000000000800L});
 	public static final BitSet FOLLOW_11_in_struct_def170 = new BitSet(new long[]{0x0000000000000022L});
 	public static final BitSet FOLLOW_lc_id_in_structField_def193 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_structField_def195 = new BitSet(new long[]{0x000000000123A000L});
+	public static final BitSet FOLLOW_10_in_structField_def195 = new BitSet(new long[]{0x00000000048E2000L});
 	public static final BitSet FOLLOW_dataType_in_structField_def197 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_agg_cs_def_in_cs_def222 = new BitSet(new long[]{0x0000000000001010L});
-	public static final BitSet FOLLOW_computatinal_def_in_cs_def231 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_12_in_agg_cs_def252 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_agg_cs_def253 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_agg_cs_def256 = new BitSet(new long[]{0x0000000002904000L});
-	public static final BitSet FOLLOW_csConsumeInfo_def_in_agg_cs_def270 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_agg_cs_def272 = new BitSet(new long[]{0x0000000002904000L});
-	public static final BitSet FOLLOW_csOperation_def_in_agg_cs_def282 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_agg_cs_def284 = new BitSet(new long[]{0x0000000002804000L});
-	public static final BitSet FOLLOW_csGeneratedInfo_def_in_agg_cs_def294 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_agg_cs_def296 = new BitSet(new long[]{0x0000000002800000L});
-	public static final BitSet FOLLOW_partition_def_in_agg_cs_def305 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_agg_cs_def307 = new BitSet(new long[]{0x0000000002000002L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_computatinal_def329 = new BitSet(new long[]{0x000000000A940000L});
-	public static final BitSet FOLLOW_csConsumeInfo_def_in_computatinal_def343 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_computatinal_def345 = new BitSet(new long[]{0x000000000A940000L});
-	public static final BitSet FOLLOW_csRequest_def_in_computatinal_def355 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_computatinal_def358 = new BitSet(new long[]{0x000000000A840000L});
-	public static final BitSet FOLLOW_csGeneratedInfo_def_in_computatinal_def367 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_computatinal_def369 = new BitSet(new long[]{0x0000000002840000L});
-	public static final BitSet FOLLOW_cntrlCommand_def_in_computatinal_def378 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_computatinal_def380 = new BitSet(new long[]{0x0000000002040000L});
-	public static final BitSet FOLLOW_partition_def_in_computatinal_def392 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_computatinal_def394 = new BitSet(new long[]{0x0000000002000002L});
-	public static final BitSet FOLLOW_14_in_csOperation_def419 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csOperation_def421 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_9_in_csOperation_def422 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_23_in_csGeneratedInfo_def446 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_csGeneratedInfo_def448 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_csGeneratedInfo_def450 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def453 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_20_in_csConsumeInfo_def479 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_csConsumeInfo_def481 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_22_in_csConsumeInfo_def483 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_csConsumeInfo_def485 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_csConsumeInfo_def487 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_INT_in_csConsumeInfo_def489 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_csConsumeInfo_def491 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def493 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_27_in_csRequest_def521 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_csRequest_def523 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_18_in_cntrlCommand_def545 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def552 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_8_in_cntrlCommand_def554 = new BitSet(new long[]{0x0000000000000220L});
-	public static final BitSet FOLLOW_cntrlParameter_def_in_cntrlCommand_def557 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_9_in_cntrlCommand_def561 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_30_in_cntrlCommand_def563 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_cntrlCommand_def566 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_cntrlCommand_def568 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_INT_in_cntrlCommand_def570 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_cntrlCommand_def572 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def574 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lc_id_in_cntrlParameter_def598 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_25_in_partition_def631 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_partition_def633 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_partition_def635 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_lc_id653 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_primitiveType_in_dataType667 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_15_in_primitiveType682 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_13_in_primitiveType688 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_16_in_primitiveType694 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_21_in_primitiveType703 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_24_in_primitiveType711 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_17_in_primitiveType717 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_12_in_cs_def228 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_cs_def229 = new BitSet(new long[]{0x0000000000019012L});
+	public static final BitSet FOLLOW_agg_cs_def_in_cs_def233 = new BitSet(new long[]{0x0000000000019012L});
+	public static final BitSet FOLLOW_16_in_cs_def248 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_cs_def249 = new BitSet(new long[]{0x0000000000018012L});
+	public static final BitSet FOLLOW_coordinator_def_in_cs_def252 = new BitSet(new long[]{0x0000000000018012L});
+	public static final BitSet FOLLOW_15_in_cs_def269 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_cs_def270 = new BitSet(new long[]{0x0000000000008012L});
+	public static final BitSet FOLLOW_computatinal_def_in_cs_def273 = new BitSet(new long[]{0x0000000000008012L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_agg_cs_def300 = new BitSet(new long[]{0x000000000A404000L});
+	public static final BitSet FOLLOW_csConsumeInfo_def_in_agg_cs_def314 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_agg_cs_def316 = new BitSet(new long[]{0x000000000A404000L});
+	public static final BitSet FOLLOW_csOperation_def_in_agg_cs_def326 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_agg_cs_def328 = new BitSet(new long[]{0x000000000A004000L});
+	public static final BitSet FOLLOW_csGeneratedInfo_def_in_agg_cs_def338 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_agg_cs_def340 = new BitSet(new long[]{0x000000000A000000L});
+	public static final BitSet FOLLOW_partition_def_in_agg_cs_def349 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_agg_cs_def351 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_coordinator_def370 = new BitSet(new long[]{0x000000002A400000L});
+	public static final BitSet FOLLOW_csConsumeInfo_def_in_coordinator_def384 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_coordinator_def386 = new BitSet(new long[]{0x000000002A400000L});
+	public static final BitSet FOLLOW_csRequest_def_in_coordinator_def396 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_coordinator_def398 = new BitSet(new long[]{0x000000002A000000L});
+	public static final BitSet FOLLOW_csGeneratedInfo_def_in_coordinator_def409 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_coordinator_def411 = new BitSet(new long[]{0x000000000A000000L});
+	public static final BitSet FOLLOW_partition_def_in_coordinator_def419 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_coordinator_def421 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_computatinal_def441 = new BitSet(new long[]{0x0000000008500000L});
+	public static final BitSet FOLLOW_csConsumeInfo_def_in_computatinal_def455 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_computatinal_def457 = new BitSet(new long[]{0x0000000008500000L});
+	public static final BitSet FOLLOW_cntrlCommand_def_in_computatinal_def467 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_computatinal_def469 = new BitSet(new long[]{0x0000000008100000L});
+	public static final BitSet FOLLOW_partition_def_in_computatinal_def481 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_computatinal_def483 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_14_in_csOperation_def508 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csOperation_def510 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_csOperation_def511 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_25_in_csGeneratedInfo_def535 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_csGeneratedInfo_def537 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_csGeneratedInfo_def539 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def542 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_22_in_csConsumeInfo_def568 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_csConsumeInfo_def570 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_24_in_csConsumeInfo_def572 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_csConsumeInfo_def574 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_csConsumeInfo_def576 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_INT_in_csConsumeInfo_def578 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_csConsumeInfo_def580 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def582 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_29_in_csRequest_def610 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_csRequest_def612 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_20_in_cntrlCommand_def634 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def641 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_8_in_cntrlCommand_def643 = new BitSet(new long[]{0x0000000000000220L});
+	public static final BitSet FOLLOW_cntrlParameter_def_in_cntrlCommand_def646 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_cntrlCommand_def650 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_cntrlCommand_def652 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_cntrlCommand_def655 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_cntrlCommand_def657 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_INT_in_cntrlCommand_def659 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_cntrlCommand_def661 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def663 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_lc_id_in_cntrlParameter_def687 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_27_in_partition_def720 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_partition_def722 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_partition_def724 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_lc_id742 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_primitiveType_in_dataType756 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_17_in_primitiveType771 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_13_in_primitiveType777 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_18_in_primitiveType783 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_23_in_primitiveType792 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_26_in_primitiveType800 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_19_in_primitiveType806 = new BitSet(new long[]{0x0000000000000002L});
 }
