@@ -10,7 +10,11 @@ import iotsuite.semanticmodel.DataAccess;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Information;
 import iotsuite.semanticmodel.Parameter;
+import iotsuite.semanticmodel.StructField;
+
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class ComputationalServiceCompiler {
@@ -26,6 +30,16 @@ public class ComputationalServiceCompiler {
 	private String partitionAttributeValue;
 	private String computationalServiceName;
 	private Parameter parameter;
+	
+/*	//Following list used to store struct field name utilized by aggregator corresponding to structure
+	private static List<String> aggregatorStructFieldName = new ArrayList<String>();
+		
+	//Following list used to store struct field types utilized by aggregator corresponding to structure
+	public static List<String> aggregatorStructFieldType = new ArrayList<String>();*/
+	
+	public static List<StructField> StructFieldSet = new ArrayList<StructField>();
+		
+	
 
 	public void addCommand(String actionName) {
 		Action action = new Action(actionName, getParameters(), null);
@@ -77,9 +91,28 @@ public class ComputationalServiceCompiler {
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
-				getPartitionAttributeVal(), getOperation());
-
+				getPartitionAttributeVal(), getOperation(),getStructFieldSet());
+//getAggregatorStructFieldName(),getAggregatorStructFieldType(),
 	}
+
+	public List<StructField> getStructFieldSet() {
+		
+		StructFieldSet=iotsuite.parser.SymbolTable.StructFieldSet;
+		return StructFieldSet;
+	}
+	
+	/*private List<String> getAggregatorStructFieldName() {
+		aggregatorStructFieldName=iotsuite.parser.SymbolTable.aggregatorStructFieldName;
+		//System.out.println("Aggre Field Name is "+aggregatorStructFieldName);
+		return aggregatorStructFieldName;
+	}
+	
+	private List<String> getAggregatorStructFieldType()
+	{
+	aggregatorStructFieldType=iotsuite.parser.SymbolTable.aggregatorStructFieldType;
+	return aggregatorStructFieldType;
+		
+	}*/
 
 	/*
 	 * public void dataAccess(Information query, Information generatedInfo) {

@@ -40,9 +40,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
   	    Logger.log( myDeviceInfo.getName() ,"$CS.name$" , "Sending command $action.name$");
     	this.myPubSubMiddleware.publish("$action.name; format="capital"$", $if(action.Parameter)$ $action.allParameter: { param | arg }; separator=" , "$ $else$ null $endif$ , myDeviceInfo );     
     }
-}; separator="\n"$        
-
-
+}; separator="\n"$   
 
         public void notifyReceived(String eventName, Object arg, Device deviceInfo) { 
 	    try {
@@ -58,9 +56,6 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         }
         }	  
         
-        
-        
-        
 	    $CS.allConsumedInfo:{ consumedInfo | 	   
 	    public abstract void onNew$consumedInfo.name; format="capital"$( $consumedInfo.type.name$ arg);	   		
 	   	
@@ -68,21 +63,10 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	   	
 	   	List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
 					partitionAttribute, myDeviceInfo.getRegionLabels(),
-					myDeviceInfo.getRegion());
-	   	     		
+					myDeviceInfo.getRegion());	   	     		
          		  this.myPubSubMiddleware.subscribe(this,"$consumedInfo.name$", regionInfo);
 		}
 		}$		
 		public void run() {
 		}		
 }
-
-
-
-
-    
-	
-	
-    
-
-    

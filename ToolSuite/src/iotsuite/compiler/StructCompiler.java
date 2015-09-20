@@ -32,17 +32,23 @@ public class StructCompiler {
 
 		StructField Field = new StructField(fieldName, new PrimitiveType(
 				fieldType));
+		//System.out.println("Field name is"+fieldName + "Field Type is "+ fieldType);
 		StructFieldSet.add(Field);
-
+		
+		
+		
+		
 	}
 
 	public List<StructField> getStructFieldSet() {
 
+	
 		return StructFieldSet;
 	}
 
 	public String getStructName() {
 
+		
 		return structName;
 	}
 

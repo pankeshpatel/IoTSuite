@@ -66,4 +66,6 @@ public class GlobalVariable {
 		return modifiedPathName;
 	}
 
+	
+
 }

@@ -9,6 +9,7 @@ import iotsuite.semanticmodel.Sensor;
 import iotsuite.semanticmodel.SensorMeasurement;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class SensorCompiler {
@@ -16,6 +17,14 @@ public class SensorCompiler {
 	// private Sensor sensorDriver;
 	private Sensor sensorDriver;
 	private Set<SensorMeasurement> generatedInfo = new HashSet<SensorMeasurement>();
+	//Store field name and types used by Event Driven Sensor
+	public static List<String> eventDrivenFields;
+	
+	//Store field name used by Event Driven Sensor
+	public static List<String> eventDrivenFieldName;
+	
+	
+	
 
 	public SensorCompiler() {
 	}
@@ -23,20 +32,31 @@ public class SensorCompiler {
 	public SensorCompiler(String sensorName) {
 		// sensorDriver = new Sensor(sensorName, getAttributeSet(),
 		// getGeneratedInfo(), null);
-		sensorDriver = new Sensor(sensorName, getGeneratedInfo(), null);
+		sensorDriver = new Sensor(sensorName, getGeneratedInfo(), null,getEventDrivenFieldName(),getEventDrivenFields());
 	}
 
-	// Getter and Setter of GeneratedInfo
+	private List<String> getEventDrivenFieldName() {
+		return eventDrivenFieldName;
+	}
+	
+	private List<String> getEventDrivenFields() {
+		return eventDrivenFields;
+	}
+
+		// Getter and Setter of GeneratedInfo
 	public Set<SensorMeasurement> getGeneratedInfo() {
 		return generatedInfo;
 	}
 
 	public void addSensorMeasurement(String measurementName,
 			String measurementStruct, StructCompiler struct) {
-		SensorMeasurement sensorMeasurement = new SensorMeasurement(
+			
+				SensorMeasurement sensorMeasurement = new SensorMeasurement(
 				measurementName, new DataType(measurementStruct), struct);
-		generatedInfo.add(sensorMeasurement);
-	}
+				generatedInfo.add(sensorMeasurement);
+				
+				
+		}
 
 	// Getter and setter of Attribute
 	/*
@@ -273,5 +293,10 @@ public class SensorCompiler {
 		SourceFileDumper dumpGeneratedSensorListener = new SourceFileDumper();
 		dumpGeneratedSensorListener.dumpCompilationUnit(generateCU);
 	}
+
+	
+
+	
+	
 
 }

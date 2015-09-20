@@ -105,31 +105,46 @@ sensor_def:
 periodicsensor_def:
  CAPITALIZED_ID
     {context.currentSensor = new SensorCompiler($CAPITALIZED_ID.text);}
-    (sensorMeasurement_def ';')* 
+    (sensorMeasurementForPeriodic_def ';')* 
     (sensorperiodicMeasurement_def ';')*
-    {context.currentSensor.generatePeriodicSensorCode();}
+    {context.currentSensor.generatePeriodicSensorCode();        
+    }
 ;
 
 eventsensor_def:
  CAPITALIZED_ID
     {context.currentSensor = new SensorCompiler($CAPITALIZED_ID.text);}
-    (sensorMeasurement_def ';')* 
+    (sensorMeasurementForEventDriven_def ';')* 
     (sensoreventMeasurement_def ';')*
     {context.currentSensor.generateEventDrivenSensorCode();}
 
 ;
 
-
-
-
-sensorMeasurement_def : 
-    'generate' lc_id ':'  CAPITALIZED_ID  
-    //'sample' 'period' dataType 'for' dataType
-    { context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text ,context.getStructSymblTable($CAPITALIZED_ID.text) ); 
-    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text); } 
+sensorMeasurementForEventDriven_def:
+'generate' lc_id ':'  CAPITALIZED_ID  
+   
+    {
+      
+    context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text , context.getStructSymblTable($CAPITALIZED_ID.text) ); 
+    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
+    context.constructEventDrivenSymblTable($CAPITALIZED_ID.text);
+    
+  
+      } 
 ;
 
+sensorMeasurementForPeriodic_def : 
+    'generate' lc_id ':'  CAPITALIZED_ID  
+   
+    {
+      
+    context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text , context.getStructSymblTable($CAPITALIZED_ID.text) ); 
+    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
+  
+      } 
+;
 
+ 
 sensorperiodicMeasurement_def:
  'sample' 'period' 'SAMPLEPERIOD' 'for' 'SAMPLEDURATION'  
   
@@ -206,9 +221,12 @@ storageDataAccess_def :
 
 storageGeneratedInfo_def :
     'generate' lc_id ':'  CAPITALIZED_ID
-    { context.currentStorageService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text);  
+    {
+     context.constructStorageSymblTable($CAPITALIZED_ID.text);
+     context.currentStorageService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text);  
       context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     context.constructResponseTypeSymblTable($lc_id.text, $CAPITALIZED_ID.text);
+   
     }
 ;
 

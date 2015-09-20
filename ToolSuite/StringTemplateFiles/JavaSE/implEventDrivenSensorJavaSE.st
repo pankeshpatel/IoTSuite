@@ -11,53 +11,54 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
-
-
-
-
+//import javax.swing.JTextField;
 
 public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 
-  // TODO : Developer will configure the following appropriately.
-  
+  private JFrame mainFrame;
+  private JLabel headerLabel;
+  private JLabel statusLabel;
+  private JPanel controlPanel;
+   // TODO : Developer will configure the following appropriately(Developer will configure Textfield if require).
+  //private JTextField jtfTextField = new JTextField("Enter BadgeID");
+       
+//TODO:Developer will configure the following argument appropriately
+  $SensorDriver.allEventDrivenFields:{eventDrivenFields | 
+   $eventDrivenFields$; 
+  }$
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
     private boolean $generatedInfo.name; format="avoidCapital"$Condition = false;    
         private Listener$generatedInfo.name$ handler$generatedInfo.name$;
   }; separator="\n"$
   
-  private JFrame mainFrame;
-  private JLabel headerLabel;
-  private JLabel statusLabel;
-  private JPanel controlPanel;
-  
    public JavaSE$SensorDriver.name$() { 
      prepareGUI();
      showEventDemo();
-  }
+  } 
   
-   $SensorDriver.allGeneratedInfo:{ generatedInfo | 
-   
-  /* @Override
-   public  $generatedInfo.type.name$ get$generatedInfo.name; format="avoidCapital"$(){
-       return null;
-   }*/
-   
+ 
+  $SensorDriver.allGeneratedInfo:{ generatedInfo | 
    @Override
    public void get$generatedInfo.name; format="avoidCapital"$(Listener$generatedInfo.name$ handler){
     handler$generatedInfo.name$=handler;     
    }   
-      
+        
+  /* @Override
+   public  $generatedInfo.type.name$ get$generatedInfo.name; format="avoidCapital"$(){
+       return null;
+   }*/
 }; separator="\n"$
+
   private void prepareGUI()
   {
-  mainFrame= new JFrame("Simulated Smoke Detector");
+  mainFrame= new JFrame("Simulated $SensorDriver.name$");
   mainFrame.setSize(200,200);
   mainFrame.setLayout(new GridLayout(3,1));
   
   headerLabel= new JLabel("",JLabel.CENTER);
   statusLabel= new JLabel("",JLabel.CENTER);
   
+  //jtfTextField = new JTextField(5);
   statusLabel.setSize(350,100);
   
   mainFrame.addWindowListener(new WindowAdapter(){
@@ -72,6 +73,7 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
   mainFrame.add(headerLabel);
   mainFrame.add(controlPanel);
   mainFrame.add(statusLabel);
+ // mainFrame.add(jtfTextField);
 
   mainFrame.setVisible(true);
   }
@@ -81,35 +83,31 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
   
     $SensorDriver.allGeneratedInfo:{ generatedInfo | 
   
-  JButton smokeDectectedButton = new JButton("SmokeDetected");
-  JButton smokeDisappearedButton = new JButton("Disbale SmokeDectector");
-  
-  smokeDectectedButton.setActionCommand("SmokeDetected");
-  smokeDisappearedButton.setActionCommand("Disbale SmokeDectector");
-  
-  smokeDectectedButton.addActionListener(new ButtonClickListener());
-  smokeDisappearedButton.addActionListener(new ButtonClickListener());
-  
-  controlPanel.add(smokeDectectedButton);
-  controlPanel.add(smokeDisappearedButton);
+  JButton $generatedInfo.name$Button = new JButton("$generatedInfo.name$");
+   
+  $generatedInfo.name$Button.setActionCommand("$generatedInfo.name$");
+   
+  $generatedInfo.name$Button.addActionListener(new ButtonClickListener());
+   
+  controlPanel.add($generatedInfo.name$Button);
   
    }; separator="\n"$
   mainFrame.setVisible(true);
   }
+  
   
   private class ButtonClickListener implements ActionListener{
   public void actionPerformed(ActionEvent e){
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
     if($generatedInfo.name; format="avoidCapital"$Condition)
    { 
-    statusLabel.setText(" Smoke is dectected ");
-    handler$generatedInfo.name$.onNew$generatedInfo.name$(new  $generatedInfo.type.name$(true));
+   
+    statusLabel.setText(" $generatedInfo.name$ event is happened.....");
+    handler$generatedInfo.name$.onNew$generatedInfo.name$(new  $generatedInfo.type.name$ ($SensorDriver.allEventDrivenFieldName:{eventDrivenFieldName | $eventDrivenFieldName$};separator="," $) );
   }
  
-  else 
    }; separator="\n"$
-  System.out.println("Enter Valid Condition");
-  }
+ }
   }
   
   @Override

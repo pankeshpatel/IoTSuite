@@ -68,9 +68,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
            
          //  onNew$consumedInfo.name; format="capital"$Received(($CS.allConsumedInfo:{ consumedInfo | $consumedInfo.type.name$}$) arg);
         }
-        }$
-      
-        
+        }$  
           
          $CS.allDataAccess:{ dataAccess |
         if (eventName.equals("$dataAccess.dataAccessName; format="capital"$")) {
@@ -79,8 +77,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 
         onNew$dataAccess.dataAccessName; format="capital"$Received(( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type.name$}; separator="\n"$) arg);
        }
-        }$
-        
+        }$        
         
         	 } catch (Exception e) {
                  e.printStackTrace();
@@ -97,10 +94,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	   		List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
 					partitionAttribute, myDeviceInfo.getRegionLabels(),
 					myDeviceInfo.getRegion());
-	   		
-	   		
-	   		
-         		this.myPubSubMiddleware.subscribe(this,"$consumedInfo.name$", regionInfo);
+	   		this.myPubSubMiddleware.subscribe(this,"$consumedInfo.name$", regionInfo);
 		}
 		}$ 	
 		
@@ -112,10 +106,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	   		List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
 					partitionAttribute, myDeviceInfo.getRegionLabels(),
 					myDeviceInfo.getRegion());
-	   		
-	   		
-	   		
-         		this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="capital"$", regionInfo);
+					this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="capital"$", regionInfo);
 		}
 		    
 		    
@@ -132,13 +123,3 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 		    }
 		}; separator="\n"$ 
 }
-
-
-
-
-    
-	
-	
-    
-
-    

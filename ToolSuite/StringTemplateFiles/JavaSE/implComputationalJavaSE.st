@@ -4,11 +4,22 @@ import framework.*;
 import iotsuite.computational.factory.ComputationalFactory;
 import iotsuite.localmiddleware.IDataListener;
 import iotsuite.localmiddleware.PubSubsSensingFramework;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 
 public class JavaSE$CS.name$ implements I$CS.name$, IDataListener{
 
+  
+  $CS.allStructFields:{field |  
+static $field.type$ $field.name; format="avoidCapital"$;
+ }$
+ 
     $CS.allConsumedInfo:{ consumedInfo |
   public static Listener$consumedInfo.name$ listener$consumedInfo.name$ = null ;
    }; separator="\n"$ 
@@ -31,12 +42,35 @@ public class JavaSE$CS.name$ implements I$CS.name$, IDataListener{
  }; separator="\n"$
  
   @Override
-       public void onDataReceived(String eventName, Object data) {
+       //public void onDataReceived(String eventName, Object data) {
+       
+       public void onDataReceived(String eventName, JSONArray data) {
+     // double value=0;
+    //String unitOfMeasurement=null;
+    JSONObject obj = new JSONObject();
+    try {
+      obj=data.getJSONObject(0);
+       $CS.allStructFields:{field |  
+         $field.name$=obj.get$field.type;format="capital"$("$field.name$"); 
+       }$
+      //value = obj.getDouble("value");
+      //unitOfMeasurement=obj.getString("measurementUnit");
       
+  } catch (JSONException e) {
+    // TODO Auto-generated catch block
+    e.printStackTrace();
+  }
+    List<String> aggFields = new ArrayList<String>();
+    
+     $CS.allStructFields:{field | 
+      aggFields.add($field.name$);
+      //aggFields.add(Double.toString(value));
+      //aggFields.add(unitOfMeasurement);
+    }$
         $CS.allConsumedInfo:{ consumedInfo |
         if(eventName.equals("$consumedInfo.name$"))
         {
-              $consumedInfo.type.name$ arg = ($consumedInfo.type.name$) data;
+              $consumedInfo.type.name$ arg = ($consumedInfo.type.name$) aggFields;;
               listener$consumedInfo.name$.onNew$consumedInfo.name$(arg);
           }
   }; separator="\n"$

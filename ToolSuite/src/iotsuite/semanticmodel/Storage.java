@@ -21,7 +21,7 @@ public class Storage extends SoftwareComponent {
 	public List<String> structFieldName = new ArrayList<String>();
 	// Store fieldType with fieldName
 	public List<String> structField = new ArrayList<String>();
-
+	
 	public String databaseName = "iotsuiteuser";
 
 	// public Storage(String name, Set<Attribute> attributes, Set<DataAccess>
@@ -37,6 +37,7 @@ public class Storage extends SoftwareComponent {
 		this.fieldName = fieldName;
 		this.structField = structField;
 		this.structFieldName = structFieldName;
+		
 	}
 
 	public Set<DataAccess> getDataAccess() {

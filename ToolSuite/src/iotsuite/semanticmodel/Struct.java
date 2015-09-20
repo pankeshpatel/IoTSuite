@@ -12,6 +12,7 @@ public class Struct extends DataType {
 	public Struct(String name, List<StructField> fields) {
 		super(name);
 		this.fields = fields;
+		
 
 	}
 

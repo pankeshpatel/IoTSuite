@@ -57,7 +57,7 @@ cs_def:
    
     ('Coordinator'':' (coordinator_def)* )*
     
-    ('Controller'':' (computatinal_def)*)*
+    ('Controller'':' (controller_def)*)*
      
 
    
@@ -72,15 +72,14 @@ agg_cs_def:
      context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);} 
     (csConsumeInfo_def ';')* 
     (csOperation_def ';')*
-     (csGeneratedInfo_def ';')*
+     (csGeneratedInfoForAggregator_def ';')*
     (partition_def ';')+  
     {  
      context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
      context.currentComputationalService.createCSObject();
-   context.currentComputationalService.generateAggregatorComputationalServiceCode(); 
-    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+   context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
     context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
-   
+      context.currentComputationalService.generateAggregatorComputationalServiceCode(); 
     }
 ;
 
@@ -104,7 +103,7 @@ CAPITALIZED_ID
     }
 ;
 
-computatinal_def:
+controller_def:
 
  CAPITALIZED_ID
     { 
@@ -128,6 +127,15 @@ csOperation_def :
     { context.currentComputationalService.addOperation($CAPITALIZED_ID.text);  }  
 ;
   
+csGeneratedInfoForAggregator_def:
+ 'generate' lc_id ':'  CAPITALIZED_ID
+    { context.currentComputationalService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text); 
+    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
+    context.constructAggregatorSymblTable($CAPITALIZED_ID.text);
+    }
+;
+
+
 csGeneratedInfo_def:
     'generate' lc_id ':'  CAPITALIZED_ID
     { context.currentComputationalService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text); 

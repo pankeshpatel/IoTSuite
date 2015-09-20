@@ -37,6 +37,8 @@ public class StorageCompiler {
 	// Static  Table used  for Mapping from high level specification datatype to SQL datatype
 	HashMap<String, String> SQLtype = new HashMap<String, String>(); 
 
+	
+	
 	public StorageCompiler() {
 
 	}
@@ -58,8 +60,11 @@ public class StorageCompiler {
 				getStructFieldName());
 	}
 
+	
+
 	private List<String> getAllFieldType() {
 		this.fieldType = iotsuite.parser.SymbolTable.listStorageFieldType;
+	
 		return fieldType;
 	}
 
@@ -75,6 +80,7 @@ public class StorageCompiler {
 	private List<String> getStructFieldName() {
 
 		this.structFieldName = iotsuite.parser.SymbolTable.tempListStorageFieldName;
+		
 		return structFieldName;
 	}
 
@@ -88,7 +94,6 @@ public class StorageCompiler {
 
 		SQLtype.put("String", "VARCHAR(255)");
 		SQLtype.put("double", "DOUBLE");
-		SQLtype.put("Double", "DOUBLE");
 		SQLtype.put("integer", "INTEGER");
 
 	}
