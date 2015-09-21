@@ -30,6 +30,7 @@ public class ComputationalServiceCompiler {
 	private String partitionAttributeValue;
 	private String computationalServiceName;
 	private Parameter parameter;
+	static int sampleValue;
 	
 /*	//Following list used to store struct field name utilized by aggregator corresponding to structure
 	private static List<String> aggregatorStructFieldName = new ArrayList<String>();
@@ -91,7 +92,7 @@ public class ComputationalServiceCompiler {
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
-				getPartitionAttributeVal(), getOperation(),getStructFieldSet());
+				getPartitionAttributeVal(), getOperation(),getStructFieldSet(),getSampleValue());
 //getAggregatorStructFieldName(),getAggregatorStructFieldType(),
 	}
 
@@ -150,9 +151,16 @@ public class ComputationalServiceCompiler {
 		return operationType;
 	}
 
-	public void addOperation(String variableName) {
+	public int getSampleValue()
+	{
+		return sampleValue;
+	}
+	
+	public void addOperation(String variableName,String sampleValue) {
 
 		this.operationType = variableName;
+		this.sampleValue=Integer.parseInt(sampleValue);
+		
 
 	}
 

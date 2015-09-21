@@ -15,6 +15,8 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 	public static List<String> eventDrivenFieldName = new ArrayList<String>();  
 	//Store fields used by Periodic Sensor
 	public static List<String> eventDrivenFields = new ArrayList<String>();
+	
+	
 	// public Sensor(String name, Set<Attribute> attributes,
 	// Set<SensorMeasurement> generateInfo, Set<SensorMeasurement> consumeInfo)
 	// {
@@ -22,9 +24,8 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 			Set<SensorMeasurement> consumeInfo, List<String> eventDrivenFieldName,List<String> eventDrivenFields) {
 		// super(name, attributes, generateInfo, consumeInfo, "NoInstance");
 		super(name, generateInfo, consumeInfo, "NoInstance");
-		Sensor.eventDrivenFieldName=eventDrivenFieldName;
-		Sensor.eventDrivenFields=eventDrivenFields;
-		
+		this.eventDrivenFieldName=eventDrivenFieldName;
+		this.eventDrivenFields=eventDrivenFields;
 	}
 
 	private String packageName;

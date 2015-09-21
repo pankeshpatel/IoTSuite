@@ -49,7 +49,7 @@ public class SymbolTable {
 	
 		// Static Table used for Mapping from high level specification datatype to
 	// Resultset required datatype
-	HashMap<String, String> javaToResultSetMapping = new HashMap<String, String>();
+	static HashMap<String, String> javaToResultSetMapping = new HashMap<String, String>();
 
 	// Following Symbol Table stores name of struct (ex- TempStruct and
 	// BadgeStruct)
@@ -265,7 +265,7 @@ public class SymbolTable {
 					//	if (!aggregatorStructFieldName
 						//		.contains(tempAggregatorStructFieldName.get(j))) {
 
-					
+				
 					 Field = new StructField(arrayFieldName[i][1], new PrimitiveType(
 							 arrayFieldType[i][1]));
 					 StructFieldSet.add(Field);

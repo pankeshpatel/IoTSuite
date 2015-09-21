@@ -13,13 +13,11 @@ import org.json.JSONObject;
 
 
 
-public class JavaSE$CS.name$ implements I$CS.name$, IDataListener{
-
-  
+public class JavaSE$CS.name$ implements I$CS.name$, IDataListener{ 
+ 
   $CS.allStructFields:{field |  
 static $field.type$ $field.name; format="avoidCapital"$;
- }$
- 
+ }$ 
     $CS.allConsumedInfo:{ consumedInfo |
   public static Listener$consumedInfo.name$ listener$consumedInfo.name$ = null ;
    }; separator="\n"$ 
@@ -28,53 +26,41 @@ static $field.type$ $field.name; format="avoidCapital"$;
  public JavaSE$CS.name$() {
     pubSubSensingFramework = PubSubsSensingFramework.getInstance();
     pubSubSensingFramework.registerForSensorData(this,"$CS.operation$-RESULT");  
-    ComputationalFactory.initializeCompuatioanlComponent("$CS.operation$-CALCULATE");
-    
-  } 
-  
+    ComputationalFactory.initializeCompuatioanlComponent("$CS.operation$-CALCULATE");    
+  }  
   
    $CS.allConsumedInfo:{ consumedInfo |
     @Override
       public  void get$consumedInfo.name; format="capital"$( Listener$consumedInfo.name$ handler){     
       this.listener$consumedInfo.name$ = handler;
-       }
-   
+       }   
  }; separator="\n"$
  
   @Override
        //public void onDataReceived(String eventName, Object data) {
-       
        public void onDataReceived(String eventName, JSONArray data) {
      // double value=0;
     //String unitOfMeasurement=null;
-    JSONObject obj = new JSONObject();
-    try {
-      obj=data.getJSONObject(0);
-       $CS.allStructFields:{field |  
-         $field.name$=obj.get$field.type;format="capital"$("$field.name$"); 
-       }$
-      //value = obj.getDouble("value");
-      //unitOfMeasurement=obj.getString("measurementUnit");
-      
-  } catch (JSONException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-  }
-    List<String> aggFields = new ArrayList<String>();
-    
-     $CS.allStructFields:{field | 
-      aggFields.add($field.name$);
-      //aggFields.add(Double.toString(value));
-      //aggFields.add(unitOfMeasurement);
-    }$
+          JSONObject obj = new JSONObject();
         $CS.allConsumedInfo:{ consumedInfo |
         if(eventName.equals("$consumedInfo.name$"))
         {
-              $consumedInfo.type.name$ arg = ($consumedInfo.type.name$) aggFields;;
-              listener$consumedInfo.name$.onNew$consumedInfo.name$(arg);
+          try {
+           obj=data.getJSONObject(0);
+           $CS.allStructFields:{field |  
+           $field.name$=($field.type; format="uppercase"$)obj.get("$field.name$"); 
+           }$
+      //value = obj.getDouble("value");
+      //unitOfMeasurement=obj.getString("measurementUnit");      
+        } catch (JSONException e) {
+    // TODO Auto-generated catch block
+          System.out.println("Exception is "+ e.getMessage());
+             }
+              //$consumedInfo.type.name$ arg = ($consumedInfo.type.name$) aggFields;;
+              listener$consumedInfo.name$.onNew$consumedInfo.name$(new $consumedInfo.type.name$($CS.allStructFields:{field|$field.name$ }; separator=","$));
           }
-  }; separator="\n"$
+          }; separator="\n"$
   
- }
+      }
   
  }

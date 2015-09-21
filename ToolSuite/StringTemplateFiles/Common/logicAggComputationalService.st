@@ -11,6 +11,7 @@ import $CS.PackageName$.*;
 
 public class  Logic$CS.name$ extends $CS.name$  {     
     
+    public static int sampleValue=$CS.sampleValue$;
     I$CS.name$ obj$CS.name$;
     public static PubSubsSensingFramework pubSubSensingFramework;
    public Logic$CS.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui,Context myContext) {
@@ -40,8 +41,8 @@ public class  Logic$CS.name$ extends $CS.name$  {
          JSONObject obj = new JSONObject();
            try {
              $CS.allStructFields:{field | 
-      obj.put("$field.name$",arg.get$field.name$());
-       }$
+               obj.put("$field.name$",arg.get$field.name$());}$
+              obj.put("sampleValue",$CS.sampleValue$);
         //obj.put("value",arg.gettempValue());
         //obj.put("getunitOfMeasurement", arg.getunitOfMeasurement());
       } 

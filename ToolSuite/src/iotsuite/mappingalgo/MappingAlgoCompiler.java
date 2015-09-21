@@ -3,14 +3,19 @@ package iotsuite.mappingalgo;
 import iotsuite.semanticmodel.DeploymentScope;
 import iotsuite.semanticmodel.Device;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.swing.text.html.HTMLDocument.Iterator;
+
 public class MappingAlgoCompiler {
 
+		
+	private static int j;
 	/**
 	 * 
 	 * @param deviceList
@@ -24,8 +29,53 @@ public class MappingAlgoCompiler {
 	 */
 	public static Map<Device, Set<String>> mapTasks(List<Device> deviceList,
 			List<DeploymentScope> mappingConstraintList) {
+		
+		List<Device>  tempDeviceList = new ArrayList<Device>();
+		List<String>  tempSoftwareComponentList = new ArrayList<String>();
+		Set<String>  tempSoftwareComponentName = new HashSet<String>();
+		final Map<Device, Set<String>> finalMapping = new HashMap<Device, Set<String>>();
+		
+		
+		for (Device deviceObj : deviceList) {
+			//if(deviceObj.getAbilities().isEmpty()){
+				tempDeviceList.add(deviceObj);			
+			//}	
+		}
+		
+		for (DeploymentScope mc : mappingConstraintList){
+			
+			tempSoftwareComponentList.add(mc.getSoftwareComponentName());	
+			
+		}
+		
+		/*for (DeploymentScope mc : mappingConstraintList){
+			
+			tempSoftwareComponentName.add(mc.getSoftwareComponentName());
+			
+		}*/
+		
+		
+		for(int i = 0 ; i<tempDeviceList.size(); i++){
+			
+			if(tempDeviceList.get(i).getAbilities().isEmpty()){
+			
+			Set<String> tempsc = new HashSet<String>();
+			tempsc.add(tempSoftwareComponentList.get(j));			
+			finalMapping.put(tempDeviceList.get(i),tempsc);
+			j++;
+			}
+			else{
+								
+				finalMapping.put(tempDeviceList.get(i), tempDeviceList.get(i).getAbilities());
+			}
+			
+		}
+		
+		
+		
+		
 
-		Map<String, Set<Device>> deviceListByRegion = new HashMap<String, Set<Device>>();
+	/*	Map<String, Set<Device>> deviceListByRegion = new HashMap<String, Set<Device>>();
 		Set<String> regionLabelSet = new HashSet<String>();
 
 		// Construct regionLabelSet --- O/p: [Building, Floor, Room]
@@ -33,14 +83,7 @@ public class MappingAlgoCompiler {
 			regionLabelSet.addAll(deviceObj.getRegionLabels());
 		}
 
-		/*System.out.println("Device list is " + deviceList + " in Mapping Algo");
-		System.out.println("Region label  is " + regionLabelSet
-				+ " in Mapping Algo");
-		System.out.println("Device Deployment List  is "
-				+ mappingConstraintList + " in Mapping Algo");
-
-		System.out.println("Device list by region is" + deviceListByRegion
-				+ "in Mapping algo");*/
+	
 
 		// --O/p : 21 (regionLabel) -> device List.
 		for (Device deviceObj : deviceList) {
@@ -59,11 +102,7 @@ public class MappingAlgoCompiler {
 			}
 		}
 
-		/*System.out.println("Device list is " + deviceList + " in Mapping Algo");
-		System.out.println("Region label  is " + regionLabelSet
-				+ " in Mapping Algo");
-		System.out.println("Device list by region is" + deviceListByRegion
-				+ "in Mapping algo");*/
+	
 
 		final Map<String, Set<String>> regionMap = new HashMap<String, Set<String>>();
 
@@ -84,10 +123,7 @@ public class MappingAlgoCompiler {
 			}
 
 		}
-		/*System.out.println("Device list is " + deviceList + " in Mapping Algo");
-		System.out.println("Region label  is " + regionLabelSet
-				+ " in Mapping Algo");
-		System.out.println("Region Map is " + regionMap + "in Mapping Algo");*/
+	
 
 		final Map<Device, Set<String>> finalMapping = new HashMap<Device, Set<String>>();
 
@@ -113,24 +149,9 @@ public class MappingAlgoCompiler {
 									.get(tempkey[i]);
 							Device selectedDevice = pickOneFrom(tempDeviceSet);
 
-							/*
-							 * if(selectedDevice.getAbilities().equals(tempDeviceSet
-							 * )) {
-							 * 
-							 * finalMapping.get(selectedDevice).add(
-							 * tempSoftWareComponent); }
-							 */
-
-							// if
-							// (selectedDevice.getMobileFlag().equals("true")) {
-
-							// Do not allocate any software component
-							// if the device mobileFlag = true (mobile device).
-
-							// } else {
 							finalMapping.get(selectedDevice).add(
 									tempSoftWareComponent);
-							// }
+							
 
 						}
 					}
@@ -138,9 +159,12 @@ public class MappingAlgoCompiler {
 				}
 
 			}
-		}
-
+		}*/
+		
+		System.out.println(finalMapping);
 		return finalMapping;
+
+		//return finalMapping;
 
 	}
 
@@ -167,21 +191,6 @@ public class MappingAlgoCompiler {
 		// pick that item from the array version of the set and return it.
 		return (Device) set.toArray()[destinationIndex];
 
-	}
-
-	/*
-	 * private static List<Device> pickDevicesWithAbilities(String abilityName,
-	 * List<Device> deviceList) {
-	 * 
-	 * List<Device> deviceListWithAbility = new ArrayList<Device>();
-	 * 
-	 * for (Device d : deviceList) { for (String ability : d.getAbilities()) {
-	 * 
-	 * if (ability.equals(abilityName)) deviceListWithAbility.add(d); } }
-	 * 
-	 * return deviceListWithAbility;
-	 * 
-	 * }
-	 */
+	}	
 
 }

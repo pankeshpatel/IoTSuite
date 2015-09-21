@@ -25,6 +25,7 @@ public class SensorCompiler {
 	
 	
 	
+	
 
 	public SensorCompiler() {
 	}
@@ -42,6 +43,8 @@ public class SensorCompiler {
 	private List<String> getEventDrivenFields() {
 		return eventDrivenFields;
 	}
+	
+	
 
 		// Getter and Setter of GeneratedInfo
 	public Set<SensorMeasurement> getGeneratedInfo() {
@@ -57,6 +60,9 @@ public class SensorCompiler {
 				
 				
 		}
+	
+
+	
 
 	// Getter and setter of Attribute
 	/*
@@ -295,8 +301,4 @@ public class SensorCompiler {
 	}
 
 	
-
-	
-	
-
 }

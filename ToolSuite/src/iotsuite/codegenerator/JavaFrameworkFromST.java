@@ -141,7 +141,6 @@ public class JavaFrameworkFromST {
 	public CompilationUnit generateImplAggComputationalService(
 			ComputationalService computationalService) {
 		
-		System.out.println("I am in new implAgg");
 		StringTemplate templateOfComputationalService = group
 				.getInstanceOf("JavaSE/implAggComputationalJavaSE");
 		templateOfComputationalService.setAttribute("CS", computationalService);

@@ -72,7 +72,7 @@ agg_cs_def:
      context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);} 
     (csConsumeInfo_def ';')* 
     (csOperation_def ';')*
-     (csGeneratedInfoForAggregator_def ';')*
+    (csGeneratedInfoForAggregator_def ';')*
     (partition_def ';')+  
     {  
      context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
@@ -123,8 +123,8 @@ controller_def:
 ;
   
 csOperation_def :
-    'COMPUTE(' CAPITALIZED_ID')'  
-    { context.currentComputationalService.addOperation($CAPITALIZED_ID.text);  }  
+    'COMPUTE(' CAPITALIZED_ID'_BY_SAMPLE' ',' INT ')'  
+    { context.currentComputationalService.addOperation($CAPITALIZED_ID.text,$INT.text);  }  
 ;
   
 csGeneratedInfoForAggregator_def:

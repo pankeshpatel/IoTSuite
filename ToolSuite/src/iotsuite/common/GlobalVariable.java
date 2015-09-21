@@ -49,8 +49,9 @@ public class GlobalVariable {
 	public static final String ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK = "compile-arch-spec";
 	public static final String ACTIVITY_GENERATE_MAPPING = "invoke-mapper-linker";
 	public static final String ACTIVITY_GENERATE_USERINTERACTION = "compile-interaction-spec";
+	
+	
 
-	// public static final String ACTIVITY_GENERATE_LINKING = "invoke-linker";
 
 	public static String convertPathTopackage(String pathName) {
 

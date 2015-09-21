@@ -106,7 +106,7 @@ periodicsensor_def:
  CAPITALIZED_ID
     {context.currentSensor = new SensorCompiler($CAPITALIZED_ID.text);}
     (sensorMeasurementForPeriodic_def ';')* 
-    (sensorperiodicMeasurement_def ';')*
+  //  (sensorperiodicMeasurement_def ';')*
     {context.currentSensor.generatePeriodicSensorCode();        
     }
 ;
@@ -134,8 +134,8 @@ sensorMeasurementForEventDriven_def:
 ;
 
 sensorMeasurementForPeriodic_def : 
-    'generate' lc_id ':'  CAPITALIZED_ID  
-   
+    'generate' lc_id ':'  CAPITALIZED_ID 
+        
     {
       
     context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text , context.getStructSymblTable($CAPITALIZED_ID.text) ); 
@@ -146,10 +146,14 @@ sensorMeasurementForPeriodic_def :
 
  
 sensorperiodicMeasurement_def:
- 'sample' 'period' 'SAMPLEPERIOD' 'for' 'SAMPLEDURATION'  
-  
+ //'sample' 'period' INT 'for' INT  
+ {
+   //context.currentSensor.addSensorMeasurementPeriodInfo($INT.text, $SEC_INT.text);
+ } 
 ;
-
+ 
+ 
+ 
 
 sensoreventMeasurement_def: 
 //('onCondition' ID ',' ID)*
@@ -265,10 +269,11 @@ primitiveType:
 ;
 
 
-ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' | '0'..'9')*
-   ;
+ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' | '0'..'9')* ;
    
-INT : '0'..'9'('0'..'9')*  ; 
+INT : '0'..'9'('0'..'9')* ;
+
+//SEC_INT : '0'..'9'('0'..'9')* ; 
 
 CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )*;
 

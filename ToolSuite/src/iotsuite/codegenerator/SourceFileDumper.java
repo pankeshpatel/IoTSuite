@@ -466,7 +466,7 @@ public class SourceFileDumper {
 			 */
 		} else {
 
-			// I think this else part generate code inti framework reposiroty.
+			// I think this else part generate code into framework repository.
 			// So, you do not need to write "else if" for the Interaction.
 			new File(GlobalVariable.templatePath + "ApplicationLogic"
 					+ GlobalVariable.outputDirPath

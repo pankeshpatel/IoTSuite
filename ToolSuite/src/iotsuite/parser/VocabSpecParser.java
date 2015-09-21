@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-09-20 09:32:53
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-09-21 20:33:43
  
 package iotsuite.parser;
 import iotsuite.compiler.*;  
@@ -16,11 +16,10 @@ public class VocabSpecParser extends Parser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "INT", 
 		"WS", "'('", "')'", "','", "':'", "';'", "'Boolean'", "'Button'", "'Integer'", 
-		"'SAMPLEDURATION'", "'SAMPLEPERIOD'", "'String'", "'TextBox'", "'TextView'", 
-		"'_'", "'accessed-by'", "'action'", "'actuators'", "'boolean'", "'command'", 
-		"'double'", "'eventdriven'", "'for'", "'generate'", "'interactions'", 
-		"'long'", "'onCondition'", "'period'", "'periodicsensors'", "'regions'", 
-		"'request'", "'resources'", "'sample'", "'sensors'", "'storages'", "'structs'", 
+		"'String'", "'TextBox'", "'TextView'", "'_'", "'accessed-by'", "'action'", 
+		"'actuators'", "'boolean'", "'command'", "'double'", "'eventdriven'", 
+		"'generate'", "'interactions'", "'long'", "'onCondition'", "'periodicsensors'", 
+		"'regions'", "'request'", "'resources'", "'sensors'", "'storages'", "'structs'", 
 		"'with'"
 	};
 	public static final int EOF=-1;
@@ -55,11 +54,6 @@ public class VocabSpecParser extends Parser {
 	public static final int T__36=36;
 	public static final int T__37=37;
 	public static final int T__38=38;
-	public static final int T__39=39;
-	public static final int T__40=40;
-	public static final int T__41=41;
-	public static final int T__42=42;
-	public static final int T__43=43;
 	public static final int CAPITALIZED_ID=4;
 	public static final int ID=5;
 	public static final int INT=6;
@@ -96,7 +90,7 @@ public class VocabSpecParser extends Parser {
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:24:11: ( 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'resources' ':' abilities_def )
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:25:5: 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'resources' ':' abilities_def
 			{
-			match(input,36,FOLLOW_36_in_vocabSpec67); 
+			match(input,32,FOLLOW_32_in_vocabSpec67); 
 			 context = new SymbolTable();
 			    context.currentRegion = new RegionCompiler();
 			    // context.currentMappingConstraint = new MappingConstraint(); 
@@ -132,7 +126,7 @@ public class VocabSpecParser extends Parser {
 			}
 
 			 context.currentRegion.generateRegionCode(); 
-			match(input,42,FOLLOW_42_in_vocabSpec103); 
+			match(input,37,FOLLOW_37_in_vocabSpec103); 
 			match(input,11,FOLLOW_11_in_vocabSpec105); 
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:19: ( struct_def )+
 			int cnt2=0;
@@ -163,7 +157,7 @@ public class VocabSpecParser extends Parser {
 				cnt2++;
 			}
 
-			match(input,38,FOLLOW_38_in_vocabSpec122); 
+			match(input,34,FOLLOW_34_in_vocabSpec122); 
 			match(input,11,FOLLOW_11_in_vocabSpec124); 
 			pushFollow(FOLLOW_abilities_def_in_vocabSpec126);
 			abilities_def();
@@ -331,7 +325,7 @@ public class VocabSpecParser extends Parser {
 			while (true) {
 				int alt4=2;
 				int LA4_0 = input.LA(1);
-				if ( (LA4_0==40) ) {
+				if ( (LA4_0==35) ) {
 					alt4=1;
 				}
 
@@ -339,7 +333,7 @@ public class VocabSpecParser extends Parser {
 				case 1 :
 					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:81:4: 'sensors' ':' sensor_def
 					{
-					match(input,40,FOLLOW_40_in_abilities_def257); 
+					match(input,35,FOLLOW_35_in_abilities_def257); 
 					match(input,11,FOLLOW_11_in_abilities_def259); 
 					pushFollow(FOLLOW_sensor_def_in_abilities_def263);
 					sensor_def();
@@ -361,7 +355,7 @@ public class VocabSpecParser extends Parser {
 			while (true) {
 				int alt5=2;
 				int LA5_0 = input.LA(1);
-				if ( (LA5_0==24) ) {
+				if ( (LA5_0==22) ) {
 					alt5=1;
 				}
 
@@ -369,7 +363,7 @@ public class VocabSpecParser extends Parser {
 				case 1 :
 					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:83:5: 'actuators' ':' actuator_def
 					{
-					match(input,24,FOLLOW_24_in_abilities_def273); 
+					match(input,22,FOLLOW_22_in_abilities_def273); 
 					match(input,11,FOLLOW_11_in_abilities_def275); 
 					pushFollow(FOLLOW_actuator_def_in_abilities_def277);
 					actuator_def();
@@ -388,7 +382,7 @@ public class VocabSpecParser extends Parser {
 			while (true) {
 				int alt6=2;
 				int LA6_0 = input.LA(1);
-				if ( (LA6_0==41) ) {
+				if ( (LA6_0==36) ) {
 					alt6=1;
 				}
 
@@ -396,7 +390,7 @@ public class VocabSpecParser extends Parser {
 				case 1 :
 					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:84:4: 'storages' ':' ss_def
 					{
-					match(input,41,FOLLOW_41_in_abilities_def284); 
+					match(input,36,FOLLOW_36_in_abilities_def284); 
 					match(input,11,FOLLOW_11_in_abilities_def287); 
 					pushFollow(FOLLOW_ss_def_in_abilities_def289);
 					ss_def();
@@ -415,7 +409,7 @@ public class VocabSpecParser extends Parser {
 			while (true) {
 				int alt8=2;
 				int LA8_0 = input.LA(1);
-				if ( (LA8_0==31) ) {
+				if ( (LA8_0==28) ) {
 					alt8=1;
 				}
 
@@ -423,7 +417,7 @@ public class VocabSpecParser extends Parser {
 				case 1 :
 					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:85:4: 'interactions' ':' ( gui_def )+
 					{
-					match(input,31,FOLLOW_31_in_abilities_def296); 
+					match(input,28,FOLLOW_28_in_abilities_def296); 
 					match(input,11,FOLLOW_11_in_abilities_def298); 
 					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:85:23: ( gui_def )+
 					int cnt7=0;
@@ -489,7 +483,7 @@ public class VocabSpecParser extends Parser {
 			while (true) {
 				int alt10=2;
 				int LA10_0 = input.LA(1);
-				if ( (LA10_0==35) ) {
+				if ( (LA10_0==31) ) {
 					alt10=1;
 				}
 
@@ -497,7 +491,7 @@ public class VocabSpecParser extends Parser {
 				case 1 :
 					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:94:8: 'periodicsensors' ':' ( periodicsensor_def )*
 					{
-					match(input,35,FOLLOW_35_in_sensor_def336); 
+					match(input,31,FOLLOW_31_in_sensor_def336); 
 					match(input,11,FOLLOW_11_in_sensor_def338); 
 					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:94:29: ( periodicsensor_def )*
 					loop9:
@@ -537,7 +531,7 @@ public class VocabSpecParser extends Parser {
 			while (true) {
 				int alt12=2;
 				int LA12_0 = input.LA(1);
-				if ( (LA12_0==28) ) {
+				if ( (LA12_0==26) ) {
 					alt12=1;
 				}
 
@@ -545,7 +539,7 @@ public class VocabSpecParser extends Parser {
 				case 1 :
 					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:97:8: 'eventdriven' ':' ( eventsensor_def )*
 					{
-					match(input,28,FOLLOW_28_in_sensor_def365); 
+					match(input,26,FOLLOW_26_in_sensor_def365); 
 					match(input,11,FOLLOW_11_in_sensor_def367); 
 					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:97:26: ( eventsensor_def )*
 					loop11:
@@ -596,13 +590,13 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "periodicsensor_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:105:1: periodicsensor_def : CAPITALIZED_ID ( sensorMeasurementForPeriodic_def ';' )* ( sensorperiodicMeasurement_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:105:1: periodicsensor_def : CAPITALIZED_ID ( sensorMeasurementForPeriodic_def ';' )* ;
 	public final void periodicsensor_def() throws RecognitionException {
 		Token CAPITALIZED_ID6=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:105:19: ( CAPITALIZED_ID ( sensorMeasurementForPeriodic_def ';' )* ( sensorperiodicMeasurement_def ';' )* )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:106:2: CAPITALIZED_ID ( sensorMeasurementForPeriodic_def ';' )* ( sensorperiodicMeasurement_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:105:19: ( CAPITALIZED_ID ( sensorMeasurementForPeriodic_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:106:2: CAPITALIZED_ID ( sensorMeasurementForPeriodic_def ';' )*
 			{
 			CAPITALIZED_ID6=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_periodicsensor_def389); 
 			context.currentSensor = new SensorCompiler((CAPITALIZED_ID6!=null?CAPITALIZED_ID6.getText():null));
@@ -611,7 +605,7 @@ public class VocabSpecParser extends Parser {
 			while (true) {
 				int alt13=2;
 				int LA13_0 = input.LA(1);
-				if ( (LA13_0==30) ) {
+				if ( (LA13_0==27) ) {
 					alt13=1;
 				}
 
@@ -629,32 +623,6 @@ public class VocabSpecParser extends Parser {
 
 				default :
 					break loop13;
-				}
-			}
-
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:109:5: ( sensorperiodicMeasurement_def ';' )*
-			loop14:
-			while (true) {
-				int alt14=2;
-				int LA14_0 = input.LA(1);
-				if ( (LA14_0==39) ) {
-					alt14=1;
-				}
-
-				switch (alt14) {
-				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:109:6: sensorperiodicMeasurement_def ';'
-					{
-					pushFollow(FOLLOW_sensorperiodicMeasurement_def_in_periodicsensor_def414);
-					sensorperiodicMeasurement_def();
-					state._fsp--;
-
-					match(input,12,FOLLOW_12_in_periodicsensor_def416); 
-					}
-					break;
-
-				default :
-					break loop14;
 				}
 			}
 
@@ -684,57 +652,57 @@ public class VocabSpecParser extends Parser {
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:114:16: ( CAPITALIZED_ID ( sensorMeasurementForEventDriven_def ';' )* ( sensoreventMeasurement_def ';' )* )
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:115:2: CAPITALIZED_ID ( sensorMeasurementForEventDriven_def ';' )* ( sensoreventMeasurement_def ';' )*
 			{
-			CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_eventsensor_def433); 
+			CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_eventsensor_def425); 
 			context.currentSensor = new SensorCompiler((CAPITALIZED_ID7!=null?CAPITALIZED_ID7.getText():null));
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:117:5: ( sensorMeasurementForEventDriven_def ';' )*
+			loop14:
+			while (true) {
+				int alt14=2;
+				int LA14_0 = input.LA(1);
+				if ( (LA14_0==27) ) {
+					alt14=1;
+				}
+
+				switch (alt14) {
+				case 1 :
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:117:6: sensorMeasurementForEventDriven_def ';'
+					{
+					pushFollow(FOLLOW_sensorMeasurementForEventDriven_def_in_eventsensor_def438);
+					sensorMeasurementForEventDriven_def();
+					state._fsp--;
+
+					match(input,12,FOLLOW_12_in_eventsensor_def440); 
+					}
+					break;
+
+				default :
+					break loop14;
+				}
+			}
+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:118:5: ( sensoreventMeasurement_def ';' )*
 			loop15:
 			while (true) {
 				int alt15=2;
 				int LA15_0 = input.LA(1);
-				if ( (LA15_0==30) ) {
+				if ( (LA15_0==12||LA15_0==30) ) {
 					alt15=1;
 				}
 
 				switch (alt15) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:117:6: sensorMeasurementForEventDriven_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:118:6: sensoreventMeasurement_def ';'
 					{
-					pushFollow(FOLLOW_sensorMeasurementForEventDriven_def_in_eventsensor_def446);
-					sensorMeasurementForEventDriven_def();
+					pushFollow(FOLLOW_sensoreventMeasurement_def_in_eventsensor_def450);
+					sensoreventMeasurement_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_eventsensor_def448); 
+					match(input,12,FOLLOW_12_in_eventsensor_def452); 
 					}
 					break;
 
 				default :
 					break loop15;
-				}
-			}
-
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:118:5: ( sensoreventMeasurement_def ';' )*
-			loop16:
-			while (true) {
-				int alt16=2;
-				int LA16_0 = input.LA(1);
-				if ( (LA16_0==12||LA16_0==33) ) {
-					alt16=1;
-				}
-
-				switch (alt16) {
-				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:118:6: sensoreventMeasurement_def ';'
-					{
-					pushFollow(FOLLOW_sensoreventMeasurement_def_in_eventsensor_def458);
-					sensoreventMeasurement_def();
-					state._fsp--;
-
-					match(input,12,FOLLOW_12_in_eventsensor_def460); 
-					}
-					break;
-
-				default :
-					break loop16;
 				}
 			}
 
@@ -764,13 +732,13 @@ public class VocabSpecParser extends Parser {
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:123:36: ( 'generate' lc_id ':' CAPITALIZED_ID )
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:124:1: 'generate' lc_id ':' CAPITALIZED_ID
 			{
-			match(input,30,FOLLOW_30_in_sensorMeasurementForEventDriven_def477); 
-			pushFollow(FOLLOW_lc_id_in_sensorMeasurementForEventDriven_def479);
+			match(input,27,FOLLOW_27_in_sensorMeasurementForEventDriven_def469); 
+			pushFollow(FOLLOW_lc_id_in_sensorMeasurementForEventDriven_def471);
 			lc_id8=lc_id();
 			state._fsp--;
 
-			match(input,11,FOLLOW_11_in_sensorMeasurementForEventDriven_def481); 
-			CAPITALIZED_ID9=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensorMeasurementForEventDriven_def484); 
+			match(input,11,FOLLOW_11_in_sensorMeasurementForEventDriven_def473); 
+			CAPITALIZED_ID9=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensorMeasurementForEventDriven_def476); 
 
 			      
 			    context.currentSensor.addSensorMeasurement((lc_id8!=null?input.toString(lc_id8.start,lc_id8.stop):null), (CAPITALIZED_ID9!=null?CAPITALIZED_ID9.getText():null) , context.getStructSymblTable((CAPITALIZED_ID9!=null?CAPITALIZED_ID9.getText():null)) ); 
@@ -804,13 +772,13 @@ public class VocabSpecParser extends Parser {
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:136:34: ( 'generate' lc_id ':' CAPITALIZED_ID )
 			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:137:5: 'generate' lc_id ':' CAPITALIZED_ID
 			{
-			match(input,30,FOLLOW_30_in_sensorMeasurementForPeriodic_def511); 
-			pushFollow(FOLLOW_lc_id_in_sensorMeasurementForPeriodic_def513);
+			match(input,27,FOLLOW_27_in_sensorMeasurementForPeriodic_def503); 
+			pushFollow(FOLLOW_lc_id_in_sensorMeasurementForPeriodic_def505);
 			lc_id10=lc_id();
 			state._fsp--;
 
-			match(input,11,FOLLOW_11_in_sensorMeasurementForPeriodic_def515); 
-			CAPITALIZED_ID11=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensorMeasurementForPeriodic_def518); 
+			match(input,11,FOLLOW_11_in_sensorMeasurementForPeriodic_def507); 
+			CAPITALIZED_ID11=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensorMeasurementForPeriodic_def510); 
 
 			      
 			    context.currentSensor.addSensorMeasurement((lc_id10!=null?input.toString(lc_id10.start,lc_id10.stop):null), (CAPITALIZED_ID11!=null?CAPITALIZED_ID11.getText():null) , context.getStructSymblTable((CAPITALIZED_ID11!=null?CAPITALIZED_ID11.getText():null)) ); 
@@ -833,23 +801,17 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "sensorperiodicMeasurement_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:148:1: sensorperiodicMeasurement_def : 'sample' 'period' 'SAMPLEPERIOD' 'for' 'SAMPLEDURATION' ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:148:1: sensorperiodicMeasurement_def :;
 	public final void sensorperiodicMeasurement_def() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:148:30: ( 'sample' 'period' 'SAMPLEPERIOD' 'for' 'SAMPLEDURATION' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:149:2: 'sample' 'period' 'SAMPLEPERIOD' 'for' 'SAMPLEDURATION'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:148:30: ()
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:150:2: 
 			{
-			match(input,39,FOLLOW_39_in_sensorperiodicMeasurement_def542); 
-			match(input,34,FOLLOW_34_in_sensorperiodicMeasurement_def544); 
-			match(input,17,FOLLOW_17_in_sensorperiodicMeasurement_def546); 
-			match(input,29,FOLLOW_29_in_sensorperiodicMeasurement_def548); 
-			match(input,16,FOLLOW_16_in_sensorperiodicMeasurement_def550); 
+
+			   //context.currentSensor.addSensorMeasurementPeriodInfo($INT.text, $SEC_INT.text);
+			 
 			}
 
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
 		}
 		finally {
 			// do for sure before leaving
@@ -860,55 +822,55 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "sensoreventMeasurement_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:154:1: sensoreventMeasurement_def : ( 'onCondition' ( ID | ',' ID )* )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:158:1: sensoreventMeasurement_def : ( 'onCondition' ( ID | ',' ID )* )* ;
 	public final void sensoreventMeasurement_def() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:154:27: ( ( 'onCondition' ( ID | ',' ID )* )* )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:156:2: ( 'onCondition' ( ID | ',' ID )* )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:158:27: ( ( 'onCondition' ( ID | ',' ID )* )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:160:2: ( 'onCondition' ( ID | ',' ID )* )*
 			{
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:156:2: ( 'onCondition' ( ID | ',' ID )* )*
-			loop18:
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:160:2: ( 'onCondition' ( ID | ',' ID )* )*
+			loop17:
 			while (true) {
-				int alt18=2;
-				int LA18_0 = input.LA(1);
-				if ( (LA18_0==33) ) {
-					alt18=1;
+				int alt17=2;
+				int LA17_0 = input.LA(1);
+				if ( (LA17_0==30) ) {
+					alt17=1;
 				}
 
-				switch (alt18) {
+				switch (alt17) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:156:2: 'onCondition' ( ID | ',' ID )*
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:160:2: 'onCondition' ( ID | ',' ID )*
 					{
-					match(input,33,FOLLOW_33_in_sensoreventMeasurement_def567); 
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:156:16: ( ID | ',' ID )*
-					loop17:
+					match(input,30,FOLLOW_30_in_sensoreventMeasurement_def558); 
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:160:16: ( ID | ',' ID )*
+					loop16:
 					while (true) {
-						int alt17=3;
-						int LA17_0 = input.LA(1);
-						if ( (LA17_0==ID) ) {
-							alt17=1;
+						int alt16=3;
+						int LA16_0 = input.LA(1);
+						if ( (LA16_0==ID) ) {
+							alt16=1;
 						}
-						else if ( (LA17_0==10) ) {
-							alt17=2;
+						else if ( (LA16_0==10) ) {
+							alt16=2;
 						}
 
-						switch (alt17) {
+						switch (alt16) {
 						case 1 :
-							// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:156:17: ID
+							// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:160:17: ID
 							{
-							match(input,ID,FOLLOW_ID_in_sensoreventMeasurement_def570); 
+							match(input,ID,FOLLOW_ID_in_sensoreventMeasurement_def561); 
 							}
 							break;
 						case 2 :
-							// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:156:21: ',' ID
+							// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:160:21: ',' ID
 							{
-							match(input,10,FOLLOW_10_in_sensoreventMeasurement_def573); 
-							match(input,ID,FOLLOW_ID_in_sensoreventMeasurement_def575); 
+							match(input,10,FOLLOW_10_in_sensoreventMeasurement_def564); 
+							match(input,ID,FOLLOW_ID_in_sensoreventMeasurement_def566); 
 							}
 							break;
 
 						default :
-							break loop17;
+							break loop16;
 						}
 					}
 
@@ -916,7 +878,7 @@ public class VocabSpecParser extends Parser {
 					break;
 
 				default :
-					break loop18;
+					break loop17;
 				}
 			}
 
@@ -936,39 +898,39 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "actuator_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:167:1: actuator_def : CAPITALIZED_ID ( action_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:171:1: actuator_def : CAPITALIZED_ID ( action_def ';' )* ;
 	public final void actuator_def() throws RecognitionException {
 		Token CAPITALIZED_ID12=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:167:13: ( CAPITALIZED_ID ( action_def ';' )* )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:168:4: CAPITALIZED_ID ( action_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:171:13: ( CAPITALIZED_ID ( action_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:172:4: CAPITALIZED_ID ( action_def ';' )*
 			{
-			CAPITALIZED_ID12=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_actuator_def598); 
+			CAPITALIZED_ID12=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_actuator_def589); 
 			context.currentActuator = new ActuatorCompiler((CAPITALIZED_ID12!=null?CAPITALIZED_ID12.getText():null));
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:170:4: ( action_def ';' )*
-			loop19:
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:174:4: ( action_def ';' )*
+			loop18:
 			while (true) {
-				int alt19=2;
-				int LA19_0 = input.LA(1);
-				if ( (LA19_0==23) ) {
-					alt19=1;
+				int alt18=2;
+				int LA18_0 = input.LA(1);
+				if ( (LA18_0==21) ) {
+					alt18=1;
 				}
 
-				switch (alt19) {
+				switch (alt18) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:170:5: action_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:174:5: action_def ';'
 					{
-					pushFollow(FOLLOW_action_def_in_actuator_def610);
+					pushFollow(FOLLOW_action_def_in_actuator_def601);
 					action_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_actuator_def612); 
+					match(input,12,FOLLOW_12_in_actuator_def603); 
 					}
 					break;
 
 				default :
-					break loop19;
+					break loop18;
 				}
 			}
 
@@ -989,28 +951,28 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "action_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:175:1: action_def : 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:179:1: action_def : 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' ;
 	public final void action_def() throws RecognitionException {
 		Token CAPITALIZED_ID13=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:175:11: ( 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:176:5: 'action' CAPITALIZED_ID '(' ( parameter_def )? ')'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:179:11: ( 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:180:5: 'action' CAPITALIZED_ID '(' ( parameter_def )? ')'
 			{
-			match(input,23,FOLLOW_23_in_action_def636); 
-			CAPITALIZED_ID13=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_action_def638); 
-			match(input,8,FOLLOW_8_in_action_def640); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:176:33: ( parameter_def )?
-			int alt20=2;
-			int LA20_0 = input.LA(1);
-			if ( (LA20_0==ID) ) {
-				alt20=1;
+			match(input,21,FOLLOW_21_in_action_def627); 
+			CAPITALIZED_ID13=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_action_def629); 
+			match(input,8,FOLLOW_8_in_action_def631); 
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:180:33: ( parameter_def )?
+			int alt19=2;
+			int LA19_0 = input.LA(1);
+			if ( (LA19_0==ID) ) {
+				alt19=1;
 			}
-			switch (alt20) {
+			switch (alt19) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:176:34: parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:180:34: parameter_def
 					{
-					pushFollow(FOLLOW_parameter_def_in_action_def643);
+					pushFollow(FOLLOW_parameter_def_in_action_def634);
 					parameter_def();
 					state._fsp--;
 
@@ -1019,7 +981,7 @@ public class VocabSpecParser extends Parser {
 
 			}
 
-			match(input,9,FOLLOW_9_in_action_def647); 
+			match(input,9,FOLLOW_9_in_action_def638); 
 			 context.currentActuator.addAction((CAPITALIZED_ID13!=null?CAPITALIZED_ID13.getText():null)); 
 			}
 
@@ -1037,33 +999,33 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "parameter_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:180:1: parameter_def : lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:184:1: parameter_def : lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? ;
 	public final void parameter_def() throws RecognitionException {
 		Token CAPITALIZED_ID14=null;
 		ParserRuleReturnScope lc_id15 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:180:15: ( lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:181:5: lc_id ':' CAPITALIZED_ID ( ',' parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:184:15: ( lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:185:5: lc_id ':' CAPITALIZED_ID ( ',' parameter_def )?
 			{
-			pushFollow(FOLLOW_lc_id_in_parameter_def667);
+			pushFollow(FOLLOW_lc_id_in_parameter_def658);
 			lc_id15=lc_id();
 			state._fsp--;
 
-			match(input,11,FOLLOW_11_in_parameter_def669); 
-			CAPITALIZED_ID14=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_parameter_def672); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:181:31: ( ',' parameter_def )?
-			int alt21=2;
-			int LA21_0 = input.LA(1);
-			if ( (LA21_0==10) ) {
-				alt21=1;
+			match(input,11,FOLLOW_11_in_parameter_def660); 
+			CAPITALIZED_ID14=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_parameter_def663); 
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:185:31: ( ',' parameter_def )?
+			int alt20=2;
+			int LA20_0 = input.LA(1);
+			if ( (LA20_0==10) ) {
+				alt20=1;
 			}
-			switch (alt21) {
+			switch (alt20) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:181:32: ',' parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:185:32: ',' parameter_def
 					{
-					match(input,10,FOLLOW_10_in_parameter_def675); 
-					pushFollow(FOLLOW_parameter_def_in_parameter_def677);
+					match(input,10,FOLLOW_10_in_parameter_def666); 
+					pushFollow(FOLLOW_parameter_def_in_parameter_def668);
 					parameter_def();
 					state._fsp--;
 
@@ -1095,41 +1057,41 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "ss_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:198:1: ss_def : CAPITALIZED_ID ( storageDataAccess_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:202:1: ss_def : CAPITALIZED_ID ( storageDataAccess_def ';' )* ;
 	public final void ss_def() throws RecognitionException {
 		Token CAPITALIZED_ID16=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:198:7: ( CAPITALIZED_ID ( storageDataAccess_def ';' )* )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:199:3: CAPITALIZED_ID ( storageDataAccess_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:202:7: ( CAPITALIZED_ID ( storageDataAccess_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:203:3: CAPITALIZED_ID ( storageDataAccess_def ';' )*
 			{
-			CAPITALIZED_ID16=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_ss_def704); 
+			CAPITALIZED_ID16=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_ss_def695); 
 			 context.currentStorageService = new StorageCompiler();
 			      //context.currentStorageService = new Storage((CAPITALIZED_ID16!=null?CAPITALIZED_ID16.getText():null));
 			      
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:204:5: ( storageDataAccess_def ';' )*
-			loop22:
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:208:5: ( storageDataAccess_def ';' )*
+			loop21:
 			while (true) {
-				int alt22=2;
-				int LA22_0 = input.LA(1);
-				if ( (LA22_0==30) ) {
-					alt22=1;
+				int alt21=2;
+				int LA21_0 = input.LA(1);
+				if ( (LA21_0==27) ) {
+					alt21=1;
 				}
 
-				switch (alt22) {
+				switch (alt21) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:204:6: storageDataAccess_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:208:6: storageDataAccess_def ';'
 					{
-					pushFollow(FOLLOW_storageDataAccess_def_in_ss_def721);
+					pushFollow(FOLLOW_storageDataAccess_def_in_ss_def712);
 					storageDataAccess_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_ss_def723); 
+					match(input,12,FOLLOW_12_in_ss_def714); 
 					}
 					break;
 
 				default :
-					break loop22;
+					break loop21;
 				}
 			}
 
@@ -1156,18 +1118,18 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "storageDataAccess_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:217:1: storageDataAccess_def : storageGeneratedInfo_def 'accessed-by' storagedataIndex_def ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:221:1: storageDataAccess_def : storageGeneratedInfo_def 'accessed-by' storagedataIndex_def ;
 	public final void storageDataAccess_def() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:217:23: ( storageGeneratedInfo_def 'accessed-by' storagedataIndex_def )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:218:6: storageGeneratedInfo_def 'accessed-by' storagedataIndex_def
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:221:23: ( storageGeneratedInfo_def 'accessed-by' storagedataIndex_def )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:222:6: storageGeneratedInfo_def 'accessed-by' storagedataIndex_def
 			{
-			pushFollow(FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def754);
+			pushFollow(FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def745);
 			storageGeneratedInfo_def();
 			state._fsp--;
 
-			match(input,22,FOLLOW_22_in_storageDataAccess_def757); 
-			pushFollow(FOLLOW_storagedataIndex_def_in_storageDataAccess_def759);
+			match(input,20,FOLLOW_20_in_storageDataAccess_def748); 
+			pushFollow(FOLLOW_storagedataIndex_def_in_storageDataAccess_def750);
 			storagedataIndex_def();
 			state._fsp--;
 
@@ -1188,22 +1150,22 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "storageGeneratedInfo_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:222:1: storageGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:226:1: storageGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
 	public final void storageGeneratedInfo_def() throws RecognitionException {
 		Token CAPITALIZED_ID17=null;
 		ParserRuleReturnScope lc_id18 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:222:26: ( 'generate' lc_id ':' CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:223:5: 'generate' lc_id ':' CAPITALIZED_ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:226:26: ( 'generate' lc_id ':' CAPITALIZED_ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:227:5: 'generate' lc_id ':' CAPITALIZED_ID
 			{
-			match(input,30,FOLLOW_30_in_storageGeneratedInfo_def778); 
-			pushFollow(FOLLOW_lc_id_in_storageGeneratedInfo_def780);
+			match(input,27,FOLLOW_27_in_storageGeneratedInfo_def769); 
+			pushFollow(FOLLOW_lc_id_in_storageGeneratedInfo_def771);
 			lc_id18=lc_id();
 			state._fsp--;
 
-			match(input,11,FOLLOW_11_in_storageGeneratedInfo_def782); 
-			CAPITALIZED_ID17=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def785); 
+			match(input,11,FOLLOW_11_in_storageGeneratedInfo_def773); 
+			CAPITALIZED_ID17=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def776); 
 
 			     context.constructStorageSymblTable((CAPITALIZED_ID17!=null?CAPITALIZED_ID17.getText():null));
 			     context.currentStorageService.addGeneratedInfo((lc_id18!=null?input.toString(lc_id18.start,lc_id18.stop):null), (CAPITALIZED_ID17!=null?CAPITALIZED_ID17.getText():null));  
@@ -1227,21 +1189,21 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "storagedataIndex_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:233:1: storagedataIndex_def : lc_id ':' dataType ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:237:1: storagedataIndex_def : lc_id ':' dataType ;
 	public final void storagedataIndex_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id19 =null;
 		ParserRuleReturnScope dataType20 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:233:21: ( lc_id ':' dataType )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:234:9: lc_id ':' dataType
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:237:21: ( lc_id ':' dataType )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:238:9: lc_id ':' dataType
 			{
-			pushFollow(FOLLOW_lc_id_in_storagedataIndex_def807);
+			pushFollow(FOLLOW_lc_id_in_storagedataIndex_def798);
 			lc_id19=lc_id();
 			state._fsp--;
 
-			match(input,11,FOLLOW_11_in_storagedataIndex_def809); 
-			pushFollow(FOLLOW_dataType_in_storagedataIndex_def811);
+			match(input,11,FOLLOW_11_in_storagedataIndex_def800); 
+			pushFollow(FOLLOW_dataType_in_storagedataIndex_def802);
 			dataType20=dataType();
 			state._fsp--;
 
@@ -1268,16 +1230,16 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "lc_id"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:256:1: lc_id : ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:260:1: lc_id : ID ;
 	public final VocabSpecParser.lc_id_return lc_id() throws RecognitionException {
 		VocabSpecParser.lc_id_return retval = new VocabSpecParser.lc_id_return();
 		retval.start = input.LT(1);
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:256:6: ( ID )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:256:8: ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:260:6: ( ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:260:8: ID
 			{
-			match(input,ID,FOLLOW_ID_in_lc_id839); 
+			match(input,ID,FOLLOW_ID_in_lc_id830); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -1300,16 +1262,16 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "dataType"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:259:1: dataType : primitiveType ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:263:1: dataType : primitiveType ;
 	public final VocabSpecParser.dataType_return dataType() throws RecognitionException {
 		VocabSpecParser.dataType_return retval = new VocabSpecParser.dataType_return();
 		retval.start = input.LT(1);
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:259:9: ( primitiveType )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:260:3: primitiveType
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:263:9: ( primitiveType )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:264:3: primitiveType
 			{
-			pushFollow(FOLLOW_primitiveType_in_dataType852);
+			pushFollow(FOLLOW_primitiveType_in_dataType843);
 			primitiveType();
 			state._fsp--;
 
@@ -1332,98 +1294,98 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "primitiveType"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:263:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' |id= '_' ) ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:267:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' |id= '_' ) ;
 	public final void primitiveType() throws RecognitionException {
 		Token id=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:263:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' |id= '_' ) )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:264:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' |id= '_' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:267:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' |id= '_' ) )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:268:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' |id= '_' )
 			{
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:264:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' |id= '_' )
-			int alt23=7;
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:268:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' |id= '_' )
+			int alt22=7;
 			switch ( input.LA(1) ) {
 			case 15:
 				{
-				alt23=1;
+				alt22=1;
 				}
 				break;
 			case 13:
 				{
-				alt23=2;
+				alt22=2;
 				}
 				break;
-			case 18:
+			case 16:
 				{
-				alt23=3;
-				}
-				break;
-			case 27:
-				{
-				alt23=4;
-				}
-				break;
-			case 32:
-				{
-				alt23=5;
+				alt22=3;
 				}
 				break;
 			case 25:
 				{
-				alt23=6;
+				alt22=4;
 				}
 				break;
-			case 21:
+			case 29:
 				{
-				alt23=7;
+				alt22=5;
+				}
+				break;
+			case 23:
+				{
+				alt22=6;
+				}
+				break;
+			case 19:
+				{
+				alt22=7;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 23, 0, input);
+					new NoViableAltException("", 22, 0, input);
 				throw nvae;
 			}
-			switch (alt23) {
+			switch (alt22) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:264:4: id= 'Integer'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:268:4: id= 'Integer'
 					{
-					id=(Token)match(input,15,FOLLOW_15_in_primitiveType867); 
+					id=(Token)match(input,15,FOLLOW_15_in_primitiveType858); 
 					}
 					break;
 				case 2 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:264:19: id= 'Boolean'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:268:19: id= 'Boolean'
 					{
-					id=(Token)match(input,13,FOLLOW_13_in_primitiveType873); 
+					id=(Token)match(input,13,FOLLOW_13_in_primitiveType864); 
 					}
 					break;
 				case 3 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:264:34: id= 'String'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:268:34: id= 'String'
 					{
-					id=(Token)match(input,18,FOLLOW_18_in_primitiveType879); 
+					id=(Token)match(input,16,FOLLOW_16_in_primitiveType870); 
 					}
 					break;
 				case 4 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:264:49: id= 'double'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:268:49: id= 'double'
 					{
-					id=(Token)match(input,27,FOLLOW_27_in_primitiveType888); 
+					id=(Token)match(input,25,FOLLOW_25_in_primitiveType879); 
 					}
 					break;
 				case 5 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:264:65: id= 'long'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:268:65: id= 'long'
 					{
-					id=(Token)match(input,32,FOLLOW_32_in_primitiveType896); 
+					id=(Token)match(input,29,FOLLOW_29_in_primitiveType887); 
 					}
 					break;
 				case 6 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:264:79: id= 'boolean'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:268:79: id= 'boolean'
 					{
-					id=(Token)match(input,25,FOLLOW_25_in_primitiveType902); 
+					id=(Token)match(input,23,FOLLOW_23_in_primitiveType893); 
 					}
 					break;
 				case 7 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:264:92: id= '_'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:268:92: id= '_'
 					{
-					id=(Token)match(input,21,FOLLOW_21_in_primitiveType907); 
+					id=(Token)match(input,19,FOLLOW_19_in_primitiveType898); 
 					}
 					break;
 
@@ -1445,65 +1407,65 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:285:1: gui_def : CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:290:1: gui_def : CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* ;
 	public final void gui_def() throws RecognitionException {
 		Token CAPITALIZED_ID21=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:285:8: ( CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:286:3: CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:290:8: ( CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:291:3: CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )*
 			{
 			context.currentGUI = new UserInterfaceCompiler();
-			CAPITALIZED_ID21=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_def1043); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:290:4: ( gui_command_def ';' )*
+			CAPITALIZED_ID21=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_def1031); 
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:295:4: ( gui_command_def ';' )*
+			loop23:
+			while (true) {
+				int alt23=2;
+				int LA23_0 = input.LA(1);
+				if ( (LA23_0==24) ) {
+					alt23=1;
+				}
+
+				switch (alt23) {
+				case 1 :
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:295:5: gui_command_def ';'
+					{
+					pushFollow(FOLLOW_gui_command_def_in_gui_def1057);
+					gui_command_def();
+					state._fsp--;
+
+					match(input,12,FOLLOW_12_in_gui_def1059); 
+					}
+					break;
+
+				default :
+					break loop23;
+				}
+			}
+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:296:4: ( gui_request_def ';' )*
 			loop24:
 			while (true) {
 				int alt24=2;
 				int LA24_0 = input.LA(1);
-				if ( (LA24_0==26) ) {
+				if ( (LA24_0==33) ) {
 					alt24=1;
 				}
 
 				switch (alt24) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:290:5: gui_command_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:296:5: gui_request_def ';'
 					{
-					pushFollow(FOLLOW_gui_command_def_in_gui_def1069);
-					gui_command_def();
+					pushFollow(FOLLOW_gui_request_def_in_gui_def1070);
+					gui_request_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_gui_def1071); 
+					match(input,12,FOLLOW_12_in_gui_def1073); 
 					}
 					break;
 
 				default :
 					break loop24;
-				}
-			}
-
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:291:4: ( gui_request_def ';' )*
-			loop25:
-			while (true) {
-				int alt25=2;
-				int LA25_0 = input.LA(1);
-				if ( (LA25_0==37) ) {
-					alt25=1;
-				}
-
-				switch (alt25) {
-				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:291:5: gui_request_def ';'
-					{
-					pushFollow(FOLLOW_gui_request_def_in_gui_def1082);
-					gui_request_def();
-					state._fsp--;
-
-					match(input,12,FOLLOW_12_in_gui_def1085); 
-					}
-					break;
-
-				default :
-					break loop25;
 				}
 			}
 
@@ -1526,28 +1488,28 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_command_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:297:1: gui_command_def : 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:302:1: gui_command_def : 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' ;
 	public final void gui_command_def() throws RecognitionException {
 		Token name=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:297:17: ( 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:298:5: 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:302:17: ( 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:303:5: 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')'
 			{
-			match(input,26,FOLLOW_26_in_gui_command_def1111); 
-			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_command_def1118); 
-			match(input,8,FOLLOW_8_in_gui_command_def1120); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:298:42: ( gui_command_parameter_def )?
-			int alt26=2;
-			int LA26_0 = input.LA(1);
-			if ( (LA26_0==ID) ) {
-				alt26=1;
+			match(input,24,FOLLOW_24_in_gui_command_def1099); 
+			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_command_def1106); 
+			match(input,8,FOLLOW_8_in_gui_command_def1108); 
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:303:42: ( gui_command_parameter_def )?
+			int alt25=2;
+			int LA25_0 = input.LA(1);
+			if ( (LA25_0==ID) ) {
+				alt25=1;
 			}
-			switch (alt26) {
+			switch (alt25) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:298:43: gui_command_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:303:43: gui_command_parameter_def
 					{
-					pushFollow(FOLLOW_gui_command_parameter_def_in_gui_command_def1123);
+					pushFollow(FOLLOW_gui_command_parameter_def_in_gui_command_def1111);
 					gui_command_parameter_def();
 					state._fsp--;
 
@@ -1556,7 +1518,7 @@ public class VocabSpecParser extends Parser {
 
 			}
 
-			match(input,9,FOLLOW_9_in_gui_command_def1127); 
+			match(input,9,FOLLOW_9_in_gui_command_def1115); 
 			 
 			      context.currentGUI.addCommand((name!=null?name.getText():null));   
 			    
@@ -1576,30 +1538,30 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_command_parameter_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:305:1: gui_command_parameter_def : lc_id ( ',' gui_command_parameter_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:310:1: gui_command_parameter_def : lc_id ( ',' gui_command_parameter_def )? ;
 	public final void gui_command_parameter_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id22 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:305:27: ( lc_id ( ',' gui_command_parameter_def )? )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:306:5: lc_id ( ',' gui_command_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:310:27: ( lc_id ( ',' gui_command_parameter_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:311:5: lc_id ( ',' gui_command_parameter_def )?
 			{
-			pushFollow(FOLLOW_lc_id_in_gui_command_parameter_def1150);
+			pushFollow(FOLLOW_lc_id_in_gui_command_parameter_def1138);
 			lc_id22=lc_id();
 			state._fsp--;
 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:306:11: ( ',' gui_command_parameter_def )?
-			int alt27=2;
-			int LA27_0 = input.LA(1);
-			if ( (LA27_0==10) ) {
-				alt27=1;
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:311:11: ( ',' gui_command_parameter_def )?
+			int alt26=2;
+			int LA26_0 = input.LA(1);
+			if ( (LA26_0==10) ) {
+				alt26=1;
 			}
-			switch (alt27) {
+			switch (alt26) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:306:12: ',' gui_command_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:311:12: ',' gui_command_parameter_def
 					{
-					match(input,10,FOLLOW_10_in_gui_command_parameter_def1153); 
-					pushFollow(FOLLOW_gui_command_parameter_def_in_gui_command_parameter_def1155);
+					match(input,10,FOLLOW_10_in_gui_command_parameter_def1141); 
+					pushFollow(FOLLOW_gui_command_parameter_def_in_gui_command_parameter_def1143);
 					gui_command_parameter_def();
 					state._fsp--;
 
@@ -1627,29 +1589,29 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_action_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:315:1: gui_action_def : 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:320:1: gui_action_def : 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id ;
 	public final void gui_action_def() throws RecognitionException {
 		Token name=null;
 		ParserRuleReturnScope ui =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:315:15: ( 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:316:5: 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:320:15: ( 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:321:5: 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id
 			{
-			match(input,23,FOLLOW_23_in_gui_action_def1179); 
-			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_action_def1185); 
-			match(input,8,FOLLOW_8_in_gui_action_def1187); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:316:40: ( gui_action_parameter_def )?
-			int alt28=2;
-			int LA28_0 = input.LA(1);
-			if ( (LA28_0==ID) ) {
-				alt28=1;
+			match(input,21,FOLLOW_21_in_gui_action_def1167); 
+			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_action_def1173); 
+			match(input,8,FOLLOW_8_in_gui_action_def1175); 
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:321:40: ( gui_action_parameter_def )?
+			int alt27=2;
+			int LA27_0 = input.LA(1);
+			if ( (LA27_0==ID) ) {
+				alt27=1;
 			}
-			switch (alt28) {
+			switch (alt27) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:316:41: gui_action_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:321:41: gui_action_parameter_def
 					{
-					pushFollow(FOLLOW_gui_action_parameter_def_in_gui_action_def1190);
+					pushFollow(FOLLOW_gui_action_parameter_def_in_gui_action_def1178);
 					gui_action_parameter_def();
 					state._fsp--;
 
@@ -1658,9 +1620,9 @@ public class VocabSpecParser extends Parser {
 
 			}
 
-			match(input,9,FOLLOW_9_in_gui_action_def1194); 
-			match(input,43,FOLLOW_43_in_gui_action_def1196); 
-			pushFollow(FOLLOW_lc_id_in_gui_action_def1202);
+			match(input,9,FOLLOW_9_in_gui_action_def1182); 
+			match(input,38,FOLLOW_38_in_gui_action_def1184); 
+			pushFollow(FOLLOW_lc_id_in_gui_action_def1190);
 			ui=lc_id();
 			state._fsp--;
 
@@ -1681,33 +1643,33 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_action_parameter_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:326:1: gui_action_parameter_def : lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:331:1: gui_action_parameter_def : lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? ;
 	public final void gui_action_parameter_def() throws RecognitionException {
 		Token CAPITALIZED_ID24=null;
 		ParserRuleReturnScope lc_id23 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:326:26: ( lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:327:5: lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:331:26: ( lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:332:5: lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )?
 			{
-			pushFollow(FOLLOW_lc_id_in_gui_action_parameter_def1228);
+			pushFollow(FOLLOW_lc_id_in_gui_action_parameter_def1216);
 			lc_id23=lc_id();
 			state._fsp--;
 
-			match(input,11,FOLLOW_11_in_gui_action_parameter_def1230); 
-			CAPITALIZED_ID24=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_action_parameter_def1233); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:327:31: ( ',' gui_action_parameter_def )?
-			int alt29=2;
-			int LA29_0 = input.LA(1);
-			if ( (LA29_0==10) ) {
-				alt29=1;
+			match(input,11,FOLLOW_11_in_gui_action_parameter_def1218); 
+			CAPITALIZED_ID24=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_action_parameter_def1221); 
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:332:31: ( ',' gui_action_parameter_def )?
+			int alt28=2;
+			int LA28_0 = input.LA(1);
+			if ( (LA28_0==10) ) {
+				alt28=1;
 			}
-			switch (alt29) {
+			switch (alt28) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:327:32: ',' gui_action_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:332:32: ',' gui_action_parameter_def
 					{
-					match(input,10,FOLLOW_10_in_gui_action_parameter_def1236); 
-					pushFollow(FOLLOW_gui_action_parameter_def_in_gui_action_parameter_def1238);
+					match(input,10,FOLLOW_10_in_gui_action_parameter_def1224); 
+					pushFollow(FOLLOW_gui_action_parameter_def_in_gui_action_parameter_def1226);
 					gui_action_parameter_def();
 					state._fsp--;
 
@@ -1736,16 +1698,16 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_request_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:334:1: gui_request_def : 'request' lc_id ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:339:1: gui_request_def : 'request' lc_id ;
 	public final void gui_request_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id25 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:334:17: ( 'request' lc_id )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:335:4: 'request' lc_id
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:339:17: ( 'request' lc_id )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:340:4: 'request' lc_id
 			{
-			match(input,37,FOLLOW_37_in_gui_request_def1260); 
-			pushFollow(FOLLOW_lc_id_in_gui_request_def1262);
+			match(input,33,FOLLOW_33_in_gui_request_def1248); 
+			pushFollow(FOLLOW_lc_id_in_gui_request_def1250);
 			lc_id25=lc_id();
 			state._fsp--;
 
@@ -1767,13 +1729,13 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "bt_id"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:370:1: bt_id : ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:375:1: bt_id : ID ;
 	public final void bt_id() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:370:7: ( ID )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:370:10: ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:375:7: ( ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:375:10: ID
 			{
-			match(input,ID,FOLLOW_ID_in_bt_id1308); 
+			match(input,ID,FOLLOW_ID_in_bt_id1296); 
 			}
 
 		}
@@ -1790,13 +1752,13 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "txtbx_id"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:372:1: txtbx_id : ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:377:1: txtbx_id : ID ;
 	public final void txtbx_id() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:372:10: ( ID )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:372:13: ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:377:10: ( ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:377:13: ID
 			{
-			match(input,ID,FOLLOW_ID_in_txtbx_id1318); 
+			match(input,ID,FOLLOW_ID_in_txtbx_id1306); 
 			}
 
 		}
@@ -1813,13 +1775,13 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "txtview_id"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:374:1: txtview_id : ID ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:379:1: txtview_id : ID ;
 	public final void txtview_id() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:374:12: ( ID )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:374:15: ID
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:379:12: ( ID )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:379:15: ID
 			{
-			match(input,ID,FOLLOW_ID_in_txtview_id1328); 
+			match(input,ID,FOLLOW_ID_in_txtview_id1316); 
 			}
 
 		}
@@ -1836,31 +1798,58 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "widget_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:392:1: widget_def : ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:397:1: widget_def : ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )* ;
 	public final void widget_def() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:392:12: ( ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )* )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:393:5: ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:397:12: ( ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:398:5: ( 'TextView' textview_def ';' )* ( 'Button' button_def ';' )* ( 'TextBox' textbox_def ';' )*
 			{
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:393:5: ( 'TextView' textview_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:398:5: ( 'TextView' textview_def ';' )*
+			loop29:
+			while (true) {
+				int alt29=2;
+				int LA29_0 = input.LA(1);
+				if ( (LA29_0==18) ) {
+					alt29=1;
+				}
+
+				switch (alt29) {
+				case 1 :
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:398:6: 'TextView' textview_def ';'
+					{
+					match(input,18,FOLLOW_18_in_widget_def1348); 
+					pushFollow(FOLLOW_textview_def_in_widget_def1350);
+					textview_def();
+					state._fsp--;
+
+					match(input,12,FOLLOW_12_in_widget_def1352); 
+					}
+					break;
+
+				default :
+					break loop29;
+				}
+			}
+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:399:5: ( 'Button' button_def ';' )*
 			loop30:
 			while (true) {
 				int alt30=2;
 				int LA30_0 = input.LA(1);
-				if ( (LA30_0==20) ) {
+				if ( (LA30_0==14) ) {
 					alt30=1;
 				}
 
 				switch (alt30) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:393:6: 'TextView' textview_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:399:6: 'Button' button_def ';'
 					{
-					match(input,20,FOLLOW_20_in_widget_def1360); 
-					pushFollow(FOLLOW_textview_def_in_widget_def1362);
-					textview_def();
+					match(input,14,FOLLOW_14_in_widget_def1361); 
+					pushFollow(FOLLOW_button_def_in_widget_def1364);
+					button_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_widget_def1364); 
+					match(input,12,FOLLOW_12_in_widget_def1366); 
 					}
 					break;
 
@@ -1869,57 +1858,30 @@ public class VocabSpecParser extends Parser {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:394:5: ( 'Button' button_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:400:5: ( 'TextBox' textbox_def ';' )*
 			loop31:
 			while (true) {
 				int alt31=2;
 				int LA31_0 = input.LA(1);
-				if ( (LA31_0==14) ) {
+				if ( (LA31_0==17) ) {
 					alt31=1;
 				}
 
 				switch (alt31) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:394:6: 'Button' button_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:400:6: 'TextBox' textbox_def ';'
 					{
-					match(input,14,FOLLOW_14_in_widget_def1373); 
-					pushFollow(FOLLOW_button_def_in_widget_def1376);
-					button_def();
+					match(input,17,FOLLOW_17_in_widget_def1375); 
+					pushFollow(FOLLOW_textbox_def_in_widget_def1377);
+					textbox_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_widget_def1378); 
+					match(input,12,FOLLOW_12_in_widget_def1379); 
 					}
 					break;
 
 				default :
 					break loop31;
-				}
-			}
-
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:395:5: ( 'TextBox' textbox_def ';' )*
-			loop32:
-			while (true) {
-				int alt32=2;
-				int LA32_0 = input.LA(1);
-				if ( (LA32_0==19) ) {
-					alt32=1;
-				}
-
-				switch (alt32) {
-				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:395:6: 'TextBox' textbox_def ';'
-					{
-					match(input,19,FOLLOW_19_in_widget_def1387); 
-					pushFollow(FOLLOW_textbox_def_in_widget_def1389);
-					textbox_def();
-					state._fsp--;
-
-					match(input,12,FOLLOW_12_in_widget_def1391); 
-					}
-					break;
-
-				default :
-					break loop32;
 				}
 			}
 
@@ -1939,28 +1901,28 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "textview_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:402:1: textview_def : lc_id ( ',' textview_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:407:1: textview_def : lc_id ( ',' textview_def )? ;
 	public final void textview_def() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:402:14: ( lc_id ( ',' textview_def )? )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:403:5: lc_id ( ',' textview_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:407:14: ( lc_id ( ',' textview_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:408:5: lc_id ( ',' textview_def )?
 			{
-			pushFollow(FOLLOW_lc_id_in_textview_def1416);
+			pushFollow(FOLLOW_lc_id_in_textview_def1404);
 			lc_id();
 			state._fsp--;
 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:403:12: ( ',' textview_def )?
-			int alt33=2;
-			int LA33_0 = input.LA(1);
-			if ( (LA33_0==10) ) {
-				alt33=1;
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:408:12: ( ',' textview_def )?
+			int alt32=2;
+			int LA32_0 = input.LA(1);
+			if ( (LA32_0==10) ) {
+				alt32=1;
 			}
-			switch (alt33) {
+			switch (alt32) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:403:13: ',' textview_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:408:13: ',' textview_def
 					{
-					match(input,10,FOLLOW_10_in_textview_def1420); 
-					pushFollow(FOLLOW_textview_def_in_textview_def1422);
+					match(input,10,FOLLOW_10_in_textview_def1408); 
+					pushFollow(FOLLOW_textview_def_in_textview_def1410);
 					textview_def();
 					state._fsp--;
 
@@ -1985,28 +1947,28 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "button_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:406:1: button_def : lc_id ( ',' button_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:411:1: button_def : lc_id ( ',' button_def )? ;
 	public final void button_def() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:406:12: ( lc_id ( ',' button_def )? )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:407:5: lc_id ( ',' button_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:411:12: ( lc_id ( ',' button_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:412:5: lc_id ( ',' button_def )?
 			{
-			pushFollow(FOLLOW_lc_id_in_button_def1437);
+			pushFollow(FOLLOW_lc_id_in_button_def1425);
 			lc_id();
 			state._fsp--;
 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:407:12: ( ',' button_def )?
-			int alt34=2;
-			int LA34_0 = input.LA(1);
-			if ( (LA34_0==10) ) {
-				alt34=1;
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:412:12: ( ',' button_def )?
+			int alt33=2;
+			int LA33_0 = input.LA(1);
+			if ( (LA33_0==10) ) {
+				alt33=1;
 			}
-			switch (alt34) {
+			switch (alt33) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:407:13: ',' button_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:412:13: ',' button_def
 					{
-					match(input,10,FOLLOW_10_in_button_def1441); 
-					pushFollow(FOLLOW_button_def_in_button_def1443);
+					match(input,10,FOLLOW_10_in_button_def1429); 
+					pushFollow(FOLLOW_button_def_in_button_def1431);
 					button_def();
 					state._fsp--;
 
@@ -2031,28 +1993,28 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "textbox_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:410:1: textbox_def : lc_id ( ',' textbox_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:415:1: textbox_def : lc_id ( ',' textbox_def )? ;
 	public final void textbox_def() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:410:13: ( lc_id ( ',' textbox_def )? )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:411:5: lc_id ( ',' textbox_def )?
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:415:13: ( lc_id ( ',' textbox_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:416:5: lc_id ( ',' textbox_def )?
 			{
-			pushFollow(FOLLOW_lc_id_in_textbox_def1459);
+			pushFollow(FOLLOW_lc_id_in_textbox_def1447);
 			lc_id();
 			state._fsp--;
 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:411:11: ( ',' textbox_def )?
-			int alt35=2;
-			int LA35_0 = input.LA(1);
-			if ( (LA35_0==10) ) {
-				alt35=1;
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:416:11: ( ',' textbox_def )?
+			int alt34=2;
+			int LA34_0 = input.LA(1);
+			if ( (LA34_0==10) ) {
+				alt34=1;
 			}
-			switch (alt35) {
+			switch (alt34) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:411:12: ',' textbox_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\VocabSpec.g:416:12: ',' textbox_def
 					{
-					match(input,10,FOLLOW_10_in_textbox_def1462); 
-					pushFollow(FOLLOW_textbox_def_in_textbox_def1464);
+					match(input,10,FOLLOW_10_in_textbox_def1450); 
+					pushFollow(FOLLOW_textbox_def_in_textbox_def1452);
 					textbox_def();
 					state._fsp--;
 
@@ -2078,151 +2040,144 @@ public class VocabSpecParser extends Parser {
 
 
 
-	public static final BitSet FOLLOW_36_in_vocabSpec67 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_32_in_vocabSpec67 = new BitSet(new long[]{0x0000000000000800L});
 	public static final BitSet FOLLOW_11_in_vocabSpec79 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_region_def_in_vocabSpec82 = new BitSet(new long[]{0x0000040000000010L});
-	public static final BitSet FOLLOW_42_in_vocabSpec103 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_region_def_in_vocabSpec82 = new BitSet(new long[]{0x0000002000000010L});
+	public static final BitSet FOLLOW_37_in_vocabSpec103 = new BitSet(new long[]{0x0000000000000800L});
 	public static final BitSet FOLLOW_11_in_vocabSpec105 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_struct_def_in_vocabSpec108 = new BitSet(new long[]{0x0000004000000010L});
-	public static final BitSet FOLLOW_38_in_vocabSpec122 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_vocabSpec124 = new BitSet(new long[]{0x0000010000000000L});
+	public static final BitSet FOLLOW_struct_def_in_vocabSpec108 = new BitSet(new long[]{0x0000000400000010L});
+	public static final BitSet FOLLOW_34_in_vocabSpec122 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_vocabSpec124 = new BitSet(new long[]{0x0000000800000000L});
 	public static final BitSet FOLLOW_abilities_def_in_vocabSpec126 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_CAPITALIZED_ID_in_region_def156 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_region_def158 = new BitSet(new long[]{0x000000010A24A000L});
+	public static final BitSet FOLLOW_11_in_region_def158 = new BitSet(new long[]{0x000000002289A000L});
 	public static final BitSet FOLLOW_dataType_in_region_def160 = new BitSet(new long[]{0x0000000000001000L});
 	public static final BitSet FOLLOW_12_in_region_def163 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_CAPITALIZED_ID_in_struct_def188 = new BitSet(new long[]{0x0000000000000022L});
 	public static final BitSet FOLLOW_structField_def_in_struct_def202 = new BitSet(new long[]{0x0000000000001000L});
 	public static final BitSet FOLLOW_12_in_struct_def204 = new BitSet(new long[]{0x0000000000000022L});
 	public static final BitSet FOLLOW_lc_id_in_structField_def227 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_structField_def229 = new BitSet(new long[]{0x000000010A24A000L});
+	public static final BitSet FOLLOW_11_in_structField_def229 = new BitSet(new long[]{0x000000002289A000L});
 	public static final BitSet FOLLOW_dataType_in_structField_def231 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_40_in_abilities_def257 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_abilities_def259 = new BitSet(new long[]{0x0000030891000000L});
-	public static final BitSet FOLLOW_sensor_def_in_abilities_def263 = new BitSet(new long[]{0x0000030081000002L});
-	public static final BitSet FOLLOW_24_in_abilities_def273 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_35_in_abilities_def257 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_abilities_def259 = new BitSet(new long[]{0x0000001894400000L});
+	public static final BitSet FOLLOW_sensor_def_in_abilities_def263 = new BitSet(new long[]{0x0000001810400002L});
+	public static final BitSet FOLLOW_22_in_abilities_def273 = new BitSet(new long[]{0x0000000000000800L});
 	public static final BitSet FOLLOW_11_in_abilities_def275 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_actuator_def_in_abilities_def277 = new BitSet(new long[]{0x0000020081000002L});
-	public static final BitSet FOLLOW_41_in_abilities_def284 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_actuator_def_in_abilities_def277 = new BitSet(new long[]{0x0000001010400002L});
+	public static final BitSet FOLLOW_36_in_abilities_def284 = new BitSet(new long[]{0x0000000000000800L});
 	public static final BitSet FOLLOW_11_in_abilities_def287 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_ss_def_in_abilities_def289 = new BitSet(new long[]{0x0000020080000002L});
-	public static final BitSet FOLLOW_31_in_abilities_def296 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_ss_def_in_abilities_def289 = new BitSet(new long[]{0x0000001010000002L});
+	public static final BitSet FOLLOW_28_in_abilities_def296 = new BitSet(new long[]{0x0000000000000800L});
 	public static final BitSet FOLLOW_11_in_abilities_def298 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_gui_def_in_abilities_def301 = new BitSet(new long[]{0x0000000080000012L});
-	public static final BitSet FOLLOW_35_in_sensor_def336 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_sensor_def338 = new BitSet(new long[]{0x0000000810000012L});
-	public static final BitSet FOLLOW_periodicsensor_def_in_sensor_def340 = new BitSet(new long[]{0x0000000810000012L});
-	public static final BitSet FOLLOW_28_in_sensor_def365 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_sensor_def367 = new BitSet(new long[]{0x0000000010000012L});
-	public static final BitSet FOLLOW_eventsensor_def_in_sensor_def370 = new BitSet(new long[]{0x0000000010000012L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_periodicsensor_def389 = new BitSet(new long[]{0x0000008040000002L});
+	public static final BitSet FOLLOW_gui_def_in_abilities_def301 = new BitSet(new long[]{0x0000000010000012L});
+	public static final BitSet FOLLOW_31_in_sensor_def336 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_sensor_def338 = new BitSet(new long[]{0x0000000084000012L});
+	public static final BitSet FOLLOW_periodicsensor_def_in_sensor_def340 = new BitSet(new long[]{0x0000000084000012L});
+	public static final BitSet FOLLOW_26_in_sensor_def365 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_sensor_def367 = new BitSet(new long[]{0x0000000004000012L});
+	public static final BitSet FOLLOW_eventsensor_def_in_sensor_def370 = new BitSet(new long[]{0x0000000004000012L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_periodicsensor_def389 = new BitSet(new long[]{0x0000000008000002L});
 	public static final BitSet FOLLOW_sensorMeasurementForPeriodic_def_in_periodicsensor_def402 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_periodicsensor_def404 = new BitSet(new long[]{0x0000008040000002L});
-	public static final BitSet FOLLOW_sensorperiodicMeasurement_def_in_periodicsensor_def414 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_periodicsensor_def416 = new BitSet(new long[]{0x0000008000000002L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_eventsensor_def433 = new BitSet(new long[]{0x0000000240001002L});
-	public static final BitSet FOLLOW_sensorMeasurementForEventDriven_def_in_eventsensor_def446 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_eventsensor_def448 = new BitSet(new long[]{0x0000000240001002L});
-	public static final BitSet FOLLOW_sensoreventMeasurement_def_in_eventsensor_def458 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_eventsensor_def460 = new BitSet(new long[]{0x0000000200001002L});
-	public static final BitSet FOLLOW_30_in_sensorMeasurementForEventDriven_def477 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_sensorMeasurementForEventDriven_def479 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_sensorMeasurementForEventDriven_def481 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensorMeasurementForEventDriven_def484 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_30_in_sensorMeasurementForPeriodic_def511 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_sensorMeasurementForPeriodic_def513 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_sensorMeasurementForPeriodic_def515 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensorMeasurementForPeriodic_def518 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_39_in_sensorperiodicMeasurement_def542 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_34_in_sensorperiodicMeasurement_def544 = new BitSet(new long[]{0x0000000000020000L});
-	public static final BitSet FOLLOW_17_in_sensorperiodicMeasurement_def546 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_sensorperiodicMeasurement_def548 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_16_in_sensorperiodicMeasurement_def550 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_33_in_sensoreventMeasurement_def567 = new BitSet(new long[]{0x0000000200000422L});
-	public static final BitSet FOLLOW_ID_in_sensoreventMeasurement_def570 = new BitSet(new long[]{0x0000000200000422L});
-	public static final BitSet FOLLOW_10_in_sensoreventMeasurement_def573 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_ID_in_sensoreventMeasurement_def575 = new BitSet(new long[]{0x0000000200000422L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_actuator_def598 = new BitSet(new long[]{0x0000000000800002L});
-	public static final BitSet FOLLOW_action_def_in_actuator_def610 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_actuator_def612 = new BitSet(new long[]{0x0000000000800002L});
-	public static final BitSet FOLLOW_23_in_action_def636 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_action_def638 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_8_in_action_def640 = new BitSet(new long[]{0x0000000000000220L});
-	public static final BitSet FOLLOW_parameter_def_in_action_def643 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_9_in_action_def647 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lc_id_in_parameter_def667 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_parameter_def669 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_parameter_def672 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_10_in_parameter_def675 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_parameter_def_in_parameter_def677 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_ss_def704 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_storageDataAccess_def_in_ss_def721 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_ss_def723 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def754 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_22_in_storageDataAccess_def757 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_storagedataIndex_def_in_storageDataAccess_def759 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_30_in_storageGeneratedInfo_def778 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_storageGeneratedInfo_def780 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_storageGeneratedInfo_def782 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def785 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lc_id_in_storagedataIndex_def807 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_storagedataIndex_def809 = new BitSet(new long[]{0x000000010A24A000L});
-	public static final BitSet FOLLOW_dataType_in_storagedataIndex_def811 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_lc_id839 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_primitiveType_in_dataType852 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_15_in_primitiveType867 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_13_in_primitiveType873 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_18_in_primitiveType879 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_27_in_primitiveType888 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_32_in_primitiveType896 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_25_in_primitiveType902 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_21_in_primitiveType907 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_def1043 = new BitSet(new long[]{0x0000002004000002L});
-	public static final BitSet FOLLOW_gui_command_def_in_gui_def1069 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_gui_def1071 = new BitSet(new long[]{0x0000002004000002L});
-	public static final BitSet FOLLOW_gui_request_def_in_gui_def1082 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_gui_def1085 = new BitSet(new long[]{0x0000002000000002L});
-	public static final BitSet FOLLOW_26_in_gui_command_def1111 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_command_def1118 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_8_in_gui_command_def1120 = new BitSet(new long[]{0x0000000000000220L});
-	public static final BitSet FOLLOW_gui_command_parameter_def_in_gui_command_def1123 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_9_in_gui_command_def1127 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lc_id_in_gui_command_parameter_def1150 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_10_in_gui_command_parameter_def1153 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_gui_command_parameter_def_in_gui_command_parameter_def1155 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_23_in_gui_action_def1179 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_action_def1185 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_8_in_gui_action_def1187 = new BitSet(new long[]{0x0000000000000220L});
-	public static final BitSet FOLLOW_gui_action_parameter_def_in_gui_action_def1190 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_9_in_gui_action_def1194 = new BitSet(new long[]{0x0000080000000000L});
-	public static final BitSet FOLLOW_43_in_gui_action_def1196 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_gui_action_def1202 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lc_id_in_gui_action_parameter_def1228 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_gui_action_parameter_def1230 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_action_parameter_def1233 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_10_in_gui_action_parameter_def1236 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_gui_action_parameter_def_in_gui_action_parameter_def1238 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_37_in_gui_request_def1260 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_gui_request_def1262 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_bt_id1308 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_txtbx_id1318 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_txtview_id1328 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_20_in_widget_def1360 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_textview_def_in_widget_def1362 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_widget_def1364 = new BitSet(new long[]{0x0000000000184002L});
-	public static final BitSet FOLLOW_14_in_widget_def1373 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_button_def_in_widget_def1376 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_widget_def1378 = new BitSet(new long[]{0x0000000000084002L});
-	public static final BitSet FOLLOW_19_in_widget_def1387 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_textbox_def_in_widget_def1389 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_widget_def1391 = new BitSet(new long[]{0x0000000000080002L});
-	public static final BitSet FOLLOW_lc_id_in_textview_def1416 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_10_in_textview_def1420 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_textview_def_in_textview_def1422 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lc_id_in_button_def1437 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_10_in_button_def1441 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_button_def_in_button_def1443 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lc_id_in_textbox_def1459 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_10_in_textbox_def1462 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_textbox_def_in_textbox_def1464 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_12_in_periodicsensor_def404 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_eventsensor_def425 = new BitSet(new long[]{0x0000000048001002L});
+	public static final BitSet FOLLOW_sensorMeasurementForEventDriven_def_in_eventsensor_def438 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_eventsensor_def440 = new BitSet(new long[]{0x0000000048001002L});
+	public static final BitSet FOLLOW_sensoreventMeasurement_def_in_eventsensor_def450 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_eventsensor_def452 = new BitSet(new long[]{0x0000000040001002L});
+	public static final BitSet FOLLOW_27_in_sensorMeasurementForEventDriven_def469 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_sensorMeasurementForEventDriven_def471 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_sensorMeasurementForEventDriven_def473 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensorMeasurementForEventDriven_def476 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_27_in_sensorMeasurementForPeriodic_def503 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_sensorMeasurementForPeriodic_def505 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_sensorMeasurementForPeriodic_def507 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensorMeasurementForPeriodic_def510 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_30_in_sensoreventMeasurement_def558 = new BitSet(new long[]{0x0000000040000422L});
+	public static final BitSet FOLLOW_ID_in_sensoreventMeasurement_def561 = new BitSet(new long[]{0x0000000040000422L});
+	public static final BitSet FOLLOW_10_in_sensoreventMeasurement_def564 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_ID_in_sensoreventMeasurement_def566 = new BitSet(new long[]{0x0000000040000422L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_actuator_def589 = new BitSet(new long[]{0x0000000000200002L});
+	public static final BitSet FOLLOW_action_def_in_actuator_def601 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_actuator_def603 = new BitSet(new long[]{0x0000000000200002L});
+	public static final BitSet FOLLOW_21_in_action_def627 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_action_def629 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_8_in_action_def631 = new BitSet(new long[]{0x0000000000000220L});
+	public static final BitSet FOLLOW_parameter_def_in_action_def634 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_action_def638 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_lc_id_in_parameter_def658 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_parameter_def660 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_parameter_def663 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_10_in_parameter_def666 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_parameter_def_in_parameter_def668 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_ss_def695 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_storageDataAccess_def_in_ss_def712 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_ss_def714 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def745 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_20_in_storageDataAccess_def748 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_storagedataIndex_def_in_storageDataAccess_def750 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_27_in_storageGeneratedInfo_def769 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_storageGeneratedInfo_def771 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_storageGeneratedInfo_def773 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def776 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_lc_id_in_storagedataIndex_def798 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_storagedataIndex_def800 = new BitSet(new long[]{0x000000002289A000L});
+	public static final BitSet FOLLOW_dataType_in_storagedataIndex_def802 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_lc_id830 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_primitiveType_in_dataType843 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_15_in_primitiveType858 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_13_in_primitiveType864 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_16_in_primitiveType870 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_25_in_primitiveType879 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_29_in_primitiveType887 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_23_in_primitiveType893 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_19_in_primitiveType898 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_def1031 = new BitSet(new long[]{0x0000000201000002L});
+	public static final BitSet FOLLOW_gui_command_def_in_gui_def1057 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_gui_def1059 = new BitSet(new long[]{0x0000000201000002L});
+	public static final BitSet FOLLOW_gui_request_def_in_gui_def1070 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_gui_def1073 = new BitSet(new long[]{0x0000000200000002L});
+	public static final BitSet FOLLOW_24_in_gui_command_def1099 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_command_def1106 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_8_in_gui_command_def1108 = new BitSet(new long[]{0x0000000000000220L});
+	public static final BitSet FOLLOW_gui_command_parameter_def_in_gui_command_def1111 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_gui_command_def1115 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_lc_id_in_gui_command_parameter_def1138 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_10_in_gui_command_parameter_def1141 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_gui_command_parameter_def_in_gui_command_parameter_def1143 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_21_in_gui_action_def1167 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_action_def1173 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_8_in_gui_action_def1175 = new BitSet(new long[]{0x0000000000000220L});
+	public static final BitSet FOLLOW_gui_action_parameter_def_in_gui_action_def1178 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_gui_action_def1182 = new BitSet(new long[]{0x0000004000000000L});
+	public static final BitSet FOLLOW_38_in_gui_action_def1184 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_gui_action_def1190 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_lc_id_in_gui_action_parameter_def1216 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_gui_action_parameter_def1218 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_action_parameter_def1221 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_10_in_gui_action_parameter_def1224 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_gui_action_parameter_def_in_gui_action_parameter_def1226 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_33_in_gui_request_def1248 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_gui_request_def1250 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_bt_id1296 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_txtbx_id1306 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_txtview_id1316 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_18_in_widget_def1348 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_textview_def_in_widget_def1350 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_widget_def1352 = new BitSet(new long[]{0x0000000000064002L});
+	public static final BitSet FOLLOW_14_in_widget_def1361 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_button_def_in_widget_def1364 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_widget_def1366 = new BitSet(new long[]{0x0000000000024002L});
+	public static final BitSet FOLLOW_17_in_widget_def1375 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_textbox_def_in_widget_def1377 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_widget_def1379 = new BitSet(new long[]{0x0000000000020002L});
+	public static final BitSet FOLLOW_lc_id_in_textview_def1404 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_10_in_textview_def1408 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_textview_def_in_textview_def1410 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_lc_id_in_button_def1425 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_10_in_button_def1429 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_button_def_in_button_def1431 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_lc_id_in_textbox_def1447 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_10_in_textbox_def1450 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_textbox_def_in_textbox_def1452 = new BitSet(new long[]{0x0000000000000002L});
 }
