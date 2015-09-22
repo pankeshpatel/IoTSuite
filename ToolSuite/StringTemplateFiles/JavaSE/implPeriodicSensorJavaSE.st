@@ -10,8 +10,8 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 
 
   //TODO:Device developer will configure following parameters according to requirement
-	private static int  SAMPLE_PERIOD = 1000;
-	private static  int SAMPLE_DURATION = 30000;
+	private static int  SAMPLE_PERIOD = $SensorDriver.samplePeriod$;
+	private static  int SAMPLE_DURATION =$SensorDriver.sampleDuration$;
 	private static int  temp=0;
 	
 	

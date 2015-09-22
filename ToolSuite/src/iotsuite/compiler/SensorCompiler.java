@@ -23,6 +23,10 @@ public class SensorCompiler {
 	//Store field name used by Event Driven Sensor
 	public static List<String> eventDrivenFieldName;
 	
+	//Following two String variables are used to store value of samplePeriod and sampleDuration specified in vocab.txt
+	public static String samplePeriod;
+	public static String sampleDuration;
+	
 	
 	
 	
@@ -44,9 +48,7 @@ public class SensorCompiler {
 		return eventDrivenFields;
 	}
 	
-	
-
-		// Getter and Setter of GeneratedInfo
+			// Getter and Setter of GeneratedInfo
 	public Set<SensorMeasurement> getGeneratedInfo() {
 		return generatedInfo;
 	}
@@ -58,9 +60,22 @@ public class SensorCompiler {
 				measurementName, new DataType(measurementStruct), struct);
 				generatedInfo.add(sensorMeasurement);
 				
-				
 		}
+
+	public void addSensorMeasurementSamplePeriod(String samplePeriod) {
 	
+		
+		this.samplePeriod=samplePeriod;
+		
+		
+	}
+
+	public void addSensorMeasurementSampleDuration(String sampleDuration) {
+	
+		
+		this.sampleDuration=sampleDuration;
+		
+	}
 
 	
 
@@ -299,6 +314,8 @@ public class SensorCompiler {
 		SourceFileDumper dumpGeneratedSensorListener = new SourceFileDumper();
 		dumpGeneratedSensorListener.dumpCompilationUnit(generateCU);
 	}
+
+	
 
 	
 }

@@ -106,7 +106,7 @@ periodicsensor_def:
  CAPITALIZED_ID
     {context.currentSensor = new SensorCompiler($CAPITALIZED_ID.text);}
     (sensorMeasurementForPeriodic_def ';')* 
-  //  (sensorperiodicMeasurement_def ';')*
+    (sensorperiodicMeasurement_def ';')*
     {context.currentSensor.generatePeriodicSensorCode();        
     }
 ;
@@ -146,10 +146,22 @@ sensorMeasurementForPeriodic_def :
 
  
 sensorperiodicMeasurement_def:
- //'sample' 'period' INT 'for' INT  
- {
-   //context.currentSensor.addSensorMeasurementPeriodInfo($INT.text, $SEC_INT.text);
- } 
+ 'sample' 'period' (sample_period_def)* 'for' (sample_duration_def)*  
+;
+
+sample_period_def :
+  INT  
+{
+context.currentSensor.addSensorMeasurementSamplePeriod($INT.text);
+}
+;
+
+
+sample_duration_def :
+INT
+{
+context.currentSensor.addSensorMeasurementSampleDuration($INT.text);
+}
 ;
  
  

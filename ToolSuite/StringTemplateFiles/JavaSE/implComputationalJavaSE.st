@@ -48,7 +48,7 @@ static $field.type$ $field.name; format="avoidCapital"$;
           try {
            obj=data.getJSONObject(0);
            $CS.allStructFields:{field |  
-           $field.name$=($field.type; format="uppercase"$)obj.get("$field.name$"); 
+           $field.name$=($field.type; format="capital"$)obj.get("$field.name$"); 
            }$
       //value = obj.getDouble("value");
       //unitOfMeasurement=obj.getString("measurementUnit");      

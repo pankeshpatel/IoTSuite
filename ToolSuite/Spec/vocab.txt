@@ -11,7 +11,7 @@ resources:
 	  periodicsensors:
         TemperatureSensor
             generate  tempMeasurement : TempStruct;    
-                         
+           sample period 6000 for 650000;              
     actuators:
        Heater
 			action SetTemp(setTemp:TempStruct);

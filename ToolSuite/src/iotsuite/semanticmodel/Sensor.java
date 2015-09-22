@@ -15,6 +15,8 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 	public static List<String> eventDrivenFieldName = new ArrayList<String>();  
 	//Store fields used by Periodic Sensor
 	public static List<String> eventDrivenFields = new ArrayList<String>();
+	public static String samplePeriod;
+	public static String sampleDuration;
 	
 	
 	// public Sensor(String name, Set<Attribute> attributes,
@@ -26,9 +28,22 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 		super(name, generateInfo, consumeInfo, "NoInstance");
 		this.eventDrivenFieldName=eventDrivenFieldName;
 		this.eventDrivenFields=eventDrivenFields;
+						
 	}
 
 	private String packageName;
+	
+	public static String getSamplePeriod()
+	{
+		samplePeriod=iotsuite.compiler.SensorCompiler.samplePeriod;
+		return samplePeriod;
+	}
+	
+	public static String getSampleDuration()
+	{
+		sampleDuration=iotsuite.compiler.SensorCompiler.sampleDuration;
+		return sampleDuration;
+	}
 	
 	
 	public static List<String>  getAllEventDrivenFieldName(){
