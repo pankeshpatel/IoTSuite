@@ -15,15 +15,15 @@ public class  Logic$CS.name$ extends $CS.name$  {
    }   
       $CS.allConsumedInfo:{ consumedInfo |
     //  Listener$consumedInfo.name$ $consumedInfo.name$Event = new Listener$consumedInfo.name$(){
-   // @Override
-      public  void onNew$consumedInfo.name; format="capital"$( $consumedInfo.type.name$ arg){     
-      //TODO : write code here.
+      @Override
+      public  void onNew$consumedInfo.name; format="capital"$( $consumedInfo.type$ arg){     
+      //TODO : write code here. Saurabh
       }
       //};  
     }; separator="\n"$ 
     
     $CS.allDataAccess:{ dataAccess |     
-      public void onNew$dataAccess.dataAccessName; format="capital"$Received( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type.name$}$ arg)
+      public void onNew$dataAccess.dataAccessName; format="capital"$Received( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}$ arg)
       {
         //TODO : write code here        
       }     

@@ -16,7 +16,8 @@ import org.json.JSONObject;
 public class JavaSE$CS.name$ implements I$CS.name$, IDataListener{ 
  
   $CS.allStructFields:{field |  
-static $field.type$ $field.name; format="avoidCapital"$;
+static $field.type$ $field.name$;
+ 
  }$ 
     $CS.allConsumedInfo:{ consumedInfo |
   public static Listener$consumedInfo.name$ listener$consumedInfo.name$ = null ;
@@ -31,7 +32,7 @@ static $field.type$ $field.name; format="avoidCapital"$;
   
    $CS.allConsumedInfo:{ consumedInfo |
     @Override
-      public  void get$consumedInfo.name; format="capital"$( Listener$consumedInfo.name$ handler){     
+      public  void get$consumedInfo.name; format="avoidCapital"$( Listener$consumedInfo.name$ handler){     
       this.listener$consumedInfo.name$ = handler;
        }   
  }; separator="\n"$
@@ -48,19 +49,20 @@ static $field.type$ $field.name; format="avoidCapital"$;
           try {
            obj=data.getJSONObject(0);
            $CS.allStructFields:{field |  
-           $field.name$=($field.type; format="capital"$)obj.get("$field.name$"); 
-           }$
+           $field.name$=($field.type ; format="capital"$) obj.get("$field.name$") ; 
+          }$
       //value = obj.getDouble("value");
       //unitOfMeasurement=obj.getString("measurementUnit");      
         } catch (JSONException e) {
     // TODO Auto-generated catch block
           System.out.println("Exception is "+ e.getMessage());
              }
-              //$consumedInfo.type.name$ arg = ($consumedInfo.type.name$) aggFields;;
-              listener$consumedInfo.name$.onNew$consumedInfo.name$(new $consumedInfo.type.name$($CS.allStructFields:{field|$field.name$ }; separator=","$));
-          }
-          }; separator="\n"$
+            
+              //$consumedInfo.type$ arg = ($consumedInfo.type$) aggFields;;
+              listener$consumedInfo.name$.onNew$consumedInfo.name$(new $consumedInfo.type$($CS.allStructFields:{field|$field.name$ }; separator=","$));
+          } 
+            
+      }; separator="\n"$
   
       }
-  
  }

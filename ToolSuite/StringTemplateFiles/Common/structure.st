@@ -9,7 +9,7 @@ public class $struct.name$ implements Serializable {
 	
 		private $field.type$ $field.name; format="avoidCapital"$; 		
 	
-	public $field.type$ get$field.name; format="capital"$() {
+	public $field.type$ get$field.name; format="avoidCapital"$() {
         return $field.name; format="avoidCapital"$;
     }    
  			

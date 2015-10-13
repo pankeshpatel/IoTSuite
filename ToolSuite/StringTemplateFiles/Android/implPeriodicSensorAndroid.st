@@ -46,7 +46,7 @@ $SensorDriver.name$Keys, ISensorListener  {
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
    
    /*@Override
-   public  $generatedInfo.type.name$ get$generatedInfo.name; format="avoidCapital"$(){
+   //public  $generatedInfo.type$ get$generatedInfo.name; format="avoidCapital"$(){
 	   //TODO: Device Developer write here device logic.
 	   //Sample code for reference.   
 	   //if(TemperatureSensorData != null) {

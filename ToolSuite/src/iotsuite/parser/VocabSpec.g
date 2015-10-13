@@ -67,7 +67,8 @@ struct_def:
 ;
 structField_def:  
   lc_id ':' dataType 
-  { context.currentStruct.addField($lc_id.text, $dataType.text);
+  { 
+    context.currentStruct.addField($lc_id.text, $dataType.text);
    //context.constructStructureSymbTable($lc_id.text,$dataType.text);
    //context.constructStructResponseTypeSymblTable($lc_id.text,$dataType.text);
    context.constructStructFieldSymblTable($lc_id.text,$dataType.text);

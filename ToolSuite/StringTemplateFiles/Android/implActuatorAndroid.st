@@ -31,7 +31,7 @@ public class Android$Actuatordriver.name$ extends Activity implements I$Actuator
   $Actuatordriver.allActions:{ action |   
   
   @Override
-  public void $action.name$($action.allParameter:{ param | $param.type.name$ arg }; 
+  public void $action.name$($action.allParameter:{ param | $param.type$ arg }; 
    separator=", "$) {
    
    } 

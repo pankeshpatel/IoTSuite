@@ -26,7 +26,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
     
 		
 		$CS.allActions:{ action |
-    protected  void $action.name; format="capital"$($action.allParameter:{ param | $param.type.name$ arg }; separator=" , "$) {
+    protected  void $action.name; format="capital"$($action.allParameter:{ param | $param.type$ arg }; separator=" , "$) {
   	    Logger.log( myDeviceInfo.getName() ,"$CS.name$" , "Sending command $action.name$");
     	this.myPubSubMiddleware.publish("$action.name; format="capital"$", $if(action.Parameter)$ $action.allParameter: { param | arg }; separator=" , "$ $else$ null $endif$ , myDeviceInfo );     
     }
@@ -34,8 +34,8 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 		
 
     $CS.allGeneratedInfo:{ generatedInfo |
-    private $generatedInfo.type.name$ $generatedInfo.name; format="avoidCapital"$;
-    protected void set$generatedInfo.name; format="capital"$( $generatedInfo.type.name$ newValue) {
+    private $generatedInfo.type$ $generatedInfo.name; format="avoidCapital"$;
+    protected void set$generatedInfo.name; format="capital"$( $generatedInfo.type$ newValue) {
      
       if ($generatedInfo.name; format="avoidCapital"$ != newValue) {
         $generatedInfo.name; format="avoidCapital"$ = newValue; 
@@ -48,7 +48,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
       }
     } 
     /*   
-    protected  $generatedInfo.type.name$ get$generatedInfo.name; format="capital"$() {
+    protected  $generatedInfo.type$ get$generatedInfo.name; format="capital"$() {
       return  $generatedInfo.name; format="avoidCapital"$;
     } */
        
@@ -64,9 +64,9 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
            Logger.log(myDeviceInfo.getName(),"$CS.name$",
             "Notification Received $consumedInfo.name$");
           
-           onNew$consumedInfo.name; format="capital"$(($consumedInfo.type.name$) arg); 
+           onNew$consumedInfo.name; format="capital"$(($consumedInfo.type$) arg); 
            
-         //  onNew$consumedInfo.name; format="capital"$Received(($CS.allConsumedInfo:{ consumedInfo | $consumedInfo.type.name$}$) arg);
+         //  onNew$consumedInfo.name; format="capital"$Received(($CS.allConsumedInfo:{ consumedInfo | $consumedInfo.type$}$) arg);
         }
         }$  
           
@@ -75,7 +75,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         Logger.log(myDeviceInfo.getName(), "Proximity",
             "Notification Received Profile");
 
-        onNew$dataAccess.dataAccessName; format="capital"$Received(( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type.name$}; separator="\n"$) arg);
+        onNew$dataAccess.dataAccessName; format="capital"$Received(( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}; separator="\n"$) arg);
        }
         }$        
         
@@ -86,7 +86,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	  
 	    $CS.allConsumedInfo:{ consumedInfo | 
 	   
-	    public abstract void onNew$consumedInfo.name; format="capital"$($consumedInfo.type.name$ arg);	   		
+	    public abstract void onNew$consumedInfo.name; format="capital"$($consumedInfo.type$ arg);	   		
 	  
 	   
 	   	public void subscribe$consumedInfo.name; format="capital"$() {
@@ -100,7 +100,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 		
 		$CS.allDataAccess:{ dataAccess |
 		    
-		public abstract void onNew$dataAccess.dataAccessName; format="capital"$Received($CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type.name$}$  arg);	   		
+		public abstract void onNew$dataAccess.dataAccessName; format="capital"$Received($CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}$  arg);	   		
 	   	public void subscribe$dataAccess.dataAccessName; format="capital"$() {
 	   		    
 	   		List<String> regionInfo = RegionSubscription.getSubscriptionRequest(

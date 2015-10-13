@@ -25,7 +25,7 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
    
   /* @Override
-   public  $generatedInfo.type.name$ get$generatedInfo.name; format="avoidCapital"$(){
+   public  $generatedInfo.type$ get$generatedInfo.name; format="avoidCapital"$(){
 		   return null;
    }*/
       
@@ -57,13 +57,13 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
     return randomNumber;
 }
 
-private $generatedInfo.type.name$ get$generatedInfo.name; format="avoidCapital"$(){
+private $generatedInfo.type$ get$generatedInfo.name; format="avoidCapital"$(){
 
     int START = 20;
     int END = 40;
     Random random = new Random();
     double tempValue = showRandomInteger(START, END, random);
-    return new  $generatedInfo.type.name$(tempValue, "C");
+    return new  $generatedInfo.type$(tempValue, "C");
 }
    
       

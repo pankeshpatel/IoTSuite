@@ -12,9 +12,9 @@ public abstract class  $SensorDriver.name$ implements Runnable {
 	  this.myDeviceInfo = deviceInfo;	  
     } 	
 	
-	$SensorDriver.allGeneratedInfo:{ generatedInfo | private $generatedInfo.type.name$ $generatedInfo.name; format="avoidCapital"$;	
+	$SensorDriver.allGeneratedInfo:{ generatedInfo | private $generatedInfo.type$ $generatedInfo.name; format="avoidCapital"$;	
 		
-    protected void set$generatedInfo.name; format="capital"$( $generatedInfo.type.name$ newValue) {
+    protected void set$generatedInfo.name; format="capital"$( $generatedInfo.type$ newValue) {
       if ($generatedInfo.name; format="avoidCapital"$ != newValue) {
         $generatedInfo.name; format="avoidCapital"$ = newValue; 
        
@@ -26,7 +26,7 @@ public abstract class  $SensorDriver.name$ implements Runnable {
 		}
     } 
     /*   
-    public  $generatedInfo.type.name$ get$generatedInfo.name; format="capital"$() {
+    public  $generatedInfo.type$ get$generatedInfo.name; format="capital"$() {
       return  $generatedInfo.name; format="avoidCapital"$;
     }*/  
 }; separator="\n"$

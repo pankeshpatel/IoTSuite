@@ -11,6 +11,7 @@ import iotsuite.compiler.SensorCompiler;
 import iotsuite.compiler.StorageCompiler;
 import iotsuite.compiler.StructCompiler;
 import iotsuite.semanticmodel.DataAccess;
+import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.DeploymentScope;
 import iotsuite.semanticmodel.Device;
 import iotsuite.semanticmodel.PrimitiveType;
@@ -76,7 +77,11 @@ public class SymbolTable {
 	public static Map<String, Set<DataAccess>> dataAccessSymblTable = new HashMap<String, Set<DataAccess>>();
 	
 	public static List<StructField> StructFieldSet = new ArrayList<StructField>();
-
+	
+	/*public static List<String> structFieldName = new ArrayList<String>();
+	
+	public static List<String> structFieldType = new ArrayList<String>();
+*/
 	// Store Structure Name ex-TempStruct or BadgeStruct
 	public static String structName;
 	// Store Structure Name that is used by Storage
@@ -186,6 +191,7 @@ public class SymbolTable {
 
 		insertFieldName(structName, fieldName);
 		insertFieldType(structName, fieldType);
+		
 
 	}
 	
@@ -265,22 +271,21 @@ public class SymbolTable {
 					//	if (!aggregatorStructFieldName
 						//		.contains(tempAggregatorStructFieldName.get(j))) {
 
-				
-					 Field = new StructField(arrayFieldName[i][1], new PrimitiveType(
-							 arrayFieldType[i][1]));
+					//arrayFieldType[i][1]=arrayFieldType[i][1].substring(0, 5).toUpperCase();
+					 //arrayFieldType[i][1]= arrayFieldType[i][1].substring(0,1).toUpperCase() + arrayFieldType[i][1].substring(1);
+					 Field = new StructField(arrayFieldName[i][1],new PrimitiveType(arrayFieldType[i][1]));
+					
 					 StructFieldSet.add(Field);
 					
-							/*aggregatorStructFieldName
-									.add(arrayFieldName[i][1]);
-							
-							aggregatorStructFieldType.add(arrayFieldType[i][1]);*/
-					//	}
+					 /*structFieldName.add(arrayFieldName[i][1]);
+					structFieldType.add(arrayFieldType[i][1]);*/
 					}
 
 				}
 			}
 		
-	//	System.out.println("Struct Field set is "+StructFieldSet);
+	 // System.out.println("Struct Field set is "+StructFieldSet);
+		
 	  }
 		
 		

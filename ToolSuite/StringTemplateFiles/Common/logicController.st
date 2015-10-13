@@ -15,7 +15,7 @@ public class Logic$CS.name$ extends $CS.name$ {
 	$CS.allConsumedInfo:{ consumedInfo | 	   
 	    public void onNew$consumedInfo.name; format="capital"$( $consumedInfo.type.name$ arg)
 	    {
-	    	//TODO : write code here
+	    	//TODO : write code here 
 	    }	   	
 	}$	
 	

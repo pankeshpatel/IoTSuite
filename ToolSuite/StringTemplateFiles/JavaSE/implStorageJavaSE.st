@@ -92,8 +92,8 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
   $Storageservice.allDataAccess:{dataAccess |    
   
   @Override
-  public void set$dataAccess.dataAccessName; format="capital"$ 
-      ($dataAccess.query.type.name; format="capital" $ newIndex, $dataAccess.generatedInfo.type.name$  new$dataAccess.dataAccessName; format="capital"$Value ) {
+  public void set$dataAccess.dataAccessName; format="avoidCapital"$ 
+      ($dataAccess.query.type.name; format="capital" $ newIndex, $dataAccess.generatedInfo.type.name$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ) {
     // Use this function, when storage is considered  
 	//  as an actuator - It stores data from various sources. 
 

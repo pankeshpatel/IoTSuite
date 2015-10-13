@@ -28,7 +28,7 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
 
 
 	
-    $Actuatordriver.allActions:{ action | protected abstract void $action.name$($action.allParameter:{ param | $param.type.name$ arg }; separator=", "$); }; separator="\n"$
+    $Actuatordriver.allActions:{ action | protected abstract void $action.name$($action.allParameter:{ param | $param.type$ arg }; separator=", "$); }; separator="\n"$
 	
     public void notifyReceived(String methodName, Object arg, Device deviceInfo) { 
     $Actuatordriver.allActions:{ action |
@@ -37,7 +37,7 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
     	Logger.log( myDeviceInfo.getName() ,"$Actuatordriver.name$" , "$action.name$ has been received");
     	
     	
-		   $action.name$($action.allParameter:{ param | ($param.type.name$)arg }; separator=", "$);
+		   $action.name$($action.allParameter:{ param | ($param.type$)arg }; separator=", "$);
 		   
       } 
     }$
@@ -68,16 +68,16 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
 	 $if(Actuatordriver.generatedInfo)$
      
     $Actuatordriver.allGeneratedInfo:{ generatedInfo |
-    private $generatedInfo.type.name$ $generatedInfo.name; format="avoidCapital"$;
+    private $generatedInfo.type$ $generatedInfo.name; format="avoidCapital"$;
 	
 	
-    protected void set$generatedInfo.name; format="capital"$( $generatedInfo.type.name$ newValue) {
+    protected void set$generatedInfo.name; format="capital"$( $generatedInfo.type$ newValue) {
       if ($generatedInfo.name; format="avoidCapital"$ != newValue) {
         $generatedInfo.name; format="avoidCapital"$ = newValue; 
         this.myPubSubMiddleware.publish();
 		}
     }    
-    public  $generatedInfo.type.name$ get$generatedInfo.name; format="capital"$() {
+    public  $generatedInfo.type$ get$generatedInfo.name; format="capital"$() {
       return  $generatedInfo.name; format="avoidCapital"$;
     }    	
    

@@ -28,7 +28,7 @@ public  class  Logic$Actuatordriver.name$ extends $Actuatordriver.name$  {
 	
     $Actuatordriver.allActions:{ action |     
     @Override
-   protected  void $action.name$($action.allParameter:{ param |  $param.type.name$ arg }; separator=", "$) {
+   protected  void $action.name$($action.allParameter:{ param |  $param.type$ arg }; separator=", "$) {
 	
     	pubSubSensingFramework.publish("$action.name$", $if(!action.parameter)$ null  $else$  $action.allParameter:{param | arg }; separator=", "$ $endif$);
    

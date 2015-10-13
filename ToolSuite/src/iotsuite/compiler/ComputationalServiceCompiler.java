@@ -32,12 +32,9 @@ public class ComputationalServiceCompiler {
 	private Parameter parameter;
 	static int sampleValue;
 	
-/*	//Following list used to store struct field name utilized by aggregator corresponding to structure
-	private static List<String> aggregatorStructFieldName = new ArrayList<String>();
-		
-	//Following list used to store struct field types utilized by aggregator corresponding to structure
-	public static List<String> aggregatorStructFieldType = new ArrayList<String>();*/
-	
+	/*public static List<String> structFieldName =  new ArrayList<String>();
+	public static List<String> structFieldType =  new ArrayList<String>();
+	*/
 	public static List<StructField> StructFieldSet = new ArrayList<StructField>();
 		
 	
@@ -93,12 +90,13 @@ public class ComputationalServiceCompiler {
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
 				getPartitionAttributeVal(), getOperation(),getStructFieldSet(),getSampleValue());
-//getAggregatorStructFieldName(),getAggregatorStructFieldType(),
+
 	}
 
 	public List<StructField> getStructFieldSet() {
 		
 		StructFieldSet=iotsuite.parser.SymbolTable.StructFieldSet;
+		 //System.out.println("Struct Field set is "+StructFieldSet);
 		return StructFieldSet;
 	}
 	
@@ -121,6 +119,18 @@ public class ComputationalServiceCompiler {
 	 * dataAccessList.add(dataAccess); }
 	 */
 
+	/*public List<String> getStructFieldName() {
+		// TODO Auto-generated method stub
+		this.structFieldName=iotsuite.parser.SymbolTable.structFieldName;
+		return structFieldName;
+	}
+	
+	public List<String> getStructFieldType() {
+		// TODO Auto-generated method stub
+		this.structFieldType=iotsuite.parser.SymbolTable.structFieldType;
+		return structFieldType;
+	}
+*/
 	public Set<DataAccess> getDataAccessList() {
 		return dataAccessList;
 	}

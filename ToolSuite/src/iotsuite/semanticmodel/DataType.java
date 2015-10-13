@@ -13,6 +13,11 @@ public class DataType {
 	public String getName() {
 		return name;
 	}
+	
+	public String getfieldType(){
+		
+		return name;
+	}
 
 	@Override
 	public String toString() {
