@@ -66,11 +66,11 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 	Listener$generatedInfo.name; format="avoidCapital"$  $generatedInfo.name; format="avoidCapital"$Event = new Listener$generatedInfo.name; format="avoidCapital"$() {
 		
 		@Override
-		public void onNew$generatedInfo.name; format="capital"$($generatedInfo.type$ response) {
+		public void onNew$generatedInfo.name; format="avoidCapital"$($generatedInfo.type$ response) {
 
 			$generatedInfo.type$ s$generatedInfo.type$ = new $generatedInfo.type$(
 			$generatedInfo.data.StructFieldSet:{ StructFieldSet | response.get$StructFieldSet.name$()}; separator=", "$);
-			set$generatedInfo.name; format="avoidCapital"$(s$generatedInfo.type$);
+			set$generatedInfo.name; format="capital"$(s$generatedInfo.type$);
 		}
 		
 		 

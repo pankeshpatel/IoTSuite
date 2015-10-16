@@ -25,13 +25,13 @@ public class  Logic$Storageservice.name$  extends $Storageservice.name$  {
 	$Storageservice.allDataAccess:{ dataAccess |
 	
 	@Override
-	public void onNew$dataAccess.dataAccessName; format="capital"$RequestReceived(String arg) {
+	public void onNew$dataAccess.dataAccessName; format="avoidCapital"$RequestReceived(String arg) {
 		
 		
     if (deviceType.equals(GlobalVariable.deviceJAVASEType)) {
        
       
-       set$dataAccess.dataAccessName; format="capital"$(obj$Storageservice.name$.get$dataAccess.dataAccessName; format="capital"$(arg));
+       set$dataAccess.dataAccessName; format="capital"$(obj$Storageservice.name$.get$dataAccess.dataAccessName; format="avoidCapital"$(arg));
        }
        else{
         // This is reserved for Android Devices.

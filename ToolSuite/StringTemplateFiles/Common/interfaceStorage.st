@@ -7,7 +7,7 @@ public interface  I$Storageservice.name$   {
   
     
   
-  public void set$dataAccess.dataAccessName; format="capital"$ 
+  public void set$dataAccess.dataAccessName; format="avoidCapital"$ 
       ($dataAccess.query.type; format="capital" $ newIndex  , $dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="capital"$Value ); 
   
   public $dataAccess.generatedInfo.type$ get$dataAccess.dataAccessName$($dataAccess.query.type; format="capital" $ index); 

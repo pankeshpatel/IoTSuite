@@ -25,7 +25,7 @@ public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
     }   
 	
 	protected void postInitialize() {
-	      $Storageservice.allDataAccess:{dataAccess|subscribe$dataAccess.dataAccessName; format="capital"$(); 
+	      $Storageservice.allDataAccess:{dataAccess|subscribe$dataAccess.dataAccessName; format="avoidCapital"$(); 
 	    }$ 
 	    }
 	
@@ -36,7 +36,7 @@ public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
   	
 	
 	protected void set$dataAccess.dataAccessName; format="capital"$ 
-			($dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="capital"$Value ) {
+			($dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ) {
 		
 			myPubSubMiddleware.publish("$dataAccess.dataAccessName$", new$dataAccess.dataAccessName$Value, myDeviceInfo);
 		
