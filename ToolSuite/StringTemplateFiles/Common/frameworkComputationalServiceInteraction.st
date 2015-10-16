@@ -116,7 +116,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 		}	
         
 		$CS.allDataAccess:{ dataAccess |
-		    protected void get$dataAccess.dataAccessName; format="capital"$($dataAccess.query.type.name; format="capital" $ arg) {
+		    protected void get$dataAccess.dataAccessName; format="capital"$($dataAccess.query.type; format="capital" $ arg) {
 		    	 Logger.log(myDeviceInfo.getName(),"$CS.name$",
 		     				"Sending command get$dataAccess.dataAccessName$");
 		    	this.myPubSubMiddleware.publish("get$dataAccess.dataAccessName; format="capital"$", arg , myDeviceInfo );     

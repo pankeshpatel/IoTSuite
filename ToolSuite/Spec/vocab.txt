@@ -12,7 +12,7 @@ resources:
     	periodicsensors:
 	  		TemperatureSensor
             	generate  tempMeasurement : TempStruct;    
-            	sample period 10000 for 6000;
+            	sample period 1000 for 6000000;
       	eventdriven:
     	 	BadgeReader                
             	generate badgeDetected: BadgeStruct;
@@ -20,8 +20,8 @@ resources:
 				onCondition badgeDetected, badgeDisappeared;                 
     actuators:
        Heater
-			action SetTemp(setTemp:TempStruct);
 			action Off();
+			action SetTemp(setTemp:TempStruct);			
 	storages:       
         ProfileDB   
             generate  profile: TempStruct accessed-by badgeID: String;

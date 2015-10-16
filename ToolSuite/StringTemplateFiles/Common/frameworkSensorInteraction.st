@@ -22,7 +22,7 @@ public abstract class  $SensorDriver.name$ implements Runnable {
 				"Publishing $generatedInfo.name$");
       
         
-        this.myPubSubMiddleware.publish("$generatedInfo.name; format="capital"$", newValue, myDeviceInfo);
+        this.myPubSubMiddleware.publish("$generatedInfo.name; format="avoidCapital"$", newValue, myDeviceInfo);
 		}
     } 
     /*   
