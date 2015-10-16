@@ -44,7 +44,7 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
    }   
         
   /* @Override
-   public  $generatedInfo.type.name$ get$generatedInfo.name; format="avoidCapital"$(){
+   public  $generatedInfo.type$ get$generatedInfo.name; format="avoidCapital"$(){
        return null;
    }*/
 }; separator="\n"$
@@ -103,7 +103,7 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
    { 
    
     statusLabel.setText(" $generatedInfo.name$ event is happened.....");
-    handler$generatedInfo.name$.onNew$generatedInfo.name$(new  $generatedInfo.type.name$ ($SensorDriver.allEventDrivenFieldName:{eventDrivenFieldName | $eventDrivenFieldName$};separator="," $) );
+    handler$generatedInfo.name$.onNew$generatedInfo.name$(new  $generatedInfo.type$ ($SensorDriver.allEventDrivenFieldName:{eventDrivenFieldName | $eventDrivenFieldName$};separator="," $) );
   }
  
    }; separator="\n"$

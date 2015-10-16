@@ -20,7 +20,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 	private ResultSet resultSet = null;
 	static PreparedStatement ps ;
 	$Storageservice.allDataAccess:{dataAccess |
-	private $dataAccess.generatedInfo.type.name$ tempPreference;
+	private $dataAccess.generatedInfo.type$ tempPreference;
 	}$
 	private String queryCreateTable = null;
 
@@ -57,7 +57,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 				 
 				 System.out.println("Table exisits in the database.....");	
 				 $Storageservice.allDataAccess:{dataAccess |
-						//setprofile("-400", new $dataAccess.generatedInfo.type.name$(-400.0,"C"));
+						//setprofile("-400", new $dataAccess.generatedInfo.type$(-400.0,"C"));
 						}$
 				}
 				else{				
@@ -76,7 +76,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 				
 				$Storageservice.allDataAccess:{dataAccess |
 					
-				//setprofile("-300", new $dataAccess.generatedInfo.type.name$(-100.0,"C"));
+				//setprofile("-300", new $dataAccess.generatedInfo.type$(-100.0,"C"));
 				}$
 				}
 				
@@ -93,7 +93,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
   
   @Override
   public void set$dataAccess.dataAccessName; format="avoidCapital"$ 
-      ($dataAccess.query.type.name; format="capital" $ newIndex, $dataAccess.generatedInfo.type.name$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ) {
+      ($dataAccess.query.type; format="capital" $ newIndex, $dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ) {
     // Use this function, when storage is considered  
 	//  as an actuator - It stores data from various sources. 
 
@@ -115,7 +115,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
     } 
  
   @Override
-  public $dataAccess.generatedInfo.type.name$ get$dataAccess.dataAccessName$($dataAccess.query.type.name; format="capital" $ index){
+  public $dataAccess.generatedInfo.type$ get$dataAccess.dataAccessName$($dataAccess.query.type; format="capital" $ index){
     // Use this function, when  storage is considered as 
 	  // sensor - It allows to reterive stored data.
 	  
@@ -125,8 +125,8 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 			resultSet.next();
 			//double tempValue =resultSet.getDouble("tempValue");
 			//String unitOfMeasurement = resultSet.getString("unitOfMeasurement");
-			//tempPreference = new $dataAccess.generatedInfo.type.name$(tempValue, unitOfMeasurement);
-			tempPreference = new $dataAccess.generatedInfo.type.name$($Storageservice.allStructField:{structField | resultSet.get$structField$};separator=","$   );
+			//tempPreference = new $dataAccess.generatedInfo.type$(tempValue, unitOfMeasurement);
+			tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField$};separator=","$   );
 		} catch (Exception e) {
 			System.err.println("Got an exception! ");
 			System.err.println(e.getMessage());

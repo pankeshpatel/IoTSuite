@@ -36,7 +36,7 @@ public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
   	
 	
 	protected void set$dataAccess.dataAccessName; format="capital"$ 
-			($dataAccess.generatedInfo.type.name$  new$dataAccess.dataAccessName; format="capital"$Value ) {
+			($dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="capital"$Value ) {
 		
 			myPubSubMiddleware.publish("$dataAccess.dataAccessName$", new$dataAccess.dataAccessName$Value, myDeviceInfo);
 		
