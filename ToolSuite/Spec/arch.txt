@@ -16,8 +16,8 @@ softwarecomponents:
 	    Controller:
 			RoomController
 			  consume roomAvgTempMeasurement from region-hops:0:Room;
-			   consume tempPref from region-hops:0:Room;
-			   command Off() to region-hops:0:Room;
+			  consume tempPref from region-hops:0:Room;
+			  command Off() to region-hops:0:Room;
 			  command SetTemp(setTemp) to region-hops:0:Room;
 			 
 			  partition-per : Room;

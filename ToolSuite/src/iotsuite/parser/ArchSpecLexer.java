@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g 2015-10-16 17:14:21
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g 2015-10-17 16:24:37
    
   package iotsuite.parser; 
    
@@ -57,15 +57,15 @@ public class ArchSpecLexer extends Lexer {
 	public ArchSpecLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g"; }
+	@Override public String getGrammarFileName() { return "S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g"; }
 
 	// $ANTLR start "T__8"
 	public final void mT__8() throws RecognitionException {
 		try {
 			int _type = T__8;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:12:6: ( '(' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:12:8: '('
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:12:6: ( '(' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:12:8: '('
 			{
 			match('('); 
 			}
@@ -84,8 +84,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__9;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:13:6: ( ')' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:13:8: ')'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:13:6: ( ')' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:13:8: ')'
 			{
 			match(')'); 
 			}
@@ -104,8 +104,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:14:7: ( ',' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:14:9: ','
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:14:7: ( ',' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:14:9: ','
 			{
 			match(','); 
 			}
@@ -124,8 +124,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__11;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:15:7: ( ':' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:15:9: ':'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:15:7: ( ':' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:15:9: ':'
 			{
 			match(':'); 
 			}
@@ -144,8 +144,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__12;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:16:7: ( ';' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:16:9: ';'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:16:7: ( ';' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:16:9: ';'
 			{
 			match(';'); 
 			}
@@ -164,8 +164,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:17:7: ( 'Aggregator' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:17:9: 'Aggregator'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:17:7: ( 'Aggregator' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:17:9: 'Aggregator'
 			{
 			match("Aggregator"); 
 
@@ -185,8 +185,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__14;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:18:7: ( 'Boolean' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:18:9: 'Boolean'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:18:7: ( 'Boolean' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:18:9: 'Boolean'
 			{
 			match("Boolean"); 
 
@@ -206,8 +206,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:19:7: ( 'COMPUTE(' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:19:9: 'COMPUTE('
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:19:7: ( 'COMPUTE(' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:19:9: 'COMPUTE('
 			{
 			match("COMPUTE("); 
 
@@ -227,8 +227,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:20:7: ( 'Controller' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:20:9: 'Controller'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:20:7: ( 'Controller' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:20:9: 'Controller'
 			{
 			match("Controller"); 
 
@@ -248,8 +248,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__17;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:21:7: ( 'Coordinator' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:21:9: 'Coordinator'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:21:7: ( 'Coordinator' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:21:9: 'Coordinator'
 			{
 			match("Coordinator"); 
 
@@ -269,8 +269,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:22:7: ( 'Integer' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:22:9: 'Integer'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:22:7: ( 'Integer' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:22:9: 'Integer'
 			{
 			match("Integer"); 
 
@@ -290,8 +290,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__19;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:23:7: ( 'String' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:23:9: 'String'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:23:7: ( 'String' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:23:9: 'String'
 			{
 			match("String"); 
 
@@ -311,8 +311,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:24:7: ( '_BY_SAMPLE' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:24:9: '_BY_SAMPLE'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:24:7: ( '_BY_SAMPLE' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:24:9: '_BY_SAMPLE'
 			{
 			match("_BY_SAMPLE"); 
 
@@ -332,8 +332,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:25:7: ( 'boolean' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:25:9: 'boolean'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:25:7: ( 'boolean' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:25:9: 'boolean'
 			{
 			match("boolean"); 
 
@@ -353,8 +353,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:26:7: ( 'command' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:26:9: 'command'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:26:7: ( 'command' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:26:9: 'command'
 			{
 			match("command"); 
 
@@ -374,8 +374,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:27:7: ( 'computationalService' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:27:9: 'computationalService'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:27:7: ( 'computationalService' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:27:9: 'computationalService'
 			{
 			match("computationalService"); 
 
@@ -395,8 +395,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:28:7: ( 'consume' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:28:9: 'consume'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:28:7: ( 'consume' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:28:9: 'consume'
 			{
 			match("consume"); 
 
@@ -416,8 +416,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__25;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:29:7: ( 'double' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:29:9: 'double'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:29:7: ( 'double' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:29:9: 'double'
 			{
 			match("double"); 
 
@@ -437,8 +437,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:30:7: ( 'from' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:30:9: 'from'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:30:7: ( 'from' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:30:9: 'from'
 			{
 			match("from"); 
 
@@ -458,8 +458,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__27;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:31:7: ( 'generate' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:31:9: 'generate'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:31:7: ( 'generate' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:31:9: 'generate'
 			{
 			match("generate"); 
 
@@ -479,8 +479,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__28;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:32:7: ( 'long' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:32:9: 'long'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:32:7: ( 'long' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:32:9: 'long'
 			{
 			match("long"); 
 
@@ -500,8 +500,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__29;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:33:7: ( 'partition-per' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:33:9: 'partition-per'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:33:7: ( 'partition-per' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:33:9: 'partition-per'
 			{
 			match("partition-per"); 
 
@@ -521,8 +521,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__30;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:34:7: ( 'region-hops' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:34:9: 'region-hops'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:34:7: ( 'region-hops' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:34:9: 'region-hops'
 			{
 			match("region-hops"); 
 
@@ -542,8 +542,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__31;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:35:7: ( 'request' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:35:9: 'request'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:35:7: ( 'request' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:35:9: 'request'
 			{
 			match("request"); 
 
@@ -563,8 +563,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__32;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:36:7: ( 'softwarecomponents' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:36:9: 'softwarecomponents'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:36:7: ( 'softwarecomponents' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:36:9: 'softwarecomponents'
 			{
 			match("softwarecomponents"); 
 
@@ -584,8 +584,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__33;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:37:7: ( 'structs' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:37:9: 'structs'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:37:7: ( 'structs' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:37:9: 'structs'
 			{
 			match("structs"); 
 
@@ -605,8 +605,8 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__34;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:38:7: ( 'to' )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:38:9: 'to'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:38:7: ( 'to' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:38:9: 'to'
 			{
 			match("to"); 
 
@@ -626,11 +626,11 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:198:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:198:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:198:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:198:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )*
 			{
 			matchRange('a','z'); 
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:198:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:198:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -641,7 +641,7 @@ public class ArchSpecLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:
 					{
 					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -675,11 +675,11 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:201:5: ( '0' .. '9' ( '0' .. '9' )* )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:201:7: '0' .. '9' ( '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:201:5: ( '0' .. '9' ( '0' .. '9' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:201:7: '0' .. '9' ( '0' .. '9' )*
 			{
 			matchRange('0','9'); 
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:201:15: ( '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:201:15: ( '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -690,7 +690,7 @@ public class ArchSpecLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -724,11 +724,11 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = CAPITALIZED_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:203:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:203:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:203:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:203:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
 			{
 			matchRange('A','Z'); 
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:203:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:203:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -739,7 +739,7 @@ public class ArchSpecLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:
 					{
 					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -773,10 +773,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:205:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:205:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:205:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:205:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:205:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:205:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -788,7 +788,7 @@ public class ArchSpecLexer extends Lexer {
 
 				switch (alt4) {
 				case 1 :
-					// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
 						input.consume();
@@ -823,222 +823,222 @@ public class ArchSpecLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | ID | INT | CAPITALIZED_ID | WS )
+		// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | ID | INT | CAPITALIZED_ID | WS )
 		int alt5=31;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:10: T__8
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:10: T__8
 				{
 				mT__8(); 
 
 				}
 				break;
 			case 2 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:15: T__9
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:15: T__9
 				{
 				mT__9(); 
 
 				}
 				break;
 			case 3 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:20: T__10
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:20: T__10
 				{
 				mT__10(); 
 
 				}
 				break;
 			case 4 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:26: T__11
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:26: T__11
 				{
 				mT__11(); 
 
 				}
 				break;
 			case 5 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:32: T__12
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:32: T__12
 				{
 				mT__12(); 
 
 				}
 				break;
 			case 6 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:38: T__13
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:38: T__13
 				{
 				mT__13(); 
 
 				}
 				break;
 			case 7 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:44: T__14
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:44: T__14
 				{
 				mT__14(); 
 
 				}
 				break;
 			case 8 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:50: T__15
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:50: T__15
 				{
 				mT__15(); 
 
 				}
 				break;
 			case 9 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:56: T__16
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:56: T__16
 				{
 				mT__16(); 
 
 				}
 				break;
 			case 10 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:62: T__17
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:62: T__17
 				{
 				mT__17(); 
 
 				}
 				break;
 			case 11 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:68: T__18
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:68: T__18
 				{
 				mT__18(); 
 
 				}
 				break;
 			case 12 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:74: T__19
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:74: T__19
 				{
 				mT__19(); 
 
 				}
 				break;
 			case 13 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:80: T__20
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:80: T__20
 				{
 				mT__20(); 
 
 				}
 				break;
 			case 14 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:86: T__21
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:86: T__21
 				{
 				mT__21(); 
 
 				}
 				break;
 			case 15 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:92: T__22
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:92: T__22
 				{
 				mT__22(); 
 
 				}
 				break;
 			case 16 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:98: T__23
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:98: T__23
 				{
 				mT__23(); 
 
 				}
 				break;
 			case 17 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:104: T__24
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:104: T__24
 				{
 				mT__24(); 
 
 				}
 				break;
 			case 18 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:110: T__25
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:110: T__25
 				{
 				mT__25(); 
 
 				}
 				break;
 			case 19 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:116: T__26
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:116: T__26
 				{
 				mT__26(); 
 
 				}
 				break;
 			case 20 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:122: T__27
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:122: T__27
 				{
 				mT__27(); 
 
 				}
 				break;
 			case 21 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:128: T__28
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:128: T__28
 				{
 				mT__28(); 
 
 				}
 				break;
 			case 22 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:134: T__29
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:134: T__29
 				{
 				mT__29(); 
 
 				}
 				break;
 			case 23 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:140: T__30
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:140: T__30
 				{
 				mT__30(); 
 
 				}
 				break;
 			case 24 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:146: T__31
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:146: T__31
 				{
 				mT__31(); 
 
 				}
 				break;
 			case 25 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:152: T__32
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:152: T__32
 				{
 				mT__32(); 
 
 				}
 				break;
 			case 26 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:158: T__33
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:158: T__33
 				{
 				mT__33(); 
 
 				}
 				break;
 			case 27 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:164: T__34
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:164: T__34
 				{
 				mT__34(); 
 
 				}
 				break;
 			case 28 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:170: ID
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:170: ID
 				{
 				mID(); 
 
 				}
 				break;
 			case 29 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:173: INT
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:173: INT
 				{
 				mINT(); 
 
 				}
 				break;
 			case 30 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:177: CAPITALIZED_ID
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:177: CAPITALIZED_ID
 				{
 				mCAPITALIZED_ID(); 
 
 				}
 				break;
 			case 31 :
-				// C:\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:192: WS
+				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\ArchSpec.g:1:192: WS
 				{
 				mWS(); 
 
