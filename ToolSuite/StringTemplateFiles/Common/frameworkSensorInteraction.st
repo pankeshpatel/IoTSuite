@@ -19,8 +19,7 @@ public abstract class  $SensorDriver.name$ implements Runnable {
         $generatedInfo.name; format="avoidCapital"$ = newValue; 
        
         Logger.log(myDeviceInfo.getName(), "$SensorDriver.name$",
-				"Publishing $generatedInfo.name$");
-      
+				"Publishing $generatedInfo.name$");   
         
         this.myPubSubMiddleware.publish("$generatedInfo.name; format="avoidCapital"$", newValue, myDeviceInfo);
 		}

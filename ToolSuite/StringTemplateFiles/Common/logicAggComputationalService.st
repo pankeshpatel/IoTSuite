@@ -35,7 +35,7 @@ public class  Logic$CS.name$ extends $CS.name$  {
     
      $CS.allConsumedInfo:{ consumedInfo |
      @Override
-    public void onNew$consumedInfo.name; format="capital"$( $consumedInfo.type$ arg)
+    public void onNew$consumedInfo.name$( $consumedInfo.type$ arg)
     {
      //Wrapping of data is performed
          JSONObject obj = new JSONObject();
@@ -43,12 +43,11 @@ public class  Logic$CS.name$ extends $CS.name$  {
              $CS.allStructFields:{field | 
                obj.put("$field.name$",arg.get$field.name$());}$
               obj.put("sampleValue",$CS.sampleValue$);
-        //obj.put("value",arg.gettempValue());
-        //obj.put("getunitOfMeasurement", arg.getunitOfMeasurement());
+      
       } 
          
       catch (JSONException e) {
-        // TODO Auto-generated catch block
+       
        System.out.println("Exception is " +e.getMessage());
       }
              JSONArray data = new JSONArray();

@@ -14,7 +14,7 @@ public class  Logic$CS.name$ extends $CS.name$  {
       $CS.allConsumedInfo:{ consumedInfo |
     
       @Override
-      public  void onNew$consumedInfo.name; format="capital"$( $consumedInfo.type$ arg){     
+      public  void onNew$consumedInfo.name$( $consumedInfo.type$ arg){     
       //TODO : write code here. 
       }
       

@@ -20,7 +20,7 @@ static $field.type$ $field.name$;
  
  }$ 
     $CS.allConsumedInfo:{ consumedInfo |
-  public static Listener$consumedInfo.name$ listener$consumedInfo.name$ = null ;
+  public  Listener$consumedInfo.name$ listener$consumedInfo.name$ = null ;
    }; separator="\n"$ 
   private PubSubsSensingFramework pubSubSensingFramework = null;
 
@@ -38,10 +38,9 @@ static $field.type$ $field.name$;
  }; separator="\n"$
  
   @Override
-       //public void onDataReceived(String eventName, Object data) {
+      
        public void onDataReceived(String eventName, JSONArray data) {
-     // double value=0;
-    //String unitOfMeasurement=null;
+    
           JSONObject obj = new JSONObject();
         $CS.allConsumedInfo:{ consumedInfo |
         if(eventName.equals("$consumedInfo.name$"))
@@ -51,14 +50,11 @@ static $field.type$ $field.name$;
            $CS.allStructFields:{field |  
            $field.name$=($field.type ; format="capital"$) obj.get("$field.name$") ; 
           }$
-      //value = obj.getDouble("value");
-      //unitOfMeasurement=obj.getString("measurementUnit");      
+       
         } catch (JSONException e) {
-    // TODO Auto-generated catch block
           System.out.println("Exception is "+ e.getMessage());
-             }
-            
-              //$consumedInfo.type$ arg = ($consumedInfo.type$) aggFields;;
+             }  
+           
               listener$consumedInfo.name$.onNew$consumedInfo.name$(new $consumedInfo.type$($CS.allStructFields:{field|$field.name$ }; separator=","$));
           } 
             
