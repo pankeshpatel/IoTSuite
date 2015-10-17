@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-10-17 16:24:33
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-10-17 16:57:55
 
   package iotsuite.parser; 
 
@@ -147,10 +147,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:7: ( 'platform' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:9: 'platform'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:7: ( 'os' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:9: 'os'
 			{
-			match("platform"); 
+			match("os"); 
 
 			}
 
@@ -231,7 +231,7 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = MOBILEFLAG;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:93:12: ( 'true' | 'false' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:91:12: ( 'true' | 'false' )
 			int alt1=2;
 			int LA1_0 = input.LA(1);
 			if ( (LA1_0=='t') ) {
@@ -249,14 +249,14 @@ public class NetworkSpecLexer extends Lexer {
 
 			switch (alt1) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:93:15: 'true'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:91:15: 'true'
 					{
 					match("true"); 
 
 					}
 					break;
 				case 2 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:93:24: 'false'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:91:24: 'false'
 					{
 					match("false"); 
 
@@ -278,7 +278,7 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:98:5: ( ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* ) | '0' .. '9' ( '0' .. '9' )* | '*' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:96:5: ( ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* ) | '0' .. '9' ( '0' .. '9' )* | '*' )
 			int alt5=3;
 			switch ( input.LA(1) ) {
 			case 'a':
@@ -337,13 +337,13 @@ public class NetworkSpecLexer extends Lexer {
 			}
 			switch (alt5) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:98:7: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:96:7: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
 					{
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:98:7: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:98:8: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:96:7: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:96:8: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
 					{
 					matchRange('a','z'); 
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:98:18: ( 'a' .. 'z' | 'A' .. 'Z' )*
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:96:18: ( 'a' .. 'z' | 'A' .. 'Z' )*
 					loop2:
 					while (true) {
 						int alt2=2;
@@ -372,7 +372,7 @@ public class NetworkSpecLexer extends Lexer {
 						}
 					}
 
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:98:42: ( '0' .. '9' )*
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:96:42: ( '0' .. '9' )*
 					loop3:
 					while (true) {
 						int alt3=2;
@@ -406,10 +406,10 @@ public class NetworkSpecLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:98:56: '0' .. '9' ( '0' .. '9' )*
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:96:56: '0' .. '9' ( '0' .. '9' )*
 					{
 					matchRange('0','9'); 
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:98:64: ( '0' .. '9' )*
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:96:64: ( '0' .. '9' )*
 					loop4:
 					while (true) {
 						int alt4=2;
@@ -441,7 +441,7 @@ public class NetworkSpecLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:98:76: '*'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:96:76: '*'
 					{
 					match('*'); 
 					}
@@ -462,11 +462,11 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = CAPITALIZED_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:106:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:106:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:104:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:104:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
 			{
 			matchRange('A','Z'); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:106:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:104:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop6:
 			while (true) {
 				int alt6=2;
@@ -495,7 +495,7 @@ public class NetworkSpecLexer extends Lexer {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:106:50: ( '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:104:50: ( '0' .. '9' )*
 			loop7:
 			while (true) {
 				int alt7=2;
@@ -540,10 +540,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:108:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:108:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:106:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:106:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:108:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:106:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt8=0;
 			loop8:
 			while (true) {
@@ -592,7 +592,500 @@ public class NetworkSpecLexer extends Lexer {
 	public void mTokens() throws RecognitionException {
 		// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | MOBILEFLAG | ID | CAPITALIZED_ID | WS )
 		int alt9=13;
-		alt9 = dfa9.predict(input);
+		switch ( input.LA(1) ) {
+		case ',':
+			{
+			alt9=1;
+			}
+			break;
+		case ':':
+			{
+			alt9=2;
+			}
+			break;
+		case ';':
+			{
+			alt9=3;
+			}
+			break;
+		case 'd':
+			{
+			int LA9_4 = input.LA(2);
+			if ( (LA9_4=='e') ) {
+				int LA9_14 = input.LA(3);
+				if ( (LA9_14=='v') ) {
+					int LA9_21 = input.LA(4);
+					if ( (LA9_21=='i') ) {
+						int LA9_29 = input.LA(5);
+						if ( (LA9_29=='c') ) {
+							int LA9_36 = input.LA(6);
+							if ( (LA9_36=='e') ) {
+								int LA9_43 = input.LA(7);
+								if ( (LA9_43=='s') ) {
+									int LA9_48 = input.LA(8);
+									if ( ((LA9_48 >= '0' && LA9_48 <= '9')||(LA9_48 >= 'A' && LA9_48 <= 'Z')||(LA9_48 >= 'a' && LA9_48 <= 'z')) ) {
+										alt9=11;
+									}
+
+									else {
+										alt9=4;
+									}
+
+								}
+
+								else {
+									alt9=11;
+								}
+
+							}
+
+							else {
+								alt9=11;
+							}
+
+						}
+
+						else {
+							alt9=11;
+						}
+
+					}
+
+					else {
+						alt9=11;
+					}
+
+				}
+
+				else {
+					alt9=11;
+				}
+
+			}
+
+			else {
+				alt9=11;
+			}
+
+			}
+			break;
+		case 'm':
+			{
+			int LA9_5 = input.LA(2);
+			if ( (LA9_5=='o') ) {
+				int LA9_15 = input.LA(3);
+				if ( (LA9_15=='b') ) {
+					int LA9_22 = input.LA(4);
+					if ( (LA9_22=='i') ) {
+						int LA9_30 = input.LA(5);
+						if ( (LA9_30=='l') ) {
+							int LA9_37 = input.LA(6);
+							if ( (LA9_37=='e') ) {
+								int LA9_44 = input.LA(7);
+								if ( ((LA9_44 >= '0' && LA9_44 <= '9')||(LA9_44 >= 'A' && LA9_44 <= 'Z')||(LA9_44 >= 'a' && LA9_44 <= 'z')) ) {
+									alt9=11;
+								}
+
+								else {
+									alt9=5;
+								}
+
+							}
+
+							else {
+								alt9=11;
+							}
+
+						}
+
+						else {
+							alt9=11;
+						}
+
+					}
+
+					else {
+						alt9=11;
+					}
+
+				}
+
+				else {
+					alt9=11;
+				}
+
+			}
+
+			else {
+				alt9=11;
+			}
+
+			}
+			break;
+		case 'o':
+			{
+			int LA9_6 = input.LA(2);
+			if ( (LA9_6=='s') ) {
+				int LA9_16 = input.LA(3);
+				if ( ((LA9_16 >= '0' && LA9_16 <= '9')||(LA9_16 >= 'A' && LA9_16 <= 'Z')||(LA9_16 >= 'a' && LA9_16 <= 'z')) ) {
+					alt9=11;
+				}
+
+				else {
+					alt9=6;
+				}
+
+			}
+
+			else {
+				alt9=11;
+			}
+
+			}
+			break;
+		case 'p':
+			{
+			int LA9_7 = input.LA(2);
+			if ( (LA9_7=='r') ) {
+				int LA9_17 = input.LA(3);
+				if ( (LA9_17=='o') ) {
+					int LA9_24 = input.LA(4);
+					if ( (LA9_24=='t') ) {
+						int LA9_31 = input.LA(5);
+						if ( (LA9_31=='o') ) {
+							int LA9_38 = input.LA(6);
+							if ( (LA9_38=='c') ) {
+								int LA9_45 = input.LA(7);
+								if ( (LA9_45=='o') ) {
+									int LA9_50 = input.LA(8);
+									if ( (LA9_50=='l') ) {
+										int LA9_54 = input.LA(9);
+										if ( ((LA9_54 >= '0' && LA9_54 <= '9')||(LA9_54 >= 'A' && LA9_54 <= 'Z')||(LA9_54 >= 'a' && LA9_54 <= 'z')) ) {
+											alt9=11;
+										}
+
+										else {
+											alt9=7;
+										}
+
+									}
+
+									else {
+										alt9=11;
+									}
+
+								}
+
+								else {
+									alt9=11;
+								}
+
+							}
+
+							else {
+								alt9=11;
+							}
+
+						}
+
+						else {
+							alt9=11;
+						}
+
+					}
+
+					else {
+						alt9=11;
+					}
+
+				}
+
+				else {
+					alt9=11;
+				}
+
+			}
+
+			else {
+				alt9=11;
+			}
+
+			}
+			break;
+		case 'r':
+			{
+			int LA9_8 = input.LA(2);
+			if ( (LA9_8=='e') ) {
+				switch ( input.LA(3) ) {
+				case 'g':
+					{
+					int LA9_25 = input.LA(4);
+					if ( (LA9_25=='i') ) {
+						int LA9_32 = input.LA(5);
+						if ( (LA9_32=='o') ) {
+							int LA9_39 = input.LA(6);
+							if ( (LA9_39=='n') ) {
+								int LA9_46 = input.LA(7);
+								if ( ((LA9_46 >= '0' && LA9_46 <= '9')||(LA9_46 >= 'A' && LA9_46 <= 'Z')||(LA9_46 >= 'a' && LA9_46 <= 'z')) ) {
+									alt9=11;
+								}
+
+								else {
+									alt9=8;
+								}
+
+							}
+
+							else {
+								alt9=11;
+							}
+
+						}
+
+						else {
+							alt9=11;
+						}
+
+					}
+
+					else {
+						alt9=11;
+					}
+
+					}
+					break;
+				case 's':
+					{
+					int LA9_26 = input.LA(4);
+					if ( (LA9_26=='o') ) {
+						int LA9_33 = input.LA(5);
+						if ( (LA9_33=='u') ) {
+							int LA9_40 = input.LA(6);
+							if ( (LA9_40=='r') ) {
+								int LA9_47 = input.LA(7);
+								if ( (LA9_47=='c') ) {
+									int LA9_52 = input.LA(8);
+									if ( (LA9_52=='e') ) {
+										int LA9_55 = input.LA(9);
+										if ( (LA9_55=='s') ) {
+											int LA9_57 = input.LA(10);
+											if ( ((LA9_57 >= '0' && LA9_57 <= '9')||(LA9_57 >= 'A' && LA9_57 <= 'Z')||(LA9_57 >= 'a' && LA9_57 <= 'z')) ) {
+												alt9=11;
+											}
+
+											else {
+												alt9=9;
+											}
+
+										}
+
+										else {
+											alt9=11;
+										}
+
+									}
+
+									else {
+										alt9=11;
+									}
+
+								}
+
+								else {
+									alt9=11;
+								}
+
+							}
+
+							else {
+								alt9=11;
+							}
+
+						}
+
+						else {
+							alt9=11;
+						}
+
+					}
+
+					else {
+						alt9=11;
+					}
+
+					}
+					break;
+				default:
+					alt9=11;
+				}
+			}
+
+			else {
+				alt9=11;
+			}
+
+			}
+			break;
+		case 't':
+			{
+			int LA9_9 = input.LA(2);
+			if ( (LA9_9=='r') ) {
+				int LA9_19 = input.LA(3);
+				if ( (LA9_19=='u') ) {
+					int LA9_27 = input.LA(4);
+					if ( (LA9_27=='e') ) {
+						int LA9_34 = input.LA(5);
+						if ( ((LA9_34 >= '0' && LA9_34 <= '9')||(LA9_34 >= 'A' && LA9_34 <= 'Z')||(LA9_34 >= 'a' && LA9_34 <= 'z')) ) {
+							alt9=11;
+						}
+
+						else {
+							alt9=10;
+						}
+
+					}
+
+					else {
+						alt9=11;
+					}
+
+				}
+
+				else {
+					alt9=11;
+				}
+
+			}
+
+			else {
+				alt9=11;
+			}
+
+			}
+			break;
+		case 'f':
+			{
+			int LA9_10 = input.LA(2);
+			if ( (LA9_10=='a') ) {
+				int LA9_20 = input.LA(3);
+				if ( (LA9_20=='l') ) {
+					int LA9_28 = input.LA(4);
+					if ( (LA9_28=='s') ) {
+						int LA9_35 = input.LA(5);
+						if ( (LA9_35=='e') ) {
+							int LA9_42 = input.LA(6);
+							if ( ((LA9_42 >= '0' && LA9_42 <= '9')||(LA9_42 >= 'A' && LA9_42 <= 'Z')||(LA9_42 >= 'a' && LA9_42 <= 'z')) ) {
+								alt9=11;
+							}
+
+							else {
+								alt9=10;
+							}
+
+						}
+
+						else {
+							alt9=11;
+						}
+
+					}
+
+					else {
+						alt9=11;
+					}
+
+				}
+
+				else {
+					alt9=11;
+				}
+
+			}
+
+			else {
+				alt9=11;
+			}
+
+			}
+			break;
+		case '*':
+		case '0':
+		case '1':
+		case '2':
+		case '3':
+		case '4':
+		case '5':
+		case '6':
+		case '7':
+		case '8':
+		case '9':
+		case 'a':
+		case 'b':
+		case 'c':
+		case 'e':
+		case 'g':
+		case 'h':
+		case 'i':
+		case 'j':
+		case 'k':
+		case 'l':
+		case 'n':
+		case 'q':
+		case 's':
+		case 'u':
+		case 'v':
+		case 'w':
+		case 'x':
+		case 'y':
+		case 'z':
+			{
+			alt9=11;
+			}
+			break;
+		case 'A':
+		case 'B':
+		case 'C':
+		case 'D':
+		case 'E':
+		case 'F':
+		case 'G':
+		case 'H':
+		case 'I':
+		case 'J':
+		case 'K':
+		case 'L':
+		case 'M':
+		case 'N':
+		case 'O':
+		case 'P':
+		case 'Q':
+		case 'R':
+		case 'S':
+		case 'T':
+		case 'U':
+		case 'V':
+		case 'W':
+		case 'X':
+		case 'Y':
+		case 'Z':
+			{
+			alt9=12;
+			}
+			break;
+		case '\t':
+		case '\n':
+		case '\f':
+		case '\r':
+		case ' ':
+			{
+			alt9=13;
+			}
+			break;
+		default:
+			NoViableAltException nvae =
+				new NoViableAltException("", 9, 0, input);
+			throw nvae;
+		}
 		switch (alt9) {
 			case 1 :
 				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:10: T__8
@@ -690,132 +1183,5 @@ public class NetworkSpecLexer extends Lexer {
 	}
 
 
-	protected DFA9 dfa9 = new DFA9(this);
-	static final String DFA9_eotS =
-		"\4\uffff\6\12\3\uffff\25\12\1\52\7\12\1\uffff\1\52\1\12\1\63\2\12\1\66"+
-		"\1\12\1\70\1\uffff\2\12\1\uffff\1\12\1\uffff\1\74\1\75\1\12\2\uffff\1"+
-		"\77\1\uffff";
-	static final String DFA9_eofS =
-		"\100\uffff";
-	static final String DFA9_minS =
-		"\1\11\3\uffff\1\145\1\157\1\154\1\145\1\162\1\141\3\uffff\1\166\1\142"+
-		"\1\141\1\157\1\147\1\165\1\154\2\151\2\164\1\151\1\157\1\145\1\163\1\143"+
-		"\1\154\1\146\2\157\1\165\1\60\3\145\1\157\1\143\1\156\1\162\1\uffff\1"+
-		"\60\1\163\1\60\1\162\1\157\1\60\1\143\1\60\1\uffff\1\155\1\154\1\uffff"+
-		"\1\145\1\uffff\2\60\1\163\2\uffff\1\60\1\uffff";
-	static final String DFA9_maxS =
-		"\1\172\3\uffff\1\145\1\157\1\162\1\145\1\162\1\141\3\uffff\1\166\1\142"+
-		"\1\141\1\157\1\163\1\165\1\154\2\151\2\164\1\151\1\157\1\145\1\163\1\143"+
-		"\1\154\1\146\2\157\1\165\1\172\3\145\1\157\1\143\1\156\1\162\1\uffff\1"+
-		"\172\1\163\1\172\1\162\1\157\1\172\1\143\1\172\1\uffff\1\155\1\154\1\uffff"+
-		"\1\145\1\uffff\2\172\1\163\2\uffff\1\172\1\uffff";
-	static final String DFA9_acceptS =
-		"\1\uffff\1\1\1\2\1\3\6\uffff\1\13\1\14\1\15\35\uffff\1\12\10\uffff\1\5"+
-		"\2\uffff\1\10\1\uffff\1\4\3\uffff\1\6\1\7\1\uffff\1\11";
-	static final String DFA9_specialS =
-		"\100\uffff}>";
-	static final String[] DFA9_transitionS = {
-			"\2\14\1\uffff\2\14\22\uffff\1\14\11\uffff\1\12\1\uffff\1\1\3\uffff\12"+
-			"\12\1\2\1\3\5\uffff\32\13\6\uffff\3\12\1\4\1\12\1\11\6\12\1\5\2\12\1"+
-			"\6\1\12\1\7\1\12\1\10\6\12",
-			"",
-			"",
-			"",
-			"\1\15",
-			"\1\16",
-			"\1\17\5\uffff\1\20",
-			"\1\21",
-			"\1\22",
-			"\1\23",
-			"",
-			"",
-			"",
-			"\1\24",
-			"\1\25",
-			"\1\26",
-			"\1\27",
-			"\1\30\13\uffff\1\31",
-			"\1\32",
-			"\1\33",
-			"\1\34",
-			"\1\35",
-			"\1\36",
-			"\1\37",
-			"\1\40",
-			"\1\41",
-			"\1\42",
-			"\1\43",
-			"\1\44",
-			"\1\45",
-			"\1\46",
-			"\1\47",
-			"\1\50",
-			"\1\51",
-			"\12\12\7\uffff\32\12\6\uffff\32\12",
-			"\1\53",
-			"\1\54",
-			"\1\55",
-			"\1\56",
-			"\1\57",
-			"\1\60",
-			"\1\61",
-			"",
-			"\12\12\7\uffff\32\12\6\uffff\32\12",
-			"\1\62",
-			"\12\12\7\uffff\32\12\6\uffff\32\12",
-			"\1\64",
-			"\1\65",
-			"\12\12\7\uffff\32\12\6\uffff\32\12",
-			"\1\67",
-			"\12\12\7\uffff\32\12\6\uffff\32\12",
-			"",
-			"\1\71",
-			"\1\72",
-			"",
-			"\1\73",
-			"",
-			"\12\12\7\uffff\32\12\6\uffff\32\12",
-			"\12\12\7\uffff\32\12\6\uffff\32\12",
-			"\1\76",
-			"",
-			"",
-			"\12\12\7\uffff\32\12\6\uffff\32\12",
-			""
-	};
-
-	static final short[] DFA9_eot = DFA.unpackEncodedString(DFA9_eotS);
-	static final short[] DFA9_eof = DFA.unpackEncodedString(DFA9_eofS);
-	static final char[] DFA9_min = DFA.unpackEncodedStringToUnsignedChars(DFA9_minS);
-	static final char[] DFA9_max = DFA.unpackEncodedStringToUnsignedChars(DFA9_maxS);
-	static final short[] DFA9_accept = DFA.unpackEncodedString(DFA9_acceptS);
-	static final short[] DFA9_special = DFA.unpackEncodedString(DFA9_specialS);
-	static final short[][] DFA9_transition;
-
-	static {
-		int numStates = DFA9_transitionS.length;
-		DFA9_transition = new short[numStates][];
-		for (int i=0; i<numStates; i++) {
-			DFA9_transition[i] = DFA.unpackEncodedString(DFA9_transitionS[i]);
-		}
-	}
-
-	protected class DFA9 extends DFA {
-
-		public DFA9(BaseRecognizer recognizer) {
-			this.recognizer = recognizer;
-			this.decisionNumber = 9;
-			this.eot = DFA9_eot;
-			this.eof = DFA9_eof;
-			this.min = DFA9_min;
-			this.max = DFA9_max;
-			this.accept = DFA9_accept;
-			this.special = DFA9_special;
-			this.transition = DFA9_transition;
-		}
-		@Override
-		public String getDescription() {
-			return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | MOBILEFLAG | ID | CAPITALIZED_ID | WS );";
-		}
-	}
 
 }

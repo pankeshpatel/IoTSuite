@@ -34,19 +34,17 @@ device_def:
    context.currentNetwork.setDeviceName($deviceName.text);
    }  
     'region' ':' (location_def)* 
-    'platform' ':' (device_type)* ';'
+    'os' ':' (device_type)* ';' 
     'resources' ':' (abilities_def)?  ';'
     'protocol' ':' (protocol_value)* ';' 
    // (mobileFlag_def)* ';' 
     { context.currentNetwork.addDeviceObj();}
-;
-  
-
-
+; 
+ 
+ 
 // Region Definition
 
 location_def :
-   // CAPITALIZED_ID ':' REGION_LOCATION ';' 
     CAPITALIZED_ID ':' ID ';'
     {context.currentNetwork.addRegionLabel($CAPITALIZED_ID.text);
     context.currentNetwork.addRegionValue($ID.text);}    
