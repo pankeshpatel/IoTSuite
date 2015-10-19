@@ -4,9 +4,7 @@ import iotsuite.pubsubmiddleware.PubSubMiddleware;
 import android.content.Context;
 import iotsuite.semanticmodel.*;
 import factory.*;  
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.google.gson.JsonObject;
 import $CS.PackageName$.*;
 
 public class  Logic$CS.name$ extends $CS.name$  {     
@@ -38,21 +36,13 @@ public class  Logic$CS.name$ extends $CS.name$  {
     public void onNew$consumedInfo.name$( $consumedInfo.type$ arg)
     {
      //Wrapping of data is performed
-         JSONObject obj = new JSONObject();
-           try {
+            JsonObject obj = new JsonObject();
              $CS.allStructFields:{field | 
-               obj.put("$field.name$",arg.get$field.name$());}$
-              obj.put("sampleValue",$CS.sampleValue$);
+               obj.addProperty("$field.name$",arg.get$field.name$());}$
+              obj.addProperty("sampleValue",$CS.sampleValue$);
       
-      } 
-         
-      catch (JSONException e) {
-       
-       System.out.println("Exception is " +e.getMessage());
-      }
-             JSONArray data = new JSONArray();
-             data.put(obj);          
-     pubSubSensingFramework.publish("$CS.operation$-REQUEST", data);
+           
+     pubSubSensingFramework.publish("$CS.operation$-REQUEST", obj);
     }
     
      }; separator="\n"$ 

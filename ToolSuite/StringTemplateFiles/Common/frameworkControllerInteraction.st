@@ -48,7 +48,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
           { 
 	    	 
 	    	  Logger.log( myDeviceInfo.getName() ,"$CS.name$" , "Notification received $consumedInfo.name$");
-	    	  onNew$consumedInfo.name; format="capital"$(($consumedInfo.type.name$) arg); 
+	    	  onNew$consumedInfo.name; format="avoidCapital"$(($consumedInfo.type.name$) arg); 
           }
           }$         
          } catch (Exception e) {

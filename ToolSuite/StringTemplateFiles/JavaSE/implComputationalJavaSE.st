@@ -6,11 +6,7 @@ import iotsuite.localmiddleware.IDataListener;
 import iotsuite.localmiddleware.PubSubsSensingFramework;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
+import com.google.gson.JsonObject;
 
 
 public class JavaSE$CS.name$ implements I$CS.name$, IDataListener{ 
@@ -39,23 +35,17 @@ static $field.type$ $field.name$;
  
   @Override
       
-       public void onDataReceived(String eventName, JSONArray data) {
+       public void onDataReceived(String eventName, JsonObject data) {
     
-          JSONObject obj = new JSONObject();
+         
         $CS.allConsumedInfo:{ consumedInfo |
         if(eventName.equals("$consumedInfo.name$"))
         {
-          try {
-           obj=data.getJSONObject(0);
+          
            $CS.allStructFields:{field |  
-           $field.name$=($field.type ; format="capital"$) obj.get("$field.name$") ; 
+           $field.name$=data.get("$field.name$").getAs$field.type ; format="capital"$() ; 
           }$
-       
-        } catch (JSONException e) {
-          System.out.println("Exception is "+ e.getMessage());
-             }  
-           
-              listener$consumedInfo.name$.onNew$consumedInfo.name$(new $consumedInfo.type$($CS.allStructFields:{field|$field.name$ }; separator=","$));
+       listener$consumedInfo.name$.onNew$consumedInfo.name$(new $consumedInfo.type$($CS.allStructFields:{field|$field.name$ }; separator=","$));
           } 
             
       }; separator="\n"$

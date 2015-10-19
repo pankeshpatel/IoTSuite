@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-10-17 16:57:54
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-10-19 16:08:14
 
 package iotsuite.parser;
 import iotsuite.compiler.*; 
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class NetworkSpecParser extends Parser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "MOBILEFLAG", 
-		"WS", "','", "':'", "';'", "'devices'", "'mobile'", "'os'", "'protocol'", 
+		"WS", "','", "':'", "';'", "'devices'", "'mobile'", "'platform'", "'protocol'", 
 		"'region'", "'resources'"
 	};
 	public static final int EOF=-1;
@@ -108,13 +108,13 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "device_def"
-	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:30:1: device_def : deviceName= ( ID | CAPITALIZED_ID ) ':' 'region' ':' ( location_def )* 'os' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';' ;
+	// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:30:1: device_def : deviceName= ( ID | CAPITALIZED_ID ) ':' 'region' ':' ( location_def )* 'platform' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';' ;
 	public final void device_def() throws RecognitionException {
 		Token deviceName=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:30:11: (deviceName= ( ID | CAPITALIZED_ID ) ':' 'region' ':' ( location_def )* 'os' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';' )
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:31:4: deviceName= ( ID | CAPITALIZED_ID ) ':' 'region' ':' ( location_def )* 'os' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';'
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:30:11: (deviceName= ( ID | CAPITALIZED_ID ) ':' 'region' ':' ( location_def )* 'platform' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';' )
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:31:4: deviceName= ( ID | CAPITALIZED_ID ) ':' 'region' ':' ( location_def )* 'platform' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';'
 			{
 			deviceName=input.LT(1);
 			if ( (input.LA(1) >= CAPITALIZED_ID && input.LA(1) <= ID) ) {
@@ -159,7 +159,7 @@ public class NetworkSpecParser extends Parser {
 
 			match(input,13,FOLLOW_13_in_device_def142); 
 			match(input,9,FOLLOW_9_in_device_def144); 
-			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:37:14: ( device_type )*
+			// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:37:20: ( device_type )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -170,7 +170,7 @@ public class NetworkSpecParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:37:15: device_type
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\NetworkSpec.g:37:21: device_type
 					{
 					pushFollow(FOLLOW_device_type_in_device_def147);
 					device_type();

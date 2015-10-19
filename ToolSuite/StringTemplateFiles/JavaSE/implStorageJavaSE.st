@@ -120,7 +120,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 	  // sensor - It allows to reterive stored data.
 	  
 	  try {
-			String query  = "SELECT * FROM  iotsuiteuser.$Storageservice.name$ WHERE id=" + index;
+			String query  = "SELECT * FROM  iotsuiteuser.$Storageservice.name$ WHERE $Storageservice.id$=" + index;
 			resultSet = statement.executeQuery(query);
 			resultSet.next();
 			//double tempValue =resultSet.getDouble("tempValue");

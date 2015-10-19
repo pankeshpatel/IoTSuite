@@ -23,6 +23,8 @@ public class Storage extends SoftwareComponent {
 	public List<String> structField = new ArrayList<String>();
 	
 	public String databaseName = "iotsuiteuser";
+	
+	public String id;
 
 	// public Storage(String name, Set<Attribute> attributes, Set<DataAccess>
 	// dataAccess, Set<Information> consumeInfo) {
@@ -48,6 +50,7 @@ public class Storage extends SoftwareComponent {
 	}
 
 	public List<String> getAllfieldName() {
+		id=fieldName.get(0);
 		return fieldName;
 	}
 
@@ -57,11 +60,12 @@ public class Storage extends SoftwareComponent {
 	}
 
 	public List<String> getAllStructField() {
+		
 		return structField;
 	}
 
 	public List<String> getAllStructFieldName() {
-
+		
 		return structFieldName;
 
 	}

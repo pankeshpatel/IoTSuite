@@ -21,7 +21,7 @@ public class  Logic$CS.name$ extends $CS.name$  {
     }; separator="\n"$ 
     
     $CS.allDataAccess:{ dataAccess |     
-      public void onNew$dataAccess.dataAccessName; format="capital"$Received( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}$ arg)
+      public void onNew$dataAccess.dataAccessName; format="avoidCapital"$Received( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}$ arg)
       {
         //TODO : write code here        
       }     

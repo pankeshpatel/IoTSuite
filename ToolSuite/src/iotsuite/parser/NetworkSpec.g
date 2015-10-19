@@ -34,7 +34,7 @@ device_def:
    context.currentNetwork.setDeviceName($deviceName.text);
    }  
     'region' ':' (location_def)* 
-    'os' ':' (device_type)* ';' 
+    'platform' ':' (device_type)* ';' 
     'resources' ':' (abilities_def)?  ';'
     'protocol' ':' (protocol_value)* ';' 
    // (mobileFlag_def)* ';' 

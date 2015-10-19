@@ -35,7 +35,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 
     $CS.allGeneratedInfo:{ generatedInfo |
     private $generatedInfo.type$ $generatedInfo.name; format="avoidCapital"$;
-    protected void set$generatedInfo.name; format="capital"$( $generatedInfo.type$ newValue) {
+    protected void set$generatedInfo.name; format="avoidCapital"$( $generatedInfo.type$ newValue) {
      
       if ($generatedInfo.name; format="avoidCapital"$ != newValue) {
         $generatedInfo.name; format="avoidCapital"$ = newValue; 
@@ -75,7 +75,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         Logger.log(myDeviceInfo.getName(), "Proximity",
             "Notification Received Profile");
 
-        onNew$dataAccess.dataAccessName; format="capital"$Received(( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}; separator="\n"$) arg);
+        onNew$dataAccess.dataAccessName; format="avoidCapital"$Received(( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}; separator="\n"$) arg);
        }
         }$        
         
@@ -100,13 +100,13 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 		
 		$CS.allDataAccess:{ dataAccess |
 		    
-		public abstract void onNew$dataAccess.dataAccessName; format="capital"$Received($CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}$  arg);	   		
+		public abstract void onNew$dataAccess.dataAccessName; format="avoidCapital"$Received($CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}$  arg);	   		
 	   	public void subscribe$dataAccess.dataAccessName; format="capital"$() {
 	   		    
 	   		List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
 					partitionAttribute, myDeviceInfo.getRegionLabels(),
 					myDeviceInfo.getRegion());
-					this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="capital"$", regionInfo);
+					this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="avoidCapital"$", regionInfo);
 		}
 		    
 		    
@@ -116,10 +116,10 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 		}	
         
 		$CS.allDataAccess:{ dataAccess |
-		    protected void get$dataAccess.dataAccessName; format="capital"$($dataAccess.query.type; format="capital" $ arg) {
+		    protected void get$dataAccess.dataAccessName; format="avoidCapital"$($dataAccess.query.type; format="capital" $ arg) {
 		    	 Logger.log(myDeviceInfo.getName(),"$CS.name$",
 		     				"Sending command get$dataAccess.dataAccessName$");
-		    	this.myPubSubMiddleware.publish("get$dataAccess.dataAccessName; format="capital"$", arg , myDeviceInfo );     
+		    	this.myPubSubMiddleware.publish("get$dataAccess.dataAccessName; format="avoidCapital"$", arg , myDeviceInfo );     
 		    }
 		}; separator="\n"$ 
 }
