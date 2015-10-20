@@ -41,3 +41,10 @@ devices:
         platform: JavaSE;    
         resources :Heater;
 		protocol : mqtt;
+	D8:
+        region :
+             Room  : 1;
+        platform: Android;    
+        resources :BadgeReader;
+		protocol : mqtt;
+		

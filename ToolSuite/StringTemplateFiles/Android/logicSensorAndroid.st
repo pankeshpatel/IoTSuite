@@ -36,7 +36,7 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 
 						$SensorDriver.allGeneratedInfo:{ generatedInfo | 
 						
-							obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$($generatedInfo.name; format="capital"$Event);
+							obj$SensorDriver.name$.get$generatedInfo.name; format="avoidCapital"$($generatedInfo.name; format="capital"$Event);
 						
 					}; separator="\n"$
 
@@ -44,7 +44,7 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 						
 						$SensorDriver.allGeneratedInfo:{ generatedInfo | 	
 						
-						obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$($generatedInfo.name; format="capital"$Event);
+						obj$SensorDriver.name$.get$generatedInfo.name; format="avoidCapital"$($generatedInfo.name; format="capital"$Event);
 
 						
 		
@@ -70,10 +70,10 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 	$SensorDriver.allGeneratedInfo:{ generatedInfo | 	
 	
 	
-	Listener$generatedInfo.name; format="capital"$  $generatedInfo.name; format="capital"$Event = new Listener$generatedInfo.name; format="capital"$() {
+	Listener$generatedInfo.name; format="avoidCapital"$  $generatedInfo.name; format="capital"$Event = new Listener$generatedInfo.name; format="avoidCapital"$() {
 		
 		@Override
-		public void onNew$generatedInfo.name; format="capital"$($generatedInfo.type$ response) {
+		public void onNew$generatedInfo.name; format="avoidCapital"$($generatedInfo.type$ response) {
 
 			$generatedInfo.type$ s$generatedInfo.type$ = new $generatedInfo.type$(
 			$generatedInfo.data.StructFieldSet:{ StructFieldSet | response.get$StructFieldSet.name$()}; separator=", "$);

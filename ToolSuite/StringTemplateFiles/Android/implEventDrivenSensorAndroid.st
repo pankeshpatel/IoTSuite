@@ -4,11 +4,12 @@ import framework.*;
 import logic.*;
 import android.content.Context;
 import android.content.Intent;
-import iotsuite.android.sensingframework.*;
 import com.google.gson.JsonObject;
-import iotsuite.android.sensingframework.ProbeKeys.*;
 import iotsuite.android.sensingmiddleware.ISensorListener;
 import iotsuite.android.sensingmiddleware.PubSubsSensingFramework;
+import iotsuite.android.extended.sensingframework.BadgeReaderKeys;
+import iotsuite.android.extended.sensingframework.BadgeReaderSensorProbe;
+
 
 
 public class Android$SensorDriver.name$ implements I$SensorDriver.name$, 
@@ -34,10 +35,19 @@ $SensorDriver.name$Keys, ISensorListener  {
 	   
 	   // Register the client
 		pubSubSensingFramework = PubSubsSensingFramework.getInstance();
-		pubSubSensingFramework.registerForSensorData(this, $SensorDriver.name$Event);
+		
+		  $SensorDriver.allGeneratedInfo:{ generatedInfo |
+         
+         
+         pubSubSensingFramework.registerForSensorData(this, $generatedInfo.name; format="capital"$Event);
+         
+         }; separator="\n"$ 
+      
+		
+		
 		
 		// Start the service
-		Intent intent = new Intent(context, $SensorDriver.name$Probe.class);
+		Intent intent = new Intent(context, $SensorDriver.name$SensorProbe.class);
 		context.startService(intent);
 
 	
@@ -75,10 +85,15 @@ $SensorDriver.name$Keys, ISensorListener  {
     @Override
     public void onDataReceived(String eventName, JsonObject dataEvent) {
     	
-    	//TODO: Device Developer writes code here.
-    	// Sample code for reference.
-		//listener.onNewtempMeasurement(new TempStruct(Double.parseDouble(dataEvent.get(DISTANCE).toString()), "C"));
-		$SensorDriver.name$Data = dataEvent;
+    		$SensorDriver.name$Data = dataEvent;
+    		 $SensorDriver.allGeneratedInfo:{ generatedInfo |
+    		 
+    		 if (eventName.equals("$generatedInfo.name$Event")) {
+          listener$generatedInfo.name$.onNew$generatedInfo.name$(new $generatedInfo.type$("1",
+          "$generatedInfo.name$"));
+    }
+    		 
+    		 }; separator="\n"$ 
     	
     }
 
