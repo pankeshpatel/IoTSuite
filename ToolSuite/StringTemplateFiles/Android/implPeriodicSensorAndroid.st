@@ -17,8 +17,8 @@ $SensorDriver.name$Keys, ISensorListener  {
 	
 	private PubSubsSensingFramework pubSubSensingFramework = null;
 	//TODO : Device developer will configure values  here.
-	private static int  SAMPLE_PERIOD = 0;
-	private static  int SAMPLE_DURATION = 0;
+	private static int  SAMPLE_PERIOD =$SensorDriver.samplePeriod$;
+	private static  int SAMPLE_DURATION = $SensorDriver.sampleDuration$;
 	private static int  duration=0;
 	private static JsonObject $SensorDriver.name$Data = new JsonObject();
 	
@@ -45,21 +45,7 @@ $SensorDriver.name$Keys, ISensorListener  {
   
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
    
-   /*@Override
-   //public  $generatedInfo.type$ get$generatedInfo.name; format="avoidCapital"$(){
-	   //TODO: Device Developer write here device logic.
-	   //Sample code for reference.   
-	   //if(TemperatureSensorData != null) {
-	   //		return new TempStruct(Double.parseDouble(TemperatureSensorData.get(DISTANCE).toString()), "C");
-	 	// }else{
-			// if data is null, then return a Default value
-		//	return new TempStruct(-5 , "C");
-		// }	
-		
-	   
-       return null;
-   }*/
-      
+        
    @Override
    public void get$generatedInfo.name; format="avoidCapital"$(Listener$generatedInfo.name$ handler){
 	   //listener$generatedInfo.name$ = handler;
@@ -85,12 +71,7 @@ $SensorDriver.name$Keys, ISensorListener  {
     @Override
     public void onDataReceived(String eventName, JsonObject dataEvent) {
     	
-    	//TODO: Device Developer writes code here.
-    	// Sample code for reference.
-		//listener.onNewtempMeasurement(new TempStruct(Double.parseDouble(dataEvent.get(DISTANCE).toString()), "C"));
-
-    	
-    	$SensorDriver.name$Data = dataEvent;
+        	$SensorDriver.name$Data = dataEvent;
     }
     
      private static double showRandomInteger(int aStart, int aEnd, Random aRandom) {
@@ -111,8 +92,5 @@ $SensorDriver.name$Keys, ISensorListener  {
         double tempValue = showRandomInteger(START, END, random);
         return new TempStruct(tempValue, "C");
     }
-
-
-
 
 }

@@ -22,12 +22,15 @@ public class  Logic$CS.name$ extends $CS.name$  {
     obj$CS.name$.get$consumedInfo.name$($consumedInfo.name$Event);    
       }; separator="\n"$ 
   } 
+  
+ 
+   
         $CS.allConsumedInfo:{ consumedInfo |
      Listener$consumedInfo.name$ $consumedInfo.name$Event = new Listener$consumedInfo.name$(){
     @Override
       public  void onNew$consumedInfo.name; format="avoidCapital"$( $consumedInfo.type$ arg){     
-      //TODO : write code here.
-            }
+      //TODO : write code here.     
+     }       
      };        
     }; separator="\n"$
     

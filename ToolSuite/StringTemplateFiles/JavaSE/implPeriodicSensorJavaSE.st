@@ -4,8 +4,6 @@ import framework.*;
 import java.util.Random;
 
 
-
-
 public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 
 
@@ -14,21 +12,8 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 	private static  int SAMPLE_DURATION =$SensorDriver.sampleDuration$;
 	private static int  temp=0;
 	
-	
-   /*public JavaSE$SensorDriver.name$() { 
-  
-  
-  }*/
-
-
-  
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
    
-  /* @Override
-   public  $generatedInfo.type$ get$generatedInfo.name; format="avoidCapital"$(){
-		   return null;
-   }*/
-      
    @Override
    public void get$generatedInfo.name; format="avoidCapital"$(Listener$generatedInfo.name$ handler){
 	   
@@ -40,12 +25,10 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 				temp  = temp  + SAMPLE_PERIOD;
            } catch (InterruptedException e) {
                e.printStackTrace();
-               // continueFlag = false;
-           } 
+               } 
        }
    
-   }   
-   
+   }      
    
    private static double showRandomInteger(int aStart, int aEnd, Random aRandom) {
     if (aStart > aEnd) {
@@ -73,7 +56,4 @@ private $generatedInfo.type$ get$generatedInfo.name; format="avoidCapital"$(){
 		  public boolean isEventDriven() {
 		    return false;
 		  }
-
-
-
 }

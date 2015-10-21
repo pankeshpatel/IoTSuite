@@ -157,6 +157,9 @@ public class SymbolTable {
 			symblTable.put(variableName, variableType);
 			
 		}
+		
+		
+		
 
 	}
 

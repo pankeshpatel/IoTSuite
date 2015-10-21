@@ -53,7 +53,7 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
 	Listener$GUIdriver.name$  handlerCommand =  new  Listener$GUIdriver.name$() {
 	$GUIdriver.commands:{ command |
 	 @Override
-		public void onNew$command.name; format="capital"$Command($command.allParameter:{ param | $param.type.name$ newValue}; separator=" , "$) {
+		public void onNew$command.name; format="capital"$Command($command.allParameter:{ param | $param.type$ newValue}; separator=" , "$) {
 			$command.name; format="capital"$FromGUI($command.allParameter:{ param | newValue}; separator=" , "$);
 		} 		
 	};separator="\n"$

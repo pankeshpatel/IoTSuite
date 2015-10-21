@@ -45,6 +45,12 @@ devices:
         region :
              Room  : 1;
         platform: Android;    
-        resources :BadgeReader;
+        resources :SmartHomeApp;
 		protocol : mqtt;
+	D9:
+        region :
+             Room  : 1;
+        platform: Android;    
+        resources :TemperatureSensor;
+		protocol : mqtt;	
 		

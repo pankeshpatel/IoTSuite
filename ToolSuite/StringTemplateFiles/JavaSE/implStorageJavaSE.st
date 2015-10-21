@@ -31,7 +31,6 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 	static final String USERNAME = "";
 	static final String PASSWORD = "";	
 	
-	//TODO: Should be generated from StringTemplate file
 	static final String DBNAME = "$Storageservice.name$";
 	
 
@@ -57,7 +56,6 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 				 
 				 System.out.println("Table exisits in the database.....");	
 				 $Storageservice.allDataAccess:{dataAccess |
-						//setprofile("-400", new $dataAccess.generatedInfo.type$(-400.0,"C"));
 						}$
 				}
 				else{				
@@ -70,13 +68,12 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
               ps.execute();
 				
 	  
-				//ProfileDB   
-	           //generate  profile: TempStruct accessed-by badgeID: String;
+
 				
 				
 				$Storageservice.allDataAccess:{dataAccess |
 					
-				//setprofile("-300", new $dataAccess.generatedInfo.type$(-100.0,"C"));
+			
 				}$
 				}
 				
@@ -94,17 +91,13 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
   @Override
   public void set$dataAccess.dataAccessName; format="avoidCapital"$ 
       ($dataAccess.query.type; format="capital" $ newIndex, $dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ) {
-    // Use this function, when storage is considered  
-	//  as an actuator - It stores data from various sources. 
-
+    
 	  try {  
 			ps = 
 				connect.prepareStatement("INSERT INTO $Storageservice.name$ " +
 						"($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
 						" ("+newIndex+"$Storageservice.allStructFieldName:{structFieldName |,"+newprofileValue.get$structFieldName$()+"}$)");
-			/*pstmt.setString(1, newIndex);
-  			pstmt.setDouble(2, newprofileValue.gettempValue());
-  			pstmt.setString(3, newprofileValue.getunitOfMeasurement());*/
+			
 			ps.executeUpdate();
 			
 			
@@ -116,16 +109,11 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
  
   @Override
   public $dataAccess.generatedInfo.type$ get$dataAccess.dataAccessName$($dataAccess.query.type; format="capital" $ index){
-    // Use this function, when  storage is considered as 
-	  // sensor - It allows to reterive stored data.
-	  
+ 	  
 	  try {
 			String query  = "SELECT * FROM  iotsuiteuser.$Storageservice.name$ WHERE $Storageservice.id$=" + index;
 			resultSet = statement.executeQuery(query);
 			resultSet.next();
-			//double tempValue =resultSet.getDouble("tempValue");
-			//String unitOfMeasurement = resultSet.getString("unitOfMeasurement");
-			//tempPreference = new $dataAccess.generatedInfo.type$(tempValue, unitOfMeasurement);
 			tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField$};separator=","$   );
 		} catch (Exception e) {
 			System.err.println("Got an exception! ");
