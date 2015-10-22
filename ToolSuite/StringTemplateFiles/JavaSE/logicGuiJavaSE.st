@@ -3,6 +3,7 @@ package $GUIdriver.logicPackageName$;
 import iotsuite.common.GlobalVariable;
 import iotsuite.pubsubmiddleware.PubSubMiddleware;
 import android.app.Activity;
+import android.content.Context;
 import iotsuite.semanticmodel.*;
 import $GUIdriver.PackageName$.*;
 import factory.*;
@@ -19,7 +20,7 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
 	 
 	
 
-	public Logic$GUIdriver.name$(PubSubMiddleware myPubSubMiddleware, final Device deviceInfo, final Object ui) {
+	public Logic$GUIdriver.name$(PubSubMiddleware myPubSubMiddleware, final Device deviceInfo, final Object ui, Context myContext) {
 		super(myPubSubMiddleware, deviceInfo);
 		 deviceType = deviceInfo.getType();
 		
@@ -57,6 +58,14 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
          }    
     }$
 	
+	/* $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+         @Override
+         public void onNew$generatedInfoType; format="capital"$Response(String response) {
+          
+         }    
+    }$*/
+	
+
 	};
 	
 	 $GUIdriver.allDataAccess:{ dataAccess |
@@ -65,4 +74,12 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
     
     
     }  }$
+    
+    
+    $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+     public void onNew$generatedInfoType; format="capital"$Response($GUIdriver.allGeneratedName:{ generatedInfoName |$generatedInfoName$}$ arg){
+       objJavaSE$GUIdriver.name$.$generatedInfoType; format="capital"$ResponseReceived(arg);
+    
+    }  
+    }$
 }

@@ -29,10 +29,10 @@ public class GenFiller {
 
 		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/"
 				+ "ApplicationLogic");
-		
+
 		File destFolder = new File(GlobalVariable.templatePath
 				+ "ApplicationLogic");
-		
+
 		copyFiles(srcFolder, destFolder);
 
 	}
@@ -41,11 +41,10 @@ public class GenFiller {
 
 		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/"
 				+ "CodeForDeployment");
-	
-		
+
 		File destFolder = new File(GlobalVariable.templatePath
 				+ "CodeForDeployment");
-		
+
 		copyFiles(srcFolder, destFolder);
 
 	}
@@ -54,15 +53,11 @@ public class GenFiller {
 
 		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/"
 				+ "CodeForDeployment");
-		
 
-		
 		File destFolder = new File(GlobalVariable.templatePath
 				+ "CodeForDeployment");
-	
+
 		copyFiles(srcFolder, destFolder);
-	
-		
 
 	}
 

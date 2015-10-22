@@ -11,7 +11,6 @@ import iotsuite.compiler.SensorCompiler;
 import iotsuite.compiler.StorageCompiler;
 import iotsuite.compiler.StructCompiler;
 import iotsuite.semanticmodel.DataAccess;
-import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.DeploymentScope;
 import iotsuite.semanticmodel.Device;
 import iotsuite.semanticmodel.PrimitiveType;
@@ -40,15 +39,8 @@ public class SymbolTable {
 	public static List<String> tempListActuatorFieldName = new ArrayList<String>();
 
 	public static List<String> tempListActuatorFieldType = new ArrayList<String>();
-	
-/*	
-	//Following list used to store struct field name utilized by aggregator corresponding to structure
-	public static List<String> aggregatorStructFieldName = new ArrayList<String>();
-	
-	//Following list used to store struct field types utilized by aggregator corresponding to structure
-	public static List<String> aggregatorStructFieldType = new ArrayList<String>();*/
-	
-		// Static Table used for Mapping from high level specification datatype to
+
+	// Static Table used for Mapping from high level specification datatype to
 	// Resultset required datatype
 	static HashMap<String, String> javaToResultSetMapping = new HashMap<String, String>();
 
@@ -59,12 +51,14 @@ public class SymbolTable {
 	// Following list stores field name and field type of
 	// Structure(ex-tempValue-double)
 	public static ArrayList<String> structField = new ArrayList<String>();
-	
-	//Following araylist used to store filed name and type used by event driven sensor(ex- String badgeId, boolean presence etc.)
+
+	// Following araylist used to store filed name and type used by event driven
+	// sensor(ex- String badgeId, boolean presence etc.)
 	public static ArrayList<String> eventDrivenFields = new ArrayList<String>();
-	
-	//Following list used to store field name used by event driven sensor (ex-badgeId, presence etc.) 
-	public static List<String> eventDrivenFieldName= new ArrayList<String>();
+
+	// Following list used to store field name used by event driven sensor
+	// (ex-badgeId, presence etc.)
+	public static List<String> eventDrivenFieldName = new ArrayList<String>();
 
 	public static Map<String, StructCompiler> structSymblTable = new HashMap<String, StructCompiler>();
 
@@ -75,13 +69,9 @@ public class SymbolTable {
 	public static List<DeploymentScope> deploymentConstraintsList = new ArrayList<DeploymentScope>();
 
 	public static Map<String, Set<DataAccess>> dataAccessSymblTable = new HashMap<String, Set<DataAccess>>();
-	
+
 	public static List<StructField> StructFieldSet = new ArrayList<StructField>();
-	
-	/*public static List<String> structFieldName = new ArrayList<String>();
-	
-	public static List<String> structFieldType = new ArrayList<String>();
-*/
+
 	// Store Structure Name ex-TempStruct or BadgeStruct
 	public static String structName;
 	// Store Structure Name that is used by Storage
@@ -89,32 +79,31 @@ public class SymbolTable {
 
 	// Store Structure Name that is used by Actuator
 	public static String actuatorStructName;
-	
-	//Store Struct Name used by Aggregator
+
+	// Store Struct Name used by Aggregator
 	public static String aggregatorStructName;
 
 	static String[][] arrayFieldName = new String[10][2];
 	static String[][] arrayFieldType = new String[10][2];
-	static String [] keys= new String[10];
+
+	// Following arrays reserved for GUI
+	public static int rowCount = 0;
+	public static int columnCount = 0;
+	public static String[][] arrayGUIGeneratedInfo = new String[10][2];
+
+	static String[] keys = new String[10];
 
 	public static int rowCountInFieldName = 0;
 	public static int columnCountInFieldName = 0;
 	public static int rowCountInFieldType = 0;
 	public static int columnCountinFieldType = 0;
-	
-	static StructField Field;
 
-	/*
-	 * public static void constructResponseTypeSymblTable(String
-	 * structAccessKey, String structAccessObj) {
-	 * responseSymblTable.put(structAccessKey, structAccessObj);
-	 * //System.out.println
-	 * (structAccessKey+" "+structAccessObj+"In Symbol Table.java"); }
-	 */
+	static StructField Field;
 
 	// Getter and Setter of DataAccessSymblTable
 
 	public static Set<DataAccess> getDataAccessSymblTable(String dataAccessKey) {
+
 		return dataAccessSymblTable.get(dataAccessKey);
 
 	}
@@ -151,24 +140,35 @@ public class SymbolTable {
 	public static void constructSymbTable(String variableName,
 			String variableType) {
 
+		//System.out.println("Vriable Name "+variableName+ "Variable Type "+variableType);
 		if (symblTable.containsKey(variableName)) {
 
 		} else {
+
 			symblTable.put(variableName, variableType);
-			
+
 		}
-		
-		
-		
 
 	}
 
-	
+	public void constructGUISymblTable(String generatedInfoType,
+			String generatedInfoName) {
+
+		arrayGUIGeneratedInfo[rowCount][columnCount] = generatedInfoType;
+		// System.out.println("Array"+arrayGUIGeneratedInfo[rowCount][columnCount]);
+		columnCount = columnCount + 1;
+
+		arrayGUIGeneratedInfo[rowCount][columnCount] = generatedInfoName;
+		// System.out.println("Array"+arrayGUIGeneratedInfo[rowCount][columnCount]);
+		rowCount++;
+		columnCount = 0;
+
+	}
+
 	public void constructAggregatorSymblTable(String aggregatorStructName) {
-		// TODO Auto-generated method stub
-		
+
 		searchStructFieldNameForAggregator(aggregatorStructName);
-		
+
 	}
 
 	public void constructStructNameSymblTable(String structName) {
@@ -194,15 +194,13 @@ public class SymbolTable {
 
 		insertFieldName(structName, fieldName);
 		insertFieldType(structName, fieldType);
-		
 
 	}
-	
+
 	public void constructEventDrivenSymblTable(String eventDrivenStructName) {
-		
-			searchForEventDrivenSensorFields(eventDrivenStructName);
-		
-		
+
+		searchForEventDrivenSensorFields(eventDrivenStructName);
+
 	}
 
 	private void insertFieldType(String structName, String fieldType) {
@@ -224,77 +222,54 @@ public class SymbolTable {
 		columnCountInFieldName = 0;
 
 	}
-	
 
 	public static void searchForEventDrivenSensorFields(
 			String eventDrivenStructName) {
-		
+
 		List<String> tempEventFieldName = new ArrayList<String>();
-		
+
 		for (int i = 0; i < 10; i++) {
 
 			if (arrayFieldName[i][0] != null) {
 				if (arrayFieldName[i][0].equals(eventDrivenStructName))
 
-				{ tempEventFieldName.add(arrayFieldName[i][1]);
-					for (int j = 0; j < tempEventFieldName.size(); j++)
-					{
-						
-						if (!eventDrivenFieldName
-								.contains(tempEventFieldName.get(j))) {
-							
-					eventDrivenFields.add((arrayFieldType[i][1])
-							+ " "
-							+ (arrayFieldName[i][1]));
-					eventDrivenFieldName.add(arrayFieldName[i][1]);
+				{
+					tempEventFieldName.add(arrayFieldName[i][1]);
+					for (int j = 0; j < tempEventFieldName.size(); j++) {
+
+						if (!eventDrivenFieldName.contains(tempEventFieldName
+								.get(j))) {
+
+							eventDrivenFields.add((arrayFieldType[i][1]) + " "
+									+ (arrayFieldName[i][1]));
+							eventDrivenFieldName.add(arrayFieldName[i][1]);
 						}
 					}
 				}
 			}
 
 		}
-	
-		
-		
+
 	}
 
-	
 	private static void searchStructFieldNameForAggregator(
 			String aggregatorStructName) {
-		
-	//	List<String> tempAggregatorStructFieldName = new ArrayList<String>();
-		
+
 		for (int i = 0; i < 10; i++) {
-			if (arrayFieldName[i][0] != null)
-			{
+			if (arrayFieldName[i][0] != null) {
 				if (arrayFieldName[i][0].equals(aggregatorStructName)) {
 
-			//		tempAggregatorStructFieldName.add(arrayFieldName[i][1]);
-				//	for (int j = 0; j < tempAggregatorStructFieldName.size(); j++) {
-					//	if (!aggregatorStructFieldName
-						//		.contains(tempAggregatorStructFieldName.get(j))) {
+					Field = new StructField(arrayFieldName[i][1],
+							new PrimitiveType(arrayFieldType[i][1]));
 
-					//arrayFieldType[i][1]=arrayFieldType[i][1].substring(0, 5).toUpperCase();
-					 //arrayFieldType[i][1]= arrayFieldType[i][1].substring(0,1).toUpperCase() + arrayFieldType[i][1].substring(1);
-					 Field = new StructField(arrayFieldName[i][1],new PrimitiveType(arrayFieldType[i][1]));
-					
-					 StructFieldSet.add(Field);
-					
-					 /*structFieldName.add(arrayFieldName[i][1]);
-					structFieldType.add(arrayFieldType[i][1]);*/
-					}
-
+					StructFieldSet.add(Field);
 				}
+
 			}
-		
-	 // System.out.println("Struct Field set is "+StructFieldSet);
-		
-	  }
-		
-		
-	//}
-	
-	
+		}
+
+	}
+
 	private void searchForActuatorFields() {
 
 		for (int i = 0; i < 10; i++) {
@@ -373,9 +348,11 @@ public class SymbolTable {
 			String structAccessObj) {
 
 		responseSymblTable.put(structAccessKey, structAccessObj);
+
 	}
 
 	public static String getResponseTypeSymblTable(String structAccessKey) {
+
 		return responseSymblTable.get(structAccessKey);
 
 	}
@@ -404,9 +381,5 @@ public class SymbolTable {
 	public SymbolTable() {
 
 	}
-
-	
-
-	
 
 }

@@ -13,9 +13,9 @@ public class DataType {
 	public String getName() {
 		return name;
 	}
-	
-	public String getfieldType(){
-		
+
+	public String getfieldType() {
+
 		return name;
 	}
 

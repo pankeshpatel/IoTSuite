@@ -44,13 +44,6 @@ devices:
 	D8:
         region :
              Room  : 1;
-        platform: Android;    
+        platform: JavaSE;    
         resources :SmartHomeApp;
 		protocol : mqtt;
-	D9:
-        region :
-             Room  : 1;
-        platform: Android;    
-        resources :TemperatureSensor;
-		protocol : mqtt;	
-		

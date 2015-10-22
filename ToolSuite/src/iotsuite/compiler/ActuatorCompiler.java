@@ -19,7 +19,7 @@ public class ActuatorCompiler {
 	private Actuator actuatorDriver;
 	private Set<Action> actions = new HashSet<Action>();
 	private Parameter parameter;
-	public static  List<String> fieldName = new ArrayList<String>();
+	public static List<String> fieldName = new ArrayList<String>();
 
 	public ActuatorCompiler() {
 
@@ -28,15 +28,15 @@ public class ActuatorCompiler {
 	public ActuatorCompiler(String actuatorName) {
 		// actuatorDriver = new Actuator(actuatorName, getActionList(),
 		// getAttributeSet(), null, null);
-		actuatorDriver = new Actuator(actuatorName, getActionList(), null, null,getAllFieldName());
+		actuatorDriver = new Actuator(actuatorName, getActionList(), null,
+				null, getAllFieldName());
 	}
 
-	private List<String> getAllFieldName()
-	{
-		ActuatorCompiler.fieldName=iotsuite.parser.SymbolTable.tempListActuatorFieldName;
+	private List<String> getAllFieldName() {
+		ActuatorCompiler.fieldName = iotsuite.parser.SymbolTable.tempListActuatorFieldName;
 		return fieldName;
 	}
-	
+
 	// Getter and Setter of Parameters
 	public void addParameter(String parameterName, String parameterType) {
 		parameter = new Parameter(parameterName, new DataType(parameterType));

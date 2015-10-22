@@ -1,8 +1,6 @@
 package iotsuite.semanticmodel;
 
 import iotsuite.common.GlobalVariable;
-//import iotsuite.compiler.Attribute;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -16,6 +14,11 @@ public class UserInterface extends SoftwareComponent<Information> {
 	public String struct;
 	// private Widget reqWidgets;
 	private String lowername;
+	// Following list used to store notify command name specified by Developer
+	// in userinteraction specification
+	public static List<String> generatedInfoType = new ArrayList<String>();
+
+	public static String generatedInfoName;
 
 	/*
 	 * public UserInterface(String name, String lowername, Set<Action>
@@ -27,7 +30,8 @@ public class UserInterface extends SoftwareComponent<Information> {
 	public UserInterface(String name, String lowername,
 			Set<Action> actionsList, Set<Command> commandsList,
 			Set<Information> generateInfo, Set<Information> consumeInfo,
-			Set<DataAccess> dataAccess, String struct, Widget reqWidgets) {
+			Set<DataAccess> dataAccess, String struct, Widget reqWidgets,
+			List<String> generatedInfoType) {
 		// super(name, attributes, generateInfo, consumeInfo, "NoInstance");
 		super(name, generateInfo, consumeInfo, "NoInstance");
 		this.lowername = lowername;
@@ -36,11 +40,41 @@ public class UserInterface extends SoftwareComponent<Information> {
 		this.commands = commandsList;
 		this.dataAccess = dataAccess;
 		this.struct = struct;
+		UserInterface.generatedInfoType = generatedInfoType;
 		// this.reqWidgets = reqWidgets;
 
 	}
 
+	public List<String> getAllGeneratedInfoType() {
+
+		// System.out.println("Generated Info"+generatedInfoType.get(0));
+		// System.out.println("Generated Info"+iotsuite.parser.SymbolTable.arrayGUIGeneratedInfo[0][1]);
+		// String name =iotsuite.parser.SymbolTable.arrayGUIGeneratedInfo[0][0];
+		// System.out.println("Name is "+name);
+		// System.out.println("Generated "+generatedInfoType);
+		return generatedInfoType;
+
+	}
+
+	public String getAllGeneratedName() {
+
+		for (int i = 0; i < 10; i++) {
+
+			if (iotsuite.parser.SymbolTable.arrayGUIGeneratedInfo[i][0]
+					.equals(UserInterface.generatedInfoType.get(0))) {
+
+				generatedInfoName = iotsuite.parser.SymbolTable.arrayGUIGeneratedInfo[i][1];
+				break;
+
+			}
+			// System.out.println("Generated Info Name "+generatedInfoName);
+		}
+
+		return generatedInfoName;
+	}
+
 	public Set<DataAccess> getDataAccess() {
+
 		return dataAccess;
 	}
 

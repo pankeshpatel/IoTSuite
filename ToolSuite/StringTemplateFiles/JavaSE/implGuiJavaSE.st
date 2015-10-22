@@ -15,11 +15,16 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$ {
   
    $GUIdriver.allDataAccess:{ dataAccess |
           private Listener$GUIdriver.name$  listener$dataAccess.dataAccessName; format="capital"$Request = null;
+        }$
         
-           
-    }$
+
   
+ /*  $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+          private Listener$GUIdriver.name$  listener$generatedInfoType; format="capital"$Reponse = null;
+        }$ */
   
+   
+    
 
 	public JavaSE$GUIdriver.name$(Context context, Logic$GUIdriver.name$ obj) {
 		
@@ -42,6 +47,16 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$ {
          }    
     }$
     
+    
+   /*  $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+         @Override
+      public void $generatedInfoType; format="capital"$GUI(Listener$GUIdriver.name$ handler) {
+        // TODO Auto-generated method stub
+        
+      }  
+      }$ */
+    
+    
      $GUIdriver.allDataAccess:{ dataAccess |
          public void $dataAccess.dataAccessName; format="capital"$ResponseReceived($GUIdriver.AllDataAccess:{ dataAcc |$dataAcc.GeneratedInfo.type$}$ response){
          
@@ -49,7 +64,20 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$ {
     }$
     
     
-
-	
+    $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+         public void $generatedInfoType; format="capital"$ResponseReceived($GUIdriver.allGeneratedName:{ generatedInfoName |$generatedInfoName$}$ response){
+         
+         }  
+    }$
+    
+    
+    
+        
+        
+    
+  
+    
+  
+            
 			
 }

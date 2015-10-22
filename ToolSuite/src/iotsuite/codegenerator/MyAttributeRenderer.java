@@ -3,6 +3,7 @@ package iotsuite.codegenerator;
 //import static org.junit.Assert.assertEquals;
 
 import org.antlr.stringtemplate.AttributeRenderer;
+
 //import org.junit.Test;
 
 public class MyAttributeRenderer implements AttributeRenderer {
@@ -15,10 +16,10 @@ public class MyAttributeRenderer implements AttributeRenderer {
 	@Override
 	public String toString(Object o, String formatName) {
 		if (formatName.equals("capital")) {
-			return capitalize(o.toString());			
+			return capitalize(o.toString());
 		} else
-			
-			if (formatName.equals("avoidCapital")) {
+
+		if (formatName.equals("avoidCapital")) {
 			return avoidCapital(o.toString());
 		} else if (formatName.equals("toLower")) {
 			return o.toString().toLowerCase();
@@ -44,8 +45,6 @@ public class MyAttributeRenderer implements AttributeRenderer {
 		}
 		return name + "s";
 	}
-
-	
 
 	public String capitalize(String aString) {
 		return "" + Character.toUpperCase(aString.charAt(0))

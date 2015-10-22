@@ -23,7 +23,7 @@ public class StructCompiler {
 	public StructCompiler(String structName) {
 		this.structName = structName;
 		createdStructure = new Struct(structName, getStructFieldSet());
-		//createdStructure = new Struct(structName, getStructFieldSet());
+		// createdStructure = new Struct(structName, getStructFieldSet());
 
 	}
 
@@ -34,21 +34,16 @@ public class StructCompiler {
 		StructField Field = new StructField(fieldName, new PrimitiveType(
 				fieldType));
 		StructFieldSet.add(Field);
-		
-		
-		
-		
+
 	}
 
 	public List<StructField> getStructFieldSet() {
 
-	
 		return StructFieldSet;
 	}
 
 	public String getStructName() {
 
-		
 		return structName;
 	}
 

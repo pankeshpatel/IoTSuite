@@ -10,7 +10,7 @@ public class SensorMeasurement extends Information {
 	public SensorMeasurement(String name, DataType type, StructCompiler data) {
 		super(name, type);
 		this.data = data;
-		
+
 	}
 
 	public DataType getDataType() {

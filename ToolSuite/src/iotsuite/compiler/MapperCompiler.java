@@ -174,6 +174,10 @@ public class MapperCompiler {
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
 	}
 
+	
+	// this function call generate start up files : 
+	//For Android : MainActivity.java  
+	//and for JavaSE : D1Main.java
 	private static void genearateExecutionCode(Device device) {
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generateDevice

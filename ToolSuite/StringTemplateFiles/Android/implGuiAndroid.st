@@ -20,10 +20,14 @@ public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener
   public static PubSubsSensingFramework pubSubSensingFramework;
   
    $GUIdriver.allDataAccess:{ dataAccess |
-          private Listener$GUIdriver.name$  listener$dataAccess.dataAccessName; format="capital"$Request = null;
-        
-           
+          private Listener$GUIdriver.name$  listener$dataAccess.dataAccessName; format="capital"$Request = null;   
     }$
+    
+    
+    
+   /*  $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+     private Listener$GUIdriver.name$  listener$generatedInfoType; format="capital"$Response=null;
+    }; separator="\n"$ */
   
  
 
@@ -32,8 +36,14 @@ public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener
 	 pubSubSensingFramework = PubSubsSensingFramework.getInstance();
 	 
 	  $GUIdriver.allDataAccess:{ dataAccess |
-      pubSubSensingFramework.registerForSensorData(this, "$dataAccess.dataAccessName; format="capital"$");
+      pubSubSensingFramework.registerForSensorData(this, "$dataAccess.dataAccessName; format="avoidCapital"$");
     }$
+    
+   // $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+    // pubSubSensingFramework.registerForSensorData(this, "$generatedInfoType; format="avoidCapital"$");
+    //}$
+    
+     
 		
 	}
 	
@@ -55,11 +65,21 @@ public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener
          }    
     }$
     
+    // $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+    //  @Override
+    //  public void $generatedInfoType; format="capital"$GUI(Listener$GUIdriver.name$ handler) {
+    //  listener$generatedInfoType; format="capital"$Response = handler; 
+   //    }
+   // }$
     
     public void onDataReceived(String eventName, Object data) {
     // TODO : Developer will write Device Driver code.
     // This method will get data from Logic method
-
   }
-			
+  
+  
+   
+    
+       
+    
 }

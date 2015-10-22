@@ -86,8 +86,7 @@ public class LinkerCompiler {
 				+ "/src/deviceImpl");
 
 		copyFiles(srcFolder, destFolder);
-		
-		
+
 		File srcFolder1 = new File(GlobalVariable.templatePath + "/"
 				+ "ApplicationLogic/src/deviceImpl");
 
@@ -102,16 +101,13 @@ public class LinkerCompiler {
 
 	}
 
-	
-	
-	
 	public static void copyFactory(String type, String name) {
 
 		// File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" +
 		// "DeviceDrivers" + "/" + type + "/src/factory");
 		File srcFolder = new File(GlobalVariable.templatePath + "/" + type
 				+ "DeviceDrivers" + "/src/factory/");
-		
+
 		// File destFolder = new File(GlobalVariable.frameworkRootDir + "/" +
 		// GlobalVariable.deploymentFolderPath + "/" + name + "/src/" +
 		// "factory");
@@ -120,7 +116,7 @@ public class LinkerCompiler {
 				+ "factory");
 
 		copyFiles(srcFolder, destFolder);
-		
+
 		File srcFolder1 = new File(GlobalVariable.templatePath + "/"
 				+ "ApplicationLogic/src/factory");
 
@@ -134,6 +130,7 @@ public class LinkerCompiler {
 		copyFiles(srcFolder1, destFolder1);
 
 	}
+
 	public static void copyFrameworkGeneratedFromVocabulary(String type,
 			String name) {
 

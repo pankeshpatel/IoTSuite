@@ -9,7 +9,7 @@ public class GlobalVariable {
 	public static String stringTemplatePath = "./StringTemplateFiles";
 
 	public static String frameworkRootDir;
-	
+
 	public static String factoryRootDir;
 
 	public static String frameworkDirPath = "/framework";
@@ -49,9 +49,6 @@ public class GlobalVariable {
 	public static final String ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK = "compile-arch-spec";
 	public static final String ACTIVITY_GENERATE_MAPPING = "invoke-mapper-linker";
 	public static final String ACTIVITY_GENERATE_USERINTERACTION = "compile-interaction-spec";
-	
-	
-
 
 	public static String convertPathTopackage(String pathName) {
 
@@ -66,7 +63,5 @@ public class GlobalVariable {
 
 		return modifiedPathName;
 	}
-
-	
 
 }

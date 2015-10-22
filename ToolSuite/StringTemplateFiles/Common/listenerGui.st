@@ -17,6 +17,9 @@ public abstract class  Listener$GUIdriver.name$  {
   }; separator="\n"$
   
   
-     
+ // $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+   //     public abstract void onNew$generatedInfoType; format="capital"$Response(String reponse); 
+    //}; separator="\n"$ 
+    
         
 }

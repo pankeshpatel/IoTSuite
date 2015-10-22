@@ -14,21 +14,21 @@ public class Action {
 		this.name = name;
 		this.parameters = parameters;
 		this.control = control;
-		
+
 	}
 
 	public String getName() {
-		//System.out.println("name is"+name+"in Action.java");
+		// System.out.println("name is  "+name+"in Action.java");
 		return name;
 	}
 
 	public Parameter getParameters() {
-		//System.out.println("parameter is "+parameters+"in Action.java");
+		// System.out.println("parameter is "+parameters+"in Action.java");
 		return parameters;
 	}
 
 	public String getControl() {
-		
+
 		return control;
 	}
 

@@ -27,18 +27,17 @@ public class StorageCompiler {
 	private String storageServiceName;
 
 	private List<String> fieldWithSQL = new ArrayList<String>();
-	// Storage Store Field Type  ex-String,double
+	// Storage Store Field Type ex-String,double
 	private List<String> fieldType = new ArrayList<String>();
-	
+
 	// Store Field Name ex-tempValue,unitOfMeasurement
-	private List<String> fieldName = new ArrayList<String>(); 
+	private List<String> fieldName = new ArrayList<String>();
 	private List<String> structFieldName = new ArrayList<String>();
 	private List<String> structField = new ArrayList<String>();
-	// Static  Table used  for Mapping from high level specification datatype to SQL datatype
-	HashMap<String, String> SQLtype = new HashMap<String, String>(); 
+	// Static Table used for Mapping from high level specification datatype to
+	// SQL datatype
+	HashMap<String, String> SQLtype = new HashMap<String, String>();
 
-	
-	
 	public StorageCompiler() {
 
 	}
@@ -60,11 +59,9 @@ public class StorageCompiler {
 				getStructFieldName());
 	}
 
-	
-
 	private List<String> getAllFieldType() {
 		this.fieldType = iotsuite.parser.SymbolTable.listStorageFieldType;
-	
+
 		return fieldType;
 	}
 
@@ -80,7 +77,7 @@ public class StorageCompiler {
 	private List<String> getStructFieldName() {
 
 		this.structFieldName = iotsuite.parser.SymbolTable.tempListStorageFieldName;
-		
+
 		return structFieldName;
 	}
 

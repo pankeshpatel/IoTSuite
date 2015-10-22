@@ -15,9 +15,7 @@ import org.antlr.runtime.CommonTokenStream;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		
-		
-		
+
 		if (GlobalVariable.DEVELOPMENT_METHODOLOGY) {
 
 			/*
@@ -49,10 +47,6 @@ public class Main {
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
 
-				
-				
-				
-					
 				// User Interaction
 
 				/*
@@ -79,6 +73,14 @@ public class Main {
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
 
+				/*
+				 * ANTLRFileStream archStream = new ANTLRFileStream(
+				 * GlobalVariable.archSpec); ArchSpecLexer archLexer = new
+				 * ArchSpecLexer(archStream); CommonTokenStream archTokens = new
+				 * CommonTokenStream(archLexer); ArchSpecParser archParser = new
+				 * ArchSpecParser(archTokens); archParser.archSpec();
+				 */
+
 				ANTLRFileStream interactionStream = new ANTLRFileStream(
 						GlobalVariable.interactionSpec);
 				InteractionSpecLexer interactionLexer = new InteractionSpecLexer(
@@ -88,6 +90,7 @@ public class Main {
 				InteractionSpecParser interactionParser = new InteractionSpecParser(
 						interactionTokens);
 				interactionParser.interactionSpec();
+
 				GenFiller.copyDeviceDrivers();
 
 			}
@@ -101,6 +104,8 @@ public class Main {
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
+
+				
 
 				ANTLRFileStream archStream = new ANTLRFileStream(
 						GlobalVariable.archSpec);
@@ -129,6 +134,16 @@ public class Main {
 				CommonTokenStream archTokens = new CommonTokenStream(archLexer);
 				ArchSpecParser archParser = new ArchSpecParser(archTokens);
 				archParser.archSpec();
+				
+				/*ANTLRFileStream interactionStream = new ANTLRFileStream(
+						GlobalVariable.interactionSpec);
+				InteractionSpecLexer interactionLexer = new InteractionSpecLexer(
+						interactionStream);
+				CommonTokenStream interactionTokens = new CommonTokenStream(
+						interactionLexer);
+				InteractionSpecParser interactionParser = new InteractionSpecParser(
+						interactionTokens);
+				interactionParser.interactionSpec();*/
 
 				List<Device> deviceList;
 				List<DeploymentScope> mappingConstraintList;
@@ -151,7 +166,7 @@ public class Main {
 						mappingConstraintList);
 				LinkerCompiler.linkerAlgo();
 				GenFiller.copyLinking();
-				//GenFiller.copyMapping();
+				// GenFiller.copyMapping();
 
 			}
 
@@ -164,15 +179,12 @@ public class Main {
 
 		} else {
 
-			
-			
-			//GlobalVariable.vocabSpec = args[0];
-			//GlobalVariable.archSpec = args[1];
-			//GlobalVariable.deploymentSpec = args[2];
-			//GlobalVariable.stringTemplatePath = args[3];
-			//GlobalVariable.templatePath = args[4];
-			//GlobalVariable.frameworkRootDir = GlobalVariable.templatePath;
-			
+			// GlobalVariable.vocabSpec = args[0];
+			// GlobalVariable.archSpec = args[1];
+			// GlobalVariable.deploymentSpec = args[2];
+			// GlobalVariable.stringTemplatePath = args[3];
+			// GlobalVariable.templatePath = args[4];
+			// GlobalVariable.frameworkRootDir = GlobalVariable.templatePath;
 
 			List<Device> deviceList;
 			List<DeploymentScope> mappingConstraintList;

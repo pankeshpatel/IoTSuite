@@ -11,62 +11,52 @@ import java.util.Set;
 public class Sensor extends SoftwareComponent<SensorMeasurement> {
 
 	protected static Set<Sensor> allSensorDriver = new HashSet<Sensor>();
-	//Store field Name used by Periodic Sensor
-	public static List<String> eventDrivenFieldName = new ArrayList<String>();  
-	//Store fields used by Periodic Sensor
+	// Store field Name used by Periodic Sensor
+	public static List<String> eventDrivenFieldName = new ArrayList<String>();
+	// Store fields used by Periodic Sensor
 	public static List<String> eventDrivenFields = new ArrayList<String>();
 	public static String samplePeriod;
 	public static String sampleDuration;
-	
-	
+
 	// public Sensor(String name, Set<Attribute> attributes,
 	// Set<SensorMeasurement> generateInfo, Set<SensorMeasurement> consumeInfo)
 	// {
 	public Sensor(String name, Set<SensorMeasurement> generateInfo,
-			Set<SensorMeasurement> consumeInfo, List<String> eventDrivenFieldName,List<String> eventDrivenFields) {
+			Set<SensorMeasurement> consumeInfo,
+			List<String> eventDrivenFieldName, List<String> eventDrivenFields) {
 		// super(name, attributes, generateInfo, consumeInfo, "NoInstance");
 		super(name, generateInfo, consumeInfo, "NoInstance");
-		this.eventDrivenFieldName=eventDrivenFieldName;
-		this.eventDrivenFields=eventDrivenFields;
-						
+		Sensor.eventDrivenFieldName = eventDrivenFieldName;
+		Sensor.eventDrivenFields = eventDrivenFields;
+
 	}
 
 	private String packageName;
-	
-	public static String getSamplePeriod()
-	{
-		samplePeriod=iotsuite.compiler.SensorCompiler.samplePeriod;
+
+	public static String getSamplePeriod() {
+		samplePeriod = iotsuite.compiler.SensorCompiler.samplePeriod;
 		return samplePeriod;
 	}
-	
-	public static String getSampleDuration()
-	{
-		sampleDuration=iotsuite.compiler.SensorCompiler.sampleDuration;
+
+	public static String getSampleDuration() {
+		sampleDuration = iotsuite.compiler.SensorCompiler.sampleDuration;
 		return sampleDuration;
 	}
-	
-	
-	public static List<String>  getAllEventDrivenFieldName(){
-		
-		eventDrivenFieldName=iotsuite.parser.SymbolTable.eventDrivenFieldName;
-		return eventDrivenFieldName;
-		
-	}
-	
-	public static List<String>  getAllEventDrivenFields(){
-		
 
-		eventDrivenFields=iotsuite.parser.SymbolTable.eventDrivenFields;
-		return eventDrivenFields;
-		
+	public static List<String> getAllEventDrivenFieldName() {
+
+		eventDrivenFieldName = iotsuite.parser.SymbolTable.eventDrivenFieldName;
+		return eventDrivenFieldName;
+
 	}
-	
-	
-	
-	
-	
-	
-	
+
+	public static List<String> getAllEventDrivenFields() {
+
+		eventDrivenFields = iotsuite.parser.SymbolTable.eventDrivenFields;
+		return eventDrivenFields;
+
+	}
+
 	public String getPackageName() {
 
 		packageName = GlobalVariable
@@ -94,7 +84,5 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 				.convertPathTopackage(GlobalVariable.deviceImplDirPath);
 		return packageName;
 	}
-
-	
 
 }

@@ -40,26 +40,40 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
 	       
 	       public void  $dataAccess.dataAccessName; format="capital"$Request(String arg) {
        
-        this.myPubSubMiddleware.publish( "get$dataAccess.dataAccessName; format="capital"$", arg, myDeviceInfo); 
+        this.myPubSubMiddleware.publish( "get$dataAccess.dataAccessName$", arg, myDeviceInfo); 
         
         }
        }$
-	     
-	     
+       
 	
        public void notifyReceived(String eventName, Object arg, Device deviceInfo) { 
           try {  
           
       $GUIdriver.allDataAccess:{ dataAccess |
-        if (eventName.equals("$dataAccess.dataAccessName; format="capital"$")) {
-        Logger.log(myDeviceInfo.getName(), "$GUIdriver.name$", "Notification Received Profile");
+        if (eventName.equals("$dataAccess.dataAccessName; format="avoidCapital"$")) {
+        Logger.log(myDeviceInfo.getName(), "$GUIdriver.name$", "Notification Received $dataAccess.dataAccessName; format="capital"$");
         onNew$dataAccess.dataAccessName; format="capital"$Response(($GUIdriver.AllDataAccess:{ dataAcc |$dataAcc.GeneratedInfo.type$}$) arg);
         }
-        }$    
+        }$
+        
+        
+        $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+        if (eventName.equals("$generatedInfoType; format="avoidCapital"$")) {
+        Logger.log(myDeviceInfo.getName(), "$GUIdriver.name$", "Notification Received $generatedInfoType; format="capital"$");
+        onNew$generatedInfoType; format="capital"$Response(($GUIdriver.allGeneratedName:{ generatedInfoName |$generatedInfoName$}$)arg);     ;
+        }
+        }$ 
+        
+            
        } catch (Exception e) {
                  e.printStackTrace();
            }
-        }           
+        }
+        
+        
+         
+        
+                   
      public void run() {  }
         
         
@@ -72,11 +86,22 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
             
       List<String> regionInfo = RegionSubscription.getSubscriptionRequest(partitionAttribute, 
                myDeviceInfo.getRegionLabels(), myDeviceInfo.getRegion());
-         this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="capital"$", regionInfo);
-    }
-        
-        
+         this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="avoidCapital"$", regionInfo);
+    }       
     }$
+    
+     $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+        
+    public abstract void onNew$generatedInfoType; format="capital"$Response($GUIdriver.allGeneratedName:{ generatedInfoName |$generatedInfoName$}$ arg);       
+      public void subscribe$generatedInfoType; format="capital"$() {
+            
+      List<String> regionInfo = RegionSubscription.getSubscriptionRequest(partitionAttribute, 
+               myDeviceInfo.getRegionLabels(), myDeviceInfo.getRegion());
+         this.myPubSubMiddleware.subscribe(this,"$generatedInfoType; format="avoidCapital"$", regionInfo);
+    }       
+    }$
+    
+    
 }
    
 

@@ -38,13 +38,18 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
 			public void run() {
 			obj$GUIdriver.name$ = $GUIdriver.name$Factory.get$GUIdriver.name$Driver(deviceInfo.getType(),(Activity) ui,obj);
 		  $GUIdriver.commands:{ command |
-			 obj$GUIdriver.name$.$command.name; format="capital"$GUI(handlerCommand);    
-
-  }; separator="\n"$
-  
+			 obj$GUIdriver.name$.$command.name; format="capital"$GUI(handlerCommand);
+			 }; separator="\n"$
+			 
+			  
       $GUIdriver.allDataAccess:{ dataAccess |
              obj$GUIdriver.name$.$dataAccess.dataAccessName; format="capital"$GUI(handlerCommand); 
-    }$  
+    }$ 
+    
+  //  $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+ //       obj$GUIdriver.name$.$generatedInfoType; format="capital"$GUI(handlerCommand);
+ //      }; separator="\n"$
+     
 	}
 	});	
 
@@ -64,14 +69,36 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
              $dataAccess.dataAccessName; format="capital"$Request(request);
          }    
     }$
+    
+    
+  //  $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+   //      @Override
+  //       public void onNew$generatedInfoType; format="capital"$Response(String response) {
+  //      }    
+   // }$
+    
+        
 	
 	};
 	
 	 $GUIdriver.allDataAccess:{ dataAccess |
      public void onNew$dataAccess.dataAccessName; format="capital"$Response($GUIdriver.AllDataAccess:{ dataAcc |$dataAcc.GeneratedInfo.type$}$ arg){
-        pubSubSensingFramework.publish("$dataAccess.dataAccessName; format="capital"$", arg);
-    
+        pubSubSensingFramework.publish("$dataAccess.dataAccessName$", arg);    
     
     }  
     }$
+    
+    
+     $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+     public void onNew$generatedInfoType; format="capital"$Response($GUIdriver.allGeneratedName:{ generatedInfoName |$generatedInfoName$}$ arg){
+        pubSubSensingFramework.publish("$generatedInfoType$", arg);    
+    
+    }  
+    }$
+    
+    
+    
+    
+        
+    
 }

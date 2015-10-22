@@ -30,6 +30,7 @@ public class  Logic$CS.name$ extends $CS.name$  {
     @Override
       public  void onNew$consumedInfo.name; format="avoidCapital"$( $consumedInfo.type$ arg){     
       //TODO : write code here.     
+      $CS.allGeneratedInfo:{ generatedInfo |set$generatedInfo.name$(arg);}; separator="\n"$ 
      }       
      };        
     }; separator="\n"$

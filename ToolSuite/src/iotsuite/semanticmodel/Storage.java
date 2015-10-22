@@ -2,7 +2,6 @@ package iotsuite.semanticmodel;
 
 import iotsuite.common.GlobalVariable;
 
-
 //import iotsuite.compiler.Attribute;
 
 import java.util.ArrayList;
@@ -21,9 +20,9 @@ public class Storage extends SoftwareComponent {
 	public List<String> structFieldName = new ArrayList<String>();
 	// Store fieldType with fieldName
 	public List<String> structField = new ArrayList<String>();
-	
+
 	public String databaseName = "iotsuiteuser";
-	
+
 	public String id;
 
 	// public Storage(String name, Set<Attribute> attributes, Set<DataAccess>
@@ -39,7 +38,7 @@ public class Storage extends SoftwareComponent {
 		this.fieldName = fieldName;
 		this.structField = structField;
 		this.structFieldName = structFieldName;
-		
+
 	}
 
 	public Set<DataAccess> getDataAccess() {
@@ -50,7 +49,7 @@ public class Storage extends SoftwareComponent {
 	}
 
 	public List<String> getAllfieldName() {
-		id=fieldName.get(0);
+		id = fieldName.get(0);
 		return fieldName;
 	}
 
@@ -60,12 +59,12 @@ public class Storage extends SoftwareComponent {
 	}
 
 	public List<String> getAllStructField() {
-		
+
 		return structField;
 	}
 
 	public List<String> getAllStructFieldName() {
-		
+
 		return structFieldName;
 
 	}

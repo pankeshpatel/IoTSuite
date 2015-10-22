@@ -13,4 +13,11 @@ public abstract interface  I$GUIdriver.name$ {
         public abstract void $dataAccess.dataAccessName; format="capital"$GUI(Listener$GUIdriver.name$ handler); 
     }; separator="\n"$
     
+    
+  //  $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
+   //     public abstract void $generatedInfoType; format="capital"$GUI(Listener$GUIdriver.name$ handler); 
+   // }; separator="\n"$
+    
+    
+    
  }

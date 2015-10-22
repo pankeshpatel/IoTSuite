@@ -12,7 +12,10 @@ import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.UserInterface;
 import iotsuite.semanticmodel.Information;
 import iotsuite.semanticmodel.Parameter;
+
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class UserInterfaceCompiler {
@@ -26,6 +29,9 @@ public class UserInterfaceCompiler {
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private String GUIName;
 	private String struct;
+
+	public static List<String> generatedInfoType = new ArrayList<String>();
+	final List<String> generatedInfoName = new ArrayList<String>();
 
 	// private Widget widget;
 
@@ -46,6 +52,23 @@ public class UserInterfaceCompiler {
 		this.GUIName = computationalServiceName;
 	}
 
+	public void addgeneratedInfoName(String generatedInfoName) {
+
+		this.generatedInfoName.add(generatedInfoName);
+
+	}
+
+	public List<String> getgeneratedInfoType() {
+
+		return generatedInfoType;
+	}
+
+	public void addNotifyCommand(String generatedInfo) {
+
+		UserInterfaceCompiler.generatedInfoType.add(generatedInfo);
+
+	}
+
 	public void createGUIObject() {
 		/*
 		 * guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
@@ -59,7 +82,7 @@ public class UserInterfaceCompiler {
 
 		guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
 				null, getCommandList(), null, null, getDataAccessList(), null,
-				null);
+				null, getgeneratedInfoType());
 	}
 
 	// Code generator of the abstract classes and Logic files
@@ -94,6 +117,8 @@ public class UserInterfaceCompiler {
 										// Interface of GUI.
 				generateAndroidGUIFactory();
 				generateAndroidGUIImpl();
+				//generateAndroidGUIMainActivity();
+				
 			}
 			// generateGUILayout();
 			// generateGUIManifest();
@@ -132,6 +157,18 @@ public class UserInterfaceCompiler {
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
+	
+	//For Main  Activity for AndroidGUI
+	/*private void generateAndroidGUIMainActivity() {
+
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver
+				.generateAndroidUserInterfaceMainActivity(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
+	}
+	*/
 
 	private void generateAndroidGUIImpl() {
 
@@ -250,6 +287,7 @@ public class UserInterfaceCompiler {
 	// Getter and Setter of Command Parameters
 
 	public void addCommandParameter(String parameterName) {
+
 		commandParameter = new Parameter(parameterName, new DataType(
 				getDatafromSymblTable(parameterName)));
 	}
