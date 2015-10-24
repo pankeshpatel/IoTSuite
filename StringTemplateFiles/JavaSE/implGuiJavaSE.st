@@ -1,17 +1,8 @@
 package $GUIdriver.deviceImplPackageName$;
 
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 import logic.*;
 import framework.*;
 import android.content.Context;
@@ -23,10 +14,7 @@ import iotsuite.localmiddleware.PubSubsSensingFramework;
 public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$,IDataListener {
 
 
-  private JFrame mainFrame;
-  private JLabel headerLabel;
-  private JLabel statusLabel;
-  private JPanel controlPanel;
+ 
   public static PubSubsSensingFramework pubSubSensingFramework;
   String request;
    $GUIdriver.allStructFields:{field | 
@@ -46,8 +34,7 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$,IDataListener {
 
   public JavaSE$GUIdriver.name$(Context context, Logic$GUIdriver.name$ obj) {
     
-    prepareGUI();
-    showEventDemo();
+   
     
     pubSubSensingFramework = PubSubsSensingFramework.getInstance();
      $GUIdriver.allDataAccess:{ dataAccess |
@@ -107,57 +94,9 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$,IDataListener {
    // }$ 
     
   
+ 
     
-    private void prepareGUI(){
-    mainFrame = new JFrame("Simulated  $GUIdriver.name$");
-    mainFrame.setSize(200, 200);
-    mainFrame.setLayout(new GridLayout(3, 1));
-
-    headerLabel = new JLabel("", JLabel.CENTER);
-    statusLabel = new JLabel("", JLabel.CENTER);
-    statusLabel.setSize(350, 100);
-
-    mainFrame.addWindowListener(new WindowAdapter() {
-
-      public void windowClosing(WindowEvent windowEvent) {
-        System.exit(0);
-      }
-    });
-
-    controlPanel = new JPanel();
-    controlPanel.setLayout(new FlowLayout());
-    mainFrame.add(headerLabel);
-    mainFrame.add(controlPanel);
-    mainFrame.add(statusLabel);
-    
-    
-    mainFrame.setVisible(true);
-    }
-    
-    
-    
-    public void showEventDemo(){
-    
-    
-    
-     $GUIdriver.commands:{ command |
-     //  $command.name$ Command    
-     JButton $command.name;format="avoidCapital"$ = new JButton("$command.name;format="avoidCapital"$ Command");
-     $command.name;format="avoidCapital"$.setActionCommand("$command.name;format="avoidCapital"$ Command");
-     $command.name;format="avoidCapital"$.addActionListener(new $command.name;format="avoidCapital"$ButtonClickListener());
-     }; separator="\n"$
-     
-     
-      $GUIdriver.allDataAccess:{ dataAccess |
-      // request $dataAccess.dataAccessName; format="capital"$
-     JButton request$dataAccess.dataAccessName;format="capital"$ = new JButton("Request $dataAccess.dataAccessName;format="capital"$");
-     request$dataAccess.dataAccessName;format="capital"$.setActionCommand("Request $dataAccess.dataAccessName;format="capital"$");
-     request$dataAccess.dataAccessName;format="capital"$.addActionListener(new request$dataAccess.dataAccessName;format="capital"$ButtonClickListener());
-      }; separator="\n"$
-           
    
-    
-    }
     
      $GUIdriver.commands:{ command |
      private class  $command.name;format="avoidCapital"$ButtonClickListener implements ActionListener{
