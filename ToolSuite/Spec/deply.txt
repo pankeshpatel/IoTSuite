@@ -1,0 +1,49 @@
+devices: 
+    D1:
+       region :
+            Room  : 1;
+        platform: JavaSE;    
+        resources :TemperatureSensor;
+		protocol : mqtt;  
+	D2:
+        region :
+            Room  : 1;
+        platform: JavaSE;    
+        resources :BadgeReader;
+		protocol : mqtt;  
+	D3:
+        region :
+             Room  : 1;
+        platform: JavaSE;    
+        resources : ProfileDB;
+		protocol : mqtt;  
+	D4:
+        region :
+             Room  : 1;
+        platform: JavaSE;    
+        resources : ;
+		protocol : mqtt;  
+   D5:
+        region :
+             Room  : 1;
+        platform: JavaSE;    
+        resources : ;
+		protocol : mqtt;  
+   D6:
+        region :
+             Room  : 1;
+        platform: JavaSE;    
+        resources : ;
+		protocol : mqtt;  
+   D7:
+        region :
+             Room  : 1;
+        platform: JavaSE;    
+        resources :Heater;
+		protocol : mqtt;
+	D8:
+        region :
+             Room  : 1;
+        platform: JavaSE;    
+        resources :SmartHomeApp;
+		protocol : mqtt;
