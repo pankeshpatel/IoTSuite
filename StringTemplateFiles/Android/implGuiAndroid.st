@@ -3,6 +3,7 @@ package $GUIdriver.deviceImplPackageName$;
 import logic.*;
 import framework.*;
 import android.content.Context;
+import android.app.Activity;
 import iotsuite.android.localmiddleware.IDataListener;
 import iotsuite.android.localmiddleware.PubSubsSensingFramework;
 
@@ -23,14 +24,17 @@ public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener
           private Listener$GUIdriver.name$  listener$dataAccess.dataAccessName; format="capital"$Request = null;   
     }$
     
-    
+   private Context appContext;
+   public static Activity appActivity;
  
 	public Android$GUIdriver.name$(Context context, Logic$GUIdriver.name$ obj) {
 	
+	  this.appContext = context;
+    appActivity = (Activity) appContext;
 	 pubSubSensingFramework = PubSubsSensingFramework.getInstance();
 	 
 	  $GUIdriver.allDataAccess:{ dataAccess |
-      pubSubSensingFramework.registerForSensorData(this, "$dataAccess.dataAccessName; format="avoidCapital"$");
+      pubSubSensingFramework.registerForSensorData(this, "$dataAccess.dataAccessName; format="avoidCapital"$Response");
     }$
     
  
@@ -54,11 +58,13 @@ public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener
          }    
     }$
     
-   
+    @Override
     public void onDataReceived(String eventName, Object data) {
     // TODO : Developer will write Device Driver code.
     // This method will get data from Logic method
-  }
+    }
+    
+  
   
   
    

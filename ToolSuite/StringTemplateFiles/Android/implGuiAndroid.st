@@ -8,7 +8,7 @@ import iotsuite.android.localmiddleware.PubSubsSensingFramework;
 
 
 
-public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener {
+public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener,View.OnClickListener {
 
 
 	
@@ -24,13 +24,6 @@ public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener
     }$
     
     
-    
-   /*  $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
-     private Listener$GUIdriver.name$  listener$generatedInfoType; format="capital"$Response=null;
-    }; separator="\n"$ */
-  
- 
-
 	public Android$GUIdriver.name$(Context context, Logic$GUIdriver.name$ obj) {
 	
 	 pubSubSensingFramework = PubSubsSensingFramework.getInstance();
@@ -39,12 +32,7 @@ public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener
       pubSubSensingFramework.registerForSensorData(this, "$dataAccess.dataAccessName; format="avoidCapital"$");
     }$
     
-   // $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
-    // pubSubSensingFramework.registerForSensorData(this, "$generatedInfoType; format="avoidCapital"$");
-    //}$
-    
-     
-		
+   
 	}
 	
 
@@ -65,12 +53,7 @@ public class Android$GUIdriver.name$ implements I$GUIdriver.name$, IDataListener
          }    
     }$
     
-    // $GUIdriver.allGeneratedInfoType:{ generatedInfoType |
-    //  @Override
-    //  public void $generatedInfoType; format="capital"$GUI(Listener$GUIdriver.name$ handler) {
-    //  listener$generatedInfoType; format="capital"$Response = handler; 
-   //    }
-   // }$
+    
     
     public void onDataReceived(String eventName, Object data) {
     // TODO : Developer will write Device Driver code.

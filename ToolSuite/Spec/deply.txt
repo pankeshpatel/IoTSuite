@@ -44,6 +44,7 @@ devices:
 	D8:
         region :
              Room  : 1;
-        platform: JavaSE;    
+        platform: Android;    
         resources :SmartHomeApp;
 		protocol : mqtt;
+		

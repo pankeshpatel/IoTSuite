@@ -17,8 +17,7 @@ resources:
     	 	BadgeReader                
             	generate badgeDetected: BadgeStruct;
 				generate badgeDisappeared: BadgeStruct; 
-				onCondition badgeDetected, badgeDisappeared;  
-			               
+				onCondition badgeDetected, badgeDisappeared; 			               
     actuators:
        Heater
 			action Off();

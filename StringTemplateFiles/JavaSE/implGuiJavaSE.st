@@ -65,7 +65,7 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$,IDataListener {
     @Override
       public void onDataReceived(String eventName, JsonObject data) {
         // TODO Auto-generated method stub
-        //Unwarpe data from Json Object
+        //Unwrape data from Json Object
         
           $GUIdriver.allStructFields:{field | 
               $field.type$ $field.name$=data.get("$field.name$").getAs$field.type;format="capital"$();              
