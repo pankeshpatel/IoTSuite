@@ -34,8 +34,6 @@ component_def :
     'computationalService' ':' (cs_def)   
 ;
 
- 
-
 struct_def: 
     CAPITALIZED_ID 
     {context.currentStruct = new StructCompiler($CAPITALIZED_ID.text);}
@@ -48,19 +46,11 @@ structField_def:
   context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
 ; 
 
-
-
-
 cs_def:
       
-    ('Aggregator'':'  (agg_cs_def)*)*
-   
-    ('Coordinator'':' (coordinator_def)* )*
-    
-    ('Controller'':' (controller_def)*)*
-     
-
-   
+    ('Aggregator'':'  (agg_cs_def)*)*  
+    ('Coordinator'':' (coordinator_def)* )*    
+    ('Controller'':' (controller_def)*)*   
 ;
 
  
@@ -133,8 +123,7 @@ csGeneratedInfoForAggregator_def:
     context.currentComputationalService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     context.constructAggregatorSymblTable($CAPITALIZED_ID.text);
-     context.constructGUISymblTable($lc_id.text, $CAPITALIZED_ID.text);
-    //context.currentGUI.addgeneratedInfoName($CAPITALIZED_ID.text);
+     context.constructGUISymblTable($lc_id.text, $CAPITALIZED_ID.text);   
     }
 ;
 
@@ -147,8 +136,7 @@ csGeneratedInfo_def:
      }
 ;
   
-csConsumeInfo_def:
-    //'consume' lc_id ('from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
+csConsumeInfo_def:   
      'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID        
    { context.currentComputationalService.addConsumedInfo($lc_id.text);  
     
@@ -163,7 +151,6 @@ csRequest_def :
 
 cntrlCommand_def :
     'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'region-hops' ':' INT ':' CAPITALIZED_ID
-    //'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'hops' ':' INT ':' CAPITALIZED_ID  
     { 
       context.currentComputationalService.addCommand($name.text);  
     }
@@ -173,11 +160,6 @@ cntrlParameter_def :
     lc_id  
     { context.currentComputationalService.addParameter($lc_id.text); }  
 ;
-
-//cntrlParameter_def :
-//    lc_id  (',' parameter_def )?
-//    { context.currentComputationalService.addParameter($lc_id.text); }  
-//; 
   
 partition_def:  
     csDeploymentConstraint='partition-per' ':' CAPITALIZED_ID 

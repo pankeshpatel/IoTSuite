@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-10-26 23:13:41
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-10-27 00:32:03
 
   package iotsuite.parser; 
   
@@ -31,9 +31,6 @@ public class InteractionSpecLexer extends Lexer {
 	public static final int T__24=24;
 	public static final int T__25=25;
 	public static final int T__26=26;
-	public static final int T__27=27;
-	public static final int T__28=28;
-	public static final int T__29=29;
 	public static final int CAPITALIZED_ID=4;
 	public static final int ID=5;
 	public static final int INT=6;
@@ -180,10 +177,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__14;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:18:7: ( 'Button' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:18:9: 'Button'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:18:7: ( 'Integer' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:18:9: 'Integer'
 			{
-			match("Button"); 
+			match("Integer"); 
 
 			}
 
@@ -201,10 +198,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:19:7: ( 'Integer' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:19:9: 'Integer'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:19:7: ( 'String' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:19:9: 'String'
 			{
-			match("Integer"); 
+			match("String"); 
 
 			}
 
@@ -222,10 +219,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:20:7: ( 'String' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:20:9: 'String'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:20:7: ( 'action' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:20:9: 'action'
 			{
-			match("String"); 
+			match("action"); 
 
 			}
 
@@ -243,10 +240,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__17;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:21:7: ( 'TextBox' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:21:9: 'TextBox'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:21:7: ( 'boolean' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:21:9: 'boolean'
 			{
-			match("TextBox"); 
+			match("boolean"); 
 
 			}
 
@@ -264,10 +261,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:22:7: ( 'TextView' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:22:9: 'TextView'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:22:7: ( 'command' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:22:9: 'command'
 			{
-			match("TextView"); 
+			match("command"); 
 
 			}
 
@@ -285,10 +282,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__19;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:23:7: ( 'action' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:23:9: 'action'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:23:7: ( 'double' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:23:9: 'double'
 			{
-			match("action"); 
+			match("double"); 
 
 			}
 
@@ -306,10 +303,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:7: ( 'boolean' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:9: 'boolean'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:7: ( 'long' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:9: 'long'
 			{
-			match("boolean"); 
+			match("long"); 
 
 			}
 
@@ -327,10 +324,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:25:7: ( 'command' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:25:9: 'command'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:25:7: ( 'notify' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:25:9: 'notify'
 			{
-			match("command"); 
+			match("notify"); 
 
 			}
 
@@ -348,10 +345,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:26:7: ( 'double' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:26:9: 'double'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:26:7: ( 'request' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:26:9: 'request'
 			{
-			match("double"); 
+			match("request"); 
 
 			}
 
@@ -369,10 +366,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:27:7: ( 'long' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:27:9: 'long'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:27:7: ( 'resources' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:27:9: 'resources'
 			{
-			match("long"); 
+			match("resources"); 
 
 			}
 
@@ -390,10 +387,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:7: ( 'notify' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:9: 'notify'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:7: ( 'structs' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:9: 'structs'
 			{
-			match("notify"); 
+			match("structs"); 
 
 			}
 
@@ -411,10 +408,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__25;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:7: ( 'request' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:9: 'request'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:7: ( 'userinteractions' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:9: 'userinteractions'
 			{
-			match("request"); 
+			match("userinteractions"); 
 
 			}
 
@@ -432,71 +429,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:7: ( 'resources' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:9: 'resources'
-			{
-			match("resources"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__26"
-
-	// $ANTLR start "T__27"
-	public final void mT__27() throws RecognitionException {
-		try {
-			int _type = T__27;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:7: ( 'structs' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:9: 'structs'
-			{
-			match("structs"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__27"
-
-	// $ANTLR start "T__28"
-	public final void mT__28() throws RecognitionException {
-		try {
-			int _type = T__28;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:7: ( 'userinteractions' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:9: 'userinteractions'
-			{
-			match("userinteractions"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__28"
-
-	// $ANTLR start "T__29"
-	public final void mT__29() throws RecognitionException {
-		try {
-			int _type = T__29;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:7: ( 'with' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:9: 'with'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:7: ( 'with' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:9: 'with'
 			{
 			match("with"); 
 
@@ -509,7 +443,7 @@ public class InteractionSpecLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__29"
+	// $ANTLR end "T__26"
 
 	// $ANTLR start "ID"
 	public final void mID() throws RecognitionException {
@@ -713,8 +647,8 @@ public class InteractionSpecLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | ID | INT | CAPITALIZED_ID | WS )
-		int alt5=26;
+		// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | ID | INT | CAPITALIZED_ID | WS )
+		int alt5=23;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
@@ -851,49 +785,28 @@ public class InteractionSpecLexer extends Lexer {
 				}
 				break;
 			case 20 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:122: T__27
-				{
-				mT__27(); 
-
-				}
-				break;
-			case 21 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:128: T__28
-				{
-				mT__28(); 
-
-				}
-				break;
-			case 22 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:134: T__29
-				{
-				mT__29(); 
-
-				}
-				break;
-			case 23 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:140: ID
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:122: ID
 				{
 				mID(); 
 
 				}
 				break;
-			case 24 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:143: INT
+			case 21 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:125: INT
 				{
 				mINT(); 
 
 				}
 				break;
-			case 25 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:147: CAPITALIZED_ID
+			case 22 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:129: CAPITALIZED_ID
 				{
 				mCAPITALIZED_ID(); 
 
 				}
 				break;
-			case 26 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:162: WS
+			case 23 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:144: WS
 				{
 				mWS(); 
 
@@ -906,55 +819,51 @@ public class InteractionSpecLexer extends Lexer {
 
 	protected DFA5 dfa5 = new DFA5(this);
 	static final String DFA5_eotS =
-		"\6\uffff\4\26\12\24\4\uffff\5\26\12\24\5\26\13\24\5\26\4\24\1\121\5\24"+
-		"\1\127\6\26\4\24\1\uffff\5\24\1\uffff\1\26\1\150\1\26\1\152\2\26\1\155"+
-		"\2\24\1\160\1\161\4\24\1\166\1\uffff\1\167\1\uffff\1\170\1\26\1\uffff"+
-		"\1\172\1\173\2\uffff\1\174\1\24\1\176\1\24\3\uffff\1\u0080\3\uffff\1\24"+
-		"\1\uffff\1\24\1\uffff\1\u0083\1\24\1\uffff\6\24\1\u008b\1\uffff";
+		"\6\uffff\3\25\12\23\4\uffff\3\25\12\23\3\25\13\23\3\25\4\23\1\107\5\23"+
+		"\1\115\3\25\4\23\1\uffff\5\23\1\uffff\2\25\1\134\1\135\2\23\1\140\1\141"+
+		"\4\23\1\146\1\147\2\uffff\1\150\1\151\2\uffff\1\152\1\23\1\154\1\23\5"+
+		"\uffff\1\23\1\uffff\1\23\1\160\1\23\1\uffff\6\23\1\170\1\uffff";
 	static final String DFA5_eofS =
-		"\u008c\uffff";
+		"\171\uffff";
 	static final String DFA5_minS =
-		"\1\11\5\uffff\1\157\1\156\1\164\1\145\1\143\5\157\1\145\1\164\1\163\1"+
-		"\151\4\uffff\1\157\2\164\1\162\1\170\1\164\1\157\1\155\1\165\1\156\1\164"+
-		"\1\161\1\162\1\145\1\164\1\154\1\164\1\145\1\151\1\164\1\151\1\154\1\155"+
-		"\1\142\1\147\1\151\1\165\1\157\1\165\1\162\1\150\1\145\1\157\1\147\1\156"+
-		"\1\102\1\157\1\145\1\141\1\154\1\60\1\146\1\145\1\165\1\143\1\151\1\60"+
-		"\1\141\1\156\1\145\1\147\1\157\1\151\1\156\1\141\1\156\1\145\1\uffff\1"+
-		"\171\1\163\1\162\1\164\1\156\1\uffff\1\156\1\101\1\162\1\101\1\170\1\145"+
-		"\1\60\1\156\1\144\2\60\1\164\1\143\1\163\1\164\1\101\1\uffff\1\101\1\uffff"+
-		"\1\101\1\167\1\uffff\2\60\2\uffff\1\60\1\145\1\60\1\145\3\uffff\1\101"+
-		"\3\uffff\1\163\1\uffff\1\162\1\uffff\1\60\1\141\1\uffff\1\143\1\164\1"+
-		"\151\1\157\1\156\1\163\1\60\1\uffff";
+		"\1\11\5\uffff\1\157\1\156\1\164\1\143\5\157\1\145\1\164\1\163\1\151\4"+
+		"\uffff\1\157\1\164\1\162\1\164\1\157\1\155\1\165\1\156\1\164\1\161\1\162"+
+		"\1\145\1\164\1\154\1\145\2\151\1\154\1\155\1\142\1\147\1\151\1\165\1\157"+
+		"\1\165\1\162\1\150\1\145\1\147\1\156\1\157\1\145\1\141\1\154\1\60\1\146"+
+		"\1\145\1\165\1\143\1\151\1\60\1\141\1\145\1\147\1\156\1\141\1\156\1\145"+
+		"\1\uffff\1\171\1\163\1\162\1\164\1\156\1\uffff\1\156\1\162\1\101\1\60"+
+		"\1\156\1\144\2\60\1\164\1\143\1\163\1\164\2\101\2\uffff\2\60\2\uffff\1"+
+		"\60\1\145\1\60\1\145\5\uffff\1\163\1\uffff\1\162\1\60\1\141\1\uffff\1"+
+		"\143\1\164\1\151\1\157\1\156\1\163\1\60\1\uffff";
 	static final String DFA5_maxS =
-		"\1\172\5\uffff\1\165\1\156\1\164\1\145\1\143\5\157\1\145\1\164\1\163\1"+
-		"\151\4\uffff\1\157\2\164\1\162\1\170\1\164\1\157\1\155\1\165\1\156\1\164"+
-		"\1\163\1\162\1\145\1\164\1\154\1\164\1\145\1\151\1\164\1\151\1\154\1\155"+
-		"\1\142\1\147\1\151\1\165\1\157\1\165\1\162\1\150\1\145\1\157\1\147\1\156"+
-		"\1\126\1\157\1\145\1\141\1\154\1\172\1\146\1\145\1\165\1\143\1\151\1\172"+
-		"\1\141\1\156\1\145\1\147\1\157\1\151\1\156\1\141\1\156\1\145\1\uffff\1"+
-		"\171\1\163\1\162\1\164\1\156\1\uffff\1\156\1\172\1\162\1\172\1\170\1\145"+
-		"\1\172\1\156\1\144\2\172\1\164\1\143\1\163\1\164\1\172\1\uffff\1\172\1"+
-		"\uffff\1\172\1\167\1\uffff\2\172\2\uffff\1\172\1\145\1\172\1\145\3\uffff"+
-		"\1\172\3\uffff\1\163\1\uffff\1\162\1\uffff\1\172\1\141\1\uffff\1\143\1"+
-		"\164\1\151\1\157\1\156\1\163\1\172\1\uffff";
+		"\1\172\5\uffff\1\157\1\156\1\164\1\143\5\157\1\145\1\164\1\163\1\151\4"+
+		"\uffff\1\157\1\164\1\162\1\164\1\157\1\155\1\165\1\156\1\164\1\163\1\162"+
+		"\1\145\1\164\1\154\1\145\2\151\1\154\1\155\1\142\1\147\1\151\1\165\1\157"+
+		"\1\165\1\162\1\150\1\145\1\147\1\156\1\157\1\145\1\141\1\154\1\172\1\146"+
+		"\1\145\1\165\1\143\1\151\1\172\1\141\1\145\1\147\1\156\1\141\1\156\1\145"+
+		"\1\uffff\1\171\1\163\1\162\1\164\1\156\1\uffff\1\156\1\162\2\172\1\156"+
+		"\1\144\2\172\1\164\1\143\1\163\1\164\2\172\2\uffff\2\172\2\uffff\1\172"+
+		"\1\145\1\172\1\145\5\uffff\1\163\1\uffff\1\162\1\172\1\141\1\uffff\1\143"+
+		"\1\164\1\151\1\157\1\156\1\163\1\172\1\uffff";
 	static final String DFA5_acceptS =
-		"\1\uffff\1\1\1\2\1\3\1\4\1\5\16\uffff\1\27\1\30\1\31\1\32\71\uffff\1\20"+
-		"\5\uffff\1\26\20\uffff\1\7\1\uffff\1\11\2\uffff\1\14\2\uffff\1\17\1\21"+
-		"\4\uffff\1\6\1\10\1\12\1\uffff\1\15\1\16\1\22\1\uffff\1\24\1\uffff\1\13"+
-		"\2\uffff\1\23\7\uffff\1\25";
+		"\1\uffff\1\1\1\2\1\3\1\4\1\5\15\uffff\1\24\1\25\1\26\1\27\60\uffff\1\15"+
+		"\5\uffff\1\23\16\uffff\1\10\1\11\2\uffff\1\14\1\16\4\uffff\1\6\1\7\1\12"+
+		"\1\13\1\17\1\uffff\1\21\3\uffff\1\20\7\uffff\1\22";
 	static final String DFA5_specialS =
-		"\u008c\uffff}>";
+		"\171\uffff}>";
 	static final String[] DFA5_transitionS = {
-			"\2\27\1\uffff\2\27\22\uffff\1\27\7\uffff\1\1\1\2\2\uffff\1\3\3\uffff"+
-			"\12\25\1\4\1\5\5\uffff\1\26\1\6\6\26\1\7\11\26\1\10\1\11\6\26\6\uffff"+
-			"\1\12\1\13\1\14\1\15\7\24\1\16\1\24\1\17\3\24\1\20\1\21\1\24\1\22\1\24"+
-			"\1\23\3\24",
+			"\2\26\1\uffff\2\26\22\uffff\1\26\7\uffff\1\1\1\2\2\uffff\1\3\3\uffff"+
+			"\12\24\1\4\1\5\5\uffff\1\25\1\6\6\25\1\7\11\25\1\10\7\25\6\uffff\1\11"+
+			"\1\12\1\13\1\14\7\23\1\15\1\23\1\16\3\23\1\17\1\20\1\23\1\21\1\23\1\22"+
+			"\3\23",
 			"",
 			"",
 			"",
 			"",
 			"",
-			"\1\30\5\uffff\1\31",
+			"\1\27",
+			"\1\30",
+			"\1\31",
 			"\1\32",
 			"\1\33",
 			"\1\34",
@@ -965,25 +874,25 @@ public class InteractionSpecLexer extends Lexer {
 			"\1\41",
 			"\1\42",
 			"\1\43",
+			"",
+			"",
+			"",
+			"",
 			"\1\44",
 			"\1\45",
 			"\1\46",
-			"",
-			"",
-			"",
-			"",
 			"\1\47",
 			"\1\50",
 			"\1\51",
 			"\1\52",
 			"\1\53",
 			"\1\54",
-			"\1\55",
-			"\1\56",
+			"\1\55\1\uffff\1\56",
 			"\1\57",
 			"\1\60",
 			"\1\61",
-			"\1\62\1\uffff\1\63",
+			"\1\62",
+			"\1\63",
 			"\1\64",
 			"\1\65",
 			"\1\66",
@@ -1003,90 +912,69 @@ public class InteractionSpecLexer extends Lexer {
 			"\1\104",
 			"\1\105",
 			"\1\106",
-			"\1\107",
+			"\12\23\7\uffff\32\23\6\uffff\32\23",
 			"\1\110",
 			"\1\111",
 			"\1\112",
-			"\1\113\23\uffff\1\114",
-			"\1\115",
+			"\1\113",
+			"\1\114",
+			"\12\23\7\uffff\32\23\6\uffff\32\23",
 			"\1\116",
 			"\1\117",
 			"\1\120",
-			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"\1\121",
 			"\1\122",
 			"\1\123",
 			"\1\124",
+			"",
 			"\1\125",
 			"\1\126",
-			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"\1\127",
 			"\1\130",
 			"\1\131",
+			"",
 			"\1\132",
 			"\1\133",
-			"\1\134",
-			"\1\135",
+			"\32\25\6\uffff\32\25",
+			"\12\23\7\uffff\32\23\6\uffff\32\23",
 			"\1\136",
 			"\1\137",
-			"\1\140",
-			"\1\141",
-			"",
+			"\12\23\7\uffff\32\23\6\uffff\32\23",
+			"\12\23\7\uffff\32\23\6\uffff\32\23",
 			"\1\142",
 			"\1\143",
 			"\1\144",
 			"\1\145",
-			"\1\146",
+			"\32\25\6\uffff\32\25",
+			"\32\25\6\uffff\32\25",
 			"",
-			"\1\147",
-			"\32\26\6\uffff\32\26",
-			"\1\151",
-			"\32\26\6\uffff\32\26",
+			"",
+			"\12\23\7\uffff\32\23\6\uffff\32\23",
+			"\12\23\7\uffff\32\23\6\uffff\32\23",
+			"",
+			"",
+			"\12\23\7\uffff\32\23\6\uffff\32\23",
 			"\1\153",
-			"\1\154",
-			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"\12\23\7\uffff\32\23\6\uffff\32\23",
+			"\1\155",
+			"",
+			"",
+			"",
+			"",
+			"",
 			"\1\156",
+			"",
 			"\1\157",
-			"\12\24\7\uffff\32\24\6\uffff\32\24",
-			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"\12\23\7\uffff\32\23\6\uffff\32\23",
+			"\1\161",
+			"",
 			"\1\162",
 			"\1\163",
 			"\1\164",
 			"\1\165",
-			"\32\26\6\uffff\32\26",
-			"",
-			"\32\26\6\uffff\32\26",
-			"",
-			"\32\26\6\uffff\32\26",
-			"\1\171",
-			"",
-			"\12\24\7\uffff\32\24\6\uffff\32\24",
-			"\12\24\7\uffff\32\24\6\uffff\32\24",
-			"",
-			"",
-			"\12\24\7\uffff\32\24\6\uffff\32\24",
-			"\1\175",
-			"\12\24\7\uffff\32\24\6\uffff\32\24",
-			"\1\177",
-			"",
-			"",
-			"",
-			"\32\26\6\uffff\32\26",
-			"",
-			"",
-			"",
-			"\1\u0081",
-			"",
-			"\1\u0082",
-			"",
-			"\12\24\7\uffff\32\24\6\uffff\32\24",
-			"\1\u0084",
-			"",
-			"\1\u0085",
-			"\1\u0086",
-			"\1\u0087",
-			"\1\u0088",
-			"\1\u0089",
-			"\1\u008a",
-			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"\1\166",
+			"\1\167",
+			"\12\23\7\uffff\32\23\6\uffff\32\23",
 			""
 	};
 
@@ -1121,7 +1009,7 @@ public class InteractionSpecLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | ID | INT | CAPITALIZED_ID | WS );";
+			return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | ID | INT | CAPITALIZED_ID | WS );";
 		}
 	}
 
