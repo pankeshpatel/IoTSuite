@@ -1,5 +1,3 @@
-regions:
-	Room:Integer;
 structs:
 	 BadgeStruct    
         badgeID: String;

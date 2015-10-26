@@ -21,25 +21,23 @@ import iotsuite.semanticmodel.*;
 } 
  
 vocabSpec : 
-    'regions'
+   // 'regions'
     { context = new SymbolTable();
-    context.currentRegion = new RegionCompiler();
+    //context.currentRegion = new RegionCompiler();
     }
-    ':' (region_def)+  
-    { context.currentRegion.generateRegionCode(); }     
+   // ':' (region_def)+  
+  //  { context.currentRegion.generateRegionCode(); }     
     'structs' ':' (struct_def)+  
     'resources' ':' abilities_def   
 ;
-//*************************************************************************************************
-
-// Region Definition *** Start
- 
-region_def :      
-    CAPITALIZED_ID ':' dataType  ';'
-    { 
-    context.currentRegion.addRegion($CAPITALIZED_ID.text, $dataType.text); 
-    }
-;
+  
+//region_def :      
+//    CAPITALIZED_ID ':' dataType  ';'
+//    { 
+//    context.currentRegion.addRegion($CAPITALIZED_ID.text, $dataType.text); 
+//    }
+//;
+  
 struct_def:
     CAPITALIZED_ID 
     {context.currentStruct = new StructCompiler($CAPITALIZED_ID.text);
@@ -55,14 +53,13 @@ structField_def:
     context.currentStruct.addField($lc_id.text, $dataType.text);
    context.constructStructFieldSymblTable($lc_id.text,$dataType.text);
     context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
-; 
- 
+;  
+  
 
 abilities_def : 
   ('sensors' ':'   sensor_def)+
    ('actuators' ':' actuator_def)*
-  ('storages'  ':' ss_def)*
-  ('interactions' ':' (gui_def)+ )*     
+  ('storages'  ':' ss_def)*     
 ;
  
 sensor_def:

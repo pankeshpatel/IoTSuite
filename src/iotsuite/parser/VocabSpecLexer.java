@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-10-27 00:09:13
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-10-27 00:15:09
 
   package iotsuite.parser; 
   
@@ -38,11 +38,6 @@ public class VocabSpecLexer extends Lexer {
 	public static final int T__31=31;
 	public static final int T__32=32;
 	public static final int T__33=33;
-	public static final int T__34=34;
-	public static final int T__35=35;
-	public static final int T__36=36;
-	public static final int T__37=37;
-	public static final int T__38=38;
 	public static final int CAPITALIZED_ID=4;
 	public static final int ID=5;
 	public static final int INT=6;
@@ -335,10 +330,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:25:7: ( 'command' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:25:9: 'command'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:25:7: ( 'double' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:25:9: 'double'
 			{
-			match("command"); 
+			match("double"); 
 
 			}
 
@@ -356,10 +351,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:7: ( 'double' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:9: 'double'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:7: ( 'eventdriven' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:9: 'eventdriven'
 			{
-			match("double"); 
+			match("eventdriven"); 
 
 			}
 
@@ -377,10 +372,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:27:7: ( 'eventdriven' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:27:9: 'eventdriven'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:27:7: ( 'for' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:27:9: 'for'
 			{
-			match("eventdriven"); 
+			match("for"); 
 
 			}
 
@@ -398,10 +393,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:28:7: ( 'for' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:28:9: 'for'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:28:7: ( 'generate' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:28:9: 'generate'
 			{
-			match("for"); 
+			match("generate"); 
 
 			}
 
@@ -419,10 +414,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__25;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:29:7: ( 'generate' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:29:9: 'generate'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:29:7: ( 'long' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:29:9: 'long'
 			{
-			match("generate"); 
+			match("long"); 
 
 			}
 
@@ -440,10 +435,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:7: ( 'interactions' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:9: 'interactions'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:7: ( 'onCondition' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:30:9: 'onCondition'
 			{
-			match("interactions"); 
+			match("onCondition"); 
 
 			}
 
@@ -461,10 +456,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__27;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:31:7: ( 'long' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:31:9: 'long'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:31:7: ( 'period' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:31:9: 'period'
 			{
-			match("long"); 
+			match("period"); 
 
 			}
 
@@ -482,10 +477,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__28;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:7: ( 'onCondition' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:9: 'onCondition'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:7: ( 'periodicsensors' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:9: 'periodicsensors'
 			{
-			match("onCondition"); 
+			match("periodicsensors"); 
 
 			}
 
@@ -503,10 +498,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__29;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:33:7: ( 'period' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:33:9: 'period'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:33:7: ( 'resources' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:33:9: 'resources'
 			{
-			match("period"); 
+			match("resources"); 
 
 			}
 
@@ -524,10 +519,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__30;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:34:7: ( 'periodicsensors' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:34:9: 'periodicsensors'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:34:7: ( 'sample' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:34:9: 'sample'
 			{
-			match("periodicsensors"); 
+			match("sample"); 
 
 			}
 
@@ -545,10 +540,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__31;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:35:7: ( 'regions' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:35:9: 'regions'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:35:7: ( 'sensors' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:35:9: 'sensors'
 			{
-			match("regions"); 
+			match("sensors"); 
 
 			}
 
@@ -566,10 +561,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__32;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:36:7: ( 'request' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:36:9: 'request'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:36:7: ( 'storages' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:36:9: 'storages'
 			{
-			match("request"); 
+			match("storages"); 
 
 			}
 
@@ -587,92 +582,8 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__33;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:37:7: ( 'resources' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:37:9: 'resources'
-			{
-			match("resources"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__33"
-
-	// $ANTLR start "T__34"
-	public final void mT__34() throws RecognitionException {
-		try {
-			int _type = T__34;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:38:7: ( 'sample' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:38:9: 'sample'
-			{
-			match("sample"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__34"
-
-	// $ANTLR start "T__35"
-	public final void mT__35() throws RecognitionException {
-		try {
-			int _type = T__35;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:39:7: ( 'sensors' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:39:9: 'sensors'
-			{
-			match("sensors"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__35"
-
-	// $ANTLR start "T__36"
-	public final void mT__36() throws RecognitionException {
-		try {
-			int _type = T__36;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:40:7: ( 'storages' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:40:9: 'storages'
-			{
-			match("storages"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__36"
-
-	// $ANTLR start "T__37"
-	public final void mT__37() throws RecognitionException {
-		try {
-			int _type = T__37;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:41:7: ( 'structs' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:41:9: 'structs'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:37:7: ( 'structs' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:37:9: 'structs'
 			{
 			match("structs"); 
 
@@ -685,39 +596,18 @@ public class VocabSpecLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__37"
-
-	// $ANTLR start "T__38"
-	public final void mT__38() throws RecognitionException {
-		try {
-			int _type = T__38;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:42:7: ( 'with' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:42:9: 'with'
-			{
-			match("with"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__38"
+	// $ANTLR end "T__33"
 
 	// $ANTLR start "ID"
 	public final void mID() throws RecognitionException {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:199:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:199:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:196:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:196:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			matchRange('a','z'); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:199:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:196:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -762,11 +652,11 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:201:5: ( '0' .. '9' ( '0' .. '9' )* )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:201:7: '0' .. '9' ( '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:198:5: ( '0' .. '9' ( '0' .. '9' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:198:7: '0' .. '9' ( '0' .. '9' )*
 			{
 			matchRange('0','9'); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:201:15: ( '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:198:15: ( '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -811,11 +701,11 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = CAPITALIZED_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:205:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:205:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:201:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:201:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
 			{
 			matchRange('A','Z'); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:205:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:201:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -860,10 +750,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:207:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:207:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:203:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:203:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:207:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:203:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -910,8 +800,8 @@ public class VocabSpecLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | ID | INT | CAPITALIZED_ID | WS )
-		int alt5=35;
+		// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | ID | INT | CAPITALIZED_ID | WS )
+		int alt5=30;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
@@ -1097,63 +987,28 @@ public class VocabSpecLexer extends Lexer {
 				}
 				break;
 			case 27 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:164: T__34
-				{
-				mT__34(); 
-
-				}
-				break;
-			case 28 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:170: T__35
-				{
-				mT__35(); 
-
-				}
-				break;
-			case 29 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:176: T__36
-				{
-				mT__36(); 
-
-				}
-				break;
-			case 30 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:182: T__37
-				{
-				mT__37(); 
-
-				}
-				break;
-			case 31 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:188: T__38
-				{
-				mT__38(); 
-
-				}
-				break;
-			case 32 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:194: ID
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:164: ID
 				{
 				mID(); 
 
 				}
 				break;
-			case 33 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:197: INT
+			case 28 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:167: INT
 				{
 				mINT(); 
 
 				}
 				break;
-			case 34 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:201: CAPITALIZED_ID
+			case 29 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:171: CAPITALIZED_ID
 				{
 				mCAPITALIZED_ID(); 
 
 				}
 				break;
-			case 35 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:216: WS
+			case 30 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:1:186: WS
 				{
 				mWS(); 
 
@@ -1166,73 +1021,68 @@ public class VocabSpecLexer extends Lexer {
 
 	protected DFA5 dfa5 = new DFA5(this);
 	static final String DFA5_eotS =
-		"\6\uffff\3\32\1\uffff\16\30\4\uffff\3\32\20\30\3\32\6\30\1\120\15\30\3"+
-		"\32\7\30\1\uffff\2\30\1\152\11\30\1\164\3\32\11\30\1\uffff\11\30\1\uffff"+
-		"\2\32\1\u008c\1\30\1\u008e\3\30\1\u0092\4\30\1\u0098\3\30\1\u009c\3\30"+
-		"\1\u00a0\1\u00a1\1\uffff\1\30\1\uffff\1\30\1\u00a4\1\u00a5\1\uffff\5\30"+
-		"\1\uffff\1\u00ab\1\u00ac\1\30\1\uffff\1\u00ae\1\30\1\u00b0\2\uffff\2\30"+
-		"\2\uffff\1\30\1\u00b4\3\30\2\uffff\1\30\1\uffff\1\u00b9\2\uffff\1\u00ba"+
-		"\1\30\1\uffff\3\30\1\u00bf\2\uffff\4\30\1\uffff\1\u00c4\1\30\1\u00c6\1"+
-		"\30\1\uffff\1\u00c8\1\uffff\1\30\1\uffff\2\30\1\u00cc\1\uffff";
+		"\6\uffff\3\27\1\uffff\13\25\4\uffff\3\27\15\25\3\27\5\25\1\104\11\25\3"+
+		"\27\6\25\1\uffff\1\25\1\130\7\25\3\27\7\25\1\uffff\7\25\2\27\1\163\1\25"+
+		"\1\165\2\25\1\170\3\25\1\175\1\25\1\177\3\25\1\u0083\1\u0084\1\uffff\1"+
+		"\25\1\uffff\1\25\1\u0087\1\uffff\4\25\1\uffff\1\25\1\uffff\1\u008d\1\25"+
+		"\1\u008f\2\uffff\2\25\1\uffff\1\25\1\u0093\3\25\1\uffff\1\u0097\2\uffff"+
+		"\1\u0098\1\25\1\uffff\2\25\1\u009c\2\uffff\3\25\1\uffff\1\u00a0\1\u00a1"+
+		"\1\25\2\uffff\3\25\1\u00a6\1\uffff";
 	static final String DFA5_eofS =
-		"\u00cd\uffff";
+		"\u00a7\uffff";
 	static final String DFA5_minS =
-		"\1\11\5\uffff\1\157\1\156\1\164\1\uffff\1\143\3\157\1\166\1\157\1\145"+
-		"\1\156\1\157\1\156\2\145\1\141\1\151\4\uffff\1\157\1\164\1\162\1\143\1"+
-		"\157\1\155\1\165\1\145\1\162\1\156\1\164\1\156\1\103\1\162\1\147\1\155"+
-		"\1\156\1\157\1\164\1\154\1\145\1\151\1\145\1\151\1\154\1\155\1\142\1\156"+
-		"\1\60\2\145\1\147\1\157\2\151\1\165\1\157\1\160\1\163\1\162\1\165\1\150"+
-		"\1\145\1\147\1\156\1\163\1\157\1\141\1\145\1\141\1\154\1\164\1\uffff\2"+
-		"\162\1\60\1\156\2\157\1\145\1\165\1\154\1\157\1\141\1\143\1\60\1\141\1"+
-		"\145\1\147\1\163\1\156\1\164\1\141\1\156\1\145\1\144\2\141\1\uffff\2\144"+
-		"\1\156\1\163\1\162\1\145\1\162\1\147\1\164\1\uffff\1\156\1\162\1\101\1"+
-		"\145\1\60\1\157\1\156\1\144\1\60\1\162\1\164\1\143\1\151\1\60\1\163\1"+
-		"\164\1\143\1\60\1\163\1\145\1\163\2\101\1\uffff\1\144\1\uffff\1\162\2"+
-		"\60\1\uffff\1\151\1\145\2\164\1\143\1\uffff\2\60\1\145\1\uffff\1\60\1"+
-		"\163\1\60\2\uffff\1\55\1\163\2\uffff\1\166\1\60\2\151\1\163\2\uffff\1"+
-		"\163\1\uffff\1\60\2\uffff\1\60\1\145\1\uffff\2\157\1\145\1\60\2\uffff"+
-		"\4\156\1\uffff\1\60\1\163\1\60\1\163\1\uffff\1\60\1\uffff\1\157\1\uffff"+
-		"\1\162\1\163\1\60\1\uffff";
+		"\1\11\5\uffff\1\157\1\156\1\164\1\uffff\1\143\2\157\1\166\1\157\1\145"+
+		"\1\157\1\156\2\145\1\141\4\uffff\1\157\1\164\1\162\1\143\1\157\1\165\1"+
+		"\145\1\162\2\156\1\103\1\162\1\163\1\155\1\156\1\157\1\154\1\145\1\151"+
+		"\1\145\1\151\1\154\1\142\1\156\1\60\1\145\1\147\1\157\1\151\1\157\1\160"+
+		"\1\163\1\162\1\165\1\145\1\147\1\156\1\163\1\157\1\141\1\145\1\154\1\164"+
+		"\1\uffff\1\162\1\60\1\156\1\157\1\165\1\154\1\157\1\141\1\143\1\141\1"+
+		"\145\1\147\1\163\1\156\1\164\1\141\1\145\1\144\1\141\1\uffff\2\144\1\162"+
+		"\1\145\1\162\1\147\1\164\1\156\1\162\1\101\1\145\1\60\1\157\1\156\1\60"+
+		"\1\162\1\164\1\151\1\60\1\143\1\60\1\163\1\145\1\163\2\101\1\uffff\1\144"+
+		"\1\uffff\1\162\1\60\1\uffff\1\151\1\145\1\164\1\143\1\uffff\1\145\1\uffff"+
+		"\1\60\1\163\1\60\2\uffff\1\55\1\163\1\uffff\1\166\1\60\1\151\2\163\1\uffff"+
+		"\1\60\2\uffff\1\60\1\145\1\uffff\1\157\1\145\1\60\2\uffff\3\156\1\uffff"+
+		"\2\60\1\163\2\uffff\1\157\1\162\1\163\1\60\1\uffff";
 	static final String DFA5_maxS =
-		"\1\172\5\uffff\1\157\1\156\1\164\1\uffff\1\143\3\157\1\166\1\157\1\145"+
-		"\1\156\1\157\1\156\2\145\1\164\1\151\4\uffff\1\157\1\164\1\162\1\164\1"+
-		"\157\1\155\1\165\1\145\1\162\1\156\1\164\1\156\1\103\1\162\1\163\1\155"+
-		"\1\156\1\162\1\164\1\154\1\145\1\151\1\145\1\165\1\154\1\155\1\142\1\156"+
-		"\1\172\2\145\1\147\1\157\2\151\1\165\1\157\1\160\1\163\1\162\1\165\1\150"+
-		"\1\145\1\147\1\156\1\163\1\157\1\141\1\145\1\141\1\154\1\164\1\uffff\2"+
-		"\162\1\172\1\156\2\157\1\145\1\165\1\154\1\157\1\141\1\143\1\172\1\141"+
-		"\1\145\1\147\1\163\1\156\1\164\1\141\1\156\1\145\1\144\2\141\1\uffff\2"+
-		"\144\1\156\1\163\1\162\1\145\1\162\1\147\1\164\1\uffff\1\156\1\162\1\172"+
-		"\1\145\1\172\1\157\1\156\1\144\1\172\1\162\1\164\1\143\1\151\1\172\1\163"+
-		"\1\164\1\143\1\172\1\163\1\145\1\163\2\172\1\uffff\1\144\1\uffff\1\162"+
-		"\2\172\1\uffff\1\151\1\145\2\164\1\143\1\uffff\2\172\1\145\1\uffff\1\172"+
-		"\1\163\1\172\2\uffff\1\55\1\163\2\uffff\1\166\1\172\2\151\1\163\2\uffff"+
-		"\1\163\1\uffff\1\172\2\uffff\1\172\1\145\1\uffff\2\157\1\145\1\172\2\uffff"+
-		"\4\156\1\uffff\1\172\1\163\1\172\1\163\1\uffff\1\172\1\uffff\1\157\1\uffff"+
-		"\1\162\1\163\1\172\1\uffff";
+		"\1\172\5\uffff\1\157\1\156\1\164\1\uffff\1\143\2\157\1\166\1\157\1\145"+
+		"\1\157\1\156\2\145\1\164\4\uffff\1\157\1\164\1\162\1\164\1\157\1\165\1"+
+		"\145\1\162\2\156\1\103\1\162\1\163\1\155\1\156\1\162\1\154\1\145\1\151"+
+		"\1\145\1\165\1\154\1\142\1\156\1\172\1\145\1\147\1\157\1\151\1\157\1\160"+
+		"\1\163\1\162\1\165\1\145\1\147\1\156\1\163\1\157\1\141\1\145\1\154\1\164"+
+		"\1\uffff\1\162\1\172\1\156\1\157\1\165\1\154\1\157\1\141\1\143\1\141\1"+
+		"\145\1\147\1\163\1\156\1\164\1\141\1\145\1\144\1\141\1\uffff\2\144\1\162"+
+		"\1\145\1\162\1\147\1\164\1\156\1\162\1\172\1\145\1\172\1\157\1\156\1\172"+
+		"\1\162\1\164\1\151\1\172\1\143\1\172\1\163\1\145\1\163\2\172\1\uffff\1"+
+		"\144\1\uffff\1\162\1\172\1\uffff\1\151\1\145\1\164\1\143\1\uffff\1\145"+
+		"\1\uffff\1\172\1\163\1\172\2\uffff\1\55\1\163\1\uffff\1\166\1\172\1\151"+
+		"\2\163\1\uffff\1\172\2\uffff\1\172\1\145\1\uffff\1\157\1\145\1\172\2\uffff"+
+		"\3\156\1\uffff\2\172\1\163\2\uffff\1\157\1\162\1\163\1\172\1\uffff";
 	static final String DFA5_acceptS =
-		"\1\uffff\1\1\1\2\1\3\1\4\1\5\3\uffff\1\11\16\uffff\1\40\1\41\1\42\1\43"+
-		"\64\uffff\1\21\31\uffff\1\24\11\uffff\1\37\27\uffff\1\10\1\uffff\1\13"+
-		"\3\uffff\1\17\5\uffff\1\26\3\uffff\1\33\3\uffff\1\6\1\7\2\uffff\1\15\1"+
-		"\16\5\uffff\1\30\1\31\1\uffff\1\34\1\uffff\1\36\1\12\2\uffff\1\22\4\uffff"+
-		"\1\35\1\14\4\uffff\1\32\4\uffff\1\20\1\uffff\1\25\1\uffff\1\23\3\uffff"+
-		"\1\27";
+		"\1\uffff\1\1\1\2\1\3\1\4\1\5\3\uffff\1\11\13\uffff\1\33\1\34\1\35\1\36"+
+		"\53\uffff\1\20\23\uffff\1\22\32\uffff\1\10\1\uffff\1\13\2\uffff\1\16\4"+
+		"\uffff\1\24\1\uffff\1\27\3\uffff\1\6\1\7\2\uffff\1\15\5\uffff\1\30\1\uffff"+
+		"\1\32\1\12\2\uffff\1\21\3\uffff\1\31\1\14\3\uffff\1\26\3\uffff\1\17\1"+
+		"\23\4\uffff\1\25";
 	static final String DFA5_specialS =
-		"\u00cd\uffff}>";
+		"\u00a7\uffff}>";
 	static final String[] DFA5_transitionS = {
-			"\2\33\1\uffff\2\33\22\uffff\1\33\7\uffff\1\1\1\2\2\uffff\1\3\3\uffff"+
-			"\12\31\1\4\1\5\5\uffff\1\32\1\6\6\32\1\7\11\32\1\10\7\32\4\uffff\1\11"+
-			"\1\uffff\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\30\1\21\2\30\1\22\2\30"+
-			"\1\23\1\24\1\30\1\25\1\26\3\30\1\27\3\30",
+			"\2\30\1\uffff\2\30\22\uffff\1\30\7\uffff\1\1\1\2\2\uffff\1\3\3\uffff"+
+			"\12\26\1\4\1\5\5\uffff\1\27\1\6\6\27\1\7\11\27\1\10\7\27\4\uffff\1\11"+
+			"\1\uffff\1\12\1\13\1\25\1\14\1\15\1\16\1\17\4\25\1\20\2\25\1\21\1\22"+
+			"\1\25\1\23\1\24\7\25",
 			"",
 			"",
 			"",
 			"",
+			"",
+			"\1\31",
+			"\1\32",
+			"\1\33",
 			"",
 			"\1\34",
 			"\1\35",
 			"\1\36",
-			"",
 			"\1\37",
 			"\1\40",
 			"\1\41",
@@ -1240,54 +1090,57 @@ public class VocabSpecLexer extends Lexer {
 			"\1\43",
 			"\1\44",
 			"\1\45",
-			"\1\46",
-			"\1\47",
-			"\1\50",
+			"\1\46\3\uffff\1\47\16\uffff\1\50",
+			"",
+			"",
+			"",
+			"",
 			"\1\51",
 			"\1\52",
-			"\1\53\3\uffff\1\54\16\uffff\1\55",
+			"\1\53",
+			"\1\54\20\uffff\1\55",
 			"\1\56",
-			"",
-			"",
-			"",
-			"",
 			"\1\57",
 			"\1\60",
 			"\1\61",
-			"\1\62\20\uffff\1\63",
+			"\1\62",
+			"\1\63",
 			"\1\64",
 			"\1\65",
 			"\1\66",
 			"\1\67",
 			"\1\70",
-			"\1\71",
-			"\1\72",
+			"\1\71\2\uffff\1\72",
 			"\1\73",
 			"\1\74",
 			"\1\75",
-			"\1\76\11\uffff\1\77\1\uffff\1\100",
+			"\1\76",
+			"\1\77\13\uffff\1\100",
 			"\1\101",
 			"\1\102",
-			"\1\103\2\uffff\1\104",
+			"\1\103",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
 			"\1\105",
 			"\1\106",
 			"\1\107",
 			"\1\110",
 			"\1\111",
-			"\1\112\13\uffff\1\113",
+			"\1\112",
+			"\1\113",
 			"\1\114",
 			"\1\115",
 			"\1\116",
 			"\1\117",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
+			"\1\120",
 			"\1\121",
 			"\1\122",
 			"\1\123",
 			"\1\124",
 			"\1\125",
 			"\1\126",
+			"",
 			"\1\127",
-			"\1\130",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
 			"\1\131",
 			"\1\132",
 			"\1\133",
@@ -1303,10 +1156,10 @@ public class VocabSpecLexer extends Lexer {
 			"\1\145",
 			"\1\146",
 			"\1\147",
-			"",
 			"\1\150",
 			"\1\151",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
+			"",
+			"\1\152",
 			"\1\153",
 			"\1\154",
 			"\1\155",
@@ -1315,118 +1168,74 @@ public class VocabSpecLexer extends Lexer {
 			"\1\160",
 			"\1\161",
 			"\1\162",
-			"\1\163",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"\1\165",
+			"\32\27\6\uffff\32\27",
+			"\1\164",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
 			"\1\166",
 			"\1\167",
-			"\1\170",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
 			"\1\171",
 			"\1\172",
 			"\1\173",
-			"\1\174",
-			"\1\175",
+			"\12\25\7\uffff\32\25\6\uffff\10\25\1\174\21\25",
 			"\1\176",
-			"\1\177",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
 			"\1\u0080",
-			"",
 			"\1\u0081",
 			"\1\u0082",
-			"\1\u0083",
-			"\1\u0084",
+			"\32\27\6\uffff\32\27",
+			"\32\27\6\uffff\32\27",
+			"",
 			"\1\u0085",
+			"",
 			"\1\u0086",
-			"\1\u0087",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
+			"",
 			"\1\u0088",
 			"\1\u0089",
-			"",
 			"\1\u008a",
 			"\1\u008b",
-			"\32\32\6\uffff\32\32",
-			"\1\u008d",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"\1\u008f",
+			"",
+			"\1\u008c",
+			"",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
+			"\1\u008e",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
+			"",
+			"",
 			"\1\u0090",
 			"\1\u0091",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"\1\u0093",
+			"",
+			"\1\u0092",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
 			"\1\u0094",
 			"\1\u0095",
 			"\1\u0096",
-			"\12\30\7\uffff\32\30\6\uffff\10\30\1\u0097\21\30",
+			"",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
+			"",
+			"",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
 			"\1\u0099",
+			"",
 			"\1\u009a",
 			"\1\u009b",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
+			"",
+			"",
 			"\1\u009d",
 			"\1\u009e",
 			"\1\u009f",
-			"\32\32\6\uffff\32\32",
-			"\32\32\6\uffff\32\32",
 			"",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
 			"\1\u00a2",
 			"",
+			"",
 			"\1\u00a3",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"",
-			"\1\u00a6",
-			"\1\u00a7",
-			"\1\u00a8",
-			"\1\u00a9",
-			"\1\u00aa",
-			"",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"\1\u00ad",
-			"",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"\1\u00af",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"",
-			"",
-			"\1\u00b1",
-			"\1\u00b2",
-			"",
-			"",
-			"\1\u00b3",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"\1\u00b5",
-			"\1\u00b6",
-			"\1\u00b7",
-			"",
-			"",
-			"\1\u00b8",
-			"",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"",
-			"",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"\1\u00bb",
-			"",
-			"\1\u00bc",
-			"\1\u00bd",
-			"\1\u00be",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"",
-			"",
-			"\1\u00c0",
-			"\1\u00c1",
-			"\1\u00c2",
-			"\1\u00c3",
-			"",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"\1\u00c5",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"\1\u00c7",
-			"",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
-			"",
-			"\1\u00c9",
-			"",
-			"\1\u00ca",
-			"\1\u00cb",
-			"\12\30\7\uffff\32\30\6\uffff\32\30",
+			"\1\u00a4",
+			"\1\u00a5",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
 			""
 	};
 
@@ -1461,7 +1270,7 @@ public class VocabSpecLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | ID | INT | CAPITALIZED_ID | WS );";
+			return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | ID | INT | CAPITALIZED_ID | WS );";
 		}
 	}
 
