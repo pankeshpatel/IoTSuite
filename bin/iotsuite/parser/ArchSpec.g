@@ -63,7 +63,7 @@ agg_cs_def:
     (csConsumeInfo_def ';')* 
     (csOperation_def ';')*
     (csGeneratedInfoForAggregator_def ';')*
-    (partition_def ';')+  
+    (partition_def ';')+   
     {  
      context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
      context.currentComputationalService.createCSObject();

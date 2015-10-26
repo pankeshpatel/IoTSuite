@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g 2015-10-27 00:49:55
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g 2015-10-27 01:00:17
 
 package iotsuite.parser;
 import iotsuite.compiler.*; 
@@ -605,7 +605,7 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:76:16: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+ )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:78:1: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+
 			{
-			CAPITALIZED_ID5=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_coordinator_def354); 
+			CAPITALIZED_ID5=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_coordinator_def355); 
 			 
 			     context.currentComputationalService = new ComputationalServiceCompiler(); 
 			     context.currentMappingConstraint.setSoftwareComponentName((CAPITALIZED_ID5!=null?CAPITALIZED_ID5.getText():null));
@@ -622,11 +622,11 @@ public class ArchSpecParser extends Parser {
 				case 1 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:82:6: csConsumeInfo_def ';'
 					{
-					pushFollow(FOLLOW_csConsumeInfo_def_in_coordinator_def368);
+					pushFollow(FOLLOW_csConsumeInfo_def_in_coordinator_def369);
 					csConsumeInfo_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_coordinator_def370); 
+					match(input,12,FOLLOW_12_in_coordinator_def371); 
 					}
 					break;
 
@@ -648,11 +648,11 @@ public class ArchSpecParser extends Parser {
 				case 1 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:83:6: csRequest_def ';'
 					{
-					pushFollow(FOLLOW_csRequest_def_in_coordinator_def380);
+					pushFollow(FOLLOW_csRequest_def_in_coordinator_def381);
 					csRequest_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_coordinator_def382); 
+					match(input,12,FOLLOW_12_in_coordinator_def383); 
 					}
 					break;
 
@@ -674,11 +674,11 @@ public class ArchSpecParser extends Parser {
 				case 1 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:84:8: csGeneratedInfo_def ';'
 					{
-					pushFollow(FOLLOW_csGeneratedInfo_def_in_coordinator_def393);
+					pushFollow(FOLLOW_csGeneratedInfo_def_in_coordinator_def394);
 					csGeneratedInfo_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_coordinator_def395); 
+					match(input,12,FOLLOW_12_in_coordinator_def396); 
 					}
 					break;
 
@@ -701,11 +701,11 @@ public class ArchSpecParser extends Parser {
 				case 1 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:85:5: partition_def ';'
 					{
-					pushFollow(FOLLOW_partition_def_in_coordinator_def403);
+					pushFollow(FOLLOW_partition_def_in_coordinator_def404);
 					partition_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_coordinator_def405); 
+					match(input,12,FOLLOW_12_in_coordinator_def406); 
 					}
 					break;
 
@@ -749,7 +749,7 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:96:15: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+ )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:98:2: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+
 			{
-			CAPITALIZED_ID6=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_controller_def425); 
+			CAPITALIZED_ID6=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_controller_def426); 
 			 
 			     context.currentComputationalService = new ComputationalServiceCompiler(); 
 			     context.currentMappingConstraint.setSoftwareComponentName((CAPITALIZED_ID6!=null?CAPITALIZED_ID6.getText():null));
@@ -766,11 +766,11 @@ public class ArchSpecParser extends Parser {
 				case 1 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:102:6: csConsumeInfo_def ';'
 					{
-					pushFollow(FOLLOW_csConsumeInfo_def_in_controller_def439);
+					pushFollow(FOLLOW_csConsumeInfo_def_in_controller_def440);
 					csConsumeInfo_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_controller_def441); 
+					match(input,12,FOLLOW_12_in_controller_def442); 
 					}
 					break;
 
@@ -792,11 +792,11 @@ public class ArchSpecParser extends Parser {
 				case 1 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:103:6: cntrlCommand_def ';'
 					{
-					pushFollow(FOLLOW_cntrlCommand_def_in_controller_def451);
+					pushFollow(FOLLOW_cntrlCommand_def_in_controller_def452);
 					cntrlCommand_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_controller_def453); 
+					match(input,12,FOLLOW_12_in_controller_def454); 
 					}
 					break;
 
@@ -819,11 +819,11 @@ public class ArchSpecParser extends Parser {
 				case 1 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:104:6: partition_def ';'
 					{
-					pushFollow(FOLLOW_partition_def_in_controller_def465);
+					pushFollow(FOLLOW_partition_def_in_controller_def466);
 					partition_def();
 					state._fsp--;
 
-					match(input,12,FOLLOW_12_in_controller_def467); 
+					match(input,12,FOLLOW_12_in_controller_def468); 
 					}
 					break;
 
@@ -868,12 +868,12 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:115:17: ( 'COMPUTE(' CAPITALIZED_ID '_BY_SAMPLE' ',' INT ')' )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:116:5: 'COMPUTE(' CAPITALIZED_ID '_BY_SAMPLE' ',' INT ')'
 			{
-			match(input,15,FOLLOW_15_in_csOperation_def492); 
-			CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csOperation_def494); 
-			match(input,20,FOLLOW_20_in_csOperation_def495); 
-			match(input,10,FOLLOW_10_in_csOperation_def497); 
-			INT8=(Token)match(input,INT,FOLLOW_INT_in_csOperation_def499); 
-			match(input,9,FOLLOW_9_in_csOperation_def501); 
+			match(input,15,FOLLOW_15_in_csOperation_def493); 
+			CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csOperation_def495); 
+			match(input,20,FOLLOW_20_in_csOperation_def496); 
+			match(input,10,FOLLOW_10_in_csOperation_def498); 
+			INT8=(Token)match(input,INT,FOLLOW_INT_in_csOperation_def500); 
+			match(input,9,FOLLOW_9_in_csOperation_def502); 
 			 context.currentComputationalService.addOperation((CAPITALIZED_ID7!=null?CAPITALIZED_ID7.getText():null),(INT8!=null?INT8.getText():null));  
 			}
 
@@ -900,13 +900,13 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:120:33: ( 'generate' lc_id ':' CAPITALIZED_ID )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:121:2: 'generate' lc_id ':' CAPITALIZED_ID
 			{
-			match(input,27,FOLLOW_27_in_csGeneratedInfoForAggregator_def522); 
-			pushFollow(FOLLOW_lc_id_in_csGeneratedInfoForAggregator_def524);
+			match(input,27,FOLLOW_27_in_csGeneratedInfoForAggregator_def523); 
+			pushFollow(FOLLOW_lc_id_in_csGeneratedInfoForAggregator_def525);
 			lc_id9=lc_id();
 			state._fsp--;
 
-			match(input,11,FOLLOW_11_in_csGeneratedInfoForAggregator_def526); 
-			CAPITALIZED_ID10=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csGeneratedInfoForAggregator_def529); 
+			match(input,11,FOLLOW_11_in_csGeneratedInfoForAggregator_def527); 
+			CAPITALIZED_ID10=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csGeneratedInfoForAggregator_def530); 
 			 
 			    context.currentComputationalService.addGeneratedInfo((lc_id9!=null?input.toString(lc_id9.start,lc_id9.stop):null), (CAPITALIZED_ID10!=null?CAPITALIZED_ID10.getText():null)); 
 			    context.constructSymbTable((lc_id9!=null?input.toString(lc_id9.start,lc_id9.stop):null), (CAPITALIZED_ID10!=null?CAPITALIZED_ID10.getText():null));
@@ -938,13 +938,13 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:131:20: ( 'generate' lc_id ':' CAPITALIZED_ID )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:132:5: 'generate' lc_id ':' CAPITALIZED_ID
 			{
-			match(input,27,FOLLOW_27_in_csGeneratedInfo_def548); 
-			pushFollow(FOLLOW_lc_id_in_csGeneratedInfo_def550);
+			match(input,27,FOLLOW_27_in_csGeneratedInfo_def549); 
+			pushFollow(FOLLOW_lc_id_in_csGeneratedInfo_def551);
 			lc_id11=lc_id();
 			state._fsp--;
 
-			match(input,11,FOLLOW_11_in_csGeneratedInfo_def552); 
-			CAPITALIZED_ID12=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def555); 
+			match(input,11,FOLLOW_11_in_csGeneratedInfo_def553); 
+			CAPITALIZED_ID12=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def556); 
 			 context.currentComputationalService.addGeneratedInfo((lc_id11!=null?input.toString(lc_id11.start,lc_id11.stop):null), (CAPITALIZED_ID12!=null?CAPITALIZED_ID12.getText():null)); 
 			    context.constructSymbTable((lc_id11!=null?input.toString(lc_id11.start,lc_id11.stop):null), (CAPITALIZED_ID12!=null?CAPITALIZED_ID12.getText():null));
 			    context.constructGUISymblTable((lc_id11!=null?input.toString(lc_id11.start,lc_id11.stop):null), (CAPITALIZED_ID12!=null?CAPITALIZED_ID12.getText():null));
@@ -973,13 +973,13 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:139:18: ( 'consume' lc_id 'from' CAPITALIZED_ID )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:141:5: 'consume' lc_id 'from' CAPITALIZED_ID
 			{
-			match(input,24,FOLLOW_24_in_csConsumeInfo_def583); 
-			pushFollow(FOLLOW_lc_id_in_csConsumeInfo_def585);
+			match(input,24,FOLLOW_24_in_csConsumeInfo_def584); 
+			pushFollow(FOLLOW_lc_id_in_csConsumeInfo_def586);
 			lc_id13=lc_id();
 			state._fsp--;
 
-			match(input,26,FOLLOW_26_in_csConsumeInfo_def588); 
-			match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def591); 
+			match(input,26,FOLLOW_26_in_csConsumeInfo_def589); 
+			match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def592); 
 			 context.currentComputationalService.addConsumedInfo((lc_id13!=null?input.toString(lc_id13.start,lc_id13.stop):null));    
 			   
 			}
@@ -1006,13 +1006,13 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:146:15: ( 'request' lc_id 'to' CAPITALIZED_ID )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:147:4: 'request' lc_id 'to' CAPITALIZED_ID
 			{
-			match(input,30,FOLLOW_30_in_csRequest_def619); 
-			pushFollow(FOLLOW_lc_id_in_csRequest_def621);
+			match(input,30,FOLLOW_30_in_csRequest_def620); 
+			pushFollow(FOLLOW_lc_id_in_csRequest_def622);
 			lc_id14=lc_id();
 			state._fsp--;
 
-			match(input,33,FOLLOW_33_in_csRequest_def623); 
-			match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csRequest_def625); 
+			match(input,33,FOLLOW_33_in_csRequest_def624); 
+			match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csRequest_def626); 
 			 context.currentComputationalService.getDataAccessListFromSymblTable((lc_id14!=null?input.toString(lc_id14.start,lc_id14.stop):null));
 			}
 
@@ -1038,9 +1038,9 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:152:18: ( 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' CAPITALIZED_ID )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:154:6: 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' CAPITALIZED_ID
 			{
-			match(input,22,FOLLOW_22_in_cntrlCommand_def652); 
-			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def659); 
-			match(input,8,FOLLOW_8_in_cntrlCommand_def661); 
+			match(input,22,FOLLOW_22_in_cntrlCommand_def653); 
+			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def660); 
+			match(input,8,FOLLOW_8_in_cntrlCommand_def662); 
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:154:43: ( cntrlParameter_def )?
 			int alt21=2;
 			int LA21_0 = input.LA(1);
@@ -1051,7 +1051,7 @@ public class ArchSpecParser extends Parser {
 				case 1 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:154:44: cntrlParameter_def
 					{
-					pushFollow(FOLLOW_cntrlParameter_def_in_cntrlCommand_def664);
+					pushFollow(FOLLOW_cntrlParameter_def_in_cntrlCommand_def665);
 					cntrlParameter_def();
 					state._fsp--;
 
@@ -1060,9 +1060,9 @@ public class ArchSpecParser extends Parser {
 
 			}
 
-			match(input,9,FOLLOW_9_in_cntrlCommand_def668); 
-			match(input,33,FOLLOW_33_in_cntrlCommand_def670); 
-			match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def673); 
+			match(input,9,FOLLOW_9_in_cntrlCommand_def669); 
+			match(input,33,FOLLOW_33_in_cntrlCommand_def671); 
+			match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def674); 
 			 
 			      context.currentComputationalService.addCommand((name!=null?name.getText():null));  
 			    
@@ -1090,7 +1090,7 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:160:20: ( lc_id )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:161:5: lc_id
 			{
-			pushFollow(FOLLOW_lc_id_in_cntrlParameter_def692);
+			pushFollow(FOLLOW_lc_id_in_cntrlParameter_def693);
 			lc_id15=lc_id();
 			state._fsp--;
 
@@ -1120,9 +1120,9 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:165:14: (csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:166:5: csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID
 			{
-			csDeploymentConstraint=(Token)match(input,29,FOLLOW_29_in_partition_def720); 
-			match(input,11,FOLLOW_11_in_partition_def722); 
-			CAPITALIZED_ID16=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_partition_def724); 
+			csDeploymentConstraint=(Token)match(input,29,FOLLOW_29_in_partition_def721); 
+			match(input,11,FOLLOW_11_in_partition_def723); 
+			CAPITALIZED_ID16=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_partition_def725); 
 			 
 			    context.currentComputationalService.addPartitionAttribute((CAPITALIZED_ID16!=null?CAPITALIZED_ID16.getText():null));   
 			    context.currentMappingConstraint.setAttributeName((csDeploymentConstraint!=null?csDeploymentConstraint.getText():null));  
@@ -1156,7 +1156,7 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:174:6: ( ID )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:174:8: ID
 			{
-			match(input,ID,FOLLOW_ID_in_lc_id742); 
+			match(input,ID,FOLLOW_ID_in_lc_id743); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -1188,7 +1188,7 @@ public class ArchSpecParser extends Parser {
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:177:9: ( primitiveType )
 			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:178:3: primitiveType
 			{
-			pushFollow(FOLLOW_primitiveType_in_dataType756);
+			pushFollow(FOLLOW_primitiveType_in_dataType757);
 			primitiveType();
 			state._fsp--;
 
@@ -1261,37 +1261,37 @@ public class ArchSpecParser extends Parser {
 				case 1 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:182:4: id= 'Integer'
 					{
-					id=(Token)match(input,18,FOLLOW_18_in_primitiveType771); 
+					id=(Token)match(input,18,FOLLOW_18_in_primitiveType772); 
 					}
 					break;
 				case 2 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:182:19: id= 'Boolean'
 					{
-					id=(Token)match(input,14,FOLLOW_14_in_primitiveType777); 
+					id=(Token)match(input,14,FOLLOW_14_in_primitiveType778); 
 					}
 					break;
 				case 3 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:182:34: id= 'String'
 					{
-					id=(Token)match(input,19,FOLLOW_19_in_primitiveType783); 
+					id=(Token)match(input,19,FOLLOW_19_in_primitiveType784); 
 					}
 					break;
 				case 4 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:182:49: id= 'double'
 					{
-					id=(Token)match(input,25,FOLLOW_25_in_primitiveType792); 
+					id=(Token)match(input,25,FOLLOW_25_in_primitiveType793); 
 					}
 					break;
 				case 5 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:182:65: id= 'long'
 					{
-					id=(Token)match(input,28,FOLLOW_28_in_primitiveType800); 
+					id=(Token)match(input,28,FOLLOW_28_in_primitiveType801); 
 					}
 					break;
 				case 6 :
 					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:182:79: id= 'boolean'
 					{
-					id=(Token)match(input,21,FOLLOW_21_in_primitiveType806); 
+					id=(Token)match(input,21,FOLLOW_21_in_primitiveType807); 
 					}
 					break;
 
@@ -1347,61 +1347,61 @@ public class ArchSpecParser extends Parser {
 	public static final BitSet FOLLOW_12_in_agg_cs_def324 = new BitSet(new long[]{0x0000000028000000L});
 	public static final BitSet FOLLOW_partition_def_in_agg_cs_def333 = new BitSet(new long[]{0x0000000000001000L});
 	public static final BitSet FOLLOW_12_in_agg_cs_def335 = new BitSet(new long[]{0x0000000020000002L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_coordinator_def354 = new BitSet(new long[]{0x0000000069000000L});
-	public static final BitSet FOLLOW_csConsumeInfo_def_in_coordinator_def368 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_coordinator_def370 = new BitSet(new long[]{0x0000000069000000L});
-	public static final BitSet FOLLOW_csRequest_def_in_coordinator_def380 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_coordinator_def382 = new BitSet(new long[]{0x0000000068000000L});
-	public static final BitSet FOLLOW_csGeneratedInfo_def_in_coordinator_def393 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_coordinator_def395 = new BitSet(new long[]{0x0000000028000000L});
-	public static final BitSet FOLLOW_partition_def_in_coordinator_def403 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_coordinator_def405 = new BitSet(new long[]{0x0000000020000002L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_controller_def425 = new BitSet(new long[]{0x0000000021400000L});
-	public static final BitSet FOLLOW_csConsumeInfo_def_in_controller_def439 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_controller_def441 = new BitSet(new long[]{0x0000000021400000L});
-	public static final BitSet FOLLOW_cntrlCommand_def_in_controller_def451 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_controller_def453 = new BitSet(new long[]{0x0000000020400000L});
-	public static final BitSet FOLLOW_partition_def_in_controller_def465 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_12_in_controller_def467 = new BitSet(new long[]{0x0000000020000002L});
-	public static final BitSet FOLLOW_15_in_csOperation_def492 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csOperation_def494 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_20_in_csOperation_def495 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_10_in_csOperation_def497 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_INT_in_csOperation_def499 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_9_in_csOperation_def501 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_27_in_csGeneratedInfoForAggregator_def522 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_csGeneratedInfoForAggregator_def524 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_csGeneratedInfoForAggregator_def526 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csGeneratedInfoForAggregator_def529 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_27_in_csGeneratedInfo_def548 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_csGeneratedInfo_def550 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_csGeneratedInfo_def552 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def555 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_24_in_csConsumeInfo_def583 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_csConsumeInfo_def585 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_csConsumeInfo_def588 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def591 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_30_in_csRequest_def619 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_lc_id_in_csRequest_def621 = new BitSet(new long[]{0x0000000200000000L});
-	public static final BitSet FOLLOW_33_in_csRequest_def623 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csRequest_def625 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_22_in_cntrlCommand_def652 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def659 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_8_in_cntrlCommand_def661 = new BitSet(new long[]{0x0000000000000220L});
-	public static final BitSet FOLLOW_cntrlParameter_def_in_cntrlCommand_def664 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_9_in_cntrlCommand_def668 = new BitSet(new long[]{0x0000000200000000L});
-	public static final BitSet FOLLOW_33_in_cntrlCommand_def670 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def673 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lc_id_in_cntrlParameter_def692 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_29_in_partition_def720 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_partition_def722 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_partition_def724 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_lc_id742 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_primitiveType_in_dataType756 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_18_in_primitiveType771 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_14_in_primitiveType777 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_19_in_primitiveType783 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_25_in_primitiveType792 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_28_in_primitiveType800 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_21_in_primitiveType806 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_coordinator_def355 = new BitSet(new long[]{0x0000000069000000L});
+	public static final BitSet FOLLOW_csConsumeInfo_def_in_coordinator_def369 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_coordinator_def371 = new BitSet(new long[]{0x0000000069000000L});
+	public static final BitSet FOLLOW_csRequest_def_in_coordinator_def381 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_coordinator_def383 = new BitSet(new long[]{0x0000000068000000L});
+	public static final BitSet FOLLOW_csGeneratedInfo_def_in_coordinator_def394 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_coordinator_def396 = new BitSet(new long[]{0x0000000028000000L});
+	public static final BitSet FOLLOW_partition_def_in_coordinator_def404 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_coordinator_def406 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_controller_def426 = new BitSet(new long[]{0x0000000021400000L});
+	public static final BitSet FOLLOW_csConsumeInfo_def_in_controller_def440 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_controller_def442 = new BitSet(new long[]{0x0000000021400000L});
+	public static final BitSet FOLLOW_cntrlCommand_def_in_controller_def452 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_controller_def454 = new BitSet(new long[]{0x0000000020400000L});
+	public static final BitSet FOLLOW_partition_def_in_controller_def466 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_12_in_controller_def468 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_15_in_csOperation_def493 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csOperation_def495 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_20_in_csOperation_def496 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_10_in_csOperation_def498 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_INT_in_csOperation_def500 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_csOperation_def502 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_27_in_csGeneratedInfoForAggregator_def523 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_csGeneratedInfoForAggregator_def525 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_csGeneratedInfoForAggregator_def527 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csGeneratedInfoForAggregator_def530 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_27_in_csGeneratedInfo_def549 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_csGeneratedInfo_def551 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_csGeneratedInfo_def553 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def556 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_24_in_csConsumeInfo_def584 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_csConsumeInfo_def586 = new BitSet(new long[]{0x0000000004000000L});
+	public static final BitSet FOLLOW_26_in_csConsumeInfo_def589 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def592 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_30_in_csRequest_def620 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_lc_id_in_csRequest_def622 = new BitSet(new long[]{0x0000000200000000L});
+	public static final BitSet FOLLOW_33_in_csRequest_def624 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_csRequest_def626 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_22_in_cntrlCommand_def653 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def660 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_8_in_cntrlCommand_def662 = new BitSet(new long[]{0x0000000000000220L});
+	public static final BitSet FOLLOW_cntrlParameter_def_in_cntrlCommand_def665 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_cntrlCommand_def669 = new BitSet(new long[]{0x0000000200000000L});
+	public static final BitSet FOLLOW_33_in_cntrlCommand_def671 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def674 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_lc_id_in_cntrlParameter_def693 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_29_in_partition_def721 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_partition_def723 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_partition_def725 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_lc_id743 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_primitiveType_in_dataType757 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_18_in_primitiveType772 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_14_in_primitiveType778 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_19_in_primitiveType784 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_25_in_primitiveType793 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_28_in_primitiveType801 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_21_in_primitiveType807 = new BitSet(new long[]{0x0000000000000002L});
 }
