@@ -69,8 +69,6 @@ structField_def:
   lc_id ':' dataType 
   { 
     context.currentStruct.addField($lc_id.text, $dataType.text);
-   //context.constructStructureSymbTable($lc_id.text,$dataType.text);
-   //context.constructStructResponseTypeSymblTable($lc_id.text,$dataType.text);
    context.constructStructFieldSymblTable($lc_id.text,$dataType.text);
     context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
 ; 
@@ -80,7 +78,6 @@ structField_def:
 abilities_def : 
   // 'periodicsensors' ':'   (sensor_def)+
   ('sensors' ':'   sensor_def)+
- // 'actuators' ':' (actuator_def)+
    ('actuators' ':' actuator_def)*
   ('storages'  ':' ss_def)*
   ('interactions' ':' (gui_def)+ )*     
@@ -93,14 +90,9 @@ abilities_def :
 sensor_def:
  
       ('periodicsensors' ':'(periodicsensor_def)*)*
-     // 'periodicsensors' ':' (periodicsensor_def|eventsensor_def)
-     //'sensor_def' ':' (periodicsensor_def | eventsensor_def )+ 
+
       ('eventdriven' ':' (eventsensor_def)*)*
-   /* CAPITALIZED_ID
-    {context.currentSensor = new SensorCompiler($CAPITALIZED_ID.text);}
-    (sensorMeasurement_def ';')* 
-    (sensorperiodicMeasurement_def ';')*
-    {context.currentSensor.generateSensorCode();}*/
+
 ; 
 
 periodicsensor_def:
@@ -169,7 +161,6 @@ context.currentSensor.addSensorMeasurementSampleDuration($INT.text);
  
 
 sensoreventMeasurement_def: 
-//('onCondition' ID ',' ID)*
 ('onCondition' (ID |',' ID)*)*
 
 ;
@@ -215,7 +206,6 @@ parameter_def :
 ss_def:
   CAPITALIZED_ID
     { context.currentStorageService = new StorageCompiler();
-      //context.currentStorageService = new Storage($CAPITALIZED_ID.text);
       }
    
     (storageDataAccess_def ';')* 
@@ -224,8 +214,6 @@ ss_def:
      context.currentStorageService.setStorageServiceName($CAPITALIZED_ID.text);
      context.currentStorageService.createStorageObject();
      context.currentStorageService.generateStorageCode(); 
-    // context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
-    // context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
      }
 ; 
  
@@ -253,22 +241,7 @@ storagedataIndex_def:
         context.constructStorageInfoSymblTable($lc_id.text, $dataType.text);
         
          }
-;  
-
-/*storagePartition_def :
-    storageDeploymentConstraint = 'deployment-instance' ':' storageDeploymentConstraintValue = 'singleton'
-    {
-     
-     // Next two lines are for  Mapping constraints
-    context.currentMappingConstraint.setAttributeName($storageDeploymentConstraint.text);  
-    context.currentMappingConstraint.setAttributeValue($storageDeploymentConstraintValue.text);  
-    } 
-; */
-
-// Storage Definition *** End 
-//************************************************************************************************
-
-
+;
 
 lc_id: ID  
 ;
@@ -335,19 +308,13 @@ gui_action_def:
     { context.currentGUI.addAction($name.text, $ui.text ); } 
 ;
 
-
-//gui_action_def:
-//    'action' name = CAPITALIZED_ID '(' (gui_action_parameter_def)? ')' 'with' ui = lc_id 
-//    { context.currentGUI.addAction($name.text, $ui.text ); } 
-//;
-
 gui_action_parameter_def :
     lc_id ':'  CAPITALIZED_ID (',' gui_action_parameter_def )?
     { 
     context.currentGUI.addActionParameter($lc_id.text, $CAPITALIZED_ID.text); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     }
-; 
+;  
 
 gui_request_def :
    'request' lc_id 
@@ -356,35 +323,6 @@ gui_request_def :
 ;
 
 
-
-//gui_request_def :
-//   'request' lc_id 'with' button = bt_id ',' textbox = txtbx_id ',' textview = txtview_id 
-//   { context.currentGUI.getDataAccessListFromSymblTable($lc_id.text);
-//     context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
-//;
-
-
-
-
-//gui_command_def :
-//    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')' 'with' button = lc_id (',' textbox = lc_id)?  
-//    { 
-//      context.currentGUI.addCommand($name.text,new Widget($textbox.text,$button.text,""));  
-//    }
-//;
-
-//TODO  : need discussion on request-response 
-//For  request response, a user needs the following three components
-//  1. TextBox to enter data.
-//  2. Button to made a request.
-//  3. TextView to view the response.
-
-//gui_request_def :
-//   'request' lc_id 'with' button = bt_id ',' textbox = txtbx_id ',' textview = txtview_id 
-//   { context.currentGUI.getDataAccessListFromSymblTable($lc_id.text);
-//     context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
-//;
-
 bt_id :  ID ;
 
 txtbx_id :  ID ;
@@ -392,43 +330,3 @@ txtbx_id :  ID ;
 txtview_id :  ID ;
 
  
-//req_ui_parameter :
-//    textbox = CAPITALIZED_ID button = CAPITALIZED_ID textview = CAPITALIZED_ID 
-//    {context.currentGUI.setReqWidget($textbox.text,$button.text,$textview.text);}
-//;
-
- 
-
-// EndUSerGUI Definition *** End 
-//************************************************************************************************
-
-
-// Widget Definition *** Start 
-//************************************************************************************************
-// This is a part of future work.
-
-widget_def :
-    ('TextView' textview_def ';')*
-    ('Button'  button_def ';')*
-    ('TextBox' textbox_def ';')*
-
-  //('TextView' textview = lc_id )* ';'
-  //('Button'  button = lc_id)* ';'
-  //('TextBox' textbox = lc_id)* ';'
-;
-
-textview_def :
-    lc_id  (',' textview_def)?
-;
-
-button_def :
-    lc_id  (',' button_def)? 
-;
-
-textbox_def :
-    lc_id (',' textbox_def)?
-;
-
-// Widget Definition *** End 
-//************************************************************************************************
-

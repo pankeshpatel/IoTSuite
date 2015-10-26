@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-10-26 18:44:39
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-10-26 23:13:41
 
   package iotsuite.parser; 
   
@@ -52,15 +52,15 @@ public class InteractionSpecLexer extends Lexer {
 	public InteractionSpecLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g"; }
+	@Override public String getGrammarFileName() { return "C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g"; }
 
 	// $ANTLR start "T__8"
 	public final void mT__8() throws RecognitionException {
 		try {
 			int _type = T__8;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:12:6: ( '(' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:12:8: '('
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:12:6: ( '(' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:12:8: '('
 			{
 			match('('); 
 			}
@@ -79,8 +79,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__9;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:13:6: ( ')' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:13:8: ')'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:13:6: ( ')' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:13:8: ')'
 			{
 			match(')'); 
 			}
@@ -99,8 +99,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:14:7: ( ',' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:14:9: ','
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:14:7: ( ',' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:14:9: ','
 			{
 			match(','); 
 			}
@@ -119,8 +119,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__11;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:15:7: ( ':' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:15:9: ':'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:15:7: ( ':' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:15:9: ':'
 			{
 			match(':'); 
 			}
@@ -139,8 +139,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__12;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:16:7: ( ';' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:16:9: ';'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:16:7: ( ';' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:16:9: ';'
 			{
 			match(';'); 
 			}
@@ -159,8 +159,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:17:7: ( 'Boolean' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:17:9: 'Boolean'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:17:7: ( 'Boolean' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:17:9: 'Boolean'
 			{
 			match("Boolean"); 
 
@@ -180,8 +180,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__14;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:18:7: ( 'Button' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:18:9: 'Button'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:18:7: ( 'Button' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:18:9: 'Button'
 			{
 			match("Button"); 
 
@@ -201,8 +201,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:19:7: ( 'Integer' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:19:9: 'Integer'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:19:7: ( 'Integer' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:19:9: 'Integer'
 			{
 			match("Integer"); 
 
@@ -222,8 +222,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:20:7: ( 'String' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:20:9: 'String'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:20:7: ( 'String' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:20:9: 'String'
 			{
 			match("String"); 
 
@@ -243,8 +243,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__17;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:21:7: ( 'TextBox' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:21:9: 'TextBox'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:21:7: ( 'TextBox' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:21:9: 'TextBox'
 			{
 			match("TextBox"); 
 
@@ -264,8 +264,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:22:7: ( 'TextView' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:22:9: 'TextView'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:22:7: ( 'TextView' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:22:9: 'TextView'
 			{
 			match("TextView"); 
 
@@ -285,8 +285,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__19;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:23:7: ( 'action' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:23:9: 'action'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:23:7: ( 'action' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:23:9: 'action'
 			{
 			match("action"); 
 
@@ -306,8 +306,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:7: ( 'boolean' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:9: 'boolean'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:7: ( 'boolean' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:9: 'boolean'
 			{
 			match("boolean"); 
 
@@ -327,8 +327,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:25:7: ( 'command' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:25:9: 'command'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:25:7: ( 'command' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:25:9: 'command'
 			{
 			match("command"); 
 
@@ -348,8 +348,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:26:7: ( 'double' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:26:9: 'double'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:26:7: ( 'double' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:26:9: 'double'
 			{
 			match("double"); 
 
@@ -369,8 +369,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:27:7: ( 'long' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:27:9: 'long'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:27:7: ( 'long' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:27:9: 'long'
 			{
 			match("long"); 
 
@@ -390,8 +390,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:7: ( 'notify' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:9: 'notify'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:7: ( 'notify' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:9: 'notify'
 			{
 			match("notify"); 
 
@@ -411,8 +411,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__25;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:7: ( 'request' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:9: 'request'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:7: ( 'request' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:9: 'request'
 			{
 			match("request"); 
 
@@ -432,8 +432,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:7: ( 'resources' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:9: 'resources'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:7: ( 'resources' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:9: 'resources'
 			{
 			match("resources"); 
 
@@ -453,8 +453,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__27;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:7: ( 'structs' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:9: 'structs'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:7: ( 'structs' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:9: 'structs'
 			{
 			match("structs"); 
 
@@ -474,8 +474,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__28;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:7: ( 'userinteractions' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:9: 'userinteractions'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:7: ( 'userinteractions' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:9: 'userinteractions'
 			{
 			match("userinteractions"); 
 
@@ -495,8 +495,8 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__29;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:7: ( 'with' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:9: 'with'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:7: ( 'with' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:9: 'with'
 			{
 			match("with"); 
 
@@ -516,11 +516,11 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:60:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:60:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:60:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:60:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			matchRange('a','z'); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:60:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:60:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -531,7 +531,7 @@ public class InteractionSpecLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -565,11 +565,11 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:63:5: ( '0' .. '9' ( '0' .. '9' )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:63:7: '0' .. '9' ( '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:63:5: ( '0' .. '9' ( '0' .. '9' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:63:7: '0' .. '9' ( '0' .. '9' )*
 			{
 			matchRange('0','9'); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:63:15: ( '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:63:15: ( '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -580,7 +580,7 @@ public class InteractionSpecLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -614,11 +614,11 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = CAPITALIZED_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:65:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:65:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:65:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:65:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
 			{
 			matchRange('A','Z'); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:65:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:65:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -629,7 +629,7 @@ public class InteractionSpecLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:
 					{
 					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -663,10 +663,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:67:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:67:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:67:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:67:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:67:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:67:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -678,7 +678,7 @@ public class InteractionSpecLexer extends Lexer {
 
 				switch (alt4) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
 						input.consume();
@@ -713,187 +713,187 @@ public class InteractionSpecLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | ID | INT | CAPITALIZED_ID | WS )
+		// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | ID | INT | CAPITALIZED_ID | WS )
 		int alt5=26;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:10: T__8
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:10: T__8
 				{
 				mT__8(); 
 
 				}
 				break;
 			case 2 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:15: T__9
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:15: T__9
 				{
 				mT__9(); 
 
 				}
 				break;
 			case 3 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:20: T__10
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:20: T__10
 				{
 				mT__10(); 
 
 				}
 				break;
 			case 4 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:26: T__11
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:26: T__11
 				{
 				mT__11(); 
 
 				}
 				break;
 			case 5 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:32: T__12
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:32: T__12
 				{
 				mT__12(); 
 
 				}
 				break;
 			case 6 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:38: T__13
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:38: T__13
 				{
 				mT__13(); 
 
 				}
 				break;
 			case 7 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:44: T__14
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:44: T__14
 				{
 				mT__14(); 
 
 				}
 				break;
 			case 8 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:50: T__15
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:50: T__15
 				{
 				mT__15(); 
 
 				}
 				break;
 			case 9 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:56: T__16
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:56: T__16
 				{
 				mT__16(); 
 
 				}
 				break;
 			case 10 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:62: T__17
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:62: T__17
 				{
 				mT__17(); 
 
 				}
 				break;
 			case 11 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:68: T__18
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:68: T__18
 				{
 				mT__18(); 
 
 				}
 				break;
 			case 12 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:74: T__19
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:74: T__19
 				{
 				mT__19(); 
 
 				}
 				break;
 			case 13 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:80: T__20
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:80: T__20
 				{
 				mT__20(); 
 
 				}
 				break;
 			case 14 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:86: T__21
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:86: T__21
 				{
 				mT__21(); 
 
 				}
 				break;
 			case 15 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:92: T__22
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:92: T__22
 				{
 				mT__22(); 
 
 				}
 				break;
 			case 16 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:98: T__23
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:98: T__23
 				{
 				mT__23(); 
 
 				}
 				break;
 			case 17 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:104: T__24
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:104: T__24
 				{
 				mT__24(); 
 
 				}
 				break;
 			case 18 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:110: T__25
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:110: T__25
 				{
 				mT__25(); 
 
 				}
 				break;
 			case 19 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:116: T__26
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:116: T__26
 				{
 				mT__26(); 
 
 				}
 				break;
 			case 20 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:122: T__27
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:122: T__27
 				{
 				mT__27(); 
 
 				}
 				break;
 			case 21 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:128: T__28
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:128: T__28
 				{
 				mT__28(); 
 
 				}
 				break;
 			case 22 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:134: T__29
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:134: T__29
 				{
 				mT__29(); 
 
 				}
 				break;
 			case 23 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:140: ID
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:140: ID
 				{
 				mID(); 
 
 				}
 				break;
 			case 24 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:143: INT
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:143: INT
 				{
 				mINT(); 
 
 				}
 				break;
 			case 25 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:147: CAPITALIZED_ID
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:147: CAPITALIZED_ID
 				{
 				mCAPITALIZED_ID(); 
 
 				}
 				break;
 			case 26 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:162: WS
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:162: WS
 				{
 				mWS(); 
 

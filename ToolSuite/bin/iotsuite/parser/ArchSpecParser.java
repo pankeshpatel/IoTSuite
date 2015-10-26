@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g 2015-10-25 10:50:29
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g 2015-10-26 23:13:38
 
 package iotsuite.parser;
 import iotsuite.compiler.*; 
@@ -70,7 +70,7 @@ public class ArchSpecParser extends Parser {
 	}
 
 	@Override public String[] getTokenNames() { return ArchSpecParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g"; }
+	@Override public String getGrammarFileName() { return "C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g"; }
 
 
 	  private SymbolTable context;     
@@ -78,18 +78,18 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "archSpec"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:23:1: archSpec : ( 'structs' ':' struct_def )* 'softwarecomponents' ':' ( component_def )+ ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:23:1: archSpec : ( 'structs' ':' struct_def )* 'softwarecomponents' ':' ( component_def )+ ;
 	public final void archSpec() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:23:10: ( ( 'structs' ':' struct_def )* 'softwarecomponents' ':' ( component_def )+ )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:24:5: ( 'structs' ':' struct_def )* 'softwarecomponents' ':' ( component_def )+
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:23:10: ( ( 'structs' ':' struct_def )* 'softwarecomponents' ':' ( component_def )+ )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:24:5: ( 'structs' ':' struct_def )* 'softwarecomponents' ':' ( component_def )+
 			{
 			 context = new SymbolTable();
 			   context.currentRegion = new RegionCompiler();
 			    context.currentMappingConstraint = new MapperCompiler(); 
 			    
 			 context.currentRegion.generateRegionCode(); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:29:5: ( 'structs' ':' struct_def )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:29:5: ( 'structs' ':' struct_def )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -100,7 +100,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt1) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:29:6: 'structs' ':' struct_def
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:29:6: 'structs' ':' struct_def
 					{
 					match(input,33,FOLLOW_33_in_archSpec90); 
 					match(input,11,FOLLOW_11_in_archSpec92); 
@@ -118,7 +118,7 @@ public class ArchSpecParser extends Parser {
 
 			match(input,32,FOLLOW_32_in_archSpec104); 
 			match(input,11,FOLLOW_11_in_archSpec106); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:30:31: ( component_def )+
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:30:31: ( component_def )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -130,7 +130,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt2) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:30:32: component_def
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:30:32: component_def
 					{
 					pushFollow(FOLLOW_component_def_in_archSpec109);
 					component_def();
@@ -163,16 +163,16 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "component_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:33:1: component_def : 'computationalService' ':' ( cs_def ) ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:33:1: component_def : 'computationalService' ':' ( cs_def ) ;
 	public final void component_def() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:33:15: ( 'computationalService' ':' ( cs_def ) )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:34:5: 'computationalService' ':' ( cs_def )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:33:15: ( 'computationalService' ':' ( cs_def ) )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:34:5: 'computationalService' ':' ( cs_def )
 			{
 			match(input,23,FOLLOW_23_in_component_def129); 
 			match(input,11,FOLLOW_11_in_component_def131); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:34:32: ( cs_def )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:34:33: cs_def
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:34:32: ( cs_def )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:34:33: cs_def
 			{
 			pushFollow(FOLLOW_cs_def_in_component_def134);
 			cs_def();
@@ -196,17 +196,17 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "struct_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:39:1: struct_def : CAPITALIZED_ID ( structField_def ';' )+ ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:39:1: struct_def : CAPITALIZED_ID ( structField_def ';' )+ ;
 	public final void struct_def() throws RecognitionException {
 		Token CAPITALIZED_ID1=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:39:11: ( CAPITALIZED_ID ( structField_def ';' )+ )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:40:5: CAPITALIZED_ID ( structField_def ';' )+
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:39:11: ( CAPITALIZED_ID ( structField_def ';' )+ )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:40:5: CAPITALIZED_ID ( structField_def ';' )+
 			{
 			CAPITALIZED_ID1=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_struct_def154); 
 			context.currentStruct = new StructCompiler((CAPITALIZED_ID1!=null?CAPITALIZED_ID1.getText():null));
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:42:5: ( structField_def ';' )+
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:42:5: ( structField_def ';' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -218,7 +218,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:42:6: structField_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:42:6: structField_def ';'
 					{
 					pushFollow(FOLLOW_structField_def_in_struct_def168);
 					structField_def();
@@ -253,14 +253,14 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "structField_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:45:1: structField_def : lc_id ':' dataType ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:45:1: structField_def : lc_id ':' dataType ;
 	public final void structField_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id2 =null;
 		ParserRuleReturnScope dataType3 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:45:16: ( lc_id ':' dataType )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:46:3: lc_id ':' dataType
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:45:16: ( lc_id ':' dataType )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:46:3: lc_id ':' dataType
 			{
 			pushFollow(FOLLOW_lc_id_in_structField_def193);
 			lc_id2=lc_id();
@@ -289,13 +289,13 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "cs_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:54:1: cs_def : ( 'Aggregator' ':' ( agg_cs_def )* )* ( 'Coordinator' ':' ( coordinator_def )* )* ( 'Controller' ':' ( controller_def )* )* ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:54:1: cs_def : ( 'Aggregator' ':' ( agg_cs_def )* )* ( 'Coordinator' ':' ( coordinator_def )* )* ( 'Controller' ':' ( controller_def )* )* ;
 	public final void cs_def() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:54:7: ( ( 'Aggregator' ':' ( agg_cs_def )* )* ( 'Coordinator' ':' ( coordinator_def )* )* ( 'Controller' ':' ( controller_def )* )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:56:5: ( 'Aggregator' ':' ( agg_cs_def )* )* ( 'Coordinator' ':' ( coordinator_def )* )* ( 'Controller' ':' ( controller_def )* )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:54:7: ( ( 'Aggregator' ':' ( agg_cs_def )* )* ( 'Coordinator' ':' ( coordinator_def )* )* ( 'Controller' ':' ( controller_def )* )* )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:56:5: ( 'Aggregator' ':' ( agg_cs_def )* )* ( 'Coordinator' ':' ( coordinator_def )* )* ( 'Controller' ':' ( controller_def )* )*
 			{
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:56:5: ( 'Aggregator' ':' ( agg_cs_def )* )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:56:5: ( 'Aggregator' ':' ( agg_cs_def )* )*
 			loop5:
 			while (true) {
 				int alt5=2;
@@ -306,11 +306,11 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt5) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:56:6: 'Aggregator' ':' ( agg_cs_def )*
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:56:6: 'Aggregator' ':' ( agg_cs_def )*
 					{
 					match(input,13,FOLLOW_13_in_cs_def228); 
 					match(input,11,FOLLOW_11_in_cs_def229); 
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:56:23: ( agg_cs_def )*
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:56:23: ( agg_cs_def )*
 					loop4:
 					while (true) {
 						int alt4=2;
@@ -321,7 +321,7 @@ public class ArchSpecParser extends Parser {
 
 						switch (alt4) {
 						case 1 :
-							// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:56:24: agg_cs_def
+							// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:56:24: agg_cs_def
 							{
 							pushFollow(FOLLOW_agg_cs_def_in_cs_def233);
 							agg_cs_def();
@@ -343,7 +343,7 @@ public class ArchSpecParser extends Parser {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:58:5: ( 'Coordinator' ':' ( coordinator_def )* )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:58:5: ( 'Coordinator' ':' ( coordinator_def )* )*
 			loop7:
 			while (true) {
 				int alt7=2;
@@ -354,11 +354,11 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt7) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:58:6: 'Coordinator' ':' ( coordinator_def )*
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:58:6: 'Coordinator' ':' ( coordinator_def )*
 					{
 					match(input,17,FOLLOW_17_in_cs_def248); 
 					match(input,11,FOLLOW_11_in_cs_def249); 
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:58:23: ( coordinator_def )*
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:58:23: ( coordinator_def )*
 					loop6:
 					while (true) {
 						int alt6=2;
@@ -369,7 +369,7 @@ public class ArchSpecParser extends Parser {
 
 						switch (alt6) {
 						case 1 :
-							// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:58:24: coordinator_def
+							// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:58:24: coordinator_def
 							{
 							pushFollow(FOLLOW_coordinator_def_in_cs_def252);
 							coordinator_def();
@@ -391,7 +391,7 @@ public class ArchSpecParser extends Parser {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:60:5: ( 'Controller' ':' ( controller_def )* )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:60:5: ( 'Controller' ':' ( controller_def )* )*
 			loop9:
 			while (true) {
 				int alt9=2;
@@ -402,11 +402,11 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt9) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:60:6: 'Controller' ':' ( controller_def )*
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:60:6: 'Controller' ':' ( controller_def )*
 					{
 					match(input,16,FOLLOW_16_in_cs_def269); 
 					match(input,11,FOLLOW_11_in_cs_def270); 
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:60:22: ( controller_def )*
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:60:22: ( controller_def )*
 					loop8:
 					while (true) {
 						int alt8=2;
@@ -417,7 +417,7 @@ public class ArchSpecParser extends Parser {
 
 						switch (alt8) {
 						case 1 :
-							// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:60:23: controller_def
+							// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:60:23: controller_def
 							{
 							pushFollow(FOLLOW_controller_def_in_cs_def273);
 							controller_def();
@@ -455,19 +455,19 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "agg_cs_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:67:1: agg_cs_def : CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfoForAggregator_def ';' )* ( partition_def ';' )+ ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:67:1: agg_cs_def : CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfoForAggregator_def ';' )* ( partition_def ';' )+ ;
 	public final void agg_cs_def() throws RecognitionException {
 		Token CAPITALIZED_ID4=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:67:11: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfoForAggregator_def ';' )* ( partition_def ';' )+ )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:69:2: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfoForAggregator_def ';' )* ( partition_def ';' )+
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:67:11: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfoForAggregator_def ';' )* ( partition_def ';' )+ )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:69:2: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csOperation_def ';' )* ( csGeneratedInfoForAggregator_def ';' )* ( partition_def ';' )+
 			{
 			CAPITALIZED_ID4=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_agg_cs_def300); 
 			 
 			     context.currentComputationalService = new ComputationalServiceCompiler(); 
 			     context.currentMappingConstraint.setSoftwareComponentName((CAPITALIZED_ID4!=null?CAPITALIZED_ID4.getText():null));
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:73:5: ( csConsumeInfo_def ';' )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:73:5: ( csConsumeInfo_def ';' )*
 			loop10:
 			while (true) {
 				int alt10=2;
@@ -478,7 +478,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt10) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:73:6: csConsumeInfo_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:73:6: csConsumeInfo_def ';'
 					{
 					pushFollow(FOLLOW_csConsumeInfo_def_in_agg_cs_def314);
 					csConsumeInfo_def();
@@ -493,7 +493,7 @@ public class ArchSpecParser extends Parser {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:74:5: ( csOperation_def ';' )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:74:5: ( csOperation_def ';' )*
 			loop11:
 			while (true) {
 				int alt11=2;
@@ -504,7 +504,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt11) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:74:6: csOperation_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:74:6: csOperation_def ';'
 					{
 					pushFollow(FOLLOW_csOperation_def_in_agg_cs_def326);
 					csOperation_def();
@@ -519,7 +519,7 @@ public class ArchSpecParser extends Parser {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:75:5: ( csGeneratedInfoForAggregator_def ';' )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:75:5: ( csGeneratedInfoForAggregator_def ';' )*
 			loop12:
 			while (true) {
 				int alt12=2;
@@ -530,7 +530,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt12) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:75:6: csGeneratedInfoForAggregator_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:75:6: csGeneratedInfoForAggregator_def ';'
 					{
 					pushFollow(FOLLOW_csGeneratedInfoForAggregator_def_in_agg_cs_def337);
 					csGeneratedInfoForAggregator_def();
@@ -545,7 +545,7 @@ public class ArchSpecParser extends Parser {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:76:5: ( partition_def ';' )+
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:76:5: ( partition_def ';' )+
 			int cnt13=0;
 			loop13:
 			while (true) {
@@ -557,7 +557,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt13) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:76:6: partition_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:76:6: partition_def ';'
 					{
 					pushFollow(FOLLOW_partition_def_in_agg_cs_def348);
 					partition_def();
@@ -598,19 +598,19 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "coordinator_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:86:1: coordinator_def : CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+ ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:86:1: coordinator_def : CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+ ;
 	public final void coordinator_def() throws RecognitionException {
 		Token CAPITALIZED_ID5=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:86:16: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+ )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:88:1: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:86:16: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+ )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:88:1: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( csGeneratedInfo_def ';' )* ( partition_def ';' )+
 			{
 			CAPITALIZED_ID5=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_coordinator_def369); 
 			 
 			     context.currentComputationalService = new ComputationalServiceCompiler(); 
 			     context.currentMappingConstraint.setSoftwareComponentName((CAPITALIZED_ID5!=null?CAPITALIZED_ID5.getText():null));
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:92:5: ( csConsumeInfo_def ';' )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:92:5: ( csConsumeInfo_def ';' )*
 			loop14:
 			while (true) {
 				int alt14=2;
@@ -621,7 +621,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt14) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:92:6: csConsumeInfo_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:92:6: csConsumeInfo_def ';'
 					{
 					pushFollow(FOLLOW_csConsumeInfo_def_in_coordinator_def383);
 					csConsumeInfo_def();
@@ -636,7 +636,7 @@ public class ArchSpecParser extends Parser {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:93:5: ( csRequest_def ';' )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:93:5: ( csRequest_def ';' )*
 			loop15:
 			while (true) {
 				int alt15=2;
@@ -647,7 +647,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt15) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:93:6: csRequest_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:93:6: csRequest_def ';'
 					{
 					pushFollow(FOLLOW_csRequest_def_in_coordinator_def395);
 					csRequest_def();
@@ -662,7 +662,7 @@ public class ArchSpecParser extends Parser {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:94:7: ( csGeneratedInfo_def ';' )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:94:7: ( csGeneratedInfo_def ';' )*
 			loop16:
 			while (true) {
 				int alt16=2;
@@ -673,7 +673,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt16) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:94:8: csGeneratedInfo_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:94:8: csGeneratedInfo_def ';'
 					{
 					pushFollow(FOLLOW_csGeneratedInfo_def_in_coordinator_def408);
 					csGeneratedInfo_def();
@@ -688,7 +688,7 @@ public class ArchSpecParser extends Parser {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:95:4: ( partition_def ';' )+
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:95:4: ( partition_def ';' )+
 			int cnt17=0;
 			loop17:
 			while (true) {
@@ -700,7 +700,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt17) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:95:5: partition_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:95:5: partition_def ';'
 					{
 					pushFollow(FOLLOW_partition_def_in_coordinator_def418);
 					partition_def();
@@ -742,19 +742,19 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "controller_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:106:1: controller_def : CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+ ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:106:1: controller_def : CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+ ;
 	public final void controller_def() throws RecognitionException {
 		Token CAPITALIZED_ID6=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:106:15: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+ )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:108:2: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:106:15: ( CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+ )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:108:2: CAPITALIZED_ID ( csConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( partition_def ';' )+
 			{
 			CAPITALIZED_ID6=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_controller_def440); 
 			 
 			     context.currentComputationalService = new ComputationalServiceCompiler(); 
 			     context.currentMappingConstraint.setSoftwareComponentName((CAPITALIZED_ID6!=null?CAPITALIZED_ID6.getText():null));
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:112:5: ( csConsumeInfo_def ';' )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:112:5: ( csConsumeInfo_def ';' )*
 			loop18:
 			while (true) {
 				int alt18=2;
@@ -765,7 +765,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt18) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:112:6: csConsumeInfo_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:112:6: csConsumeInfo_def ';'
 					{
 					pushFollow(FOLLOW_csConsumeInfo_def_in_controller_def454);
 					csConsumeInfo_def();
@@ -780,7 +780,7 @@ public class ArchSpecParser extends Parser {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:113:5: ( cntrlCommand_def ';' )*
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:113:5: ( cntrlCommand_def ';' )*
 			loop19:
 			while (true) {
 				int alt19=2;
@@ -791,7 +791,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt19) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:113:6: cntrlCommand_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:113:6: cntrlCommand_def ';'
 					{
 					pushFollow(FOLLOW_cntrlCommand_def_in_controller_def466);
 					cntrlCommand_def();
@@ -806,7 +806,7 @@ public class ArchSpecParser extends Parser {
 				}
 			}
 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:114:5: ( partition_def ';' )+
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:114:5: ( partition_def ';' )+
 			int cnt20=0;
 			loop20:
 			while (true) {
@@ -818,7 +818,7 @@ public class ArchSpecParser extends Parser {
 
 				switch (alt20) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:114:6: partition_def ';'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:114:6: partition_def ';'
 					{
 					pushFollow(FOLLOW_partition_def_in_controller_def480);
 					partition_def();
@@ -860,14 +860,14 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "csOperation_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:125:1: csOperation_def : 'COMPUTE(' CAPITALIZED_ID '_BY_SAMPLE' ',' INT ')' ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:125:1: csOperation_def : 'COMPUTE(' CAPITALIZED_ID '_BY_SAMPLE' ',' INT ')' ;
 	public final void csOperation_def() throws RecognitionException {
 		Token CAPITALIZED_ID7=null;
 		Token INT8=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:125:17: ( 'COMPUTE(' CAPITALIZED_ID '_BY_SAMPLE' ',' INT ')' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:126:5: 'COMPUTE(' CAPITALIZED_ID '_BY_SAMPLE' ',' INT ')'
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:125:17: ( 'COMPUTE(' CAPITALIZED_ID '_BY_SAMPLE' ',' INT ')' )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:126:5: 'COMPUTE(' CAPITALIZED_ID '_BY_SAMPLE' ',' INT ')'
 			{
 			match(input,15,FOLLOW_15_in_csOperation_def507); 
 			CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csOperation_def509); 
@@ -892,14 +892,14 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "csGeneratedInfoForAggregator_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:130:1: csGeneratedInfoForAggregator_def : 'generate' lc_id ':' CAPITALIZED_ID ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:130:1: csGeneratedInfoForAggregator_def : 'generate' lc_id ':' CAPITALIZED_ID ;
 	public final void csGeneratedInfoForAggregator_def() throws RecognitionException {
 		Token CAPITALIZED_ID10=null;
 		ParserRuleReturnScope lc_id9 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:130:33: ( 'generate' lc_id ':' CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:131:2: 'generate' lc_id ':' CAPITALIZED_ID
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:130:33: ( 'generate' lc_id ':' CAPITALIZED_ID )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:131:2: 'generate' lc_id ':' CAPITALIZED_ID
 			{
 			match(input,27,FOLLOW_27_in_csGeneratedInfoForAggregator_def537); 
 			pushFollow(FOLLOW_lc_id_in_csGeneratedInfoForAggregator_def539);
@@ -931,14 +931,14 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "csGeneratedInfo_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:142:1: csGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:142:1: csGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
 	public final void csGeneratedInfo_def() throws RecognitionException {
 		Token CAPITALIZED_ID12=null;
 		ParserRuleReturnScope lc_id11 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:142:20: ( 'generate' lc_id ':' CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:143:5: 'generate' lc_id ':' CAPITALIZED_ID
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:142:20: ( 'generate' lc_id ':' CAPITALIZED_ID )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:143:5: 'generate' lc_id ':' CAPITALIZED_ID
 			{
 			match(input,27,FOLLOW_27_in_csGeneratedInfo_def563); 
 			pushFollow(FOLLOW_lc_id_in_csGeneratedInfo_def565);
@@ -967,13 +967,13 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "csConsumeInfo_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:150:1: csConsumeInfo_def : 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:150:1: csConsumeInfo_def : 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID ;
 	public final void csConsumeInfo_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id13 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:150:18: ( 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:152:6: 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:150:18: ( 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:152:6: 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID
 			{
 			match(input,24,FOLLOW_24_in_csConsumeInfo_def596); 
 			pushFollow(FOLLOW_lc_id_in_csConsumeInfo_def598);
@@ -1005,13 +1005,13 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "csRequest_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:158:1: csRequest_def : 'request' lc_id ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:158:1: csRequest_def : 'request' lc_id ;
 	public final void csRequest_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id14 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:158:15: ( 'request' lc_id )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:159:4: 'request' lc_id
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:158:15: ( 'request' lc_id )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:159:4: 'request' lc_id
 			{
 			match(input,31,FOLLOW_31_in_csRequest_def638); 
 			pushFollow(FOLLOW_lc_id_in_csRequest_def640);
@@ -1035,18 +1035,18 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "cntrlCommand_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:164:1: cntrlCommand_def : 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:164:1: cntrlCommand_def : 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID ;
 	public final void cntrlCommand_def() throws RecognitionException {
 		Token name=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:164:18: ( 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:165:5: 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:164:18: ( 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:165:5: 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID
 			{
 			match(input,22,FOLLOW_22_in_cntrlCommand_def662); 
 			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def669); 
 			match(input,8,FOLLOW_8_in_cntrlCommand_def671); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:165:42: ( cntrlParameter_def )?
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:165:42: ( cntrlParameter_def )?
 			int alt21=2;
 			int LA21_0 = input.LA(1);
 			if ( (LA21_0==ID) ) {
@@ -1054,7 +1054,7 @@ public class ArchSpecParser extends Parser {
 			}
 			switch (alt21) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:165:43: cntrlParameter_def
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:165:43: cntrlParameter_def
 					{
 					pushFollow(FOLLOW_cntrlParameter_def_in_cntrlCommand_def674);
 					cntrlParameter_def();
@@ -1091,13 +1091,13 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "cntrlParameter_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:172:1: cntrlParameter_def : lc_id ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:172:1: cntrlParameter_def : lc_id ;
 	public final void cntrlParameter_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id15 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:172:20: ( lc_id )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:173:5: lc_id
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:172:20: ( lc_id )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:173:5: lc_id
 			{
 			pushFollow(FOLLOW_lc_id_in_cntrlParameter_def715);
 			lc_id15=lc_id();
@@ -1120,14 +1120,14 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "partition_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:182:1: partition_def : csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:182:1: partition_def : csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID ;
 	public final void partition_def() throws RecognitionException {
 		Token csDeploymentConstraint=null;
 		Token CAPITALIZED_ID16=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:182:14: (csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:183:5: csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:182:14: (csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:183:5: csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID
 			{
 			csDeploymentConstraint=(Token)match(input,29,FOLLOW_29_in_partition_def748); 
 			match(input,11,FOLLOW_11_in_partition_def750); 
@@ -1157,14 +1157,14 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "lc_id"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:192:1: lc_id : ID ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:192:1: lc_id : ID ;
 	public final ArchSpecParser.lc_id_return lc_id() throws RecognitionException {
 		ArchSpecParser.lc_id_return retval = new ArchSpecParser.lc_id_return();
 		retval.start = input.LT(1);
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:192:6: ( ID )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:192:8: ID
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:192:6: ( ID )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:192:8: ID
 			{
 			match(input,ID,FOLLOW_ID_in_lc_id770); 
 			}
@@ -1189,14 +1189,14 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "dataType"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:195:1: dataType : primitiveType ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:195:1: dataType : primitiveType ;
 	public final ArchSpecParser.dataType_return dataType() throws RecognitionException {
 		ArchSpecParser.dataType_return retval = new ArchSpecParser.dataType_return();
 		retval.start = input.LT(1);
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:195:9: ( primitiveType )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:196:3: primitiveType
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:195:9: ( primitiveType )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:196:3: primitiveType
 			{
 			pushFollow(FOLLOW_primitiveType_in_dataType784);
 			primitiveType();
@@ -1221,15 +1221,15 @@ public class ArchSpecParser extends Parser {
 
 
 	// $ANTLR start "primitiveType"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:199:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) ;
+	// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:199:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) ;
 	public final void primitiveType() throws RecognitionException {
 		Token id=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:199:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:199:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
 			{
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
+			// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
 			int alt22=6;
 			switch ( input.LA(1) ) {
 			case 18:
@@ -1269,37 +1269,37 @@ public class ArchSpecParser extends Parser {
 			}
 			switch (alt22) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:4: id= 'Integer'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:4: id= 'Integer'
 					{
 					id=(Token)match(input,18,FOLLOW_18_in_primitiveType799); 
 					}
 					break;
 				case 2 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:19: id= 'Boolean'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:19: id= 'Boolean'
 					{
 					id=(Token)match(input,14,FOLLOW_14_in_primitiveType805); 
 					}
 					break;
 				case 3 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:34: id= 'String'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:34: id= 'String'
 					{
 					id=(Token)match(input,19,FOLLOW_19_in_primitiveType811); 
 					}
 					break;
 				case 4 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:49: id= 'double'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:49: id= 'double'
 					{
 					id=(Token)match(input,25,FOLLOW_25_in_primitiveType820); 
 					}
 					break;
 				case 5 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:65: id= 'long'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:65: id= 'long'
 					{
 					id=(Token)match(input,28,FOLLOW_28_in_primitiveType828); 
 					}
 					break;
 				case 6 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:79: id= 'boolean'
+					// C:\\IoTSuite\\IoTSuite\\ToolSuite\\bin\\iotsuite\\parser\\ArchSpec.g:200:79: id= 'boolean'
 					{
 					id=(Token)match(input,21,FOLLOW_21_in_primitiveType834); 
 					}
