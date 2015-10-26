@@ -26,7 +26,7 @@ archSpec :
     context.currentMappingConstraint = new MapperCompiler(); 
     }
      { context.currentRegion.generateRegionCode(); }    
-    ('structs' ':' struct_def)* // see this is *. so, it is optional. :)  
+    ('structs' ':' struct_def)*  
      'softwarecomponents' ':' (component_def)+
 ;   
   
@@ -45,7 +45,7 @@ structField_def:
   { context.currentStruct.addField($lc_id.text, $dataType.text);
   context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
 ; 
-
+ 
 cs_def:
       
     ('Aggregator'':'  (agg_cs_def)*)*  
@@ -137,20 +137,21 @@ csGeneratedInfo_def:
 ;
   
 csConsumeInfo_def:   
-     'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID        
-   { context.currentComputationalService.addConsumedInfo($lc_id.text);  
-    
+    // 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID  
+    'consume' lc_id  'from'  CAPITALIZED_ID       
+   { context.currentComputationalService.addConsumedInfo($lc_id.text);    
    }   
-;
+; 
 
 csRequest_def :
-   'request' lc_id 
+   'request' lc_id 'to' CAPITALIZED_ID
    { context.currentComputationalService.getDataAccessListFromSymblTable($lc_id.text);}
 ; 
  
 
 cntrlCommand_def :
-    'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'region-hops' ':' INT ':' CAPITALIZED_ID
+    //'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'region-hops' ':' INT ':' CAPITALIZED_ID
+     'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  CAPITALIZED_ID
     { 
       context.currentComputationalService.addCommand($name.text);  
     }
@@ -165,7 +166,6 @@ partition_def:
     csDeploymentConstraint='partition-per' ':' CAPITALIZED_ID 
     { 
     context.currentComputationalService.addPartitionAttribute($CAPITALIZED_ID.text);   
-    // Next two lines are for  Mapping constraints
     context.currentMappingConstraint.setAttributeName($csDeploymentConstraint.text);  
     context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text); 
    } 

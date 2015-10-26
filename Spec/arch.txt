@@ -2,28 +2,28 @@ softwarecomponents:
 	computationalService:
 		Aggregator:
 			AvgTemp 
-			  consume tempMeasurement from region-hops:0:Room;
+			  consume tempMeasurement from TemperatureSensor;
 			  COMPUTE(AVG_BY_SAMPLE,5);
 			  generate roomAvgTempMeasurement:TempStruct;
 			  partition-per : Room;				    
 		Coordinator:	  
 			Proximity                                   
-			 consume badgeDetected from region-hops:0:Room;
-			 consume badgeDisappeared from region-hops:0:Room;
-			 request profile;			 
+			 consume badgeDetected from BadgeReader;
+			 consume badgeDisappeared from BadgeReader;
+			 request profile to ProfileDB;			 
 			 generate tempPref:TempStruct;                       
 			 partition-per:Room; 				
 	    Controller:
 	    	RoomController 
-			  consume roomAvgTempMeasurement from region-hops:0:Room;
-			  consume tempPref from region-hops:0:Room;
-			  command Off() to region-hops:0:Room;
-			  command SetTemp(setTemp) to region-hops:0:Room;			 
+			  consume roomAvgTempMeasurement from AvgTemp;
+			  consume tempPref from Proximity;
+			  command Off() to Heater;
+			  command SetTemp(setTemp) to Heater;			 
 			  partition-per : Room;
 			  
-			  DisplayTempController 
-			  consume roomAvgTempMeasurement from region-hops:0:Room;
-			  command DisplayTemp(tempNotify) to region-hops:0:Room;			 
+			DisplayTempController 
+			  consume roomAvgTempMeasurement from AvgTemp;
+			  command DisplayTemp(tempNotify) to SmartHomeApp;			 
 			  partition-per : Room;
 			  
 			  
