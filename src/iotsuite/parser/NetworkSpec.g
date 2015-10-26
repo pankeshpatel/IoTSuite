@@ -32,8 +32,8 @@ device_def:
    { 
    context.currentNetwork = new DeviceCompiler();
    context.currentNetwork.setDeviceName($deviceName.text);
-   }  
-    'region' ':' (location_def)* 
+   }   
+    'location' ':' (location_def)* 
     'platform' ':' (device_type)* ';' 
     'resources' ':' (abilities_def)?  ';'
     'protocol' ':' (protocol_value)* ';' 
@@ -44,7 +44,7 @@ location_def :
     CAPITALIZED_ID ':' ID ';'
     {context.currentNetwork.addRegionLabel($CAPITALIZED_ID.text);
     context.currentNetwork.addRegionValue($ID.text);}    
-;
+;  
 
 // Device Type
 device_type :
@@ -64,10 +64,9 @@ protocol_value:
 ;
  
 MOBILEFLAG :  'true' | 'false'
-   ; 
+   ;
 
-ID  : ('a'..'z'  ('a'..'z' | 'A'..'Z' )* ('0'..'9')*)| '0'..'9'('0'..'9')*|'*' ; 
- 
+ID  : ('a'..'z'  ('a'..'z' | 'A'..'Z' )* ('0'..'9')*)| '0'..'9'('0'..'9')*|'*' ;  
 
 CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )* ('0'..'9')*;
 
