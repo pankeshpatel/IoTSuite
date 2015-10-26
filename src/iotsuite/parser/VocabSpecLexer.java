@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-10-27 00:15:09
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-10-27 01:06:07
 
   package iotsuite.parser; 
   
@@ -603,11 +603,11 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:196:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:196:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:186:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:186:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			matchRange('a','z'); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:196:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:186:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -652,11 +652,11 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:198:5: ( '0' .. '9' ( '0' .. '9' )* )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:198:7: '0' .. '9' ( '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:5: ( '0' .. '9' ( '0' .. '9' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:7: '0' .. '9' ( '0' .. '9' )*
 			{
 			matchRange('0','9'); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:198:15: ( '0' .. '9' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:188:15: ( '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -701,11 +701,11 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = CAPITALIZED_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:201:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:201:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:191:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:191:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
 			{
 			matchRange('A','Z'); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:201:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:191:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -750,10 +750,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:203:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:203:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:193:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:193:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:203:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:193:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt4=0;
 			loop4:
 			while (true) {

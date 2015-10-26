@@ -21,22 +21,12 @@ import iotsuite.semanticmodel.*;
 } 
  
 vocabSpec : 
-   // 'regions'
-    { context = new SymbolTable();
-    //context.currentRegion = new RegionCompiler();
-    }
-   // ':' (region_def)+  
-  //  { context.currentRegion.generateRegionCode(); }     
+   { 
+    context = new SymbolTable();
+    }   
     'structs' ':' (struct_def)+  
     'resources' ':' abilities_def   
-;
-  
-//region_def :      
-//    CAPITALIZED_ID ':' dataType  ';'
-//    { 
-//    context.currentRegion.addRegion($CAPITALIZED_ID.text, $dataType.text); 
-//    }
-//;
+; 
   
 struct_def:
     CAPITALIZED_ID 

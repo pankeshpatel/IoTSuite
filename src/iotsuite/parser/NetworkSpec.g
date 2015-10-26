@@ -37,12 +37,8 @@ device_def:
     'platform' ':' (device_type)* ';' 
     'resources' ':' (abilities_def)?  ';'
     'protocol' ':' (protocol_value)* ';' 
-   // (mobileFlag_def)* ';' 
     { context.currentNetwork.addDeviceObj();}
-; 
- 
- 
-// Region Definition
+;
 
 location_def :
     CAPITALIZED_ID ':' ID ';'
@@ -56,50 +52,22 @@ device_type :
     {context.currentNetwork.setDeviceType($CAPITALIZED_ID.text);}
 ;
 
-//Attached resources with devices
 abilities_def :
    CAPITALIZED_ID (',' abilities_def)?
   {context.currentNetwork.addDeviceAbilities($CAPITALIZED_ID.text);
   }
 ;
 
-// MobileFlag 
-mobileFlag_def :
-   'mobile' ':' MOBILEFLAG 
-   {context.currentNetwork.setMobileFlag($MOBILEFLAG.text);}
-;
-
 protocol_value:
   ID
   {context.currentNetwork.setProtocol($ID.text);}
-;  
-
-
-//networkAddress_def :
-//  'networkaddress' ':' INT 
-//  {context.currentNetwork.setNetworkAddress($INT.text);}
-//;
-
-
-
-
-//REGION_LOCATION:
-//      ('a'..'z' | 'A'..'Z' )? ('0'..'9')*
-//;
-
+;
  
 MOBILEFLAG :  'true' | 'false'
    ; 
-   
-
 
 ID  : ('a'..'z'  ('a'..'z' | 'A'..'Z' )* ('0'..'9')*)| '0'..'9'('0'..'9')*|'*' ; 
-   
-//REGION_LOCATION: ('a'..'z' | 'A'..'Z' )* | '0'..'9' ('0'..'9')*  ; 
-
-  
-   
-//INT : '0'..'9'('0'..'9')*  ; 
+ 
 
 CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )* ('0'..'9')*;
 
