@@ -71,14 +71,25 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
      public void onNew$dataAccess.dataAccessName; format="capital"$Response($GUIdriver.AllDataAccess:{ dataAcc |$dataAcc.GeneratedInfo.type$}$ arg){
           //  objJavaSE$GUIdriver.name$.$dataAccess.dataAccessName; format="capital"$ResponseReceived(arg);
           // wrap the data in to Json Object
-         JsonObject obj = new JsonObject();
+         JsonObject obj$dataAccess.dataAccessName; format="capital"$ = new JsonObject();
           $GUIdriver.allStructFields:{field | 
-               obj.addProperty("$field.name$",arg.get$field.name$());}$
+               obj$dataAccess.dataAccessName; format="capital"$.addProperty("$field.name$",arg.get$field.name$());}$
                
-         pubSubSensingFramework.publish("$dataAccess.dataAccessName; format="avoidCapital"$Response", obj);
+         pubSubSensingFramework.publish("$dataAccess.dataAccessName; format="avoidCapital"$Response", obj$dataAccess.dataAccessName; format="capital"$);
     
     }  }$
     
+     $GUIdriver.allNotifyMeasurement:{notifyMeasurement | 
+     
+     public  void onNew$notifyMeasurement; format="capital"$Notify($GUIdriver.AllNotifyStructName:{ notifyStructName |$notifyStructName$}$ arg){
+     //wrap the data in to Json Object
+     
+     JsonObject obj$notifyMeasurement; format="capital"$ = new JsonObject();
+      $GUIdriver.AllStructFieldsForNotify:{fieldsForNotify | 
+      obj$notifyMeasurement; format="capital"$.addProperty("$fieldsForNotify.name$",arg.get$fieldsForNotify.name$());}$
+      pubSubSensingFramework.publish("$notifyMeasurement; format="avoidCapital"$Notify", obj$notifyMeasurement; format="capital"$);
+     } 
+    }$
     
    
 }

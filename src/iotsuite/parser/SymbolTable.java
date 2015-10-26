@@ -76,6 +76,7 @@ public class SymbolTable {
 	
 	
 	public static List<StructField> StructFieldSetForGUI = new ArrayList<StructField>();
+	public static List<StructField> StructFieldSetForGUINotify = new ArrayList<StructField>();
 
 	// Store Structure Name ex-TempStruct or BadgeStruct
 	public static String structName;
@@ -106,6 +107,7 @@ public class SymbolTable {
 	static StructField Field;
 	
 	static StructField FieldForGUI;
+	static StructField FieldForGUINotify;
 
 	// Getter and Setter of DataAccessSymblTable
 
@@ -293,6 +295,26 @@ public class SymbolTable {
 			}
 		}
 
+	}
+	
+	
+	public static void searchStructFieldNameForNotifyGUI(String notifyGUIStructName){
+		
+		for (int i = 0; i < 10; i++) {
+			if (arrayFieldName[i][0] != null) {
+				if (arrayFieldName[i][0].equals(notifyGUIStructName)) {
+
+					FieldForGUINotify = new StructField(arrayFieldName[i][1],
+							new PrimitiveType(arrayFieldType[i][1]));
+
+					StructFieldSetForGUINotify.add(FieldForGUINotify);
+					
+				}
+
+			}
+		}
+		
+		
 	}
 	
 	

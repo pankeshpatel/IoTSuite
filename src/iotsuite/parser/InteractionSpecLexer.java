@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-10-25 10:50:09
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-10-26 18:44:39
 
   package iotsuite.parser; 
   
@@ -31,6 +31,9 @@ public class InteractionSpecLexer extends Lexer {
 	public static final int T__24=24;
 	public static final int T__25=25;
 	public static final int T__26=26;
+	public static final int T__27=27;
+	public static final int T__28=28;
+	public static final int T__29=29;
 	public static final int CAPITALIZED_ID=4;
 	public static final int ID=5;
 	public static final int INT=6;
@@ -387,10 +390,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:7: ( 'request' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:9: 'request'
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:7: ( 'notify' )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:28:9: 'notify'
 			{
-			match("request"); 
+			match("notify"); 
 
 			}
 
@@ -408,10 +411,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__25;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:7: ( 'userinteractions' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:9: 'userinteractions'
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:7: ( 'request' )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:9: 'request'
 			{
-			match("userinteractions"); 
+			match("request"); 
 
 			}
 
@@ -429,10 +432,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:7: ( 'with' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:9: 'with'
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:7: ( 'resources' )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:9: 'resources'
 			{
-			match("with"); 
+			match("resources"); 
 
 			}
 
@@ -445,16 +448,79 @@ public class InteractionSpecLexer extends Lexer {
 	}
 	// $ANTLR end "T__26"
 
+	// $ANTLR start "T__27"
+	public final void mT__27() throws RecognitionException {
+		try {
+			int _type = T__27;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:7: ( 'structs' )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:9: 'structs'
+			{
+			match("structs"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__27"
+
+	// $ANTLR start "T__28"
+	public final void mT__28() throws RecognitionException {
+		try {
+			int _type = T__28;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:7: ( 'userinteractions' )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:9: 'userinteractions'
+			{
+			match("userinteractions"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__28"
+
+	// $ANTLR start "T__29"
+	public final void mT__29() throws RecognitionException {
+		try {
+			int _type = T__29;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:7: ( 'with' )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:9: 'with'
+			{
+			match("with"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__29"
+
 	// $ANTLR start "ID"
 	public final void mID() throws RecognitionException {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:45:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:45:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:60:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:60:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			matchRange('a','z'); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:45:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:60:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -499,11 +565,11 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:48:5: ( '0' .. '9' ( '0' .. '9' )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:48:7: '0' .. '9' ( '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:63:5: ( '0' .. '9' ( '0' .. '9' )* )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:63:7: '0' .. '9' ( '0' .. '9' )*
 			{
 			matchRange('0','9'); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:48:15: ( '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:63:15: ( '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -548,11 +614,11 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = CAPITALIZED_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:50:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:50:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:65:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:65:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
 			{
 			matchRange('A','Z'); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:50:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:65:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -597,10 +663,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:52:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:52:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:67:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:67:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:52:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:67:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -647,8 +713,8 @@ public class InteractionSpecLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | ID | INT | CAPITALIZED_ID | WS )
-		int alt5=23;
+		// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | ID | INT | CAPITALIZED_ID | WS )
+		int alt5=26;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
@@ -785,28 +851,49 @@ public class InteractionSpecLexer extends Lexer {
 				}
 				break;
 			case 20 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:122: ID
+				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:122: T__27
+				{
+				mT__27(); 
+
+				}
+				break;
+			case 21 :
+				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:128: T__28
+				{
+				mT__28(); 
+
+				}
+				break;
+			case 22 :
+				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:134: T__29
+				{
+				mT__29(); 
+
+				}
+				break;
+			case 23 :
+				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:140: ID
 				{
 				mID(); 
 
 				}
 				break;
-			case 21 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:125: INT
+			case 24 :
+				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:143: INT
 				{
 				mINT(); 
 
 				}
 				break;
-			case 22 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:129: CAPITALIZED_ID
+			case 25 :
+				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:147: CAPITALIZED_ID
 				{
 				mCAPITALIZED_ID(); 
 
 				}
 				break;
-			case 23 :
-				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:144: WS
+			case 26 :
+				// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\src\\iotsuite\\parser\\InteractionSpec.g:1:162: WS
 				{
 				mWS(); 
 
@@ -819,51 +906,55 @@ public class InteractionSpecLexer extends Lexer {
 
 	protected DFA5 dfa5 = new DFA5(this);
 	static final String DFA5_eotS =
-		"\6\uffff\4\24\10\22\4\uffff\5\24\10\22\5\24\10\22\5\24\4\22\1\107\2\22"+
-		"\1\112\6\24\4\22\1\uffff\2\22\1\uffff\1\24\1\130\1\24\1\132\2\24\1\135"+
-		"\2\22\1\140\2\22\1\143\1\uffff\1\144\1\uffff\1\145\1\24\1\uffff\1\147"+
-		"\1\150\1\uffff\1\151\1\22\3\uffff\1\153\3\uffff\1\22\1\uffff\7\22\1\164"+
-		"\1\uffff";
+		"\6\uffff\4\26\12\24\4\uffff\5\26\12\24\5\26\13\24\5\26\4\24\1\121\5\24"+
+		"\1\127\6\26\4\24\1\uffff\5\24\1\uffff\1\26\1\150\1\26\1\152\2\26\1\155"+
+		"\2\24\1\160\1\161\4\24\1\166\1\uffff\1\167\1\uffff\1\170\1\26\1\uffff"+
+		"\1\172\1\173\2\uffff\1\174\1\24\1\176\1\24\3\uffff\1\u0080\3\uffff\1\24"+
+		"\1\uffff\1\24\1\uffff\1\u0083\1\24\1\uffff\6\24\1\u008b\1\uffff";
 	static final String DFA5_eofS =
-		"\165\uffff";
+		"\u008c\uffff";
 	static final String DFA5_minS =
-		"\1\11\5\uffff\1\157\1\156\1\164\1\145\1\143\4\157\1\145\1\163\1\151\4"+
-		"\uffff\1\157\2\164\1\162\1\170\1\164\1\157\1\155\1\165\1\156\1\161\1\145"+
-		"\1\164\1\154\1\164\1\145\1\151\1\164\1\151\1\154\1\155\1\142\1\147\1\165"+
-		"\1\162\1\150\1\145\1\157\1\147\1\156\1\102\1\157\1\145\1\141\1\154\1\60"+
-		"\1\145\1\151\1\60\1\141\1\156\1\145\1\147\1\157\1\151\1\156\1\141\1\156"+
-		"\1\145\1\uffff\1\163\1\156\1\uffff\1\156\1\101\1\162\1\101\1\170\1\145"+
-		"\1\60\1\156\1\144\1\60\2\164\1\101\1\uffff\1\101\1\uffff\1\101\1\167\1"+
-		"\uffff\2\60\1\uffff\1\60\1\145\3\uffff\1\101\3\uffff\1\162\1\uffff\1\141"+
-		"\1\143\1\164\1\151\1\157\1\156\1\163\1\60\1\uffff";
+		"\1\11\5\uffff\1\157\1\156\1\164\1\145\1\143\5\157\1\145\1\164\1\163\1"+
+		"\151\4\uffff\1\157\2\164\1\162\1\170\1\164\1\157\1\155\1\165\1\156\1\164"+
+		"\1\161\1\162\1\145\1\164\1\154\1\164\1\145\1\151\1\164\1\151\1\154\1\155"+
+		"\1\142\1\147\1\151\1\165\1\157\1\165\1\162\1\150\1\145\1\157\1\147\1\156"+
+		"\1\102\1\157\1\145\1\141\1\154\1\60\1\146\1\145\1\165\1\143\1\151\1\60"+
+		"\1\141\1\156\1\145\1\147\1\157\1\151\1\156\1\141\1\156\1\145\1\uffff\1"+
+		"\171\1\163\1\162\1\164\1\156\1\uffff\1\156\1\101\1\162\1\101\1\170\1\145"+
+		"\1\60\1\156\1\144\2\60\1\164\1\143\1\163\1\164\1\101\1\uffff\1\101\1\uffff"+
+		"\1\101\1\167\1\uffff\2\60\2\uffff\1\60\1\145\1\60\1\145\3\uffff\1\101"+
+		"\3\uffff\1\163\1\uffff\1\162\1\uffff\1\60\1\141\1\uffff\1\143\1\164\1"+
+		"\151\1\157\1\156\1\163\1\60\1\uffff";
 	static final String DFA5_maxS =
-		"\1\172\5\uffff\1\165\1\156\1\164\1\145\1\143\4\157\1\145\1\163\1\151\4"+
-		"\uffff\1\157\2\164\1\162\1\170\1\164\1\157\1\155\1\165\1\156\1\161\1\145"+
-		"\1\164\1\154\1\164\1\145\1\151\1\164\1\151\1\154\1\155\1\142\1\147\1\165"+
-		"\1\162\1\150\1\145\1\157\1\147\1\156\1\126\1\157\1\145\1\141\1\154\1\172"+
-		"\1\145\1\151\1\172\1\141\1\156\1\145\1\147\1\157\1\151\1\156\1\141\1\156"+
-		"\1\145\1\uffff\1\163\1\156\1\uffff\1\156\1\172\1\162\1\172\1\170\1\145"+
-		"\1\172\1\156\1\144\1\172\2\164\1\172\1\uffff\1\172\1\uffff\1\172\1\167"+
-		"\1\uffff\2\172\1\uffff\1\172\1\145\3\uffff\1\172\3\uffff\1\162\1\uffff"+
-		"\1\141\1\143\1\164\1\151\1\157\1\156\1\163\1\172\1\uffff";
+		"\1\172\5\uffff\1\165\1\156\1\164\1\145\1\143\5\157\1\145\1\164\1\163\1"+
+		"\151\4\uffff\1\157\2\164\1\162\1\170\1\164\1\157\1\155\1\165\1\156\1\164"+
+		"\1\163\1\162\1\145\1\164\1\154\1\164\1\145\1\151\1\164\1\151\1\154\1\155"+
+		"\1\142\1\147\1\151\1\165\1\157\1\165\1\162\1\150\1\145\1\157\1\147\1\156"+
+		"\1\126\1\157\1\145\1\141\1\154\1\172\1\146\1\145\1\165\1\143\1\151\1\172"+
+		"\1\141\1\156\1\145\1\147\1\157\1\151\1\156\1\141\1\156\1\145\1\uffff\1"+
+		"\171\1\163\1\162\1\164\1\156\1\uffff\1\156\1\172\1\162\1\172\1\170\1\145"+
+		"\1\172\1\156\1\144\2\172\1\164\1\143\1\163\1\164\1\172\1\uffff\1\172\1"+
+		"\uffff\1\172\1\167\1\uffff\2\172\2\uffff\1\172\1\145\1\172\1\145\3\uffff"+
+		"\1\172\3\uffff\1\163\1\uffff\1\162\1\uffff\1\172\1\141\1\uffff\1\143\1"+
+		"\164\1\151\1\157\1\156\1\163\1\172\1\uffff";
 	static final String DFA5_acceptS =
-		"\1\uffff\1\1\1\2\1\3\1\4\1\5\14\uffff\1\24\1\25\1\26\1\27\61\uffff\1\20"+
-		"\2\uffff\1\23\15\uffff\1\7\1\uffff\1\11\2\uffff\1\14\2\uffff\1\17\2\uffff"+
-		"\1\6\1\10\1\12\1\uffff\1\15\1\16\1\21\1\uffff\1\13\10\uffff\1\22";
+		"\1\uffff\1\1\1\2\1\3\1\4\1\5\16\uffff\1\27\1\30\1\31\1\32\71\uffff\1\20"+
+		"\5\uffff\1\26\20\uffff\1\7\1\uffff\1\11\2\uffff\1\14\2\uffff\1\17\1\21"+
+		"\4\uffff\1\6\1\10\1\12\1\uffff\1\15\1\16\1\22\1\uffff\1\24\1\uffff\1\13"+
+		"\2\uffff\1\23\7\uffff\1\25";
 	static final String DFA5_specialS =
-		"\165\uffff}>";
+		"\u008c\uffff}>";
 	static final String[] DFA5_transitionS = {
-			"\2\25\1\uffff\2\25\22\uffff\1\25\7\uffff\1\1\1\2\2\uffff\1\3\3\uffff"+
-			"\12\23\1\4\1\5\5\uffff\1\24\1\6\6\24\1\7\11\24\1\10\1\11\6\24\6\uffff"+
-			"\1\12\1\13\1\14\1\15\7\22\1\16\5\22\1\17\2\22\1\20\1\22\1\21\3\22",
+			"\2\27\1\uffff\2\27\22\uffff\1\27\7\uffff\1\1\1\2\2\uffff\1\3\3\uffff"+
+			"\12\25\1\4\1\5\5\uffff\1\26\1\6\6\26\1\7\11\26\1\10\1\11\6\26\6\uffff"+
+			"\1\12\1\13\1\14\1\15\7\24\1\16\1\24\1\17\3\24\1\20\1\21\1\24\1\22\1\24"+
+			"\1\23\3\24",
 			"",
 			"",
 			"",
 			"",
 			"",
-			"\1\26\5\uffff\1\27",
-			"\1\30",
-			"\1\31",
+			"\1\30\5\uffff\1\31",
 			"\1\32",
 			"\1\33",
 			"\1\34",
@@ -873,14 +964,14 @@ public class InteractionSpecLexer extends Lexer {
 			"\1\40",
 			"\1\41",
 			"\1\42",
-			"",
-			"",
-			"",
-			"",
 			"\1\43",
 			"\1\44",
 			"\1\45",
 			"\1\46",
+			"",
+			"",
+			"",
+			"",
 			"\1\47",
 			"\1\50",
 			"\1\51",
@@ -892,8 +983,7 @@ public class InteractionSpecLexer extends Lexer {
 			"\1\57",
 			"\1\60",
 			"\1\61",
-			"\1\62",
-			"\1\63",
+			"\1\62\1\uffff\1\63",
 			"\1\64",
 			"\1\65",
 			"\1\66",
@@ -907,70 +997,96 @@ public class InteractionSpecLexer extends Lexer {
 			"\1\76",
 			"\1\77",
 			"\1\100",
-			"\1\101\23\uffff\1\102",
+			"\1\101",
+			"\1\102",
 			"\1\103",
 			"\1\104",
 			"\1\105",
 			"\1\106",
-			"\12\22\7\uffff\32\22\6\uffff\32\22",
+			"\1\107",
 			"\1\110",
 			"\1\111",
-			"\12\22\7\uffff\32\22\6\uffff\32\22",
-			"\1\113",
-			"\1\114",
+			"\1\112",
+			"\1\113\23\uffff\1\114",
 			"\1\115",
 			"\1\116",
 			"\1\117",
 			"\1\120",
-			"\1\121",
+			"\12\24\7\uffff\32\24\6\uffff\32\24",
 			"\1\122",
 			"\1\123",
 			"\1\124",
-			"",
 			"\1\125",
 			"\1\126",
-			"",
-			"\1\127",
-			"\32\24\6\uffff\32\24",
+			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"\1\130",
 			"\1\131",
-			"\32\24\6\uffff\32\24",
+			"\1\132",
 			"\1\133",
 			"\1\134",
-			"\12\22\7\uffff\32\22\6\uffff\32\22",
+			"\1\135",
 			"\1\136",
 			"\1\137",
-			"\12\22\7\uffff\32\22\6\uffff\32\22",
+			"\1\140",
 			"\1\141",
+			"",
 			"\1\142",
-			"\32\24\6\uffff\32\24",
-			"",
-			"\32\24\6\uffff\32\24",
-			"",
-			"\32\24\6\uffff\32\24",
+			"\1\143",
+			"\1\144",
+			"\1\145",
 			"\1\146",
 			"",
-			"\12\22\7\uffff\32\22\6\uffff\32\22",
-			"\12\22\7\uffff\32\22\6\uffff\32\22",
-			"",
-			"\12\22\7\uffff\32\22\6\uffff\32\22",
-			"\1\152",
-			"",
-			"",
-			"",
-			"\32\24\6\uffff\32\24",
-			"",
-			"",
-			"",
+			"\1\147",
+			"\32\26\6\uffff\32\26",
+			"\1\151",
+			"\32\26\6\uffff\32\26",
+			"\1\153",
 			"\1\154",
-			"",
-			"\1\155",
+			"\12\24\7\uffff\32\24\6\uffff\32\24",
 			"\1\156",
 			"\1\157",
-			"\1\160",
-			"\1\161",
+			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"\12\24\7\uffff\32\24\6\uffff\32\24",
 			"\1\162",
 			"\1\163",
-			"\12\22\7\uffff\32\22\6\uffff\32\22",
+			"\1\164",
+			"\1\165",
+			"\32\26\6\uffff\32\26",
+			"",
+			"\32\26\6\uffff\32\26",
+			"",
+			"\32\26\6\uffff\32\26",
+			"\1\171",
+			"",
+			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"",
+			"",
+			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"\1\175",
+			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"\1\177",
+			"",
+			"",
+			"",
+			"\32\26\6\uffff\32\26",
+			"",
+			"",
+			"",
+			"\1\u0081",
+			"",
+			"\1\u0082",
+			"",
+			"\12\24\7\uffff\32\24\6\uffff\32\24",
+			"\1\u0084",
+			"",
+			"\1\u0085",
+			"\1\u0086",
+			"\1\u0087",
+			"\1\u0088",
+			"\1\u0089",
+			"\1\u008a",
+			"\12\24\7\uffff\32\24\6\uffff\32\24",
 			""
 	};
 
@@ -1005,7 +1121,7 @@ public class InteractionSpecLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | ID | INT | CAPITALIZED_ID | WS );";
+			return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | ID | INT | CAPITALIZED_ID | WS );";
 		}
 	}
 

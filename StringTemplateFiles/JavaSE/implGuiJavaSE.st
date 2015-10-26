@@ -28,20 +28,22 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$,IDataListener {
   
    $GUIdriver.allDataAccess:{ dataAccess |
           private Listener$GUIdriver.name$  listener$dataAccess.dataAccessName; format="capital"$Request = null;
-        }$
-        
+        }$       
 
 
-  public JavaSE$GUIdriver.name$(Context context, Logic$GUIdriver.name$ obj) {
-    
+  public JavaSE$GUIdriver.name$(Context context, Logic$GUIdriver.name$ obj) { 
    
     
     pubSubSensingFramework = PubSubsSensingFramework.getInstance();
+    
      $GUIdriver.allDataAccess:{ dataAccess |
     pubSubSensingFramework.registerForSensorData(this, "$dataAccess.dataAccessName; format="avoidCapital"$Response");
      }; separator="\n"$
-  }
-  
+     
+      $GUIdriver.allNotifyMeasurement:{notifyMeasurement | 
+       pubSubSensingFramework.registerForSensorData(this, "$notifyMeasurement; format="avoidCapital"$Notify");
+      }; separator="\n"$
+  }  
 
   $GUIdriver.commands:{ command |
   
@@ -58,18 +60,28 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$,IDataListener {
               listener$dataAccess.dataAccessName; format="capital"$Request = handler; 
          }    
     }$
-    
-  
-  
-    
+      
     @Override
       public void onDataReceived(String eventName, JsonObject data) {
         // TODO Auto-generated method stub
-        //Unwrape data from Json Object
+        //Unwrape the data from Json Object
         
-          $GUIdriver.allStructFields:{field | 
-              $field.type$ $field.name$=data.get("$field.name$").getAs$field.type;format="capital"$();              
-              }$
+          $GUIdriver.allDataAccess:{ dataAccess |
+          if(eventName.equals("$dataAccess.dataAccessName; format="avoidCapital"$Response")){
+           $GUIdriver.allStructFields:{field | 
+            $field.type$ $field.name$=data.get("$field.name$").getAs$field.type;format="capital"$();
+            }$
+            }
+            }$
+            
+         
+            $GUIdriver.allNotifyMeasurement:{notifyMeasurement | 
+            if(eventName.equals("$notifyMeasurement; format="avoidCapital"$Notify")){
+              $GUIdriver.AllStructFieldsForNotify:{fieldsForNotify | 
+            $fieldsForNotify.type$ $fieldsForNotify.name$=data.get("$fieldsForNotify.name$").getAs$fieldsForNotify.type;format="capital"$(); 
+            }$            
+            }
+            }$ 
         
       }  
       
@@ -88,17 +100,12 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$,IDataListener {
       }
        }; separator="\n"$
       
-   //  $GUIdriver.allDataAccess:{ dataAccess |
-   //      public void $dataAccess.dataAccessName; format="capital"$ResponseReceived($GUIdriver.AllDataAccess:{ dataAcc |$dataAcc.GeneratedInfo.type$}$ response){
-   //          }  
-   // }$ 
+   /*  $GUIdriver.allDataAccess:{ dataAccess |
+         public void $dataAccess.dataAccessName; format="capital"$ResponseReceived($GUIdriver.AllDataAccess:{ dataAcc |$dataAcc.GeneratedInfo.type$}$ response){
+            }  
+    }$ */ 
     
-  
- 
-    
-   
-    
-     $GUIdriver.commands:{ command |
+      $GUIdriver.commands:{ command |
      private class  $command.name;format="avoidCapital"$ButtonClickListener implements ActionListener{
      @Override
     public void actionPerformed(ActionEvent arg0) {

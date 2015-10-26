@@ -39,7 +39,7 @@ static $field.type$ $field.name$;
     
          
         $CS.allConsumedInfo:{ consumedInfo |
-        if(eventName.equals("$consumedInfo.name$"))
+        if(eventName.equals("AVG-RESULT"))
         {
           
            $CS.allStructFields:{field |  

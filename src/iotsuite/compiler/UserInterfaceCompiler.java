@@ -31,6 +31,9 @@ public class UserInterfaceCompiler {
 	private String GUIName;
 	private String struct;
 	public static List<StructField> StructFieldSetForGUI = new ArrayList<StructField>();
+	public static List<StructField> StructFieldSetForGUINotify = new ArrayList<StructField>();
+	public static List<String> notifyMeasurement=  new ArrayList<String>();
+	public static List<String> notifyStructName=  new ArrayList<String>();
 	
 
 	// private Widget widget;
@@ -60,6 +63,37 @@ public class UserInterfaceCompiler {
 			return StructFieldSetForGUI;
 		}
 	
+	 public List<StructField> getStructFieldSetForGUINotify() {
+			
+			StructFieldSetForGUINotify=iotsuite.parser.SymbolTable.StructFieldSetForGUINotify;
+			 //System.out.println("Struct Field set is "+StructFieldSet);
+			return StructFieldSetForGUINotify;
+		}
+	 
+	 public List<String> getNotifyMeasurement(){
+		 
+		 return this.notifyMeasurement;
+	 }
+	 
+	 public List<String> getNotifyStructName(){
+		 
+		 return this.notifyStructName;
+	 }
+	 
+	 public void setNotifyName(String notifyName) {
+			
+		 this.notifyMeasurement.add(notifyName);
+			
+		}
+	 
+	 public void setNotifyParameter( String notifyStructName) {
+			
+		 
+		 //this.notifyMeasurement.add(notifyMeasurement);
+		 this.notifyStructName.add(notifyStructName);
+		 iotsuite.parser.SymbolTable.searchStructFieldNameForNotifyGUI(notifyStructName);
+		 //System.out.println("Notify Measurement "+notifyMeasurement+ "notify Struct name is "+notifyStructName);
+		}
 
 	public void createGUIObject() {
 		/*
@@ -74,7 +108,7 @@ public class UserInterfaceCompiler {
 
 		guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
 				null, getCommandList(), null, null, getDataAccessList(), null,
-				null,getStructFieldSet());
+				null,getStructFieldSet(),getStructFieldSetForGUINotify(),getNotifyMeasurement(),getNotifyStructName());
 	}
 
 	// Code generator of the abstract classes and Logic files
@@ -294,6 +328,11 @@ public class UserInterfaceCompiler {
 		Action action = new Action(actionName, getActionParameter(), widgetName);
 		actions.add(action);
 	}
+
+	
+
+	
+	
 
 	/*
 	 * private Set<Action> getActionList() { return actions; }

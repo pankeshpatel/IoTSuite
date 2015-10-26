@@ -26,6 +26,9 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
     
     protected void postInitialize() {
      $GUIdriver.allDataAccess:{dataAccess | subscribe$dataAccess.dataAccessName; format="capital"$();}$
+      $GUIdriver.allNotifyMeasurement:{notifyMeasurement | subscribe$notifyMeasurement; format="capital"$();}$
+     
+     
   }
 
 	$GUIdriver.commands:{ command |
@@ -56,6 +59,13 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
         }
         }$
         
+         $GUIdriver.allNotifyMeasurement:{notifyMeasurement | 
+         if(eventName.equals("$notifyMeasurement; format="capital"$")){
+          Logger.log(myDeviceInfo.getName(), "$GUIdriver.name$", "Notification Received $notifyMeasurement; format="capital"$");
+          onNew$notifyMeasurement; format="capital"$Notify(($GUIdriver.AllNotifyStructName:{ notifyStructName |$notifyStructName$}$) arg);
+         }         
+         }$
+        
         
        
         
@@ -83,6 +93,20 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
                myDeviceInfo.getRegionLabels(), myDeviceInfo.getRegion());
          this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="avoidCapital"$", regionInfo);
     }       
+    }$
+    
+    
+     $GUIdriver.allNotifyMeasurement:{notifyMeasurement | 
+     
+     public abstract void onNew$notifyMeasurement; format="capital"$Notify($GUIdriver.AllNotifyStructName:{ notifyStructName |$notifyStructName$}$ arg);
+     
+     public void subscribe$notifyMeasurement; format="capital"$() {
+            
+      List<String> regionInfo = RegionSubscription.getSubscriptionRequest(partitionAttribute, 
+               myDeviceInfo.getRegionLabels(), myDeviceInfo.getRegion());
+         this.myPubSubMiddleware.subscribe(this,"$notifyMeasurement; format="capital"$", regionInfo);
+    } 
+     
     }$
     
     

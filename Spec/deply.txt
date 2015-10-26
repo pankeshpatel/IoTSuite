@@ -35,15 +35,24 @@ devices:
         platform: JavaSE;    
         resources : ;
 		protocol : mqtt;  
-   D7:
+	
+	D7:
+        region :
+             Room  : 1;
+        platform: JavaSE;    
+        resources :;
+		protocol : mqtt;
+		
+   D8:
         region :
              Room  : 1;
         platform: JavaSE;    
         resources :Heater;
 		protocol : mqtt;
-	D8:
+	D9:
         region :
              Room  : 1;
         platform: JavaSE;    
         resources :SmartHomeApp;
 		protocol : mqtt;
+	

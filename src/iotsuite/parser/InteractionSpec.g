@@ -28,8 +28,23 @@ interactionSpec :
 ;      
 
 abilities_def : 
+'resources' ':'
+('structs' ':' struct_def)* // see this is *. so, it is optional. :)  
   ('userinteractions' ':' (gui_def)+ )*     
 ;
+
+struct_def: 
+    CAPITALIZED_ID 
+    {context.currentStruct = new StructCompiler($CAPITALIZED_ID.text);}
+    (structField_def ';')+   
+    {context.currentStruct.generateStructureCode();}
+; 
+structField_def:  
+  lc_id ':' dataType 
+  { context.currentStruct.addField($lc_id.text, $dataType.text);
+  context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
+; 
+
 
 lc_id: ID  
 ;
@@ -58,6 +73,7 @@ gui_def:
     // User interaction - Action. Action (e.g., receiving notification is not a user interaction.
    (gui_command_def ';')*   // User interaction - Command
    (gui_request_def  ';')*   //User interaction - Request/Response
+    (gui_notify_def  ';')*   //User interaction - Notify
    {context.currentGUI.setGUIName($CAPITALIZED_ID.text); 
     context.currentGUI.createGUIObject();
     context.currentGUI.generateCode();}   
@@ -101,6 +117,37 @@ gui_request_def :
    'request' lc_id 
    { context.currentGUI.getDataAccessListFromSymblTable($lc_id.text);
      context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
+;
+
+gui_notify_def :
+  
+    'notify' (gui_display_def)*
+  
+;
+
+gui_display_def :
+  
+  CAPITALIZED_ID  
+   {
+   context.currentActuator = new ActuatorCompiler($CAPITALIZED_ID.text); }
+   '(' gui_notify_parameter_def ')'
+   {
+   context.currentActuator.addAction($CAPITALIZED_ID.text); 
+   context.currentActuator.generateActuatorCode();
+   context.currentGUI.setNotifyName($CAPITALIZED_ID.text);
+   } 
+;
+
+
+gui_notify_parameter_def:
+
+ lc_id ':' CAPITALIZED_ID  (',' gui_notify_parameter_def )?
+{
+  //context.currentGUI.addNotify($lc_id.text); 
+  context.constructActuatorSymblTable($CAPITALIZED_ID.text);
+  context.currentActuator.addParameter($lc_id.text, $CAPITALIZED_ID.text); 
+  context.currentGUI.setNotifyParameter($CAPITALIZED_ID.text);
+   context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);}  
 ;
 
 //gui_request_def :

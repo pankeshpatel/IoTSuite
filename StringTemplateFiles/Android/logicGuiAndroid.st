@@ -5,7 +5,6 @@ import iotsuite.android.localmiddleware.PubSubsSensingFramework;
 import android.app.Activity;
 import iotsuite.semanticmodel.*;
 import $GUIdriver.PackageName$.*;
-import android.content.Intent;
 import android.content.Context;
 import factory.*;
 import deviceImpl.Android$GUIdriver.name$;
@@ -74,13 +73,16 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
 	
 	 $GUIdriver.allDataAccess:{ dataAccess |
      public void onNew$dataAccess.dataAccessName; format="capital"$Response($GUIdriver.AllDataAccess:{ dataAcc |$dataAcc.GeneratedInfo.type$}$ arg){
-        pubSubSensingFramework.publish("$dataAccess.dataAccessName$", arg);    
+        pubSubSensingFramework.publish("$dataAccess.dataAccessName$Response", arg);     
+    }
+    }$    
     
-    }  
+    $GUIdriver.allNotifyMeasurement:{notifyMeasurement | 
+     
+     public  void onNew$notifyMeasurement; format="capital"$Notify($GUIdriver.AllNotifyStructName:{ notifyStructName |$notifyStructName$}$ arg){
+      pubSubSensingFramework.publish("$notifyMeasurement$Notify", arg);    
+     }
     }$
-    
-    
-    
     
     
     

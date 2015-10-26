@@ -15,7 +15,10 @@ public class UserInterface extends SoftwareComponent<Information> {
 	// private Widget reqWidgets;
 	private String lowername;
 	public List<StructField> fields = new ArrayList<StructField>();
-	
+	public List<StructField> fieldsForNotify = new ArrayList<StructField>();
+	public List<String> notifyMeasurement = new ArrayList<String>();
+	public List<String> notifyStructName = new ArrayList<String>();
+	public static int i=0;
 	
 	
 	/*
@@ -28,7 +31,8 @@ public class UserInterface extends SoftwareComponent<Information> {
 	public UserInterface(String name, String lowername,
 			Set<Action> actionsList, Set<Command> commandsList,
 			Set<Information> generateInfo, Set<Information> consumeInfo,
-			Set<DataAccess> dataAccess, String struct, Widget reqWidgets,List<StructField> fields) {
+			Set<DataAccess> dataAccess, String struct, Widget reqWidgets,List<StructField> fields,List<StructField> fieldForNotify
+			,List<String> notifyMeasurement,List<String> notifyStructName) {
 		// super(name, attributes, generateInfo, consumeInfo, "NoInstance");
 		super(name, generateInfo, consumeInfo, "NoInstance");
 		this.lowername = lowername;
@@ -38,11 +42,28 @@ public class UserInterface extends SoftwareComponent<Information> {
 		this.dataAccess = dataAccess;
 		this.struct = struct;
 		this.fields=fields;
+		this.fieldsForNotify=fieldForNotify;
+		this.notifyMeasurement=notifyMeasurement;
+		this.notifyStructName=notifyStructName;
 		
 		// this.reqWidgets = reqWidgets;
 
 	}
 
+	public List<String> getAllNotifyMeasurement(){
+		
+		return notifyMeasurement;
+	}
+	
+	public String getAllNotifyStructName(){
+				
+		if(i==(notifyMeasurement.size())){
+		i=0;	
+		}
+		
+		return notifyStructName.get(i++);
+	}
+	
 	
 	public List<StructField> getFields() {
 		return fields;
@@ -53,6 +74,20 @@ public class UserInterface extends SoftwareComponent<Information> {
 		allStructFields.addAll(getFields());
 		return allStructFields;
 	}
+	
+	
+	public List<StructField> getFieldsForNotify() {
+		return fieldsForNotify;
+	}
+
+	public List<StructField> getAllStructFieldsForNotify() {
+		ArrayList<StructField> allStructFieldsForNotify = new ArrayList<StructField>();
+		allStructFieldsForNotify.addAll(getFieldsForNotify());
+		return allStructFieldsForNotify;
+	}
+	
+	
+	
 	public Set<DataAccess> getDataAccess() {
 
 		return dataAccess;

@@ -5,7 +5,8 @@ softwarecomponents:
 			  consume tempMeasurement from region-hops:0:Room;
 			  COMPUTE(AVG_BY_SAMPLE,5);
 			  generate roomAvgTempMeasurement:TempStruct;
-			  partition-per : Room;		  
+			  partition-per : Room;	
+			    
 		Coordinator:	  
 			Proximity                                   
 			 consume badgeDetected from region-hops:0:Room;
@@ -20,3 +21,12 @@ softwarecomponents:
 			  command Off() to region-hops:0:Room;
 			  command SetTemp(setTemp) to region-hops:0:Room;			 
 			  partition-per : Room;
+			  
+			  DisplayTempController 
+			  consume roomAvgTempMeasurement from region-hops:0:Room;
+			  command DisplayTemp(tempNotify) to region-hops:0:Room;			 
+			  partition-per : Room;
+			  
+			  
+			  			  
+			
