@@ -51,7 +51,7 @@ cs_def:
     ('Aggregator'':'  (agg_cs_def)*)*  
     ('Coordinator'':' (coordinator_def)* )*    
     ('Controller'':' (controller_def)*)*   
-;
+; 
 
  
 agg_cs_def:
@@ -63,8 +63,8 @@ agg_cs_def:
     (csConsumeInfo_def ';')* 
     (csOperation_def ';')*
     (csGeneratedInfoForAggregator_def ';')*
-    (partition_def ';')+   
-    {  
+   // (partition_def ';')+    
+    {   
      context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
      context.currentComputationalService.createCSObject();
    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
@@ -82,7 +82,7 @@ CAPITALIZED_ID
     (csConsumeInfo_def ';')* 
     (csRequest_def ';')*
       (csGeneratedInfo_def ';')*
-   (partition_def ';')+  
+   //(partition_def ';')+  
     { 
     context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
      context.currentComputationalService.createCSObject();
@@ -91,7 +91,7 @@ CAPITALIZED_ID
    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
    
     }
-;
+; 
 
 controller_def:
 
@@ -101,7 +101,7 @@ controller_def:
      context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);} 
     (csConsumeInfo_def ';')* 
     (cntrlCommand_def ';')*   
-    (partition_def ';')+  
+    // (partition_def ';')+  
     { 
     context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
      context.currentComputationalService.createCSObject();
@@ -109,7 +109,7 @@ controller_def:
    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
    
-    }
+    } 
 ;
   
 csOperation_def :
@@ -162,15 +162,15 @@ cntrlParameter_def :
     { context.currentComputationalService.addParameter($lc_id.text); }  
 ;
   
-partition_def:  
-    csDeploymentConstraint='partition-per' ':' CAPITALIZED_ID 
+//partition_def:   
+//    csDeploymentConstraint='partition-per' ':' CAPITALIZED_ID 
     { 
-    context.currentComputationalService.addPartitionAttribute($CAPITALIZED_ID.text);   
-    context.currentMappingConstraint.setAttributeName($csDeploymentConstraint.text);  
-    context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text); 
-   } 
-;  
-
+   // context.currentComputationalService.addPartitionAttribute($CAPITALIZED_ID.text);   
+   // context.currentMappingConstraint.setAttributeName($csDeploymentConstraint.text);  
+   // context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text); 
+ //  }     
+//;    
+ 
 lc_id: ID  
 ;
  

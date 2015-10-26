@@ -9,12 +9,14 @@ public class DeploymentScope {
 	public DeploymentScope() {
 	}
 
-	public DeploymentScope(String softwareComponentName, String attributeName,
-			String attributeValue) {
+	/*public DeploymentScope(String softwareComponentName, String attributeName,
+			String attributeValue) {*/
+	
+	public DeploymentScope(String softwareComponentName) {
 		super();
 		this.softwareComponentName = softwareComponentName;
-		this.attributeName = attributeName;
-		this.attributeValue = attributeValue;
+		//this.attributeName = attributeName;
+		//this.attributeValue = attributeValue;
 
 	}
 

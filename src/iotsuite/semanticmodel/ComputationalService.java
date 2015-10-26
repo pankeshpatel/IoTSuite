@@ -19,10 +19,9 @@ public class ComputationalService extends SoftwareComponent<Information> {
 
 	public ComputationalService(String name, Set<Information> generateInfo,
 			Set<Information> consumeInfo, Set<DataAccess> dataAccess,
-			Set<Action> actions, String partitionAttributeValue,
-			String operation,List<StructField> fields, int sampleValue) {
+			Set<Action> actions, String operation,List<StructField> fields, int sampleValue) {
 				
-		super(name, generateInfo, consumeInfo, partitionAttributeValue);
+		super(name, generateInfo, consumeInfo);
 		this.dataAccess = dataAccess;
 		this.actions = actions;
 		this.operatation = operation;

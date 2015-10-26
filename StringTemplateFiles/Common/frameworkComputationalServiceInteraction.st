@@ -8,7 +8,8 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 			
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
-	private String partitionAttribute = "$CS.PartitionAttributeVal$";
+    private String partitionAttribute = "remove";
+	
 	
 	public $CS.name$(PubSubMiddleware pubSubM, Device deviceInfo) {   
 		

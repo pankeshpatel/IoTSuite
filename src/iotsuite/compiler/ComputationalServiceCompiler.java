@@ -66,30 +66,16 @@ public class ComputationalServiceCompiler {
 	}
 
 	public void createCSObject() {
-		/*
-		 * computationalService = new
-		 * ComputationalService(getComputationalServiceName(),
-		 * getAttributeSet(), getGeneratedInfo(), getConsumedInfo(),
-		 * getDataAccessList(), getActionList(), getPartitionAttributeVal());
-		 */
-		/*
-		 * computationalService = new ComputationalService(
-		 * getComputationalServiceName(), getGeneratedInfo(),getConsumedInfo(),
-		 * getConsumedInfo(), getDataAccessList(), getActionList(),
-		 * getPartitionAttributeVal());
-		 */
-
-		/*
-		 * computationalService = new ComputationalService(
-		 * getComputationalServiceName(), getGeneratedInfo(), getConsumedInfo(),
-		 * getDataAccessList(), getActionList(), getPartitionAttributeVal(),
-		 * computationalServiceName);
-		 */
-
+		
+		/*computationalService = new ComputationalService(
+				getComputationalServiceName(), getGeneratedInfo(),
+				getConsumedInfo(), getDataAccessList(), getActionList(),
+				getPartitionAttributeVal(), getOperation(),getStructFieldSet(),getSampleValue());*/
+		
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
-				getPartitionAttributeVal(), getOperation(),getStructFieldSet(),getSampleValue());
+				getOperation(),getStructFieldSet(),getSampleValue());
 
 	}
 
@@ -141,14 +127,13 @@ public class ComputationalServiceCompiler {
 	}
 
 	// Getter and Setter of Partition Attribute
-	public void addPartitionAttribute(String regionName) {
-		partitionAttributeValue = regionName;
+	//public void addPartitionAttribute(String regionName) {
+	//	partitionAttributeValue = regionName;
+	//}
 
-	}
-
-	public String getPartitionAttributeVal() {
-		return partitionAttributeValue;
-	}
+	//public String getPartitionAttributeVal() {
+	//	return partitionAttributeValue;
+	//}
 
 	// Getter and Setter of Consumed Info
 

@@ -55,4 +55,3 @@ devices:
         platform: JavaSE;    
         resources :SmartHomeApp;
 		protocol : mqtt;
-	

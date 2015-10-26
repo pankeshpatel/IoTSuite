@@ -33,11 +33,11 @@ public class UserInterface extends SoftwareComponent<Information> {
 			Set<Information> generateInfo, Set<Information> consumeInfo,
 			Set<DataAccess> dataAccess, String struct, Widget reqWidgets,List<StructField> fields,List<StructField> fieldForNotify
 			,List<String> notifyMeasurement,List<String> notifyStructName) {
-		// super(name, attributes, generateInfo, consumeInfo, "NoInstance");
-		super(name, generateInfo, consumeInfo, "NoInstance");
+
+		//super(name, generateInfo, consumeInfo, "NoInstance");
+		
+		super(name, generateInfo, consumeInfo);
 		this.lowername = lowername;
-		// this.actions = actionsList;
-		// this.actions = null;
 		this.commands = commandsList;
 		this.dataAccess = dataAccess;
 		this.struct = struct;
@@ -45,9 +45,6 @@ public class UserInterface extends SoftwareComponent<Information> {
 		this.fieldsForNotify=fieldForNotify;
 		this.notifyMeasurement=notifyMeasurement;
 		this.notifyStructName=notifyStructName;
-		
-		// this.reqWidgets = reqWidgets;
-
 	}
 
 	public List<String> getAllNotifyMeasurement(){

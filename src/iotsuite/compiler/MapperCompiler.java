@@ -30,8 +30,11 @@ public class MapperCompiler {
 	}
 
 	public void addDeployementConstraintObj() {
-		deploymentConstraint = new DeploymentScope(getSoftwareComponentName(),
-				getAttributeName(), getAttributeValue());
+		/*deploymentConstraint = new DeploymentScope(getSoftwareComponentName(),
+				getAttributeName(), getAttributeValue());*/
+		
+		deploymentConstraint = new DeploymentScope(getSoftwareComponentName());
+
 
 		SymbolTable.addDeploymentConstraints(deploymentConstraint);
 	}
@@ -44,11 +47,11 @@ public class MapperCompiler {
 		this.softwareComponentName = softwareComponentName;
 	}
 
-	public String getAttributeName() {
+	/* public String getAttributeName() {
 		return attributeName;
 	}
 
-	public void setAttributeName(String attributeName) {
+   public void setAttributeName(String attributeName) {
 		this.attributeName = attributeName;
 	}
 
@@ -58,8 +61,8 @@ public class MapperCompiler {
 
 	public void setAttributeValue(String attributeValue) {
 		this.attributeValue = attributeValue;
-	}
-
+	}*/
+ 
 	public static void mappingFileGenerator(List<Device> deviceList,
 			List<DeploymentScope> mappingConstraintList) throws IOException {
 

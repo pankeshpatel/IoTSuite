@@ -10,7 +10,6 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
 	
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
-	//private String partitionAttribute = "$Actuatordriver.PartitionAttributeVal$";
 	private String partitionAttribute = "Room";
 	
 	

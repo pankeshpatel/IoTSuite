@@ -13,25 +13,23 @@ public abstract class SoftwareComponent<I extends Information> {
 	// private Set<Attribute> attributes = new HashSet<Attribute>();
 	private Set<I> generateInfo = new HashSet<I>();
 	private Set<I> consumeInfo = new HashSet<I>();
-	private String partitionAttributeVal;
+	//private String partitionAttributeVal;
 
-	// public SoftwareComponent(String name, Set<Attribute> attributes, Set<I>
-	// generateInfo, Set<I> consumeInfo, String partitionAttributeVal) {
+	
 	public SoftwareComponent(String name, Set<I> generateInfo,
-			Set<I> consumeInfo, String partitionAttributeVal) {
+			Set<I> consumeInfo) {
 
 		super();
 		this.name = name;
-		// this.attributes = attributes;
 		this.generateInfo = generateInfo;
 		this.consumeInfo = consumeInfo;
-		this.partitionAttributeVal = partitionAttributeVal;
+		//this.partitionAttributeVal = partitionAttributeVal;
 
 	}
 
-	public String getPartitionAttributeVal() {
+	/*public String getPartitionAttributeVal() {
 		return partitionAttributeVal;
-	}
+	}*/
 
 	public boolean isGeneratedInfo() {
 		if (generateInfo != null)
@@ -51,9 +49,6 @@ public abstract class SoftwareComponent<I extends Information> {
 		return name;
 	}
 
-	/*
-	 * public Set<Attribute> getAttributes() { return attributes; }
-	 */
 
 	public Set<I> getGenerateInfo() {
 		return generateInfo;

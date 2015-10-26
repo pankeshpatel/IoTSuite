@@ -18,14 +18,13 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 	public static String samplePeriod;
 	public static String sampleDuration;
 
-	// public Sensor(String name, Set<Attribute> attributes,
-	// Set<SensorMeasurement> generateInfo, Set<SensorMeasurement> consumeInfo)
-	// {
+	
 	public Sensor(String name, Set<SensorMeasurement> generateInfo,
 			Set<SensorMeasurement> consumeInfo,
 			List<String> eventDrivenFieldName, List<String> eventDrivenFields) {
-		// super(name, attributes, generateInfo, consumeInfo, "NoInstance");
-		super(name, generateInfo, consumeInfo, "NoInstance");
+
+		//super(name, generateInfo, consumeInfo, "NoInstance");
+		super(name, generateInfo, consumeInfo);
 		Sensor.eventDrivenFieldName = eventDrivenFieldName;
 		Sensor.eventDrivenFields = eventDrivenFields;
 
