@@ -17,7 +17,6 @@ import iotsuite.semanticmodel.*;
 } 
   
 @members {
-  //Initialize the context
   private SymbolTable context;
 } 
  
@@ -25,12 +24,10 @@ vocabSpec :
     'regions'
     { context = new SymbolTable();
     context.currentRegion = new RegionCompiler();
-    // context.currentMappingConstraint = new MappingConstraint(); 
     }
     ':' (region_def)+  
     { context.currentRegion.generateRegionCode(); }     
     'structs' ':' (struct_def)+  
-   // ('widgets' ':' widget_def)*
     'resources' ':' abilities_def   
 ;
 //*************************************************************************************************
@@ -38,31 +35,18 @@ vocabSpec :
 // Region Definition *** Start
  
 region_def :      
-  
-     CAPITALIZED_ID ':' dataType  ';'
+    CAPITALIZED_ID ':' dataType  ';'
     { 
     context.currentRegion.addRegion($CAPITALIZED_ID.text, $dataType.text); 
     }
 ;
-
-// Region Definition *** End 
-//*************************************************************************************************
-
-
-// Structure Definition *** Start 
-//************************************************************************************************
-
 struct_def:
     CAPITALIZED_ID 
     {context.currentStruct = new StructCompiler($CAPITALIZED_ID.text);
     context.constructStructNameSymblTable($CAPITALIZED_ID.text);}
     (structField_def ';')*   
     {
-     
-     context.currentStruct.generateStructureCode();
-    
-    
-  
+     context.currentStruct.generateStructureCode();  
     } 
 ;
 structField_def:  
@@ -72,27 +56,18 @@ structField_def:
    context.constructStructFieldSymblTable($lc_id.text,$dataType.text);
     context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
 ; 
-// Structure Definition *** End 
-//************************************************************************************************
+ 
 
 abilities_def : 
-  // 'periodicsensors' ':'   (sensor_def)+
   ('sensors' ':'   sensor_def)+
    ('actuators' ':' actuator_def)*
   ('storages'  ':' ss_def)*
   ('interactions' ':' (gui_def)+ )*     
-;   
-
-
-// Sensor Definition *** Start 
-//************************************************************************************************
+;
  
 sensor_def:
- 
       ('periodicsensors' ':'(periodicsensor_def)*)*
-
       ('eventdriven' ':' (eventsensor_def)*)*
-
 ; 
 
 periodicsensor_def:
@@ -115,28 +90,20 @@ eventsensor_def:
 
 sensorMeasurementForEventDriven_def:
 'generate' lc_id ':'  CAPITALIZED_ID  
-   
-    {
-      
+    {  
     context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text , context.getStructSymblTable($CAPITALIZED_ID.text) ); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     context.constructEventDrivenSymblTable($CAPITALIZED_ID.text);
-    
-  
-      } 
+     } 
 ;
 
 sensorMeasurementForPeriodic_def : 
-    'generate' lc_id ':'  CAPITALIZED_ID 
-        
-    {
-      
+    'generate' lc_id ':'  CAPITALIZED_ID        
+    {      
     context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text , context.getStructSymblTable($CAPITALIZED_ID.text) ); 
-    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
-  
-      } 
+    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);  
+    } 
 ;
-
  
 sensorperiodicMeasurement_def:
  'sample' 'period' (sample_period_def)* 'for' (sample_duration_def)*  
@@ -149,28 +116,16 @@ context.currentSensor.addSensorMeasurementSamplePeriod($INT.text);
 }
 ;
 
-
 sample_duration_def :
 INT
 {
 context.currentSensor.addSensorMeasurementSampleDuration($INT.text);
 }
 ;
- 
- 
- 
 
 sensoreventMeasurement_def: 
 ('onCondition' (ID |',' ID)*)*
-
 ;
-
-// Sensor Definition *** End 
-//************************************************************************************************
-
-
-// Actuator Definition *** Start 
-//************************************************************************************************
 
 actuator_def:
    CAPITALIZED_ID
@@ -178,8 +133,6 @@ actuator_def:
    (action_def ';')*
    {context.currentActuator.generateActuatorCode();}    
 ;
-
-
 action_def:
     'action' CAPITALIZED_ID '(' (parameter_def)? ')'
     { context.currentActuator.addAction($CAPITALIZED_ID.text); } 
@@ -194,30 +147,18 @@ parameter_def :
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
    
     }
-; 
-
-// Actuator Definition *** End 
-//************************************************************************************************
-
-
-// Storage Definition *** Start 
-//************************************************************************************************
-
+;
 ss_def:
   CAPITALIZED_ID
     { context.currentStorageService = new StorageCompiler();
       }
-   
     (storageDataAccess_def ';')* 
- 
      {
      context.currentStorageService.setStorageServiceName($CAPITALIZED_ID.text);
      context.currentStorageService.createStorageObject();
      context.currentStorageService.generateStorageCode(); 
      }
-; 
- 
- 
+;
 
 storageDataAccess_def :
      storageGeneratedInfo_def  'accessed-by' storagedataIndex_def
@@ -259,74 +200,7 @@ ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' | '0'..'9')* ;
    
 INT : '0'..'9'('0'..'9')* ;
 
-//SEC_INT : '0'..'9'('0'..'9')* ; 
 
 CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )*;
 
 WS: ('\t' | ' ' | '\r' | '\n' | '\u000C')+ {$channel = HIDDEN;};
-
-
-//**************************The following is a part of future work ******************************
-
-// EndUserGUI Definition *** Start 
-//************************************************************************************************
-
-// This is a part of future work.
-
-gui_def:  
-  {context.currentGUI = new UserInterfaceCompiler();}  
-  CAPITALIZED_ID           
-   //(gui_action_def ';')*  
-    // User interaction - Action. Action (e.g., receiving notification is not a user interaction.
-   (gui_command_def ';')*   // User interaction - Command
-   (gui_request_def  ';')*   //User interaction - Request/Response
-   {context.currentGUI.setGUIName($CAPITALIZED_ID.text); 
-    context.currentGUI.createGUIObject();
-    context.currentGUI.generateCode();}   
-;
-
-gui_command_def :
-    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')'   
-    { 
-      context.currentGUI.addCommand($name.text);   
-    }
-;
-
-
-gui_command_parameter_def :
-    lc_id (',' gui_command_parameter_def )?
-    { 
-    context.currentGUI.addCommandParameter($lc_id.text); 
-    }
-;
-
-
-
-
-gui_action_def:
-    'action' name = CAPITALIZED_ID '(' (gui_action_parameter_def)? ')' 'with' ui = lc_id
-    { context.currentGUI.addAction($name.text, $ui.text ); } 
-;
-
-gui_action_parameter_def :
-    lc_id ':'  CAPITALIZED_ID (',' gui_action_parameter_def )?
-    { 
-    context.currentGUI.addActionParameter($lc_id.text, $CAPITALIZED_ID.text); 
-    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
-    }
-;  
-
-gui_request_def :
-   'request' lc_id 
-   { context.currentGUI.getDataAccessListFromSymblTable($lc_id.text);
-     context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
-;
-
-
-bt_id :  ID ;
-
-txtbx_id :  ID ;
-
-txtview_id :  ID ;
-
- 
