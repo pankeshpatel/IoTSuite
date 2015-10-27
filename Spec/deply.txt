@@ -5,36 +5,42 @@ devices:
         platform: JavaSE;    
         resources :TemperatureSensor;
 		protocol : mqtt;  
+		description : D1 Description; 
 	D2:
         location :
             Room  : 1;
         platform: JavaSE;    
         resources :BadgeReader;
-		protocol : mqtt;  
+		protocol : mqtt; 
+		description : D1 Description;  
 	D3:
         location :
-             Room  : 1;
+             Room  : 1; 
         platform: JavaSE;    
         resources : ProfileDB;
-		protocol : mqtt;  
+		protocol : mqtt; 
+	    description :  D1 Description;		
 	D4:
         location :
              Room  : 1;
         platform: JavaSE;    
         resources : ;
-		protocol : mqtt;  
+		protocol : mqtt;
+		description :  D1 Description; 
    D5:
         location :
              Room  : 1;
         platform: JavaSE;    
         resources : ;
-		protocol : mqtt;  
+		protocol : mqtt; 
+		description :  D1 Description;
    D6:
         location :
              Room  : 1;
         platform: JavaSE;    
         resources : ;
-		protocol : mqtt;  
+		protocol : mqtt; 
+		description : D;
 	
 	D7:
         location :
@@ -42,6 +48,7 @@ devices:
         platform: JavaSE;    
         resources :;
 		protocol : mqtt;
+		description : D1 Description is written; 
 		
    D8:
         location :
@@ -49,9 +56,11 @@ devices:
         platform: JavaSE;    
         resources :Heater;
 		protocol : mqtt;
+		description :  D;
 	D9:
         location :
              Room  : 1;
         platform: JavaSE;    
         resources :SmartHomeApp;
 		protocol : mqtt;
+		description :  D;

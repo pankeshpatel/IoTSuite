@@ -19,16 +19,14 @@ public class Device implements Serializable {
 
 	private List<String> regionIDs = new ArrayList<String>();
 	private List<String> regionLabels = new ArrayList<String>();
-
 	private Set<String> abilities = new HashSet<String>();
-
 	private String myMobileFlag;
-
 	private String myProtocol;
+	private String myDescription;
 
 	public Device(String name, String type, String networkAddress,
 			List<String> regionIDs, List<String> regionLabels,
-			Set<String> abilities, String mobileFlag, String protocol) {
+			Set<String> abilities, String mobileFlag, String protocol, String deviceDescription) {
 
 		this.name = name;
 
@@ -39,7 +37,12 @@ public class Device implements Serializable {
 		this.abilities = abilities;
 		this.myMobileFlag = mobileFlag;
 		this.myProtocol = protocol;
+		this.myDescription = deviceDescription;
 
+	}
+	
+	public String getDescription(){
+		return myDescription;
 	}
 
 	public String getProtocol() {

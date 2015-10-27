@@ -36,10 +36,11 @@ device_def:
     'location' ':' (location_def)* 
     'platform' ':' (device_type)* ';' 
     'resources' ':' (abilities_def)?  ';'
-    'protocol' ':' (protocol_value)* ';' 
+    'protocol' ':' (protocol_value)* ';'     
+     'description' ':'  (description_def)* ';'
     { context.currentNetwork.addDeviceObj();}
 ;
-
+   
 location_def :
     CAPITALIZED_ID ':' ID ';'
     {context.currentNetwork.addRegionLabel($CAPITALIZED_ID.text);
@@ -57,17 +58,27 @@ abilities_def :
   {context.currentNetwork.addDeviceAbilities($CAPITALIZED_ID.text);
   }
 ;
-
+ 
 protocol_value:
-  ID
+  ID    
   {context.currentNetwork.setProtocol($ID.text);}
 ;
+
+description_def:
+   CAPITALIZED_ID 
+   {context.currentNetwork.setDeviceDescription($CAPITALIZED_ID.text);}
+;  
  
 MOBILEFLAG :  'true' | 'false'
    ;
 
-ID  : ('a'..'z'  ('a'..'z' | 'A'..'Z' )* ('0'..'9')*)| '0'..'9'('0'..'9')*|'*' ;  
+      
+ 
+ID  : ('a'..'z'  ('a'..'z' | 'A'..'Z' )* ('0'..'9')*)| '0'..'9'('0'..'9')*|'*' ;
 
-CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )* ('0'..'9')*;
+CAPITALIZED_ID:  'A'..'Z' ('a'..'z' | 'A'..'Z'| '0'..'9'| ' ' )* ;   
 
+//CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )* ('0'..'9')*;
+
+ 
 WS: ('\t' | ' ' | '\r' | '\n' | '\u000C')+ {$channel = HIDDEN;};

@@ -117,7 +117,7 @@ public class MapperCompiler {
 		return new Device(device.getName(), device.getType(),
 				device.getNetworkAddress(), device.getRegion(),
 				device.getRegionLabels(), resultAbilities,
-				device.getMobileFlag(), device.getProtocol());
+				device.getMobileFlag(), device.getProtocol(), device.getDescription());
 	}
 
 	/*

@@ -20,6 +20,7 @@ public class DeviceCompiler {
 	private String softwarePlatform;
 	private List<Device> deviceList = new ArrayList<Device>();
 	private String myProtocol;
+	private String myDescription;
 
 	private String myMobileFlag;
 
@@ -29,7 +30,7 @@ public class DeviceCompiler {
 	public void addDeviceObj() {
 		device = new Device(getDeviceName(), getDeviceType(),
 				getNetworkAddress(), getRegionValues(), getRegionLabel(),
-				deviceAbilities, getMobileFlag(), getProtocol());
+				deviceAbilities, getMobileFlag(), getProtocol(), getDeviceDescription());
 		SymbolTable.addDeviceinSymblTable(device);
 	}
 
@@ -77,6 +78,17 @@ public class DeviceCompiler {
 	public void setDeviceType(String deviceType) {
 		this.deviceType = deviceType;
 	}
+	
+	// Getter and Setter of Device Description
+	public void setDeviceDescription(String deviceDesctiption){
+		this.myDescription = deviceDesctiption;
+	}
+	
+	public String getDeviceDescription(){
+		return myDescription;
+	}
+	
+	
 
 	// Getter and Setter of NetworkAddress
 
