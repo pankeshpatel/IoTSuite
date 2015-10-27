@@ -38,6 +38,7 @@ device_def:
     'resources' ':' (abilities_def)?  ';'
     'protocol' ':' (protocol_value)* ';'     
      'description' ':'  (description_def)* ';'
+     ('database' ':' database_def ';')* 
     { context.currentNetwork.addDeviceObj();}
 ;
    
@@ -68,6 +69,11 @@ description_def:
    CAPITALIZED_ID 
    {context.currentNetwork.setDeviceDescription($CAPITALIZED_ID.text);}
 ;  
+
+database_def:
+CAPITALIZED_ID
+{context.currentNetwork.setDatabase($CAPITALIZED_ID.text);}
+;
  
 MOBILEFLAG :  'true' | 'false'
    ;

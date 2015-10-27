@@ -1,5 +1,6 @@
 package $Storageservice.deviceImplPackageName$;
 
+import iotsuite.semanticmodel.Device;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
@@ -36,7 +37,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 
 	
 		
-  public JavaSE$Storageservice.name$() {
+  public JavaSE$Storageservice.name$(Device deviceInfo) {
 	  
 	  
 	 

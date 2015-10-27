@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-10-27 17:01:50
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-10-27 22:57:04
  
 package iotsuite.parser;
 import iotsuite.compiler.*;  
@@ -63,7 +63,7 @@ public class InteractionSpecParser extends Parser {
 	}
 
 	@Override public String[] getTokenNames() { return InteractionSpecParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g"; }
+	@Override public String getGrammarFileName() { return "S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g"; }
 
 
 	  //Initialize the context
@@ -72,11 +72,11 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "interactionSpec"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:1: interactionSpec : abilities_def ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:1: interactionSpec : abilities_def ;
 	public final void interactionSpec() throws RecognitionException {
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:17: ( abilities_def )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:25:5: abilities_def
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:24:17: ( abilities_def )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:25:5: abilities_def
 			{
 			 context = new SymbolTable();
 			    
@@ -100,15 +100,15 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "abilities_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:1: abilities_def : 'resources' ':' ( 'structs' ':' struct_def )* ( 'userinteractions' ':' ( gui_def )+ )* ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:1: abilities_def : 'resources' ':' ( 'structs' ':' struct_def )* ( 'userinteractions' ':' ( gui_def )+ )* ;
 	public final void abilities_def() throws RecognitionException {
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:15: ( 'resources' ':' ( 'structs' ':' struct_def )* ( 'userinteractions' ':' ( gui_def )+ )* )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:1: 'resources' ':' ( 'structs' ':' struct_def )* ( 'userinteractions' ':' ( gui_def )+ )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:15: ( 'resources' ':' ( 'structs' ':' struct_def )* ( 'userinteractions' ':' ( gui_def )+ )* )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:1: 'resources' ':' ( 'structs' ':' struct_def )* ( 'userinteractions' ':' ( gui_def )+ )*
 			{
 			match(input,24,FOLLOW_24_in_abilities_def97); 
 			match(input,11,FOLLOW_11_in_abilities_def99); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:3: ( 'structs' ':' struct_def )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:3: ( 'structs' ':' struct_def )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -119,7 +119,7 @@ public class InteractionSpecParser extends Parser {
 
 				switch (alt1) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:4: 'structs' ':' struct_def
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:4: 'structs' ':' struct_def
 					{
 					match(input,25,FOLLOW_25_in_abilities_def104); 
 					match(input,11,FOLLOW_11_in_abilities_def106); 
@@ -135,7 +135,7 @@ public class InteractionSpecParser extends Parser {
 				}
 			}
 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:3: ( 'userinteractions' ':' ( gui_def )+ )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:3: ( 'userinteractions' ':' ( gui_def )+ )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -146,11 +146,11 @@ public class InteractionSpecParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:4: 'userinteractions' ':' ( gui_def )+
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:4: 'userinteractions' ':' ( gui_def )+
 					{
 					match(input,27,FOLLOW_27_in_abilities_def117); 
 					match(input,11,FOLLOW_11_in_abilities_def119); 
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:27: ( gui_def )+
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:27: ( gui_def )+
 					int cnt2=0;
 					loop2:
 					while (true) {
@@ -162,7 +162,7 @@ public class InteractionSpecParser extends Parser {
 
 						switch (alt2) {
 						case 1 :
-							// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:28: gui_def
+							// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:33:28: gui_def
 							{
 							pushFollow(FOLLOW_gui_def_in_abilities_def122);
 							gui_def();
@@ -203,17 +203,17 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "struct_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:36:1: struct_def : CAPITALIZED_ID ( structField_def ';' )+ ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:36:1: struct_def : CAPITALIZED_ID ( structField_def ';' )+ ;
 	public final void struct_def() throws RecognitionException {
 		Token CAPITALIZED_ID1=null;
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:36:11: ( CAPITALIZED_ID ( structField_def ';' )+ )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:37:5: CAPITALIZED_ID ( structField_def ';' )+
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:36:11: ( CAPITALIZED_ID ( structField_def ';' )+ )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:37:5: CAPITALIZED_ID ( structField_def ';' )+
 			{
 			CAPITALIZED_ID1=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_struct_def145); 
 			context.currentStruct = new StructCompiler((CAPITALIZED_ID1!=null?CAPITALIZED_ID1.getText():null));
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:39:5: ( structField_def ';' )+
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:39:5: ( structField_def ';' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -225,7 +225,7 @@ public class InteractionSpecParser extends Parser {
 
 				switch (alt4) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:39:6: structField_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:39:6: structField_def ';'
 					{
 					pushFollow(FOLLOW_structField_def_in_struct_def159);
 					structField_def();
@@ -260,14 +260,14 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "structField_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:42:1: structField_def : lc_id ':' dataType ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:42:1: structField_def : lc_id ':' dataType ;
 	public final void structField_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id2 =null;
 		ParserRuleReturnScope dataType3 =null;
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:42:16: ( lc_id ':' dataType )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:43:3: lc_id ':' dataType
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:42:16: ( lc_id ':' dataType )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:43:3: lc_id ':' dataType
 			{
 			pushFollow(FOLLOW_lc_id_in_structField_def184);
 			lc_id2=lc_id();
@@ -299,14 +299,14 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "lc_id"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:49:1: lc_id : ID ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:49:1: lc_id : ID ;
 	public final InteractionSpecParser.lc_id_return lc_id() throws RecognitionException {
 		InteractionSpecParser.lc_id_return retval = new InteractionSpecParser.lc_id_return();
 		retval.start = input.LT(1);
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:49:6: ( ID )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:49:8: ID
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:49:6: ( ID )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:49:8: ID
 			{
 			match(input,ID,FOLLOW_ID_in_lc_id205); 
 			}
@@ -331,14 +331,14 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "dataType"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:52:1: dataType : primitiveType ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:52:1: dataType : primitiveType ;
 	public final InteractionSpecParser.dataType_return dataType() throws RecognitionException {
 		InteractionSpecParser.dataType_return retval = new InteractionSpecParser.dataType_return();
 		retval.start = input.LT(1);
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:52:9: ( primitiveType )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:53:3: primitiveType
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:52:9: ( primitiveType )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:53:3: primitiveType
 			{
 			pushFollow(FOLLOW_primitiveType_in_dataType218);
 			primitiveType();
@@ -363,15 +363,15 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "primitiveType"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:56:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:56:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) ;
 	public final void primitiveType() throws RecognitionException {
 		Token id=null;
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:56:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:56:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
 			{
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
 			int alt5=6;
 			switch ( input.LA(1) ) {
 			case 14:
@@ -411,37 +411,37 @@ public class InteractionSpecParser extends Parser {
 			}
 			switch (alt5) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:4: id= 'Integer'
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:4: id= 'Integer'
 					{
 					id=(Token)match(input,14,FOLLOW_14_in_primitiveType233); 
 					}
 					break;
 				case 2 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:19: id= 'Boolean'
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:19: id= 'Boolean'
 					{
 					id=(Token)match(input,13,FOLLOW_13_in_primitiveType239); 
 					}
 					break;
 				case 3 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:34: id= 'String'
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:34: id= 'String'
 					{
 					id=(Token)match(input,15,FOLLOW_15_in_primitiveType245); 
 					}
 					break;
 				case 4 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:49: id= 'double'
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:49: id= 'double'
 					{
 					id=(Token)match(input,19,FOLLOW_19_in_primitiveType254); 
 					}
 					break;
 				case 5 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:65: id= 'long'
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:65: id= 'long'
 					{
 					id=(Token)match(input,21,FOLLOW_21_in_primitiveType262); 
 					}
 					break;
 				case 6 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:79: id= 'boolean'
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:57:79: id= 'boolean'
 					{
 					id=(Token)match(input,17,FOLLOW_17_in_primitiveType268); 
 					}
@@ -465,17 +465,17 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:69:1: gui_def : CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* ( gui_notify_def ';' )* ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:69:1: gui_def : CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* ( gui_notify_def ';' )* ;
 	public final void gui_def() throws RecognitionException {
 		Token CAPITALIZED_ID4=null;
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:69:8: ( CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* ( gui_notify_def ';' )* )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:70:3: CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* ( gui_notify_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:69:8: ( CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* ( gui_notify_def ';' )* )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:70:3: CAPITALIZED_ID ( gui_command_def ';' )* ( gui_request_def ';' )* ( gui_notify_def ';' )*
 			{
 			context.currentGUI = new UserInterfaceCompiler();
 			CAPITALIZED_ID4=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_def396); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:72:4: ( gui_command_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:72:4: ( gui_command_def ';' )*
 			loop6:
 			while (true) {
 				int alt6=2;
@@ -486,7 +486,7 @@ public class InteractionSpecParser extends Parser {
 
 				switch (alt6) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:72:5: gui_command_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:72:5: gui_command_def ';'
 					{
 					pushFollow(FOLLOW_gui_command_def_in_gui_def402);
 					gui_command_def();
@@ -501,7 +501,7 @@ public class InteractionSpecParser extends Parser {
 				}
 			}
 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:73:4: ( gui_request_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:73:4: ( gui_request_def ';' )*
 			loop7:
 			while (true) {
 				int alt7=2;
@@ -512,7 +512,7 @@ public class InteractionSpecParser extends Parser {
 
 				switch (alt7) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:73:5: gui_request_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:73:5: gui_request_def ';'
 					{
 					pushFollow(FOLLOW_gui_request_def_in_gui_def415);
 					gui_request_def();
@@ -527,7 +527,7 @@ public class InteractionSpecParser extends Parser {
 				}
 			}
 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:74:5: ( gui_notify_def ';' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:74:5: ( gui_notify_def ';' )*
 			loop8:
 			while (true) {
 				int alt8=2;
@@ -538,7 +538,7 @@ public class InteractionSpecParser extends Parser {
 
 				switch (alt8) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:74:6: gui_notify_def ';'
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:74:6: gui_notify_def ';'
 					{
 					pushFollow(FOLLOW_gui_notify_def_in_gui_def430);
 					gui_notify_def();
@@ -572,18 +572,18 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_command_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:80:1: gui_command_def : 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' 'to' CAPITALIZED_ID ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:80:1: gui_command_def : 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' 'to' CAPITALIZED_ID ;
 	public final void gui_command_def() throws RecognitionException {
 		Token name=null;
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:80:17: ( 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' 'to' CAPITALIZED_ID )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:81:5: 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' 'to' CAPITALIZED_ID
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:80:17: ( 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' 'to' CAPITALIZED_ID )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:81:5: 'command' name= CAPITALIZED_ID '(' ( gui_command_parameter_def )? ')' 'to' CAPITALIZED_ID
 			{
 			match(input,18,FOLLOW_18_in_gui_command_def460); 
 			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_command_def467); 
 			match(input,8,FOLLOW_8_in_gui_command_def469); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:81:42: ( gui_command_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:81:42: ( gui_command_parameter_def )?
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0==ID) ) {
@@ -591,7 +591,7 @@ public class InteractionSpecParser extends Parser {
 			}
 			switch (alt9) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:81:43: gui_command_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:81:43: gui_command_parameter_def
 					{
 					pushFollow(FOLLOW_gui_command_parameter_def_in_gui_command_def472);
 					gui_command_parameter_def();
@@ -624,19 +624,19 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_command_parameter_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:88:1: gui_command_parameter_def : lc_id ( ',' gui_command_parameter_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:88:1: gui_command_parameter_def : lc_id ( ',' gui_command_parameter_def )? ;
 	public final void gui_command_parameter_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id5 =null;
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:88:27: ( lc_id ( ',' gui_command_parameter_def )? )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:89:5: lc_id ( ',' gui_command_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:88:27: ( lc_id ( ',' gui_command_parameter_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:89:5: lc_id ( ',' gui_command_parameter_def )?
 			{
 			pushFollow(FOLLOW_lc_id_in_gui_command_parameter_def501);
 			lc_id5=lc_id();
 			state._fsp--;
 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:89:11: ( ',' gui_command_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:89:11: ( ',' gui_command_parameter_def )?
 			int alt10=2;
 			int LA10_0 = input.LA(1);
 			if ( (LA10_0==10) ) {
@@ -644,7 +644,7 @@ public class InteractionSpecParser extends Parser {
 			}
 			switch (alt10) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:89:12: ',' gui_command_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:89:12: ',' gui_command_parameter_def
 					{
 					match(input,10,FOLLOW_10_in_gui_command_parameter_def504); 
 					pushFollow(FOLLOW_gui_command_parameter_def_in_gui_command_parameter_def506);
@@ -675,19 +675,19 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_action_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:95:1: gui_action_def : 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:95:1: gui_action_def : 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id ;
 	public final void gui_action_def() throws RecognitionException {
 		Token name=null;
 		ParserRuleReturnScope ui =null;
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:95:15: ( 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:96:5: 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:95:15: ( 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:96:5: 'action' name= CAPITALIZED_ID '(' ( gui_action_parameter_def )? ')' 'with' ui= lc_id
 			{
 			match(input,16,FOLLOW_16_in_gui_action_def527); 
 			name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_action_def533); 
 			match(input,8,FOLLOW_8_in_gui_action_def535); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:96:40: ( gui_action_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:96:40: ( gui_action_parameter_def )?
 			int alt11=2;
 			int LA11_0 = input.LA(1);
 			if ( (LA11_0==ID) ) {
@@ -695,7 +695,7 @@ public class InteractionSpecParser extends Parser {
 			}
 			switch (alt11) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:96:41: gui_action_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:96:41: gui_action_parameter_def
 					{
 					pushFollow(FOLLOW_gui_action_parameter_def_in_gui_action_def538);
 					gui_action_parameter_def();
@@ -729,14 +729,14 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_action_parameter_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:100:1: gui_action_parameter_def : lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:100:1: gui_action_parameter_def : lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? ;
 	public final void gui_action_parameter_def() throws RecognitionException {
 		Token CAPITALIZED_ID7=null;
 		ParserRuleReturnScope lc_id6 =null;
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:100:26: ( lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:101:5: lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:100:26: ( lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:101:5: lc_id ':' CAPITALIZED_ID ( ',' gui_action_parameter_def )?
 			{
 			pushFollow(FOLLOW_lc_id_in_gui_action_parameter_def570);
 			lc_id6=lc_id();
@@ -744,7 +744,7 @@ public class InteractionSpecParser extends Parser {
 
 			match(input,11,FOLLOW_11_in_gui_action_parameter_def572); 
 			CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_action_parameter_def575); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:101:31: ( ',' gui_action_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:101:31: ( ',' gui_action_parameter_def )?
 			int alt12=2;
 			int LA12_0 = input.LA(1);
 			if ( (LA12_0==10) ) {
@@ -752,7 +752,7 @@ public class InteractionSpecParser extends Parser {
 			}
 			switch (alt12) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:101:32: ',' gui_action_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:101:32: ',' gui_action_parameter_def
 					{
 					match(input,10,FOLLOW_10_in_gui_action_parameter_def578); 
 					pushFollow(FOLLOW_gui_action_parameter_def_in_gui_action_parameter_def580);
@@ -784,13 +784,13 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_request_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:108:1: gui_request_def : 'request' lc_id 'to' CAPITALIZED_ID ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:108:1: gui_request_def : 'request' lc_id 'to' CAPITALIZED_ID ;
 	public final void gui_request_def() throws RecognitionException {
 		ParserRuleReturnScope lc_id8 =null;
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:108:17: ( 'request' lc_id 'to' CAPITALIZED_ID )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:109:4: 'request' lc_id 'to' CAPITALIZED_ID
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:108:17: ( 'request' lc_id 'to' CAPITALIZED_ID )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:109:4: 'request' lc_id 'to' CAPITALIZED_ID
 			{
 			match(input,23,FOLLOW_23_in_gui_request_def602); 
 			pushFollow(FOLLOW_lc_id_in_gui_request_def604);
@@ -817,14 +817,14 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_notify_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:114:1: gui_notify_def : 'notify' ( gui_display_def )* 'from' CAPITALIZED_ID ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:114:1: gui_notify_def : 'notify' ( gui_display_def )* 'from' CAPITALIZED_ID ;
 	public final void gui_notify_def() throws RecognitionException {
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:114:16: ( 'notify' ( gui_display_def )* 'from' CAPITALIZED_ID )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:115:5: 'notify' ( gui_display_def )* 'from' CAPITALIZED_ID
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:114:16: ( 'notify' ( gui_display_def )* 'from' CAPITALIZED_ID )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:115:5: 'notify' ( gui_display_def )* 'from' CAPITALIZED_ID
 			{
 			match(input,22,FOLLOW_22_in_gui_notify_def630); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:115:14: ( gui_display_def )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:115:14: ( gui_display_def )*
 			loop13:
 			while (true) {
 				int alt13=2;
@@ -835,7 +835,7 @@ public class InteractionSpecParser extends Parser {
 
 				switch (alt13) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:115:15: gui_display_def
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:115:15: gui_display_def
 					{
 					pushFollow(FOLLOW_gui_display_def_in_gui_notify_def633);
 					gui_display_def();
@@ -867,13 +867,13 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_display_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:118:1: gui_display_def : CAPITALIZED_ID '(' gui_notify_parameter_def ')' ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:118:1: gui_display_def : CAPITALIZED_ID '(' gui_notify_parameter_def ')' ;
 	public final void gui_display_def() throws RecognitionException {
 		Token CAPITALIZED_ID9=null;
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:118:17: ( CAPITALIZED_ID '(' gui_notify_parameter_def ')' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:120:3: CAPITALIZED_ID '(' gui_notify_parameter_def ')'
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:118:17: ( CAPITALIZED_ID '(' gui_notify_parameter_def ')' )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:120:3: CAPITALIZED_ID '(' gui_notify_parameter_def ')'
 			{
 			CAPITALIZED_ID9=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_display_def656); 
 
@@ -905,14 +905,14 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_notify_parameter_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:131:1: gui_notify_parameter_def : lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:131:1: gui_notify_parameter_def : lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )? ;
 	public final void gui_notify_parameter_def() throws RecognitionException {
 		Token CAPITALIZED_ID10=null;
 		ParserRuleReturnScope lc_id11 =null;
 
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:131:25: ( lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )? )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:133:1: lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:131:25: ( lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:133:1: lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )?
 			{
 			pushFollow(FOLLOW_lc_id_in_gui_notify_parameter_def687);
 			lc_id11=lc_id();
@@ -920,7 +920,7 @@ public class InteractionSpecParser extends Parser {
 
 			match(input,11,FOLLOW_11_in_gui_notify_parameter_def689); 
 			CAPITALIZED_ID10=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_notify_parameter_def691); 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:133:27: ( ',' gui_notify_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:133:27: ( ',' gui_notify_parameter_def )?
 			int alt14=2;
 			int LA14_0 = input.LA(1);
 			if ( (LA14_0==10) ) {
@@ -928,7 +928,7 @@ public class InteractionSpecParser extends Parser {
 			}
 			switch (alt14) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:133:28: ',' gui_notify_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:133:28: ',' gui_notify_parameter_def
 					{
 					match(input,10,FOLLOW_10_in_gui_notify_parameter_def695); 
 					pushFollow(FOLLOW_gui_notify_parameter_def_in_gui_notify_parameter_def697);

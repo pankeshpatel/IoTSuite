@@ -21,6 +21,7 @@ public class DeviceCompiler {
 	private List<Device> deviceList = new ArrayList<Device>();
 	private String myProtocol;
 	private String myDescription;
+	private String mydatabase;
 
 	private String myMobileFlag;
 
@@ -30,7 +31,7 @@ public class DeviceCompiler {
 	public void addDeviceObj() {
 		device = new Device(getDeviceName(), getDeviceType(),
 				getNetworkAddress(), getRegionValues(), getRegionLabel(),
-				deviceAbilities, getMobileFlag(), getProtocol(), getDeviceDescription());
+				deviceAbilities, getMobileFlag(), getProtocol(), getDeviceDescription(),getDataBase());
 		SymbolTable.addDeviceinSymblTable(device);
 	}
 
@@ -41,6 +42,19 @@ public class DeviceCompiler {
 	public String getProtocol() {
 		return myProtocol;
 	}
+	
+	
+	
+	//Getter and Setter of database	
+		public void setDatabase(String database) {
+			
+			this.mydatabase=database;
+		}
+		
+		public String getDataBase(){
+			
+			return mydatabase;
+		}
 
 	public void setMobileFlag(String mobileFlag) {
 		this.myMobileFlag = mobileFlag;
@@ -149,5 +163,7 @@ public class DeviceCompiler {
 	public List<Device> getDeviceList() {
 		return deviceList;
 	}
+
+	
 
 }

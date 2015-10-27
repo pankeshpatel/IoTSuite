@@ -2,6 +2,7 @@ package iotsuite.compiler;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -117,7 +118,7 @@ public class MapperCompiler {
 		return new Device(device.getName(), device.getType(),
 				device.getNetworkAddress(), device.getRegion(),
 				device.getRegionLabels(), resultAbilities,
-				device.getMobileFlag(), device.getProtocol(), device.getDescription());
+				device.getMobileFlag(), device.getProtocol(), device.getDescription(),device.getDatabase());
 	}
 
 	/*

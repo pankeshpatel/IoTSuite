@@ -19,7 +19,7 @@ public class  Logic$Storageservice.name$  extends $Storageservice.name$  {
 		super(pubSubM, deviceInfo);
 		
 		deviceType = deviceInfo.getType();
-		  obj$Storageservice.name$ = $Storageservice.name$Factory.get$Storageservice.name$(myDeviceInfo.getType(), null, null);
+		  obj$Storageservice.name$ = $Storageservice.name$Factory.get$Storageservice.name$(myDeviceInfo.getType(), null, null,deviceInfo);
 			}
 	
 	$Storageservice.allDataAccess:{ dataAccess |

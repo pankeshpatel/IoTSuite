@@ -5,7 +5,8 @@ devices:
         platform: JavaSE;    
         resources :TemperatureSensor;
 		protocol : mqtt;  
-		description : D1 Description; 
+		description : D1 Description;
+		 
 	D2:
         location :
             Room  : 1;
@@ -19,7 +20,8 @@ devices:
         platform: JavaSE;    
         resources : ProfileDB;
 		protocol : mqtt; 
-	    description :  D1 Description;		
+	    description :  D1 Description;
+	    database: MySQL ;		
 	D4:
         location :
              Room  : 1;
@@ -60,7 +62,7 @@ devices:
 	D9:
         location :
              Room  : 1;
-        platform: JavaSE;    
+        platform: Android;    
         resources :SmartHomeApp;
 		protocol : mqtt;
 		description :  D;

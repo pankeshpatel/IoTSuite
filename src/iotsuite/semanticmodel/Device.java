@@ -23,10 +23,11 @@ public class Device implements Serializable {
 	private String myMobileFlag;
 	private String myProtocol;
 	private String myDescription;
+	private String myDatabase;
 
 	public Device(String name, String type, String networkAddress,
 			List<String> regionIDs, List<String> regionLabels,
-			Set<String> abilities, String mobileFlag, String protocol, String deviceDescription) {
+			Set<String> abilities, String mobileFlag, String protocol, String deviceDescription,String database) {
 
 		this.name = name;
 
@@ -38,6 +39,7 @@ public class Device implements Serializable {
 		this.myMobileFlag = mobileFlag;
 		this.myProtocol = protocol;
 		this.myDescription = deviceDescription;
+		this.myDatabase=database;
 
 	}
 	
@@ -48,6 +50,12 @@ public class Device implements Serializable {
 	public String getProtocol() {
 		return myProtocol;
 	}
+	
+	public String getDatabase(){
+		
+		return myDatabase;
+	}
+	
 
 	public String getName() {
 		return name;
