@@ -1,7 +1,7 @@
 resources:
     userinteractions:
 		SmartHomeApp						
-			command Off();
-	 		command SetTemp(setTemp);
-	 		request profile;	 	
-	 		notify DisplayTemp(tempNotify:TempStruct); 
+			command Off() to Heater;
+	 		command SetTemp(setTemp) to Heater;
+	 		request profile to ProfileDB;	 	
+	 		notify DisplayTemp(tempNotify:TempStruct) from DisplayTempController; 

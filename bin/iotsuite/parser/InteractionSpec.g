@@ -78,10 +78,10 @@ gui_def:
 ; 
 
 gui_command_def :
-    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')'   
+    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')' 'to' CAPITALIZED_ID
     { 
       context.currentGUI.addCommand($name.text);   
-    }
+    } 
 ;
 
 
@@ -106,13 +106,13 @@ gui_action_parameter_def :
 ; 
 
 gui_request_def :
-   'request' lc_id 
+   'request' lc_id 'to' CAPITALIZED_ID 
    { context.currentGUI.getDataAccessListFromSymblTable($lc_id.text);
      context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
 ;
-
+ 
 gui_notify_def :  
-    'notify' (gui_display_def)*  
+    'notify' (gui_display_def)* 'from' CAPITALIZED_ID  
 ; 
 
 gui_display_def :
