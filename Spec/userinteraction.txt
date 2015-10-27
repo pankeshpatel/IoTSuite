@@ -4,9 +4,4 @@ resources:
 			command Off();
 	 		command SetTemp(setTemp);
 	 		request profile;	 	
-	 		notify DisplayTemp(tempNotify:TempStruct);
-	 		
-	 		
-	 		
-	 		
- 
+	 		notify DisplayTemp(tempNotify:TempStruct); 

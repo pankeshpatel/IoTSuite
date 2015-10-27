@@ -7,14 +7,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
-
-
 public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
 	
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
-	private String partitionAttribute = "Room";
+	//private String partitionAttribute = "Room";
 
     
 	public $Storageservice.name$(PubSubMiddleware pubSubM,  Device deviceInfo) {     
@@ -62,17 +59,14 @@ public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
 	public abstract void onNew$dataAccess.dataAccessName$RequestReceived(String arg);
 	
 	public void subscribe$dataAccess.dataAccessName$() {
-		List<String> regionInfo = new ArrayList<String>();
 
-		//regionInfo.add("*");
-		//regionInfo.add("*");
-		//regionInfo.add("*");
+		List<String> regionInfo = new ArrayList<String>();
+		regionInfo.add("*");
 		
-		regionInfo = RegionSubscription.getSubscriptionRequest(
+		/*regionInfo = RegionSubscription.getSubscriptionRequest(
 				partitionAttribute, myDeviceInfo.getRegionLabels(),
-				myDeviceInfo.getRegion());
-				
-		
+				myDeviceInfo.getRegion()); */
+					
 		this.myPubSubMiddleware.subscribe(this, "get$dataAccess.dataAccessName$",regionInfo);
 		
 	}

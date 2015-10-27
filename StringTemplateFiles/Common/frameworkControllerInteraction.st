@@ -4,14 +4,14 @@ import fr.inria.arles.pankesh.pubsubmiddleware.*;
 import fr.inria.arles.pankesh.semanticmodel.*;
 import fr.inria.arles.pankesh.common.*;
 import java.util.List;
-
+import java.util.ArrayList;
 
 
 public abstract class  $CS.name$ implements Subscriber, Runnable{
 	
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
-	private String partitionAttribute = "$CS.PartitionAttributeVal$";
+	private String partitionAttribute = "";
 		
 	public $CS.name$(PubSubMiddleware pubSubM, Device deviceInfo) {   
 		 this.myPubSubMiddleware = pubSubM;
@@ -61,10 +61,13 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	   	
 	   	public void subscribe$consumedInfo.name; format="capital"$() {
 	   	
-	   	List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
+	   	/*List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
 					partitionAttribute, myDeviceInfo.getRegionLabels(),
-					myDeviceInfo.getRegion());	   	     		
-         		  this.myPubSubMiddleware.subscribe(this,"$consumedInfo.name$", regionInfo);
+					myDeviceInfo.getRegion()); */
+			
+		List<String> regionInfo = new ArrayList<String>(); 
+		regionInfo.add("*");				   	     		
+        this.myPubSubMiddleware.subscribe(this,"$consumedInfo.name$", regionInfo);
 		}
 		}$		
 		public void run() {

@@ -3,12 +3,14 @@ import iotsuite.pubsubmiddleware.*;
 import iotsuite.semanticmodel.*;
 import iotsuite.common.*;
 import java.util.List;
+import java.util.ArrayList;
+
 
 public abstract class  $CS.name$ implements Subscriber, Runnable{ 
 			
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
-    private String partitionAttribute = "remove";
+    //private String partitionAttribute = "remove";
 	
 	
 	public $CS.name$(PubSubMiddleware pubSubM, Device deviceInfo) {   
@@ -92,9 +94,13 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	   
 	   	public void subscribe$consumedInfo.name; format="capital"$() {
 	   		    
-	   		List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
+	   		/*List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
 					partitionAttribute, myDeviceInfo.getRegionLabels(),
-					myDeviceInfo.getRegion());
+					myDeviceInfo.getRegion()); */
+					
+			List<String> regionInfo = new ArrayList<String>(); 
+			regionInfo.add("*");	
+				
 	   		this.myPubSubMiddleware.subscribe(this,"$consumedInfo.name$", regionInfo);
 		}
 		}$ 	
@@ -104,10 +110,13 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 		public abstract void onNew$dataAccess.dataAccessName; format="avoidCapital"$Received($CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}$  arg);	   		
 	   	public void subscribe$dataAccess.dataAccessName; format="capital"$() {
 	   		    
-	   		List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
+	   		/*List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
 					partitionAttribute, myDeviceInfo.getRegionLabels(),
-					myDeviceInfo.getRegion());
-					this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="avoidCapital"$", regionInfo);
+					myDeviceInfo.getRegion()); */
+					
+			List<String> regionInfo = new ArrayList<String>(); 
+			regionInfo.add("*");					
+		    this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="avoidCapital"$", regionInfo);
 		}
 		    
 		    

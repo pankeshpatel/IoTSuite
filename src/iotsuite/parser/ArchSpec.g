@@ -46,15 +46,15 @@ structField_def:
   context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
 ; 
  
-cs_def:
-      
-    ('Aggregator'':'  (agg_cs_def)*)*  
-    ('Coordinator'':' (coordinator_def)* )*    
-    ('Controller'':' (controller_def)*)*   
-; 
+cs_def:      
+    'InBuilt' ':'  
+       (agg_cs_def)* 
+     ('Custom'     ':' (coordinator_def)* )*
+     ('Controller' ':' (controller_def)* )* 
+;    
 
  
-agg_cs_def:
+agg_cs_def:  
 
  CAPITALIZED_ID
     { 
@@ -81,7 +81,7 @@ CAPITALIZED_ID
      context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);} 
     (csConsumeInfo_def ';')* 
     (csRequest_def ';')*
-      (csGeneratedInfo_def ';')*
+    (csGeneratedInfo_def ';')*
    //(partition_def ';')+  
     { 
     context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
@@ -98,18 +98,18 @@ controller_def:
  CAPITALIZED_ID
     { 
      context.currentComputationalService = new ComputationalServiceCompiler(); 
-     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);} 
+     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+     } 
     (csConsumeInfo_def ';')* 
     (cntrlCommand_def ';')*   
-    // (partition_def ';')+  
+   //  (partition_def ';')+   
     { 
     context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
      context.currentComputationalService.createCSObject();
     context.currentComputationalService.generateComputationalServiceCode(); 
    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
-   
-    } 
+   } 
 ;
   
 csOperation_def :
@@ -160,16 +160,16 @@ cntrlCommand_def :
 cntrlParameter_def :
     lc_id  
     { context.currentComputationalService.addParameter($lc_id.text); }  
-;
+;  
   
 //partition_def:   
 //    csDeploymentConstraint='partition-per' ':' CAPITALIZED_ID 
-    { 
-   // context.currentComputationalService.addPartitionAttribute($CAPITALIZED_ID.text);   
-   // context.currentMappingConstraint.setAttributeName($csDeploymentConstraint.text);  
-   // context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text); 
- //  }     
-//;    
+//    { 
+//    context.currentComputationalService.addPartitionAttribute($CAPITALIZED_ID.text);   
+//    context.currentMappingConstraint.setAttributeName($csDeploymentConstraint.text);  
+//    context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text); 
+//   }      
+//;       
  
 lc_id: ID  
 ;
@@ -184,9 +184,10 @@ primitiveType:
 
 ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' )*
    ;
-   
+      
 INT : '0'..'9'('0'..'9')*  ; 
 
-CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )*;   
+CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )*  ;      
 
-WS: ('\t' | ' ' | '\r' | '\n' | '\u000C')+ {$channel = HIDDEN;};
+WS:  ('\t' | ' ' | '\r' | '\n' | '\u000C')+ {$channel = HIDDEN;};  
+
