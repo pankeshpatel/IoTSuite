@@ -27,7 +27,6 @@ public class ComputationalServiceCompiler {
 	private String operationType;
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private Set<Action> actions = new HashSet<Action>();
-	private String partitionAttributeValue;
 	private String computationalServiceName;
 	private Parameter parameter;
 	static int sampleValue;
@@ -152,11 +151,8 @@ public class ComputationalServiceCompiler {
 	}
 	
 	public void addOperation(String variableName,String sampleValue) {
-
 		this.operationType = variableName;
 		this.sampleValue=Integer.parseInt(sampleValue);
-		
-
 	}
 
 	public void addConsumedInfo(String variableName) {

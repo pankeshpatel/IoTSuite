@@ -140,8 +140,8 @@ csConsumeInfo_def:
     // 'consume' lc_id 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID  
     'consume' lc_id  'from'  CAPITALIZED_ID       
    { context.currentComputationalService.addConsumedInfo($lc_id.text);    
-   }   
-; 
+   }     
+;  
 
 csRequest_def :
    'request' lc_id 'to' CAPITALIZED_ID

@@ -43,8 +43,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
       if ($generatedInfo.name; format="avoidCapital"$ != newValue) {
         $generatedInfo.name; format="avoidCapital"$ = newValue; 
         
-        Logger.log(myDeviceInfo.getName(),"$CS.name$", "Publishing $generatedInfo.name$");
-        
+        Logger.log(myDeviceInfo.getName(),"$CS.name$", "Publishing $generatedInfo.name$");     
      
         this.myPubSubMiddleware.publish("$generatedInfo.name; format="avoidCapital"$", newValue, myDeviceInfo);		
        
@@ -61,9 +60,10 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         
         public void notifyReceived(String eventName, Object arg, Device deviceInfo) { 
         try {	
+        
          $CS.allConsumedInfo:{ consumedInfo | 
-        if (eventName.equals("$consumedInfo.name$"))  
-        { 
+             if (eventName.equals("$consumedInfo.name$"))  
+            { 
            Logger.log(myDeviceInfo.getName(),"$CS.name$",
             "Notification Received $consumedInfo.name$");
           

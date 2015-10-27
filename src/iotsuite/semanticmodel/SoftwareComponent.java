@@ -10,27 +10,17 @@ import java.util.Set;
 public abstract class SoftwareComponent<I extends Information> {
 
 	private String name;
-	// private Set<Attribute> attributes = new HashSet<Attribute>();
 	private Set<I> generateInfo = new HashSet<I>();
 	private Set<I> consumeInfo = new HashSet<I>();
-	//private String partitionAttributeVal;
-
 	
 	public SoftwareComponent(String name, Set<I> generateInfo,
 			Set<I> consumeInfo) {
-
 		super();
 		this.name = name;
 		this.generateInfo = generateInfo;
 		this.consumeInfo = consumeInfo;
-		//this.partitionAttributeVal = partitionAttributeVal;
-
 	}
-
-	/*public String getPartitionAttributeVal() {
-		return partitionAttributeVal;
-	}*/
-
+	
 	public boolean isGeneratedInfo() {
 		if (generateInfo != null)
 			return true;
