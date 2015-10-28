@@ -104,7 +104,7 @@ public class Main {
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
-				
+
 				ANTLRFileStream interactionStream = new ANTLRFileStream(
 						GlobalVariable.interactionSpec);
 				InteractionSpecLexer interactionLexer = new InteractionSpecLexer(
@@ -114,7 +114,6 @@ public class Main {
 				InteractionSpecParser interactionParser = new InteractionSpecParser(
 						interactionTokens);
 				interactionParser.interactionSpec();
-				
 
 				ANTLRFileStream archStream = new ANTLRFileStream(
 						GlobalVariable.archSpec);
@@ -143,16 +142,16 @@ public class Main {
 				CommonTokenStream archTokens = new CommonTokenStream(archLexer);
 				ArchSpecParser archParser = new ArchSpecParser(archTokens);
 				archParser.archSpec();
-				
-				/*ANTLRFileStream interactionStream = new ANTLRFileStream(
-						GlobalVariable.interactionSpec);
-				InteractionSpecLexer interactionLexer = new InteractionSpecLexer(
-						interactionStream);
-				CommonTokenStream interactionTokens = new CommonTokenStream(
-						interactionLexer);
-				InteractionSpecParser interactionParser = new InteractionSpecParser(
-						interactionTokens);
-				interactionParser.interactionSpec();*/
+
+				/*
+				 * ANTLRFileStream interactionStream = new ANTLRFileStream(
+				 * GlobalVariable.interactionSpec); InteractionSpecLexer
+				 * interactionLexer = new InteractionSpecLexer(
+				 * interactionStream); CommonTokenStream interactionTokens = new
+				 * CommonTokenStream( interactionLexer); InteractionSpecParser
+				 * interactionParser = new InteractionSpecParser(
+				 * interactionTokens); interactionParser.interactionSpec();
+				 */
 
 				List<Device> deviceList;
 				List<DeploymentScope> mappingConstraintList;

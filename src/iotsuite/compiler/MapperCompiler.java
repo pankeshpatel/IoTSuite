@@ -31,11 +31,13 @@ public class MapperCompiler {
 	}
 
 	public void addDeployementConstraintObj() {
-		/*deploymentConstraint = new DeploymentScope(getSoftwareComponentName(),
-				getAttributeName(), getAttributeValue());*/
-		
-		deploymentConstraint = new DeploymentScope(getSoftwareComponentName());
+		/*
+		 * deploymentConstraint = new
+		 * DeploymentScope(getSoftwareComponentName(), getAttributeName(),
+		 * getAttributeValue());
+		 */
 
+		deploymentConstraint = new DeploymentScope(getSoftwareComponentName());
 
 		SymbolTable.addDeploymentConstraints(deploymentConstraint);
 	}
@@ -48,22 +50,18 @@ public class MapperCompiler {
 		this.softwareComponentName = softwareComponentName;
 	}
 
-	/* public String getAttributeName() {
-		return attributeName;
-	}
+	/*
+	 * public String getAttributeName() { return attributeName; }
+	 * 
+	 * public void setAttributeName(String attributeName) { this.attributeName =
+	 * attributeName; }
+	 * 
+	 * public String getAttributeValue() { return attributeValue; }
+	 * 
+	 * public void setAttributeValue(String attributeValue) {
+	 * this.attributeValue = attributeValue; }
+	 */
 
-   public void setAttributeName(String attributeName) {
-		this.attributeName = attributeName;
-	}
-
-	public String getAttributeValue() {
-		return attributeValue;
-	}
-
-	public void setAttributeValue(String attributeValue) {
-		this.attributeValue = attributeValue;
-	}*/
- 
 	public static void mappingFileGenerator(List<Device> deviceList,
 			List<DeploymentScope> mappingConstraintList) throws IOException {
 
@@ -118,7 +116,8 @@ public class MapperCompiler {
 		return new Device(device.getName(), device.getType(),
 				device.getNetworkAddress(), device.getRegion(),
 				device.getRegionLabels(), resultAbilities,
-				device.getMobileFlag(), device.getProtocol(), device.getDescription(),device.getDatabase());
+				device.getMobileFlag(), device.getProtocol(),
+				device.getDescription(), device.getDatabase());
 	}
 
 	/*
@@ -178,10 +177,9 @@ public class MapperCompiler {
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
 	}
 
-	
-	// this function call generate start up files : 
-	//For Android : MainActivity.java  
-	//and for JavaSE : D1Main.java
+	// this function call generate start up files :
+	// For Android : MainActivity.java
+	// and for JavaSE : D1Main.java
 	private static void genearateExecutionCode(Device device) {
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generateDevice

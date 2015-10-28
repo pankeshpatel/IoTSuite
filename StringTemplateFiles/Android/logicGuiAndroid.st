@@ -80,7 +80,7 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
     $GUIdriver.allNotifyMeasurement:{notifyMeasurement | 
      
      public  void onNew$notifyMeasurement; format="capital"$Notify($GUIdriver.AllNotifyStructName:{ notifyStructName |$notifyStructName$}$ arg){
-      pubSubSensingFramework.publish("$notifyMeasurement$Notify", arg);    
+      pubSubSensingFramework.publish("$notifyMeasurement; format="avoidCapital"$Notify", arg);    
      }
     }$
     

@@ -30,13 +30,12 @@ public class ComputationalServiceCompiler {
 	private String computationalServiceName;
 	private Parameter parameter;
 	static int sampleValue;
-	
-	/*public static List<String> structFieldName =  new ArrayList<String>();
-	public static List<String> structFieldType =  new ArrayList<String>();
-	*/
+
+	/*
+	 * public static List<String> structFieldName = new ArrayList<String>();
+	 * public static List<String> structFieldType = new ArrayList<String>();
+	 */
 	public static List<StructField> StructFieldSet = new ArrayList<StructField>();
-		
-	
 
 	public void addCommand(String actionName) {
 		Action action = new Action(actionName, getParameters(), null);
@@ -65,38 +64,42 @@ public class ComputationalServiceCompiler {
 	}
 
 	public void createCSObject() {
-		
-		/*computationalService = new ComputationalService(
-				getComputationalServiceName(), getGeneratedInfo(),
-				getConsumedInfo(), getDataAccessList(), getActionList(),
-				getPartitionAttributeVal(), getOperation(),getStructFieldSet(),getSampleValue());*/
-		
+
+		/*
+		 * computationalService = new ComputationalService(
+		 * getComputationalServiceName(), getGeneratedInfo(), getConsumedInfo(),
+		 * getDataAccessList(), getActionList(), getPartitionAttributeVal(),
+		 * getOperation(),getStructFieldSet(),getSampleValue());
+		 */
+
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
-				getOperation(),getStructFieldSet(),getSampleValue());
+				getOperation(), getStructFieldSet(), getSampleValue());
 
 	}
 
 	public List<StructField> getStructFieldSet() {
-		
-		StructFieldSet=iotsuite.parser.SymbolTable.StructFieldSet;
-		 //System.out.println("Struct Field set is "+StructFieldSet);
+
+		StructFieldSet = iotsuite.parser.SymbolTable.StructFieldSet;
+		// System.out.println("Struct Field set is "+StructFieldSet);
 		return StructFieldSet;
 	}
-	
-	/*private List<String> getAggregatorStructFieldName() {
-		aggregatorStructFieldName=iotsuite.parser.SymbolTable.aggregatorStructFieldName;
-		//System.out.println("Aggre Field Name is "+aggregatorStructFieldName);
-		return aggregatorStructFieldName;
-	}
-	
-	private List<String> getAggregatorStructFieldType()
-	{
-	aggregatorStructFieldType=iotsuite.parser.SymbolTable.aggregatorStructFieldType;
-	return aggregatorStructFieldType;
-		
-	}*/
+
+	/*
+	 * private List<String> getAggregatorStructFieldName() {
+	 * aggregatorStructFieldName
+	 * =iotsuite.parser.SymbolTable.aggregatorStructFieldName;
+	 * //System.out.println("Aggre Field Name is "+aggregatorStructFieldName);
+	 * return aggregatorStructFieldName; }
+	 * 
+	 * private List<String> getAggregatorStructFieldType() {
+	 * aggregatorStructFieldType
+	 * =iotsuite.parser.SymbolTable.aggregatorStructFieldType; return
+	 * aggregatorStructFieldType;
+	 * 
+	 * }
+	 */
 
 	/*
 	 * public void dataAccess(Information query, Information generatedInfo) {
@@ -104,18 +107,15 @@ public class ComputationalServiceCompiler {
 	 * dataAccessList.add(dataAccess); }
 	 */
 
-	/*public List<String> getStructFieldName() {
-		// TODO Auto-generated method stub
-		this.structFieldName=iotsuite.parser.SymbolTable.structFieldName;
-		return structFieldName;
-	}
-	
-	public List<String> getStructFieldType() {
-		// TODO Auto-generated method stub
-		this.structFieldType=iotsuite.parser.SymbolTable.structFieldType;
-		return structFieldType;
-	}
-*/
+	/*
+	 * public List<String> getStructFieldName() { // TODO Auto-generated method
+	 * stub this.structFieldName=iotsuite.parser.SymbolTable.structFieldName;
+	 * return structFieldName; }
+	 * 
+	 * public List<String> getStructFieldType() { // TODO Auto-generated method
+	 * stub this.structFieldType=iotsuite.parser.SymbolTable.structFieldType;
+	 * return structFieldType; }
+	 */
 	public Set<DataAccess> getDataAccessList() {
 		return dataAccessList;
 	}
@@ -126,13 +126,13 @@ public class ComputationalServiceCompiler {
 	}
 
 	// Getter and Setter of Partition Attribute
-	//public void addPartitionAttribute(String regionName) {
-	//	partitionAttributeValue = regionName;
-	//}
+	// public void addPartitionAttribute(String regionName) {
+	// partitionAttributeValue = regionName;
+	// }
 
-	//public String getPartitionAttributeVal() {
-	//	return partitionAttributeValue;
-	//}
+	// public String getPartitionAttributeVal() {
+	// return partitionAttributeValue;
+	// }
 
 	// Getter and Setter of Consumed Info
 
@@ -145,14 +145,13 @@ public class ComputationalServiceCompiler {
 		return operationType;
 	}
 
-	public int getSampleValue()
-	{
+	public int getSampleValue() {
 		return sampleValue;
 	}
-	
-	public void addOperation(String variableName,String sampleValue) {
+
+	public void addOperation(String variableName, String sampleValue) {
 		this.operationType = variableName;
-		this.sampleValue=Integer.parseInt(sampleValue);
+		this.sampleValue = Integer.parseInt(sampleValue);
 	}
 
 	public void addConsumedInfo(String variableName) {
@@ -215,22 +214,22 @@ public class ComputationalServiceCompiler {
 		}
 		// Impl
 		generateImplComputationalService_ComputationalServiceCompiler();
-		
+
 	}
 
-	
 	public void generateComputationalServiceCode() {
 		// TODO Auto-generated method stub
-		
+
 		generateComputationalServiceInteraction_ComputationalServiceCompiler();
 		generateComputationalServiceLogic_ComputationalServiceCompiler();
 	}
 
-	
-	/*public void generateComputational12ServiceCode() {
-		// TODO Auto-generated method stub
-		generateAggregatorComputationalServiceLogic_ComputationalServiceCompiler();
-	}*/
+	/*
+	 * public void generateComputational12ServiceCode() { // TODO Auto-generated
+	 * method stub
+	 * generateAggregatorComputationalServiceLogic_ComputationalServiceCompiler
+	 * (); }
+	 */
 
 	public void generateComputationalServiceInteraction_ComputationalServiceCompiler() {
 
@@ -249,7 +248,7 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
-	
+
 	public void generateComputationalServiceLogic_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
@@ -292,11 +291,5 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
-	
-	
-	
-	
-
-	
 
 }

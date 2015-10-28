@@ -265,7 +265,6 @@ public class SourceFileDumper {
 		 * "logic" package Logic files for Sensor, Actuator, Storage.
 		 */
 
-		
 		if (unit.getFileCategory().equals("AndroidLogic")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -291,7 +290,6 @@ public class SourceFileDumper {
 					+ GlobalVariable.logicDirPath + "/"
 					+ unit.getFileNameToGenerate());
 		}
-				
 
 		else if (unit.getFileCategory().equals("AndroidGuiLogic")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
@@ -328,20 +326,12 @@ public class SourceFileDumper {
 					+ GlobalVariable.factoryDirPath + "/"
 					+ unit.getFileNameToGenerate());
 		}
-		
-		else if(unit.getFileCategory().equals("AndroidMainActivity")){
-			
-			
-			
-			
-			
-			
-			
+
+		else if (unit.getFileCategory().equals("AndroidMainActivity")) {
+
 		}
-		
-		
-			
-			 else if (unit.getFileCategory().equals("JavaSEFactory")
+
+		else if (unit.getFileCategory().equals("JavaSEFactory")
 				|| unit.getFileCategory().equals("JavaSESensorImpl")
 				|| unit.getFileCategory().equals("JavaSEActuatorImpl")
 				|| unit.getFileCategory().equals("JavaSELogic")
@@ -541,7 +531,6 @@ public class SourceFileDumper {
 			File dir = new File(dirName);
 			file = new File(dir, unit.getFileNameToGenerate());
 		}
-		
 
 		// This is for generating .project file
 		if ((unit.getFileCategory()).equals("deviceProject")) {

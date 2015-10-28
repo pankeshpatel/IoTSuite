@@ -32,9 +32,8 @@ public class UserInterfaceCompiler {
 	private String struct;
 	public static List<StructField> StructFieldSetForGUI = new ArrayList<StructField>();
 	public static List<StructField> StructFieldSetForGUINotify = new ArrayList<StructField>();
-	public static List<String> notifyMeasurement=  new ArrayList<String>();
-	public static List<String> notifyStructName=  new ArrayList<String>();
-	
+	public static List<String> notifyMeasurement = new ArrayList<String>();
+	public static List<String> notifyStructName = new ArrayList<String>();
 
 	// private Widget widget;
 
@@ -55,45 +54,45 @@ public class UserInterfaceCompiler {
 		this.GUIName = computationalServiceName;
 	}
 
-	
-	 public List<StructField> getStructFieldSet() {
-			
-			StructFieldSetForGUI=iotsuite.parser.SymbolTable.StructFieldSetForGUI;
-			 //System.out.println("Struct Field set is "+StructFieldSet);
-			return StructFieldSetForGUI;
-		}
-	
-	 public List<StructField> getStructFieldSetForGUINotify() {
-			
-			StructFieldSetForGUINotify=iotsuite.parser.SymbolTable.StructFieldSetForGUINotify;
-			 //System.out.println("Struct Field set is "+StructFieldSet);
-			return StructFieldSetForGUINotify;
-		}
-	 
-	 public List<String> getNotifyMeasurement(){
-		 
-		 return this.notifyMeasurement;
-	 }
-	 
-	 public List<String> getNotifyStructName(){
-		 
-		 return this.notifyStructName;
-	 }
-	 
-	 public void setNotifyName(String notifyName) {
-			
-		 this.notifyMeasurement.add(notifyName);
-			
-		}
-	 
-	 public void setNotifyParameter( String notifyStructName) {
-			
-		 
-		 //this.notifyMeasurement.add(notifyMeasurement);
-		 this.notifyStructName.add(notifyStructName);
-		 iotsuite.parser.SymbolTable.searchStructFieldNameForNotifyGUI(notifyStructName);
-		 //System.out.println("Notify Measurement "+notifyMeasurement+ "notify Struct name is "+notifyStructName);
-		}
+	public List<StructField> getStructFieldSet() {
+
+		StructFieldSetForGUI = iotsuite.parser.SymbolTable.StructFieldSetForGUI;
+		// System.out.println("Struct Field set is "+StructFieldSet);
+		return StructFieldSetForGUI;
+	}
+
+	public List<StructField> getStructFieldSetForGUINotify() {
+
+		StructFieldSetForGUINotify = iotsuite.parser.SymbolTable.StructFieldSetForGUINotify;
+		// System.out.println("Struct Field set is "+StructFieldSet);
+		return StructFieldSetForGUINotify;
+	}
+
+	public List<String> getNotifyMeasurement() {
+
+		return this.notifyMeasurement;
+	}
+
+	public List<String> getNotifyStructName() {
+
+		return this.notifyStructName;
+	}
+
+	public void setNotifyName(String notifyName) {
+
+		this.notifyMeasurement.add(notifyName);
+
+	}
+
+	public void setNotifyParameter(String notifyStructName) {
+
+		// this.notifyMeasurement.add(notifyMeasurement);
+		this.notifyStructName.add(notifyStructName);
+		iotsuite.parser.SymbolTable
+				.searchStructFieldNameForNotifyGUI(notifyStructName);
+		// System.out.println("Notify Measurement "+notifyMeasurement+
+		// "notify Struct name is "+notifyStructName);
+	}
 
 	public void createGUIObject() {
 		/*
@@ -108,7 +107,8 @@ public class UserInterfaceCompiler {
 
 		guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
 				null, getCommandList(), null, null, getDataAccessList(), null,
-				null,getStructFieldSet(),getStructFieldSetForGUINotify(),getNotifyMeasurement(),getNotifyStructName());
+				null, getStructFieldSet(), getStructFieldSetForGUINotify(),
+				getNotifyMeasurement(), getNotifyStructName());
 	}
 
 	// Code generator of the abstract classes and Logic files
@@ -143,8 +143,8 @@ public class UserInterfaceCompiler {
 										// Interface of GUI.
 				generateAndroidGUIFactory();
 				generateAndroidGUIImpl();
-				//generateAndroidGUIMainActivity();
-				
+				// generateAndroidGUIMainActivity();
+
 			}
 			// generateGUILayout();
 			// generateGUIManifest();
@@ -183,18 +183,19 @@ public class UserInterfaceCompiler {
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
-	
-	//For Main  Activity for AndroidGUI
-	/*private void generateAndroidGUIMainActivity() {
 
-		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver
-				.generateAndroidUserInterfaceMainActivity(guiDriver);
-		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
-		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
-
-	}
-	*/
+	// For Main Activity for AndroidGUI
+	/*
+	 * private void generateAndroidGUIMainActivity() {
+	 * 
+	 * JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+	 * CompilationUnit generatedCU = generatedGUIDriver
+	 * .generateAndroidUserInterfaceMainActivity(guiDriver); SourceFileDumper
+	 * dumpGeneratedGUIDriver = new SourceFileDumper();
+	 * dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+	 * 
+	 * }
+	 */
 
 	private void generateAndroidGUIImpl() {
 
@@ -276,7 +277,7 @@ public class UserInterfaceCompiler {
 	public void setRequestType(String struct) {
 		iotsuite.parser.SymbolTable.searchStructFieldNameForGUI(struct);
 		this.struct = struct;
-		
+
 	}
 
 	public String getRequestType() {
@@ -328,11 +329,6 @@ public class UserInterfaceCompiler {
 		Action action = new Action(actionName, getActionParameter(), widgetName);
 		actions.add(action);
 	}
-
-	
-
-	
-	
 
 	/*
 	 * private Set<Action> getActionList() { return actions; }

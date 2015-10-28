@@ -66,8 +66,8 @@ protocol_value:
 ;
 
 description_def:
-   CAPITALIZED_ID 
-   {context.currentNetwork.setDeviceDescription($CAPITALIZED_ID.text);}
+   DESCRIPTION_ID 
+   {context.currentNetwork.setDeviceDescription($DESCRIPTION_ID.text);}
 ;  
 
 database_def:
@@ -75,16 +75,16 @@ CAPITALIZED_ID
 {context.currentNetwork.setDatabase($CAPITALIZED_ID.text);}
 ;
  
-MOBILEFLAG :  'true' | 'false'
+MOBILEFLAG :  'true' | 'false' 
    ;
 
       
  
 ID  : ('a'..'z'  ('a'..'z' | 'A'..'Z' )* ('0'..'9')*)| '0'..'9'('0'..'9')*|'*' ;
 
-CAPITALIZED_ID:  'A'..'Z' ('a'..'z' | 'A'..'Z'| '0'..'9'| ' ' )* ;   
+DESCRIPTION_ID:   ('a'..'z'|'0'..'9')('a'..'z' | 'A'..'Z'| '0'..'9'| ' ')* ;   
 
-//CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )* ('0'..'9')*;
+CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )* ('0'..'9')*;
 
  
 WS: ('\t' | ' ' | '\r' | '\n' | '\u000C')+ {$channel = HIDDEN;};

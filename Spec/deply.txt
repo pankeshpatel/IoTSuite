@@ -1,68 +1,68 @@
 devices: 
     D1:
-       location :
-            Room  : 1;
+       location:
+            Room: 1;
         platform: JavaSE;    
-        resources :TemperatureSensor;
-		protocol : mqtt;  
-		description : D1 Description;
+        resources:TemperatureSensor;
+		protocol: mqtt;  
+		description: d1 Description;
 		 
 	D2:
-        location :
-            Room  : 1;
+        location:
+            Room: 1;
         platform: JavaSE;    
-        resources :BadgeReader;
-		protocol : mqtt; 
-		description : D1 Description;  
+        resources:BadgeReader;
+		protocol: mqtt; 
+		description: d1 Description;  
 	D3:
-        location :
-             Room  : 1; 
+        location:
+             Room: 1; 
         platform: JavaSE;    
-        resources : ProfileDB;
-		protocol : mqtt; 
-	    description :  D1 Description;
-	    database: MySQL ;		
+        resources: ProfileDB;
+		protocol: mqtt; 
+	    description:  d1 Description;
+	    database: AzureSQL ;		
 	D4:
-        location :
-             Room  : 1;
+        location:
+             Room: 1;
         platform: JavaSE;    
-        resources : ;
-		protocol : mqtt;
-		description :  D1 Description; 
+        resources: ;
+		protocol: mqtt;
+		description:  d Description; 
    D5:
-        location :
-             Room  : 1;
+        location:
+             Room: 1;
         platform: JavaSE;    
-        resources : ;
-		protocol : mqtt; 
-		description :  D1 Description;
+        resources: ;
+		protocol: mqtt; 
+		description:  d Description;
    D6:
-        location :
-             Room  : 1;
+        location:
+             Room: 1;
         platform: JavaSE;    
-        resources : ;
-		protocol : mqtt; 
-		description : D;
+        resources: ;
+		protocol: mqtt; 
+		description: d1 Description;
 	
 	D7:
-        location :
-             Room  : 1;
+        location:
+             Room: 1;
         platform: JavaSE;    
-        resources :;
-		protocol : mqtt;
-		description : D1 Description is written; 
+        resources:;
+		protocol: mqtt;
+		description: d1 Description is written; 
 		
    D8:
-        location :
-             Room  : 1;
+        location:
+             Room: 1;
         platform: JavaSE;    
-        resources :Heater;
-		protocol : mqtt;
-		description :  D;
+        resources:Heater;
+		protocol: mqtt;
+		description: d1 Description;
 	D9:
-        location :
-             Room  : 1;
+        location:
+             Room: 1;
         platform: Android;    
-        resources :SmartHomeApp;
-		protocol : mqtt;
-		description :  D;
+        resources:SmartHomeApp;
+		protocol: mqtt;
+		description: d9 description ;

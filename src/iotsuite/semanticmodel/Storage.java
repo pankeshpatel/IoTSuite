@@ -15,19 +15,18 @@ public class Storage extends SoftwareComponent {
 	public List<String> fieldWithSQL = new ArrayList<String>();
 	public List<String> fieldName = new ArrayList<String>();
 	public List<String> structFieldName = new ArrayList<String>();
-	public List<String> structField = new ArrayList<String>();
-
+	public List<StructField> structField = new ArrayList<StructField>();
+	
 	public String databaseName = "iotsuiteuser";
 
 	public String id;
 
-	
 	public Storage(String name, Set<DataAccess> dataAccess,
 			Set<Information> consumeInfo, List<String> fieldName,
-			List<String> fieldwithSQL, List<String> structField,
+			List<String> fieldwithSQL, List<StructField> structField,
 			List<String> structFieldName) {
 
-		//super(name, null, null, "NoInstance");
+		// super(name, null, null, "NoInstance");
 		super(name, null, null);
 		this.dataAccess = dataAccess;
 		this.fieldWithSQL = fieldwithSQL;
@@ -54,8 +53,13 @@ public class Storage extends SoftwareComponent {
 
 	}
 
-	public List<String> getAllStructField() {
+	public List<StructField> getAllStructField() {
 
+		ArrayList<StructField> allStructFields = new ArrayList<StructField>();
+		allStructFields.addAll(getstructField());
+		return allStructFields;
+	}
+	public List<StructField> getstructField() {
 		return structField;
 	}
 

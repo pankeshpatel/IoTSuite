@@ -404,24 +404,20 @@ public class JavaFrameworkFromST {
 				+ ".java", templateOfStorageService, "AndroidStorageImpl",
 				"actuator", storageService);
 	}
-	
-	
-	//Android Main Activity UI
-/*	public CompilationUnit generateAndroidUserInterfaceMainActivity(
-			UserInterface guiDriver) {
-		StringTemplate templateOfGUIDriver = group
-				.getInstanceOf("Android/executionGuiAndroid");
-		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 
-		templateOfGUIDriver.registerRenderer(String.class,
-				new MyAttributeRenderer());
-
-		return new CompilationUnit("MainActivityUI" + ".java",
-				templateOfGUIDriver, "AndroidMainActivity", "java", guiDriver);
-	}*/
-	
-	
-	
+	// Android Main Activity UI
+	/*
+	 * public CompilationUnit generateAndroidUserInterfaceMainActivity(
+	 * UserInterface guiDriver) { StringTemplate templateOfGUIDriver = group
+	 * .getInstanceOf("Android/executionGuiAndroid");
+	 * templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+	 * 
+	 * templateOfGUIDriver.registerRenderer(String.class, new
+	 * MyAttributeRenderer());
+	 * 
+	 * return new CompilationUnit("MainActivityUI" + ".java",
+	 * templateOfGUIDriver, "AndroidMainActivity", "java", guiDriver); }
+	 */
 
 	// Android User interface
 	public CompilationUnit generateAndroidUserInterfaceImpl(
@@ -816,10 +812,6 @@ public class JavaFrameworkFromST {
 			return new CompilationUnit("MainActivity" + ".java",
 					templateOfDevice, "AndroidDevice", device.getName(), device);
 		}
-		
-		
-		
-		
 
 		return null;
 	}

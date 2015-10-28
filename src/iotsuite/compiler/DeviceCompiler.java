@@ -31,7 +31,8 @@ public class DeviceCompiler {
 	public void addDeviceObj() {
 		device = new Device(getDeviceName(), getDeviceType(),
 				getNetworkAddress(), getRegionValues(), getRegionLabel(),
-				deviceAbilities, getMobileFlag(), getProtocol(), getDeviceDescription(),getDataBase());
+				deviceAbilities, getMobileFlag(), getProtocol(),
+				getDeviceDescription(), getDataBase());
 		SymbolTable.addDeviceinSymblTable(device);
 	}
 
@@ -42,19 +43,17 @@ public class DeviceCompiler {
 	public String getProtocol() {
 		return myProtocol;
 	}
-	
-	
-	
-	//Getter and Setter of database	
-		public void setDatabase(String database) {
-			
-			this.mydatabase=database;
-		}
-		
-		public String getDataBase(){
-			
-			return mydatabase;
-		}
+
+	// Getter and Setter of database
+	public void setDatabase(String database) {
+
+		this.mydatabase = database;
+	}
+
+	public String getDataBase() {
+
+		return mydatabase;
+	}
 
 	public void setMobileFlag(String mobileFlag) {
 		this.myMobileFlag = mobileFlag;
@@ -92,17 +91,15 @@ public class DeviceCompiler {
 	public void setDeviceType(String deviceType) {
 		this.deviceType = deviceType;
 	}
-	
+
 	// Getter and Setter of Device Description
-	public void setDeviceDescription(String deviceDesctiption){
+	public void setDeviceDescription(String deviceDesctiption) {
 		this.myDescription = deviceDesctiption;
 	}
-	
-	public String getDeviceDescription(){
+
+	public String getDeviceDescription() {
 		return myDescription;
 	}
-	
-	
 
 	// Getter and Setter of NetworkAddress
 
@@ -163,7 +160,5 @@ public class DeviceCompiler {
 	public List<Device> getDeviceList() {
 		return deviceList;
 	}
-
-	
 
 }

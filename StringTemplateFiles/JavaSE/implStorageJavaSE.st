@@ -23,14 +23,12 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 	$Storageservice.allDataAccess:{dataAccess |
 	private $dataAccess.generatedInfo.type$ tempPreference;
 	}$
-	private String queryCreateTable = null;
-
-	
-	
+		
 	// Configuration Parameter
-	// TODO: Device Developers will write USERNAME and PASSWORD to access the database
-	static final String USERNAME = "";
-	static final String PASSWORD = "";	
+	// TODO: Device Developers will write USERNAME, PASSWORD and DBMS (ex-MySQL,Azure SQL etc.) to access the database
+	 String USERNAME = "";
+	 String PASSWORD = "";	
+	 static String DBMS;
 	
 	static final String DBNAME = "$Storageservice.name$";
 	
@@ -38,10 +36,12 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 	
 		
   public JavaSE$Storageservice.name$(Device deviceInfo) {
+	  this.DBMS=deviceInfo.getDatabase();
 	  
-	  
-	 
+	 if(DBMS.equalsIgnoreCase("mysql"))
+	 {
 	  try {
+	    
 			Class.forName("com.mysql.jdbc.Driver");
 			connect = DriverManager.getConnection("jdbc:mysql://localhost/", 
 							 USERNAME , PASSWORD );
@@ -55,12 +55,12 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 			
 			if(checkTableExists()){ // If table exists				
 				 
-				 System.out.println("Table exisits in the database.....");	
+				 System.out.println(".......Table exisits in the database im MySQL.....");	
 				 $Storageservice.allDataAccess:{dataAccess |
 						}$
 				}
 				else{				
-				System.out.println("Table does not exist in the database.....");	
+				System.out.println("...........Table does not exist in the database in MySQL.....");	
 				
 				
 				ps = connect.prepareStatement("CREATE TABLE iotsuiteuser.$Storageservice.name$ " +
@@ -68,30 +68,45 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
               "($Storageservice.allfieldwithSQlvariable:{fieldwithSQL |	$fieldwithSQL$};separator="," $)");
               ps.execute();
 				
-	  
-
-				
-				
-				$Storageservice.allDataAccess:{dataAccess |
-					
-			
-				}$
 				}
-				
-						
-			
-		} catch (Exception e) {
+		} 
+		catch (Exception e) {
 			System.err.println("Got an exception! ");
 			System.err.println(e.getMessage());
 		}
-  
   }
+  
+  if (DBMS.equalsIgnoreCase("azuresql")) {
+
+      try {
+             
+           String connectionString = "jdbc:sqlserver://xlkgkzy7y9.database.windows.net:1433;" +
+          "database=iotsuiteuser;user="+USERNAME+";password={"+PASSWORD+"};" +
+          "encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;;"
+            + "loginTimeout=30;";
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        
+         // setup the connection with the Azure DB.
+        connect = DriverManager.getConnection(connectionString);
+        statement = (Statement) connect.createStatement();
+        System.out.println("....Connection Established to Azure SQL....");
+
+      } catch (Exception e) {
+        System.out.println("Exception " + e.getMessage());
+        e.printStackTrace();
+      }
+    }
+    
+    }
+ 
 
   $Storageservice.allDataAccess:{dataAccess |    
   
   @Override
   public void set$dataAccess.dataAccessName; format="avoidCapital"$ 
       ($dataAccess.query.type; format="capital" $ newIndex, $dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ) {
+   
+   if(DBMS.equalsIgnoreCase("mysql")){
     
 	  try {  
 			ps = 
@@ -105,28 +120,70 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}	
+		}
+		
+		
+	if(DBMS.equalsIgnoreCase("azuresql")){
+    
+    try {  
+       String sqlString="INSERT INTO $Storageservice.name$ " +
+            "($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
+            " ("+newIndex+"$Storageservice.allStructFieldName:{structFieldName |,"+newprofileValue.get$structFieldName$()+"}$)";
+      
+             // Use the connection to create the SQL statement.
+              statement = connect.createStatement();
+
+              // Execute the statement.
+              statement.executeUpdate(sqlString);
+              connect.close();
+
+              // Provide a message when processing is complete.
+              System.out.println(".......Inserted Value in to Azure SQL......");
+      
+      
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } 
+    }	
 	  
     } 
  
   @Override
   public $dataAccess.generatedInfo.type$ get$dataAccess.dataAccessName$($dataAccess.query.type; format="capital" $ index){
- 	  
+ 	  if(DBMS.equalsIgnoreCase("mysql")) {
 	  try {
 			String query  = "SELECT * FROM  iotsuiteuser.$Storageservice.name$ WHERE $Storageservice.id$=" + index;
 			resultSet = statement.executeQuery(query);
 			resultSet.next();
-			tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField$};separator=","$   );
+			tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type$("$structField.name$")};separator=","$   );
 		} catch (Exception e) {
 			System.err.println("Got an exception! ");
 			System.err.println(e.getMessage());
 		}	
+		}
+		
+		if (DBMS.equalsIgnoreCase("azuresql")) {
+
+      try {
+
+        resultSet = statement
+            .executeQuery("SELECT * FROM $Storageservice.name$ WHERE $Storageservice.id$ = "
+                + index);
+        resultSet.next();
+        tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type$("$structField.name$")};separator=","$   );
+       } catch (Exception e) {
+        System.err.println("Got an exception! ");
+        System.err.println(e.getMessage());
+      }
+
+    }
 		return tempPreference;
   
   } 
 }$
 
 private boolean checkTableExists() {
-	System.out.println("Checking Table exisits or not in the database...");
+	System.out.println(".........Checking Table exisits or not in the database in MySQL...");
 try {
 		DatabaseMetaData md = connect.getMetaData();
 		ResultSet rs = md.getTables(null, null, DBNAME, null);

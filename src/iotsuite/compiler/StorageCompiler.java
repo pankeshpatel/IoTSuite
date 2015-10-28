@@ -9,6 +9,7 @@ import iotsuite.semanticmodel.DataAccess;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Information;
 import iotsuite.semanticmodel.Storage;
+import iotsuite.semanticmodel.StructField;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,7 +34,8 @@ public class StorageCompiler {
 	// Store Field Name ex-tempValue,unitOfMeasurement
 	private List<String> fieldName = new ArrayList<String>();
 	private List<String> structFieldName = new ArrayList<String>();
-	private List<String> structField = new ArrayList<String>();
+	private  List<StructField> structField = new ArrayList<StructField>();
+	
 	// Static Table used for Mapping from high level specification datatype to
 	// SQL datatype
 	HashMap<String, String> SQLtype = new HashMap<String, String>();
@@ -81,9 +83,9 @@ public class StorageCompiler {
 		return structFieldName;
 	}
 
-	private List<String> getStructField() {
+	private List<StructField> getStructField() {
 
-		this.structField = iotsuite.parser.SymbolTable.structField;
+		this.structField = iotsuite.parser.SymbolTable.StructFieldSetForStorage;
 		return structField;
 	}
 

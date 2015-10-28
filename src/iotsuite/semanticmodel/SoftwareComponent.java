@@ -12,7 +12,7 @@ public abstract class SoftwareComponent<I extends Information> {
 	private String name;
 	private Set<I> generateInfo = new HashSet<I>();
 	private Set<I> consumeInfo = new HashSet<I>();
-	
+
 	public SoftwareComponent(String name, Set<I> generateInfo,
 			Set<I> consumeInfo) {
 		super();
@@ -20,7 +20,7 @@ public abstract class SoftwareComponent<I extends Information> {
 		this.generateInfo = generateInfo;
 		this.consumeInfo = consumeInfo;
 	}
-	
+
 	public boolean isGeneratedInfo() {
 		if (generateInfo != null)
 			return true;
@@ -38,7 +38,6 @@ public abstract class SoftwareComponent<I extends Information> {
 	public String getName() {
 		return name;
 	}
-
 
 	public Set<I> getGenerateInfo() {
 		return generateInfo;

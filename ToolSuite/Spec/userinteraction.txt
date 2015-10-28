@@ -1,5 +1,0 @@
-userinteractions:
-	SmartHomeApp
-	 command Off();
-	 command SetTemp(setTemp);
-	 request profile; 

@@ -15,18 +15,18 @@ public class ComputationalService extends SoftwareComponent<Information> {
 	private String operatation;
 	public List<StructField> fields = new ArrayList<StructField>();
 	public static int sampleValue;
-	
 
 	public ComputationalService(String name, Set<Information> generateInfo,
 			Set<Information> consumeInfo, Set<DataAccess> dataAccess,
-			Set<Action> actions, String operation,List<StructField> fields, int sampleValue) {
-				
+			Set<Action> actions, String operation, List<StructField> fields,
+			int sampleValue) {
+
 		super(name, generateInfo, consumeInfo);
 		this.dataAccess = dataAccess;
 		this.actions = actions;
 		this.operatation = operation;
-		this.fields=fields;
-		this.sampleValue=sampleValue;
+		this.fields = fields;
+		this.sampleValue = sampleValue;
 	}
 
 	public List<StructField> getFields() {
@@ -39,8 +39,6 @@ public class ComputationalService extends SoftwareComponent<Information> {
 		return allStructFields;
 	}
 
-	
-	
 	public String getOperation() {
 		return operatation;
 	}

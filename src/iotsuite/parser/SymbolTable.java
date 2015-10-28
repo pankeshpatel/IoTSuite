@@ -51,8 +51,6 @@ public class SymbolTable {
 	// Following list stores field name and field type of
 	// Structure(ex-tempValue-double)
 	public static ArrayList<String> structField = new ArrayList<String>();
-	
-	
 
 	// Following araylist used to store filed name and type used by event driven
 	// sensor(ex- String badgeId, boolean presence etc.)
@@ -73,10 +71,10 @@ public class SymbolTable {
 	public static Map<String, Set<DataAccess>> dataAccessSymblTable = new HashMap<String, Set<DataAccess>>();
 
 	public static List<StructField> StructFieldSet = new ArrayList<StructField>();
-	
-	
+
 	public static List<StructField> StructFieldSetForGUI = new ArrayList<StructField>();
 	public static List<StructField> StructFieldSetForGUINotify = new ArrayList<StructField>();
+	public static List<StructField> StructFieldSetForStorage = new ArrayList<StructField>();
 
 	// Store Structure Name ex-TempStruct or BadgeStruct
 	public static String structName;
@@ -105,7 +103,8 @@ public class SymbolTable {
 	public static int columnCountinFieldType = 0;
 
 	static StructField Field;
-	
+	static StructField FieldForStorage;
+
 	static StructField FieldForGUI;
 	static StructField FieldForGUINotify;
 
@@ -149,7 +148,8 @@ public class SymbolTable {
 	public static void constructSymbTable(String variableName,
 			String variableType) {
 
-		//System.out.println("Vriable Name "+variableName+ "Variable Type "+variableType);
+		// System.out.println("Vriable Name "+variableName+
+		// "Variable Type "+variableType);
 		if (symblTable.containsKey(variableName)) {
 
 		} else {
@@ -278,9 +278,8 @@ public class SymbolTable {
 		}
 
 	}
-	
-	public static void searchStructFieldNameForGUI(
-			String requestGUIStructName) {
+
+	public static void searchStructFieldNameForGUI(String requestGUIStructName) {
 
 		for (int i = 0; i < 10; i++) {
 			if (arrayFieldName[i][0] != null) {
@@ -296,10 +295,10 @@ public class SymbolTable {
 		}
 
 	}
-	
-	
-	public static void searchStructFieldNameForNotifyGUI(String notifyGUIStructName){
-		
+
+	public static void searchStructFieldNameForNotifyGUI(
+			String notifyGUIStructName) {
+
 		for (int i = 0; i < 10; i++) {
 			if (arrayFieldName[i][0] != null) {
 				if (arrayFieldName[i][0].equals(notifyGUIStructName)) {
@@ -308,18 +307,13 @@ public class SymbolTable {
 							new PrimitiveType(arrayFieldType[i][1]));
 
 					StructFieldSetForGUINotify.add(FieldForGUINotify);
-					
+
 				}
 
 			}
 		}
-		
-		
+
 	}
-	
-	
-	
-	
 
 	private void searchForActuatorFields() {
 
@@ -360,10 +354,15 @@ public class SymbolTable {
 					tempListStorageFieldType.add(arrayFieldType[i][1]);
 
 					Mapping(javaToResultSetMapping);
-					structField.add(javaToResultSetMapping
+					FieldForStorage = new StructField(arrayFieldName[i][1],
+							new PrimitiveType(javaToResultSetMapping
+									.get(arrayFieldType[i][1])));
+					StructFieldSetForStorage.add(FieldForStorage);
+/*
+					StructFieldSetForStorage.add(javaToResultSetMapping
 							.get(arrayFieldType[i][1])
 							+ "(\""
-							+ (arrayFieldName[i][1]) + "\") ");
+							+ (arrayFieldName[i][1]) + "\") ");*/
 
 				}
 			}
