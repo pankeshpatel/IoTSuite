@@ -21,7 +21,7 @@ devices:
         resources: ProfileDB;
 		protocol: mqtt; 
 	    description:  d1 Description;
-	    database: AzureSQL ;		
+	    database: Mongodb ;		
 	D4:
         location:
              Room: 1;

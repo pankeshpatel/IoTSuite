@@ -10,6 +10,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.MongoClient;
 
 import framework.*;
 
@@ -97,6 +102,21 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
       }
     }
     
+    if(DBMS.equalsIgnoreCase("mongodb")) {
+     try{   
+     // To connect to mongodb server
+           MongoClient mongoClient = new MongoClient("localhost",27017);
+         // Now connect to your databases
+          DB db = mongoClient.getDB( "iotsuiteuser" );
+          DBCollection table =db.getCollection("$Storageservice.name$");
+          System.out.println(".....Connection Established to MongoDB.....");
+            
+      }catch(Exception e){
+       System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+    }
+    
+    }
+    
     }
  
 
@@ -132,20 +152,39 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
       
              // Use the connection to create the SQL statement.
               statement = connect.createStatement();
-
               // Execute the statement.
               statement.executeUpdate(sqlString);
               connect.close();
-
-              // Provide a message when processing is complete.
               System.out.println(".......Inserted Value in to Azure SQL......");
       
       
     } catch (SQLException e) {
       e.printStackTrace();
     } 
-    }	
+    }
+    
+    
+   if(DBMS.equalsIgnoreCase("mongodb")){	
+	  try{   
+         // To connect to mongodb server
+           MongoClient mongoClient = new MongoClient();
+         // Now connect to your databases
+          DB db = mongoClient.getDB( "iotsuiteuser" );
+          DBCollection table =db.getCollection("$Storageservice.name$");
+          BasicDBObject document = new BasicDBObject();           
+          document.put("$Storageservice.id$", newIndex);
+          $Storageservice.allStructFieldName:{structFieldName |
+          document.put("$structFieldName$",newprofileValue.get$structFieldName$());
+          }$
+          table.insert(document);
+          
+        
+      }catch(Exception e){
+       System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+    }
 	  
+    }
+    
     } 
  
   @Override
@@ -177,6 +216,30 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
       }
 
     }
+    
+    
+    if(DBMS.equalsIgnoreCase("mongodb")) {
+    try{
+            MongoClient mongoClient = new MongoClient();
+              // Now connect to your databases
+             DB db = mongoClient.getDB( "iotsuiteuser" );
+             DBCollection collection = db.getCollection("$Storageservice.name$");
+             BasicDBObject findObject = new BasicDBObject();
+             findObject.put("$Storageservice.id$",index);     
+             DBCursor cursor = collection.find(findObject);  
+              while (cursor.hasNext()) {        
+               BasicDBObject dbObject = (BasicDBObject)cursor.next();
+               tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | dbObject.
+               get$structField.type$("$structField.name$")};separator=","$   );
+                     
+               }
+           
+    }
+     catch(Exception e){
+             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+          }
+          }
+    
 		return tempPreference;
   
   } 
