@@ -1,7 +1,0 @@
-Each StringTemplate files have been named as follows:
-
-packageName-EntityType-TypeOfPlatform
-
-Example:
-
-(factory/impl)-(Storage/Sensor/Actuator/EndUserInteraction)-(Android/JavaSE)
