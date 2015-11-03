@@ -2,8 +2,6 @@ package iotsuite.semanticmodel;
 
 import iotsuite.common.GlobalVariable;
 
-//import iotsuite.compiler.Attribute;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;

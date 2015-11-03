@@ -21,7 +21,7 @@ devices:
         resources: ProfileDB;
 		protocol: mqtt; 
 	    description:  d1 Description;
-	    database: Mongodb ;		
+	    database: MySQL;		
 	D4:
         location:
              Room: 1;
@@ -50,8 +50,7 @@ devices:
         platform: JavaSE;    
         resources:;
 		protocol: mqtt;
-		description: d1 Description is written; 
-		
+		description: d1 Description is written; 		
    D8:
         location:
              Room: 1;
@@ -59,10 +58,4 @@ devices:
         resources:Heater;
 		protocol: mqtt;
 		description: d1 Description;
-	D9:
-        location:
-             Room: 1;
-        platform: Android;    
-        resources:SmartHomeApp;
-		protocol: mqtt;
-		description: d9 description ;
+	

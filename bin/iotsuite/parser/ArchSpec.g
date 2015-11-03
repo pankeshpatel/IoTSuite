@@ -22,10 +22,8 @@ import iotsuite.semanticmodel.*;
      
 archSpec : 
     { context = new SymbolTable();
-   context.currentRegion = new RegionCompiler();
     context.currentMappingConstraint = new MapperCompiler(); 
-    }
-     { context.currentRegion.generateRegionCode(); }    
+    }       
     ('structs' ':' struct_def)*  
      'softwarecomponents' ':' (component_def)+
 ;   

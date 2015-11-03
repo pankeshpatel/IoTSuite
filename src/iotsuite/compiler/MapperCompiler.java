@@ -2,7 +2,6 @@ package iotsuite.compiler;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -23,8 +22,6 @@ import iotsuite.semanticmodel.Device;
 public class MapperCompiler {
 
 	private String softwareComponentName;
-	private String attributeName;
-	private String attributeValue;
 	private DeploymentScope deploymentConstraint;
 
 	public MapperCompiler() {

@@ -4,25 +4,16 @@ import iotsuite.pubsubmiddleware.*;
 import iotsuite.common.GlobalVariable;
 import android.content.Context;
 import iotsuite.semanticmodel.*;
-import android.app.Activity;
-import android.app.Dialog;
-import framework.*;
 import factory.*;
-
 import $SensorDriver.PackageName$.*;
 
 public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  { 
 
-	I$SensorDriver.name$ obj$SensorDriver.name$;
-	Activity ui;
-	public Logic$SensorDriver.name$ obj = this;
-	Device deviceInfo;	
-	public String deviceType;
-   
+ 
 	public Logic$SensorDriver.name$(PubSubMiddleware pubSubM, final Device deviceInfo, final Object ui,Context myContext) {
 		super(pubSubM, deviceInfo);
 		
-		deviceType = deviceInfo.getType();
+		String deviceType = deviceInfo.getType();
 		
 		if (deviceType.equals(GlobalVariable.deviceJAVASEType)) {
 			

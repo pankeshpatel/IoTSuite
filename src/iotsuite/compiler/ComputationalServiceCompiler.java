@@ -23,18 +23,14 @@ public class ComputationalServiceCompiler {
 
 	private Set<Information> generatedInfo = new HashSet<Information>();
 	private Set<Information> consumedInfo = new HashSet<Information>();
-	// private Set<Operation> operation = new HashSet<Operation>();
 	private String operationType;
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private Set<Action> actions = new HashSet<Action>();
 	private String computationalServiceName;
 	private Parameter parameter;
-	static int sampleValue;
+	private int sampleValue;
 
-	/*
-	 * public static List<String> structFieldName = new ArrayList<String>();
-	 * public static List<String> structFieldType = new ArrayList<String>();
-	 */
+	
 	public static List<StructField> StructFieldSet = new ArrayList<StructField>();
 
 	public void addCommand(String actionName) {
@@ -65,13 +61,7 @@ public class ComputationalServiceCompiler {
 
 	public void createCSObject() {
 
-		/*
-		 * computationalService = new ComputationalService(
-		 * getComputationalServiceName(), getGeneratedInfo(), getConsumedInfo(),
-		 * getDataAccessList(), getActionList(), getPartitionAttributeVal(),
-		 * getOperation(),getStructFieldSet(),getSampleValue());
-		 */
-
+	
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
@@ -82,40 +72,9 @@ public class ComputationalServiceCompiler {
 	public List<StructField> getStructFieldSet() {
 
 		StructFieldSet = iotsuite.parser.SymbolTable.StructFieldSet;
-		// System.out.println("Struct Field set is "+StructFieldSet);
 		return StructFieldSet;
 	}
 
-	/*
-	 * private List<String> getAggregatorStructFieldName() {
-	 * aggregatorStructFieldName
-	 * =iotsuite.parser.SymbolTable.aggregatorStructFieldName;
-	 * //System.out.println("Aggre Field Name is "+aggregatorStructFieldName);
-	 * return aggregatorStructFieldName; }
-	 * 
-	 * private List<String> getAggregatorStructFieldType() {
-	 * aggregatorStructFieldType
-	 * =iotsuite.parser.SymbolTable.aggregatorStructFieldType; return
-	 * aggregatorStructFieldType;
-	 * 
-	 * }
-	 */
-
-	/*
-	 * public void dataAccess(Information query, Information generatedInfo) {
-	 * DataAccess dataAccess = new DataAccess(query, generatedInfo);
-	 * dataAccessList.add(dataAccess); }
-	 */
-
-	/*
-	 * public List<String> getStructFieldName() { // TODO Auto-generated method
-	 * stub this.structFieldName=iotsuite.parser.SymbolTable.structFieldName;
-	 * return structFieldName; }
-	 * 
-	 * public List<String> getStructFieldType() { // TODO Auto-generated method
-	 * stub this.structFieldType=iotsuite.parser.SymbolTable.structFieldType;
-	 * return structFieldType; }
-	 */
 	public Set<DataAccess> getDataAccessList() {
 		return dataAccessList;
 	}
@@ -125,14 +84,7 @@ public class ComputationalServiceCompiler {
 				.getDataAccessSymblTable(dataAccessStr);
 	}
 
-	// Getter and Setter of Partition Attribute
-	// public void addPartitionAttribute(String regionName) {
-	// partitionAttributeValue = regionName;
-	// }
 
-	// public String getPartitionAttributeVal() {
-	// return partitionAttributeValue;
-	// }
 
 	// Getter and Setter of Consumed Info
 

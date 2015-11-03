@@ -60,11 +60,10 @@ public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$,IDataListener {
               listener$dataAccess.dataAccessName; format="capital"$Request = handler; 
          }    
     }$
-      
+    
+    @SuppressWarnings("unused") 
     @Override
       public void onDataReceived(String eventName, JsonObject data) {
-        // TODO Auto-generated method stub
-        //Unwrape the data from Json Object
         
           $GUIdriver.allDataAccess:{ dataAccess |
           if(eventName.equals("$dataAccess.dataAccessName; format="avoidCapital"$Response")){

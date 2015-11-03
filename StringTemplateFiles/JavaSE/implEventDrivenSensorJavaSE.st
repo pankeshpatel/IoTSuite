@@ -11,7 +11,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-//import javax.swing.JTextField;
 
 public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 
@@ -19,10 +18,8 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
   private JLabel headerLabel;
   private JLabel statusLabel;
   private JPanel controlPanel;
-   // TODO : Developer will configure the following appropriately(Developer will configure Textfield if require).
-  //private JTextField jtfTextField = new JTextField("Enter BadgeID");
+
        
-//TODO:Developer will configure the following argument appropriately
   $SensorDriver.allEventDrivenFields:{eventDrivenFields | 
    $eventDrivenFields$; 
   }$
@@ -73,7 +70,6 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
   mainFrame.add(headerLabel);
   mainFrame.add(controlPanel);
   mainFrame.add(statusLabel);
- // mainFrame.add(jtfTextField);
 
   mainFrame.setVisible(true);
   }

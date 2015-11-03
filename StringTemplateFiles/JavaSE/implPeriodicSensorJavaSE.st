@@ -6,8 +6,6 @@ import java.util.Random;
 
 public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 
-
-  //TODO:Device developer will configure following parameters according to requirement
 	private static int  SAMPLE_PERIOD = $SensorDriver.samplePeriod$;
 	private static  int SAMPLE_DURATION =$SensorDriver.sampleDuration$;
 	private static int  temp=0;
@@ -15,9 +13,8 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
    
    @Override
-   public void get$generatedInfo.name; format="avoidCapital"$(Listener$generatedInfo.name$ handler){
-	   
-	   
+   public void get$generatedInfo.name; format="avoidCapital"$(Listener$generatedInfo.name$ handler){	   
+  
 	   while (temp <= SAMPLE_DURATION) {
            try {
                handler.onNew$generatedInfo.name$(this.get$generatedInfo.name$());

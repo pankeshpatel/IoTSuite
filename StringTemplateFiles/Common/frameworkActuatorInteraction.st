@@ -10,7 +10,6 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
 	
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
-	//private String partitionAttribute = "Room";
 	
 	
 	public $Actuatordriver.name$(PubSubMiddleware pubSubM, Device deviceInfo) {  
@@ -45,18 +44,7 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
      $Actuatordriver.allActions:{ action | 
     	public void subscribe$action.name; format="capital"$() {
     	
-    	//List<String> regionInfo = new ArrayList<String>();
-
-		//regionInfo.add("*");
-		//regionInfo.add("*");
-		//regionInfo.add("*");
-
-		//this.myPubSubMiddleware.subscribe(this, "$action.name$", regionInfo);
-		
-		/*regionInfo = RegionSubscription.getSubscriptionRequest(
-				partitionAttribute, myDeviceInfo.getRegionLabels(),
-				myDeviceInfo.getRegion()); */
-				
+    					
 	    List<String> regionInfo = new ArrayList<String>(); 
 		regionInfo.add("*");
 				

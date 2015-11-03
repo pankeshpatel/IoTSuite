@@ -8,8 +8,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.HashMap;
-import java.util.Map;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -27,21 +25,16 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 	static PreparedStatement ps ;
 	$Storageservice.allDataAccess:{dataAccess |
 	private $dataAccess.generatedInfo.type$ tempPreference;
-	}$
-		
-	// Configuration Parameter
-	// TODO: Device Developers will write USERNAME, PASSWORD and DBMS (ex-MySQL,Azure SQL etc.) to access the database
+	}$	
+	
 	 String USERNAME = "";
 	 String PASSWORD = "";	
-	 static String DBMS;
+	 private String DBMS;
 	
 	static final String DBNAME = "$Storageservice.name$";
-	
-
-	
 		
   public JavaSE$Storageservice.name$(Device deviceInfo) {
-	  this.DBMS=deviceInfo.getDatabase();
+	  DBMS=deviceInfo.getDatabase();
 	  
 	 if(DBMS.equalsIgnoreCase("mysql"))
 	 {
@@ -60,12 +53,12 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 			
 			if(checkTableExists()){ // If table exists				
 				 
-				 System.out.println(".......Table exisits in the database im MySQL.....");	
+				 System.out.println("Table exists in the database im MySQL");	
 				 $Storageservice.allDataAccess:{dataAccess |
 						}$
 				}
 				else{				
-				System.out.println("...........Table does not exist in the database in MySQL.....");	
+				System.out.println("Table does not exist in the database in MySQL");	
 				
 				
 				ps = connect.prepareStatement("CREATE TABLE iotsuiteuser.$Storageservice.name$ " +
@@ -104,19 +97,16 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
     
     if(DBMS.equalsIgnoreCase("mongodb")) {
      try{   
-     // To connect to mongodb server
-           MongoClient mongoClient = new MongoClient("localhost",27017);
-         // Now connect to your databases
+          MongoClient mongoClient = new MongoClient("localhost",27017);
           DB db = mongoClient.getDB( "iotsuiteuser" );
+          @SuppressWarnings("unused")
           DBCollection table =db.getCollection("$Storageservice.name$");
-          System.out.println(".....Connection Established to MongoDB.....");
+          System.out.println("Established connection to MongoDB.....");
             
       }catch(Exception e){
        System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-    }
-    
-    }
-    
+    }    
+    }    
     }
  
 
@@ -150,12 +140,10 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
             "($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
             " ("+newIndex+"$Storageservice.allStructFieldName:{structFieldName |,"+newprofileValue.get$structFieldName$()+"}$)";
       
-             // Use the connection to create the SQL statement.
               statement = connect.createStatement();
-              // Execute the statement.
               statement.executeUpdate(sqlString);
               connect.close();
-              System.out.println(".......Inserted Value in to Azure SQL......");
+              System.out.println("Insert value into Azure SQL......");
       
       
     } catch (SQLException e) {
@@ -166,9 +154,8 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
     
    if(DBMS.equalsIgnoreCase("mongodb")){	
 	  try{   
-         // To connect to mongodb server
+
            MongoClient mongoClient = new MongoClient();
-         // Now connect to your databases
           DB db = mongoClient.getDB( "iotsuiteuser" );
           DBCollection table =db.getCollection("$Storageservice.name$");
           BasicDBObject document = new BasicDBObject();           
@@ -246,7 +233,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 }$
 
 private boolean checkTableExists() {
-	System.out.println(".........Checking Table exisits or not in the database in MySQL...");
+	System.out.println("Checking Table exists or not in the database in MySQL");
 try {
 		DatabaseMetaData md = connect.getMetaData();
 		ResultSet rs = md.getTables(null, null, DBNAME, null);

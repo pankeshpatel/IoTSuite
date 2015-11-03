@@ -6,7 +6,6 @@ import iotsuite.compiler.ComputationalServiceCompiler;
 import iotsuite.compiler.DeviceCompiler;
 import iotsuite.compiler.UserInterfaceCompiler;
 import iotsuite.compiler.MapperCompiler;
-import iotsuite.compiler.RegionCompiler;
 import iotsuite.compiler.SensorCompiler;
 import iotsuite.compiler.StorageCompiler;
 import iotsuite.compiler.StructCompiler;
@@ -407,25 +406,14 @@ public class SymbolTable {
 
 	}
 
-	// Cursor to current structure
+	
 	public StructCompiler currentStruct;
-
 	public SensorCompiler currentSensor;
-
 	public ActuatorCompiler currentActuator;
-
 	public UserInterfaceCompiler currentGUI;
-
 	public StorageCompiler currentStorageService;
-
 	public ComputationalServiceCompiler currentComputationalService;
-
-	// public ControllerCompiler currentController;
-
-	public RegionCompiler currentRegion;
-
 	public DeviceCompiler currentNetwork;
-
 	public MapperCompiler currentMappingConstraint;
 
 	public SymbolTable() {

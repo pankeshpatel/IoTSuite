@@ -96,7 +96,6 @@ public class InteractionsParser extends Parser {
 			{
 				match(input, 28, FOLLOW_28_in_vocabSpec68);
 				context = new SymbolTable();
-				context.currentRegion = new RegionCompiler();
 				// context.currentMappingConstraint = new MappingConstraint();
 
 				match(input, 11, FOLLOW_11_in_vocabSpec80);
@@ -130,9 +129,8 @@ public class InteractionsParser extends Parser {
 						throw eee;
 					}
 					cnt1++;
-				}
+				}  
 
-				context.currentRegion.generateRegionCode();
 				match(input, 33, FOLLOW_33_in_vocabSpec104);
 				match(input, 11, FOLLOW_11_in_vocabSpec106);
 				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:32:19:
@@ -207,11 +205,7 @@ public class InteractionsParser extends Parser {
 
 				match(input, 12, FOLLOW_12_in_region_def164);
 
-				context.currentRegion.addRegion(
-						(CAPITALIZED_ID1 != null ? CAPITALIZED_ID1.getText()
-								: null),
-						(dataType2 != null ? input.toString(dataType2.start,
-								dataType2.stop) : null));
+				
 
 			}
 

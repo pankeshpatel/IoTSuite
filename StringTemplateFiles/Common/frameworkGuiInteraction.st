@@ -4,7 +4,6 @@ import iotsuite.pubsubmiddleware.PubSubMiddleware;
 import iotsuite.pubsubmiddleware.Subscriber;
 import iotsuite.semanticmodel.Device;
 import java.util.List;
-import iotsuite.common.RegionSubscription;
 import iotsuite.common.Logger;
 import java.util.ArrayList; 
 
@@ -14,7 +13,6 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
   
   protected final PubSubMiddleware myPubSubMiddleware;
   protected final Device myDeviceInfo;
-  //private String partitionAttribute = "Room";
   
   
   public $GUIdriver.name$(PubSubMiddleware pubSubM, Device deviceInfo) {  
@@ -82,8 +80,7 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
     public abstract void onNew$dataAccess.dataAccessName; format="capital"$Response($GUIdriver.AllDataAccess:{ dataAcc |$dataAcc.GeneratedInfo.type$}$ arg);       
       public void subscribe$dataAccess.dataAccessName; format="capital"$() {
             
-      /*List<String> regionInfo = RegionSubscription.getSubscriptionRequest(partitionAttribute, 
-               myDeviceInfo.getRegionLabels(), myDeviceInfo.getRegion()); */
+     
                
        List<String> regionInfo = new ArrayList<String>(); 
 	   regionInfo.add("*");
@@ -99,9 +96,6 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
      public void subscribe$notifyMeasurement; format="capital"$() {
     	 
     	 
-     /* List<String> regionInfo = RegionSubscription.getSubscriptionRequest(partitionAttribute, 
-               myDeviceInfo.getRegionLabels(), myDeviceInfo.getRegion());
-       */ 
        
        List<String> regionInfo = new ArrayList<String>();
 		regionInfo.add("*");          
@@ -110,10 +104,7 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
          this.myPubSubMiddleware.subscribe(this,"$notifyMeasurement; format="capital"$", regionInfo);
     } 
      
-    }$
-    
-    
-    
+    }$   
     
 }
    

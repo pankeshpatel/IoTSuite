@@ -9,7 +9,7 @@ options {
   
 }    
 
-@parser::header { 
+@parser::header {     
 package iotsuite.parser;
 import iotsuite.compiler.*;  
 import iotsuite.semanticmodel.*;   
@@ -17,7 +17,6 @@ import iotsuite.semanticmodel.*;
 } 
   
 @members {
-  //Initialize the context
   private SymbolTable context;
 } 
  
@@ -126,7 +125,7 @@ gui_display_def :
    context.currentActuator.generateActuatorCode();
    context.currentGUI.setNotifyName($CAPITALIZED_ID.text);
    } 
-;
+;  
 
 gui_notify_parameter_def:
 

@@ -27,7 +27,7 @@ vocabSpec :
     'structs' ':' (struct_def)+  
     'resources' ':' abilities_def   
 ; 
-  
+   
 struct_def:
     CAPITALIZED_ID 
     {context.currentStruct = new StructCompiler($CAPITALIZED_ID.text);

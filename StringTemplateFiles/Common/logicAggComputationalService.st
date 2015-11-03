@@ -29,7 +29,6 @@ public class  Logic$CS.name$ extends $CS.name$  {
      Listener$consumedInfo.name$ $consumedInfo.name$Event = new Listener$consumedInfo.name$(){
     @Override
       public  void onNew$consumedInfo.name; format="avoidCapital"$( $consumedInfo.type$ arg){     
-      //TODO : write code here.     
       $CS.allGeneratedInfo:{ generatedInfo |set$generatedInfo.name$(arg);}; separator="\n"$ 
      }       
      };        
@@ -39,7 +38,7 @@ public class  Logic$CS.name$ extends $CS.name$  {
      @Override
     public void onNew$consumedInfo.name$( $consumedInfo.type$ arg)
     {
-     //Wrapping of data is performed
+
             JsonObject obj = new JsonObject();
              $CS.allStructFields:{field | 
                obj.addProperty("$field.name$",arg.get$field.name$());}$
@@ -54,7 +53,7 @@ public class  Logic$CS.name$ extends $CS.name$  {
     $CS.allDataAccess:{ dataAccess |     
       public void onNew$dataAccess.dataAccessName; format="capital"$Received( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}$ arg)
       {     
-        //TODO : write code here        
+        
       }     
   }$
     

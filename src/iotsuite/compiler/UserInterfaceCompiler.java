@@ -11,7 +11,6 @@ import iotsuite.semanticmodel.DataAccess;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.StructField;
 import iotsuite.semanticmodel.UserInterface;
-import iotsuite.semanticmodel.Information;
 import iotsuite.semanticmodel.Parameter;
 
 import java.util.ArrayList;
@@ -26,16 +25,13 @@ public class UserInterfaceCompiler {
 	private Set<Command> commands = new HashSet<Command>();
 	private Parameter actionParameter;
 	private Parameter commandParameter;
-	private Set<Information> generatedInfo = new HashSet<Information>();
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private String GUIName;
 	private String struct;
 	public static List<StructField> StructFieldSetForGUI = new ArrayList<StructField>();
 	public static List<StructField> StructFieldSetForGUINotify = new ArrayList<StructField>();
-	public static List<String> notifyMeasurement = new ArrayList<String>();
-	public static List<String> notifyStructName = new ArrayList<String>();
-
-	// private Widget widget;
+	private List<String> notifyMeasurement = new ArrayList<String>();
+	private List<String> notifyStructName = new ArrayList<String>();
 
 	public UserInterfaceCompiler() {
 
@@ -86,24 +82,15 @@ public class UserInterfaceCompiler {
 
 	public void setNotifyParameter(String notifyStructName) {
 
-		// this.notifyMeasurement.add(notifyMeasurement);
+		
 		this.notifyStructName.add(notifyStructName);
 		iotsuite.parser.SymbolTable
 				.searchStructFieldNameForNotifyGUI(notifyStructName);
-		// System.out.println("Notify Measurement "+notifyMeasurement+
-		// "notify Struct name is "+notifyStructName);
+		
 	}
 
 	public void createGUIObject() {
-		/*
-		 * guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
-		 * getActionList(), getCommandList(), getAttributeSet(), generatedInfo,
-		 * null, getDataAccessList(), getRequestType(), getReqWidget());
-		 */
-
-		// guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
-		// getActionList(), getCommandList(), generatedInfo, null,
-		// getDataAccessList(), getRequestType(), getReqWidget());
+		
 
 		guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
 				null, getCommandList(), null, null, getDataAccessList(), null,
@@ -143,17 +130,13 @@ public class UserInterfaceCompiler {
 										// Interface of GUI.
 				generateAndroidGUIFactory();
 				generateAndroidGUIImpl();
-				// generateAndroidGUIMainActivity();
+	
 
 			}
-			// generateGUILayout();
-			// generateGUIManifest();
+	
 		}
 
-		/*
-		 * if (GlobalVariable.activity.equals("generateMapping")) {
-		 * generateGUILayout(); // generateGUIManifest(); }
-		 */
+	
 	}
 
 	public void generateAndroidGUI() {
@@ -183,20 +166,7 @@ public class UserInterfaceCompiler {
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
-
-	// For Main Activity for AndroidGUI
-	/*
-	 * private void generateAndroidGUIMainActivity() {
-	 * 
-	 * JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-	 * CompilationUnit generatedCU = generatedGUIDriver
-	 * .generateAndroidUserInterfaceMainActivity(guiDriver); SourceFileDumper
-	 * dumpGeneratedGUIDriver = new SourceFileDumper();
-	 * dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
-	 * 
-	 * }
-	 */
-
+	
 	private void generateAndroidGUIImpl() {
 
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
@@ -241,25 +211,6 @@ public class UserInterfaceCompiler {
 
 	}
 
-	/*
-	 * private void generateGUILayout() { JavaFrameworkFromST generatedGUIDriver
-	 * = new JavaFrameworkFromST(); CompilationUnit generatedCU =
-	 * generatedGUIDriver .generateAndroidUserInterfaceLayout(guiDriver);
-	 * SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
-	 * dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
-	 * 
-	 * }
-	 */
-
-	/*
-	 * private void generateGUIManifest() { JavaFrameworkFromST
-	 * generatedGUIDriver = new JavaFrameworkFromST(); CompilationUnit
-	 * generatedCU = generatedGUIDriver.buildGUIManifest(guiDriver);
-	 * SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
-	 * dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
-	 * 
-	 * }
-	 */
 
 	public String getDatafromSymblTable(String variableName) {
 		return SymbolTable.getSymblTableData(variableName);
@@ -284,15 +235,7 @@ public class UserInterfaceCompiler {
 
 		return struct;
 	}
-
-	// Getter and Setter of Command
-
-	/*
-	 * public void addCommand(String actionName, Widget widget) { Command
-	 * command = new Command(actionName, getCommandParameter(), widget);
-	 * commands.add(command); }
-	 */
-
+	
 	public void addCommand(String actionName) {
 		Command command = new Command(actionName, getCommandParameter(), null);
 		commands.add(command);
@@ -330,29 +273,5 @@ public class UserInterfaceCompiler {
 		actions.add(action);
 	}
 
-	/*
-	 * private Set<Action> getActionList() { return actions; }
-	 */
-
-	// Getter and Setter of Attribute
-
-	/*
-	 * private Set<Attribute> attributeSet = new HashSet<Attribute>();
-	 * 
-	 * public void addAttribute(String fieldName, String fieldType) { Attribute
-	 * attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
-	 * attributeSet.add(attribute); }
-	 * 
-	 * public Set<Attribute> getAttributeSet() { return attributeSet; }
-	 */
-
-	/*
-	 * public void setReqWidget(String textbox, String button, String textview)
-	 * { widget = new Widget(textbox, button, textview); }
-	 * 
-	 * public Widget getReqWidget() {
-	 * 
-	 * return widget; }
-	 */
-
+	
 }

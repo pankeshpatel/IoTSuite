@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-10-28 17:22:26
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-11-03 11:28:49
 
 package iotsuite.parser;
 import iotsuite.compiler.*; 
@@ -50,7 +50,7 @@ public class NetworkSpecParser extends Parser {
 	}
 
 	@Override public String[] getTokenNames() { return NetworkSpecParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g"; }
+	@Override public String getGrammarFileName() { return "C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g"; }
 
 
 	  //Initialize the context
@@ -59,17 +59,17 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "networkspec"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:23:1: networkspec : 'devices' ':' ( device_def )* ;
+	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:23:1: networkspec : 'devices' ':' ( device_def )* ;
 	public final void networkspec() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:23:12: ( 'devices' ':' ( device_def )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:24:7: 'devices' ':' ( device_def )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:23:12: ( 'devices' ':' ( device_def )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:24:7: 'devices' ':' ( device_def )*
 			{
 			match(input,14,FOLLOW_14_in_networkspec58); 
 			match(input,10,FOLLOW_10_in_networkspec60); 
 			 context = new SymbolTable();
 			      
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:27:8: ( device_def )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:27:8: ( device_def )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -80,7 +80,7 @@ public class NetworkSpecParser extends Parser {
 
 				switch (alt1) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:27:9: device_def
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:27:9: device_def
 					{
 					pushFollow(FOLLOW_device_def_in_networkspec78);
 					device_def();
@@ -110,13 +110,13 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "device_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:30:1: device_def : deviceName= ( ID | CAPITALIZED_ID ) ':' 'location' ':' ( location_def )* 'platform' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';' 'description' ':' ( description_def )* ';' ( 'database' ':' database_def ';' )* ;
+	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:30:1: device_def : deviceName= ( ID | CAPITALIZED_ID ) ':' 'location' ':' ( location_def )* 'platform' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';' 'description' ':' ( description_def )* ';' ( 'database' ':' database_def ';' )* ;
 	public final void device_def() throws RecognitionException {
 		Token deviceName=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:30:11: (deviceName= ( ID | CAPITALIZED_ID ) ':' 'location' ':' ( location_def )* 'platform' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';' 'description' ':' ( description_def )* ';' ( 'database' ':' database_def ';' )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:31:4: deviceName= ( ID | CAPITALIZED_ID ) ':' 'location' ':' ( location_def )* 'platform' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';' 'description' ':' ( description_def )* ';' ( 'database' ':' database_def ';' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:30:11: (deviceName= ( ID | CAPITALIZED_ID ) ':' 'location' ':' ( location_def )* 'platform' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';' 'description' ':' ( description_def )* ';' ( 'database' ':' database_def ';' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:31:4: deviceName= ( ID | CAPITALIZED_ID ) ':' 'location' ':' ( location_def )* 'platform' ':' ( device_type )* ';' 'resources' ':' ( abilities_def )? ';' 'protocol' ':' ( protocol_value )* ';' 'description' ':' ( description_def )* ';' ( 'database' ':' database_def ';' )*
 			{
 			deviceName=input.LT(1);
 			if ( input.LA(1)==CAPITALIZED_ID||input.LA(1)==ID ) {
@@ -134,7 +134,7 @@ public class NetworkSpecParser extends Parser {
 			   
 			match(input,15,FOLLOW_15_in_device_def129); 
 			match(input,10,FOLLOW_10_in_device_def131); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:36:20: ( location_def )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:36:20: ( location_def )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -145,7 +145,7 @@ public class NetworkSpecParser extends Parser {
 
 				switch (alt2) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:36:21: location_def
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:36:21: location_def
 					{
 					pushFollow(FOLLOW_location_def_in_device_def134);
 					location_def();
@@ -161,7 +161,7 @@ public class NetworkSpecParser extends Parser {
 
 			match(input,16,FOLLOW_16_in_device_def143); 
 			match(input,10,FOLLOW_10_in_device_def145); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:37:20: ( device_type )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:37:20: ( device_type )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -172,7 +172,7 @@ public class NetworkSpecParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:37:21: device_type
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:37:21: device_type
 					{
 					pushFollow(FOLLOW_device_type_in_device_def148);
 					device_type();
@@ -189,7 +189,7 @@ public class NetworkSpecParser extends Parser {
 			match(input,11,FOLLOW_11_in_device_def152); 
 			match(input,18,FOLLOW_18_in_device_def159); 
 			match(input,10,FOLLOW_10_in_device_def161); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:38:21: ( abilities_def )?
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:38:21: ( abilities_def )?
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0==CAPITALIZED_ID) ) {
@@ -197,7 +197,7 @@ public class NetworkSpecParser extends Parser {
 			}
 			switch (alt4) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:38:22: abilities_def
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:38:22: abilities_def
 					{
 					pushFollow(FOLLOW_abilities_def_in_device_def164);
 					abilities_def();
@@ -211,7 +211,7 @@ public class NetworkSpecParser extends Parser {
 			match(input,11,FOLLOW_11_in_device_def169); 
 			match(input,17,FOLLOW_17_in_device_def175); 
 			match(input,10,FOLLOW_10_in_device_def177); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:39:20: ( protocol_value )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:39:20: ( protocol_value )*
 			loop5:
 			while (true) {
 				int alt5=2;
@@ -222,7 +222,7 @@ public class NetworkSpecParser extends Parser {
 
 				switch (alt5) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:39:21: protocol_value
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:39:21: protocol_value
 					{
 					pushFollow(FOLLOW_protocol_value_in_device_def180);
 					protocol_value();
@@ -239,7 +239,7 @@ public class NetworkSpecParser extends Parser {
 			match(input,11,FOLLOW_11_in_device_def184); 
 			match(input,13,FOLLOW_13_in_device_def196); 
 			match(input,10,FOLLOW_10_in_device_def198); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:40:25: ( description_def )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:40:25: ( description_def )*
 			loop6:
 			while (true) {
 				int alt6=2;
@@ -250,7 +250,7 @@ public class NetworkSpecParser extends Parser {
 
 				switch (alt6) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:40:26: description_def
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:40:26: description_def
 					{
 					pushFollow(FOLLOW_description_def_in_device_def202);
 					description_def();
@@ -265,7 +265,7 @@ public class NetworkSpecParser extends Parser {
 			}
 
 			match(input,11,FOLLOW_11_in_device_def206); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:41:6: ( 'database' ':' database_def ';' )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:41:6: ( 'database' ':' database_def ';' )*
 			loop7:
 			while (true) {
 				int alt7=2;
@@ -276,7 +276,7 @@ public class NetworkSpecParser extends Parser {
 
 				switch (alt7) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:41:7: 'database' ':' database_def ';'
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:41:7: 'database' ':' database_def ';'
 					{
 					match(input,12,FOLLOW_12_in_device_def214); 
 					match(input,10,FOLLOW_10_in_device_def216); 
@@ -310,14 +310,14 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "location_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:45:1: location_def : CAPITALIZED_ID ':' ID ';' ;
+	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:45:1: location_def : CAPITALIZED_ID ':' ID ';' ;
 	public final void location_def() throws RecognitionException {
 		Token CAPITALIZED_ID1=null;
 		Token ID2=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:45:14: ( CAPITALIZED_ID ':' ID ';' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:46:5: CAPITALIZED_ID ':' ID ';'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:45:14: ( CAPITALIZED_ID ':' ID ';' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:46:5: CAPITALIZED_ID ':' ID ';'
 			{
 			CAPITALIZED_ID1=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_location_def245); 
 			match(input,10,FOLLOW_10_in_location_def247); 
@@ -341,13 +341,13 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "device_type"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:52:1: device_type : CAPITALIZED_ID ;
+	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:52:1: device_type : CAPITALIZED_ID ;
 	public final void device_type() throws RecognitionException {
 		Token CAPITALIZED_ID3=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:52:13: ( CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:53:6: CAPITALIZED_ID
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:52:13: ( CAPITALIZED_ID )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:53:6: CAPITALIZED_ID
 			{
 			CAPITALIZED_ID3=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_device_type278); 
 			context.currentNetwork.setDeviceType((CAPITALIZED_ID3!=null?CAPITALIZED_ID3.getText():null));
@@ -367,16 +367,16 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "abilities_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:57:1: abilities_def : CAPITALIZED_ID ( ',' abilities_def )? ;
+	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:57:1: abilities_def : CAPITALIZED_ID ( ',' abilities_def )? ;
 	public final void abilities_def() throws RecognitionException {
 		Token CAPITALIZED_ID4=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:57:15: ( CAPITALIZED_ID ( ',' abilities_def )? )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:58:4: CAPITALIZED_ID ( ',' abilities_def )?
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:57:15: ( CAPITALIZED_ID ( ',' abilities_def )? )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:58:4: CAPITALIZED_ID ( ',' abilities_def )?
 			{
 			CAPITALIZED_ID4=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_abilities_def297); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:58:19: ( ',' abilities_def )?
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:58:19: ( ',' abilities_def )?
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0==9) ) {
@@ -384,7 +384,7 @@ public class NetworkSpecParser extends Parser {
 			}
 			switch (alt8) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:58:20: ',' abilities_def
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:58:20: ',' abilities_def
 					{
 					match(input,9,FOLLOW_9_in_abilities_def300); 
 					pushFollow(FOLLOW_abilities_def_in_abilities_def302);
@@ -414,13 +414,13 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "protocol_value"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:63:1: protocol_value : ID ;
+	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:63:1: protocol_value : ID ;
 	public final void protocol_value() throws RecognitionException {
 		Token ID5=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:63:15: ( ID )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:64:3: ID
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:63:15: ( ID )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:64:3: ID
 			{
 			ID5=(Token)match(input,ID,FOLLOW_ID_in_protocol_value319); 
 			context.currentNetwork.setProtocol((ID5!=null?ID5.getText():null));
@@ -440,13 +440,13 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "description_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:68:1: description_def : DESCRIPTION_ID ;
+	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:68:1: description_def : DESCRIPTION_ID ;
 	public final void description_def() throws RecognitionException {
 		Token DESCRIPTION_ID6=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:68:16: ( DESCRIPTION_ID )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:69:4: DESCRIPTION_ID
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:68:16: ( DESCRIPTION_ID )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:69:4: DESCRIPTION_ID
 			{
 			DESCRIPTION_ID6=(Token)match(input,DESCRIPTION_ID,FOLLOW_DESCRIPTION_ID_in_description_def338); 
 			context.currentNetwork.setDeviceDescription((DESCRIPTION_ID6!=null?DESCRIPTION_ID6.getText():null));
@@ -466,13 +466,13 @@ public class NetworkSpecParser extends Parser {
 
 
 	// $ANTLR start "database_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:73:1: database_def : CAPITALIZED_ID ;
+	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:73:1: database_def : CAPITALIZED_ID ;
 	public final void database_def() throws RecognitionException {
 		Token CAPITALIZED_ID7=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:73:13: ( CAPITALIZED_ID )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:74:1: CAPITALIZED_ID
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:73:13: ( CAPITALIZED_ID )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:74:1: CAPITALIZED_ID
 			{
 			CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_database_def354); 
 			context.currentNetwork.setDatabase((CAPITALIZED_ID7!=null?CAPITALIZED_ID7.getText():null));
