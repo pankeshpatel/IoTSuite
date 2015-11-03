@@ -81,7 +81,7 @@ gui_command_def :
     { 
       context.currentGUI.addCommand($name.text);   
     } 
-;
+; 
 
 
 gui_command_parameter_def :

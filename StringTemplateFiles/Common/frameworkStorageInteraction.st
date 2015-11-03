@@ -23,29 +23,18 @@ public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
 	      $Storageservice.allDataAccess:{dataAccess|subscribe$dataAccess.dataAccessName; format="avoidCapital"$(); 
 	    }$ 
 	    }
-	
-
-  
-	$Storageservice.allDataAccess:{ dataAccess | 
-	
-  	
+	$Storageservice.allDataAccess:{ dataAccess |   	
 	
 	protected void set$dataAccess.dataAccessName; format="capital"$ 
-			($dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ) {
-		
-			myPubSubMiddleware.publish("$dataAccess.dataAccessName$", new$dataAccess.dataAccessName$Value, myDeviceInfo);
-		
-	}
-	
-	
+	($dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ){
+	myPubSubMiddleware.publish("$dataAccess.dataAccessName$", new$dataAccess.dataAccessName$Value, myDeviceInfo);
+	}	
 	    
 	public void notifyReceived(String eventName, Object arg, Device deviceInfo) {
 		try {
-
 			if (eventName.equals("get$dataAccess.dataAccessName$")) {
 				Logger.log(myDeviceInfo.getName(),"$Storageservice.name$",
 					"CommandReceived get$dataAccess.dataAccessName$");
-
 				onNew$dataAccess.dataAccessName$RequestReceived((String) arg);
 			}
 
@@ -57,13 +46,11 @@ public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
 	public abstract void onNew$dataAccess.dataAccessName$RequestReceived(String arg);
 	
 	public void subscribe$dataAccess.dataAccessName$() {
-
 		List<String> regionInfo = new ArrayList<String>();
-		regionInfo.add("*");
-					
+		regionInfo.add("*");					
 		this.myPubSubMiddleware.subscribe(this, "get$dataAccess.dataAccessName$",regionInfo);		
 	}	
-}$     		
+  }$     		
 	 public void run() {   }
 }
 

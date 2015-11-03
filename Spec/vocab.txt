@@ -5,6 +5,10 @@ structs:
     TempStruct
         tempValue : double;
         unitOfMeasurement : String;		   
+    ProfileStruct
+    	badgeID : String;
+    	tempValue: double;
+    	uniitOfMeasurement:String;       
 resources:
     sensors:
     	periodicsensors:
@@ -22,4 +26,5 @@ resources:
 			action SetTemp(setTemp:TempStruct);			
 	storages:       
         ProfileDB   
-            generate  profile: TempStruct accessed-by badgeID: String;
+            generate profile: TempStruct accessed-by badgeID: String;
+            action InsertProfileData(profileData:ProfileStruct);
