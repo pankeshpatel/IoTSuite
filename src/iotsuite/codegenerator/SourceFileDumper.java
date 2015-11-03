@@ -61,25 +61,7 @@ public class SourceFileDumper {
 			generateCodeForArchitectureFrameworkActivity(template,
 					"ApplicationLogic", null);
 		}
-
-		// For JavaSE
-
-		/*
-		 * if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
-		 * generateCodeForArchitectureFrameworkActivity(template,
-		 * GlobalVariable.deviceJAVASEType, null);
-		 * 
-		 * }
-		 * 
-		 * // For Android if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
-		 * generateCodeForArchitectureFrameworkActivity(template,
-		 * GlobalVariable.deviceAndroidType, null); }
-		 */
-
-		/*
-		 * The following part of the code is evaluated true, when activity =
-		 * "mapping"
-		 */
+		
 
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
@@ -98,21 +80,14 @@ public class SourceFileDumper {
 		}
 	}
 
-	/*
-	 * The following function will generate for (1) factory, (2) deviceImp, (3)
-	 * Logic, and (4) framework.
-	 */
+	
 
 	private void generateCodeForJavaSEDeviceDriverActivity(
 			CompilationUnit unit, String deviceType, String str) {
 
 		String content = unit.getStringTemplateName();
 
-		/*
-		 * The following if...condition code generates programming framework for
-		 * "logic" package Logic files for Sensor, Actuator, Storage.
-		 */
-
+	
 		if (unit.getFileCategory().equals("JavaSELogic")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -152,12 +127,7 @@ public class SourceFileDumper {
 					+ GlobalVariable.logicDirPath + "/"
 					+ unit.getFileNameToGenerate());
 		}
-
-		/*
-		 * The following if...condition code generates programming framework for
-		 * "factory" package Factory files for Sensor, Actuator, Storage.
-		 */
-
+	
 		else if (unit.getFileCategory().equals("JavaSEFactory")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -260,11 +230,7 @@ public class SourceFileDumper {
 			CompilationUnit unit, String deviceType, String str) {
 		String content = unit.getStringTemplateName();
 
-		/*
-		 * The following if...condition code generates programming framework for
-		 * "logic" package Logic files for Sensor, Actuator, Storage.
-		 */
-
+		
 		if (unit.getFileCategory().equals("AndroidLogic")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -373,14 +339,7 @@ public class SourceFileDumper {
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
-		}
-
-		/*
-		 * The following if...condition code generates programming framework for
-		 * "framework" package Framework files for Sensor, Actuator, Storage. -
-		 * Interaction - Data Structure - Interface - Listener
-		 */
-
+		}		
 		else {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -409,15 +368,7 @@ public class SourceFileDumper {
 	private void generateCodeForArchitectureFrameworkActivity(
 			CompilationUnit unit, String deviceType, String str) {
 
-		// return new CompilationUnit(computationalService.getName() + "Factory"
-		// + ".java", templateOfComputationalService, "JavaSEFactory" ,
-		// "Computational", computationalService);
-
-		// Name of file, templateType, Name , Name based on package Name , ,
-		// functionargument)
-		// fileNameToGenerate, stringTemplateName , fileCategory, objectName ,
-		// objClass
-
+		
 		String content = unit.getStringTemplateName();
 
 		if (unit.getFileCategory().equals("Logic")) {
@@ -439,14 +390,7 @@ public class SourceFileDumper {
 					+ GlobalVariable.factoryDirPath + "/"
 					+ unit.getFileNameToGenerate());
 
-			/*
-			 * new File(GlobalVariable.templatePath + deviceType +
-			 * "DeviceDrivers" + GlobalVariable.outputDirPath +
-			 * GlobalVariable.factoryDirPath).mkdirs(); file = new
-			 * File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" +
-			 * GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath +
-			 * "/" + unit.getFileNameToGenerate());
-			 */
+		
 		}
 
 		// Generate code in deviceImpl for ApplicationLogic
@@ -460,18 +404,10 @@ public class SourceFileDumper {
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
 
-			/*
-			 * new File(GlobalVariable.templatePath + deviceType +
-			 * "DeviceDrivers" + GlobalVariable.outputDirPath +
-			 * GlobalVariable.deviceImplDirPath).mkdirs(); file = new
-			 * File(GlobalVariable.templatePath + deviceType + "DeviceDrivers" +
-			 * GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath +
-			 * "/" + unit.getFileNameToGenerate());
-			 */
+		
 		} else {
 
-			// I think this else part generate code into framework repository.
-			// So, you do not need to write "else if" for the Interaction.
+		
 			new File(GlobalVariable.templatePath + "ApplicationLogic"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.frameworkDirPath).mkdirs();

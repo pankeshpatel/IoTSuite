@@ -1,10 +1,8 @@
 package iotsuite.codegenerator;
 
-//import static org.junit.Assert.assertEquals;
 
 import org.antlr.stringtemplate.AttributeRenderer;
 
-//import org.junit.Test;
 
 public class MyAttributeRenderer implements AttributeRenderer {
 

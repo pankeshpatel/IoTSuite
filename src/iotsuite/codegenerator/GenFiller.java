@@ -15,12 +15,9 @@ public class GenFiller {
 
 		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/"
 				+ "DeviceDrivers");
-		// Directory path, where the template is placed.em
 
 		File destFolder = new File(GlobalVariable.templatePath
 				+ "DeviceDrivers");
-		// Directory where the development activity is performed
-
 		copyFiles(srcFolder, destFolder);
 
 	}
@@ -78,9 +75,6 @@ public class GenFiller {
 				System.exit(0);
 			}
 		}
-
-		// System.out.println("Done");
-
 	}
 
 	public static void copyFolder(File src, File dest) throws IOException {
@@ -90,8 +84,6 @@ public class GenFiller {
 			// if directory not exists, create it
 			if (!dest.exists()) {
 				dest.mkdir();
-				// System.out.println("Directory copied from "
-				// + src + "  to " + dest);
 			}
 
 			// list all the directory contents
@@ -121,7 +113,7 @@ public class GenFiller {
 
 			in.close();
 			out.close();
-			// System.out.println("File copied from " + src + " to " + dest);
+
 		}
 	}
 

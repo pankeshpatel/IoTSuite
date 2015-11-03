@@ -9,10 +9,9 @@ public class CompilationUnit {
 	private final String fileNameToGenerate;
 	private final StringTemplate stringTemplateName;
 	private final String fileCategory;
-	// FileCategory =>
-	// InteractionType/ApplicationLogic/FactoryType/DeviceDriver/Listner/Interface
+	
 	private final String objectName;
-	private Object objClass; // SensorDriver/ActuatorDriver/StorageService/GuiDriver
+	private Object objClass; 
 
 	public CompilationUnit(String fileNameToGenerate, StringTemplate template,
 			String type, String objectName, Object obj) {

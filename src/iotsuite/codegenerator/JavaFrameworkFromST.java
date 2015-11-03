@@ -64,28 +64,7 @@ public class JavaFrameworkFromST {
 				+ ".java", templateOfComputationalService, "JavaSEFactory",
 				"Computational", computationalService);
 
-		// Name of file, templateType, Name , Name based on package Name , ,
-		// functionargument)
-
-		// fileNameToGenerate, stringTemplateName , fileCategory, objectName ,
-		// objClass
-
-		/*
-		 * return new CompilationUnit( sensorDriver.getName() + "Factory" +
-		 * ".java", templateOfSensorDriver, "JavaSEFactory", "Sensor",
-		 * sensorDriver);
-		 */
-
-		/*
-		 * return new CompilationUnit(computationalService.getName() + "Factory"
-		 * + ".java", templateOfComputationalService,
-		 * "JavaSEComputationalFactoryImpl", "Future", computationalService);
-		 */
-
-		/*
-		 * return new CompilationUnit("I" + guiDriver.getName() + ".java",
-		 * templateOfGUIDriver, "Interface", "gui", guiDriver);
-		 */
+		
 	}
 
 	// For Interface
@@ -120,24 +99,7 @@ public class JavaFrameworkFromST {
 				+ ".java", templateOfComputationalService, "Listener",
 				"Computational", infoConsumeInfo);
 
-		/*
-		 * 
-		 * 
-		 * public CompilationUnit generateSensorListener( SensorMeasurement
-		 * sensorMeasurement) { StringTemplate templateOfSensorDriver = group
-		 * .getInstanceOf("Common/listenerSensor");
-		 * templateOfSensorDriver.setAttribute("SensorDriver",
-		 * sensorMeasurement); return new CompilationUnit("Listener" +
-		 * sensorMeasurement.getName() + ".java", templateOfSensorDriver,
-		 * "Listener", "sensor", sensorMeasurement); }
-		 * 
-		 * return new CompilationUnit("Listener" + guiDriver.getName() +
-		 * ".java", templateOfGUIDriver, "Listener", "gui", guiDriver);
-		 * 
-		 * return new CompilationUnit("Listener" + sensorMeasurement.getName() +
-		 * ".java", templateOfSensorDriver, "Listener", "sensor",
-		 * sensorMeasurement);
-		 */
+		
 
 	}
 
@@ -405,20 +367,7 @@ public class JavaFrameworkFromST {
 				"actuator", storageService);
 	}
 
-	// Android Main Activity UI
-	/*
-	 * public CompilationUnit generateAndroidUserInterfaceMainActivity(
-	 * UserInterface guiDriver) { StringTemplate templateOfGUIDriver = group
-	 * .getInstanceOf("Android/executionGuiAndroid");
-	 * templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-	 * 
-	 * templateOfGUIDriver.registerRenderer(String.class, new
-	 * MyAttributeRenderer());
-	 * 
-	 * return new CompilationUnit("MainActivityUI" + ".java",
-	 * templateOfGUIDriver, "AndroidMainActivity", "java", guiDriver); }
-	 */
-
+	
 	// Android User interface
 	public CompilationUnit generateAndroidUserInterfaceImpl(
 			UserInterface guiDriver) {
@@ -815,36 +764,5 @@ public class JavaFrameworkFromST {
 
 		return null;
 	}
-
-	// Un-used the following code right now. It may be useful in future design
-
-	/*
-	 * public CompilationUnit buildAbstractClassOFRegion(Region region, String
-	 * className) {
-	 * 
-	 * StringTemplate templateOfStructure = group.getInstanceOf(className);
-	 * templateOfStructure.setAttribute("region", region); return new
-	 * CompilationUnit(className + ".java", templateOfStructure, "Region",
-	 * "Future", region); }
-	 * 
-	 * 
-	 * public CompilationUnit buildGUIManifest(GUIDriver guiDriver) {
-	 * 
-	 * StringTemplate templateOfGUIDriver = group.getInstanceOf("guiManifest");
-	 * templateOfGUIDriver.setAttribute("GUIdriver", guiDriver); return new
-	 * CompilationUnit("AndroidManifest.xml", templateOfGUIDriver, "androidgui",
-	 * "manifest", guiDriver); }
-	 */
-
-	// Android gui layout
-	/*
-	 * public CompilationUnit generateAndroidUserInterfaceLayout(UserInterface
-	 * guiDriver) {
-	 * 
-	 * StringTemplate templateOfGUIDriver = group.getInstanceOf("guilayout");
-	 * templateOfGUIDriver.setAttribute("GUIdriver", guiDriver); return new
-	 * CompilationUnit(guiDriver.getName().toLowerCase() + "layout" + ".xml",
-	 * templateOfGUIDriver, "androidgui", "layout", guiDriver); }
-	 */
-
+	
 }
