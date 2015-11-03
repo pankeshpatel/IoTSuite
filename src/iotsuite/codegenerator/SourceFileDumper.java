@@ -61,7 +61,6 @@ public class SourceFileDumper {
 			generateCodeForArchitectureFrameworkActivity(template,
 					"ApplicationLogic", null);
 		}
-		
 
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
@@ -80,14 +79,11 @@ public class SourceFileDumper {
 		}
 	}
 
-	
-
 	private void generateCodeForJavaSEDeviceDriverActivity(
 			CompilationUnit unit, String deviceType, String str) {
 
 		String content = unit.getStringTemplateName();
 
-	
 		if (unit.getFileCategory().equals("JavaSELogic")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -127,7 +123,7 @@ public class SourceFileDumper {
 					+ GlobalVariable.logicDirPath + "/"
 					+ unit.getFileNameToGenerate());
 		}
-	
+
 		else if (unit.getFileCategory().equals("JavaSEFactory")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -230,7 +226,6 @@ public class SourceFileDumper {
 			CompilationUnit unit, String deviceType, String str) {
 		String content = unit.getStringTemplateName();
 
-		
 		if (unit.getFileCategory().equals("AndroidLogic")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -339,8 +334,7 @@ public class SourceFileDumper {
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
-		}		
-		else {
+		} else {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.frameworkDirPath).mkdirs();
@@ -368,7 +362,6 @@ public class SourceFileDumper {
 	private void generateCodeForArchitectureFrameworkActivity(
 			CompilationUnit unit, String deviceType, String str) {
 
-		
 		String content = unit.getStringTemplateName();
 
 		if (unit.getFileCategory().equals("Logic")) {
@@ -390,7 +383,6 @@ public class SourceFileDumper {
 					+ GlobalVariable.factoryDirPath + "/"
 					+ unit.getFileNameToGenerate());
 
-		
 		}
 
 		// Generate code in deviceImpl for ApplicationLogic
@@ -404,10 +396,8 @@ public class SourceFileDumper {
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
 
-		
 		} else {
 
-		
 			new File(GlobalVariable.templatePath + "ApplicationLogic"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.frameworkDirPath).mkdirs();

@@ -9,9 +9,9 @@ public class CompilationUnit {
 	private final String fileNameToGenerate;
 	private final StringTemplate stringTemplateName;
 	private final String fileCategory;
-	
+
 	private final String objectName;
-	private Object objClass; 
+	private Object objClass;
 
 	public CompilationUnit(String fileNameToGenerate, StringTemplate template,
 			String type, String objectName, Object obj) {

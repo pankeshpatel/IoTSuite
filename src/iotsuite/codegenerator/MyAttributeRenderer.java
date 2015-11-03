@@ -1,8 +1,6 @@
 package iotsuite.codegenerator;
 
-
 import org.antlr.stringtemplate.AttributeRenderer;
-
 
 public class MyAttributeRenderer implements AttributeRenderer {
 

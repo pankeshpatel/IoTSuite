@@ -18,22 +18,6 @@ public class Main {
 
 		if (GlobalVariable.DEVELOPMENT_METHODOLOGY) {
 
-			/*
-			 * GlobalVariable.vocabSpec = args[0]; GlobalVariable.archSpec =
-			 * args[1]; GlobalVariable.deploymentSpec = args[2];
-			 * GlobalVariable.stringTemplatePath = args[3];
-			 * GlobalVariable.activity = args[4]; GlobalVariable.templatePath =
-			 * args[5];
-			 */
-
-			/*
-			 * The following code generates code in the following sequence and
-			 * corresponding invoked Java class (1) Region => RegionCompiler (2)
-			 * Structure => StructCompiler (3) Sensor => SensorCompiler (4)
-			 * Actuator => ActuatorCompiler (5) Storage, => StorageCompiler (6)
-			 * User Interface => UserInterfaceCompiler // for future extension
-			 */
-
 			GlobalVariable.activity = args[0];
 			GlobalVariable.templatePath = args[1];
 
@@ -47,18 +31,6 @@ public class Main {
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
 
-				// User Interaction
-
-				/*
-				 * ANTLRFileStream interactionStream = new
-				 * ANTLRFileStream(GlobalVariable.interactionSpec);
-				 * InteractionSpecLexer interactionLexer = new
-				 * InteractionSpecLexer(interactionStream); CommonTokenStream
-				 * interactionTokens = new CommonTokenStream(interactionLexer);
-				 * InteractionSpecParser interactionParser = new
-				 * InteractionSpecParser(interactionTokens);
-				 * interactionParser.interactionSpec();
-				 */
 				GenFiller.copyDeviceDrivers();
 
 			}
@@ -72,14 +44,6 @@ public class Main {
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
-
-				/*
-				 * ANTLRFileStream archStream = new ANTLRFileStream(
-				 * GlobalVariable.archSpec); ArchSpecLexer archLexer = new
-				 * ArchSpecLexer(archStream); CommonTokenStream archTokens = new
-				 * CommonTokenStream(archLexer); ArchSpecParser archParser = new
-				 * ArchSpecParser(archTokens); archParser.archSpec();
-				 */
 
 				ANTLRFileStream interactionStream = new ANTLRFileStream(
 						GlobalVariable.interactionSpec);
@@ -143,16 +107,6 @@ public class Main {
 				ArchSpecParser archParser = new ArchSpecParser(archTokens);
 				archParser.archSpec();
 
-				/*
-				 * ANTLRFileStream interactionStream = new ANTLRFileStream(
-				 * GlobalVariable.interactionSpec); InteractionSpecLexer
-				 * interactionLexer = new InteractionSpecLexer(
-				 * interactionStream); CommonTokenStream interactionTokens = new
-				 * CommonTokenStream( interactionLexer); InteractionSpecParser
-				 * interactionParser = new InteractionSpecParser(
-				 * interactionTokens); interactionParser.interactionSpec();
-				 */
-
 				List<Device> deviceList;
 				List<DeploymentScope> mappingConstraintList;
 
@@ -177,22 +131,7 @@ public class Main {
 				// GenFiller.copyMapping();
 
 			}
-
-			/*
-			 * if (GlobalVariable.activity
-			 * .equals(GlobalVariable.ACTIVITY_GENERATE_LINKING)) {
-			 * 
-			 * LinkerCompiler.linkerAlgo(); GenFiller.copyLinking(); }
-			 */
-
 		} else {
-
-			// GlobalVariable.vocabSpec = args[0];
-			// GlobalVariable.archSpec = args[1];
-			// GlobalVariable.deploymentSpec = args[2];
-			// GlobalVariable.stringTemplatePath = args[3];
-			// GlobalVariable.templatePath = args[4];
-			// GlobalVariable.frameworkRootDir = GlobalVariable.templatePath;
 
 			List<Device> deviceList;
 			List<DeploymentScope> mappingConstraintList;
@@ -227,17 +166,6 @@ public class Main {
 					mappingConstraintList);
 
 		}
-
 	}
-
-	/*
-	 * public void linker() { if (GlobalVariable.activity
-	 * .equals(GlobalVariable.ACTIVITY_GENERATE_LINKING)) {
-	 * 
-	 * System.out.println("I am in Linker"); LinkerCompiler.linkerAlgo();
-	 * GenFiller.copyLinking();
-	 * 
-	 * } }
-	 */
 
 }

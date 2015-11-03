@@ -44,8 +44,6 @@ public class MappingAlgoCompiler {
 
 		}
 
-	
-
 		for (int i = 0; i < tempDeviceList.size(); i++) {
 
 			if (tempDeviceList.get(i).getAbilities().isEmpty()) {
@@ -60,10 +58,8 @@ public class MappingAlgoCompiler {
 						.getAbilities());
 			}
 
-		}	
+		}
 		return finalMapping;
 	}
-
-	
 
 }

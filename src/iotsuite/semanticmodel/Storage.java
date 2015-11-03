@@ -14,7 +14,7 @@ public class Storage extends SoftwareComponent {
 	public List<String> fieldName = new ArrayList<String>();
 	public List<String> structFieldName = new ArrayList<String>();
 	public List<StructField> structField = new ArrayList<StructField>();
-	
+
 	public String databaseName = "iotsuiteuser";
 
 	public String id;
@@ -57,6 +57,7 @@ public class Storage extends SoftwareComponent {
 		allStructFields.addAll(getstructField());
 		return allStructFields;
 	}
+
 	public List<StructField> getstructField() {
 		return structField;
 	}

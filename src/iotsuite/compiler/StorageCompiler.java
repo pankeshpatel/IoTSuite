@@ -34,8 +34,8 @@ public class StorageCompiler {
 	// Store Field Name ex-tempValue,unitOfMeasurement
 	private List<String> fieldName = new ArrayList<String>();
 	private List<String> structFieldName = new ArrayList<String>();
-	private  List<StructField> structField = new ArrayList<StructField>();
-	
+	private List<StructField> structField = new ArrayList<StructField>();
+
 	// Static Table used for Mapping from high level specification datatype to
 	// SQL datatype
 	HashMap<String, String> SQLtype = new HashMap<String, String>();

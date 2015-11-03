@@ -82,15 +82,13 @@ public class UserInterfaceCompiler {
 
 	public void setNotifyParameter(String notifyStructName) {
 
-		
 		this.notifyStructName.add(notifyStructName);
 		iotsuite.parser.SymbolTable
 				.searchStructFieldNameForNotifyGUI(notifyStructName);
-		
+
 	}
 
 	public void createGUIObject() {
-		
 
 		guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
 				null, getCommandList(), null, null, getDataAccessList(), null,
@@ -130,13 +128,11 @@ public class UserInterfaceCompiler {
 										// Interface of GUI.
 				generateAndroidGUIFactory();
 				generateAndroidGUIImpl();
-	
 
 			}
-	
+
 		}
 
-	
 	}
 
 	public void generateAndroidGUI() {
@@ -166,7 +162,7 @@ public class UserInterfaceCompiler {
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
-	
+
 	private void generateAndroidGUIImpl() {
 
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
@@ -211,7 +207,6 @@ public class UserInterfaceCompiler {
 
 	}
 
-
 	public String getDatafromSymblTable(String variableName) {
 		return SymbolTable.getSymblTableData(variableName);
 	}
@@ -235,7 +230,7 @@ public class UserInterfaceCompiler {
 
 		return struct;
 	}
-	
+
 	public void addCommand(String actionName) {
 		Command command = new Command(actionName, getCommandParameter(), null);
 		commands.add(command);
@@ -273,5 +268,4 @@ public class UserInterfaceCompiler {
 		actions.add(action);
 	}
 
-	
 }

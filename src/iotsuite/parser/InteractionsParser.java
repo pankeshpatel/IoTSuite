@@ -111,8 +111,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt1) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:30:10:
-					// region_def
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:30:10:
+						// region_def
 					{
 						pushFollow(FOLLOW_region_def_in_vocabSpec83);
 						region_def();
@@ -129,7 +129,7 @@ public class InteractionsParser extends Parser {
 						throw eee;
 					}
 					cnt1++;
-				}  
+				}
 
 				match(input, 33, FOLLOW_33_in_vocabSpec104);
 				match(input, 11, FOLLOW_11_in_vocabSpec106);
@@ -145,8 +145,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt2) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:32:20:
-					// struct_def
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:32:20:
+						// struct_def
 					{
 						pushFollow(FOLLOW_struct_def_in_vocabSpec109);
 						struct_def();
@@ -205,8 +205,6 @@ public class InteractionsParser extends Parser {
 
 				match(input, 12, FOLLOW_12_in_region_def164);
 
-				
-
 			}
 
 		} catch (RecognitionException re) {
@@ -247,8 +245,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt3) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:58:6:
-					// structField_def ';'
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:58:6:
+						// structField_def ';'
 					{
 						pushFollow(FOLLOW_structField_def_in_struct_def203);
 						structField_def();
@@ -346,8 +344,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt4) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:70:20:
-					// sensor_def
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:70:20:
+						// sensor_def
 					{
 						pushFollow(FOLLOW_sensor_def_in_abilities_def261);
 						sensor_def();
@@ -380,8 +378,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt5) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:71:20:
-					// actuator_def
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:71:20:
+						// actuator_def
 					{
 						pushFollow(FOLLOW_actuator_def_in_abilities_def272);
 						actuator_def();
@@ -411,8 +409,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt6) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:72:4:
-					// 'storages' ':' ss_def
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:72:4:
+						// 'storages' ':' ss_def
 					{
 						match(input, 32, FOLLOW_32_in_abilities_def279);
 						match(input, 11, FOLLOW_11_in_abilities_def282);
@@ -439,8 +437,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt8) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:73:4:
-					// 'interactions' ':' ( gui_def )+
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:73:4:
+						// 'interactions' ':' ( gui_def )+
 					{
 						match(input, 26, FOLLOW_26_in_abilities_def291);
 						match(input, 11, FOLLOW_11_in_abilities_def293);
@@ -456,8 +454,8 @@ public class InteractionsParser extends Parser {
 
 							switch (alt7) {
 							case 1:
-							// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:73:24:
-							// gui_def
+								// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:73:24:
+								// gui_def
 							{
 								pushFollow(FOLLOW_gui_def_in_abilities_def296);
 								gui_def();
@@ -524,8 +522,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt9) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:83:6:
-					// sensorMeasurement_def ';'
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:83:6:
+						// sensorMeasurement_def ';'
 					{
 						pushFollow(FOLLOW_sensorMeasurement_def_in_sensor_def337);
 						sensorMeasurement_def();
@@ -627,8 +625,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt10) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:104:5:
-					// action_def ';'
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:104:5:
+						// action_def ';'
 					{
 						pushFollow(FOLLOW_action_def_in_actuator_def406);
 						action_def();
@@ -681,8 +679,8 @@ public class InteractionsParser extends Parser {
 				}
 				switch (alt11) {
 				case 1:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:110:34:
-				// parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:110:34:
+					// parameter_def
 				{
 					pushFollow(FOLLOW_parameter_def_in_action_def439);
 					parameter_def();
@@ -738,8 +736,8 @@ public class InteractionsParser extends Parser {
 				}
 				switch (alt12) {
 				case 1:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:115:32:
-				// ',' parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:115:32:
+					// ',' parameter_def
 				{
 					match(input, 10, FOLLOW_10_in_parameter_def471);
 					pushFollow(FOLLOW_parameter_def_in_parameter_def473);
@@ -803,8 +801,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt13) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:135:6:
-					// storageDataAccess_def ';'
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:135:6:
+						// storageDataAccess_def ';'
 					{
 						pushFollow(FOLLOW_storageDataAccess_def_in_ss_def517);
 						storageDataAccess_def();
@@ -1080,43 +1078,43 @@ public class InteractionsParser extends Parser {
 				}
 				switch (alt14) {
 				case 1:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:4:
-				// id= 'Integer'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:4:
+					// id= 'Integer'
 				{
 					id = (Token) match(input, 15, FOLLOW_15_in_primitiveType663);
 				}
 					break;
 				case 2:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:19:
-				// id= 'Boolean'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:19:
+					// id= 'Boolean'
 				{
 					id = (Token) match(input, 13, FOLLOW_13_in_primitiveType669);
 				}
 					break;
 				case 3:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:34:
-				// id= 'String'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:34:
+					// id= 'String'
 				{
 					id = (Token) match(input, 16, FOLLOW_16_in_primitiveType675);
 				}
 					break;
 				case 4:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:49:
-				// id= 'double'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:49:
+					// id= 'double'
 				{
 					id = (Token) match(input, 24, FOLLOW_24_in_primitiveType684);
 				}
 					break;
 				case 5:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:65:
-				// id= 'long'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:65:
+					// id= 'long'
 				{
 					id = (Token) match(input, 27, FOLLOW_27_in_primitiveType692);
 				}
 					break;
 				case 6:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:79:
-				// id= 'boolean'
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:188:79:
+					// id= 'boolean'
 				{
 					id = (Token) match(input, 22, FOLLOW_22_in_primitiveType698);
 				}
@@ -1164,8 +1162,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt15) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:214:5:
-					// gui_command_def ';'
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:214:5:
+						// gui_command_def ';'
 					{
 						pushFollow(FOLLOW_gui_command_def_in_gui_def861);
 						gui_command_def();
@@ -1191,8 +1189,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt16) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:215:5:
-					// gui_request_def ';'
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:215:5:
+						// gui_request_def ';'
 					{
 						pushFollow(FOLLOW_gui_request_def_in_gui_def874);
 						gui_request_def();
@@ -1252,8 +1250,8 @@ public class InteractionsParser extends Parser {
 				}
 				switch (alt17) {
 				case 1:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:222:43:
-				// gui_command_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:222:43:
+					// gui_command_parameter_def
 				{
 					pushFollow(FOLLOW_gui_command_parameter_def_in_gui_command_def915);
 					gui_command_parameter_def();
@@ -1306,8 +1304,8 @@ public class InteractionsParser extends Parser {
 				}
 				switch (alt18) {
 				case 1:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:230:12:
-				// ',' gui_command_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:230:12:
+					// ',' gui_command_parameter_def
 				{
 					match(input, 10, FOLLOW_10_in_gui_command_parameter_def945);
 					pushFollow(FOLLOW_gui_command_parameter_def_in_gui_command_parameter_def947);
@@ -1363,8 +1361,8 @@ public class InteractionsParser extends Parser {
 				}
 				switch (alt19) {
 				case 1:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:240:41:
-				// gui_action_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:240:41:
+					// gui_action_parameter_def
 				{
 					pushFollow(FOLLOW_gui_action_parameter_def_in_gui_action_def982);
 					gui_action_parameter_def();
@@ -1427,8 +1425,8 @@ public class InteractionsParser extends Parser {
 				}
 				switch (alt20) {
 				case 1:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:251:32:
-				// ',' gui_action_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:251:32:
+					// ',' gui_action_parameter_def
 				{
 					match(input, 10, FOLLOW_10_in_gui_action_parameter_def1028);
 					pushFollow(FOLLOW_gui_action_parameter_def_in_gui_action_parameter_def1030);
@@ -1593,8 +1591,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt21) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:317:6:
-					// 'TextView' textview_def ';'
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:317:6:
+						// 'TextView' textview_def ';'
 					{
 						match(input, 18, FOLLOW_18_in_widget_def1152);
 						pushFollow(FOLLOW_textview_def_in_widget_def1154);
@@ -1621,8 +1619,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt22) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:318:6:
-					// 'Button' button_def ';'
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:318:6:
+						// 'Button' button_def ';'
 					{
 						match(input, 14, FOLLOW_14_in_widget_def1165);
 						pushFollow(FOLLOW_button_def_in_widget_def1168);
@@ -1649,8 +1647,8 @@ public class InteractionsParser extends Parser {
 
 					switch (alt23) {
 					case 1:
-					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:319:6:
-					// 'TextBox' textbox_def ';'
+						// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:319:6:
+						// 'TextBox' textbox_def ';'
 					{
 						match(input, 17, FOLLOW_17_in_widget_def1179);
 						pushFollow(FOLLOW_textbox_def_in_widget_def1181);
@@ -1701,8 +1699,8 @@ public class InteractionsParser extends Parser {
 				}
 				switch (alt24) {
 				case 1:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:327:13:
-				// ',' textview_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:327:13:
+					// ',' textview_def
 				{
 					match(input, 10, FOLLOW_10_in_textview_def1212);
 					pushFollow(FOLLOW_textview_def_in_textview_def1214);
@@ -1749,8 +1747,8 @@ public class InteractionsParser extends Parser {
 				}
 				switch (alt25) {
 				case 1:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:331:13:
-				// ',' button_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:331:13:
+					// ',' button_def
 				{
 					match(input, 10, FOLLOW_10_in_button_def1233);
 					pushFollow(FOLLOW_button_def_in_button_def1235);
@@ -1797,8 +1795,8 @@ public class InteractionsParser extends Parser {
 				}
 				switch (alt26) {
 				case 1:
-				// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:335:12:
-				// ',' textbox_def
+					// S:\\Thesis\\DevelopmentFramework\\IoTSuite\\ToolSuite\\src\\iotsuite\\parser\\Interactions.g:335:12:
+					// ',' textbox_def
 				{
 					match(input, 10, FOLLOW_10_in_textbox_def1254);
 					pushFollow(FOLLOW_textbox_def_in_textbox_def1256);

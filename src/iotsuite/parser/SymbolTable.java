@@ -354,14 +354,15 @@ public class SymbolTable {
 
 					Mapping(javaToResultSetMapping);
 					FieldForStorage = new StructField(arrayFieldName[i][1],
-							new PrimitiveType(javaToResultSetMapping
-									.get(arrayFieldType[i][1])));
+							new PrimitiveType(
+									javaToResultSetMapping
+											.get(arrayFieldType[i][1])));
 					StructFieldSetForStorage.add(FieldForStorage);
-/*
-					StructFieldSetForStorage.add(javaToResultSetMapping
-							.get(arrayFieldType[i][1])
-							+ "(\""
-							+ (arrayFieldName[i][1]) + "\") ");*/
+					/*
+					 * StructFieldSetForStorage.add(javaToResultSetMapping
+					 * .get(arrayFieldType[i][1]) + "(\"" +
+					 * (arrayFieldName[i][1]) + "\") ");
+					 */
 
 				}
 			}
@@ -406,7 +407,6 @@ public class SymbolTable {
 
 	}
 
-	
 	public StructCompiler currentStruct;
 	public SensorCompiler currentSensor;
 	public ActuatorCompiler currentActuator;

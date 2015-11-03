@@ -64,7 +64,6 @@ public class JavaFrameworkFromST {
 				+ ".java", templateOfComputationalService, "JavaSEFactory",
 				"Computational", computationalService);
 
-		
 	}
 
 	// For Interface
@@ -98,8 +97,6 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit("Listener" + infoConsumeInfo.getName()
 				+ ".java", templateOfComputationalService, "Listener",
 				"Computational", infoConsumeInfo);
-
-		
 
 	}
 
@@ -367,7 +364,6 @@ public class JavaFrameworkFromST {
 				"actuator", storageService);
 	}
 
-	
 	// Android User interface
 	public CompilationUnit generateAndroidUserInterfaceImpl(
 			UserInterface guiDriver) {
@@ -764,5 +760,5 @@ public class JavaFrameworkFromST {
 
 		return null;
 	}
-	
+
 }

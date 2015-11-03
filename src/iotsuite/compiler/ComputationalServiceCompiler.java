@@ -30,7 +30,6 @@ public class ComputationalServiceCompiler {
 	private Parameter parameter;
 	private int sampleValue;
 
-	
 	public static List<StructField> StructFieldSet = new ArrayList<StructField>();
 
 	public void addCommand(String actionName) {
@@ -61,7 +60,6 @@ public class ComputationalServiceCompiler {
 
 	public void createCSObject() {
 
-	
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
@@ -83,8 +81,6 @@ public class ComputationalServiceCompiler {
 		this.dataAccessList = SymbolTable
 				.getDataAccessSymblTable(dataAccessStr);
 	}
-
-
 
 	// Getter and Setter of Consumed Info
 
