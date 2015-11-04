@@ -20,3 +20,6 @@ softwarecomponents:
 			DisplayTempController 
 			  consume roomAvgTempMeasurement from AvgTemp;
 			  command DisplayTemp(tempNotify) to SmartHomeApp;
+			TemperatureDataLogger
+				consume tempMeasurement from TemperatureSensor;
+				command  InsertProfileData(profileData) to ProfileDB;  

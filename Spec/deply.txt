@@ -50,8 +50,15 @@ devices:
         platform: JavaSE;    
         resources:;
 		protocol: mqtt;
-		description: d1 Description is written; 		
+		description: d1 Description is written; 
    D8:
+        location:
+             Room: 1;
+        platform: JavaSE;    
+        resources:;
+		protocol: mqtt;
+		description: d1 Description is written; 				
+   D9:
         location:
              Room: 1;
         platform: JavaSE;    
