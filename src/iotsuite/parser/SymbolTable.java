@@ -36,8 +36,14 @@ public class SymbolTable {
 	public static List<String> tempListStorageFieldType = new ArrayList<String>();
 
 	public static List<String> tempListActuatorFieldName = new ArrayList<String>();
-
 	public static List<String> tempListActuatorFieldType = new ArrayList<String>();
+	
+	public static List<String> tempListStorageActionFieldName = new ArrayList<String>();
+	public static List<String> tempListStorageActionFieldType = new ArrayList<String>();
+	
+	
+
+	
 
 	// Static Table used for Mapping from high level specification datatype to
 	// Resultset required datatype
@@ -55,64 +61,40 @@ public class SymbolTable {
 	// sensor(ex- String badgeId, boolean presence etc.)
 	public static ArrayList<String> eventDrivenFields = new ArrayList<String>();
 
-	// Following list used to store field name used by event driven sensor
-	// (ex-badgeId, presence etc.)
 	public static List<String> eventDrivenFieldName = new ArrayList<String>();
-
 	public static Map<String, StructCompiler> structSymblTable = new HashMap<String, StructCompiler>();
-
 	public static Map<String, String> responseSymblTable = new HashMap<String, String>();
-
 	public static List<Device> deviceList = new ArrayList<Device>();
-
 	public static List<DeploymentScope> deploymentConstraintsList = new ArrayList<DeploymentScope>();
-
 	public static Map<String, Set<DataAccess>> dataAccessSymblTable = new HashMap<String, Set<DataAccess>>();
-
 	public static List<StructField> StructFieldSet = new ArrayList<StructField>();
-
 	public static List<StructField> StructFieldSetForGUI = new ArrayList<StructField>();
 	public static List<StructField> StructFieldSetForGUINotify = new ArrayList<StructField>();
 	public static List<StructField> StructFieldSetForStorage = new ArrayList<StructField>();
 
-	// Store Structure Name ex-TempStruct or BadgeStruct
+
 	public static String structName;
-	// Store Structure Name that is used by Storage
 	public static String storageStructName;
-
-	// Store Structure Name that is used by Actuator
 	public static String actuatorStructName;
-
-	// Store Struct Name used by Aggregator
+	public static String storageActionStructName;
 	public static String aggregatorStructName;
-
 	static String[][] arrayFieldName = new String[10][2];
 	static String[][] arrayFieldType = new String[10][2];
-
-	// Following arrays reserved for GUI
 	public static int rowCount = 0;
 	public static int columnCount = 0;
 	public static String[][] arrayGUIGeneratedInfo = new String[10][2];
-
 	static String[] keys = new String[10];
-
 	public static int rowCountInFieldName = 0;
 	public static int columnCountInFieldName = 0;
 	public static int rowCountInFieldType = 0;
 	public static int columnCountinFieldType = 0;
-
 	static StructField Field;
 	static StructField FieldForStorage;
-
 	static StructField FieldForGUI;
 	static StructField FieldForGUINotify;
 
-	// Getter and Setter of DataAccessSymblTable
-
 	public static Set<DataAccess> getDataAccessSymblTable(String dataAccessKey) {
-
 		return dataAccessSymblTable.get(dataAccessKey);
-
 	}
 
 	public static void constructDataAccessSymblTable(String dataAccessKey,
@@ -130,8 +112,6 @@ public class SymbolTable {
 		return deploymentConstraintsList;
 	}
 
-	// Getter and Setter of DeviceSymblTable
-
 	public static void addDeviceinSymblTable(Device deviceObj) {
 		deviceList.add(deviceObj);
 	}
@@ -146,37 +126,23 @@ public class SymbolTable {
 
 	public static void constructSymbTable(String variableName,
 			String variableType) {
-
-		// System.out.println("Vriable Name "+variableName+
-		// "Variable Type "+variableType);
 		if (symblTable.containsKey(variableName)) {
-
 		} else {
-
 			symblTable.put(variableName, variableType);
-
 		}
-
 	}
 
 	public void constructGUISymblTable(String generatedInfoType,
 			String generatedInfoName) {
-
 		arrayGUIGeneratedInfo[rowCount][columnCount] = generatedInfoType;
-		// System.out.println("Array"+arrayGUIGeneratedInfo[rowCount][columnCount]);
 		columnCount = columnCount + 1;
-
 		arrayGUIGeneratedInfo[rowCount][columnCount] = generatedInfoName;
-		// System.out.println("Array"+arrayGUIGeneratedInfo[rowCount][columnCount]);
 		rowCount++;
 		columnCount = 0;
-
 	}
 
 	public void constructAggregatorSymblTable(String aggregatorStructName) {
-
 		searchStructFieldNameForAggregator(aggregatorStructName);
-
 	}
 
 	public void constructStructNameSymblTable(String structName) {
@@ -185,30 +151,41 @@ public class SymbolTable {
 	}
 
 	public void constructStorageSymblTable(String storageStructName) {
-
 		SymbolTable.storageStructName = storageStructName;
 		searchForStorageFields();
 	}
 
 	public void constructActuatorSymblTable(String actuatorStructName) {
-
 		SymbolTable.actuatorStructName = actuatorStructName;
 		searchForActuatorFields();
-
 	}
+	
+	public void constructStorageActionSymlTable(String storageStructName){
+		SymbolTable.storageActionStructName = storageStructName;
+		searchForStorageActionFields(storageStructName);
+	}
+	
+	private void searchForStorageActionFields(String myStorageActionStructName) {
+
+		for (int i = 0; i < 10; i++) {
+			if (arrayFieldName[i][0] != null) {
+				if (arrayFieldName[i][0].equals(myStorageActionStructName)) {
+					tempListStorageActionFieldName.add(arrayFieldName[i][1]);
+					tempListStorageActionFieldType.add(arrayFieldType[i][1]);
+				}
+			}
+		}
+	}
+	
 
 	public void constructStructFieldSymblTable(String fieldName,
 			String fieldType) {
-
 		insertFieldName(structName, fieldName);
 		insertFieldType(structName, fieldType);
-
 	}
 
 	public void constructEventDrivenSymblTable(String eventDrivenStructName) {
-
 		searchForEventDrivenSensorFields(eventDrivenStructName);
-
 	}
 
 	private void insertFieldType(String structName, String fieldType) {
@@ -257,7 +234,6 @@ public class SymbolTable {
 			}
 
 		}
-
 	}
 
 	private static void searchStructFieldNameForAggregator(
@@ -272,10 +248,8 @@ public class SymbolTable {
 
 					StructFieldSet.add(Field);
 				}
-
 			}
 		}
-
 	}
 
 	public static void searchStructFieldNameForGUI(String requestGUIStructName) {
@@ -319,92 +293,62 @@ public class SymbolTable {
 		for (int i = 0; i < 10; i++) {
 			if (arrayFieldName[i][0] != null) {
 				if (arrayFieldName[i][0].equals(actuatorStructName)) {
-
 					tempListActuatorFieldName.add(arrayFieldName[i][1]);
 					tempListActuatorFieldType.add(arrayFieldType[i][1]);
-
 				}
 			}
-
 		}
 	}
 
 	public void constructStorageInfoSymblTable(String fieldName,
 			String fieldType) {
-
 		listStorageFieldName.add(fieldName);
 		listStorageFieldName.addAll(tempListStorageFieldName);
-
 		listStorageFieldType.add(fieldType);
 		listStorageFieldType.addAll(tempListStorageFieldType);
-
 	}
 
-	// Getter and Setter of structSymblTable
-
 	private void searchForStorageFields() {
-
 		for (int i = 0; i < 10; i++) {
-
 			if (arrayFieldName[i][0] != null) {
 				if (arrayFieldName[i][0].equals(storageStructName)) {
-
 					tempListStorageFieldName.add(arrayFieldName[i][1]);
 					tempListStorageFieldType.add(arrayFieldType[i][1]);
 
 					Mapping(javaToResultSetMapping);
 					FieldForStorage = new StructField(arrayFieldName[i][1],
-							new PrimitiveType(
-									javaToResultSetMapping
-											.get(arrayFieldType[i][1])));
+							new PrimitiveType(javaToResultSetMapping.get(arrayFieldType[i][1])));
 					StructFieldSetForStorage.add(FieldForStorage);
-					/*
-					 * StructFieldSetForStorage.add(javaToResultSetMapping
-					 * .get(arrayFieldType[i][1]) + "(\"" +
-					 * (arrayFieldName[i][1]) + "\") ");
-					 */
-
 				}
 			}
 		}
-
 	}
 
 	public static void Mapping(Map<String, String> javaType) {
-
 		javaType.put("String", "String");
 		javaType.put("double", "Double");
 		javaType.put("int", "Int");
 		javaType.put("boolean", "Boolean");
 		javaType.put("long", "Long");
 		javaType.put("float", "Float");
-
 	}
 
 	public void constructStructSymblTable(String structAccessKey,
 			StructCompiler structAccessObj) {
-
 		structSymblTable.put(structAccessKey, structAccessObj);
-
 	}
 
 	public static StructCompiler getStructSymblTable(String structAccessKey) {
-
 		return structSymblTable.get(structAccessKey);
-
 	}
 
 	public static void constructResponseTypeSymblTable(String structAccessKey,
 			String structAccessObj) {
-
 		responseSymblTable.put(structAccessKey, structAccessObj);
-
 	}
 
 	public static String getResponseTypeSymblTable(String structAccessKey) {
-
 		return responseSymblTable.get(structAccessKey);
-
 	}
 
 	public StructCompiler currentStruct;

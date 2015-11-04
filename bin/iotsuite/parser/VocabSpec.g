@@ -128,24 +128,42 @@ action_def:
 parameter_def :
     lc_id ':'  CAPITALIZED_ID (',' parameter_def )?
     { 
-     context.constructActuatorSymblTable($CAPITALIZED_ID.text);
-    
-    context.currentActuator.addParameter($lc_id.text, $CAPITALIZED_ID.text); 
-    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
-   
+     context.constructActuatorSymblTable($CAPITALIZED_ID.text);    
+     context.currentActuator.addParameter($lc_id.text, $CAPITALIZED_ID.text); 
+     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     }
 ;
 ss_def:
   CAPITALIZED_ID
     { context.currentStorageService = new StorageCompiler();
-      }
-    (storageDataAccess_def ';')* 
+    }  
+    (storageDataAccess_def ';')*
+    (storageActionAccess_def ';')* 
      {
      context.currentStorageService.setStorageServiceName($CAPITALIZED_ID.text);
      context.currentStorageService.createStorageObject();
      context.currentStorageService.generateStorageCode(); 
      }
 ;
+
+storageActionAccess_def: 
+   (storageAction_def )*       
+;  
+
+storageAction_def: 
+    'action' CAPITALIZED_ID '(' (storageParameter_def)? ')'
+    {context.currentStorageService.addAction($CAPITALIZED_ID.text);} 
+;
+
+storageParameter_def :
+    lc_id ':'  CAPITALIZED_ID (',' storageParameter_def )?
+    { 
+     context.constructStorageActionSymlTable($CAPITALIZED_ID.text);    
+     context.currentStorageService.addParameter($lc_id.text, $CAPITALIZED_ID.text);  
+     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
+    }
+;
+ 
 
 storageDataAccess_def :
      storageGeneratedInfo_def  'accessed-by' storagedataIndex_def

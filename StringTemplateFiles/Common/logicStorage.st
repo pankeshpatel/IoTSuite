@@ -7,8 +7,6 @@ import $Storageservice.PackageName$.*;
 import iotsuite.common.GlobalVariable;
 import factory.*;
 
-
-
 public class  Logic$Storageservice.name$  extends $Storageservice.name$  {
 	
 	public String deviceType;
@@ -38,6 +36,14 @@ public class  Logic$Storageservice.name$  extends $Storageservice.name$  {
        }
       }
 	
+	}$
+	
+    $Storageservice.allActions:{ action |     
+	    @Override
+	    protected  void $action.name$($action.allParameter:{ param | $param.type$ arg }; separator=", "$) {
+	     obj$Storageservice.name$.$action.name$($action.allParameter:{ param | arg }; separator=", "$);
+	    }
+		
 	}$
 
 }

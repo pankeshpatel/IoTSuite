@@ -89,7 +89,6 @@ public class ComputationalServiceCompiler {
 	}
 
 	public String getOperation() {
-
 		return operationType;
 	}
 
@@ -120,65 +119,27 @@ public class ComputationalServiceCompiler {
 		generatedInfo.add(new Information(variableName, new DataType(
 				variableType)));
 	}
-
-	// Getter and Setter of Attribute
-	/*
-	 * private Set<Attribute> attributeSet = new HashSet<Attribute>();
-	 * 
-	 * public Set<Attribute> getAttributeSet() { return attributeSet; }
-	 * 
-	 * public void addAttribute(String fieldName, String fieldType) { Attribute
-	 * attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
-	 * attributeSet.add(attribute); }
-	 */
-	/*
-	 * The following function generates programming framework for
-	 * ComputationalService. It generates code in the following sequence.
-	 * 
-	 * (1) ComputationalService's Interaction (2) ComputationalService's
-	 * ApplicationLogic
-	 */
-
+	
 	public void generateAggregatorComputationalServiceCode() {
 		generateComputationalServiceInteraction_ComputationalServiceCompiler();
 		generateAggregatorComputationalServiceLogic_ComputationalServiceCompiler();
 		generateAggregatorComputationalServiceFactory_ComputationalServiceCompiler();
-
-		// Interface
 		generateAggregatorComputationalServiceInterface_ComputationalServiceCompiler();
-		// Listener
-
-		// generateSensorListener_SensorCompiler(sensorDriver
-		// .getAllGeneratedInfo().get(i));
-		/*
-		 * for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
-		 * generateSensorListener_SensorCompiler(sensorDriver
-		 * .getAllGeneratedInfo().get(i)); }
-		 */
-
+	
 		for (int i = 0; i < computationalService.getAllConsumedInfo().size(); i++) {
 			generateComputationalServiceListener_ComputationalServiceCompiler(computationalService
 					.getAllConsumedInfo().get(i));
 		}
-		// Impl
+	
 		generateImplComputationalService_ComputationalServiceCompiler();
 
 	}
 
 	public void generateComputationalServiceCode() {
-		// TODO Auto-generated method stub
-
 		generateComputationalServiceInteraction_ComputationalServiceCompiler();
 		generateComputationalServiceLogic_ComputationalServiceCompiler();
 	}
-
-	/*
-	 * public void generateComputational12ServiceCode() { // TODO Auto-generated
-	 * method stub
-	 * generateAggregatorComputationalServiceLogic_ComputationalServiceCompiler
-	 * (); }
-	 */
-
+	
 	public void generateComputationalServiceInteraction_ComputationalServiceCompiler() {
 
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
@@ -222,7 +183,6 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
-
 	public void generateComputationalServiceListener_ComputationalServiceCompiler(
 			Information infoConsumeInfo) {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
@@ -231,7 +191,6 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
-
 	public void generateImplComputationalService_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
@@ -239,5 +198,4 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
-
 }

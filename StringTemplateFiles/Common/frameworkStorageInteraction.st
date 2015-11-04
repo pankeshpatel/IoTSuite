@@ -16,14 +16,18 @@ public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
 	 
 		 this.myPubSubMiddleware = pubSubM;
 		this.myDeviceInfo = deviceInfo;
-		postInitialize();	
+		 postInitialize();	
     }   
 	
 protected void postInitialize() {
-   $Storageservice.allDataAccess:{dataAccess|subscribe$dataAccess.dataAccessName; format="avoidCapital"$();}$ 
+   $Storageservice.allDataAccess:{dataAccess|subscribe$dataAccess.dataAccessName; format="avoidCapital"$();}$
+   $Storageservice.allActions:{action | subscribe$action.name; format="capital"$();}$ 
 }
-	$Storageservice.allDataAccess:{ dataAccess |   	
-	
+
+
+
+
+	$Storageservice.allDataAccess:{ dataAccess |  
 	protected void set$dataAccess.dataAccessName; format="capital"$ 
 	($dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ){
 	myPubSubMiddleware.publish("$dataAccess.dataAccessName$", new$dataAccess.dataAccessName$Value, myDeviceInfo);
@@ -42,6 +46,14 @@ protected void postInitialize() {
 				onNew$dataAccess.dataAccessName$RequestReceived((String) arg);
 			}
 		}$
+		
+		$Storageservice.allActions:{ action |
+		    if (eventName.equals("$action.name$") ) { 
+		    	Logger.log( myDeviceInfo.getName() ,"$Storageservice.name$" , "$action.name$ has been received");      	
+				   $action.name$($action.allParameter:{ param | ($param.type$)arg }; separator=", "$);		   
+		      } 
+		    }$
+		
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -54,13 +66,25 @@ protected void postInitialize() {
    
 	}$
 	
+    $Storageservice.allActions:{ action | protected abstract void $action.name$($action.allParameter:{ param | $param.type$ arg }; separator=", "$); }; separator="\n"$
+
+	
 	$Storageservice.allDataAccess:{ dataAccess | 
 	public void subscribe$dataAccess.dataAccessName$() {
 		List<String> regionInfo = new ArrayList<String>();
 		regionInfo.add("*");					
 		this.myPubSubMiddleware.subscribe(this, "get$dataAccess.dataAccessName$",regionInfo);		
 	}	
-  }$     		
+  }$ 
+  
+  $Storageservice.allActions:{ action | 
+  	public void subscribe$action.name; format="capital"$() {					
+	    List<String> regionInfo = new ArrayList<String>(); 
+		regionInfo.add("*");				
+      this.myPubSubMiddleware.subscribe(this,"$action.name$",regionInfo); 
+ 		}
+  }$ 
+  
 	 public void run() {   }
 }
 

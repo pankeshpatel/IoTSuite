@@ -32,6 +32,7 @@ public class StorageCompiler {
 	private List<String> fieldType = new ArrayList<String>();
 	private List<String> fieldName = new ArrayList<String>();
 	private List<String> structFieldName = new ArrayList<String>();
+	private List<String> structActionFieldName = new ArrayList<String>();
 	private List<StructField> structField = new ArrayList<StructField>();
 	HashMap<String, String> SQLtype = new HashMap<String, String>();
 	private Set<Action> storageActionList = new HashSet<Action>();
@@ -42,22 +43,23 @@ public class StorageCompiler {
 
 	}
 	
+	public void createStorageObject() {
+		storageService = new Storage(getStorageServiceName(), getDataAccessList(), null, getAllFieldName(),
+				getAllFieldSQLvariable(), getStructField(), getStructFieldName(), getActionList(), getActionStructFieldName());
+	}
+	
 	public void addAction(String actionName) {
 		Action action = new Action(actionName, getParameter(), null);
 		storageActionList.add(action);
 	}	
 	
-	
-	// Getter and Setter of Parameters
 	public Parameter getParameter() {
 		return actionParameter;
 	}
 	
-	
 	public void addParameter(String parameterName, String parameterType) {
 		actionParameter = new Parameter(parameterName, new DataType(parameterType));
 	}
-
 	
 	private Set<Action> getActionList() {
 		return storageActionList;
@@ -71,37 +73,31 @@ public class StorageCompiler {
 		this.storageServiceName = storageServiceName;
 	}
 
-	public void createStorageObject() {
-		storageService = new Storage(getStorageServiceName(),
-				getDataAccessList(), null, getAllFieldName(),
-				getAllFieldSQLvariable(), getStructField(),
-				getStructFieldName(), getActionList());
-	}
-
 	private List<String> getAllFieldType() {
 		this.fieldType = iotsuite.parser.SymbolTable.listStorageFieldType;
-
 		return fieldType;
 	}
 
 	private List<String> getAllFieldName() {
-
 		this.fieldName = iotsuite.parser.SymbolTable.listStorageFieldName;
 		getAllFieldType();
 		getStructField();
 		getStructFieldName();
 		return fieldName;
 	}
+	
+	private List<String> getActionStructFieldName(){
+		this.structActionFieldName = iotsuite.parser.SymbolTable.tempListStorageActionFieldName;
+		return structActionFieldName;
+	}
+	
 
 	private List<String> getStructFieldName() {
-
 		this.structFieldName = iotsuite.parser.SymbolTable.tempListStorageFieldName;
-
 		return structFieldName;
 	}
 
 	private List<StructField> getStructField() {
-
 		this.structField = iotsuite.parser.SymbolTable.StructFieldSetForStorage;
 		return structField;
 	}
@@ -125,10 +121,7 @@ public class StorageCompiler {
 		return fieldWithSQL;
 	}
 
-	// Getter and Setter of Data Access List
-
 	public Set<DataAccess> getDataAccessList() {
-		// SymblTable(iotsuite.parser.SymbolTable.structureSymblTable);
 		return dataAccessList;
 	}
 
@@ -138,23 +131,16 @@ public class StorageCompiler {
 		dataAccessList.add(dataAccess);
 		SymbolTable.constructDataAccessSymblTable(getGeneratedInfo().getName(),
 				dataAccessList);
-
 	}
-
-	// getter and Setter of generatedInfo
 
 	public void addGeneratedInfo(String variableName, String variableType) {
 		generatedInfo = new Information(variableName,
 				new DataType(variableType));
-
 	}
 
 	public Information getGeneratedInfo() {
-
 		return generatedInfo;
 	}
-
-	// Getter and Setter of DataAccessIndex
 
 	public void addDataAccessIndex(String variableName, String variableType) {
 		queryIndex = new Information(variableName, new DataType(variableType));
@@ -164,25 +150,7 @@ public class StorageCompiler {
 		return queryIndex;
 	}
 
-	// Getter and Setter of Attribute
-	/*
-	 * private Set<Attribute> attributeSet = new HashSet<Attribute>();
-	 * 
-	 * public Set<Attribute> getAttributeSet() { return attributeSet; }
-	 * 
-	 * public void addAttribute(String fieldName, String fieldType) { Attribute
-	 * attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
-	 * attributeSet.add(attribute); }
-	 */
-
-	/*
-	 * The following function generates programming framework for Storage. It
-	 * generates code in the following sequence.
-	 * 
-	 * (1) Storage's Interaction (2) Storage's ApplicationLogic (3) Storage's
-	 * Factory (4) Storage window OS Implementation (5) Storage's Interface
-	 */
-
+	
 	public void generateStorageCode() {
 
 		// Storage Interaction with other entities
@@ -193,7 +161,6 @@ public class StorageCompiler {
 
 			// Storage's ApplicationLogic
 			generateStorageLogic_StorageCompiler();
-
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 				generateJavaSEStorageFactory_StorageCompiler();
 				generateJavaSEStorageImpl_StorageCompiler();

@@ -8,7 +8,7 @@ structs:
     ProfileStruct
     	badgeID : String;
     	tempValue: double;
-    	uniitOfMeasurement:String;       
+    	unitOfMeasurement:String;       
 resources:
     sensors:
     	periodicsensors:

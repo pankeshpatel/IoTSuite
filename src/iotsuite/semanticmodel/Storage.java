@@ -15,6 +15,7 @@ public class Storage extends SoftwareComponent {
 	public List<String> structFieldName = new ArrayList<String>();
 	public List<StructField> structField = new ArrayList<StructField>();
 	private Set<Action> actions = new HashSet<Action>();
+	public List<String> actionStructFieldName = new ArrayList<String>();
 
 	public String databaseName = "iotsuiteuser";
 
@@ -24,7 +25,7 @@ public class Storage extends SoftwareComponent {
 	public Storage(String name, Set<DataAccess> dataAccess,
 			Set<Information> consumeInfo, List<String> fieldName,
 			List<String> fieldwithSQL, List<StructField> structField,
-			List<String> structFieldName, Set<Action> actionsList) {
+			List<String> structFieldName, Set<Action> actionsList, List<String> actionStructFieldName ) {
 
 		super(name, null, null);
 		this.dataAccess = dataAccess;
@@ -33,10 +34,16 @@ public class Storage extends SoftwareComponent {
 		this.structField = structField;
 		this.structFieldName = structFieldName;
 		this.actions = actionsList;
+		this.actionStructFieldName = actionStructFieldName;
+		
 	}
 	
 	public Set<Action> getActions() {
 		return actions;
+	}
+	
+	public List<String> getAllStorageActionStructFieldName(){
+		return actionStructFieldName;
 	}
 
 	public List<Action> getAllActions() {
@@ -76,7 +83,6 @@ public class Storage extends SoftwareComponent {
 	public List<DataAccess> getAllDataAccess() {
 		ArrayList<DataAccess> allDataAccess = new ArrayList<DataAccess>();
 		allDataAccess.addAll(getDataAccess());
-
 		return allDataAccess;
 	}
 
@@ -84,8 +90,7 @@ public class Storage extends SoftwareComponent {
 
 	public String getPackageName() {
 
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);
 		return packageName;
 	}
 

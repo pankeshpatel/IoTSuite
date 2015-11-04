@@ -16,13 +16,13 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
 	
 		 this.myPubSubMiddleware = pubSubM;
 		 this.myDeviceInfo = deviceInfo;
-		postInitialize();
-		
+		postInitialize();		
     } 
     
     protected void postInitialize() {
-      $Actuatordriver.allActions:{action |subscribe$action.name; format="capital"$(); 
-    }$ }
+      $Actuatordriver.allActions:{action |subscribe$action.name; format="capital"$();}$   
+    
+    }
 
 
 	
@@ -30,24 +30,17 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
 	
     public void notifyReceived(String methodName, Object arg, Device deviceInfo) { 
     $Actuatordriver.allActions:{ action |
-    if (methodName.equals("$action.name$") ) {
-    	
-    	Logger.log( myDeviceInfo.getName() ,"$Actuatordriver.name$" , "$action.name$ has been received");
-    	
-    	
-		   $action.name$($action.allParameter:{ param | ($param.type$)arg }; separator=", "$);
-		   
+    if (methodName.equals("$action.name$") ) { 
+    	Logger.log( myDeviceInfo.getName() ,"$Actuatordriver.name$" , "$action.name$ has been received");      	
+		   $action.name$($action.allParameter:{ param | ($param.type$)arg }; separator=", "$);		   
       } 
     }$
     }
    
      $Actuatordriver.allActions:{ action | 
-    	public void subscribe$action.name; format="capital"$() {
-    	
-    					
+    	public void subscribe$action.name; format="capital"$() {					
 	    List<String> regionInfo = new ArrayList<String>(); 
-		regionInfo.add("*");
-				
+		regionInfo.add("*");				
         this.myPubSubMiddleware.subscribe(this,"$action.name$",regionInfo); 
    		}
     }$  		

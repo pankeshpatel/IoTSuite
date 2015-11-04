@@ -31,7 +31,7 @@ public class JavaSE$Actuatordriver.name$ implements I$Actuatordriver.name$ {
   public void $action.name$($action.allParameter:{ param | $param.type$ arg }; 
    separator=", "$) {
    //jlabel1.setText("Heater is $action.name$ "+$Actuatordriver.allFieldName:{ fieldName | arg.get$fieldName$() };separator="+" $);
-jlabel1.setText(" $action.name$ command is fired");
+   jlabel1.setText(" $action.name$ command is fired");
    } 
     
    }; separator="\n"$ 

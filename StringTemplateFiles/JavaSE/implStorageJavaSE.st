@@ -108,71 +108,81 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
     }    
     }    
     }
- 
-
-  $Storageservice.allDataAccess:{dataAccess |    
   
-  @Override
-  public void set$dataAccess.dataAccessName; format="avoidCapital"$ 
-      ($dataAccess.query.type; format="capital" $ newIndex, $dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ) {
-   
-   if(DBMS.equalsIgnoreCase("mysql")){
+  
+  $Storageservice.allActions:{ action |   
     
-	  try {  
-			ps = 
-				connect.prepareStatement("INSERT INTO $Storageservice.name$ " +
-						"($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
-						" ("+newIndex+"$Storageservice.allStructFieldName:{structFieldName |,"+newprofileValue.get$structFieldName$()+"}$)");
-			
-			ps.executeUpdate();
-			
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}	
-		}
-		
-		
-	if(DBMS.equalsIgnoreCase("azuresql")){
-    
-    try {  
-       String sqlString="INSERT INTO $Storageservice.name$ " +
-            "($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
-            " ("+newIndex+"$Storageservice.allStructFieldName:{structFieldName |,"+newprofileValue.get$structFieldName$()+"}$)";
-      
-              statement = connect.createStatement();
-              statement.executeUpdate(sqlString);
-              connect.close();
-              System.out.println("Insert value into Azure SQL......");
-      
-      
-    } catch (SQLException e) {
-      e.printStackTrace();
-    } 
-    }
-    
-    
-   if(DBMS.equalsIgnoreCase("mongodb")){	
-	  try{   
-
-           MongoClient mongoClient = new MongoClient();
-          DB db = mongoClient.getDB( "iotsuiteuser" );
-          DBCollection table =db.getCollection("$Storageservice.name$");
-          BasicDBObject document = new BasicDBObject();           
-          document.put("$Storageservice.id$", newIndex);
-          $Storageservice.allStructFieldName:{structFieldName |
-          document.put("$structFieldName$",newprofileValue.get$structFieldName$());
-          }$
-          table.insert(document);
-          
-        
-      }catch(Exception e){
-       System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-    }
+    @Override
+     public void $action.name$($action.allParameter:{ param | $param.type$ newprofileValue }; separator=", "$) {
 	  
-    }
-    
-    } 
+	  if(DBMS.equalsIgnoreCase("mysql")){
+		    
+		  /*
+		  try {  
+				ps = 
+					connect.prepareStatement("INSERT INTO $Storageservice.name$ " +
+							"($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
+							" (""$Storageservice.allStorageActionStructFieldName:{structFieldName |"newprofileValue.get$structFieldName$()+"}$)");
+				
+				ps.executeUpdate(); 
+				
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} */
+			}
+			
+			
+		if(DBMS.equalsIgnoreCase("azuresql")){
+	    
+		/*	
+	    try {  
+	      
+	    	String sqlString="INSERT INTO $Storageservice.name$ " +
+	            "($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
+	            " ("+newIndex+"$Storageservice.allStorageActionStructFieldName:{structFieldName |,"+newprofileValue.get$structFieldName$()+"}$)";
+	      
+	              statement = connect.createStatement();
+	              statement.executeUpdate(sqlString);
+	              connect.close(); 
+	             
+	      
+	      
+	    } catch (SQLException e) {
+	      e.printStackTrace();
+	    }
+	    */ 
+	    }
+	    
+	    
+	   if(DBMS.equalsIgnoreCase("mongodb")){	
+		 /* try{   
+
+	          MongoClient mongoClient = new MongoClient();
+	          DB db = mongoClient.getDB( "iotsuiteuser" );
+	          DBCollection table =db.getCollection("$Storageservice.name$");
+	          BasicDBObject document = new BasicDBObject();           
+	          document.put("$Storageservice.id$", newIndex);
+	          $Storageservice.allStructFieldName:{structFieldName |
+	          document.put("$structFieldName$",newprofileValue.get$structFieldName$());
+	          }$
+	          table.insert(document);
+	          
+	        
+	      }catch(Exception e){
+	       System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+	    }  */
+		  
+	    }
+    	   
+      } 
+    	    
+    }; separator="\n"$ 
+ 
+  
+  
+
+  $Storageservice.allDataAccess:{dataAccess |
  
   @Override
   public $dataAccess.generatedInfo.type$ get$dataAccess.dataAccessName$($dataAccess.query.type; format="capital" $ index){

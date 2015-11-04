@@ -23,13 +23,9 @@ public  class  Logic$Actuatordriver.name$ extends $Actuatordriver.name$  {
     $Actuatordriver.allActions:{ action |     
     @Override
     protected  void $action.name$($action.allParameter:{ param | $param.type$ arg }; separator=", "$) {
-    	
-	
-	
     I$Actuatordriver.name$ obj$Actuatordriver.name$ = $Actuatordriver.name$Factory.get$Actuatordriver.name$(myDeviceInfo.getType(), null, null);
      obj$Actuatordriver.name$.$action.name$($action.allParameter:{ param | arg }; separator=", "$);
-  
-       
+   
     }
 	
 }$
