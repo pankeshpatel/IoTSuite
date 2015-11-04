@@ -19,32 +19,42 @@ public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
 		postInitialize();	
     }   
 	
-	protected void postInitialize() {
-	      $Storageservice.allDataAccess:{dataAccess|subscribe$dataAccess.dataAccessName; format="avoidCapital"$(); 
-	    }$ 
-	    }
+protected void postInitialize() {
+   $Storageservice.allDataAccess:{dataAccess|subscribe$dataAccess.dataAccessName; format="avoidCapital"$();}$ 
+}
 	$Storageservice.allDataAccess:{ dataAccess |   	
 	
 	protected void set$dataAccess.dataAccessName; format="capital"$ 
 	($dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ){
 	myPubSubMiddleware.publish("$dataAccess.dataAccessName$", new$dataAccess.dataAccessName$Value, myDeviceInfo);
-	}	
+	}
+	
+   }$
 	    
 	public void notifyReceived(String eventName, Object arg, Device deviceInfo) {
 		try {
+			
+			$Storageservice.allDataAccess:{ dataAccess | 	
+			
 			if (eventName.equals("get$dataAccess.dataAccessName$")) {
 				Logger.log(myDeviceInfo.getName(),"$Storageservice.name$",
 					"CommandReceived get$dataAccess.dataAccessName$");
 				onNew$dataAccess.dataAccessName$RequestReceived((String) arg);
 			}
+		}$
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+   
+   $Storageservice.allDataAccess:{ dataAccess | 
 
 	public abstract void onNew$dataAccess.dataAccessName$RequestReceived(String arg);
+   
+	}$
 	
+	$Storageservice.allDataAccess:{ dataAccess | 
 	public void subscribe$dataAccess.dataAccessName$() {
 		List<String> regionInfo = new ArrayList<String>();
 		regionInfo.add("*");					
