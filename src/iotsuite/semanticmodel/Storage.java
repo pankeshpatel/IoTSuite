@@ -14,31 +14,40 @@ public class Storage extends SoftwareComponent {
 	public List<String> fieldName = new ArrayList<String>();
 	public List<String> structFieldName = new ArrayList<String>();
 	public List<StructField> structField = new ArrayList<StructField>();
+	private Set<Action> actions = new HashSet<Action>();
 
 	public String databaseName = "iotsuiteuser";
 
 	public String id;
 
+	@SuppressWarnings("unchecked")
 	public Storage(String name, Set<DataAccess> dataAccess,
 			Set<Information> consumeInfo, List<String> fieldName,
 			List<String> fieldwithSQL, List<StructField> structField,
-			List<String> structFieldName) {
+			List<String> structFieldName, Set<Action> actionsList) {
 
-		// super(name, null, null, "NoInstance");
 		super(name, null, null);
 		this.dataAccess = dataAccess;
 		this.fieldWithSQL = fieldwithSQL;
 		this.fieldName = fieldName;
 		this.structField = structField;
 		this.structFieldName = structFieldName;
-
+		this.actions = actionsList;
+	}
+	
+	public Set<Action> getActions() {
+		return actions;
 	}
 
+	public List<Action> getAllActions() {
+		ArrayList<Action> allGeneratedInfo = new ArrayList<Action>();
+		allGeneratedInfo.addAll(getActions());
+		return allGeneratedInfo;
+	}
+	
+
 	public Set<DataAccess> getDataAccess() {
-
-		// SymblTable(iotsuite.parser.SymbolTable.structureSymblTable);
 		return dataAccess;
-
 	}
 
 	public List<String> getAllfieldName() {
@@ -48,11 +57,9 @@ public class Storage extends SoftwareComponent {
 
 	public List<String> getAllfieldwithSQlvariable() {
 		return fieldWithSQL;
-
 	}
 
 	public List<StructField> getAllStructField() {
-
 		ArrayList<StructField> allStructFields = new ArrayList<StructField>();
 		allStructFields.addAll(getstructField());
 		return allStructFields;
@@ -63,9 +70,7 @@ public class Storage extends SoftwareComponent {
 	}
 
 	public List<String> getAllStructFieldName() {
-
 		return structFieldName;
-
 	}
 
 	public List<DataAccess> getAllDataAccess() {
@@ -102,5 +107,4 @@ public class Storage extends SoftwareComponent {
 				.convertPathTopackage(GlobalVariable.deviceImplDirPath);
 		return packageName;
 	}
-
 }

@@ -5,9 +5,11 @@ import iotsuite.codegenerator.JavaFrameworkFromST;
 import iotsuite.codegenerator.SourceFileDumper;
 import iotsuite.common.GlobalVariable;
 import iotsuite.parser.SymbolTable;
+import iotsuite.semanticmodel.Action;
 import iotsuite.semanticmodel.DataAccess;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Information;
+import iotsuite.semanticmodel.Parameter;
 import iotsuite.semanticmodel.Storage;
 import iotsuite.semanticmodel.StructField;
 
@@ -26,22 +28,39 @@ public class StorageCompiler {
 	private Information queryIndex;
 	private Information generatedInfo;
 	private String storageServiceName;
-
 	private List<String> fieldWithSQL = new ArrayList<String>();
-	// Storage Store Field Type ex-String,double
 	private List<String> fieldType = new ArrayList<String>();
-
-	// Store Field Name ex-tempValue,unitOfMeasurement
 	private List<String> fieldName = new ArrayList<String>();
 	private List<String> structFieldName = new ArrayList<String>();
 	private List<StructField> structField = new ArrayList<StructField>();
-
-	// Static Table used for Mapping from high level specification datatype to
-	// SQL datatype
 	HashMap<String, String> SQLtype = new HashMap<String, String>();
+	private Set<Action> storageActionList = new HashSet<Action>();
+	private Parameter actionParameter;
+
 
 	public StorageCompiler() {
 
+	}
+	
+	public void addAction(String actionName) {
+		Action action = new Action(actionName, getParameter(), null);
+		storageActionList.add(action);
+	}	
+	
+	
+	// Getter and Setter of Parameters
+	public Parameter getParameter() {
+		return actionParameter;
+	}
+	
+	
+	public void addParameter(String parameterName, String parameterType) {
+		actionParameter = new Parameter(parameterName, new DataType(parameterType));
+	}
+
+	
+	private Set<Action> getActionList() {
+		return storageActionList;
 	}
 
 	public String getStorageServiceName() {
@@ -53,12 +72,10 @@ public class StorageCompiler {
 	}
 
 	public void createStorageObject() {
-		// storageService = new Storage(getStorageServiceName(),
-		// getAttributeSet(), getDataAccessList(), null);
 		storageService = new Storage(getStorageServiceName(),
 				getDataAccessList(), null, getAllFieldName(),
 				getAllFieldSQLvariable(), getStructField(),
-				getStructFieldName());
+				getStructFieldName(), getActionList());
 	}
 
 	private List<String> getAllFieldType() {

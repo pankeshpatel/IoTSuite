@@ -12,13 +12,10 @@ public class Actuator extends SoftwareComponent<Information> {
 	private Set<Action> actions = new HashSet<Action>();
 	public static List<String> fieldName = new ArrayList<String>();
 
-	// public Actuator(String name, Set<Action> actionsList, Set<Attribute>
-	// attributes, Set<Information> generateInfo, Set<Information> consumeInfo)
-	// {
+	
 	public Actuator(String name, Set<Action> actionsList,
 			Set<Information> generateInfo, Set<Information> consumeInfo,
 			List<String> fieldName) {
-		// super(name, generateInfo, consumeInfo, "NoInstance");
 		super(name, generateInfo, consumeInfo);
 		this.actions = actionsList;
 		Actuator.fieldName = fieldName;
@@ -38,7 +35,6 @@ public class Actuator extends SoftwareComponent<Information> {
 	public List<Action> getAllActions() {
 		ArrayList<Action> allGeneratedInfo = new ArrayList<Action>();
 		allGeneratedInfo.addAll(getActions());
-
 		return allGeneratedInfo;
 	}
 

@@ -20,14 +20,11 @@ public class ActuatorCompiler {
 	private Set<Action> actions = new HashSet<Action>();
 	private Parameter parameter;
 	public static List<String> fieldName = new ArrayList<String>();
-
 	public ActuatorCompiler() {
 
 	}
 
 	public ActuatorCompiler(String actuatorName) {
-		// actuatorDriver = new Actuator(actuatorName, getActionList(),
-		// getAttributeSet(), null, null);
 		actuatorDriver = new Actuator(actuatorName, getActionList(), null,
 				null, getAllFieldName());
 	}
@@ -56,26 +53,7 @@ public class ActuatorCompiler {
 		return actions;
 	}
 
-	// Getter and Setter of Attribute
-	/*
-	 * private Set<Attribute> attributeSet = new HashSet<Attribute>();
-	 * 
-	 * public void addAttribute(String fieldName, String fieldType) { Attribute
-	 * attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
-	 * attributeSet.add(attribute); }
-	 * 
-	 * public Set<Attribute> getAttributeSet() { return attributeSet; }
-	 */
-
-	/*
-	 * The following function generates programming framework for Actuator. It
-	 * generates code in the following sequence.
-	 * 
-	 * (1) Actuator's Interaction (2) Actuator's ApplicationLogic (3) Actuator's
-	 * Factory (4) Actuator's JavaSE-enabled device Implementation (5)
-	 * Actuator's Android-enabled device Implementation (6) Actuator's Interface
-	 */
-
+	
 	public void generateActuatorCode() {
 
 		// Actuator's Interaction
@@ -165,7 +143,6 @@ public class ActuatorCompiler {
 				.generateActuatorInterface(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
-
 	}
 
 	public void generateJavaSEActuatorLogic_ActuatorCompiler() {
@@ -174,7 +151,6 @@ public class ActuatorCompiler {
 				.generateJavaSEActuatorLogic(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
-
 	}
 
 	public void generateAndroidActuatorLogic_ActuatorCompiler() {
@@ -183,7 +159,5 @@ public class ActuatorCompiler {
 				.generateAndroidActuatorLogic(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
-
 	}
-
 }
