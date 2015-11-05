@@ -16,12 +16,14 @@ import iotsuite.common.GlobalVariable;
 import iotsuite.mappingalgo.MappingAlgoCompiler;
 
 public class LinkerCompiler {
+	
+
 
 	public static void linkerAlgo() {
 
-		
 		File folder = new File(GlobalVariable.templatePath + "/"
 				+ GlobalVariable.deploymentFolderPath + "/");
+		
 		File[] listOfFiles = folder.listFiles();
 
 		for (int i = 0; i < listOfFiles.length; i++) {
@@ -48,20 +50,20 @@ public class LinkerCompiler {
 	       //For Logic package
 	       copyLogicGeneratedFromVocabulary(GlobalVariable.JAVASE_ENABLED_DEVICES, listOfFiles[i].getName(), tempJavaSEStringDeviceLinker);
 	     
-	      // TODO: For Framework package
+	      // For Framework package
 	       copyFrameworkGeneratedFromVocabularyForInteraction(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), tempJavaSEStringDeviceLinker);
 	     
 	      
-	       //TODO : For Framework-Interface package (e.g., ITemperatureSensor)
+	       // For Framework-Interface package (e.g., ITemperatureSensor)
 	       copyFrameworkGeneratedFromVocabularyForInterface(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), tempJavaSEStringDeviceLinker);
 
 	      
-	       //TODO: For Framework-Struct (e.g., TempStruct)
-	      // copyFrameworkGeneratedFromVocabularyForStruct(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName());
+	       // For Framework-Struct (e.g., TempStruct)
+	       copyFrameworkGeneratedFromVocabularyForStruct(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), "Struct" );
 
 	       
-	       //TODO: For Framework-Listener (e.g. ListenertempMeasurement)
-	      // copyFrameworkGeneratedFromVocabularyForListener(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName());
+	       // For Framework-Listener (e.g. ListenertempMeasurement)
+	   copyFrameworkGeneratedFromVocabularyForListener(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), "Listener");
 
 	     
 	     }else{ // This is device with NULL abilities specified in deployment specification
@@ -238,27 +240,71 @@ public class LinkerCompiler {
 
 	}
 	
-	public static void copyFrameworkGeneratedFromVocabularyForStruct(String type,
-			String name) {
+	
+	public static void copyFrameworkGeneratedFromVocabularyForStruct(
+			String type, String name, String stringForRegEx) {
 
+		File srcFolder = new File(GlobalVariable.templatePath + "/" + type
+				+ "DeviceDrivers" + "/src/framework/");
+			
+		File[] listOfFiles = srcFolder.listFiles();
+
+		for (int i = 0; i < listOfFiles.length; i++) {
+
+			if (listOfFiles[i].getName().contains(stringForRegEx)) {
+
+				String tempValriableForStructFiles = listOfFiles[i].getName();
+
+				File srcFile = new File(GlobalVariable.templatePath + "/"
+						+ type + "DeviceDrivers" + "/src/framework/"
+						+ tempValriableForStructFiles );
+				
+				File destFolder = new File(GlobalVariable.templatePath + "/"
+						+ GlobalVariable.deploymentFolderPath + "/" + name
+						+ "/src/" + "framework");
+
+				try {
+					FileUtils.copyFileToDirectory(srcFile, destFolder);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+			}
+
+		}
 		
-		File srcFolder = new File(GlobalVariable.templatePath + "/" + type 	+ "DeviceDrivers" + "/src/framework/");
 		
-		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
-				+ "framework");
-		copyFiles(srcFolder, destFolder);
+		
+		//copyFiles(srcFolder, destFolder);
 
 	}
 	
-	public static void copyFrameworkGeneratedFromVocabularyForListener(String type,
-			String name) {
+	public static void copyFrameworkGeneratedFromVocabularyForListener(String type, String name, String stringForRegEx) {
 
-		
-		File srcFolder = new File(GlobalVariable.templatePath + "/" + type 	+ "DeviceDrivers" + "/src/framework/");
+		File srcFolder = new File(GlobalVariable.templatePath + "/" + type
+				+ "DeviceDrivers" + "/src/framework/");
+		File[] listOfFiles = srcFolder.listFiles();
+
+		for (int i = 0; i < listOfFiles.length; i++) {
+
+			if (listOfFiles[i].getName().contains(stringForRegEx)) {
+				String tempValriableForInterfaceFiles = listOfFiles[i].getName();
+				File srcFile = new File(GlobalVariable.templatePath + "/" + type + "DeviceDrivers" + "/src/framework/" + tempValriableForInterfaceFiles );
 		
 		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
 				+ "framework");
-		copyFiles(srcFolder, destFolder);
+		
+		try {
+			FileUtils.copyFileToDirectory(srcFile, destFolder);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+			}
+		}
+		
+		
+		
+		//copyFiles(srcFolder, destFolder);
 
 	}
 	
