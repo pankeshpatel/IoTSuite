@@ -65,8 +65,9 @@ agg_cs_def:
     {   
      context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
      context.currentComputationalService.createCSObject();
-   context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
-    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
+     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+     context.currentMappingConstraint.setSoftwareComponentType("inbuilt");       
+      context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
       context.currentComputationalService.generateAggregatorComputationalServiceCode(); 
     }
 ;
@@ -86,6 +87,8 @@ CAPITALIZED_ID
      context.currentComputationalService.createCSObject();
     context.currentComputationalService.generateComputationalServiceCode(); 
    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+   context.currentMappingConstraint.setSoftwareComponentType("custom"); 
+   
    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
    
     }
@@ -106,6 +109,7 @@ controller_def:
      context.currentComputationalService.createCSObject();
     context.currentComputationalService.generateComputationalServiceCode(); 
    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+      context.currentMappingConstraint.setSoftwareComponentType("custom");  
    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
    } 
 ;

@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-11-04 13:46:08
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-11-05 17:39:17
  
 package iotsuite.parser;
 import iotsuite.compiler.*;  

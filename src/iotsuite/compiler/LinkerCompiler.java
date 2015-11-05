@@ -14,6 +14,7 @@ import org.apache.commons.io.FileUtils;
 
 import iotsuite.common.GlobalVariable;
 import iotsuite.mappingalgo.MappingAlgoCompiler;
+import iotsuite.parser.SymbolTable;
 
 public class LinkerCompiler {
 	
@@ -27,7 +28,6 @@ public class LinkerCompiler {
 		File[] listOfFiles = folder.listFiles();
 
 		for (int i = 0; i < listOfFiles.length; i++) {
-
 			if (listOfFiles[i].isDirectory()) { // For JavaSE-enabled devices
 				if (listOfFiles[i].getName().startsWith(
 						GlobalVariable.JAVASE_ENABLED_DEVICES)) {
@@ -41,9 +41,8 @@ public class LinkerCompiler {
 	     // This is device with NoTNULL abilities specified in the deployment specification
 	     if(tempJavaSEStringDeviceLinker.contains("true")) {
 	     
-		     List<String> convertedTempJavaSEStringDeviceLinker = convertListFromSet(tempJavaSEStringDeviceLinker);
-
-           
+	    	List<String> convertedTempJavaSEStringDeviceLinker = convertListFromSet(tempJavaSEStringDeviceLinker);
+          
 	       // For deviceImpI  package
 	       copyDeviceDriversGeneratedFromVocabulary(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), convertedTempJavaSEStringDeviceLinker);
 	       
@@ -60,25 +59,57 @@ public class LinkerCompiler {
 	       // For Framework-Interface package (e.g., ITemperatureSensor)
 	       copyFrameworkGeneratedFromVocabularyForInterface(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), convertedTempJavaSEStringDeviceLinker);
 
+	       
+	       // For Framework-Listener (e.g. ListenertempMeasurement)
+	       copyFrameworkGeneratedFromVocabularyForListener(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), "Listener");
+
 	      
 	       // For Framework-Struct (e.g., TempStruct)
 	       copyFrameworkGeneratedFromVocabularyForStruct(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), "Struct" );
 
 	       
-	       // For Framework-Listener (e.g. ListenertempMeasurement)
-	   copyFrameworkGeneratedFromVocabularyForListener(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), "Listener");
-
+	      
 	     
 	     }else{ // This is device with NULL abilities specified in deployment specification
 	    	 
 		     List<String> convertedTempJavaSEStringDeviceLinker = convertListFromSet(tempJavaSEStringDeviceLinker);
-
-			    
+		    
 	    	// For logic package
 	    	 copyApplicationLogicArchitectureSpecification(GlobalVariable.JAVASE_ENABLED_DEVICES, listOfFiles[i].getName(), convertedTempJavaSEStringDeviceLinker);
  	 
-	    	// TODO: For Framework package 
-	    	 copyFrameworkArchitectureSpecification(GlobalVariable.JAVASE_ENABLED_DEVICES, listOfFiles[i].getName()); 
+	    	// For Framework package 
+	    	 copyFrameworkArchitectureSpecification(GlobalVariable.JAVASE_ENABLED_DEVICES, listOfFiles[i].getName(), convertedTempJavaSEStringDeviceLinker); 
+	        
+		     // For Framework - Struct component
+	    	 copyFrameworkGeneratedFromVocabularyForStruct(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), "Struct" );
+
+	    	 
+	    	 Set<String> noAbilitiesJavaSEDevicesForLinker 
+	         =	 MappingAlgoCompiler.mappingOutputForLinker.get(listOfFiles[i].getName().substring(6));
+	    	 
+	    	 if(noAbilitiesJavaSEDevicesForLinker.contains("inbuilt")){	    		 
+   		 	    		 
+	          List<String> tempString = convertListFromSet(tempJavaSEStringDeviceLinker);
+	    	    	     
+	    	 // For deviceImpI  package
+    	     copydeviceImplGeneratedFromArchitecture(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), tempString);
+		       
+		     //For Factory package
+    	     copyFactoryGenerateFromArchitecture(GlobalVariable.JAVASE_ENABLED_DEVICES, listOfFiles[i].getName(), tempString);
+			   
+	    	  // For Framework-Interface package (e.g., ITemperatureSensor)
+		      copyFrameworkGeneratedFromArchitectureForInterface(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), tempString);
+
+			 // For Framework-Listener (e.g. ListenertempMeasurement)
+		    copyFrameworkGeneratedFromAchitectureForListener(GlobalVariable.JAVASE_ENABLED_DEVICES,listOfFiles[i].getName(), "Listener");
+ 
+	    		 
+	    		 }
+	    	 
+	    	 
+	    	 
+	    	 
+	    	 
 	     }   
 			
            
@@ -117,13 +148,9 @@ public class LinkerCompiler {
 		}
 	}
 
-	public static void copyDeviceDriversGeneratedFromVocabulary(String type, String name, List<String> softwareComponmentNameToPick) {
-
-	
-		//if(softwareComponmentNameToPick.iterator().next().equals("true")) {
-		   // Do nothing...
-		//}		
-		//else{
+	public static void copyDeviceDriversGeneratedFromVocabulary(String type, String name, 
+			List<String> softwareComponmentNameToPick) {
+		
 			String tempVariableForSoftwareComponent = softwareComponmentNameToPick.iterator().next();
 			File srcFile = new File(GlobalVariable.templatePath + "/" + type
 				+ "DeviceDrivers" + "/src/deviceImpl/" + type + tempVariableForSoftwareComponent + ".java");
@@ -134,35 +161,31 @@ public class LinkerCompiler {
 				FileUtils.copyFileToDirectory(srcFile, destFolder);
 			} catch (IOException e) {
 				e.printStackTrace();
-			}
-		//}
+			}		
 		
+	}
+	
+	public static void copydeviceImplGeneratedFromArchitecture(String type, String name, 
+			List<String> softwareComponmentNameToPick) {
 		
-		//copyFiles(srcFolder, destFolder);
-
-		/*
-		File srcFolder1 = new File(GlobalVariable.templatePath + "/"
-				+ "ApplicationLogic/src/deviceImpl");
-
+			
+			File srcFile = new File(GlobalVariable.templatePath + "/"
+			+ "ApplicationLogic/src/deviceImpl/" + type + softwareComponmentNameToPick.get(0) + ".java");
+			
+			
+			
+			File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name
+					+ "/src/deviceImpl");			
+			try {
+				FileUtils.copyFileToDirectory(srcFile, destFolder);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}		
 		
-		File destFolder1 = new File(GlobalVariable.templatePath + "/"
-				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
-				+ "deviceImpl");
-
-		copyFiles(srcFolder1, destFolder1);
-		*/
 	}
 
 	public static void copyFactoryGenerateFromVocabulary(String type, String name, List<String> softwareComponmentNameToPick) {
 	
-		/*if(softwareComponmentNameToPick.iterator().next().equals("true")) {
-			   // Do nothing...
-			}		
-			else{*/
-				
-				
-	//	List<String> tempVariableForSoftwareComponent = convertListFromSet(softwareComponmentNameToPick);	  
-
 		File srcFile = new File(GlobalVariable.templatePath + "/" + type
 				+ "DeviceDrivers" + "/src/factory/" +  softwareComponmentNameToPick.get(0) + "Factory"  + ".java");
 
@@ -175,36 +198,31 @@ public class LinkerCompiler {
 			FileUtils.copyFileToDirectory(srcFile, destFolder);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-
-		//	}
-		
-		
-		
-		
-		//copyFiles(srcFolder, destFolder);
-
+		}	
+	}
 	
+	public static void copyFactoryGenerateFromArchitecture(String type, String name, List<String> softwareComponmentNameToPick) {
 		
-		/*File srcFolder1 = new File(GlobalVariable.templatePath + "/"
-				+ "ApplicationLogic/src/factory");
-		File destFolder1 = new File(GlobalVariable.templatePath + "/"
+		File srcFile = new File(GlobalVariable.templatePath + "/"
+				+ "ApplicationLogic/src/factory/" +  softwareComponmentNameToPick.get(0) 
+				 + "Factory" + ".java");
+				
+				
+		File destFolder = new File(GlobalVariable.templatePath + "/"
 				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
 				+ "factory");
-		copyFiles(srcFolder1, destFolder1);
-*/
+		
+		try {
+			FileUtils.copyFileToDirectory(srcFile, destFolder);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
 	}
-
+	
 	public static void copyFrameworkGeneratedFromVocabularyForInteraction(String type,
 			String name, List<String> softwareComponmentNameToPick) {
 		
-		/*if(softwareComponmentNameToPick.iterator().next().equals("true")) {
-			   // Do nothing...
-			}		
-			else{*/			
-				
-		//List<String> tempVariableForSoftwareComponent = convertListFromSet(softwareComponmentNameToPick);	
-    	File srcFile = new File(GlobalVariable.templatePath + "/" + type 	+ "DeviceDrivers" + "/src/framework/" +  softwareComponmentNameToPick.get(0) + ".java");
+		File srcFile = new File(GlobalVariable.templatePath + "/" + type 	+ "DeviceDrivers" + "/src/framework/" +  softwareComponmentNameToPick.get(0) + ".java");
 		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
 				+ "framework");
 		try {
@@ -212,24 +230,9 @@ public class LinkerCompiler {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-	//}
-		
-		
-		
-		//copyFiles(srcFolder, destFolder);
-
 	}
 	
 	public static void copyFrameworkGeneratedFromVocabularyForInterface(String type,String name, List<String> softwareComponmentNameToPick) {
-		
-/*		if(softwareComponmentNameToPick.iterator().next().equals("true")) {
-			   // Do nothing...
-			}		
-			else{*/			
-				
-		//List<String> tempVariableForSoftwareComponent = convertListFromSet(softwareComponmentNameToPick);	
-		
 		
 		File srcFile = new File(GlobalVariable.templatePath + "/" + type 	+ "DeviceDrivers" + "/src/framework/" + "I" + softwareComponmentNameToPick.get(0) + ".java" );
 		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
@@ -241,11 +244,22 @@ public class LinkerCompiler {
 		}		
 		
 		}
-		
-		//copyFiles(srcFolder, destFolder);
-
-	//}
 	
+	public static void copyFrameworkGeneratedFromArchitectureForInterface(String type,String name, List<String> softwareComponmentNameToPick) {
+		
+				
+		File srcFile = new File(GlobalVariable.templatePath + "/"
+				+ "ApplicationLogic/src/framework/" + "I" + softwareComponmentNameToPick.get(0) + ".java");
+		
+		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
+				+ "framework");
+		try {
+			FileUtils.copyFileToDirectory(srcFile, destFolder);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
+		
+		}
 	
 	public static void copyFrameworkGeneratedFromVocabularyForStruct(
 			String type, String name, String stringForRegEx) {
@@ -274,15 +288,8 @@ public class LinkerCompiler {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-
 			}
-
 		}
-		
-		
-		
-		//copyFiles(srcFolder, destFolder);
-
 	}
 	
 	public static void copyFrameworkGeneratedFromVocabularyForListener(String type, String name, String stringForRegEx) {
@@ -307,26 +314,38 @@ public class LinkerCompiler {
 		}
 			}
 		}
-		
-		
-		
-		//copyFiles(srcFolder, destFolder);
 
 	}
 	
-	
-	
-	
+	public static void copyFrameworkGeneratedFromAchitectureForListener(String type, String name, String stringForRegEx) {
+
+		
+		File srcFolder = new File(GlobalVariable.templatePath + "/"
+				+ "ApplicationLogic/src/framework/" );
+		
+		
+		File[] listOfFiles = srcFolder.listFiles();
+
+		for (int i = 0; i < listOfFiles.length; i++) {
+
+			if (listOfFiles[i].getName().contains(stringForRegEx)) {
+				String tempValriableForInterfaceFiles = listOfFiles[i].getName();
+				File srcFile = new File(GlobalVariable.templatePath + "/" + type + "DeviceDrivers" + "/src/framework/" + tempValriableForInterfaceFiles );
+		
+		File destFolder = new File(GlobalVariable.templatePath + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
+				+ "framework");
+		
+		try {
+			FileUtils.copyFileToDirectory(srcFile, destFolder);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+			}
+		}
+
+	}
 
 	public static void copyLogicGeneratedFromVocabulary(String type, String name,  List<String> softwareComponmentNameToPick) {
-
-		/*if(softwareComponmentNameToPick.iterator().next().equals("true")) {
-			   // Do nothing...
-			}		
-			else{*/
-				
-	  //  String tempVariableForSoftwareComponent = softwareComponmentNameToPick.iterator().next();
-		
 	    
 		File srcFile = new File(GlobalVariable.templatePath + "/" + type
 				+ "DeviceDrivers" + "/src/logic/" +  "Logic" + softwareComponmentNameToPick.get(0) + ".java" );		
@@ -340,25 +359,11 @@ public class LinkerCompiler {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		//}
-		
-		//copyFiles(srcFolder, destFolder);
 
 	}
 
-	/*
-	 * The following function will copy the written application logic by
-	 * application developer.
-	 */
-
 	public static void copyApplicationLogicArchitectureSpecification(String type, String name, List<String> softwareComponmentNameToPick) {
 		
-	/*	if(softwareComponmentNameToPick.iterator().next().equals("true")) {
-			   // Do nothing...
-			}		
-			else{	*/			
-	   // List<String> tempVariableForSoftwareComponent = convertListFromSet(softwareComponmentNameToPick);	
 		File srcFile = new File(GlobalVariable.templatePath + "/"
 				+ "ApplicationLogic/src/logic/" + "Logic" + softwareComponmentNameToPick.get(0) + ".java" );
 
@@ -372,25 +377,30 @@ public class LinkerCompiler {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
-		
-	//}
-		//copyFiles(srcFolder, destFolder);
 
 	}
 
 	public static void copyFrameworkArchitectureSpecification(String type,
-			String name) {
-		File srcFolder = new File(GlobalVariable.templatePath + "/"
-				+ "ApplicationLogic/src/framework");
+			String name, List<String> softwareComponmentNameToPick) {
+		
+		
+		File srcFile = new File(GlobalVariable.templatePath + "/"
+				+ "ApplicationLogic/src/framework/" +  softwareComponmentNameToPick.get(0) + ".java");
+		
 		File destFolder = new File(GlobalVariable.templatePath + "/"
 				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
 				+ "framework");
+		try {
+			FileUtils.copyFileToDirectory(srcFile, destFolder);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-		copyFiles(srcFolder, destFolder);
 	}
 
+	
+
+	// Some general function...
 	public static void copyFiles(File srcFolder, File destFolder) {
 		// make sure source exists
 		if (!srcFolder.exists()) {
@@ -410,7 +420,6 @@ public class LinkerCompiler {
 			}
 		}
 
-		// System.out.println("Done");
 
 	}
 
@@ -452,7 +461,6 @@ public class LinkerCompiler {
 
 			in.close();
 			out.close();
-			// System.out.println("File copied from " + src + " to " + dest);
 		}
 	}
 	
@@ -461,7 +469,7 @@ public class LinkerCompiler {
 		List<String> result = new ArrayList<String>();
 		L1.addAll(listVariable);
         for(String x : L1){
-        	if(x.equals("true") || x.equals("false")) {
+        	if(x.equals("true") || x.equals("false") || x.equals("NoType") || x.equals("custom") || x.equals("inbuilt")) {
         		//Do nothing ...
         	}else{
         		result.add(x);

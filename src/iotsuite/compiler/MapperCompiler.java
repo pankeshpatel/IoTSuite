@@ -22,20 +22,24 @@ import iotsuite.semanticmodel.Device;
 public class MapperCompiler {
 
 	private String softwareComponentName;
+	private String softwareComponentType;
+	
+
+	public String getSoftwareComponentType() {
+		return softwareComponentType;
+	}
+
+	public void setSoftwareComponentType(String softwareComponentType) {
+		this.softwareComponentType = softwareComponentType;
+	}
+
 	private DeploymentScope deploymentConstraint;
 
 	public MapperCompiler() {
 	}
 
 	public void addDeployementConstraintObj() {
-		/*
-		 * deploymentConstraint = new
-		 * DeploymentScope(getSoftwareComponentName(), getAttributeName(),
-		 * getAttributeValue());
-		 */
-
-		deploymentConstraint = new DeploymentScope(getSoftwareComponentName());
-
+    	deploymentConstraint = new DeploymentScope(getSoftwareComponentName(), getSoftwareComponentType());
 		SymbolTable.addDeploymentConstraints(deploymentConstraint);
 	}
 
@@ -46,8 +50,8 @@ public class MapperCompiler {
 	public void setSoftwareComponentName(String softwareComponentName) {
 		this.softwareComponentName = softwareComponentName;
 	}
-
 	
+
 	public static void mappingFileGenerator(List<Device> deviceList,
 			List<DeploymentScope> mappingConstraintList) throws IOException {
 

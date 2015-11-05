@@ -285,11 +285,9 @@ public class SymbolTable {
 
 			}
 		}
-
 	}
 
 	private void searchForActuatorFields() {
-
 		for (int i = 0; i < 10; i++) {
 			if (arrayFieldName[i][0] != null) {
 				if (arrayFieldName[i][0].equals(actuatorStructName)) {
