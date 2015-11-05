@@ -13,18 +13,12 @@ import java.util.Set;
 public class MappingAlgoCompiler {
 
 	private static int j;
+	
+	public static Map<String, Set<String>> mappingOutputForLinker = new HashMap<String, Set<String>>();
+	//public static Map<String, Set<String>> mappingOutputWithoutAbilitiesForLinker = new HashMap<String, Set<String>>();
 
-	/**
-	 * 
-	 * @param deviceList
-	 *            : This is a List of devices, which are fetched from Network
-	 *            Description File
-	 * @param mappingConstraintList
-	 *            : This is a list of mapping Constraints, which are fetched
-	 *            from Mapping constrainsts file
-	 * @return Map<Device,Set<String>> : This is final mapping between devices
-	 *         and software Components ( CS, Controller).
-	 */
+
+	
 	public static Map<Device, Set<String>> mapTasks(List<Device> deviceList,
 			List<DeploymentScope> mappingConstraintList) {
 
@@ -33,7 +27,6 @@ public class MappingAlgoCompiler {
 		final Map<Device, Set<String>> finalMapping = new HashMap<Device, Set<String>>();
 
 		for (Device deviceObj : deviceList) {
-
 			tempDeviceList.add(deviceObj);
 
 		}
@@ -50,15 +43,21 @@ public class MappingAlgoCompiler {
 
 				Set<String> tempsc = new HashSet<String>();
 				tempsc.add(tempSoftwareComponentList.get(j));
+				tempsc.add("false");
 				finalMapping.put(tempDeviceList.get(i), tempsc);
+				mappingOutputForLinker.put(tempDeviceList.get(i).getName(), tempsc);
 				j++;
 			} else {
 
-				finalMapping.put(tempDeviceList.get(i), tempDeviceList.get(i)
-						.getAbilities());
+				finalMapping.put(tempDeviceList.get(i), tempDeviceList.get(i).getAbilities());
+				Set<String> tempSoftwareComponentWithAbilities  = new HashSet<String>();
+				tempSoftwareComponentWithAbilities.addAll(tempDeviceList.get(i).getAbilities());
+				tempSoftwareComponentWithAbilities.add("true");
+				mappingOutputForLinker.put(tempDeviceList.get(i).getName(), tempSoftwareComponentWithAbilities );
 			}
-
 		}
+		
+		System.out.println(mappingOutputForLinker);
 		return finalMapping;
 	}
 

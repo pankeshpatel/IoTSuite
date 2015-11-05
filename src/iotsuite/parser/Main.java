@@ -30,7 +30,6 @@ public class Main {
 				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 				vocParser.vocabSpec();
-
 				GenFiller.copyDeviceDrivers();
 
 			}
@@ -128,7 +127,6 @@ public class Main {
 						mappingConstraintList);
 				LinkerCompiler.linkerAlgo();
 				GenFiller.copyLinking();
-				// GenFiller.copyMapping();
 
 			}
 		} else {

@@ -47,18 +47,7 @@ public class MapperCompiler {
 		this.softwareComponentName = softwareComponentName;
 	}
 
-	/*
-	 * public String getAttributeName() { return attributeName; }
-	 * 
-	 * public void setAttributeName(String attributeName) { this.attributeName =
-	 * attributeName; }
-	 * 
-	 * public String getAttributeValue() { return attributeValue; }
-	 * 
-	 * public void setAttributeValue(String attributeValue) {
-	 * this.attributeValue = attributeValue; }
-	 */
-
+	
 	public static void mappingFileGenerator(List<Device> deviceList,
 			List<DeploymentScope> mappingConstraintList) throws IOException {
 
@@ -66,24 +55,12 @@ public class MapperCompiler {
 		Map<Device, Set<String>> taskMapper = MappingAlgoCompiler.mapTasks(
 				deviceList, mappingConstraintList);
 
-		/*
-		 * The following for loop will take each device individually and do the
-		 * following
-		 * 
-		 * (1) multiplyTemplate ??? (2) generateStartupCode -- It will generate
-		 * mapping files (3) generateExecutionCode -- It will generate platform
-		 * specific start-up files MainActivity.java for Android, Main.java for
-		 * JavaSE (4) generateProjectFileCode - It will generate .project file
-		 * for JavaSE .project file for Android device.
-		 */
-
+	
 		for (Entry<Device, Set<String>> entry : taskMapper.entrySet()) {
 
 			Device device = MergeDeviceAbilities(entry.getKey(),
 					entry.getValue(), "DBServer");
 
-			// The following function generates "template" according to
-			// type(JavaSE/Android).
 			multiplyTemplate(device);
 			genearateStartupCode(device);
 			genearateExecutionCode(device);
@@ -134,28 +111,18 @@ public class MapperCompiler {
 			generateDeviceManifest(unit);
 		}
 
-		// The following line take the template from the
-		// GlobalVariable.frameworkRootDir
-		File srcFolder = new File(GlobalVariable.templatePath + "/"
+			File srcFolder = new File(GlobalVariable.templatePath + "/"
 				+ "DeviceDrivers" + "/" + unit.getType());
-		// File srcFolder = new File(GlobalVariable.activityGenPath + "/" +
-		// "JavaSEDeviceDrivers" );
-		// new File(GlobalVariable.frameworkRootDir).mkdirs();
+	
 		new File(GlobalVariable.templatePath).mkdirs();
-		// File destFolder = new File(GlobalVariable.frameworkRootDir + "/" +
-		// unit.getType() + unit.getName());
-
 		File destFolder = new File(GlobalVariable.templatePath + "/"
 				+ GlobalVariable.deploymentFolderPath + "/" + unit.getType()
 				+ unit.getName());
 
 		if (!srcFolder.exists()) {
-
 			System.out.println("Directory does not exist.");
 			System.exit(0);
-
 		} else {
-
 			try {
 				GenFiller.copyFolder(srcFolder, destFolder);
 			} catch (IOException e) {
