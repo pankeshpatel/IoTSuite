@@ -39,16 +39,20 @@ public class MappingAlgoCompiler {
 
 		for (int i = 0; i < tempDeviceList.size(); i++) {
 
-			if (tempDeviceList.get(i).getAbilities().isEmpty()) {
-
+			if (tempDeviceList.get(i).getAbilities().isEmpty()) { // This is for devices with NULL abilities ....  
+				
+				
 				Set<String> tempsc = new HashSet<String>();
 				tempsc.add(tempSoftwareComponentList.get(j));
 				tempsc.add("false");
-				finalMapping.put(tempDeviceList.get(i), tempsc);
 				mappingOutputForLinker.put(tempDeviceList.get(i).getName(), tempsc);
+
+				// False abilities have been removed ....
+				Set<String> tempscForFinalOutputVaribale = new HashSet<String>();
+				tempscForFinalOutputVaribale.add(tempSoftwareComponentList.get(j));		
+				finalMapping.put(tempDeviceList.get(i), tempscForFinalOutputVaribale);
 				j++;
 			} else {
-
 				finalMapping.put(tempDeviceList.get(i), tempDeviceList.get(i).getAbilities());
 				Set<String> tempSoftwareComponentWithAbilities  = new HashSet<String>();
 				tempSoftwareComponentWithAbilities.addAll(tempDeviceList.get(i).getAbilities());

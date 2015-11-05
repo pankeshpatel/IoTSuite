@@ -60,6 +60,8 @@ public class MapperCompiler {
 
 			Device device = MergeDeviceAbilities(entry.getKey(),
 					entry.getValue(), "DBServer");
+			
+			
 
 			multiplyTemplate(device);
 			genearateStartupCode(device);
@@ -134,6 +136,7 @@ public class MapperCompiler {
 	}
 
 	private static void genearateStartupCode(Device device) {
+		
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generateDevice
 				.generateDeviceStartup(device);
