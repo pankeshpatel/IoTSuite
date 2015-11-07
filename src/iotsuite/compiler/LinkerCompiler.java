@@ -112,25 +112,61 @@ public class LinkerCompiler {
 	     }   
 			
            
-		} else { //TODO: For Android-enabled devices.
+		} else { //For Android-enabled devices.
 
-/*			System.out.println("Linked code for "
-							+ listOfFiles[i].getName() + " device");
+			System.out.println("Linked code for " + listOfFiles[i].getName() + " device");
+			
+			
+			Set<String> tempAndroidStringDeviceLinker =	MappingAlgoCompiler.mappingOutputForLinker.get(listOfFiles[i].getName().substring(7));
+	          
+		      
+			List<String> convertedTempJavaSEStringDeviceLinker = convertListFromSet(tempAndroidStringDeviceLinker);
+
+			
+			// For deviceImpI  package
+		       copyDeviceDriversGeneratedFromVocabulary(GlobalVariable.ANDROID_ENABLED_DEVICES,listOfFiles[i].getName(), convertedTempJavaSEStringDeviceLinker);
+		       
+		       //For Factory package
+		       copyFactoryGenerateFromVocabulary(GlobalVariable.ANDROID_ENABLED_DEVICES, listOfFiles[i].getName(), convertedTempJavaSEStringDeviceLinker);
+			   
+		       //For Logic package
+		       copyLogicGeneratedFromVocabulary(GlobalVariable.ANDROID_ENABLED_DEVICES, listOfFiles[i].getName(), convertedTempJavaSEStringDeviceLinker);
+		     
+		      // For Framework package
+		       copyFrameworkGeneratedFromVocabularyForInteraction(GlobalVariable.ANDROID_ENABLED_DEVICES,listOfFiles[i].getName(), convertedTempJavaSEStringDeviceLinker);
+		     
+		      
+		       // For Framework-Interface package (e.g., ITemperatureSensor)
+		       copyFrameworkGeneratedFromVocabularyForInterface(GlobalVariable.ANDROID_ENABLED_DEVICES,listOfFiles[i].getName(), convertedTempJavaSEStringDeviceLinker);
+
+		       
+		       // For Framework-Listener (e.g. ListenertempMeasurement)
+		       copyFrameworkGeneratedFromVocabularyForListener(GlobalVariable.ANDROID_ENABLED_DEVICES,listOfFiles[i].getName(), "Listener");
+
+		      
+		       // For Framework-Struct (e.g., TempStruct)
+		       copyFrameworkGeneratedFromVocabularyForStruct(GlobalVariable.ANDROID_ENABLED_DEVICES,listOfFiles[i].getName(), "Struct" );
+
+			
+			
+			
+			
+			
+			
 					
-			Set<String> tempAndroidStringDeviceLinker =	 
-				MappingAlgoCompiler.mappingOutputForLinker.get(listOfFiles[i].getName().substring(7));
+			/* Set<String> tempAndroidStringDeviceLinker =	MappingAlgoCompiler.mappingOutputForLinker.get(listOfFiles[i].getName().substring(7));
 			
-			copyDeviceDriversGeneratedFromVocabulary(GlobalVariable.ANDROID_ENABLED_DEVICES,
+			copyAndroidDeviceDriversGeneratedFromVocabulary(GlobalVariable.ANDROID_ENABLED_DEVICES,
 							listOfFiles[i].getName(), tempAndroidStringDeviceLinker);
 			
-			copyFactoryGenerateFromVocabulary(GlobalVariable.ANDROID_ENABLED_DEVICES,
+			copyAndroidFactoryGenerateFromVocabulary(GlobalVariable.ANDROID_ENABLED_DEVICES,
 							listOfFiles[i].getName(), tempAndroidStringDeviceLinker);
 			
-			copyApplicationLogicArchitectureSpecification(
+			copyAndroidApplicationLogicArchitectureSpecification(
 					GlobalVariable.ANDROID_ENABLED_DEVICES,
 					listOfFiles[i].getName(), tempAndroidStringDeviceLinker);
 					
-			copyLogicGeneratedFromVocabulary(GlobalVariable.ANDROID_ENABLED_DEVICES, 
+			copyAndroidLogicGeneratedFromVocabulary(GlobalVariable.ANDROID_ENABLED_DEVICES, 
 					listOfFiles[i].getName(), tempAndroidStringDeviceLinker);
 			
 					copyFrameworkGeneratedFromVocabulary(
@@ -140,8 +176,8 @@ public class LinkerCompiler {
 					
 					copyFrameworkArchitectureSpecification(
 							GlobalVariable.ANDROID_ENABLED_DEVICES,
-							listOfFiles[i].getName());
-*/
+							listOfFiles[i].getName());*/
+
 				}
 			}
 		}

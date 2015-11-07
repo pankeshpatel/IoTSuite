@@ -65,7 +65,6 @@ devices:
         resources:Heater;
 		protocol: mqtt;
 		description: d1 Description;
-		
 	D10:
         location:
              Room: 1;
