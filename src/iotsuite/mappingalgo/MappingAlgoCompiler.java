@@ -69,8 +69,6 @@ public class MappingAlgoCompiler {
 			}
 		}
 		
-		System.out.println(mappingOutputForLinker);
-		System.out.println(mappingOutputBuiltInSoftwareComponentForLinker);
 		return finalMapping;
 	}
 

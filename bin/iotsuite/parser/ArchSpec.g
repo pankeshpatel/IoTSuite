@@ -47,9 +47,12 @@ structField_def:
 cs_def:      
     'InBuilt' ':'  
        (agg_cs_def)* 
-     ('Custom'     ':' (coordinator_def)* )*
-     ('Controller' ':' (controller_def)* )* 
-;    
+     'Custom' ':' 
+        (controller_def)*  
+        
+    // ('Custom'     ':' (coordinator_def)* )* 
+    // ('Controller' ':' (controller_def)* )* 
+;       
 
  
 agg_cs_def:  
@@ -72,27 +75,26 @@ agg_cs_def:
     }
 ;
 
-coordinator_def:
+//coordinator_def:
 
-CAPITALIZED_ID
-    { 
-     context.currentComputationalService = new ComputationalServiceCompiler(); 
-     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);} 
-    (csConsumeInfo_def ';')* 
-    (csRequest_def ';')*
-    (csGeneratedInfo_def ';')*
+//CAPITALIZED_ID
+//    { 
+//     context.currentComputationalService = new ComputationalServiceCompiler(); 
+//     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);} 
+//    (csConsumeInfo_def ';')* 
+//    (csRequest_def ';')*
+//    (csGeneratedInfo_def ';')*
    //(partition_def ';')+  
-    { 
-    context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
-     context.currentComputationalService.createCSObject();
-    context.currentComputationalService.generateComputationalServiceCode(); 
-   context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
-   context.currentMappingConstraint.setSoftwareComponentType("custom"); 
+//    { 
+//    context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
+//     context.currentComputationalService.createCSObject();
+//    context.currentComputationalService.generateComputationalServiceCode(); 
+//   context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+//   context.currentMappingConstraint.setSoftwareComponentType("custom"); 
+//    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
    
-   context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
-   
-    }
-; 
+//    }
+//;   
 
 controller_def:
 
@@ -101,8 +103,10 @@ controller_def:
      context.currentComputationalService = new ComputationalServiceCompiler(); 
      context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
      } 
-    (csConsumeInfo_def ';')* 
-    (cntrlCommand_def ';')*   
+    (csConsumeInfo_def ';')*  // Input
+     (csRequest_def ';')*  // Input
+    (csGeneratedInfo_def ';')*   // output
+    (cntrlCommand_def ';')*   //output 
    //  (partition_def ';')+   
     { 
     context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
@@ -110,7 +114,7 @@ controller_def:
     context.currentComputationalService.generateComputationalServiceCode(); 
    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
       context.currentMappingConstraint.setSoftwareComponentType("custom");  
-   context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
+   context.currentMappingConstraint.addDeployementConstraintObj(); 
    } 
 ;
   
