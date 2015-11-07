@@ -59,19 +59,14 @@ public class GenFiller {
 	}
 
 	public static void copyFiles(File srcFolder, File destFolder) {
-		// make sure source exists
 		if (!srcFolder.exists()) {
-
-			// just exit
 			System.exit(0);
-
 		} else {
 
 			try {
 				copyFolder(srcFolder, destFolder);
 			} catch (IOException e) {
 				e.printStackTrace();
-				// error, just exit
 				System.exit(0);
 			}
 		}

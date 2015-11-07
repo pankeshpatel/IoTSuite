@@ -26,7 +26,7 @@ public class ComputationalService extends SoftwareComponent<Information> {
 		this.actions = actions;
 		this.operatation = operation;
 		this.fields = fields;
-		this.sampleValue = sampleValue;
+		ComputationalService.sampleValue = sampleValue;
 	}
 
 	public List<StructField> getFields() {

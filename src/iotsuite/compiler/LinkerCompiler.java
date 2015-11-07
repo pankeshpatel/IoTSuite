@@ -14,7 +14,6 @@ import org.apache.commons.io.FileUtils;
 
 import iotsuite.common.GlobalVariable;
 import iotsuite.mappingalgo.MappingAlgoCompiler;
-import iotsuite.parser.SymbolTable;
 
 public class LinkerCompiler {
 	
