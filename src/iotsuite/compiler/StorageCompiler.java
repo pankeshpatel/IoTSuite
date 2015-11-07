@@ -153,19 +153,16 @@ public class StorageCompiler {
 	
 	public void generateStorageCode() {
 
-		// Storage Interaction with other entities
 		generateStorageInteraction_StorageCompiler();
 
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
-			// Storage's ApplicationLogic
 			generateStorageLogic_StorageCompiler();
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 				generateJavaSEStorageFactory_StorageCompiler();
 				generateJavaSEStorageImpl_StorageCompiler();
 				generateStorageInterface_StorageCompiler();
-
 			}
 
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
@@ -222,7 +219,6 @@ public class StorageCompiler {
 				.generateJavaSEStorageInterface(storageService);
 		SourceFileDumper dumpGeneratedStorageInterface = new SourceFileDumper();
 		dumpGeneratedStorageInterface.dumpCompilationUnit(generatedCU);
-
 	}
 
 	private void generateStorageLogic_StorageCompiler() {
@@ -232,5 +228,4 @@ public class StorageCompiler {
 		SourceFileDumper dumpGeneratedStorageService = new SourceFileDumper();
 		dumpGeneratedStorageService.dumpCompilationUnit(generatedCU);
 	}
-
 }

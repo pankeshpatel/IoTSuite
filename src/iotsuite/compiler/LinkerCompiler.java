@@ -16,8 +16,6 @@ import iotsuite.common.GlobalVariable;
 import iotsuite.mappingalgo.MappingAlgoCompiler;
 
 public class LinkerCompiler {
-	
-
 
 	public static void linkerAlgo() {
 

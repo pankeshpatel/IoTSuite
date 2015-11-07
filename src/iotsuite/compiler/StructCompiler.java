@@ -12,7 +12,6 @@ import java.util.List;
 
 public class StructCompiler {
 
-	// HashMap<String,List<String>> map = new HashMap<String,List<String>>();
 	private Struct createdStructure;
 	private List<StructField> StructFieldSet = new ArrayList<StructField>();
 	private String structName;
@@ -23,14 +22,9 @@ public class StructCompiler {
 	public StructCompiler(String structName) {
 		this.structName = structName;
 		createdStructure = new Struct(structName, getStructFieldSet());
-		// createdStructure = new Struct(structName, getStructFieldSet());
-
 	}
 
 	public void addField(String fieldName, String fieldType) {
-
-		// List<String> StructFieldList = new ArrayList<String>();
-
 		StructField Field = new StructField(fieldName, new PrimitiveType(
 				fieldType));
 		StructFieldSet.add(Field);
@@ -38,12 +32,10 @@ public class StructCompiler {
 	}
 
 	public List<StructField> getStructFieldSet() {
-
 		return StructFieldSet;
 	}
 
 	public String getStructName() {
-
 		return structName;
 	}
 

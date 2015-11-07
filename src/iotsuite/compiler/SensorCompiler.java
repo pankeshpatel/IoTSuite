@@ -14,17 +14,10 @@ import java.util.Set;
 
 public class SensorCompiler {
 
-	// private Sensor sensorDriver;
 	private Sensor sensorDriver;
 	private Set<SensorMeasurement> generatedInfo = new HashSet<SensorMeasurement>();
-	// Store field name and types used by Event Driven Sensor
 	public static List<String> eventDrivenFields;
-
-	// Store field name used by Event Driven Sensor
 	public static List<String> eventDrivenFieldName;
-
-	// Following two String variables are used to store value of samplePeriod
-	// and sampleDuration specified in vocab.txt
 	public static String samplePeriod;
 	public static String sampleDuration;
 
@@ -32,8 +25,6 @@ public class SensorCompiler {
 	}
 
 	public SensorCompiler(String sensorName) {
-		// sensorDriver = new Sensor(sensorName, getAttributeSet(),
-		// getGeneratedInfo(), null);
 		sensorDriver = new Sensor(sensorName, getGeneratedInfo(), null,
 				getEventDrivenFieldName(), getEventDrivenFields());
 	}
@@ -69,29 +60,8 @@ public class SensorCompiler {
 	public void addSensorMeasurementSampleDuration(String sampleDuration) {
 
 		SensorCompiler.sampleDuration = sampleDuration;
-
 	}
 
-	// Getter and setter of Attribute
-	/*
-	 * private Set<Attribute> attributeSet = new HashSet<Attribute>();
-	 * 
-	 * public Set<Attribute> getAttributeSet() { return attributeSet; }
-	 * 
-	 * public void addAttribute(String fieldName, String fieldType) { Attribute
-	 * attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
-	 * attributeSet.add(attribute); }
-	 */
-
-	/*
-	 * The following function generates programming framework for Sensor. It
-	 * generates code in the following sequence.
-	 * 
-	 * (1) Sensor's Interaction (2) Sensor's ApplicationLogic (3) Sensor's
-	 * Factory (4) Sensor's JavaSE-enabled device Implementation (5) Sensor's
-	 * Android-enabled device Implementation (6) Sensor's Interface (7) Sensor's
-	 * Listener
-	 */
 
 	// This function will generate code for Periodic Sensor
 	public void generatePeriodicSensorCode() {
@@ -101,8 +71,6 @@ public class SensorCompiler {
 
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
-
-			// Sensor's Application Logic
 
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 
@@ -142,52 +110,32 @@ public class SensorCompiler {
 
 	}
 
-	// This function will generate code for Event Driven Sensor
 	public void generateEventDrivenSensorCode() {
 
-		// Sensor's Interaction
 		generateSensorInteraction_SensorCompiler();
 
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
-			// Sensor's Application Logic
-
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
-
-				// Sensor's Application Logic
 				generateJavaSESensorLogic_SensorCompiler();
-
-				// JavaSE SensorFactory
 				generateJavaSESensorFactory_SensorCompiler();
-
-				// Sensor's JavaSE Implementation
 				generateSensorJavaSE_EventDrivenSensorCompiler();
 			}
 
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
-
-				// Sensor's Application Logic
 				generateAndroidSensorLogic_SensorCompiler();
-
-				// Android SensorFactory
 				generateAndroidSensorFactory_SensorCompiler();
-
-				// Sensor's Android Implementation
 				generateSensorAndroid_EventDrivenSensorCompiler();
-				// generateSensorAndroidService_SensorCompiler();
+
 			}
-
-			// Sensor's Interface
 			generateSensorInterface_SensorCompiler();
-
-			// Sensor's Listener
 			for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
 				generateSensorListener_SensorCompiler(sensorDriver
 						.getAllGeneratedInfo().get(i));
 			}
 
-		}
+	}
 
 	}
 
@@ -254,16 +202,6 @@ public class SensorCompiler {
 		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}
-
-	/*
-	 * private void generateSensorJavaSE_SensorCompiler() { JavaFrameworkFromST
-	 * generateSensorImplFactory = new JavaFrameworkFromST(); CompilationUnit
-	 * generateCU = generateSensorImplFactory
-	 * .generateJavaSESensorImpl(sensorDriver); SourceFileDumper
-	 * dumpGeneratedSensorImplFactory = new SourceFileDumper();
-	 * dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU); }
-	 */
-	// Sensor's Android Implementation
 	private void generateSensorAndroid_PeriodicSensorCompiler() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorImplFactory
@@ -279,17 +217,6 @@ public class SensorCompiler {
 		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}
-
-	/*
-	 * private void generateSensorAndroidService_SensorCompiler() {
-	 * JavaFrameworkFromST generateSensorImplFactory = new
-	 * JavaFrameworkFromST(); CompilationUnit generateCU =
-	 * generateSensorImplFactory.generateAndroidSensorServiceImpl(sensorDriver);
-	 * SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
-	 * dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU); }
-	 */
-
-	// Sensor's Interface
 	private void generateSensorInterface_SensorCompiler() {
 		JavaFrameworkFromST generateSensorInterface = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorInterface
@@ -298,7 +225,6 @@ public class SensorCompiler {
 		dumpGeneratedSensorInterface.dumpCompilationUnit(generateCU);
 	}
 
-	// Sensor's Listener
 	public void generateSensorListener_SensorCompiler(
 			SensorMeasurement sensorMeasurement) {
 		JavaFrameworkFromST generateSensorListener = new JavaFrameworkFromST();

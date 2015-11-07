@@ -34,7 +34,7 @@ public class ActuatorCompiler {
 		return fieldName;
 	}
 
-	// Getter and Setter of Parameters
+	
 	public void addParameter(String parameterName, String parameterType) {
 		parameter = new Parameter(parameterName, new DataType(parameterType));
 	}
@@ -43,7 +43,6 @@ public class ActuatorCompiler {
 		return parameter;
 	}
 
-	// Getter and Setter of Action
 	public void addAction(String actionName) {
 		Action action = new Action(actionName, getParameter(), null);
 		actions.add(action);
@@ -56,45 +55,27 @@ public class ActuatorCompiler {
 	
 	public void generateActuatorCode() {
 
-		// Actuator's Interaction
+
 		generateActuatorInteraction_ActuatorCompiler();
 
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
-			// Actuator's JavaSE-enabled
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
-
-				// JavaSE Actuator's ApplicationLogic
 				generateJavaSEActuatorLogic_ActuatorCompiler();
-
 				generateJavaSEActuatorFactory_ActuatorCompiler();
-
 				generateJavaSEActuator_ActuatorCompiler();
-
 			}
-
-			// Actuator's Android-enabled
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
-
-				// Android Actuator's ApplicationLogic
 				generateAndroidActuatorLogic_ActuatorCompiler();
-
 				generateAndroidActuatorFactory_ActuatorCompiler();
-
 				generateActuatorAndroid_ActuatorCompiler();
-
 			}
-
-			// Actuator's Interface
 			generateActuatorInterface_ActuatorCompiler();
-
 		}
-
 	}
 
 	private void generateActuatorInteraction_ActuatorCompiler() {
-
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedActuatorDriver
 				.generateActuatorInteraction(actuatorDriver);
@@ -103,7 +84,6 @@ public class ActuatorCompiler {
 
 	}
 
-	// This framework will generate a device framework for PC
 	private void generateJavaSEActuator_ActuatorCompiler() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedActuatorDriver
@@ -112,7 +92,6 @@ public class ActuatorCompiler {
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 	}
 
-	// This framework will generate a device framework for Android
 	private void generateActuatorAndroid_ActuatorCompiler() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedActuatorDriver

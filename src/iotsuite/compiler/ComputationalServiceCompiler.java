@@ -20,7 +20,6 @@ import java.util.Set;
 public class ComputationalServiceCompiler {
 
 	private ComputationalService computationalService;
-
 	private Set<Information> generatedInfo = new HashSet<Information>();
 	private Set<Information> consumedInfo = new HashSet<Information>();
 	private String operationType;
@@ -59,16 +58,13 @@ public class ComputationalServiceCompiler {
 	}
 
 	public void createCSObject() {
-
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
 				getOperation(), getStructFieldSet(), getSampleValue());
-
 	}
 
 	public List<StructField> getStructFieldSet() {
-
 		StructFieldSet = iotsuite.parser.SymbolTable.StructFieldSet;
 		return StructFieldSet;
 	}
@@ -81,8 +77,6 @@ public class ComputationalServiceCompiler {
 		this.dataAccessList = SymbolTable
 				.getDataAccessSymblTable(dataAccessStr);
 	}
-
-	// Getter and Setter of Consumed Info
 
 	public Set<Information> getConsumedInfo() {
 		return consumedInfo;
@@ -141,7 +135,6 @@ public class ComputationalServiceCompiler {
 	}
 	
 	public void generateComputationalServiceInteraction_ComputationalServiceCompiler() {
-
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
 				.generateComputationalServiceInteraction(computationalService);

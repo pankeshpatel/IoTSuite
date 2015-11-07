@@ -78,8 +78,11 @@ public class SymbolTable {
 	public static String actuatorStructName;
 	public static String storageActionStructName;
 	public static String aggregatorStructName;
-	static String[][] arrayFieldName = new String[10][2];
-	static String[][] arrayFieldType = new String[10][2];
+/*	static String[][] arrayFieldName = new String[10][2];
+	static String[][] arrayFieldType = new String[10][2];*/
+	
+	static String[][] arrayFieldName = new String[200][200];
+	static String[][] arrayFieldType = new String[200][200];	
 	public static int rowCount = 0;
 	public static int columnCount = 0;
 	public static String[][] arrayGUIGeneratedInfo = new String[10][2];

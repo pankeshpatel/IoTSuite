@@ -15,20 +15,14 @@ public class SourceFileDumper {
 
 	public void dumpCompilationUnit(CompilationUnit template) {
 
-		/*
-		 * The following part of the code is evaluated true, when activity =
-		 * "Generate Device Driver"
-		 */
-
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
-			// For JavaSE enabled devices
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 				generateCodeForJavaSEDeviceDriverActivity(template,
 						GlobalVariable.deviceJAVASEType, null);
 			}
-			// For Android-enabled devices
+
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
 				generateCodeForAndroidDeviceDriverActivity(template,
 						GlobalVariable.deviceAndroidType, null);
@@ -38,25 +32,20 @@ public class SourceFileDumper {
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_USERINTERACTION)) {
 
-			// For JavaSE enabled devices
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 				generateCodeForJavaSEDeviceDriverActivity(template,
 						GlobalVariable.deviceJAVASEType, null);
 			}
-			// For Android-enabled devices
+
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
 				generateCodeForAndroidDeviceDriverActivity(template,
 						GlobalVariable.deviceAndroidType, null);
 			}
 		}
 
-		/*
-		 * The following part of the code is evaluated true, when activity =
-		 * "Generate Architecture Framework"
-		 */
-
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK)) {
+			
 
 			generateCodeForArchitectureFrameworkActivity(template,
 					"ApplicationLogic", null);
@@ -65,12 +54,12 @@ public class SourceFileDumper {
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
 
-			// For Android enabled devices
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
 				generateCodeForMappingActivitity(template, "deviceMapping",
 						"Android");
 			}
-			// For JavaSE enabled devices
+
+			
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 				generateCodeForMappingActivitity(template,
 						GlobalVariable.deviceJAVASEType,

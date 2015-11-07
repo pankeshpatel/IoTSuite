@@ -16,117 +16,114 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 
-		if (GlobalVariable.DEVELOPMENT_METHODOLOGY) {
+		GlobalVariable.activity = args[0];
+		GlobalVariable.templatePath = args[1];
 
-			GlobalVariable.activity = args[0];
-			GlobalVariable.templatePath = args[1];
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
 
-			if (GlobalVariable.activity.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
+			ANTLRFileStream vocStream = new ANTLRFileStream(
+					GlobalVariable.vocabSpec);
+			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+			vocParser.vocabSpec();
+			// GenFiller.copyDeviceDrivers();
 
-				ANTLRFileStream vocStream = new ANTLRFileStream(
-						GlobalVariable.vocabSpec);
-				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
-				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
-				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
-				vocParser.vocabSpec();
-				GenFiller.copyDeviceDrivers();
+		}
 
-			}
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_USERINTERACTION)) {
 
-			if (GlobalVariable.activity
-					.equals(GlobalVariable.ACTIVITY_GENERATE_USERINTERACTION)) {
+			ANTLRFileStream vocStream = new ANTLRFileStream(
+					GlobalVariable.vocabSpec);
+			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+			vocParser.vocabSpec();
 
-				ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
-				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
-				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
-				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
-				vocParser.vocabSpec();
+			ANTLRFileStream interactionStream = new ANTLRFileStream(
+					GlobalVariable.interactionSpec);
+			InteractionSpecLexer interactionLexer = new InteractionSpecLexer(
+					interactionStream);
+			CommonTokenStream interactionTokens = new CommonTokenStream(
+					interactionLexer);
+			InteractionSpecParser interactionParser = new InteractionSpecParser(
+					interactionTokens);
+			interactionParser.interactionSpec();
 
-				ANTLRFileStream interactionStream = new ANTLRFileStream(GlobalVariable.interactionSpec);
-				InteractionSpecLexer interactionLexer = new InteractionSpecLexer(
-						interactionStream);
-				CommonTokenStream interactionTokens = new CommonTokenStream(
-						interactionLexer);
-				InteractionSpecParser interactionParser = new InteractionSpecParser(
-						interactionTokens);
-				interactionParser.interactionSpec();
+			// GenFiller.copyDeviceDrivers();
 
-				GenFiller.copyDeviceDrivers();
+		}
 
-			}
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK)) {
 
-			if (GlobalVariable.activity
-					.equals(GlobalVariable.ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK)) {
+			ANTLRFileStream vocStream = new ANTLRFileStream(
+					GlobalVariable.vocabSpec);
+			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+			vocParser.vocabSpec();
 
-				ANTLRFileStream vocStream = new ANTLRFileStream(
-						GlobalVariable.vocabSpec);
-				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
-				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
-				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
-				vocParser.vocabSpec();
+			ANTLRFileStream interactionStream = new ANTLRFileStream(
+					GlobalVariable.interactionSpec);
+			InteractionSpecLexer interactionLexer = new InteractionSpecLexer(
+					interactionStream);
+			CommonTokenStream interactionTokens = new CommonTokenStream(
+					interactionLexer);
+			InteractionSpecParser interactionParser = new InteractionSpecParser(
+					interactionTokens);
+			interactionParser.interactionSpec();
 
-				ANTLRFileStream interactionStream = new ANTLRFileStream(
-						GlobalVariable.interactionSpec);
-				InteractionSpecLexer interactionLexer = new InteractionSpecLexer(
-						interactionStream);
-				CommonTokenStream interactionTokens = new CommonTokenStream(
-						interactionLexer);
-				InteractionSpecParser interactionParser = new InteractionSpecParser(
-						interactionTokens);
-				interactionParser.interactionSpec();
+			ANTLRFileStream archStream = new ANTLRFileStream(
+					GlobalVariable.archSpec);
+			ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
+			CommonTokenStream archTokens = new CommonTokenStream(archLexer);
+			ArchSpecParser archParser = new ArchSpecParser(archTokens);
+			archParser.archSpec();
+			// GenFiller.copyApplicationLogic();
+		}
 
-				ANTLRFileStream archStream = new ANTLRFileStream(
-						GlobalVariable.archSpec);
-				ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
-				CommonTokenStream archTokens = new CommonTokenStream(archLexer);
-				ArchSpecParser archParser = new ArchSpecParser(archTokens);
-				archParser.archSpec();
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
 
-				GenFiller.copyApplicationLogic();
+			ANTLRFileStream vocStream = new ANTLRFileStream(
+					GlobalVariable.vocabSpec);
+			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+			vocParser.vocabSpec();
 
-			}
+			ANTLRFileStream archStream = new ANTLRFileStream(
+					GlobalVariable.archSpec);
+			ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
+			CommonTokenStream archTokens = new CommonTokenStream(archLexer);
+			ArchSpecParser archParser = new ArchSpecParser(archTokens);
+			archParser.archSpec();
 
-			if (GlobalVariable.activity
-					.equals(GlobalVariable.ACTIVITY_GENERATE_MAPPING)) {
+			List<Device> deviceList;
+			List<DeploymentScope> mappingConstraintList;
 
-				ANTLRFileStream vocStream = new ANTLRFileStream(
-						GlobalVariable.vocabSpec);
-				VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
-				CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
-				VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
-				vocParser.vocabSpec();
+			mappingConstraintList = SymbolTable.getDeploymentConstrainsList();
 
-				ANTLRFileStream archStream = new ANTLRFileStream(
-						GlobalVariable.archSpec);
-				ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
-				CommonTokenStream archTokens = new CommonTokenStream(archLexer);
-				ArchSpecParser archParser = new ArchSpecParser(archTokens);
-				archParser.archSpec();
+			ANTLRFileStream deploymentStream = new ANTLRFileStream(
+					GlobalVariable.deploymentSpec);
+			NetworkSpecLexer deploymentLexer = new NetworkSpecLexer(
+					deploymentStream);
+			CommonTokenStream deploymentTokens = new CommonTokenStream(
+					deploymentLexer);
+			NetworkSpecParser deploymentParser = new NetworkSpecParser(
+					deploymentTokens);
+			deploymentParser.networkspec();
+			deviceList = SymbolTable.getDeviceList();
 
-				List<Device> deviceList;
-				List<DeploymentScope> mappingConstraintList;
+			MapperCompiler.mappingFileGenerator(deviceList,
+					mappingConstraintList);
+			LinkerCompiler.linkerAlgo();
+			GenFiller.copyLinking();
 
-				mappingConstraintList = SymbolTable
-						.getDeploymentConstrainsList();
+		}
 
-				ANTLRFileStream deploymentStream = new ANTLRFileStream(
-						GlobalVariable.deploymentSpec);
-				NetworkSpecLexer deploymentLexer = new NetworkSpecLexer(
-						deploymentStream);
-				CommonTokenStream deploymentTokens = new CommonTokenStream(
-						deploymentLexer);
-				NetworkSpecParser deploymentParser = new NetworkSpecParser(
-						deploymentTokens);
-				deploymentParser.networkspec();
-				deviceList = SymbolTable.getDeviceList();
-
-				MapperCompiler.mappingFileGenerator(deviceList,
-						mappingConstraintList);
-				LinkerCompiler.linkerAlgo();
-				GenFiller.copyLinking();
-
-			}
-		} 
 	}
-
 }
