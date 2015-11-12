@@ -1,0 +1,206 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Spec :  (vocSpec = VocSpec | interactionSpec = InteractionSpec | archSpec = ArchSpec | networkSpec = DeploymentSpec);
+
+
+
+DeploymentSpec:
+	  'devices' ':' 
+	    (devices += Device)+ 	 
+;
+
+Device:
+	deviceName =  ID ':'
+	 'location' ':'  (deviceLocation += DeviceLocation)    
+	 'platform' ':' (platformType += PlatformType)  ';'      
+	  'resources' ':' (deviceAbilities += DeviceAbilities)? ';'
+	  'protocol' ':'  (deviceProtocol += DeviceProtocol)
+	  ('database' ':' databaseName += DatabaseName ';')* 
+	  'description' ':' (deviceDescription += DeviceDescription) ';'
+;
+
+DeviceDescription:
+	devicedescriptionText =  STRING 
+;
+
+
+DeviceLocation:
+     regionLabel = ID ':' regionValue = INT  ';'
+;
+
+
+PlatformType:
+	deviceType = 'JavaSE' |  deviceType = 'Android' 
+;
+
+DatabaseName :
+	installedDatabase = 'MySQL'| installedDatabase = 'SQLAzure' |  installedDatabase = 'MongoDB'
+;
+
+DeviceProtocol :
+	protocolName = 'mqtt' ';'
+;
+
+
+DeviceAbilities :
+	deviceEntityName = [EntityName] ( ',' name = DeviceAbilities ) ? 
+;
+
+
+InteractionSpec :
+	'resources' ':'
+    	'userinteractions' ':'
+    	     interactionName = EntityName
+    	     (interactionCommand += Command)*
+    	     (interactionRequest += Request)*
+    	     (interactionNotify += InteractionAction)*
+;
+
+InteractionAction :
+	'notify' actionName= ActionName '(' (parameters += Parameters)* ')' 'from' interactionEntity = [EntityName] ';' 
+;
+
+ArchSpec:
+	
+	 ('structs' ':' (structs += Struct)+ ) *	 
+	 'softwarecomponents' ':' 
+	 'computationalService' ':' 
+	    ('InBuilt' ':')*  (inbuiltComputationalService += InBuiltComputationalService)* 
+	    'Custom' ':'      (customComputationalService += customComputationalService)+
+;
+
+InBuiltComputationalService :
+	inBuiltComputationalServiceName = EntityName 
+		(consumes += ConsumeForInBuilt)+
+		'COMPUTE' '(' operationName = OperationName (',' operationParameter = INT )? ')' ';'	
+	    (generateInfo += Generate)+	
+;
+
+customComputationalService:
+	customComputationalServiceName = EntityName 
+		(consumes += Consume)+
+		(requests += Request)*
+		(generateInfo += Generate)*
+		(commands += Command)*	
+;
+
+Request:
+	'request' requestname = [SourceName] 'to' storageForRequest = [EntityName] ';'
+;
+
+ConsumeForInBuilt :
+		'consume' name= [SourceName] 'from' (SensorForConsume = [EntityName])';'
+	
+;
+
+Consume:
+	'consume' name= [SourceName] 'from' fromName = [EntityName]  ';'
+; 
+
+
+
+Command:
+	'command' commandName = [ActionName]  '(' (commandparameter = CommandParameter)?')' 'to' actuatorForCommand = [EntityName] ';'	
+;
+
+CommandParameter:
+	name = [ParameterName] ( ',' parameter = CommandParameter ) ?
+;
+
+VocSpec:
+	 'structs' ':' (structs += Struct)+
+	 'resources' ':' 
+	 	'sensors' ':' 	
+	 		'periodicSensors' ':' (periodicSensors += PeriodicSensors)* 
+	   	     'eventDriven' ':'   (eventSensors += EventSensors)* 
+        
+        'actuators' ':'  (actuators += Actuator)*  	    
+	    'storages' ':' (storageService += StorageService)*  
+;
+
+/* Region Definition */
+
+Region: regionLabel = RegionLabel ':' regionType = Type ';';
+
+RegionLabel: name = ID ;
+
+
+/* Structure Definition */
+
+Struct: name = ID (fields += Field)+ ;
+
+Field: name=ID ':' type += Type ';' ;
+
+
+/* Periodic Sensor Definition */
+
+PeriodicSensors :  sensorName = EntityName
+				  (generateInfo += Generate)+
+	              'sample' 'period' INT 'for' INT ';'
+				  ;
+
+/* Event Driven Sensor Definition */
+
+EventSensors :  sensorName = EntityName
+	            (generateInfo += Generate)+
+	            'onCondition' (eventConditions += EventConditions)	';'	         
+;
+
+EventConditions :
+	 name = ID (',' (eventConditions += EventConditions) )?
+;
+
+
+InBuiltComputationalServiceName :
+	name = ID
+;
+
+EntityName:  name = ID ;
+
+Generate : 'generate' sourceName = SourceName ':' type = Type ';';
+SourceName: name = ID; 
+
+
+
+/* Actuator Definition */
+
+Actuator: actuatorName = EntityName ((actions += Action))* ;
+
+Action: 'action' actionName= ActionName '(' (parameters += Parameters)* ')' ';' ;
+
+ActionName: name = ID ; 
+
+Parameters: parameterName = ParameterName ':' type = Type ;
+
+ParameterName:
+	name = ID
+;
+
+/*  Storage Service Definition  */
+
+StorageService:
+	storageServiceName = EntityName
+	((dataAccesses += DataAccess) )*
+;
+
+DataAccess:
+	'generate' sourceName = SourceName ':' dataAccessType = Type  
+	'accessed-by' dataItem = ID ':' type = Type ';'
+	 ((actions += Action))*	
+;
+
+/* Type Definition */
+
+Type :
+	(primitiveDataType = PrimitiveDataType ) 
+;
+
+OperationName :
+	OPERATION_NAME ='AVG_BY_SAMPLE'
+;
+
+PrimitiveDataType:
+	INTEGER = 'Integer' | BOOLEAN = 'boolean' | STRING = 'String' | LONG = 'long' | DOUBLE = 'double' | structDef = [Struct]
+;

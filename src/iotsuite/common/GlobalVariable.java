@@ -2,10 +2,10 @@ package iotsuite.common;
 
 public class GlobalVariable {
 
-	public static String vocabSpec = "./Spec/vocab.txt";
-	public static String interactionSpec = "./Spec/userinteraction.txt";
-	public static String archSpec = "./Spec/arch.txt";
-	public static String deploymentSpec = "./Spec/deply.txt";
+	public static String vocabSpec = "./Spec/vocab.mydsl";
+	public static String interactionSpec = "./Spec/userinteraction.mydsl";
+	public static String archSpec = "./Spec/arch.mydsl";
+	public static String deploymentSpec = "./Spec/deploy.mydsl";
 	public static String stringTemplatePath = "./StringTemplateFiles";
 	public static String frameworkRootDir;
 	public static String factoryRootDir;
@@ -40,7 +40,7 @@ public class GlobalVariable {
 
 	public static final String ACTIVITY_GENERATE_DEVICEDRIVER = "compile-vocab-spec";
 	public static final String ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK = "compile-arch-spec";
-	public static final String ACTIVITY_GENERATE_MAPPING = "compile-deply-spec";
+	public static final String ACTIVITY_GENERATE_MAPPING = "compile-deploy-spec";
 	public static final String ACTIVITY_GENERATE_USERINTERACTION = "compile-interaction-spec";
 
 	public static String convertPathTopackage(String pathName) {

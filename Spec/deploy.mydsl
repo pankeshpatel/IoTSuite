@@ -20,8 +20,9 @@ devices:
         platform: JavaSE;    
         resources: ProfileDB;
 		protocol: mqtt; 
+		database: MySQL;
 	    description:  d1 Description;
-	    database: MySQL;		
+	    		
 	D4:
         location:
              Room: 1;

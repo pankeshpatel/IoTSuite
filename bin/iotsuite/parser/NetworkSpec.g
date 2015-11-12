@@ -36,11 +36,11 @@ device_def:
     'location' ':' (location_def)* 
     'platform' ':' (device_type)* ';' 
     'resources' ':' (abilities_def)?  ';'
-    'protocol' ':' (protocol_value)* ';'     
-     'description' ':'  (description_def)* ';'
-     ('database' ':' database_def ';')* 
+    'protocol' ':' (protocol_value)* ';'
+    ('database' ':' database_def ';')*      
+     'description' ':'  (description_def)* ';'     
     { context.currentNetwork.addDeviceObj();}
-;
+; 
    
 location_def :
     CAPITALIZED_ID ':' ID ';'

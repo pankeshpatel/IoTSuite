@@ -17,22 +17,16 @@ public class MappingAlgoCompiler {
 	public static Map<String, Set<String>> mappingOutputForLinker = new HashMap<String, Set<String>>();
 	public static Map<String, String> mappingOutputBuiltInSoftwareComponentForLinker = new HashMap<String, String>();
 
-
-	
 	public static Map<Device, Set<String>> mapTasks(List<Device> deviceList,
 			List<DeploymentScope> mappingConstraintList) {
 
 		List<Device> tempDeviceList = new ArrayList<Device>();
 		List<String> tempSoftwareComponentList = new ArrayList<String>();
-		
-		
-		
 		final Map<Device, Set<String>> finalMapping = new HashMap<Device, Set<String>>();
 
 		for (Device deviceObj : deviceList) {
 			tempDeviceList.add(deviceObj);
 		}
-
 		for (DeploymentScope mc : mappingConstraintList) {
 			tempSoftwareComponentList.add(mc.getSoftwareComponentName());
 			mappingOutputBuiltInSoftwareComponentForLinker.put
@@ -58,7 +52,6 @@ public class MappingAlgoCompiler {
 				tempscForFinalOutputVaribale.add(tempSoftwareComponentList.get(j));		
 				finalMapping.put(tempDeviceList.get(i), tempscForFinalOutputVaribale);
 				j++;
-				
 			} else {
 				finalMapping.put(tempDeviceList.get(i), tempDeviceList.get(i).getAbilities());
 				Set<String> tempSoftwareComponentWithAbilities  = new HashSet<String>();
@@ -68,8 +61,6 @@ public class MappingAlgoCompiler {
 				mappingOutputForLinker.put(tempDeviceList.get(i).getName(), tempSoftwareComponentWithAbilities );
 			}
 		}
-		
 		return finalMapping;
 	}
-
 }
