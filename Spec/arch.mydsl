@@ -5,7 +5,7 @@ softwarecomponents:
 			  consume tempMeasurement from TemperatureSensor;
 			  COMPUTE(AVG_BY_SAMPLE,5);
 			  generate roomAvgTempMeasurement:TempStruct;
-		Custom:	  
+		Custom:	   
 			Proximity                                   
 			 consume badgeDetected from BadgeReader;
 			 consume badgeDisappeared from BadgeReader;

@@ -5,7 +5,7 @@ devices:
         platform: JavaSE;    
         resources:TemperatureSensor;
 		protocol: mqtt;  
-		description: d1 Description;
+		description: "d1 Description";
 		 
 	D2:
         location:
@@ -13,7 +13,7 @@ devices:
         platform: JavaSE;    
         resources:BadgeReader;
 		protocol: mqtt; 
-		description: d1 Description;  
+		description: "d1 Description";
 	D3:
         location:
              Room: 1; 
@@ -21,7 +21,7 @@ devices:
         resources: ProfileDB;
 		protocol: mqtt; 
 		database: MySQL;
-	    description:  d1 Description;
+		description: "d1 Description";
 	    		
 	D4:
         location:
@@ -29,21 +29,21 @@ devices:
         platform: JavaSE;    
         resources: ;
 		protocol: mqtt;
-		description:  d Description; 
+		description: "d1 Description";
    D5:
         location:
              Room: 1;
         platform: JavaSE;    
         resources: ;
 		protocol: mqtt; 
-		description:  d Description;
+		description: "d1 Description";
    D6:
         location:
              Room: 1;
         platform: JavaSE;    
         resources: ;
 		protocol: mqtt; 
-		description: d1 Description;
+		description: "d1 Description";
 	
 	D7:
         location:
@@ -51,26 +51,26 @@ devices:
         platform: JavaSE;    
         resources:;
 		protocol: mqtt;
-		description: d1 Description is written; 
+		description: "d1 Description";
    D8:
         location:
              Room: 1;
         platform: JavaSE;    
         resources:;
 		protocol: mqtt;
-		description: d1 Description is written; 				
+		description: "d1 Description";
    D9:
         location:
              Room: 1;
         platform: JavaSE;    
         resources:Heater;
 		protocol: mqtt;
-		description: d1 Description;
+		description: "d1 Description";
 	D10:
         location:
              Room: 1;
         platform: Android;    
         resources:SmartHomeApp;
 		protocol: mqtt;
-		description: this is user interaction device;	
+		description: "d1 Description";
 	

@@ -120,14 +120,11 @@ VocSpec:
 	    'storages' ':' (storageService += StorageService)*  
 ;
 
-/* Region Definition */
 
 Region: regionLabel = RegionLabel ':' regionType = Type ';';
 
 RegionLabel: name = ID ;
 
-
-/* Structure Definition */
 
 Struct: name = ID (fields += Field)+ ;
 
