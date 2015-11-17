@@ -53,8 +53,8 @@ abilities_def :
 ;
  
 sensor_def:
-      ('periodicsensors' ':'(periodicsensor_def)*)*
-      ('eventdriven' ':' (eventsensor_def)*)*
+      ('periodicSensors' ':'(periodicsensor_def)*)*
+      ('eventDrivenSensors' ':' (eventsensor_def)*)*  
 ; 
 
 periodicsensor_def:

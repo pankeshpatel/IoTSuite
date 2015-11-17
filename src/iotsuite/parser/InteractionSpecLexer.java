@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-11-12 23:33:13
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-11-17 22:36:39
 
   package iotsuite.parser; 
   
@@ -452,10 +452,10 @@ public class InteractionSpecLexer extends Lexer {
 		try {
 			int _type = T__27;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:7: ( 'userinteractions' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:9: 'userinteractions'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:7: ( 'userInteractions' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:31:9: 'userInteractions'
 			{
-			match("userinteractions"); 
+			match("userInteractions"); 
 
 			}
 
@@ -889,7 +889,7 @@ public class InteractionSpecLexer extends Lexer {
 		"\157\1\163\1\151\4\uffff\1\157\1\164\1\162\1\164\1\157\1\155\1\165\1\157"+
 		"\1\156\1\164\1\161\1\162\1\60\1\145\1\164\1\154\1\145\2\151\1\154\1\155"+
 		"\1\142\1\155\1\147\1\151\1\165\1\157\1\165\1\uffff\1\162\1\150\1\145\1"+
-		"\147\1\156\1\157\1\145\1\141\1\154\2\60\1\146\1\145\1\165\1\143\1\151"+
+		"\147\1\156\1\157\1\145\1\141\1\154\2\60\1\146\1\145\1\165\1\143\1\111"+
 		"\1\60\1\141\1\145\1\147\1\156\1\141\1\156\1\145\2\uffff\1\171\1\163\1"+
 		"\162\1\164\1\156\1\uffff\1\156\1\162\1\101\1\60\1\156\1\144\2\60\1\164"+
 		"\1\143\1\163\1\164\2\101\2\uffff\2\60\2\uffff\1\60\1\145\1\60\1\145\5"+
@@ -900,7 +900,7 @@ public class InteractionSpecLexer extends Lexer {
 		"\157\1\163\1\151\4\uffff\1\157\1\164\1\162\1\164\1\157\1\155\1\165\1\157"+
 		"\1\156\1\164\1\163\1\162\1\172\1\145\1\164\1\154\1\145\2\151\1\154\1\155"+
 		"\1\142\1\155\1\147\1\151\1\165\1\157\1\165\1\uffff\1\162\1\150\1\145\1"+
-		"\147\1\156\1\157\1\145\1\141\1\154\2\172\1\146\1\145\1\165\1\143\1\151"+
+		"\147\1\156\1\157\1\145\1\141\1\154\2\172\1\146\1\145\1\165\1\143\1\111"+
 		"\1\172\1\141\1\145\1\147\1\156\1\141\1\156\1\145\2\uffff\1\171\1\163\1"+
 		"\162\1\164\1\156\1\uffff\1\156\1\162\2\172\1\156\1\144\2\172\1\164\1\143"+
 		"\1\163\1\164\2\172\2\uffff\2\172\2\uffff\1\172\1\145\1\172\1\145\5\uffff"+

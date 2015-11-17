@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g 2015-11-12 23:33:10
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g 2015-11-17 22:32:35
    
   package iotsuite.parser; 
    
@@ -497,10 +497,10 @@ public class ArchSpecLexer extends Lexer {
 		try {
 			int _type = T__29;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:33:7: ( 'softwarecomponents' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:33:9: 'softwarecomponents'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:33:7: ( 'softwareComponents' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\ArchSpec.g:33:9: 'softwareComponents'
 			{
-			match("softwarecomponents"); 
+			match("softwareComponents"); 
 
 			}
 
@@ -982,7 +982,7 @@ public class ArchSpecLexer extends Lexer {
 		"\1\164\1\155\1\145\1\uffff\1\141\1\uffff\1\163\1\141\1\164\1\156\1\105"+
 		"\1\101\1\164\1\162\1\101\1\156\1\144\1\141\1\145\1\101\2\164\1\162\1\163"+
 		"\1\101\1\50\1\uffff\2\101\1\uffff\2\101\1\164\1\101\1\uffff\1\145\1\101"+
-		"\1\145\1\101\6\uffff\1\151\1\uffff\1\101\1\uffff\1\143\1\uffff\1\157\1"+
+		"\1\145\1\101\6\uffff\1\151\1\uffff\1\101\1\uffff\1\103\1\uffff\1\157\1"+
 		"\uffff\1\157\1\156\1\155\1\141\1\160\1\154\1\157\1\123\1\156\2\145\1\162"+
 		"\1\156\1\166\1\164\1\151\1\163\1\143\1\101\1\145\1\uffff\1\101\1\uffff";
 	static final String DFA5_maxS =
@@ -995,7 +995,7 @@ public class ArchSpecLexer extends Lexer {
 		"\1\164\1\155\1\145\1\uffff\1\141\1\uffff\1\163\1\141\1\164\1\156\1\105"+
 		"\1\172\1\164\1\162\1\172\1\156\1\144\1\141\1\145\1\172\2\164\1\162\1\163"+
 		"\1\172\1\50\1\uffff\2\172\1\uffff\2\172\1\164\1\172\1\uffff\1\145\1\172"+
-		"\1\145\1\172\6\uffff\1\151\1\uffff\1\172\1\uffff\1\143\1\uffff\1\157\1"+
+		"\1\145\1\172\6\uffff\1\151\1\uffff\1\172\1\uffff\1\103\1\uffff\1\157\1"+
 		"\uffff\1\157\1\156\1\155\1\141\1\160\1\154\1\157\1\123\1\156\2\145\1\162"+
 		"\1\156\1\166\1\164\1\151\1\163\1\143\1\172\1\145\1\uffff\1\172\1\uffff";
 	static final String DFA5_acceptS =

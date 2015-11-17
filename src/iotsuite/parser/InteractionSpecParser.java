@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-11-12 23:33:12
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-11-17 22:36:38
      
 package iotsuite.parser;
 import iotsuite.compiler.*;  
@@ -17,7 +17,7 @@ public class InteractionSpecParser extends Parser {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "INT", 
 		"WS", "'('", "')'", "','", "':'", "';'", "'Boolean'", "'Integer'", "'String'", 
 		"'action'", "'boolean'", "'command'", "'double'", "'from'", "'long'", 
-		"'notify'", "'request'", "'resources'", "'structs'", "'to'", "'userinteractions'", 
+		"'notify'", "'request'", "'resources'", "'structs'", "'to'", "'userInteractions'", 
 		"'with'"
 	};
 	public static final int EOF=-1;
@@ -99,11 +99,11 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "abilities_def"
-	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:1: abilities_def : 'resources' ':' ( 'structs' ':' struct_def )* ( 'userinteractions' ':' ( gui_def )+ )* ;
+	// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:1: abilities_def : 'resources' ':' ( 'structs' ':' struct_def )* ( 'userInteractions' ':' ( gui_def )+ )* ;
 	public final void abilities_def() throws RecognitionException {
 		try {
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:15: ( 'resources' ':' ( 'structs' ':' struct_def )* ( 'userinteractions' ':' ( gui_def )+ )* )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:1: 'resources' ':' ( 'structs' ':' struct_def )* ( 'userinteractions' ':' ( gui_def )+ )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:29:15: ( 'resources' ':' ( 'structs' ':' struct_def )* ( 'userInteractions' ':' ( gui_def )+ )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:30:1: 'resources' ':' ( 'structs' ':' struct_def )* ( 'userInteractions' ':' ( gui_def )+ )*
 			{
 			match(input,24,FOLLOW_24_in_abilities_def97); 
 			match(input,11,FOLLOW_11_in_abilities_def99); 
@@ -134,7 +134,7 @@ public class InteractionSpecParser extends Parser {
 				}
 			}
 
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:3: ( 'userinteractions' ':' ( gui_def )+ )*
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:3: ( 'userInteractions' ':' ( gui_def )+ )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -145,7 +145,7 @@ public class InteractionSpecParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:4: 'userinteractions' ':' ( gui_def )+
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:32:4: 'userInteractions' ':' ( gui_def )+
 					{
 					match(input,27,FOLLOW_27_in_abilities_def117); 
 					match(input,11,FOLLOW_11_in_abilities_def119); 

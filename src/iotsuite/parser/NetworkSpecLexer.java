@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-11-12 23:56:18
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-11-17 22:31:46
 
   package iotsuite.parser; 
 
@@ -21,6 +21,7 @@ public class NetworkSpecLexer extends Lexer {
 	public static final int T__16=16;
 	public static final int T__17=17;
 	public static final int T__18=18;
+	public static final int T__19=19;
 	public static final int CAPITALIZED_ID=4;
 	public static final int DESCRIPTION_ID=5;
 	public static final int ID=6;
@@ -47,10 +48,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__9;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:6: ( ',' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:8: ','
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:6: ( '\"' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:8: '\"'
 			{
-			match(','); 
+			match('\"'); 
 			}
 
 			state.type = _type;
@@ -67,10 +68,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:7: ( ':' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:9: ':'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:7: ( ',' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:9: ','
 			{
-			match(':'); 
+			match(','); 
 			}
 
 			state.type = _type;
@@ -87,10 +88,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__11;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:7: ( ';' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:9: ';'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:7: ( ':' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:9: ':'
 			{
-			match(';'); 
+			match(':'); 
 			}
 
 			state.type = _type;
@@ -107,11 +108,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__12;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:7: ( 'database' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:9: 'database'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:7: ( ';' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:9: ';'
 			{
-			match("database"); 
-
+			match(';'); 
 			}
 
 			state.type = _type;
@@ -128,10 +128,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:7: ( 'description' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:9: 'description'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:7: ( 'database' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:9: 'database'
 			{
-			match("description"); 
+			match("database"); 
 
 			}
 
@@ -149,10 +149,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__14;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:7: ( 'devices' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:9: 'devices'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:7: ( 'description' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:9: 'description'
 			{
-			match("devices"); 
+			match("description"); 
 
 			}
 
@@ -170,10 +170,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:7: ( 'location' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:9: 'location'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:7: ( 'devices' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:9: 'devices'
 			{
-			match("location"); 
+			match("devices"); 
 
 			}
 
@@ -191,10 +191,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:7: ( 'platform' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:9: 'platform'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:7: ( 'location' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:9: 'location'
 			{
-			match("platform"); 
+			match("location"); 
 
 			}
 
@@ -212,10 +212,10 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__17;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:19:7: ( 'protocol' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:19:9: 'protocol'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:19:7: ( 'platform' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:19:9: 'platform'
 			{
-			match("protocol"); 
+			match("platform"); 
 
 			}
 
@@ -233,8 +233,29 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:20:7: ( 'resources' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:20:9: 'resources'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:20:7: ( 'protocol' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:20:9: 'protocol'
+			{
+			match("protocol"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__18"
+
+	// $ANTLR start "T__19"
+	public final void mT__19() throws RecognitionException {
+		try {
+			int _type = T__19;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:21:7: ( 'resources' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:21:9: 'resources'
 			{
 			match("resources"); 
 
@@ -247,7 +268,7 @@ public class NetworkSpecLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__18"
+	// $ANTLR end "T__19"
 
 	// $ANTLR start "MOBILEFLAG"
 	public final void mMOBILEFLAG() throws RecognitionException {
@@ -669,8 +690,8 @@ public class NetworkSpecLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | MOBILEFLAG | ID | DESCRIPTION_ID | CAPITALIZED_ID | WS )
-		int alt10=15;
+		// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | MOBILEFLAG | ID | DESCRIPTION_ID | CAPITALIZED_ID | WS )
+		int alt10=16;
 		alt10 = dfa10.predict(input);
 		switch (alt10) {
 			case 1 :
@@ -744,35 +765,42 @@ public class NetworkSpecLexer extends Lexer {
 				}
 				break;
 			case 11 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:69: MOBILEFLAG
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:69: T__19
+				{
+				mT__19(); 
+
+				}
+				break;
+			case 12 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:75: MOBILEFLAG
 				{
 				mMOBILEFLAG(); 
 
 				}
 				break;
-			case 12 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:80: ID
+			case 13 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:86: ID
 				{
 				mID(); 
 
 				}
 				break;
-			case 13 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:83: DESCRIPTION_ID
+			case 14 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:89: DESCRIPTION_ID
 				{
 				mDESCRIPTION_ID(); 
 
 				}
 				break;
-			case 14 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:98: CAPITALIZED_ID
+			case 15 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:104: CAPITALIZED_ID
 				{
 				mCAPITALIZED_ID(); 
 
 				}
 				break;
-			case 15 :
-				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:113: WS
+			case 16 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:119: WS
 				{
 				mWS(); 
 
@@ -785,110 +813,111 @@ public class NetworkSpecLexer extends Lexer {
 
 	protected DFA10 dfa10 = new DFA10(this);
 	static final String DFA10_eotS =
-		"\4\uffff\10\14\3\uffff\4\14\1\uffff\27\14\1\64\10\14\1\uffff\1\64\11\14"+
-		"\1\106\4\14\1\113\1\14\1\uffff\1\115\1\116\1\117\1\14\1\uffff\1\14\3\uffff"+
-		"\1\122\1\14\1\uffff\1\124\1\uffff";
+		"\5\uffff\10\15\3\uffff\4\15\1\uffff\27\15\1\65\10\15\1\uffff\1\65\11\15"+
+		"\1\107\4\15\1\114\1\15\1\uffff\1\116\1\117\1\120\1\15\1\uffff\1\15\3\uffff"+
+		"\1\123\1\15\1\uffff\1\125\1\uffff";
 	static final String DFA10_eofS =
-		"\125\uffff";
+		"\126\uffff";
 	static final String DFA10_minS =
-		"\1\11\3\uffff\10\40\3\uffff\4\40\1\uffff\40\40\1\uffff\21\40\1\uffff\4"+
+		"\1\11\4\uffff\10\40\3\uffff\4\40\1\uffff\40\40\1\uffff\21\40\1\uffff\4"+
 		"\40\1\uffff\1\40\3\uffff\2\40\1\uffff\1\40\1\uffff";
 	static final String DFA10_maxS =
-		"\1\172\3\uffff\10\172\3\uffff\4\172\1\uffff\40\172\1\uffff\21\172\1\uffff"+
+		"\1\172\4\uffff\10\172\3\uffff\4\172\1\uffff\40\172\1\uffff\21\172\1\uffff"+
 		"\4\172\1\uffff\1\172\3\uffff\2\172\1\uffff\1\172\1\uffff";
 	static final String DFA10_acceptS =
-		"\1\uffff\1\1\1\2\1\3\10\uffff\1\14\1\16\1\17\4\uffff\1\15\40\uffff\1\13"+
-		"\21\uffff\1\6\4\uffff\1\4\1\uffff\1\7\1\10\1\11\2\uffff\1\12\1\uffff\1"+
-		"\5";
+		"\1\uffff\1\1\1\2\1\3\1\4\10\uffff\1\15\1\17\1\20\4\uffff\1\16\40\uffff"+
+		"\1\14\21\uffff\1\7\4\uffff\1\5\1\uffff\1\10\1\11\1\12\2\uffff\1\13\1\uffff"+
+		"\1\6";
 	static final String DFA10_specialS =
-		"\125\uffff}>";
+		"\126\uffff}>";
 	static final String[] DFA10_transitionS = {
-			"\2\16\1\uffff\2\16\22\uffff\1\16\11\uffff\1\14\1\uffff\1\1\3\uffff\12"+
-			"\13\1\2\1\3\5\uffff\32\15\6\uffff\3\12\1\4\1\12\1\11\5\12\1\5\3\12\1"+
-			"\6\1\12\1\7\1\12\1\10\6\12",
+			"\2\17\1\uffff\2\17\22\uffff\1\17\1\uffff\1\1\7\uffff\1\15\1\uffff\1\2"+
+			"\3\uffff\12\14\1\3\1\4\5\uffff\32\16\6\uffff\3\13\1\5\1\13\1\12\5\13"+
+			"\1\6\3\13\1\7\1\13\1\10\1\13\1\11\6\13",
 			"",
 			"",
 			"",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\1\17\3\21\1\20\25\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\16\21\1\24\13\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\13\21\1\25\5\21\1\26\10\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\4\21\1\27\25\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\21\21\1\30\10\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\1\31\31\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\32\21",
-			"\1\23\17\uffff\12\32\7\uffff\32\23\6\uffff\32\23",
+			"",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\1\20\3\22\1\21\25\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\16\22\1\25\13\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\13\22\1\26\5\22\1\27\10\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\4\22\1\30\25\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\21\22\1\31\10\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\1\32\31\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\33\7\uffff\32\24\6\uffff\32\24",
 			"",
 			"",
 			"",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\23\21\1\33\6\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\22\21\1\34\2\21\1\35\4\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\32\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\23\6\uffff\32\23",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\23\22\1\34\6\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\22\22\1\35\2\22\1\36\4\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\24\6\uffff\32\24",
 			"",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\2\21\1\36\27\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\1\37\31\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\16\21\1\40\13\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\22\21\1\41\7\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\24\21\1\42\5\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\13\21\1\43\16\21",
-			"\1\23\17\uffff\12\32\7\uffff\32\23\6\uffff\32\23",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\1\44\31\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\2\21\1\45\27\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\10\21\1\46\21\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\1\47\31\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\23\21\1\50\6\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\23\21\1\51\6\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\16\21\1\52\13\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\4\21\1\53\25\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\22\21\1\54\7\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\1\21\1\55\30\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\21\21\1\56\10\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\2\21\1\57\27\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\23\21\1\60\6\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\5\21\1\61\24\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\16\21\1\62\13\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\24\21\1\63\5\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\32\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\4\21\1\65\25\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\1\66\31\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\10\21\1\67\21\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\4\21\1\70\25\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\10\21\1\71\21\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\16\21\1\72\13\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\2\21\1\73\27\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\21\21\1\74\10\21",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\2\22\1\37\27\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\1\40\31\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\16\22\1\41\13\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\22\22\1\42\7\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\24\22\1\43\5\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\13\22\1\44\16\22",
+			"\1\24\17\uffff\12\33\7\uffff\32\24\6\uffff\32\24",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\1\45\31\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\2\22\1\46\27\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\10\22\1\47\21\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\1\50\31\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\23\22\1\51\6\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\23\22\1\52\6\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\16\22\1\53\13\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\4\22\1\54\25\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\22\22\1\55\7\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\1\22\1\56\30\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\21\22\1\57\10\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\2\22\1\60\27\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\23\22\1\61\6\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\5\22\1\62\24\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\16\22\1\63\13\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\24\22\1\64\5\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\4\22\1\66\25\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\1\67\31\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\10\22\1\70\21\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\4\22\1\71\25\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\10\22\1\72\21\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\16\22\1\73\13\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\2\22\1\74\27\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\21\22\1\75\10\22",
 			"",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\32\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\22\21\1\75\7\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\17\21\1\76\12\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\22\21\1\77\7\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\16\21\1\100\13\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\21\21\1\101\10\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\16\21\1\102\13\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\2\21\1\103\27\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\4\21\1\104\25\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\23\21\1\105\6\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\32\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\15\21\1\107\14\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\14\21\1\110\15\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\13\21\1\111\16\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\4\21\1\112\25\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\32\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\10\21\1\114\21\21",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\22\22\1\76\7\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\17\22\1\77\12\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\22\22\1\100\7\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\16\22\1\101\13\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\21\22\1\102\10\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\16\22\1\103\13\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\2\22\1\104\27\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\4\22\1\105\25\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\23\22\1\106\6\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\15\22\1\110\14\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\14\22\1\111\15\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\13\22\1\112\16\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\4\22\1\113\25\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\10\22\1\115\21\22",
 			"",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\32\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\32\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\32\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\22\21\1\120\7\21",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\22\22\1\121\7\22",
 			"",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\16\21\1\121\13\21",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\16\22\1\122\13\22",
 			"",
 			"",
 			"",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\32\21",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\15\21\1\123\14\21",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\15\22\1\124\14\22",
 			"",
-			"\1\23\17\uffff\12\22\7\uffff\32\21\6\uffff\32\21",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
 			""
 	};
 
@@ -923,7 +952,7 @@ public class NetworkSpecLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | MOBILEFLAG | ID | DESCRIPTION_ID | CAPITALIZED_ID | WS );";
+			return "1:1: Tokens : ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | MOBILEFLAG | ID | DESCRIPTION_ID | CAPITALIZED_ID | WS );";
 		}
 	}
 

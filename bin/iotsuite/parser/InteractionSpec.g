@@ -29,7 +29,7 @@ interactionSpec :
 abilities_def : 
 'resources' ':'
   ('structs' ':' struct_def)*  
-  ('userinteractions' ':' (gui_def)+ )*     
+  ('userInteractions' ':' (gui_def)+ )*     
 ;
 
 struct_def: 

@@ -47,6 +47,6 @@ WS=7
 'generate'=26
 'long'=27
 'request'=28
-'softwarecomponents'=29
+'softwareComponents'=29
 'structs'=30
 'to'=31

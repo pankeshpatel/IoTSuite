@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-11-12 23:33:08
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-11-17 22:32:16
 
   package iotsuite.parser; 
   
@@ -351,10 +351,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:7: ( 'eventdriven' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:9: 'eventdriven'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:7: ( 'eventDrivenSensors' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:26:9: 'eventDrivenSensors'
 			{
-			match("eventdriven"); 
+			match("eventDrivenSensors"); 
 
 			}
 
@@ -477,10 +477,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = T__28;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:7: ( 'periodicsensors' )
-			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:9: 'periodicsensors'
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:7: ( 'periodicSensors' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:32:9: 'periodicSensors'
 			{
-			match("periodicsensors"); 
+			match("periodicSensors"); 
 
 			}
 
@@ -1026,10 +1026,10 @@ public class VocabSpecLexer extends Lexer {
 		"\1\165\2\25\1\170\3\25\1\175\1\25\1\177\3\25\1\u0083\1\u0084\1\uffff\1"+
 		"\25\1\uffff\1\25\1\u0087\1\uffff\4\25\1\uffff\1\25\1\uffff\1\u008d\1\25"+
 		"\1\u008f\2\uffff\2\25\1\uffff\1\25\1\u0093\3\25\1\uffff\1\u0097\2\uffff"+
-		"\1\u0098\1\25\1\uffff\2\25\1\u009c\2\uffff\3\25\1\uffff\1\u00a0\1\u00a1"+
-		"\1\25\2\uffff\3\25\1\u00a6\1\uffff";
+		"\1\u0098\1\25\1\uffff\2\25\1\u009c\2\uffff\3\25\1\uffff\1\25\1\u00a1\2"+
+		"\25\1\uffff\6\25\1\u00aa\1\25\1\uffff\1\25\1\u00ad\1\uffff";
 	static final String DFA5_eofS =
-		"\u00a7\uffff";
+		"\u00ae\uffff";
 	static final String DFA5_minS =
 		"\1\11\5\uffff\1\157\1\156\1\164\1\uffff\1\143\2\157\1\166\1\157\1\145"+
 		"\1\157\1\156\2\145\1\141\4\uffff\1\157\1\164\1\162\1\143\1\157\1\165\1"+
@@ -1037,13 +1037,14 @@ public class VocabSpecLexer extends Lexer {
 		"\1\145\1\151\1\154\1\142\1\156\1\60\1\145\1\147\1\157\1\151\1\157\1\160"+
 		"\1\163\1\162\1\165\1\145\1\147\1\156\1\163\1\157\1\141\1\145\1\154\1\164"+
 		"\1\uffff\1\162\1\60\1\156\1\157\1\165\1\154\1\157\1\141\1\143\1\141\1"+
-		"\145\1\147\1\163\1\156\1\164\1\141\1\145\1\144\1\141\1\uffff\2\144\1\162"+
+		"\145\1\147\1\163\1\156\1\164\1\141\1\145\1\104\1\141\1\uffff\2\144\1\162"+
 		"\1\145\1\162\1\147\1\164\1\156\1\162\1\101\1\145\1\60\1\157\1\156\1\60"+
 		"\1\162\1\164\1\151\1\60\1\143\1\60\1\163\1\145\1\163\2\101\1\uffff\1\144"+
 		"\1\uffff\1\162\1\60\1\uffff\1\151\1\145\1\164\1\143\1\uffff\1\145\1\uffff"+
-		"\1\60\1\163\1\60\2\uffff\1\55\1\163\1\uffff\1\166\1\60\1\151\2\163\1\uffff"+
-		"\1\60\2\uffff\1\60\1\145\1\uffff\1\157\1\145\1\60\2\uffff\3\156\1\uffff"+
-		"\2\60\1\163\2\uffff\1\157\1\162\1\163\1\60\1\uffff";
+		"\1\60\1\163\1\60\2\uffff\1\55\1\163\1\uffff\1\166\1\60\1\151\1\123\1\163"+
+		"\1\uffff\1\60\2\uffff\1\60\1\145\1\uffff\1\157\1\145\1\60\2\uffff\3\156"+
+		"\1\uffff\1\123\1\60\1\163\1\145\1\uffff\1\157\1\156\1\162\2\163\1\157"+
+		"\1\60\1\162\1\uffff\1\163\1\60\1\uffff";
 	static final String DFA5_maxS =
 		"\1\172\5\uffff\1\157\1\156\1\164\1\uffff\1\143\2\157\1\166\1\157\1\145"+
 		"\1\157\1\156\2\145\1\164\4\uffff\1\157\1\164\1\162\1\164\1\157\1\165\1"+
@@ -1051,21 +1052,22 @@ public class VocabSpecLexer extends Lexer {
 		"\1\145\1\165\1\154\1\142\1\156\1\172\1\145\1\147\1\157\1\151\1\157\1\160"+
 		"\1\163\1\162\1\165\1\145\1\147\1\156\1\163\1\157\1\141\1\145\1\154\1\164"+
 		"\1\uffff\1\162\1\172\1\156\1\157\1\165\1\154\1\157\1\141\1\143\1\141\1"+
-		"\145\1\147\1\163\1\156\1\164\1\141\1\145\1\144\1\141\1\uffff\2\144\1\162"+
+		"\145\1\147\1\163\1\156\1\164\1\141\1\145\1\104\1\141\1\uffff\2\144\1\162"+
 		"\1\145\1\162\1\147\1\164\1\156\1\162\1\172\1\145\1\172\1\157\1\156\1\172"+
 		"\1\162\1\164\1\151\1\172\1\143\1\172\1\163\1\145\1\163\2\172\1\uffff\1"+
 		"\144\1\uffff\1\162\1\172\1\uffff\1\151\1\145\1\164\1\143\1\uffff\1\145"+
 		"\1\uffff\1\172\1\163\1\172\2\uffff\1\55\1\163\1\uffff\1\166\1\172\1\151"+
-		"\2\163\1\uffff\1\172\2\uffff\1\172\1\145\1\uffff\1\157\1\145\1\172\2\uffff"+
-		"\3\156\1\uffff\2\172\1\163\2\uffff\1\157\1\162\1\163\1\172\1\uffff";
+		"\1\123\1\163\1\uffff\1\172\2\uffff\1\172\1\145\1\uffff\1\157\1\145\1\172"+
+		"\2\uffff\3\156\1\uffff\1\123\1\172\1\163\1\145\1\uffff\1\157\1\156\1\162"+
+		"\2\163\1\157\1\172\1\162\1\uffff\1\163\1\172\1\uffff";
 	static final String DFA5_acceptS =
 		"\1\uffff\1\1\1\2\1\3\1\4\1\5\3\uffff\1\11\13\uffff\1\33\1\34\1\35\1\36"+
 		"\53\uffff\1\20\23\uffff\1\22\32\uffff\1\10\1\uffff\1\13\2\uffff\1\16\4"+
 		"\uffff\1\24\1\uffff\1\27\3\uffff\1\6\1\7\2\uffff\1\15\5\uffff\1\30\1\uffff"+
-		"\1\32\1\12\2\uffff\1\21\3\uffff\1\31\1\14\3\uffff\1\26\3\uffff\1\17\1"+
-		"\23\4\uffff\1\25";
+		"\1\32\1\12\2\uffff\1\21\3\uffff\1\31\1\14\3\uffff\1\26\4\uffff\1\23\10"+
+		"\uffff\1\25\2\uffff\1\17";
 	static final String DFA5_specialS =
-		"\u00a7\uffff}>";
+		"\u00ae\uffff}>";
 	static final String[] DFA5_transitionS = {
 			"\2\30\1\uffff\2\30\22\uffff\1\30\7\uffff\1\1\1\2\2\uffff\1\3\3\uffff"+
 			"\12\26\1\4\1\5\5\uffff\1\27\1\6\6\27\1\7\11\27\1\10\7\27\4\uffff\1\11"+
@@ -1227,14 +1229,21 @@ public class VocabSpecLexer extends Lexer {
 			"\1\u009e",
 			"\1\u009f",
 			"",
-			"\12\25\7\uffff\32\25\6\uffff\32\25",
+			"\1\u00a0",
 			"\12\25\7\uffff\32\25\6\uffff\32\25",
 			"\1\u00a2",
-			"",
-			"",
 			"\1\u00a3",
+			"",
 			"\1\u00a4",
 			"\1\u00a5",
+			"\1\u00a6",
+			"\1\u00a7",
+			"\1\u00a8",
+			"\1\u00a9",
+			"\12\25\7\uffff\32\25\6\uffff\32\25",
+			"\1\u00ab",
+			"",
+			"\1\u00ac",
 			"\12\25\7\uffff\32\25\6\uffff\32\25",
 			""
 	};

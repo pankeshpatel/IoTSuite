@@ -15,7 +15,7 @@ resources:
 	  		TemperatureSensor
             	generate  tempMeasurement : TempStruct;    
             	sample period 1000 for 6000000;
-      	eventDriven:
+      	eventDrivenSensors:
     	 	BadgeReader                
             	generate badgeDetected: BadgeStruct;
 				generate badgeDisappeared: BadgeStruct; 

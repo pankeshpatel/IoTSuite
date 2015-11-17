@@ -66,9 +66,9 @@ protocol_value:
 ;
 
 description_def:
-   DESCRIPTION_ID 
+   '"'DESCRIPTION_ID '"'
    {context.currentNetwork.setDeviceDescription($DESCRIPTION_ID.text);}
-;  
+;   
 
 database_def:
 CAPITALIZED_ID

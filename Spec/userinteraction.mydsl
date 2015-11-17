@@ -1,5 +1,5 @@
 resources:
-    userinteractions:
+    userInteractions:
 		SmartHomeApp						
 			command Off() to Heater;
 	 		command SetTemp(setTemp) to Heater;
