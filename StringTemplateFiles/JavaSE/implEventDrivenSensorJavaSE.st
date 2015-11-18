@@ -11,6 +11,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import iotsuite.semanticmodel.Device;
+
 
 public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 
@@ -28,9 +30,15 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
         private Listener$generatedInfo.name$ handler$generatedInfo.name$;
   }; separator="\n"$
   
-   public JavaSE$SensorDriver.name$() { 
+   public JavaSE$SensorDriver.name$(Device deviceInfo) { 
+	  
+	
      prepareGUI();
      showEventDemo();
+		
+		
+		
+		
   } 
   
  

@@ -25,6 +25,7 @@ public class Startup implements DeviceStartup {
 	public static String description;
 	public static String database;
 
+
 private static void setUpNode(Device deviceInfo)	{	
 
 	
@@ -48,6 +49,7 @@ private static Device setUpDeviceInfo() {
 	 protocol = "$device.Protocol$";
 	 description = "$device.Description$" ;
 	 database="$device.Database$";
+
 		
 	$device.abilities:{ sc | abilities.add("$sc$"); }$ 
 	
@@ -58,7 +60,8 @@ private static Device setUpDeviceInfo() {
   
   $device.RegionLabels:{ region | regionLabels.add("$region$"); } $
 	
-	Device device = new Device(name, softwarePlatform, networkAddress, regionIDs, regionLabels , abilities, mobileFlag, protocol, description,database);
+	Device device = new Device(name, softwarePlatform, networkAddress, regionIDs, regionLabels , 
+			abilities, mobileFlag, protocol, description,database);
 	return device;    
 }
 

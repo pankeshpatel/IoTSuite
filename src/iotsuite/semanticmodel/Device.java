@@ -24,6 +24,7 @@ public class Device implements Serializable {
 	private String myProtocol;
 	private String myDescription;
 	private String myDatabase;
+	
 
 	public Device(String name, String type, String networkAddress,
 			List<String> regionIDs, List<String> regionLabels,
@@ -43,6 +44,8 @@ public class Device implements Serializable {
 		this.myDatabase = database;
 
 	}
+
+
 
 	public String getDescription() {
 		return myDescription;

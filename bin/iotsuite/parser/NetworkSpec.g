@@ -36,9 +36,9 @@ device_def:
     'location' ':' (location_def)* 
     'platform' ':' (device_type)* ';' 
     'resources' ':' (abilities_def)?  ';'
-    'protocol' ':' (protocol_value)* ';'
-    ('database' ':' database_def ';')*      
-     'description' ':'  (description_def)* ';'     
+    'protocol' ':' (protocol_value)* ';' 
+    ('database' ':' database_def ';')*        
+     'description' ':'  (description_def )* ';'             
     { context.currentNetwork.addDeviceObj();}
 ; 
    
@@ -59,6 +59,9 @@ abilities_def :
   {context.currentNetwork.addDeviceAbilities($CAPITALIZED_ID.text);
   }
 ;
+
+    
+  
  
 protocol_value:
   ID    

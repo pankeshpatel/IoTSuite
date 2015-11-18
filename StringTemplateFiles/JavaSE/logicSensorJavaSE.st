@@ -7,6 +7,7 @@ import iotsuite.semanticmodel.*;
 import factory.*;
 import $SensorDriver.PackageName$.*;
 
+
 public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  { 
 
  
@@ -18,7 +19,7 @@ public class  Logic$SensorDriver.name$ extends $SensorDriver.name$  {
 		if (deviceType.equals(GlobalVariable.deviceJAVASEType)) {
 			
 			I$SensorDriver.name$ obj$SensorDriver.name$ = $SensorDriver.name$Factory
-			.get$SensorDriver.name$(myDeviceInfo.getType(), null, null);
+			.get$SensorDriver.name$(myDeviceInfo.getType(), null, null, deviceInfo);
 	
 	if (obj$SensorDriver.name$.isEventDriven()) {
 
