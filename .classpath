@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="antlr-3.5.1-complete.jar" sourcepath="C:/Users/Shree/Downloads/Desktop/antlr-3.2-src.zip"/>
+	<classpathentry kind="lib" path="commons.io_2.0.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
