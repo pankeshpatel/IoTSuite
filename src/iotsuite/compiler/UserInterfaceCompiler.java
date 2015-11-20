@@ -114,8 +114,13 @@ public class UserInterfaceCompiler {
 				generateJavaSEGUIImpl();
 			}
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
+<<<<<<< HEAD
 				generateAndroidGUI();
 				generateGUIListener();
+=======
+				generateAndroidGUI(); 
+				generateGUIListener(); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 				generateGUIInterface();
 				generateAndroidGUIFactory();
 				generateAndroidGUIImpl();
@@ -148,7 +153,10 @@ public class UserInterfaceCompiler {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	private void generateAndroidGUIImpl() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -156,7 +164,10 @@ public class UserInterfaceCompiler {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	private void generateJavaSEGUIImpl() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -164,7 +175,10 @@ public class UserInterfaceCompiler {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	private void generateAndroidGUIFactory() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -172,7 +186,10 @@ public class UserInterfaceCompiler {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	private void generateJavaSEGUIFactory() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -180,7 +197,10 @@ public class UserInterfaceCompiler {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	private void generateGUIInterface() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -189,33 +209,52 @@ public class UserInterfaceCompiler {
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
+<<<<<<< HEAD
 
 	public String getDatafromSymblTable(String variableName) {
 		return SymbolTable.getSymblTableData(variableName);
 	}
 
+=======
+	public String getDatafromSymblTable(String variableName) {
+		return SymbolTable.getSymblTableData(variableName);
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void getDataAccessListFromSymblTable(String dataAccessStr) {
 		this.dataAccessList = SymbolTable
 				.getDataAccessSymblTable(dataAccessStr);
 	}
+<<<<<<< HEAD
 
 	public Set<DataAccess> getDataAccessList() {
 		return dataAccessList;
 	}
 
+=======
+	public Set<DataAccess> getDataAccessList() {
+		return dataAccessList;
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void setRequestType(String struct) {
 		iotsuite.parser.SymbolTable.searchStructFieldNameForGUI(struct);
 		this.struct = struct;
 	}
+<<<<<<< HEAD
 
 	public String getRequestType() {
 		return struct;
 	}
 
+=======
+	public String getRequestType() {
+		return struct;
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void addCommand(String actionName) {
 		Command command = new Command(actionName, getCommandParameter(), null);
 		commands.add(command);
 	}
+<<<<<<< HEAD
 
 	private Set<Command> getCommandList() {
 		return commands;
@@ -225,20 +264,37 @@ public class UserInterfaceCompiler {
 		return actionParameter;
 	}
 
+=======
+	private Set<Command> getCommandList() {
+		return commands;
+	}
+	private Parameter getActionParameter() {
+		return actionParameter;
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void addActionParameter(String parameterName, String parameterType) {
 		actionParameter = new Parameter(parameterName, new DataType(
 				parameterType));
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void addCommandParameter(String parameterName) {
 		commandParameter = new Parameter(parameterName, new DataType(
 				getDatafromSymblTable(parameterName)));
 	}
+<<<<<<< HEAD
 
 	public Parameter getCommandParameter() {
 		return commandParameter;
 	}
 
+=======
+	public Parameter getCommandParameter() {
+		return commandParameter;
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void addAction(String actionName, String widgetName) {
 		Action action = new Action(actionName, getActionParameter(), widgetName);
 		actions.add(action);

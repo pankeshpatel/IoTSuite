@@ -23,6 +23,10 @@ public class MapperCompiler {
 
 	private String softwareComponentName;
 	private String softwareComponentType;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 	public String getSoftwareComponentType() {
 		return softwareComponentType;
@@ -38,8 +42,12 @@ public class MapperCompiler {
 	}
 
 	public void addDeployementConstraintObj() {
+<<<<<<< HEAD
 		deploymentConstraint = new DeploymentScope(getSoftwareComponentName(),
 				getSoftwareComponentType());
+=======
+    	deploymentConstraint = new DeploymentScope(getSoftwareComponentName(), getSoftwareComponentType());
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		SymbolTable.addDeploymentConstraints(deploymentConstraint);
 	}
 
@@ -50,6 +58,10 @@ public class MapperCompiler {
 	public void setSoftwareComponentName(String softwareComponentName) {
 		this.softwareComponentName = softwareComponentName;
 	}
+<<<<<<< HEAD
+=======
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 	public static void mappingFileGenerator(List<Device> deviceList,
 			List<DeploymentScope> mappingConstraintList) throws IOException {
@@ -58,10 +70,19 @@ public class MapperCompiler {
 		Map<Device, Set<String>> taskMapper = MappingAlgoCompiler.mapTasks(
 				deviceList, mappingConstraintList);
 
+<<<<<<< HEAD
+=======
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		for (Entry<Device, Set<String>> entry : taskMapper.entrySet()) {
 
 			Device device = MergeDeviceAbilities(entry.getKey(),
 					entry.getValue(), "DBServer");
+<<<<<<< HEAD
+=======
+			
+			
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			multiplyTemplate(device);
 			genearateStartupCode(device);
@@ -113,9 +134,15 @@ public class MapperCompiler {
 			generateDeviceManifest(unit);
 		}
 
+<<<<<<< HEAD
 		File srcFolder = new File(GlobalVariable.templatePath + "/"
 				+ "DeviceDrivers" + "/" + unit.getType());
 
+=======
+			File srcFolder = new File(GlobalVariable.templatePath + "/"
+				+ "DeviceDrivers" + "/" + unit.getType());
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		new File(GlobalVariable.templatePath).mkdirs();
 		File destFolder = new File(GlobalVariable.templatePath + "/"
 				+ GlobalVariable.deploymentFolderPath + "/" + unit.getType()
@@ -136,7 +163,11 @@ public class MapperCompiler {
 	}
 
 	private static void genearateStartupCode(Device device) {
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generateDevice
 				.generateDeviceStartup(device);

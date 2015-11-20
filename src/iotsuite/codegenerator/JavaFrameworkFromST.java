@@ -35,8 +35,11 @@ public class JavaFrameworkFromST {
 				"JavaSESensorImpl", "sensor", sensorDriver);
 	}
 
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// JavaSE Event Driven Sensor Impl
 	public CompilationUnit generateJavaSEEventDrivenSensorImpl(
 			Sensor sensorDriver) {
@@ -148,6 +151,7 @@ public class JavaFrameworkFromST {
 				sensorDriver.getName() + "Factory" + ".java",
 				templateOfSensorDriver, "JavaSEFactory", "Sensor", sensorDriver);
 	}
+<<<<<<< HEAD
 	
 	// Node.js code
 	public CompilationUnit generateNodejsVisualization(Actuator actuatorDriver) {
@@ -177,6 +181,8 @@ public class JavaFrameworkFromST {
 				"client", "actuator", actuatorDriver);
 	}
 	
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 	// JavaSE Actuator Impl
 	public CompilationUnit generateJavaSEActuatorImpl(Actuator actuatorDriver) {

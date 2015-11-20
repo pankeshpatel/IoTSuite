@@ -45,6 +45,10 @@ public class SourceFileDumper {
 
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK)) {
+<<<<<<< HEAD
+=======
+			
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			generateCodeForArchitectureFrameworkActivity(template,
 					"ApplicationLogic", null);
@@ -58,6 +62,10 @@ public class SourceFileDumper {
 						"Android");
 			}
 
+<<<<<<< HEAD
+=======
+			
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 				generateCodeForMappingActivitity(template,
 						GlobalVariable.deviceJAVASEType,
@@ -130,7 +138,10 @@ public class SourceFileDumper {
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
+<<<<<<< HEAD
 			
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		} else if (unit.getFileCategory().equals("JavaSEGuiImpl")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -139,7 +150,10 @@ public class SourceFileDumper {
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
+<<<<<<< HEAD
 			
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		} else if (unit.getFileCategory().equals("JavaSEFactory")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -170,6 +184,7 @@ public class SourceFileDumper {
 					+ unit.getFileNameToGenerate());
 		}
 
+<<<<<<< HEAD
 		// Node.js code generation
 		else if (unit.getFileCategory().equals("nodejs")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
@@ -192,6 +207,8 @@ public class SourceFileDumper {
 					+ unit.getFileNameToGenerate());
 		}
 		
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		else if (unit.getFileCategory().equals("JavaSEActuatorImpl")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath

@@ -38,6 +38,7 @@ public class StorageCompiler {
 	private Set<Action> storageActionList = new HashSet<Action>();
 	private Parameter actionParameter;
 
+<<<<<<< HEAD
 	public StorageCompiler() {
 
 	}
@@ -64,6 +65,31 @@ public class StorageCompiler {
 				parameterType));
 	}
 
+=======
+
+	public StorageCompiler() {
+
+	}
+	
+	public void createStorageObject() {
+		storageService = new Storage(getStorageServiceName(), getDataAccessList(), null, getAllFieldName(),
+				getAllFieldSQLvariable(), getStructField(), getStructFieldName(), getActionList(), getActionStructFieldName());
+	}
+	
+	public void addAction(String actionName) {
+		Action action = new Action(actionName, getParameter(), null);
+		storageActionList.add(action);
+	}	
+	
+	public Parameter getParameter() {
+		return actionParameter;
+	}
+	
+	public void addParameter(String parameterName, String parameterType) {
+		actionParameter = new Parameter(parameterName, new DataType(parameterType));
+	}
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	private Set<Action> getActionList() {
 		return storageActionList;
 	}
@@ -88,11 +114,20 @@ public class StorageCompiler {
 		getStructFieldName();
 		return fieldName;
 	}
+<<<<<<< HEAD
 
 	private List<String> getActionStructFieldName() {
 		this.structActionFieldName = iotsuite.parser.SymbolTable.tempListStorageActionFieldName;
 		return structActionFieldName;
 	}
+=======
+	
+	private List<String> getActionStructFieldName(){
+		this.structActionFieldName = iotsuite.parser.SymbolTable.tempListStorageActionFieldName;
+		return structActionFieldName;
+	}
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 	private List<String> getStructFieldName() {
 		this.structFieldName = iotsuite.parser.SymbolTable.tempListStorageFieldName;
@@ -152,6 +187,10 @@ public class StorageCompiler {
 		return queryIndex;
 	}
 
+<<<<<<< HEAD
+=======
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void generateStorageCode() {
 
 		generateStorageInteraction_StorageCompiler();

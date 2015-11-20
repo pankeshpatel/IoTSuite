@@ -35,6 +35,11 @@ public class DeviceCompiler {
 				getDeviceDescription(), getDataBase());
 		SymbolTable.addDeviceinSymblTable(device);
 	}
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 	public void setProtocol(String protocol) {
 		this.myProtocol = protocol;

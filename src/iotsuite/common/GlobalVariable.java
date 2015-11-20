@@ -17,9 +17,16 @@ public class GlobalVariable {
 	public static String utilDirPath = "/util";
 	public static String factoryDirPath = "/factory";
 	public static String deviceImplDirPath = "/deviceImpl";
+<<<<<<< HEAD
 
 	public static String activity;
 
+=======
+	
+	
+	public static String activity;	
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public static String deviceJAVASEType = "JavaSE";
 	public static String deviceAndroidType = "Android";
 	public static String deploymentFolderPath = "CodeForDeployment";

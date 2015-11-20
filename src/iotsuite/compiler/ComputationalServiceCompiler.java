@@ -113,18 +113,30 @@ public class ComputationalServiceCompiler {
 		generatedInfo.add(new Information(variableName, new DataType(
 				variableType)));
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void generateAggregatorComputationalServiceCode() {
 		generateComputationalServiceInteraction_ComputationalServiceCompiler();
 		generateAggregatorComputationalServiceLogic_ComputationalServiceCompiler();
 		generateAggregatorComputationalServiceFactory_ComputationalServiceCompiler();
 		generateAggregatorComputationalServiceInterface_ComputationalServiceCompiler();
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		for (int i = 0; i < computationalService.getAllConsumedInfo().size(); i++) {
 			generateComputationalServiceListener_ComputationalServiceCompiler(computationalService
 					.getAllConsumedInfo().get(i));
 		}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		generateImplComputationalService_ComputationalServiceCompiler();
 
 	}
@@ -133,7 +145,11 @@ public class ComputationalServiceCompiler {
 		generateComputationalServiceInteraction_ComputationalServiceCompiler();
 		generateComputationalServiceLogic_ComputationalServiceCompiler();
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void generateComputationalServiceInteraction_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
@@ -176,7 +192,10 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void generateComputationalServiceListener_ComputationalServiceCompiler(
 			Information infoConsumeInfo) {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
@@ -185,7 +204,10 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void generateImplComputationalService_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService

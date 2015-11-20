@@ -191,7 +191,11 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 			String query  = "SELECT * FROM  iotsuiteuser.$Storageservice.name$ WHERE $Storageservice.id$=" + index;
 			resultSet = statement.executeQuery(query);
 			resultSet.next();
+<<<<<<< HEAD
 			tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type; format="capital"$("$structField.name$")};separator=","$   );
+=======
+			tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type$("$structField.name$")};separator=","$   );
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		} catch (Exception e) {
 			System.err.println("Got an exception! ");
 			System.err.println(e.getMessage());
@@ -206,7 +210,11 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
             .executeQuery("SELECT * FROM $Storageservice.name$ WHERE $Storageservice.id$ = "
                 + index);
         resultSet.next();
+<<<<<<< HEAD
         tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type; format="capital"$("$structField.name$")};separator=","$   );
+=======
+        tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type$("$structField.name$")};separator=","$   );
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
        } catch (Exception e) {
         System.err.println("Got an exception! ");
         System.err.println(e.getMessage());
@@ -227,7 +235,11 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
               while (cursor.hasNext()) {        
                BasicDBObject dbObject = (BasicDBObject)cursor.next();
                tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | dbObject.
+<<<<<<< HEAD
                get$structField.type; format="capital"$("$structField.name$")};separator=","$   );
+=======
+               get$structField.type$("$structField.name$")};separator=","$   );
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
                      
                }
            

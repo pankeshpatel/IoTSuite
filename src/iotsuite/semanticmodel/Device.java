@@ -24,6 +24,10 @@ public class Device implements Serializable {
 	private String myProtocol;
 	private String myDescription;
 	private String myDatabase;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 	public Device(String name, String type, String networkAddress,
 			List<String> regionIDs, List<String> regionLabels,
@@ -44,6 +48,11 @@ public class Device implements Serializable {
 
 	}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public String getDescription() {
 		return myDescription;
 	}

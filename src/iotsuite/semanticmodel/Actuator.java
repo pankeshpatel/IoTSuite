@@ -12,6 +12,10 @@ public class Actuator extends SoftwareComponent<Information> {
 	private Set<Action> actions = new HashSet<Action>();
 	public static List<String> fieldName = new ArrayList<String>();
 
+<<<<<<< HEAD
+=======
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public Actuator(String name, Set<Action> actionsList,
 			Set<Information> generateInfo, Set<Information> consumeInfo,
 			List<String> fieldName) {

@@ -20,7 +20,10 @@ public class ActuatorCompiler {
 	private Set<Action> actions = new HashSet<Action>();
 	private Parameter parameter;
 	public static List<String> fieldName = new ArrayList<String>();
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public ActuatorCompiler() {
 
 	}
@@ -35,6 +38,10 @@ public class ActuatorCompiler {
 		return fieldName;
 	}
 
+<<<<<<< HEAD
+=======
+	
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	public void addParameter(String parameterName, String parameterType) {
 		parameter = new Parameter(parameterName, new DataType(parameterType));
 	}
@@ -52,8 +59,15 @@ public class ActuatorCompiler {
 		return actions;
 	}
 
+<<<<<<< HEAD
 	public void generateActuatorCode() {
 
+=======
+	
+	public void generateActuatorCode() {
+
+
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		generateActuatorInteraction_ActuatorCompiler();
 
 		if (GlobalVariable.activity
@@ -63,9 +77,12 @@ public class ActuatorCompiler {
 				generateJavaSEActuatorLogic_ActuatorCompiler();
 				generateJavaSEActuatorFactory_ActuatorCompiler();
 				generateJavaSEActuator_ActuatorCompiler();
+<<<<<<< HEAD
 				generateNodejsServer_Visualization();
 				generateClient_Visualization();
 				
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			}
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
 				generateAndroidActuatorLogic_ActuatorCompiler();
@@ -84,6 +101,7 @@ public class ActuatorCompiler {
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 
 	}
+<<<<<<< HEAD
 	
 // for server.js
 	private void generateNodejsServer_Visualization() {
@@ -103,6 +121,9 @@ public class ActuatorCompiler {
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 	}
+=======
+
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	private void generateJavaSEActuator_ActuatorCompiler() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedActuatorDriver

@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 // $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-11-19 18:12:23
 
 package iotsuite.parser;
+=======
+// $ANTLR 3.5.1 C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-11-18 23:59:17
+
+  package iotsuite.parser; 
+
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -9,6 +16,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class NetworkSpecLexer extends Lexer {
+<<<<<<< HEAD
 	public static final int EOF = -1;
 	public static final int T__9 = 9;
 	public static final int T__10 = 10;
@@ -26,6 +34,25 @@ public class NetworkSpecLexer extends Lexer {
 	public static final int ID = 6;
 	public static final int MOBILEFLAG = 7;
 	public static final int WS = 8;
+=======
+	public static final int EOF=-1;
+	public static final int T__9=9;
+	public static final int T__10=10;
+	public static final int T__11=11;
+	public static final int T__12=12;
+	public static final int T__13=13;
+	public static final int T__14=14;
+	public static final int T__15=15;
+	public static final int T__16=16;
+	public static final int T__17=17;
+	public static final int T__18=18;
+	public static final int T__19=19;
+	public static final int CAPITALIZED_ID=4;
+	public static final int DESCRIPTION_ID=5;
+	public static final int ID=6;
+	public static final int MOBILEFLAG=7;
+	public static final int WS=8;
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 	// delegates
 	// delegators
@@ -33,6 +60,7 @@ public class NetworkSpecLexer extends Lexer {
 		return new Lexer[] {};
 	}
 
+<<<<<<< HEAD
 	public NetworkSpecLexer() {
 	}
 
@@ -48,27 +76,52 @@ public class NetworkSpecLexer extends Lexer {
 	public String getGrammarFileName() {
 		return "S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g";
 	}
+=======
+	public NetworkSpecLexer() {} 
+	public NetworkSpecLexer(CharStream input) {
+		this(input, new RecognizerSharedState());
+	}
+	public NetworkSpecLexer(CharStream input, RecognizerSharedState state) {
+		super(input,state);
+	}
+	@Override public String getGrammarFileName() { return "C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g"; }
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 	// $ANTLR start "T__9"
 	public final void mT__9() throws RecognitionException {
 		try {
 			int _type = T__9;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:6:
 			// ( '\"' )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:8:
 			// '\"'
 			{
 				match('\"');
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:6: ( '\"' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:11:8: '\"'
+			{
+			match('\"'); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "T__9"
 
 	// $ANTLR start "T__10"
@@ -76,21 +129,36 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:7:
 			// ( ',' )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:9:
 			// ','
 			{
 				match(',');
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:7: ( ',' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:12:9: ','
+			{
+			match(','); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "T__10"
 
 	// $ANTLR start "T__11"
@@ -98,21 +166,36 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__11;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:7:
 			// ( ':' )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:9:
 			// ':'
 			{
 				match(':');
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:7: ( ':' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:13:9: ':'
+			{
+			match(':'); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "T__11"
 
 	// $ANTLR start "T__12"
@@ -120,21 +203,36 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__12;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:7:
 			// ( ';' )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:9:
 			// ';'
 			{
 				match(';');
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:7: ( ';' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:14:9: ';'
+			{
+			match(';'); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "T__12"
 
 	// $ANTLR start "T__13"
@@ -142,22 +240,37 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:7:
 			// ( 'database' )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:9:
 			// 'database'
 			{
 				match("database");
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:7: ( 'database' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:15:9: 'database'
+			{
+			match("database"); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "T__13"
 
 	// $ANTLR start "T__14"
@@ -165,22 +278,37 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__14;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:7:
 			// ( 'description' )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:9:
 			// 'description'
 			{
 				match("description");
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:7: ( 'description' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:16:9: 'description'
+			{
+			match("description"); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "T__14"
 
 	// $ANTLR start "T__15"
@@ -188,22 +316,37 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:7:
 			// ( 'devices' )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:9:
 			// 'devices'
 			{
 				match("devices");
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:7: ( 'devices' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:17:9: 'devices'
+			{
+			match("devices"); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "T__15"
 
 	// $ANTLR start "T__16"
@@ -211,22 +354,37 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:7:
 			// ( 'location' )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:9:
 			// 'location'
 			{
 				match("location");
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:7: ( 'location' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:18:9: 'location'
+			{
+			match("location"); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "T__16"
 
 	// $ANTLR start "T__17"
@@ -234,22 +392,37 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__17;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:19:7:
 			// ( 'platform' )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:19:9:
 			// 'platform'
 			{
 				match("platform");
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:19:7: ( 'platform' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:19:9: 'platform'
+			{
+			match("platform"); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "T__17"
 
 	// $ANTLR start "T__18"
@@ -257,22 +430,37 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:20:7:
 			// ( 'protocol' )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:20:9:
 			// 'protocol'
 			{
 				match("protocol");
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:20:7: ( 'protocol' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:20:9: 'protocol'
+			{
+			match("protocol"); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "T__18"
 
 	// $ANTLR start "T__19"
@@ -280,22 +468,37 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = T__19;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:21:7:
 			// ( 'resources' )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:21:9:
 			// 'resources'
 			{
 				match("resources");
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:21:7: ( 'resources' )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:21:9: 'resources'
+			{
+			match("resources"); 
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "T__19"
 
 	// $ANTLR start "MOBILEFLAG"
@@ -303,6 +506,7 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = MOBILEFLAG;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:81:12:
 			// ( 'true' | 'false' )
 			int alt1 = 2;
@@ -316,10 +520,26 @@ public class NetworkSpecLexer extends Lexer {
 			else {
 				NoViableAltException nvae = new NoViableAltException("", 1, 0,
 						input);
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:81:12: ( 'true' | 'false' )
+			int alt1=2;
+			int LA1_0 = input.LA(1);
+			if ( (LA1_0=='t') ) {
+				alt1=1;
+			}
+			else if ( (LA1_0=='f') ) {
+				alt1=2;
+			}
+
+			else {
+				NoViableAltException nvae =
+					new NoViableAltException("", 1, 0, input);
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 				throw nvae;
 			}
 
 			switch (alt1) {
+<<<<<<< HEAD
 			case 1:
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:81:15:
 			// 'true'
@@ -336,15 +556,39 @@ public class NetworkSpecLexer extends Lexer {
 
 			}
 				break;
+=======
+				case 1 :
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:81:15: 'true'
+					{
+					match("true"); 
+
+					}
+					break;
+				case 2 :
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:81:24: 'false'
+					{
+					match("false"); 
+
+					}
+					break;
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			}
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "MOBILEFLAG"
 
 	// $ANTLR start "ID"
@@ -352,11 +596,17 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:86:5:
 			// ( ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* ) |
 			// '0' .. '9' ( '0' .. '9' )* | '*' )
 			int alt5 = 3;
 			switch (input.LA(1)) {
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:86:5: ( ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* ) | '0' .. '9' ( '0' .. '9' )* | '*' )
+			int alt5=3;
+			switch ( input.LA(1) ) {
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			case 'a':
 			case 'b':
 			case 'c':
@@ -382,9 +632,16 @@ public class NetworkSpecLexer extends Lexer {
 			case 'w':
 			case 'x':
 			case 'y':
+<<<<<<< HEAD
 			case 'z': {
 				alt5 = 1;
 			}
+=======
+			case 'z':
+				{
+				alt5=1;
+				}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 				break;
 			case '0':
 			case '1':
@@ -395,6 +652,7 @@ public class NetworkSpecLexer extends Lexer {
 			case '6':
 			case '7':
 			case '8':
+<<<<<<< HEAD
 			case '9': {
 				alt5 = 2;
 			}
@@ -445,10 +703,61 @@ public class NetworkSpecLexer extends Lexer {
 							break;
 
 						default:
+=======
+			case '9':
+				{
+				alt5=2;
+				}
+				break;
+			case '*':
+				{
+				alt5=3;
+				}
+				break;
+			default:
+				NoViableAltException nvae =
+					new NoViableAltException("", 5, 0, input);
+				throw nvae;
+			}
+			switch (alt5) {
+				case 1 :
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:86:7: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+					{
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:86:7: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:86:8: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+					{
+					matchRange('a','z'); 
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:86:18: ( 'a' .. 'z' | 'A' .. 'Z' )*
+					loop2:
+					while (true) {
+						int alt2=2;
+						int LA2_0 = input.LA(1);
+						if ( ((LA2_0 >= 'A' && LA2_0 <= 'Z')||(LA2_0 >= 'a' && LA2_0 <= 'z')) ) {
+							alt2=1;
+						}
+
+						switch (alt2) {
+						case 1 :
+							// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+							{
+							if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+								input.consume();
+							}
+							else {
+								MismatchedSetException mse = new MismatchedSetException(null,input);
+								recover(mse);
+								throw mse;
+							}
+							}
+							break;
+
+						default :
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 							break loop2;
 						}
 					}
 
+<<<<<<< HEAD
 					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:86:42:
 					// ( '0' .. '9' )*
 					loop3: while (true) {
@@ -474,10 +783,38 @@ public class NetworkSpecLexer extends Lexer {
 							break;
 
 						default:
+=======
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:86:42: ( '0' .. '9' )*
+					loop3:
+					while (true) {
+						int alt3=2;
+						int LA3_0 = input.LA(1);
+						if ( ((LA3_0 >= '0' && LA3_0 <= '9')) ) {
+							alt3=1;
+						}
+
+						switch (alt3) {
+						case 1 :
+							// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+							{
+							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+								input.consume();
+							}
+							else {
+								MismatchedSetException mse = new MismatchedSetException(null,input);
+								recover(mse);
+								throw mse;
+							}
+							}
+							break;
+
+						default :
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 							break loop3;
 						}
 					}
 
+<<<<<<< HEAD
 				}
 
 			}
@@ -525,15 +862,70 @@ public class NetworkSpecLexer extends Lexer {
 				match('*');
 			}
 				break;
+=======
+					}
+
+					}
+					break;
+				case 2 :
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:86:56: '0' .. '9' ( '0' .. '9' )*
+					{
+					matchRange('0','9'); 
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:86:64: ( '0' .. '9' )*
+					loop4:
+					while (true) {
+						int alt4=2;
+						int LA4_0 = input.LA(1);
+						if ( ((LA4_0 >= '0' && LA4_0 <= '9')) ) {
+							alt4=1;
+						}
+
+						switch (alt4) {
+						case 1 :
+							// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+							{
+							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+								input.consume();
+							}
+							else {
+								MismatchedSetException mse = new MismatchedSetException(null,input);
+								recover(mse);
+								throw mse;
+							}
+							}
+							break;
+
+						default :
+							break loop4;
+						}
+					}
+
+					}
+					break;
+				case 3 :
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:86:76: '*'
+					{
+					match('*'); 
+					}
+					break;
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			}
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "ID"
 
 	// $ANTLR start "DESCRIPTION_ID"
@@ -541,6 +933,7 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = DESCRIPTION_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:88:15:
 			// ( ( 'a' .. 'z' | '0' .. '9' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' ..
 			// '9' | ' ' )* )
@@ -589,16 +982,65 @@ public class NetworkSpecLexer extends Lexer {
 						break loop6;
 					}
 				}
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:88:15: ( ( 'a' .. 'z' | '0' .. '9' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:88:19: ( 'a' .. 'z' | '0' .. '9' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )*
+			{
+			if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+				input.consume();
+			}
+			else {
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				recover(mse);
+				throw mse;
+			}
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:88:38: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )*
+			loop6:
+			while (true) {
+				int alt6=2;
+				int LA6_0 = input.LA(1);
+				if ( (LA6_0==' '||(LA6_0 >= '0' && LA6_0 <= '9')||(LA6_0 >= 'A' && LA6_0 <= 'Z')||(LA6_0 >= 'a' && LA6_0 <= 'z')) ) {
+					alt6=1;
+				}
+
+				switch (alt6) {
+				case 1 :
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+					{
+					if ( input.LA(1)==' '||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					break loop6;
+				}
+			}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "DESCRIPTION_ID"
 
 	// $ANTLR start "CAPITALIZED_ID"
@@ -606,6 +1048,7 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = CAPITALIZED_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:15:
 			// ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:17:
@@ -670,16 +1113,87 @@ public class NetworkSpecLexer extends Lexer {
 						break loop8;
 					}
 				}
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+			{
+			matchRange('A','Z'); 
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			loop7:
+			while (true) {
+				int alt7=2;
+				int LA7_0 = input.LA(1);
+				if ( ((LA7_0 >= 'A' && LA7_0 <= 'Z')||(LA7_0 >= 'a' && LA7_0 <= 'z')) ) {
+					alt7=1;
+				}
+
+				switch (alt7) {
+				case 1 :
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+					{
+					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					break loop7;
+				}
+			}
+
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:90:50: ( '0' .. '9' )*
+			loop8:
+			while (true) {
+				int alt8=2;
+				int LA8_0 = input.LA(1);
+				if ( ((LA8_0 >= '0' && LA8_0 <= '9')) ) {
+					alt8=1;
+				}
+
+				switch (alt8) {
+				case 1 :
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+					{
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					break loop8;
+				}
+			}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "CAPITALIZED_ID"
 
 	// $ANTLR start "WS"
@@ -687,6 +1201,7 @@ public class NetworkSpecLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:93:3:
 			// ( ( '\\t' | ' ' | '\\r' | '\\n' | '\ ' )+ )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:93:5:
@@ -731,19 +1246,67 @@ public class NetworkSpecLexer extends Lexer {
 				}
 
 				_channel = HIDDEN;
+=======
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:93:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:93:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			{
+			// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:93:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			int cnt9=0;
+			loop9:
+			while (true) {
+				int alt9=2;
+				int LA9_0 = input.LA(1);
+				if ( ((LA9_0 >= '\t' && LA9_0 <= '\n')||(LA9_0 >= '\f' && LA9_0 <= '\r')||LA9_0==' ') ) {
+					alt9=1;
+				}
+
+				switch (alt9) {
+				case 1 :
+					// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:
+					{
+					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					if ( cnt9 >= 1 ) break loop9;
+					EarlyExitException eee = new EarlyExitException(9, input);
+					throw eee;
+				}
+				cnt9++;
+			}
+
+			_channel = HIDDEN;
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			}
 
 			state.type = _type;
 			state.channel = _channel;
+<<<<<<< HEAD
 		} finally {
 			// do for sure before leaving
 		}
 	}
 
+=======
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// $ANTLR end "WS"
 
 	@Override
 	public void mTokens() throws RecognitionException {
+<<<<<<< HEAD
 		// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:8:
 		// ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 |
 		// T__17 | T__18 | T__19 | MOBILEFLAG | ID | DESCRIPTION_ID |
@@ -879,10 +1442,129 @@ public class NetworkSpecLexer extends Lexer {
 
 		}
 			break;
+=======
+		// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | MOBILEFLAG | ID | DESCRIPTION_ID | CAPITALIZED_ID | WS )
+		int alt10=16;
+		alt10 = dfa10.predict(input);
+		switch (alt10) {
+			case 1 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:10: T__9
+				{
+				mT__9(); 
+
+				}
+				break;
+			case 2 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:15: T__10
+				{
+				mT__10(); 
+
+				}
+				break;
+			case 3 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:21: T__11
+				{
+				mT__11(); 
+
+				}
+				break;
+			case 4 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:27: T__12
+				{
+				mT__12(); 
+
+				}
+				break;
+			case 5 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:33: T__13
+				{
+				mT__13(); 
+
+				}
+				break;
+			case 6 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:39: T__14
+				{
+				mT__14(); 
+
+				}
+				break;
+			case 7 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:45: T__15
+				{
+				mT__15(); 
+
+				}
+				break;
+			case 8 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:51: T__16
+				{
+				mT__16(); 
+
+				}
+				break;
+			case 9 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:57: T__17
+				{
+				mT__17(); 
+
+				}
+				break;
+			case 10 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:63: T__18
+				{
+				mT__18(); 
+
+				}
+				break;
+			case 11 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:69: T__19
+				{
+				mT__19(); 
+
+				}
+				break;
+			case 12 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:75: MOBILEFLAG
+				{
+				mMOBILEFLAG(); 
+
+				}
+				break;
+			case 13 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:86: ID
+				{
+				mID(); 
+
+				}
+				break;
+			case 14 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:89: DESCRIPTION_ID
+				{
+				mDESCRIPTION_ID(); 
+
+				}
+				break;
+			case 15 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:104: CAPITALIZED_ID
+				{
+				mCAPITALIZED_ID(); 
+
+				}
+				break;
+			case 16 :
+				// C:\\IoTSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:1:119: WS
+				{
+				mWS(); 
+
+				}
+				break;
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 		}
 	}
 
+<<<<<<< HEAD
 	protected DFA10 dfa10 = new DFA10(this);
 	static final String DFA10_eotS = "\5\uffff\10\15\3\uffff\4\15\1\uffff\27\15\1\65\10\15\1\uffff\1\65\11\15"
 			+ "\1\107\4\15\1\114\1\15\1\uffff\1\116\1\117\1\120\1\15\1\uffff\1\15\3\uffff"
@@ -900,6 +1582,32 @@ public class NetworkSpecLexer extends Lexer {
 			"\2\17\1\uffff\2\17\22\uffff\1\17\1\uffff\1\1\7\uffff\1\15\1\uffff\1\2"
 					+ "\3\uffff\12\14\1\3\1\4\5\uffff\32\16\6\uffff\3\13\1\5\1\13\1\12\5\13"
 					+ "\1\6\3\13\1\7\1\13\1\10\1\13\1\11\6\13",
+=======
+
+	protected DFA10 dfa10 = new DFA10(this);
+	static final String DFA10_eotS =
+		"\5\uffff\10\15\3\uffff\4\15\1\uffff\27\15\1\65\10\15\1\uffff\1\65\11\15"+
+		"\1\107\4\15\1\114\1\15\1\uffff\1\116\1\117\1\120\1\15\1\uffff\1\15\3\uffff"+
+		"\1\123\1\15\1\uffff\1\125\1\uffff";
+	static final String DFA10_eofS =
+		"\126\uffff";
+	static final String DFA10_minS =
+		"\1\11\4\uffff\10\40\3\uffff\4\40\1\uffff\40\40\1\uffff\21\40\1\uffff\4"+
+		"\40\1\uffff\1\40\3\uffff\2\40\1\uffff\1\40\1\uffff";
+	static final String DFA10_maxS =
+		"\1\172\4\uffff\10\172\3\uffff\4\172\1\uffff\40\172\1\uffff\21\172\1\uffff"+
+		"\4\172\1\uffff\1\172\3\uffff\2\172\1\uffff\1\172\1\uffff";
+	static final String DFA10_acceptS =
+		"\1\uffff\1\1\1\2\1\3\1\4\10\uffff\1\15\1\17\1\20\4\uffff\1\16\40\uffff"+
+		"\1\14\21\uffff\1\7\4\uffff\1\5\1\uffff\1\10\1\11\1\12\2\uffff\1\13\1\uffff"+
+		"\1\6";
+	static final String DFA10_specialS =
+		"\126\uffff}>";
+	static final String[] DFA10_transitionS = {
+			"\2\17\1\uffff\2\17\22\uffff\1\17\1\uffff\1\1\7\uffff\1\15\1\uffff\1\2"+
+			"\3\uffff\12\14\1\3\1\4\5\uffff\32\16\6\uffff\3\13\1\5\1\13\1\12\5\13"+
+			"\1\6\3\13\1\7\1\13\1\10\1\13\1\11\6\13",
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			"",
 			"",
 			"",
@@ -918,7 +1626,12 @@ public class NetworkSpecLexer extends Lexer {
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\23\22\1\34\6\22",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\22\22\1\35\2\22\1\36\4\22",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+<<<<<<< HEAD
 			"\1\24\17\uffff\12\23\7\uffff\32\24\6\uffff\32\24", "",
+=======
+			"\1\24\17\uffff\12\23\7\uffff\32\24\6\uffff\32\24",
+			"",
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\2\22\1\37\27\22",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\1\40\31\22",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\16\22\1\41\13\22",
@@ -950,7 +1663,12 @@ public class NetworkSpecLexer extends Lexer {
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\10\22\1\72\21\22",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\16\22\1\73\13\22",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\2\22\1\74\27\22",
+<<<<<<< HEAD
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\21\22\1\75\10\22", "",
+=======
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\21\22\1\75\10\22",
+			"",
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\22\22\1\76\7\22",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\17\22\1\77\12\22",
@@ -967,6 +1685,7 @@ public class NetworkSpecLexer extends Lexer {
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\13\22\1\112\16\22",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\4\22\1\113\25\22",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+<<<<<<< HEAD
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\10\22\1\115\21\22", "",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
 			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
@@ -986,12 +1705,42 @@ public class NetworkSpecLexer extends Lexer {
 	static final short[] DFA10_accept = DFA.unpackEncodedString(DFA10_acceptS);
 	static final short[] DFA10_special = DFA
 			.unpackEncodedString(DFA10_specialS);
+=======
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\10\22\1\115\21\22",
+			"",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\22\22\1\121\7\22",
+			"",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\16\22\1\122\13\22",
+			"",
+			"",
+			"",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\15\22\1\124\14\22",
+			"",
+			"\1\24\17\uffff\12\23\7\uffff\32\22\6\uffff\32\22",
+			""
+	};
+
+	static final short[] DFA10_eot = DFA.unpackEncodedString(DFA10_eotS);
+	static final short[] DFA10_eof = DFA.unpackEncodedString(DFA10_eofS);
+	static final char[] DFA10_min = DFA.unpackEncodedStringToUnsignedChars(DFA10_minS);
+	static final char[] DFA10_max = DFA.unpackEncodedStringToUnsignedChars(DFA10_maxS);
+	static final short[] DFA10_accept = DFA.unpackEncodedString(DFA10_acceptS);
+	static final short[] DFA10_special = DFA.unpackEncodedString(DFA10_specialS);
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	static final short[][] DFA10_transition;
 
 	static {
 		int numStates = DFA10_transitionS.length;
 		DFA10_transition = new short[numStates][];
+<<<<<<< HEAD
 		for (int i = 0; i < numStates; i++) {
+=======
+		for (int i=0; i<numStates; i++) {
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 			DFA10_transition[i] = DFA.unpackEncodedString(DFA10_transitionS[i]);
 		}
 	}
@@ -1009,7 +1758,10 @@ public class NetworkSpecLexer extends Lexer {
 			this.special = DFA10_special;
 			this.transition = DFA10_transition;
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 		@Override
 		public String getDescription() {
 			return "1:1: Tokens : ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | MOBILEFLAG | ID | DESCRIPTION_ID | CAPITALIZED_ID | WS );";

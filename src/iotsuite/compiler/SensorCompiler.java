@@ -62,6 +62,10 @@ public class SensorCompiler {
 		SensorCompiler.sampleDuration = sampleDuration;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	// This function will generate code for Periodic Sensor
 	public void generatePeriodicSensorCode() {
 
@@ -134,7 +138,11 @@ public class SensorCompiler {
 						.getAllGeneratedInfo().get(i));
 			}
 
+<<<<<<< HEAD
 		}
+=======
+	}
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 
 	}
 
@@ -201,7 +209,10 @@ public class SensorCompiler {
 		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	private void generateSensorAndroid_PeriodicSensorCompiler() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorImplFactory
@@ -217,7 +228,10 @@ public class SensorCompiler {
 		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
 	private void generateSensorInterface_SensorCompiler() {
 		JavaFrameworkFromST generateSensorInterface = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorInterface
