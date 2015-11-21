@@ -28,7 +28,7 @@ networkspec:
     ;
     
 device_def:
-   deviceName = (ID|CAPITALIZED_ID) ':' 
+   deviceName = (ID|CAPITALIZED_ID) ':'  
    { 
    context.currentNetwork = new DeviceCompiler();
    context.currentNetwork.setDeviceName($deviceName.text);

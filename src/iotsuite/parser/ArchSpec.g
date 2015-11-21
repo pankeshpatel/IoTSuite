@@ -38,7 +38,7 @@ struct_def:
     (structField_def ';')+   
     {context.currentStruct.generateStructureCode();}
 ; 
-structField_def:  
+structField_def:   
   lc_id ':' dataType 
   { context.currentStruct.addField($lc_id.text, $dataType.text);
   context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  

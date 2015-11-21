@@ -36,7 +36,7 @@ struct_def:
     {
      context.currentStruct.generateStructureCode();  
     } 
-;
+;     
 structField_def:  
   lc_id ':' dataType 
   { 
