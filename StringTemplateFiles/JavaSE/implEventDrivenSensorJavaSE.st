@@ -26,8 +26,7 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
    $eventDrivenFields$; 
   }$
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
-    private boolean $generatedInfo.name; format="avoidCapital"$Condition = false;    
-        private Listener$generatedInfo.name$ handler$generatedInfo.name$;
+     private Listener$generatedInfo.name$ handler$generatedInfo.name$;
   }; separator="\n"$
   
    public JavaSE$SensorDriver.name$(Device deviceInfo) { 
@@ -35,10 +34,6 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
 	
      prepareGUI();
      showEventDemo();
-		
-		
-		
-		
   } 
   
  
@@ -102,6 +97,18 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$ {
   
   private class ButtonClickListener implements ActionListener{
   public void actionPerformed(ActionEvent e){
+  
+   $SensorDriver.allGeneratedInfo:{ generatedInfo | 
+     boolean $generatedInfo.name; format="avoidCapital"$Condition = false;    
+      }; separator="\n"$
+      
+       $SensorDriver.allGeneratedInfo:{ generatedInfo | 
+       if(e.getActionCommand().equals("$generatedInfo.name; format="avoidCapital"$"))
+       {
+       $generatedInfo.name; format="avoidCapital"$Condition=true;
+       }
+        }; separator="\n"$
+  
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
     if($generatedInfo.name; format="avoidCapital"$Condition)
    { 

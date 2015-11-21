@@ -18,60 +18,60 @@ import framework.*;
 
 public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
 
-	
-	private Connection connect = null;
-	private Statement statement = null;
-	private ResultSet resultSet = null;
-	static PreparedStatement ps ;
-	$Storageservice.allDataAccess:{dataAccess |
-	private $dataAccess.generatedInfo.type$ tempPreference;
-	}$	
-	
-	 String USERNAME = "";
-	 String PASSWORD = "";	
-	 private String DBMS;
-	
-	static final String DBNAME = "$Storageservice.name$";
-		
+  
+  private Connection connect = null;
+  private Statement statement = null;
+  private ResultSet resultSet = null;
+  static PreparedStatement ps ;
+  $Storageservice.allDataAccess:{dataAccess |
+  private $dataAccess.generatedInfo.type$ tempPreference;
+  }$  
+  
+   String USERNAME = "";
+   String PASSWORD = "";  
+   private String DBMS;
+  
+  static final String DBNAME = "$Storageservice.name$";
+    
   public JavaSE$Storageservice.name$(Device deviceInfo) {
-	  DBMS=deviceInfo.getDatabase();
-	  
-	 if(DBMS.equalsIgnoreCase("mysql"))
-	 {
-	  try {
-	    
-			Class.forName("com.mysql.jdbc.Driver");
-			connect = DriverManager.getConnection("jdbc:mysql://localhost/", 
-							 USERNAME , PASSWORD );
-			
-			statement = (Statement) connect.createStatement();
-			ps = connect.prepareStatement("CREATE DATABASE IF NOT EXISTS $Storageservice.databaseName$ ");
-			ps.execute();
-			
-			connect = DriverManager.getConnection("jdbc:mysql://localhost/$Storageservice.databaseName$", 
-					 USERNAME , PASSWORD );
-			
-			if(checkTableExists()){ // If table exists				
-				 
-				 System.out.println("Table exists in the database im MySQL");	
-				 $Storageservice.allDataAccess:{dataAccess |
-						}$
-				}
-				else{				
-				System.out.println("Table does not exist in the database in MySQL");	
-				
-				
-				ps = connect.prepareStatement("CREATE TABLE iotsuiteuser.$Storageservice.name$ " +
-				
-              "($Storageservice.allfieldwithSQlvariable:{fieldwithSQL |	$fieldwithSQL$};separator="," $)");
+    DBMS=deviceInfo.getDatabase();
+    
+   if(DBMS.equalsIgnoreCase("mysql"))
+   {
+    try {
+      
+      Class.forName("com.mysql.jdbc.Driver");
+      connect = DriverManager.getConnection("jdbc:mysql://localhost/", 
+               USERNAME , PASSWORD );
+      
+      statement = (Statement) connect.createStatement();
+      ps = connect.prepareStatement("CREATE DATABASE IF NOT EXISTS $Storageservice.databaseName$ ");
+      ps.execute();
+      
+      connect = DriverManager.getConnection("jdbc:mysql://localhost/$Storageservice.databaseName$", 
+           USERNAME , PASSWORD );
+      
+      if(checkTableExists()){ // If table exists        
+         
+         System.out.println("Table exists in the database im MySQL"); 
+         $Storageservice.allDataAccess:{dataAccess |
+            }$
+        }
+        else{       
+        System.out.println("Table does not exist in the database in MySQL");  
+        
+        
+        ps = connect.prepareStatement("CREATE TABLE iotsuiteuser.$Storageservice.name$ " +
+        
+              "($Storageservice.allfieldwithSQlvariable:{fieldwithSQL | $fieldwithSQL$};separator="," $)");
               ps.execute();
-				
-				}
-		} 
-		catch (Exception e) {
-			System.err.println("Got an exception! ");
-			System.err.println(e.getMessage());
-		}
+        
+        }
+    } 
+    catch (Exception e) {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
   }
   
   if (DBMS.equalsIgnoreCase("azuresql")) {
@@ -114,69 +114,69 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
     
     @Override
      public void $action.name$($action.allParameter:{ param | $param.type$ newprofileValue }; separator=", "$) {
-	  
-	  if(DBMS.equalsIgnoreCase("mysql")){
-		    
-		  /*
-		  try {  
-				ps = 
-					connect.prepareStatement("INSERT INTO $Storageservice.name$ " +
-							"($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
-							" (""$Storageservice.allStorageActionStructFieldName:{structFieldName |"newprofileValue.get$structFieldName$()+"}$)");
-				
-				ps.executeUpdate(); 
-				
-				
-			} catch (SQLException e) {
-				e.printStackTrace();
-			} */
-			}
-			
-			
-		if(DBMS.equalsIgnoreCase("azuresql")){
-	    
-		/*	
-	    try {  
-	      
-	    	String sqlString="INSERT INTO $Storageservice.name$ " +
-	            "($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
-	            " ("+newIndex+"$Storageservice.allStorageActionStructFieldName:{structFieldName |,"+newprofileValue.get$structFieldName$()+"}$)";
-	      
-	              statement = connect.createStatement();
-	              statement.executeUpdate(sqlString);
-	              connect.close(); 
-	             
-	      
-	      
-	    } catch (SQLException e) {
-	      e.printStackTrace();
-	    }
-	    */ 
-	    }
-	    
-	    
-	   if(DBMS.equalsIgnoreCase("mongodb")){	
-		 /* try{   
+    
+    if(DBMS.equalsIgnoreCase("mysql")){
+        
+      /*
+      try {  
+        ps = 
+          connect.prepareStatement("INSERT INTO $Storageservice.name$ " +
+              "($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
+              " (""$Storageservice.allStorageActionStructFieldName:{structFieldName |"newprofileValue.get$structFieldName$()+"}$)");
+        
+        ps.executeUpdate(); 
+        
+        
+      } catch (SQLException e) {
+        e.printStackTrace();
+      } */
+      }
+      
+      
+    if(DBMS.equalsIgnoreCase("azuresql")){
+      
+    /*  
+      try {  
+        
+        String sqlString="INSERT INTO $Storageservice.name$ " +
+              "($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
+              " ("+newIndex+"$Storageservice.allStorageActionStructFieldName:{structFieldName |,"+newprofileValue.get$structFieldName$()+"}$)";
+        
+                statement = connect.createStatement();
+                statement.executeUpdate(sqlString);
+                connect.close(); 
+               
+        
+        
+      } catch (SQLException e) {
+        e.printStackTrace();
+      }
+      */ 
+      }
+      
+      
+     if(DBMS.equalsIgnoreCase("mongodb")){  
+     /* try{   
 
-	          MongoClient mongoClient = new MongoClient();
-	          DB db = mongoClient.getDB( "iotsuiteuser" );
-	          DBCollection table =db.getCollection("$Storageservice.name$");
-	          BasicDBObject document = new BasicDBObject();           
-	          document.put("$Storageservice.id$", newIndex);
-	          $Storageservice.allStructFieldName:{structFieldName |
-	          document.put("$structFieldName$",newprofileValue.get$structFieldName$());
-	          }$
-	          table.insert(document);
-	          
-	        
-	      }catch(Exception e){
-	       System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-	    }  */
-		  
-	    }
-    	   
+            MongoClient mongoClient = new MongoClient();
+            DB db = mongoClient.getDB( "iotsuiteuser" );
+            DBCollection table =db.getCollection("$Storageservice.name$");
+            BasicDBObject document = new BasicDBObject();           
+            document.put("$Storageservice.id$", newIndex);
+            $Storageservice.allStructFieldName:{structFieldName |
+            document.put("$structFieldName$",newprofileValue.get$structFieldName$());
+            }$
+            table.insert(document);
+            
+          
+        }catch(Exception e){
+         System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      }  */
+      
+      }
+         
       } 
-    	    
+          
     }; separator="\n"$ 
  
   
@@ -186,27 +186,19 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
  
   @Override
   public $dataAccess.generatedInfo.type$ get$dataAccess.dataAccessName$($dataAccess.query.type; format="capital" $ index){
- 	  if(DBMS.equalsIgnoreCase("mysql")) {
-	  try {
-			String query  = "SELECT * FROM  iotsuiteuser.$Storageservice.name$ WHERE $Storageservice.id$=" + index;
-			resultSet = statement.executeQuery(query);
-			resultSet.next();
-<<<<<<< HEAD
-			tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type;format="capital"$("$structField.name$")};separator=","$   );
-=======
-<<<<<<< HEAD
-			tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type; format="capital"$("$structField.name$")};separator=","$   );
-=======
-			tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type$("$structField.name$")};separator=","$   );
->>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
->>>>>>> 1a19f94fe52d7f4a2e1d6cb7d1613e7ab442a7cb
-		} catch (Exception e) {
-			System.err.println("Got an exception! ");
-			System.err.println(e.getMessage());
-		}	
-		}
-		
-		if (DBMS.equalsIgnoreCase("azuresql")) {
+    if(DBMS.equalsIgnoreCase("mysql")) {
+    try {
+      String query  = "SELECT * FROM  iotsuiteuser.$Storageservice.name$ WHERE $Storageservice.id$=" + index;
+      resultSet = statement.executeQuery(query);
+      resultSet.next();
+      tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type;format="capital"$("$structField.name$")};separator=","$   );
+    } catch (Exception e) {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    } 
+    }
+    
+    if (DBMS.equalsIgnoreCase("azuresql")) {
 
       try {
 
@@ -214,15 +206,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
             .executeQuery("SELECT * FROM $Storageservice.name$ WHERE $Storageservice.id$ = "
                 + index);
         resultSet.next();
-<<<<<<< HEAD
         tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type;format="capital"$("$structField.name$")};separator=","$   );
-=======
-<<<<<<< HEAD
-        tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type; format="capital"$("$structField.name$")};separator=","$   );
-=======
-        tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type$("$structField.name$")};separator=","$   );
->>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
->>>>>>> 1a19f94fe52d7f4a2e1d6cb7d1613e7ab442a7cb
        } catch (Exception e) {
         System.err.println("Got an exception! ");
         System.err.println(e.getMessage());
@@ -243,15 +227,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
               while (cursor.hasNext()) {        
                BasicDBObject dbObject = (BasicDBObject)cursor.next();
                tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | dbObject.
-<<<<<<< HEAD
                get$structField.type;format="capital"$("$structField.name$")};separator=","$   );
-=======
-<<<<<<< HEAD
-               get$structField.type; format="capital"$("$structField.name$")};separator=","$   );
-=======
-               get$structField.type$("$structField.name$")};separator=","$   );
->>>>>>> f18db808215aa7c0212c33614ab0a8c9dea732b4
->>>>>>> 1a19f94fe52d7f4a2e1d6cb7d1613e7ab442a7cb
                      
                }
            
@@ -261,26 +237,26 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
           }
           }
     
-		return tempPreference;
+    return tempPreference;
   
   } 
 }$
 
 private boolean checkTableExists() {
-	System.out.println("Checking Table exists or not in the database in MySQL");
+  System.out.println("Checking Table exists or not in the database in MySQL");
 try {
-		DatabaseMetaData md = connect.getMetaData();
-		ResultSet rs = md.getTables(null, null, DBNAME, null);
+    DatabaseMetaData md = connect.getMetaData();
+    ResultSet rs = md.getTables(null, null, DBNAME, null);
 
-		if (rs.next()){ 
-			return true;
-		} else {
-			return false;
-		}
-	} catch (SQLException e) {
-		e.printStackTrace();
-	}
-	return false;
+    if (rs.next()){ 
+      return true;
+    } else {
+      return false;
+    }
+  } catch (SQLException e) {
+    e.printStackTrace();
+  }
+  return false;
 }
 
 }

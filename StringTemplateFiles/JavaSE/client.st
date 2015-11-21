@@ -15,7 +15,7 @@
 <body>
 <div id="chart" style="width: 1500px; height: 700px"></div>
 <script>
-    (document).ready(function () {
+ (document).ready(function () {
     //Device developer will specify maxDataPoints display in a chart at a time
         var maxDataPoints = 10;
         //Device developer will specify type of charts 
