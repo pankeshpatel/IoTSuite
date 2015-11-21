@@ -114,8 +114,8 @@ public class UserInterfaceCompiler {
 				generateJavaSEGUIImpl();
 			}
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
-				generateAndroidGUI(); 
-				generateGUIListener(); 
+				generateAndroidGUI();
+				generateGUIListener();
 				generateGUIInterface();
 				generateAndroidGUIFactory();
 				generateAndroidGUIImpl();
@@ -148,6 +148,7 @@ public class UserInterfaceCompiler {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
+
 	private void generateAndroidGUIImpl() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -155,6 +156,7 @@ public class UserInterfaceCompiler {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
+
 	private void generateJavaSEGUIImpl() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -162,6 +164,7 @@ public class UserInterfaceCompiler {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
+
 	private void generateAndroidGUIFactory() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -169,6 +172,7 @@ public class UserInterfaceCompiler {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
+
 	private void generateJavaSEGUIFactory() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -176,6 +180,7 @@ public class UserInterfaceCompiler {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
+
 	private void generateGUIInterface() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
@@ -184,44 +189,56 @@ public class UserInterfaceCompiler {
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
+
 	public String getDatafromSymblTable(String variableName) {
 		return SymbolTable.getSymblTableData(variableName);
 	}
+
 	public void getDataAccessListFromSymblTable(String dataAccessStr) {
 		this.dataAccessList = SymbolTable
 				.getDataAccessSymblTable(dataAccessStr);
 	}
+
 	public Set<DataAccess> getDataAccessList() {
 		return dataAccessList;
 	}
+
 	public void setRequestType(String struct) {
 		iotsuite.parser.SymbolTable.searchStructFieldNameForGUI(struct);
 		this.struct = struct;
 	}
+
 	public String getRequestType() {
 		return struct;
 	}
+
 	public void addCommand(String actionName) {
 		Command command = new Command(actionName, getCommandParameter(), null);
 		commands.add(command);
 	}
+
 	private Set<Command> getCommandList() {
 		return commands;
 	}
+
 	private Parameter getActionParameter() {
 		return actionParameter;
 	}
+
 	public void addActionParameter(String parameterName, String parameterType) {
 		actionParameter = new Parameter(parameterName, new DataType(
 				parameterType));
 	}
+
 	public void addCommandParameter(String parameterName) {
 		commandParameter = new Parameter(parameterName, new DataType(
 				getDatafromSymblTable(parameterName)));
 	}
+
 	public Parameter getCommandParameter() {
 		return commandParameter;
 	}
+
 	public void addAction(String actionName, String widgetName) {
 		Action action = new Action(actionName, getActionParameter(), widgetName);
 		actions.add(action);

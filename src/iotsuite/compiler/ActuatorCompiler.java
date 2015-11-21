@@ -20,6 +20,7 @@ public class ActuatorCompiler {
 	private Set<Action> actions = new HashSet<Action>();
 	private Parameter parameter;
 	public static List<String> fieldName = new ArrayList<String>();
+
 	public ActuatorCompiler() {
 
 	}
@@ -34,7 +35,6 @@ public class ActuatorCompiler {
 		return fieldName;
 	}
 
-	
 	public void addParameter(String parameterName, String parameterType) {
 		parameter = new Parameter(parameterName, new DataType(parameterType));
 	}
@@ -52,9 +52,7 @@ public class ActuatorCompiler {
 		return actions;
 	}
 
-	
 	public void generateActuatorCode() {
-
 
 		generateActuatorInteraction_ActuatorCompiler();
 
@@ -93,7 +91,7 @@ public class ActuatorCompiler {
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 	}
-	
+
 	// Node.js
 	private void generateVisualization_Server() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
@@ -102,8 +100,8 @@ public class ActuatorCompiler {
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 	}
-	
-	// Client	
+
+	// Client
 	private void generateVisualization_Client() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedActuatorDriver
@@ -111,6 +109,7 @@ public class ActuatorCompiler {
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 	}
+
 	private void generateActuatorAndroid_ActuatorCompiler() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedActuatorDriver

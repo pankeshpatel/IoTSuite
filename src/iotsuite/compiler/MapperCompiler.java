@@ -23,7 +23,6 @@ public class MapperCompiler {
 
 	private String softwareComponentName;
 	private String softwareComponentType;
-	
 
 	public String getSoftwareComponentType() {
 		return softwareComponentType;
@@ -39,7 +38,8 @@ public class MapperCompiler {
 	}
 
 	public void addDeployementConstraintObj() {
-    	deploymentConstraint = new DeploymentScope(getSoftwareComponentName(), getSoftwareComponentType());
+		deploymentConstraint = new DeploymentScope(getSoftwareComponentName(),
+				getSoftwareComponentType());
 		SymbolTable.addDeploymentConstraints(deploymentConstraint);
 	}
 
@@ -50,7 +50,6 @@ public class MapperCompiler {
 	public void setSoftwareComponentName(String softwareComponentName) {
 		this.softwareComponentName = softwareComponentName;
 	}
-	
 
 	public static void mappingFileGenerator(List<Device> deviceList,
 			List<DeploymentScope> mappingConstraintList) throws IOException {
@@ -59,13 +58,10 @@ public class MapperCompiler {
 		Map<Device, Set<String>> taskMapper = MappingAlgoCompiler.mapTasks(
 				deviceList, mappingConstraintList);
 
-	
 		for (Entry<Device, Set<String>> entry : taskMapper.entrySet()) {
 
 			Device device = MergeDeviceAbilities(entry.getKey(),
 					entry.getValue(), "DBServer");
-			
-			
 
 			multiplyTemplate(device);
 			genearateStartupCode(device);
@@ -117,9 +113,9 @@ public class MapperCompiler {
 			generateDeviceManifest(unit);
 		}
 
-			File srcFolder = new File(GlobalVariable.templatePath + "/"
+		File srcFolder = new File(GlobalVariable.templatePath + "/"
 				+ "DeviceDrivers" + "/" + unit.getType());
-	
+
 		new File(GlobalVariable.templatePath).mkdirs();
 		File destFolder = new File(GlobalVariable.templatePath + "/"
 				+ GlobalVariable.deploymentFolderPath + "/" + unit.getType()
@@ -140,7 +136,7 @@ public class MapperCompiler {
 	}
 
 	private static void genearateStartupCode(Device device) {
-		
+
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generateDevice
 				.generateDeviceStartup(device);

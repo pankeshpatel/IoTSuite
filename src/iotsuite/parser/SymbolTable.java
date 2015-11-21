@@ -37,17 +37,14 @@ public class SymbolTable {
 
 	public static List<String> tempListActuatorFieldName = new ArrayList<String>();
 	public static List<String> tempListActuatorFieldType = new ArrayList<String>();
-	
+
 	public static List<String> tempListStorageActionFieldName = new ArrayList<String>();
 	public static List<String> tempListStorageActionFieldType = new ArrayList<String>();
-	
-	
-
-	
 
 	// Static Table used for Mapping from high level specification datatype to
 	// Resultset required datatype
-	//static HashMap<String, String> javaToResultSetMapping = new HashMap<String, String>();
+	// static HashMap<String, String> javaToResultSetMapping = new
+	// HashMap<String, String>();
 
 	// Following Symbol Table stores name of struct (ex- TempStruct and
 	// BadgeStruct)
@@ -72,17 +69,18 @@ public class SymbolTable {
 	public static List<StructField> StructFieldSetForGUINotify = new ArrayList<StructField>();
 	public static List<StructField> StructFieldSetForStorage = new ArrayList<StructField>();
 
-
 	public static String structName;
 	public static String storageStructName;
 	public static String actuatorStructName;
 	public static String storageActionStructName;
 	public static String aggregatorStructName;
-/*	static String[][] arrayFieldName = new String[10][2];
-	static String[][] arrayFieldType = new String[10][2];*/
-	
+	/*
+	 * static String[][] arrayFieldName = new String[10][2]; static String[][]
+	 * arrayFieldType = new String[10][2];
+	 */
+
 	static String[][] arrayFieldName = new String[200][200];
-	static String[][] arrayFieldType = new String[200][200];	
+	static String[][] arrayFieldType = new String[200][200];
 	public static int rowCount = 0;
 	public static int columnCount = 0;
 	public static String[][] arrayGUIGeneratedInfo = new String[10][2];
@@ -162,12 +160,12 @@ public class SymbolTable {
 		SymbolTable.actuatorStructName = actuatorStructName;
 		searchForActuatorFields();
 	}
-	
-	public void constructStorageActionSymlTable(String storageStructName){
+
+	public void constructStorageActionSymlTable(String storageStructName) {
 		SymbolTable.storageActionStructName = storageStructName;
 		searchForStorageActionFields(storageStructName);
 	}
-	
+
 	private void searchForStorageActionFields(String myStorageActionStructName) {
 
 		for (int i = 0; i < 10; i++) {
@@ -179,7 +177,6 @@ public class SymbolTable {
 			}
 		}
 	}
-	
 
 	public void constructStructFieldSymblTable(String fieldName,
 			String fieldType) {
@@ -316,7 +313,7 @@ public class SymbolTable {
 					tempListStorageFieldName.add(arrayFieldName[i][1]);
 					tempListStorageFieldType.add(arrayFieldType[i][1]);
 
-					//Mapping(javaToResultSetMapping);
+					// Mapping(javaToResultSetMapping);
 					FieldForStorage = new StructField(arrayFieldName[i][1],
 							new PrimitiveType(arrayFieldType[i][1]));
 					StructFieldSetForStorage.add(FieldForStorage);
@@ -325,14 +322,12 @@ public class SymbolTable {
 		}
 	}
 
-/*	public static void Mapping(Map<String, String> javaType) {
-		javaType.put("String", "String");
-		javaType.put("double", "Double");
-		javaType.put("int", "Int");
-		javaType.put("boolean", "Boolean");
-		javaType.put("long", "Long");
-		javaType.put("float", "Float");
-	}*/
+	/*
+	 * public static void Mapping(Map<String, String> javaType) {
+	 * javaType.put("String", "String"); javaType.put("double", "Double");
+	 * javaType.put("int", "Int"); javaType.put("boolean", "Boolean");
+	 * javaType.put("long", "Long"); javaType.put("float", "Float"); }
+	 */
 
 	public void constructStructSymblTable(String structAccessKey,
 			StructCompiler structAccessObj) {

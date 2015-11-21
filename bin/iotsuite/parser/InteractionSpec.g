@@ -122,7 +122,7 @@ gui_display_def :
    '(' gui_notify_parameter_def ')'
    {
    context.currentActuator.addAction($CAPITALIZED_ID.text); 
-   context.currentActuator.generateActuatorCode();
+  // context.currentActuator.generateActuatorCode();
    context.currentGUI.setNotifyName($CAPITALIZED_ID.text);
    } 
 ;  

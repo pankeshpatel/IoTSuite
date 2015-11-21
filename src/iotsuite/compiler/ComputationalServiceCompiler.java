@@ -113,18 +113,18 @@ public class ComputationalServiceCompiler {
 		generatedInfo.add(new Information(variableName, new DataType(
 				variableType)));
 	}
-	
+
 	public void generateAggregatorComputationalServiceCode() {
 		generateComputationalServiceInteraction_ComputationalServiceCompiler();
 		generateAggregatorComputationalServiceLogic_ComputationalServiceCompiler();
 		generateAggregatorComputationalServiceFactory_ComputationalServiceCompiler();
 		generateAggregatorComputationalServiceInterface_ComputationalServiceCompiler();
-	
+
 		for (int i = 0; i < computationalService.getAllConsumedInfo().size(); i++) {
 			generateComputationalServiceListener_ComputationalServiceCompiler(computationalService
 					.getAllConsumedInfo().get(i));
 		}
-	
+
 		generateImplComputationalService_ComputationalServiceCompiler();
 
 	}
@@ -133,7 +133,7 @@ public class ComputationalServiceCompiler {
 		generateComputationalServiceInteraction_ComputationalServiceCompiler();
 		generateComputationalServiceLogic_ComputationalServiceCompiler();
 	}
-	
+
 	public void generateComputationalServiceInteraction_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
@@ -176,6 +176,7 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
+
 	public void generateComputationalServiceListener_ComputationalServiceCompiler(
 			Information infoConsumeInfo) {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
@@ -184,6 +185,7 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
+
 	public void generateImplComputationalService_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService

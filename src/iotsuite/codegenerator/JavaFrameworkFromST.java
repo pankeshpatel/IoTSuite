@@ -162,29 +162,31 @@ public class JavaFrameworkFromST {
 	}
 
 	// Node.js
-		public CompilationUnit generateVisualization_Server(Actuator actuatorDriver) {
-			StringTemplate templateOfActuatorDriver = group
-					.getInstanceOf("JavaSE/server");
-			templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
+	public CompilationUnit generateVisualization_Server(Actuator actuatorDriver) {
+		StringTemplate templateOfActuatorDriver = group
+				.getInstanceOf("JavaSE/server");
+		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 
-			templateOfActuatorDriver.registerRenderer(String.class,
-					new MyAttributeRenderer());
+		templateOfActuatorDriver.registerRenderer(String.class,
+				new MyAttributeRenderer());
 
-			return new CompilationUnit("server" + ".js", templateOfActuatorDriver,
-					"server", "actuator", actuatorDriver);
-		}
-		// Client
-		public CompilationUnit generateVisualization_Client(Actuator actuatorDriver) {
-			StringTemplate templateOfActuatorDriver = group
-					.getInstanceOf("JavaSE/client");
-			templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
+		return new CompilationUnit("server" + ".js", templateOfActuatorDriver,
+				"server", "actuator", actuatorDriver);
+	}
 
-			templateOfActuatorDriver.registerRenderer(String.class,
-					new MyAttributeRenderer());
+	// Client
+	public CompilationUnit generateVisualization_Client(Actuator actuatorDriver) {
+		StringTemplate templateOfActuatorDriver = group
+				.getInstanceOf("JavaSE/client");
+		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 
-			return new CompilationUnit("client" + ".html", templateOfActuatorDriver,
-					"client", "actuator", actuatorDriver);
-		}
+		templateOfActuatorDriver.registerRenderer(String.class,
+				new MyAttributeRenderer());
+
+		return new CompilationUnit("client" + ".html",
+				templateOfActuatorDriver, "client", "actuator", actuatorDriver);
+	}
+
 	// JavaSE Actuator Factory
 	public CompilationUnit generateJavaSEActuatorFactory(Actuator actuatorDriver) {
 		StringTemplate templateOfActuatorDriver = group

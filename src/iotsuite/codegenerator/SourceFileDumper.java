@@ -45,7 +45,6 @@ public class SourceFileDumper {
 
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK)) {
-			
 
 			generateCodeForArchitectureFrameworkActivity(template,
 					"ApplicationLogic", null);
@@ -59,7 +58,6 @@ public class SourceFileDumper {
 						"Android");
 			}
 
-			
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 				generateCodeForMappingActivitity(template,
 						GlobalVariable.deviceJAVASEType,
@@ -179,9 +177,9 @@ public class SourceFileDumper {
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
 		}
-		
-		//Node.js
-		
+
+		// Node.js
+
 		else if (unit.getFileCategory().equals("server")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -191,9 +189,9 @@ public class SourceFileDumper {
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
 		}
-		
-		//Client		
-		
+
+		// Client
+
 		else if (unit.getFileCategory().equals("client")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -203,8 +201,6 @@ public class SourceFileDumper {
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
 		}
-
-
 
 		else if (unit.getFileCategory().equals("AndroidGuiImpl")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"

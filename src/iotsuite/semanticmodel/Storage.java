@@ -25,7 +25,8 @@ public class Storage extends SoftwareComponent {
 	public Storage(String name, Set<DataAccess> dataAccess,
 			Set<Information> consumeInfo, List<String> fieldName,
 			List<String> fieldwithSQL, List<StructField> structField,
-			List<String> structFieldName, Set<Action> actionsList, List<String> actionStructFieldName ) {
+			List<String> structFieldName, Set<Action> actionsList,
+			List<String> actionStructFieldName) {
 
 		super(name, null, null);
 		this.dataAccess = dataAccess;
@@ -35,14 +36,14 @@ public class Storage extends SoftwareComponent {
 		this.structFieldName = structFieldName;
 		this.actions = actionsList;
 		this.actionStructFieldName = actionStructFieldName;
-		
+
 	}
-	
+
 	public Set<Action> getActions() {
 		return actions;
 	}
-	
-	public List<String> getAllStorageActionStructFieldName(){
+
+	public List<String> getAllStorageActionStructFieldName() {
 		return actionStructFieldName;
 	}
 
@@ -51,7 +52,6 @@ public class Storage extends SoftwareComponent {
 		allGeneratedInfo.addAll(getActions());
 		return allGeneratedInfo;
 	}
-	
 
 	public Set<DataAccess> getDataAccess() {
 		return dataAccess;
@@ -90,7 +90,8 @@ public class Storage extends SoftwareComponent {
 
 	public String getPackageName() {
 
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.frameworkDirPath);
 		return packageName;
 	}
 

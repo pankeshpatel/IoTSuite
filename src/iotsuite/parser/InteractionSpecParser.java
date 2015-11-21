@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-11-20 13:44:42
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-11-20 14:38:57
      
 package iotsuite.parser;
 import iotsuite.compiler.*;  
@@ -885,7 +885,7 @@ public class InteractionSpecParser extends Parser {
 			match(input,9,FOLLOW_9_in_gui_display_def673); 
 
 			   context.currentActuator.addAction((CAPITALIZED_ID9!=null?CAPITALIZED_ID9.getText():null)); 
-			   context.currentActuator.generateActuatorCode();
+			  // context.currentActuator.generateActuatorCode();
 			   context.currentGUI.setNotifyName((CAPITALIZED_ID9!=null?CAPITALIZED_ID9.getText():null));
 			   
 			}
