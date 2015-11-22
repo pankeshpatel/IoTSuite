@@ -117,53 +117,49 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
     
     if(DBMS.equalsIgnoreCase("mysql")){
         
-      /*
+      
       try {  
         ps = 
           connect.prepareStatement("INSERT INTO $Storageservice.name$ " +
               "($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
-              " (""$Storageservice.allStorageActionStructFieldName:{structFieldName |"newprofileValue.get$structFieldName$()+"}$)");
+              " ($Storageservice.allStorageActionStructFieldName:{structFieldName |"+newprofileValue.get$structFieldName$()+"}; separator=","$)");
         
         ps.executeUpdate(); 
         
         
       } catch (SQLException e) {
         e.printStackTrace();
-      } */
+      } 
       }
       
       
     if(DBMS.equalsIgnoreCase("azuresql")){
       
-    /*  
+      
       try {  
         
-        String sqlString="INSERT INTO $Storageservice.name$ " +
+        String sqlString=("INSERT INTO $Storageservice.name$ " +
               "($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
-              " ("+newIndex+"$Storageservice.allStorageActionStructFieldName:{structFieldName |,"+newprofileValue.get$structFieldName$()+"}$)";
+              " ($Storageservice.allStorageActionStructFieldName:{structFieldName |"+newprofileValue.get$structFieldName$()+"}; separator=","$)");
         
                 statement = connect.createStatement();
                 statement.executeUpdate(sqlString);
-                connect.close(); 
-               
-        
         
       } catch (SQLException e) {
         e.printStackTrace();
       }
-      */ 
+       
       }
       
       
      if(DBMS.equalsIgnoreCase("mongodb")){  
-     /* try{   
+      try{   
 
             MongoClient mongoClient = new MongoClient();
             DB db = mongoClient.getDB( "iotsuiteuser" );
             DBCollection table =db.getCollection("$Storageservice.name$");
             BasicDBObject document = new BasicDBObject();           
-            document.put("$Storageservice.id$", newIndex);
-            $Storageservice.allStructFieldName:{structFieldName |
+            $Storageservice.allStorageActionStructFieldName:{structFieldName |
             document.put("$structFieldName$",newprofileValue.get$structFieldName$());
             }$
             table.insert(document);
@@ -171,7 +167,7 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
           
         }catch(Exception e){
          System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-      }  */
+      }  
       
       }
          
