@@ -136,13 +136,11 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
     if(DBMS.equalsIgnoreCase("azuresql")){
       
       
-      try {  
-        
+      try {          
         String sqlString=("INSERT INTO $Storageservice.name$ " +
               "($Storageservice.allfieldName:{fieldName |$fieldName$};separator=","$) VALUES" +
               " ($Storageservice.allStorageActionStructFieldName:{structFieldName |"+newprofileValue.get$structFieldName$()+"}; separator=","$)");
-        
-                statement = connect.createStatement();
+                      statement = connect.createStatement();
                 statement.executeUpdate(sqlString);
         
       } catch (SQLException e) {
