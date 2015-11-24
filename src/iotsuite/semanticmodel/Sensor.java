@@ -12,20 +12,20 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 
 	protected static Set<Sensor> allSensorDriver = new HashSet<Sensor>();
 	// Store field Name used by Periodic Sensor
-	public static List<String> eventDrivenFieldName = new ArrayList<String>();
+	//public static List<String> eventDrivenFieldName = new ArrayList<String>();
 	// Store fields used by Periodic Sensor
-	public static List<String> eventDrivenFields = new ArrayList<String>();
+	public static List<StructField> eventDrivenField = new ArrayList<StructField>();
 	public static String samplePeriod;
 	public static String sampleDuration;
 
 	public Sensor(String name, Set<SensorMeasurement> generateInfo,
 			Set<SensorMeasurement> consumeInfo,
-			List<String> eventDrivenFieldName, List<String> eventDrivenFields) {
+			List<StructField> eventDrivenField) {
 
 		// super(name, generateInfo, consumeInfo, "NoInstance");
 		super(name, generateInfo, consumeInfo);
-		Sensor.eventDrivenFieldName = eventDrivenFieldName;
-		Sensor.eventDrivenFields = eventDrivenFields;
+		//Sensor.eventDrivenFieldName = eventDrivenFieldName;
+		Sensor.eventDrivenField = eventDrivenField;
 
 	}
 
@@ -41,17 +41,25 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 		return sampleDuration;
 	}
 
-	public static List<String> getAllEventDrivenFieldName() {
+	/*public static List<String> getAllEventDrivenFieldName() {
 
 		eventDrivenFieldName = iotsuite.parser.SymbolTable.eventDrivenFieldName;
 		return eventDrivenFieldName;
 
 	}
+*/
+	
+	public List<StructField> getAllEventDivenFields() {
+		ArrayList<StructField> allEventDrivenFields = new ArrayList<StructField>();
+		allEventDrivenFields.addAll(getEventDrivenField());
+		return allEventDrivenFields;
+	}
+	public static List<StructField> getEventDrivenField() {
 
-	public static List<String> getAllEventDrivenFields() {
-
-		eventDrivenFields = iotsuite.parser.SymbolTable.eventDrivenFields;
-		return eventDrivenFields;
+		
+		//eventDrivenField = iotsuite.parser.SymbolTable.StructFieldSetForEventDriven;
+		//System.out.println("eventDriven"+eventDrivenFields);
+		return eventDrivenField;
 
 	}
 

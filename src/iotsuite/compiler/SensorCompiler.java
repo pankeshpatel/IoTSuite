@@ -7,7 +7,9 @@ import iotsuite.common.GlobalVariable;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Sensor;
 import iotsuite.semanticmodel.SensorMeasurement;
+import iotsuite.semanticmodel.StructField;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -16,8 +18,8 @@ public class SensorCompiler {
 
 	private Sensor sensorDriver;
 	private Set<SensorMeasurement> generatedInfo = new HashSet<SensorMeasurement>();
-	public static List<String> eventDrivenFields;
-	public static List<String> eventDrivenFieldName;
+	private List<StructField> eventDrivenField = new ArrayList<StructField>();
+	//public static List<String> eventDrivenFieldName;
 	public static String samplePeriod;
 	public static String sampleDuration;
 
@@ -25,16 +27,16 @@ public class SensorCompiler {
 	}
 
 	public SensorCompiler(String sensorName) {
-		sensorDriver = new Sensor(sensorName, getGeneratedInfo(), null,
-				getEventDrivenFieldName(), getEventDrivenFields());
+		sensorDriver = new Sensor(sensorName, getGeneratedInfo(), null, getEventDrivenFields());
 	}
 
-	private List<String> getEventDrivenFieldName() {
+	/*private List<String> getEventDrivenFieldName() {
 		return eventDrivenFieldName;
-	}
+	}*/
 
-	private List<String> getEventDrivenFields() {
-		return eventDrivenFields;
+	private  List<StructField> getEventDrivenFields() {
+		this.eventDrivenField=iotsuite.parser.SymbolTable.StructFieldSetForEventDriven;
+		return eventDrivenField;
 	}
 
 	// Getter and Setter of GeneratedInfo

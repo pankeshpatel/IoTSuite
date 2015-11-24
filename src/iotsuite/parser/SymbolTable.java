@@ -68,6 +68,7 @@ public class SymbolTable {
 	public static List<StructField> StructFieldSetForGUI = new ArrayList<StructField>();
 	public static List<StructField> StructFieldSetForGUINotify = new ArrayList<StructField>();
 	public static List<StructField> StructFieldSetForStorage = new ArrayList<StructField>();
+	public static List<StructField> StructFieldSetForEventDriven = new ArrayList<StructField>();
 
 	public static String structName;
 	public static String storageStructName;
@@ -93,6 +94,7 @@ public class SymbolTable {
 	static StructField FieldForStorage;
 	static StructField FieldForGUI;
 	static StructField FieldForGUINotify;
+	static StructField FieldForEventDriven;
 
 	public static Set<DataAccess> getDataAccessSymblTable(String dataAccessKey) {
 		return dataAccessSymblTable.get(dataAccessKey);
@@ -224,10 +226,15 @@ public class SymbolTable {
 
 						if (!eventDrivenFieldName.contains(tempEventFieldName
 								.get(j))) {
-
-							eventDrivenFields.add((arrayFieldType[i][1]) + " "
-									+ (arrayFieldName[i][1]));
+							
+							
 							eventDrivenFieldName.add(arrayFieldName[i][1]);
+							FieldForEventDriven = new StructField(arrayFieldName[i][1],
+									new PrimitiveType(arrayFieldType[i][1]));
+							
+							StructFieldSetForEventDriven.add(FieldForEventDriven);
+							
+							
 						}
 					}
 				}
@@ -247,6 +254,8 @@ public class SymbolTable {
 							new PrimitiveType(arrayFieldType[i][1]));
 
 					StructFieldSet.add(Field);
+					
+					
 				}
 			}
 		}
