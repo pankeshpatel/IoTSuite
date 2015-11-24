@@ -71,6 +71,9 @@ public class ActuatorCompiler {
 				generateAndroidActuatorFactory_ActuatorCompiler();
 				generateActuatorAndroid_ActuatorCompiler();
 			}
+			
+			
+			
 			generateActuatorInterface_ActuatorCompiler();
 		}
 	}

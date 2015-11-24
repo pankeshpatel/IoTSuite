@@ -33,7 +33,7 @@ public class GlobalVariable {
 
 	public static final boolean ENABLE_ANDROID_CODE_GENERATION = true;
 	// Set true, if you want to generate Android code
-
+	
 	public static final boolean DEVELOPMENT_METHODOLOGY = true;
 	// set "yes" if you want to use development methodology
 

@@ -181,10 +181,10 @@ public class SourceFileDumper {
 		// Node.js
 
 		else if (unit.getFileCategory().equals("server")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+			new File(GlobalVariable.templatePath + "NodeJS" + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType
+			file = new File(GlobalVariable.templatePath + "NodeJS"
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
@@ -193,10 +193,10 @@ public class SourceFileDumper {
 		// Client
 
 		else if (unit.getFileCategory().equals("client")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+			new File(GlobalVariable.templatePath +"NodeJS" + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType
+			file = new File(GlobalVariable.templatePath + "NodeJS"
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
