@@ -73,3 +73,13 @@ devices:
         resources:SmartHomeApp;
 		protocol: mqtt;
 		description: "d1 Description";
+			
+    D11:
+        location:
+             Room: 1;
+        platform: NodeJS;    
+        resources: Visualization;
+		protocol: mqtt;
+		description: "d1 Description";
+	
+	

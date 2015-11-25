@@ -63,10 +63,16 @@ public class MapperCompiler {
 			Device device = MergeDeviceAbilities(entry.getKey(),
 					entry.getValue(), "DBServer");
 
-			multiplyTemplate(device);
-			genearateStartupCode(device);
-			genearateExecutionCode(device);
-			genearateProjectFileCode(device);
+			if(device.getType().equals("NodeJS")){
+				multiplyTemplate(device);
+			}
+			else{
+				multiplyTemplate(device);
+				genearateStartupCode(device);
+				genearateExecutionCode(device);
+				genearateProjectFileCode(device);
+			}
+			
 
 		}
 	}

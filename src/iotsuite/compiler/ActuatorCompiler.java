@@ -63,8 +63,7 @@ public class ActuatorCompiler {
 				generateJavaSEActuatorLogic_ActuatorCompiler();
 				generateJavaSEActuatorFactory_ActuatorCompiler();
 				generateJavaSEActuator_ActuatorCompiler();
-				generateVisualization_Server();
-				generateVisualization_Client();
+				
 			}
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
 				generateAndroidActuatorLogic_ActuatorCompiler();
@@ -95,23 +94,7 @@ public class ActuatorCompiler {
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 	}
 
-	// Node.js
-	private void generateVisualization_Server() {
-		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedActuatorDriver
-				.generateVisualization_Server(actuatorDriver);
-		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
-		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
-	}
-
-	// Client
-	private void generateVisualization_Client() {
-		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedActuatorDriver
-				.generateVisualization_Client(actuatorDriver);
-		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
-		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
-	}
+	
 
 	private void generateActuatorAndroid_ActuatorCompiler() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();

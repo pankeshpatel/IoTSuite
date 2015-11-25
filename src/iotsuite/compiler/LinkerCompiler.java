@@ -138,7 +138,29 @@ public class LinkerCompiler {
 
 					}
 
-				} else { // For Android-enabled devices.
+				}
+				else if(listOfFiles[i].getName().startsWith(
+						GlobalVariable.NODEJS_ENABLED_DEVICES)){
+					System.out.println("Linked code for "
+							+ listOfFiles[i].getName() + " device");
+					
+					Set<String> tempNodeJSStringDeviceLinker = MappingAlgoCompiler.mappingOutputForLinker
+							.get(listOfFiles[i].getName().substring(6));
+					
+					List<String> convertedTempNodeJSStringDeviceLinker = convertListFromSet(tempNodeJSStringDeviceLinker);
+					
+					// For deviceImpI package
+					copyNodeJSServerGeneratedFromVocabulary(
+							GlobalVariable.NODEJS_ENABLED_DEVICES,
+							listOfFiles[i].getName(),
+							convertedTempNodeJSStringDeviceLinker);
+					copyNodeJSClientGeneratedFromVocabulary(
+							GlobalVariable.NODEJS_ENABLED_DEVICES,
+							listOfFiles[i].getName(),
+							convertedTempNodeJSStringDeviceLinker);
+				}	
+				
+            	else { // For Android-enabled devices.
 
 					System.out.println("Linked code for "
 							+ listOfFiles[i].getName() + " device");
@@ -245,6 +267,52 @@ public class LinkerCompiler {
 		}
 
 	}
+	
+	//Node.js
+	
+	public static void copyNodeJSServerGeneratedFromVocabulary(String type,
+			String name, List<String> softwareComponmentNameToPick) {
+
+		String tempVariableForSoftwareComponent = softwareComponmentNameToPick
+				.iterator().next();
+		File srcFile = new File(GlobalVariable.templatePath + "/" + type
+				+ "DeviceDrivers" + "/src/deviceImpl/" 
+				+ "server" + ".js");
+
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name
+				+ "/src/deviceImpl");
+		try {
+			FileUtils.copyFileToDirectory(srcFile, destFolder);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	
+	//Client.html
+	
+	public static void copyNodeJSClientGeneratedFromVocabulary(String type,
+			String name, List<String> softwareComponmentNameToPick) {
+
+		String tempVariableForSoftwareComponent = softwareComponmentNameToPick
+				.iterator().next();
+		File srcFile = new File(GlobalVariable.templatePath + "/" + type
+				+ "DeviceDrivers" + "/src/deviceImpl/" 
+				+ "client" + ".html");
+
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name
+				+ "/src/deviceImpl");
+		try {
+			FileUtils.copyFileToDirectory(srcFile, destFolder);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
 
 	public static void copydeviceImplGeneratedFromArchitecture(String type,
 			String name, List<String> softwareComponmentNameToPick) {

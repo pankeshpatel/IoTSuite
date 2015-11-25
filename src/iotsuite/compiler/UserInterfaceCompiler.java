@@ -112,6 +112,7 @@ public class UserInterfaceCompiler {
 				generateJavaSEGUI();
 				generateJavaSEGUIFactory();
 				generateJavaSEGUIImpl();
+				
 			}
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
 				generateAndroidGUI();
@@ -119,6 +120,11 @@ public class UserInterfaceCompiler {
 				generateGUIInterface();
 				generateAndroidGUIFactory();
 				generateAndroidGUIImpl();
+			}
+			if(GlobalVariable.ENABLE_NodeJS_CODE_GENERATION){
+				
+				generateVisualization_Server();
+				generateVisualization_Client();
 			}
 		}
 	}
@@ -140,6 +146,24 @@ public class UserInterfaceCompiler {
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
+	
+	// Node.js
+		private void generateVisualization_Server() {
+			JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+			CompilationUnit generatedCU = generatedGUIDriver
+					.generateVisualization_Server(guiDriver);
+			SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+			dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+		}
+
+		// Client
+		private void generateVisualization_Client() {
+			JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+			CompilationUnit generatedCU = generatedGUIDriver
+					.generateVisualization_Client(guiDriver);
+			SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+			dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+		}
 
 	private void generateGUIListener() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
