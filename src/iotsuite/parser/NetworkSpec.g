@@ -72,7 +72,7 @@ description_def:
    '"'DESCRIPTION_ID '"'
    {context.currentNetwork.setDeviceDescription($DESCRIPTION_ID.text);}
 ;   
-
+ 
 database_def:
 CAPITALIZED_ID
 {context.currentNetwork.setDatabase($CAPITALIZED_ID.text);}

@@ -114,7 +114,7 @@ gui_notify_def :
     'notify' (gui_display_def)* 'from' CAPITALIZED_ID  
 ; 
 
-gui_display_def :
+gui_display_def : 
   
   CAPITALIZED_ID  
    {

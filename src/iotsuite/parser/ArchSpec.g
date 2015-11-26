@@ -177,7 +177,7 @@ cntrlParameter_def :
 //   }      
 //;       
  
-lc_id: ID  
+lc_id: ID   
 ;
  
 dataType: 

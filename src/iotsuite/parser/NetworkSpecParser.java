@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-11-26 21:48:59
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g 2015-11-26 22:30:27
 
 package iotsuite.parser;
 import iotsuite.compiler.*; 
@@ -477,7 +477,7 @@ public class NetworkSpecParser extends Parser {
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:76:13: ( CAPITALIZED_ID )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\NetworkSpec.g:77:1: CAPITALIZED_ID
 			{
-			CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_database_def384); 
+			CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_database_def385); 
 			context.currentNetwork.setDatabase((CAPITALIZED_ID7!=null?CAPITALIZED_ID7.getText():null));
 			}
 
@@ -536,5 +536,5 @@ public class NetworkSpecParser extends Parser {
 	public static final BitSet FOLLOW_9_in_description_def365 = new BitSet(new long[]{0x0000000000000020L});
 	public static final BitSet FOLLOW_DESCRIPTION_ID_in_description_def366 = new BitSet(new long[]{0x0000000000000200L});
 	public static final BitSet FOLLOW_9_in_description_def368 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_database_def384 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_database_def385 = new BitSet(new long[]{0x0000000000000002L});
 }

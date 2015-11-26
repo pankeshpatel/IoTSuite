@@ -456,19 +456,25 @@ public class JavaFrameworkFromST {
 					new MyAttributeRenderer());
 
 			return new CompilationUnit("server" + ".js", templateOfGUIDriver,
+
 					"server", "gui", guiDriver);
+
+				
+
 		}
 
 		// Client
 		public CompilationUnit generateVisualization_Client(UserInterface guiDriver) {
 			StringTemplate templateOfGUIDriver = group
 					.getInstanceOf("JavaSE/client");
+
 			templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 
 			templateOfGUIDriver.registerRenderer(String.class,
 					new MyAttributeRenderer());
 
 			return new CompilationUnit("client" + ".html",
+
 					templateOfGUIDriver, "client", "gui", guiDriver);
 		}
 

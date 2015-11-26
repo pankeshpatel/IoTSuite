@@ -3,7 +3,6 @@ var fs = require('fs');
 //Device developer will specify port number where server is up and running
 var port=8686 ;
 
-$GUIdriver.name$
 var mqtt=require('mqtt');
 var client=mqtt.connect('mqtt://test.mosquitto.org:1883');
 

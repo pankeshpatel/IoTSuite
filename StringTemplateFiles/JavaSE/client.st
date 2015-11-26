@@ -15,7 +15,9 @@
 <body>
 <div id="chart" style="width: 1500px; height: 700px"></div>
 <script>
- $GUIdriver.commands:{ command | }; separator="$"$(document).ready(function () {
+
+ $GUIdriver.commands:{ command | }; separator="$"$(document).ready(function (){
+
     //Device developer will specify maxDataPoints display in a chart at a time
         var maxDataPoints = 10;
         //Device developer will specify type of charts 
@@ -51,8 +53,9 @@
         }
         function doPoll() { 
         
+
             $GUIdriver.commands:{ command | }; separator="$"$.getJSON('http://localhost:8686/temperatureData',
-                        function (result) {
+                           function (result) {
                         addDataPoint(result); 
                         // Device developer will specify polling time 
                         setTimeout(doPoll,5000);

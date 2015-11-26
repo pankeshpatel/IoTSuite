@@ -193,7 +193,7 @@ lc_id: ID
 ;
  
 dataType:
-  primitiveType 
+  primitiveType  
 ;
  
 primitiveType:
