@@ -12,8 +12,6 @@ import iotsuite.localmiddleware.PubSubsSensingFramework;
 
 
 public class JavaSE$GUIdriver.name$ implements I$GUIdriver.name$,IDataListener {
-
-
  
   public static PubSubsSensingFramework pubSubSensingFramework;
   String request;

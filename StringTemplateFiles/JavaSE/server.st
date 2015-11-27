@@ -2,7 +2,11 @@ var http = require('http');
 var fs = require('fs');
 //Device developer will specify port number where server is up and running
 var port=8686 ;
+var i=0;
 
+
+
+/* Following  will be used for mqtt once we will implement modified mqtt publish/subscriber interface in ToolSuite
 var mqtt=require('mqtt');
 var client=mqtt.connect('mqtt://test.mosquitto.org:1883');
 
@@ -28,6 +32,7 @@ client.on('message',function(topic,payload){
   var query=connection.query(     
      
      //Device developer will write query to store data received through mqtt to database
+     
       function(err,result,fields){
         if(err) throw err;
         console.log("Data Inserted into Database");
@@ -36,7 +41,7 @@ client.on('message',function(topic,payload){
         //connection.end();
       });
   }  
-  });
+  }); */ 
   
   // 404 response
 function send404Response(response){
@@ -59,7 +64,7 @@ http.createServer(function(req, res) {
     var mysql=require('mysql');
     
     currentmiliseconds=((new Date().getTime())-1000000);
-     //Device developer will specify following value in order to establish connection to mysql
+     //Device developer will specify following value in order to establish connection to mysql     
     var connection=mysql.createConnection({
       host:'localhost',
       user:'',
@@ -71,11 +76,16 @@ http.createServer(function(req, res) {
     var query=connection.query(     
       
       // Device developer will write query to select data from database 
-        function(err,result,fields){
-          if(err) throw err;
-          
+      'SELECT * FROM $GUIdriver.NotifyFrom$',function(err,result,fields){
+          if(err) throw err;         
+          $GUIdriver.AllStructFieldsForNotify:{fieldsForNotify | 
+          var $fieldsForNotify.name$= result[i].$fieldsForNotify.name$;
+          }$
           // Device developer will extract value from database and send value to client
-          res.write();
+          res.write('{$GUIdriver.AllStructFieldsForNotify:{fieldsForNotify |
+          "$fieldsForNotify.name$" :'+$fieldsForNotify.name$+'}; separator=" , "$
+          }');
+          i++;
           res.end();
           connection.end();
           
@@ -84,7 +94,7 @@ http.createServer(function(req, res) {
       
   case '/temperature':  
     res.writeHead(200, 'text/html');  
-    var fileStream = fs.createReadStream('index.html');
+    var fileStream = fs.createReadStream('client.html');
     fileStream.pipe(res);
     break;  
   default:

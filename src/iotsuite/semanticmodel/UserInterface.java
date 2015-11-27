@@ -19,6 +19,7 @@ public class UserInterface extends SoftwareComponent<Information> {
 	public List<String> notifyMeasurement = new ArrayList<String>();
 	public List<String> notifyStructName = new ArrayList<String>();
 	public static int i = 0;
+	public static String notifyFrom;
 
 	/*
 	 * public UserInterface(String name, String lowername, Set<Action>
@@ -32,7 +33,7 @@ public class UserInterface extends SoftwareComponent<Information> {
 			Set<Information> generateInfo, Set<Information> consumeInfo,
 			Set<DataAccess> dataAccess, String struct, Widget reqWidgets,
 			List<StructField> fields, List<StructField> fieldForNotify,
-			List<String> notifyMeasurement, List<String> notifyStructName) {
+			List<String> notifyMeasurement, List<String> notifyStructName,String notifyFrom) {
 
 		// super(name, generateInfo, consumeInfo, "NoInstance");
 
@@ -45,8 +46,14 @@ public class UserInterface extends SoftwareComponent<Information> {
 		this.fieldsForNotify = fieldForNotify;
 		this.notifyMeasurement = notifyMeasurement;
 		this.notifyStructName = notifyStructName;
+		this.notifyFrom=notifyFrom;
 	}
 
+	
+	public String getNotifyFrom(){
+		return UserInterface.notifyFrom;
+	}
+	
 	public List<String> getAllNotifyMeasurement() {
 
 		return notifyMeasurement;

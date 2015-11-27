@@ -158,6 +158,9 @@ public class LinkerCompiler {
 							GlobalVariable.NODEJS_ENABLED_DEVICES,
 							listOfFiles[i].getName(),
 							convertedTempNodeJSStringDeviceLinker);
+				
+					
+					
 				}	
 				
             	else { // For Android-enabled devices.
@@ -312,6 +315,9 @@ public class LinkerCompiler {
 		}
 
 	}
+	
+
+	
 	
 
 	public static void copydeviceImplGeneratedFromArchitecture(String type,

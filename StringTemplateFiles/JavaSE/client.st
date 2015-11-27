@@ -16,22 +16,23 @@
 <div id="chart" style="width: 1500px; height: 700px"></div>
 <script>
 
- $GUIdriver.commands:{ command | }; separator="$"$(document).ready(function (){
+ $GUIdriver.AllStructFieldsForNotify:{ fieldsForNotify | }; separator="$"$(document).ready(function (){
 
     //Device developer will specify maxDataPoints display in a chart at a time
         var maxDataPoints = 10;
         //Device developer will specify type of charts 
-        var chart = new google.visualization.LineChart(('#chart')[0]); 
+        var chart = new google.visualization.LineChart($GUIdriver.AllStructFieldsForNotify:{ fieldsForNotify | }; separator="$"$('#chart')[0]); 
         var data = google.visualization.arrayToDataTable([ 
+        
         // Device developer will specify what kind of data to be display in chart .....(A)
-            ['Time', 'Temperature'],
-            [getTime(), 0]
+            ['Time',$GUIdriver.AllStructFieldsForNotify:{fieldsForNotify|'$fieldsForNotify.name$' }; separator=","$],
+            [getTime(),$GUIdriver.AllStructFieldsForNotify:{fieldsForNotify|0 }; separator=","$]
         ]); 
         var options = { 
         //Device developer will specify title and property of axis  for chart
             title: 'Temperature',
             hAxis: {title: 'Time', titleTextStyle: {color: '#333'}}, //Added label for hAxis and vAxis 
-            vAxis: {title: 'TempValue',  minValue: 0, titleTextStyle: {color: '#333'}},
+            vAxis: {title:$GUIdriver.AllStructFieldsForNotify:{fieldsForNotify|'$fieldsForNotify.name;format="capital"$'};separator="," $,  minValue: 0, titleTextStyle: {color: '#333'}},
             curveType: 'function',
             animation: {
                 duration: 1000,
@@ -44,7 +45,7 @@
                 data.removeRow(0);
             }
             // Device developer will specify following value based on ref A
-            data.addRow([getTime(), dataPoint.value]);
+            data.addRow([getTime(), $GUIdriver.AllStructFieldsForNotify:{fieldsForNotify|dataPoint.$fieldsForNotify.name$};separator="," $]);
             chart.draw(data, options); 
         }
         function getTime() {
@@ -54,7 +55,7 @@
         function doPoll() { 
         
 
-            $GUIdriver.commands:{ command | }; separator="$"$.getJSON('http://localhost:8686/temperatureData',
+           $GUIdriver.AllStructFieldsForNotify:{ fieldsForNotify | }; separator="$"$.getJSON('http://localhost:8686/temperatureData',
                            function (result) {
                         addDataPoint(result); 
                         // Device developer will specify polling time 

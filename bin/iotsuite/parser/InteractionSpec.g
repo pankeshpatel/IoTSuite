@@ -112,6 +112,7 @@ gui_request_def :
  
 gui_notify_def :  
     'notify' (gui_display_def)* 'from' CAPITALIZED_ID  
+    {context.currentGUI.notifyFrom($CAPITALIZED_ID.text);}
 ; 
 
 gui_display_def : 

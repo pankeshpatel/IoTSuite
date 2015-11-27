@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-11-26 22:30:07
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g 2015-11-27 10:37:20
      
 package iotsuite.parser;
 import iotsuite.compiler.*;  
@@ -818,6 +818,8 @@ public class InteractionSpecParser extends Parser {
 	// $ANTLR start "gui_notify_def"
 	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:113:1: gui_notify_def : 'notify' ( gui_display_def )* 'from' CAPITALIZED_ID ;
 	public final void gui_notify_def() throws RecognitionException {
+		Token CAPITALIZED_ID9=null;
+
 		try {
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:113:16: ( 'notify' ( gui_display_def )* 'from' CAPITALIZED_ID )
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:114:5: 'notify' ( gui_display_def )* 'from' CAPITALIZED_ID
@@ -849,7 +851,8 @@ public class InteractionSpecParser extends Parser {
 			}
 
 			match(input,20,FOLLOW_20_in_gui_notify_def638); 
-			match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_notify_def640); 
+			CAPITALIZED_ID9=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_notify_def640); 
+			context.currentGUI.notifyFrom((CAPITALIZED_ID9!=null?CAPITALIZED_ID9.getText():null));
 			}
 
 		}
@@ -866,27 +869,27 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_display_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:117:1: gui_display_def : CAPITALIZED_ID '(' gui_notify_parameter_def ')' ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:118:1: gui_display_def : CAPITALIZED_ID '(' gui_notify_parameter_def ')' ;
 	public final void gui_display_def() throws RecognitionException {
-		Token CAPITALIZED_ID9=null;
+		Token CAPITALIZED_ID10=null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:117:17: ( CAPITALIZED_ID '(' gui_notify_parameter_def ')' )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:119:3: CAPITALIZED_ID '(' gui_notify_parameter_def ')'
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:118:17: ( CAPITALIZED_ID '(' gui_notify_parameter_def ')' )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:120:3: CAPITALIZED_ID '(' gui_notify_parameter_def ')'
 			{
-			CAPITALIZED_ID9=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_display_def658); 
+			CAPITALIZED_ID10=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_display_def664); 
 
-			   context.currentActuator = new ActuatorCompiler((CAPITALIZED_ID9!=null?CAPITALIZED_ID9.getText():null)); 
-			match(input,8,FOLLOW_8_in_gui_display_def670); 
-			pushFollow(FOLLOW_gui_notify_parameter_def_in_gui_display_def672);
+			   context.currentActuator = new ActuatorCompiler((CAPITALIZED_ID10!=null?CAPITALIZED_ID10.getText():null)); 
+			match(input,8,FOLLOW_8_in_gui_display_def676); 
+			pushFollow(FOLLOW_gui_notify_parameter_def_in_gui_display_def678);
 			gui_notify_parameter_def();
 			state._fsp--;
 
-			match(input,9,FOLLOW_9_in_gui_display_def674); 
+			match(input,9,FOLLOW_9_in_gui_display_def680); 
 
-			   context.currentActuator.addAction((CAPITALIZED_ID9!=null?CAPITALIZED_ID9.getText():null)); 
+			   context.currentActuator.addAction((CAPITALIZED_ID10!=null?CAPITALIZED_ID10.getText():null)); 
 			  // context.currentActuator.generateActuatorCode();
-			   context.currentGUI.setNotifyName((CAPITALIZED_ID9!=null?CAPITALIZED_ID9.getText():null));
+			   context.currentGUI.setNotifyName((CAPITALIZED_ID10!=null?CAPITALIZED_ID10.getText():null));
 			   
 			}
 
@@ -904,22 +907,22 @@ public class InteractionSpecParser extends Parser {
 
 
 	// $ANTLR start "gui_notify_parameter_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:130:1: gui_notify_parameter_def : lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )? ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:131:1: gui_notify_parameter_def : lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )? ;
 	public final void gui_notify_parameter_def() throws RecognitionException {
-		Token CAPITALIZED_ID10=null;
-		ParserRuleReturnScope lc_id11 =null;
+		Token CAPITALIZED_ID11=null;
+		ParserRuleReturnScope lc_id12 =null;
 
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:130:25: ( lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )? )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:132:1: lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )?
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:131:25: ( lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )? )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:133:1: lc_id ':' CAPITALIZED_ID ( ',' gui_notify_parameter_def )?
 			{
-			pushFollow(FOLLOW_lc_id_in_gui_notify_parameter_def691);
-			lc_id11=lc_id();
+			pushFollow(FOLLOW_lc_id_in_gui_notify_parameter_def697);
+			lc_id12=lc_id();
 			state._fsp--;
 
-			match(input,11,FOLLOW_11_in_gui_notify_parameter_def693); 
-			CAPITALIZED_ID10=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_notify_parameter_def695); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:132:27: ( ',' gui_notify_parameter_def )?
+			match(input,11,FOLLOW_11_in_gui_notify_parameter_def699); 
+			CAPITALIZED_ID11=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_notify_parameter_def701); 
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:133:27: ( ',' gui_notify_parameter_def )?
 			int alt14=2;
 			int LA14_0 = input.LA(1);
 			if ( (LA14_0==10) ) {
@@ -927,10 +930,10 @@ public class InteractionSpecParser extends Parser {
 			}
 			switch (alt14) {
 				case 1 :
-					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:132:28: ',' gui_notify_parameter_def
+					// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\InteractionSpec.g:133:28: ',' gui_notify_parameter_def
 					{
-					match(input,10,FOLLOW_10_in_gui_notify_parameter_def699); 
-					pushFollow(FOLLOW_gui_notify_parameter_def_in_gui_notify_parameter_def701);
+					match(input,10,FOLLOW_10_in_gui_notify_parameter_def705); 
+					pushFollow(FOLLOW_gui_notify_parameter_def_in_gui_notify_parameter_def707);
 					gui_notify_parameter_def();
 					state._fsp--;
 
@@ -940,10 +943,10 @@ public class InteractionSpecParser extends Parser {
 			}
 
 			  
-			  context.constructActuatorSymblTable((CAPITALIZED_ID10!=null?CAPITALIZED_ID10.getText():null));
-			  context.currentActuator.addParameter((lc_id11!=null?input.toString(lc_id11.start,lc_id11.stop):null), (CAPITALIZED_ID10!=null?CAPITALIZED_ID10.getText():null)); 
-			  context.currentGUI.setNotifyParameter((CAPITALIZED_ID10!=null?CAPITALIZED_ID10.getText():null));
-			   context.constructSymbTable((lc_id11!=null?input.toString(lc_id11.start,lc_id11.stop):null), (CAPITALIZED_ID10!=null?CAPITALIZED_ID10.getText():null));
+			  context.constructActuatorSymblTable((CAPITALIZED_ID11!=null?CAPITALIZED_ID11.getText():null));
+			  context.currentActuator.addParameter((lc_id12!=null?input.toString(lc_id12.start,lc_id12.stop):null), (CAPITALIZED_ID11!=null?CAPITALIZED_ID11.getText():null)); 
+			  context.currentGUI.setNotifyParameter((CAPITALIZED_ID11!=null?CAPITALIZED_ID11.getText():null));
+			   context.constructSymbTable((lc_id12!=null?input.toString(lc_id12.start,lc_id12.stop):null), (CAPITALIZED_ID11!=null?CAPITALIZED_ID11.getText():null));
 			}
 
 		}
@@ -1021,13 +1024,13 @@ public class InteractionSpecParser extends Parser {
 	public static final BitSet FOLLOW_gui_display_def_in_gui_notify_def634 = new BitSet(new long[]{0x0000000000100010L});
 	public static final BitSet FOLLOW_20_in_gui_notify_def638 = new BitSet(new long[]{0x0000000000000010L});
 	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_notify_def640 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_display_def658 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_8_in_gui_display_def670 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_gui_notify_parameter_def_in_gui_display_def672 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_9_in_gui_display_def674 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lc_id_in_gui_notify_parameter_def691 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_11_in_gui_notify_parameter_def693 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_notify_parameter_def695 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_10_in_gui_notify_parameter_def699 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_gui_notify_parameter_def_in_gui_notify_parameter_def701 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_display_def664 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_8_in_gui_display_def676 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_gui_notify_parameter_def_in_gui_display_def678 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_9_in_gui_display_def680 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_lc_id_in_gui_notify_parameter_def697 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_11_in_gui_notify_parameter_def699 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_notify_parameter_def701 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_10_in_gui_notify_parameter_def705 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_gui_notify_parameter_def_in_gui_notify_parameter_def707 = new BitSet(new long[]{0x0000000000000002L});
 }

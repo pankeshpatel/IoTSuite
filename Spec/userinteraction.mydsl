@@ -5,4 +5,6 @@ resources:
 	 		command SetTemp(setTemp) to Heater;
 	 		request profile to ProfileDB;	 	
 	 		notify DisplayTemp(tempNotify:TempStruct) from DisplayTempController;
-	 	
+	 	Visualization
+	 	    notify DisplayTemp(tempNotify:TempStruct) from ProfileDB; 	
+	 	     	

@@ -28,6 +28,7 @@ public class UserInterfaceCompiler {
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private String GUIName;
 	private String struct;
+	private String notifyFrom;
 	public static List<StructField> StructFieldSetForGUI = new ArrayList<StructField>();
 	public static List<StructField> StructFieldSetForGUINotify = new ArrayList<StructField>();
 	private List<String> notifyMeasurement = new ArrayList<String>();
@@ -93,7 +94,7 @@ public class UserInterfaceCompiler {
 		guiDriver = new UserInterface(getGUIName(), getLowerCaseGUIName(),
 				null, getCommandList(), null, null, getDataAccessList(), null,
 				null, getStructFieldSet(), getStructFieldSetForGUINotify(),
-				getNotifyMeasurement(), getNotifyStructName());
+				getNotifyMeasurement(), getNotifyStructName(),getNotifyFrom());
 	}
 
 	// Code generator of the abstract classes and Logic files
@@ -266,5 +267,15 @@ public class UserInterfaceCompiler {
 	public void addAction(String actionName, String widgetName) {
 		Action action = new Action(actionName, getActionParameter(), widgetName);
 		actions.add(action);
+	}
+
+	public void notifyFrom(String notifyFrom) {
+		this.notifyFrom=notifyFrom;
+		//System.out.println("....notify from..."+notifyFrom);
+		
+	}
+	
+	public String getNotifyFrom(){
+		return notifyFrom;
 	}
 }

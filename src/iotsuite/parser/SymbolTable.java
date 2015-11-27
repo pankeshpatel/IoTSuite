@@ -278,13 +278,25 @@ public class SymbolTable {
 
 	}
 
+	
+	
+
+	
+	
 	public static void searchStructFieldNameForNotifyGUI(
 			String notifyGUIStructName) {
-
+		List<String> tempEventFieldName = new ArrayList<String>();
 		for (int i = 0; i < 10; i++) {
 			if (arrayFieldName[i][0] != null) {
 				if (arrayFieldName[i][0].equals(notifyGUIStructName)) {
-
+					
+					tempEventFieldName.add(arrayFieldName[i][1]);
+					for (int j = 0; j < tempEventFieldName.size(); j++) {
+						
+						if (!eventDrivenFieldName.contains(tempEventFieldName
+								.get(j))) {
+							
+							eventDrivenFieldName.add(arrayFieldName[i][1]);
 					FieldForGUINotify = new StructField(arrayFieldName[i][1],
 							new PrimitiveType(arrayFieldType[i][1]));
 
@@ -294,7 +306,11 @@ public class SymbolTable {
 
 			}
 		}
+			
 	}
+		}
+	}
+
 
 	private void searchForActuatorFields() {
 		for (int i = 0; i < 10; i++) {
