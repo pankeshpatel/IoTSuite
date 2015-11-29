@@ -19,6 +19,7 @@ public class SensorCompiler {
 	private Sensor sensorDriver;
 	private Set<SensorMeasurement> generatedInfo = new HashSet<SensorMeasurement>();
 	private List<StructField> eventDrivenField = new ArrayList<StructField>();
+	private List<StructField> periodicField = new ArrayList<StructField>();
 	//public static List<String> eventDrivenFieldName;
 	public static String samplePeriod;
 	public static String sampleDuration;
@@ -27,7 +28,7 @@ public class SensorCompiler {
 	}
 
 	public SensorCompiler(String sensorName) {
-		sensorDriver = new Sensor(sensorName, getGeneratedInfo(), null, getEventDrivenFields());
+		sensorDriver = new Sensor(sensorName, getGeneratedInfo(), null, getEventDrivenFields(),getPeriodicFields());
 	}
 
 	/*private List<String> getEventDrivenFieldName() {
@@ -39,6 +40,10 @@ public class SensorCompiler {
 		return eventDrivenField;
 	}
 
+	private  List<StructField> getPeriodicFields() {
+		this.periodicField=iotsuite.parser.SymbolTable.StructFieldSetForPeriodic;
+		return periodicField;
+	}
 	// Getter and Setter of GeneratedInfo
 	public Set<SensorMeasurement> getGeneratedInfo() {
 		return generatedInfo;

@@ -58,6 +58,7 @@ public class SymbolTable {
 	// sensor(ex- String badgeId, boolean presence etc.)
 	public static ArrayList<String> eventDrivenFields = new ArrayList<String>();
 
+	public static List<String> periodicFieldName = new ArrayList<String>();
 	public static List<String> eventDrivenFieldName = new ArrayList<String>();
 	public static Map<String, StructCompiler> structSymblTable = new HashMap<String, StructCompiler>();
 	public static Map<String, String> responseSymblTable = new HashMap<String, String>();
@@ -69,6 +70,7 @@ public class SymbolTable {
 	public static List<StructField> StructFieldSetForGUINotify = new ArrayList<StructField>();
 	public static List<StructField> StructFieldSetForStorage = new ArrayList<StructField>();
 	public static List<StructField> StructFieldSetForEventDriven = new ArrayList<StructField>();
+	public static List<StructField> StructFieldSetForPeriodic = new ArrayList<StructField>();
 
 	public static String structName;
 	public static String storageStructName;
@@ -95,6 +97,7 @@ public class SymbolTable {
 	static StructField FieldForGUI;
 	static StructField FieldForGUINotify;
 	static StructField FieldForEventDriven;
+	static StructField FieldForPeriodic;
 
 	public static Set<DataAccess> getDataAccessSymblTable(String dataAccessKey) {
 		return dataAccessSymblTable.get(dataAccessKey);
@@ -189,6 +192,11 @@ public class SymbolTable {
 	public void constructEventDrivenSymblTable(String eventDrivenStructName) {
 		searchForEventDrivenSensorFields(eventDrivenStructName);
 	}
+	
+	public void constructPeriodicSymbltable(String periodicStructName) {
+		searchForPeriodicSensorFields(periodicStructName);
+		
+	}
 
 	private void insertFieldType(String structName, String fieldType) {
 
@@ -242,6 +250,39 @@ public class SymbolTable {
 
 		}
 	}
+	
+	
+	
+	public static void  searchForPeriodicSensorFields(String periodicStructName){
+		List<String> tempPeriodicFieldName = new ArrayList<String>();
+		for (int i = 0; i < 10; i++) {
+
+			if (arrayFieldName[i][0] != null) {
+				if (arrayFieldName[i][0].equals(periodicStructName))
+
+				{
+					tempPeriodicFieldName.add(arrayFieldName[i][1]);
+					for (int j = 0; j < tempPeriodicFieldName.size(); j++) {
+
+						if (!periodicFieldName.contains(tempPeriodicFieldName
+								.get(j))) {
+							
+							
+							periodicFieldName.add(arrayFieldName[i][1]);
+							FieldForPeriodic = new StructField(arrayFieldName[i][1],
+									new PrimitiveType(arrayFieldType[i][1]));
+							
+							StructFieldSetForPeriodic.add(FieldForPeriodic);
+							
+							
+						}
+					}
+				}
+			}
+
+		}
+	}
+	
 
 	private static void searchStructFieldNameForAggregator(
 			String aggregatorStructName) {
@@ -384,5 +425,7 @@ public class SymbolTable {
 	public SymbolTable() {
 
 	}
+
+	
 
 }

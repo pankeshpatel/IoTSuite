@@ -81,7 +81,7 @@ http.createServer(function(req, res) {
           $GUIdriver.AllStructFieldsForNotify:{fieldsForNotify | 
           var $fieldsForNotify.name$= result[i].$fieldsForNotify.name$;
           }$
-          // Device developer will extract value from database and send value to client
+          // Device developer will extract value (only those value which will need to display) from database  and send value to client 
           res.write('{$GUIdriver.AllStructFieldsForNotify:{fieldsForNotify |
           "$fieldsForNotify.name$" :'+$fieldsForNotify.name$+'}; separator=" , "$
           }');

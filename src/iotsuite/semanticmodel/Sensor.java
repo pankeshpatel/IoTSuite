@@ -15,17 +15,20 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 	//public static List<String> eventDrivenFieldName = new ArrayList<String>();
 	// Store fields used by Periodic Sensor
 	public static List<StructField> eventDrivenField = new ArrayList<StructField>();
+	// Store field Name used by Periodic Sensor
+	public static List<StructField> periodicField = new ArrayList<StructField>();
 	public static String samplePeriod;
 	public static String sampleDuration;
 
 	public Sensor(String name, Set<SensorMeasurement> generateInfo,
 			Set<SensorMeasurement> consumeInfo,
-			List<StructField> eventDrivenField) {
+			List<StructField> eventDrivenField,List<StructField> periodicField) {
 
 		// super(name, generateInfo, consumeInfo, "NoInstance");
 		super(name, generateInfo, consumeInfo);
 		//Sensor.eventDrivenFieldName = eventDrivenFieldName;
 		Sensor.eventDrivenField = eventDrivenField;
+		Sensor.periodicField=periodicField;
 
 	}
 
@@ -41,13 +44,19 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 		return sampleDuration;
 	}
 
-	/*public static List<String> getAllEventDrivenFieldName() {
-
-		eventDrivenFieldName = iotsuite.parser.SymbolTable.eventDrivenFieldName;
-		return eventDrivenFieldName;
+	
+	public List<StructField> getAllPeriodicFields(){
+		ArrayList<StructField> allPeriodicFields = new ArrayList<StructField>();
+		allPeriodicFields.addAll(getPeriodicField());
+		return allPeriodicFields;	
+	}
+	
+	public static List<StructField> getPeriodicField() {		
+		
+		return periodicField;
 
 	}
-*/
+	
 	
 	public List<StructField> getAllEventDivenFields() {
 		ArrayList<StructField> allEventDrivenFields = new ArrayList<StructField>();
@@ -56,9 +65,6 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 	}
 	public static List<StructField> getEventDrivenField() {
 
-		
-		//eventDrivenField = iotsuite.parser.SymbolTable.StructFieldSetForEventDriven;
-		//System.out.println("eventDriven"+eventDrivenFields);
 		return eventDrivenField;
 
 	}

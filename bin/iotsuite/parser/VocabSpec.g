@@ -89,6 +89,7 @@ sensorMeasurementForPeriodic_def :
     {      
     context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text , context.getStructSymblTable($CAPITALIZED_ID.text) ); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);  
+    context.constructPeriodicSymbltable($CAPITALIZED_ID.text);
     } 
 ;
  

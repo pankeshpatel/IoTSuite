@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-11-26 22:29:39
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2015-11-29 14:23:15
 
   package iotsuite.parser; 
   
@@ -603,11 +603,11 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:204:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:204:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:205:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:205:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			matchRange('a','z'); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:204:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:205:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -652,11 +652,11 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:206:5: ( '0' .. '9' ( '0' .. '9' )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:206:7: '0' .. '9' ( '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:207:5: ( '0' .. '9' ( '0' .. '9' )* )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:207:7: '0' .. '9' ( '0' .. '9' )*
 			{
 			matchRange('0','9'); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:206:15: ( '0' .. '9' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:207:15: ( '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -701,11 +701,11 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = CAPITALIZED_ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:209:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:209:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:210:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:210:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
 			{
 			matchRange('A','Z'); 
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:209:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:210:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -750,10 +750,10 @@ public class VocabSpecLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:211:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:211:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:212:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:212:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:211:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:212:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
