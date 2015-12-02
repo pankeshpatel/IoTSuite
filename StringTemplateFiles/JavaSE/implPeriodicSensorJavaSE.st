@@ -18,6 +18,7 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$,IDataList
 	  $SensorDriver.allGeneratedInfo:{ generatedInfo | 
 	public static Listener$generatedInfo.name$ listener$generatedInfo.name$;
 	}; separator="\n"$
+	
 	 $SensorDriver.allPeriodicFields:{periodicField | 
   $periodicField.type;format="capital"$ $periodicField.name$;
   }$
@@ -61,8 +62,7 @@ $SensorDriver.allGeneratedInfo:{ generatedInfo |
      $SensorDriver.allPeriodicFields:{periodicField | 
     $periodicField.name$=data.get("$periodicField.name$").getAs$periodicField.type;format="capital"$();
     }$
-    
-   listener$generatedInfo.name$.onNew$generatedInfo.name$(new $generatedInfo.type$( $SensorDriver.allPeriodicFields:{periodicField |$periodicField.name$} ;separator=","$ ));
+       listener$generatedInfo.name$.onNew$generatedInfo.name$(new $generatedInfo.type$( $SensorDriver.allPeriodicFields:{periodicField |$periodicField.name$} ;separator=","$ ));
     
 
     }

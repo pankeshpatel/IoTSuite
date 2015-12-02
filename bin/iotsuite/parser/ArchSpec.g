@@ -1,6 +1,6 @@
 grammar ArchSpec;  
 
-options {
+options {  
   language     = Java;  
 }  
 
@@ -25,11 +25,11 @@ archSpec :
     context.currentMappingConstraint = new MapperCompiler(); 
     }       
     ('structs' ':' struct_def)*  
-     'softwareComponents' ':' (component_def)+  
+    'softwareComponents' ':' (component_def )* 
 ;   
   
 component_def :
-    'computationalService' ':' (cs_def)   
+    'computationalService' ':' (cs_def)      
 ;
 
 struct_def: 
@@ -45,14 +45,16 @@ structField_def:
 ; 
  
 cs_def:      
-    'InBuilt' ':'  
-       (agg_cs_def)* 
-     'Custom' ':' 
-        (controller_def)*  
+
+  ('InBuilt' ':')*     
+        (agg_cs_def)*
+   ('Custom' ':')     
+        (controller_def)+    
         
     // ('Custom'     ':' (coordinator_def)* )* 
     // ('Controller' ':' (controller_def)* )* 
 ;       
+
 
  
 agg_cs_def:  
