@@ -139,31 +139,49 @@ public class LinkerCompiler {
 					}
 
 				}
-				else if(listOfFiles[i].getName().startsWith(
-						GlobalVariable.NODEJS_ENABLED_DEVICES)){
-					System.out.println("Linked code for "
-							+ listOfFiles[i].getName() + " device");
+			 if(listOfFiles[i].getName().startsWith(GlobalVariable.NODEJS_ENABLED_DEVICES)){
+					
+					System.out.println("Linked code for " + listOfFiles[i].getName() + " device");
 					
 					Set<String> tempNodeJSStringDeviceLinker = MappingAlgoCompiler.mappingOutputForLinker
 							.get(listOfFiles[i].getName().substring(6));
 					
 					List<String> convertedTempNodeJSStringDeviceLinker = convertListFromSet(tempNodeJSStringDeviceLinker);
 					
-					// For deviceImpI package
-					copyNodeJSServerGeneratedFromVocabulary(
-							GlobalVariable.NODEJS_ENABLED_DEVICES,
-							listOfFiles[i].getName(),
-							convertedTempNodeJSStringDeviceLinker);
-					copyNodeJSClientGeneratedFromVocabulary(
-							GlobalVariable.NODEJS_ENABLED_DEVICES,
-							listOfFiles[i].getName(),
-							convertedTempNodeJSStringDeviceLinker);
-				
+					//	System.out.println("ConvertedTempNodeStringDeviceLinker is..."+convertedTempNodeJSStringDeviceLinker);
+						for(int j=0;j< convertedTempNodeJSStringDeviceLinker.size();j++) 
+						{
+							
+							if((convertedTempNodeJSStringDeviceLinker.get(j)).contains(GlobalVariable.USER_INTERACTION_DASHBOARD))
+							{
+							
+								// For deviceImpI package (client.html and server.js)
+								copyNodeJSServerGeneratedFromVocabulary(
+										GlobalVariable.NODEJS_ENABLED_DEVICES,
+										listOfFiles[i].getName(),
+										convertedTempNodeJSStringDeviceLinker);
+								copyNodeJSClientGeneratedFromVocabulary(
+										GlobalVariable.NODEJS_ENABLED_DEVICES,
+										listOfFiles[i].getName(),
+										convertedTempNodeJSStringDeviceLinker);
+							}
+							else{
+								//NodeJS  Sensor and actuator 				
+							
+								copyNodeJSSensorGeneratedFromVocabulary(GlobalVariable.NODEJS_ENABLED_DEVICES,
+										listOfFiles[i].getName(), convertedTempNodeJSStringDeviceLinker);					
+								
+							
+							}
+							
+						}
+					
 					
 					
 				}	
 				
-            	else { // For Android-enabled devices.
+            	 // For Android-enabled devices.
+				if(listOfFiles[i].getName().startsWith(GlobalVariable.ANDROID_ENABLED_DEVICES)){
 
 					System.out.println("Linked code for "
 							+ listOfFiles[i].getName() + " device");
@@ -173,6 +191,19 @@ public class LinkerCompiler {
 
 					List<String> convertedTempJavaSEStringDeviceLinker = convertListFromSet(tempAndroidStringDeviceLinker);
 
+					/*for (int j=0;i<convertedTempJavaSEStringDeviceLinker.size();j++)
+					{
+						if((convertedTempJavaSEStringDeviceLinker.get(j)).contains("EndUserApp"))
+						{
+							
+						}
+						else{
+							
+							
+						}
+						
+					}*/
+					
 					// For deviceImpI package
 					copyDeviceDriversGeneratedFromVocabulary(
 							GlobalVariable.ANDROID_ENABLED_DEVICES,
@@ -271,16 +302,41 @@ public class LinkerCompiler {
 
 	}
 	
-	//Node.js
+	
+	
+	
+	// NodeJS  Sensor
+	
+		public static void copyNodeJSSensorGeneratedFromVocabulary(String type,
+				String name, List<String> softwareComponmentNameToPick) {
+		
+		
+		
+			File srcFile = new File(GlobalVariable.templatePath + "/" + type
+					+ "DeviceDrivers" + "/src/deviceImpl/" + type
+					+ softwareComponmentNameToPick.get(0) + ".js");
+
+			File destFolder = new File(GlobalVariable.templatePath + "/"
+					+ GlobalVariable.deploymentFolderPath + "/" + name
+					+ "/src/deviceImpl");
+			try {
+				FileUtils.copyFileToDirectory(srcFile, destFolder);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+		}
+	
+	//Server.js
 	
 	public static void copyNodeJSServerGeneratedFromVocabulary(String type,
 			String name, List<String> softwareComponmentNameToPick) {
 
-		String tempVariableForSoftwareComponent = softwareComponmentNameToPick
-				.iterator().next();
-		File srcFile = new File(GlobalVariable.templatePath + "/" + type
-				+ "DeviceDrivers" + "/src/deviceImpl/" 
-				+ "server" + ".js");
+	/*	String tempVariableForSoftwareComponent = softwareComponmentNameToPick
+				.iterator().next();*/
+				
+		File srcFile = new File(GlobalVariable.templatePath + "/" +"DashBoard"+ "/src/deviceImpl/" 
+				+ "server.js");
 
 		File destFolder = new File(GlobalVariable.templatePath + "/"
 				+ GlobalVariable.deploymentFolderPath + "/" + name
@@ -290,7 +346,7 @@ public class LinkerCompiler {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
 	}
 
 	
@@ -299,10 +355,10 @@ public class LinkerCompiler {
 	public static void copyNodeJSClientGeneratedFromVocabulary(String type,
 			String name, List<String> softwareComponmentNameToPick) {
 
-		String tempVariableForSoftwareComponent = softwareComponmentNameToPick
+	/*	String tempVariableForSoftwareComponent = softwareComponmentNameToPick
 				.iterator().next();
-		File srcFile = new File(GlobalVariable.templatePath + "/" + type
-				+ "DeviceDrivers" + "/src/deviceImpl/" 
+		*/
+		File srcFile = new File(GlobalVariable.templatePath + "/" +"DashBoard"+ "/src/deviceImpl/" 
 				+ "client" + ".html");
 
 		File destFolder = new File(GlobalVariable.templatePath + "/"
@@ -313,8 +369,8 @@ public class LinkerCompiler {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-	}
+		}
+	
 	
 
 	

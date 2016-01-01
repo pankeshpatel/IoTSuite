@@ -30,12 +30,14 @@ protected void postInitialize() {
 	$Storageservice.allDataAccess:{ dataAccess |  
 	protected void set$dataAccess.dataAccessName; format="capital"$ 
 	($dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ){
-	myPubSubMiddleware.publish("$dataAccess.dataAccessName$", new$dataAccess.dataAccessName$Value, myDeviceInfo);
+	
+	
+	myPubSubMiddleware.publish("$dataAccess.dataAccessName$", new$dataAccess.dataAccessName$Value);
 	}
 	
    }$
 	    
-	public void notifyReceived(String eventName, Object arg, Device deviceInfo) {
+	public void notifyReceived(String eventName, Object arg) {
 		try {
 			
 			$Storageservice.allDataAccess:{ dataAccess | 	
@@ -71,17 +73,17 @@ protected void postInitialize() {
 	
 	$Storageservice.allDataAccess:{ dataAccess | 
 	public void subscribe$dataAccess.dataAccessName$() {
-		List<String> regionInfo = new ArrayList<String>();
-		regionInfo.add("*");					
-		this.myPubSubMiddleware.subscribe(this, "get$dataAccess.dataAccessName$",regionInfo);		
+		 /* List<String> regionInfo = new ArrayList<String>();
+		regionInfo.add("*"); */ 					
+		this.myPubSubMiddleware.subscribe(this, "get$dataAccess.dataAccessName$");		
 	}	
   }$ 
   
   $Storageservice.allActions:{ action | 
   	public void subscribe$action.name; format="capital"$() {					
-	    List<String> regionInfo = new ArrayList<String>(); 
-		regionInfo.add("*");				
-      this.myPubSubMiddleware.subscribe(this,"$action.name$",regionInfo); 
+	     /* List<String> regionInfo = new ArrayList<String>(); 
+		regionInfo.add("*"); */ 				
+      this.myPubSubMiddleware.subscribe(this,"$action.name$"); 
  		}
   }$ 
   

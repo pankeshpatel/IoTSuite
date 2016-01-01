@@ -13,7 +13,7 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$,IDataList
 
        
   $SensorDriver.allEventDivenFields:{eventDrivenField | 
-  $eventDrivenField.type;format="capital"$ $eventDrivenField.name$;
+  $eventDrivenField.type$ $eventDrivenField.name$;
   }$
 
   private PubSubsSensingFramework pubSubSensingFramework = null;
@@ -70,7 +70,7 @@ public void onDataReceived(String eventName, JsonObject data) {
      {
     
      $SensorDriver.allEventDivenFields:{eventDrivenField | 
-  $eventDrivenField.name$=data.get("$eventDrivenField.name$").getAs$eventDrivenField.type$();
+  $eventDrivenField.name$=data.get("$eventDrivenField.name$").getAs$eventDrivenField.type; format="capital"$();
   }$
    handler$generatedInfo.name$.onNew$generatedInfo.name$(new  $generatedInfo.type$ ($SensorDriver.allEventDivenFields:{eventDrivenField |  $eventDrivenField.name$};separator="," $) );
     }    

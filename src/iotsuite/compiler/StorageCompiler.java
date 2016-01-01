@@ -42,7 +42,8 @@ public class StorageCompiler {
 
 	}
 
-	public void createStorageObject() {
+	public void createStorageObject() {		
+		
 		storageService = new Storage(getStorageServiceName(),
 				getDataAccessList(), null, getAllFieldName(),
 				getAllFieldSQLvariable(), getStructField(),

@@ -1,9 +1,5 @@
 package iotsuite.pubsubmiddleware;
 
-import iotsuite.common.RegionIDTables;
-import iotsuite.semanticmodel.Device;
-
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.List;
@@ -13,15 +9,15 @@ import java.util.Set;
 public class PubSubMiddleware {
 
 	private Map<String, Set<Subscriber>> subscriberMap = new Hashtable<String, Set<Subscriber>>();
-	private Map<String, Set<CommandListener>> registeredInstanceMap = new Hashtable<String, Set<CommandListener>>();
+	/*private Map<String, Set<CommandListener>> registeredInstanceMap = new Hashtable<String, Set<CommandListener>>();
 
 	private Map<List<String>, Set<Subscriber>> regionSubscriber = new Hashtable<List<String>, Set<Subscriber>>();
 
-	private List<String> pubSubRegionIDList = new ArrayList<String>();
+	private List<String> pubSubRegionIDList = new ArrayList<String>();*/
 
 	private Set<Subscriber> subscriberSet = new HashSet<Subscriber>();
 
-	RegionIDTables regionIDtb = new RegionIDTables();
+	/*RegionIDTables regionIDtb = new RegionIDTables();
 
 	static PubSubMiddleware singletonInstance;
 
@@ -30,7 +26,7 @@ public class PubSubMiddleware {
 			singletonInstance = new PubSubMiddleware();
 		}
 		return singletonInstance;
-	}
+	}*/
 
 	public void subscribe(Subscriber s, String eventSignature,
 			List<String> regionInfo) {
@@ -38,9 +34,9 @@ public class PubSubMiddleware {
 		registerNewSubscriber(s, eventSignature, regionInfo);
 	}
 
-	public void publish(String eventName, Object arg, Device deviceInfo) {
+	public void publish(String eventName, Object arg) {
 
-		Set<Subscriber> subscriberPatternSet = new HashSet<Subscriber>();
+		/*Set<Subscriber> subscriberPatternSet = new HashSet<Subscriber>();
 
 		pubSubRegionIDList = deviceInfo.getRegion();
 
@@ -56,15 +52,15 @@ public class PubSubMiddleware {
 			}
 
 		}
-
+*/
 		Set<Subscriber> subscriberEventSet = getSubscribersForEvent(eventName);
 
-		subscriberSet = SetOperations.intersection(subscriberEventSet,
+	/*	subscriberSet = SetOperations.intersection(subscriberEventSet,
 				subscriberPatternSet);
-
+*/
 		if (subscriberSet != null) {
-			for (Subscriber s : subscriberSet) {
-				s.notifyReceived(eventName, arg, deviceInfo);
+			for (Subscriber s : subscriberEventSet) {
+				s.notifyReceived(eventName, arg);
 			}
 		}
 
@@ -78,7 +74,7 @@ public class PubSubMiddleware {
 	private void registerNewSubscriber(Subscriber s, String eSig,
 			List<String> regionInfo) {
 
-		if (regionSubscriber.containsKey(regionInfo)) {
+		/*if (regionSubscriber.containsKey(regionInfo)) {
 			Set<Subscriber> tempSet = regionSubscriber.get(regionInfo);
 			tempSet.add(s);
 			regionSubscriber.put(regionInfo, tempSet);
@@ -88,7 +84,7 @@ public class PubSubMiddleware {
 			Set<Subscriber> newSet = new HashSet<Subscriber>();
 			newSet.add(s);
 			regionSubscriber.put(regionInfo, newSet);
-		}
+		}*/
 
 		// create Map by EventName
 
@@ -104,7 +100,7 @@ public class PubSubMiddleware {
 
 	}
 
-	// Request-Response
+	/*// Request-Response
 
 	public Object sendCommand(String methodName, Object arg, Device deviceInfo) {
 
@@ -138,5 +134,5 @@ public class PubSubMiddleware {
 	public void registerInstance(CommandListener s, String listnerSignature) {
 		registerNewInstance(s, listnerSignature);
 	}
-
+*/
 }

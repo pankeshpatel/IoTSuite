@@ -38,11 +38,11 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
     $CS.allActions:{ action |
     protected  void $action.name; format="capital"$($action.allParameter:{ param | $param.type$ arg }; separator=" , "$) {
   	    Logger.log( myDeviceInfo.getName() ,"$CS.name$" , "Sending command $action.name$");
-    	this.myPubSubMiddleware.publish("$action.name; format="capital"$", $if(action.Parameter)$ $action.allParameter: { param | arg }; separator=" , "$ $else$ null $endif$ , myDeviceInfo );     
+    	this.myPubSubMiddleware.publish("$action.name; format="capital"$", $if(action.Parameter)$ $action.allParameter: { param | arg }; separator=" , "$ $else$ null $endif$);     
     }
 }; separator="\n"$   
 
-        public void notifyReceived(String eventName, Object arg, Device deviceInfo) { 
+        public void notifyReceived(String eventName, Object arg) { 
 	    try {
 	      $CS.allConsumedInfo:{ consumedInfo | if (eventName.equals("$consumedInfo.name$"))  
           { 
@@ -65,9 +65,9 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 					partitionAttribute, myDeviceInfo.getRegionLabels(),
 					myDeviceInfo.getRegion()); */
 			
-		List<String> regionInfo = new ArrayList<String>(); 
-		regionInfo.add("*");				   	     		
-        this.myPubSubMiddleware.subscribe(this,"$consumedInfo.name$", regionInfo);
+	/*	List<String> regionInfo = new ArrayList<String>(); 
+		regionInfo.add("*"); */ 				   	     		
+        this.myPubSubMiddleware.subscribe(this,"$consumedInfo.name$");
 		}
 		}$		
 		public void run() {

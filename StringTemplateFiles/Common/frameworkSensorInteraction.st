@@ -2,11 +2,13 @@ package $SensorDriver.packageName$;
 import iotsuite.pubsubmiddleware.*;
 import iotsuite.semanticmodel.*;
 import iotsuite.common.*;
+import com.google.gson.Gson;
 
 public abstract class  $SensorDriver.name$ implements Runnable { 
    
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
+	Gson gson = new Gson();
 	public $SensorDriver.name$(PubSubMiddleware pubSubM,  Device deviceInfo) {      
 	  this.myPubSubMiddleware = pubSubM;
 	  this.myDeviceInfo = deviceInfo;	  
@@ -20,8 +22,8 @@ public abstract class  $SensorDriver.name$ implements Runnable {
        
         Logger.log(myDeviceInfo.getName(), "$SensorDriver.name$",
 				"Publishing $generatedInfo.name$");   
-        
-        this.myPubSubMiddleware.publish("$generatedInfo.name; format="avoidCapital"$", newValue, myDeviceInfo);
+          String data = gson.toJson(newValue);
+        this.myPubSubMiddleware.publish("$generatedInfo.name; format="avoidCapital"$", data);
 		}
     } 
     /*   

@@ -41,6 +41,10 @@ public class GlobalVariable {
 	
 	public static final boolean DEVELOPMENT_METHODOLOGY = true;
 	// set "yes" if you want to use development methodology
+	
+	// Following is for End User Interaction
+	public static final String USER_INTERACTION_DASHBOARD = "DashBoard";
+	public static final String USER_INTERACTION_ENDUSERAPP = "EndUserApp";
 
 	public static final String ACTIVITY_GENERATE_DEVICEDRIVER = "compile-vocab-spec";
 	public static final String ACTIVITY_GENERATE_ARCHITECTUREFRAMEWORK = "compile-arch-spec";

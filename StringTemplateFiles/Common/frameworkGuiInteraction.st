@@ -33,8 +33,7 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
 	$GUIdriver.commands:{ command |
 	public void $command.name; format="capital"$FromGUI($command.allParameter:{ param | $param.type$ newValue}; separator=" , "$) {
 
-	   this.myPubSubMiddleware.publish("$command.name; format="capital"$", $if(command.Parameter)$ $command.allParameter: { param | newValue }; separator=" , "$ $else$ null $endif$,
-					myDeviceInfo);
+	   this.myPubSubMiddleware.publish("$command.name; format="capital"$", $if(command.Parameter)$ $command.allParameter: { param | newValue }; separator=" , "$ $else$ null $endif$);
 		}	
 	}; separator="\n"$
 	
@@ -42,13 +41,13 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
 	       
 	       public void  $dataAccess.dataAccessName; format="capital"$Request(String arg) {
        
-        this.myPubSubMiddleware.publish( "get$dataAccess.dataAccessName$", arg, myDeviceInfo); 
+        this.myPubSubMiddleware.publish( "get$dataAccess.dataAccessName$", arg); 
         
         }
        }$
        
 	
-       public void notifyReceived(String eventName, Object arg, Device deviceInfo) { 
+       public void notifyReceived(String eventName, Object arg) { 
           try {  
           
       $GUIdriver.allDataAccess:{ dataAccess |
@@ -82,9 +81,9 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
             
      
                
-       List<String> regionInfo = new ArrayList<String>(); 
-	   regionInfo.add("*");
-       this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="avoidCapital"$", regionInfo);
+        /* List<String> regionInfo = new ArrayList<String>(); 
+	   regionInfo.add("*"); */ 
+       this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="avoidCapital"$");
     }       
     }$
     
@@ -96,12 +95,12 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
      public void subscribe$notifyMeasurement; format="capital"$() {
     	 
     	 
-       
+       /* 
        List<String> regionInfo = new ArrayList<String>();
 		regionInfo.add("*");          
+           */      
                
-               
-         this.myPubSubMiddleware.subscribe(this,"$notifyMeasurement; format="capital"$", regionInfo);
+         this.myPubSubMiddleware.subscribe(this,"$notifyMeasurement; format="capital"$");
     } 
      
     }$   

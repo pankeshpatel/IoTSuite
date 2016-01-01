@@ -84,6 +84,12 @@ public  class  Logic$GUIdriver.name$ extends $GUIdriver.name$  {
      }
     }$
     
+    @Override
+	public void notifyReceived(String eventName, Object arg, Device deviceInfo) {
+		// TODO Auto-generated method stub
+		
+	}
+    
     
     
     

@@ -4,14 +4,17 @@ import iotsuite.semanticmodel.*;
 import iotsuite.common.*;
 import java.util.List;
 import java.util.ArrayList;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 
 public abstract class  $CS.name$ implements Subscriber, Runnable{ 
 			
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
-	
-	
+	Gson gson = new Gson();
+  	
 	public $CS.name$(PubSubMiddleware pubSubM, Device deviceInfo) {   
 		
 		 this.myPubSubMiddleware = pubSubM;
@@ -30,7 +33,10 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 		$CS.allActions:{ action |
     protected  void $action.name; format="capital"$($action.allParameter:{ param | $param.type$ arg }; separator=" , "$) {
   	    Logger.log( myDeviceInfo.getName() ,"$CS.name$" , "Sending command $action.name$");
-    	this.myPubSubMiddleware.publish("$action.name; format="capital"$", $if(action.Parameter)$ $action.allParameter: { param | arg }; separator=" , "$ $else$ null $endif$ , myDeviceInfo );     
+  	    $action.allParameter:{ param |  String data = gson.toJson(arg);}; separator=","$
+  	    
+  	    
+    	this.myPubSubMiddleware.publish("$action.name; format="capital"$", $if(action.Parameter)$ $action.allParameter: { param | data }; separator=" , "$ $else$ null $endif$);     
     }
 }; separator="\n"$	
 		
@@ -43,8 +49,8 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         $generatedInfo.name; format="avoidCapital"$ = newValue; 
         
         Logger.log(myDeviceInfo.getName(),"$CS.name$", "Publishing $generatedInfo.name$");     
-     
-        this.myPubSubMiddleware.publish("$generatedInfo.name; format="avoidCapital"$", newValue, myDeviceInfo);		
+        String data = gson.toJson(newValue);
+        this.myPubSubMiddleware.publish("$generatedInfo.name; format="avoidCapital"$", data);		
        
       }
     } 
@@ -57,7 +63,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 		
 
         
-        public void notifyReceived(String eventName, Object arg, Device deviceInfo) { 
+        public void notifyReceived(String eventName, Object arg) { 
         try {	
         
          $CS.allConsumedInfo:{ consumedInfo | 
@@ -95,10 +101,10 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	   		    
 	   		
 					
-			List<String> regionInfo = new ArrayList<String>(); 
-			regionInfo.add("*");	
+		/*	List<String> regionInfo = new ArrayList<String>(); 
+			regionInfo.add("*"); */  	
 				
-	   		this.myPubSubMiddleware.subscribe(this,"$consumedInfo.name$", regionInfo);
+	   		this.myPubSubMiddleware.subscribe(this,"$consumedInfo.name$");
 		}
 		}$ 	
 		
@@ -109,9 +115,9 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	   		    
 	   	
 					
-			List<String> regionInfo = new ArrayList<String>(); 
-			regionInfo.add("*");					
-		    this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="avoidCapital"$", regionInfo);
+			 /* List<String> regionInfo = new ArrayList<String>(); 
+			regionInfo.add("*"); */ 					
+		    this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="avoidCapital"$");
 		}
 		    
 		    
@@ -124,7 +130,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 		    protected void get$dataAccess.dataAccessName; format="avoidCapital"$($dataAccess.query.type; format="capital" $ arg) {
 		    	 Logger.log(myDeviceInfo.getName(),"$CS.name$",
 		     				"Sending command get$dataAccess.dataAccessName$");
-		    	this.myPubSubMiddleware.publish("get$dataAccess.dataAccessName; format="avoidCapital"$", arg , myDeviceInfo );     
+		    	this.myPubSubMiddleware.publish("get$dataAccess.dataAccessName; format="avoidCapital"$", arg );     
 		    }
 		}; separator="\n"$ 
 }

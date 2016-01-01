@@ -1,10 +1,16 @@
-resources:
+structs:
+	VisualizeStruct
+	    tempValue:double;
+	    humidityValue:double;
+	    yahooTempValue:double; 
+	FireStateStruct
+		fireValue:String;  
+		timeStamp:String;	    
+resources :
     userInteractions:
-		SmartHomeApp						
-			command Off() to Heater;
-	 		command SetTemp(setTemp) to Heater;
-	 		request profile to ProfileDB;	 	
-	 		notify DisplayTemp(tempNotify:TempStruct) from DisplayTempController;
-	 	Visualization
-	 	    notify DisplayTemp(tempNotify:TempStruct) from ProfileDB; 	
-	 	     	
+		EndUserApp							
+			notify FireNotify(fireNotify:FireStateStruct) from FireController;
+	    DashBoard
+		    notify DisplaySensorMeasurement(sensorMeasurement:VisualizeStruct) from DisplayController; 
+	 	
+	 	  		 	     	

@@ -165,7 +165,7 @@ public class SourceFileDumper {
 				|| unit.getFileCategory().equals("AndroidStorageImpl")
 				|| unit.getFileCategory().equals("AndroidFactory")
 				|| unit.getFileCategory().equals("AndroidGuiLogic")
-				|| unit.getFileCategory().equals("AndroidSensorLogic")) {
+		        || unit.getFileCategory().equals("AndroidSensorLogic")) {
 			// Do nothing
 		}
 
@@ -190,6 +190,7 @@ public class SourceFileDumper {
 		}
 
 		
+		
 		else if (unit.getFileCategory().equals("AndroidGuiImpl")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -198,7 +199,10 @@ public class SourceFileDumper {
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
-		} else {
+		}
+		
+		
+		else {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.frameworkDirPath).mkdirs();
@@ -228,12 +232,14 @@ public class SourceFileDumper {
 		String content = unit.getStringTemplateName();
 		// Node.js
 
-				 if (unit.getFileCategory().equals("server")) {
-					new File(GlobalVariable.templatePath + "NodeJS" + "DeviceDrivers"
+					 if (unit.getFileCategory().equals("server")) {
+					//new File(GlobalVariable.templatePath + "NodeJS" + "DeviceDrivers"
+					 new File(GlobalVariable.templatePath +"DashBoard"
 							+ GlobalVariable.outputDirPath
 							+ GlobalVariable.deviceImplDirPath).mkdirs();
-					file = new File(GlobalVariable.templatePath + "NodeJS"
-							+ "DeviceDrivers" + GlobalVariable.outputDirPath
+						file = new File(GlobalVariable.templatePath 
+								//+ "DeviceDrivers" + GlobalVariable.outputDirPath
+							+ "DashBoard" + GlobalVariable.outputDirPath
 							+ GlobalVariable.deviceImplDirPath + "/"
 							+ unit.getFileNameToGenerate());
 				}
@@ -241,11 +247,10 @@ public class SourceFileDumper {
 				// Client
 
 				else if (unit.getFileCategory().equals("client")) {
-					new File(GlobalVariable.templatePath +"NodeJS" + "DeviceDrivers"
+					new File(GlobalVariable.templatePath +"DashBoard"
 							+ GlobalVariable.outputDirPath
 							+ GlobalVariable.deviceImplDirPath).mkdirs();
-					file = new File(GlobalVariable.templatePath + "NodeJS"
-							+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					file = new File(GlobalVariable.templatePath +"DashBoard" + GlobalVariable.outputDirPath
 							+ GlobalVariable.deviceImplDirPath + "/"
 							+ unit.getFileNameToGenerate());
 				}
@@ -306,6 +311,7 @@ public class SourceFileDumper {
 					+ unit.getFileNameToGenerate());
 		}
 
+		
 		else if (unit.getFileCategory().equals("AndroidFactory")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
@@ -313,8 +319,9 @@ public class SourceFileDumper {
 			file = new File(GlobalVariable.templatePath + deviceType
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.factoryDirPath + "/"
-					+ unit.getFileNameToGenerate());
-		} else if (unit.getFileCategory().equals("AndroidStorageImpl")) {
+					+ unit.getFileNameToGenerate());		
+		}
+		 else if (unit.getFileCategory().equals("AndroidStorageImpl")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath).mkdirs();
@@ -378,7 +385,10 @@ public class SourceFileDumper {
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
-		} else {
+		} 
+		
+	
+		else {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.frameworkDirPath).mkdirs();

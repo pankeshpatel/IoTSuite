@@ -28,7 +28,7 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
 	
     $Actuatordriver.allActions:{ action | protected abstract void $action.name$($action.allParameter:{ param | $param.type$ arg }; separator=", "$); }; separator="\n"$
 	
-    public void notifyReceived(String methodName, Object arg, Device deviceInfo) { 
+    public void notifyReceived(String methodName, Object arg) { 
     $Actuatordriver.allActions:{ action |
     if (methodName.equals("$action.name$") ) { 
     	Logger.log( myDeviceInfo.getName() ,"$Actuatordriver.name$" , "$action.name$ has been received");      	
@@ -39,9 +39,9 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
    
      $Actuatordriver.allActions:{ action | 
     	public void subscribe$action.name; format="capital"$() {					
-	    List<String> regionInfo = new ArrayList<String>(); 
-		regionInfo.add("*");				
-        this.myPubSubMiddleware.subscribe(this,"$action.name$",regionInfo); 
+	    /* List<String> regionInfo = new ArrayList<String>(); 
+		regionInfo.add("*"); */ 				
+        this.myPubSubMiddleware.subscribe(this,"$action.name$"); 
    		}
     }$  		
    		  		

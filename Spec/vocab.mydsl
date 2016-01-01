@@ -1,30 +1,41 @@
 structs:
-	 BadgeStruct    
-        badgeID: String;
-        badgeEvent:String;  	    
-    TempStruct
+	 TempStruct
         tempValue : double;
-        unitOfMeasurement : String;		   
-    ProfileStruct
-    	badgeID : String;
-    	tempValue: double;
-    	unitOfMeasurement:String;       
+        unitOfMeasurement : String;	
+       HumidityStruct
+      	  humidityValue : double;
+      	  unitOfMeasurement : String;      	  
+      BadgeStruct
+      	badgeID: String;
+      	badgeEvent: String; 
+	  SmokeStruct
+	  	smokeValue: double; 
+	  	unitOfMeasurement : String;	  	 	     	  
 resources:
     sensors:
     	periodicSensors:
 	  		TemperatureSensor
             	generate  tempMeasurement : TempStruct;    
-            	sample period 1000 for 6000000;
-      	eventDrivenSensors:
-    	 	BadgeReader                
-            	generate badgeDetected: BadgeStruct;
-				generate badgeDisappeared: BadgeStruct; 
-				onCondition badgeDetected, badgeDisappeared; 			               
+            	sample period 1000 for 6000000;     
+            HumiditySensor
+            	generate  humidityMeasurement : HumidityStruct;    
+            	sample period 1000 for 6000000;   
+        eventDrivenSensors:
+			SmokeDetector
+        	   generate smokeMeasurement : SmokeStruct;
+        	   onCondition smokeCondition;
+        requestBasedSensors:
+            YahooWeatherService
+              generate weatherMeasurement : TempStruct accessed-by locationID: String;      
+    tags:
+         BadgeReader
+         	 generate badgeDetected: BadgeStruct;     
     actuators:
-       Heater
-			action Off();
-			action SetTemp(setTemp:TempStruct);			
-	storages:       
+         Alarm
+         		action On();
+         Heater
+         	    action SetTemp(setTemp:TempStruct); 
+     storages:       
         ProfileDB   
-            generate profile: TempStruct accessed-by badgeID: String;
-            action InsertProfileData(profileData:ProfileStruct);
+            generate profile: TempStruct accessed-by badgeID: String;        
+         	    

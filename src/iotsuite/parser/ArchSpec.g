@@ -46,7 +46,7 @@ structField_def:
  
 cs_def:      
 
-  ('InBuilt' ':')*     
+  ('Common' ':')*       
         (agg_cs_def)*
    ('Custom' ':')     
         (controller_def)+    

@@ -309,7 +309,8 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java",
 				templateOfGUIDriver, "AndroidFactory", "gui", guiDriver);
 	}
-
+	
+	
 	// Android Periodic Sensor
 	public CompilationUnit generateAndroidPeriodicSensorImpl(Sensor sensorDriver) {
 		StringTemplate templateOfSensorDriver = group
@@ -431,6 +432,8 @@ public class JavaFrameworkFromST {
 				templateOfGUIDriver, "AndroidGuiLogic", "gui", guiDriver);
 	}
 
+	
+	
 	// For generating listener for GUI.
 	public CompilationUnit generateUserInterfaceListener(UserInterface guiDriver) {
 		StringTemplate templateOfGUIDriver = group
@@ -445,6 +448,10 @@ public class JavaFrameworkFromST {
 	}
 	
 	
+	
+	
+	
+
 	
 	// Node.js
 		public CompilationUnit generateVisualization_Server(UserInterface guiDriver) {
@@ -553,6 +560,7 @@ public class JavaFrameworkFromST {
 				templateOfGUIDriver, "Interface", "gui", guiDriver);
 	}
 
+	
 	public CompilationUnit generateSensorListener(
 			SensorMeasurement sensorMeasurement) {
 		StringTemplate templateOfSensorDriver = group

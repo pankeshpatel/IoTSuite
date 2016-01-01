@@ -124,6 +124,7 @@ public class UserInterfaceCompiler {
 			}
 			if(GlobalVariable.ENABLE_NodeJS_CODE_GENERATION){
 				
+				
 				generateVisualization_Server();
 				generateVisualization_Client();
 			}
