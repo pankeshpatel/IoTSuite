@@ -65,7 +65,7 @@ public class MapperCompiler {
 
 			if(device.getType().equals("NodeJS")){
 				multiplyTemplate(device);
-			}
+			}		
 			else{
 				multiplyTemplate(device);
 				genearateStartupCode(device);
@@ -100,6 +100,8 @@ public class MapperCompiler {
 				device.getRegionLabels(), resultAbilities,
 				device.getMobileFlag(), device.getProtocol(),
 				device.getDescription(), device.getDatabase());
+		
+	
 	}
 
 	/*
@@ -119,25 +121,57 @@ public class MapperCompiler {
 			generateDeviceManifest(unit);
 		}
 
-		File srcFolder = new File(GlobalVariable.templatePath + "/"
-				+ "DeviceDrivers" + "/" + unit.getType());
+		if(unit.getAbilities().contains(GlobalVariable.USER_INTERACTION_ENDUSERAPP))
+		{
+			
+						
+			File srcFolder = new File(GlobalVariable.templatePath + "/"
+					+ "DeviceDrivers" + "/" +"EndUserApp");
 
-		new File(GlobalVariable.templatePath).mkdirs();
-		File destFolder = new File(GlobalVariable.templatePath + "/"
-				+ GlobalVariable.deploymentFolderPath + "/" + unit.getType()
-				+ unit.getName());
+			new File(GlobalVariable.templatePath).mkdirs();
+			File destFolder = new File(GlobalVariable.templatePath + "/"
+					+ GlobalVariable.deploymentFolderPath + "/" + unit.getType()
+					+ unit.getName());
 
-		if (!srcFolder.exists()) {
-			System.out.println("Directory does not exist.");
-			System.exit(0);
-		} else {
-			try {
-				GenFiller.copyFolder(srcFolder, destFolder);
-			} catch (IOException e) {
-				e.printStackTrace();
+			if (!srcFolder.exists()) {
+				System.out.println("Directory does not exist.");
 				System.exit(0);
+			} else {
+				try {
+					GenFiller.copyFolder(srcFolder, destFolder);
+				} catch (IOException e) {
+					e.printStackTrace();
+					System.exit(0);
+				}
 			}
 		}
+		else
+			
+		{
+			
+			
+			File srcFolder = new File(GlobalVariable.templatePath + "/"
+					+ "DeviceDrivers" + "/" + unit.getType());
+
+			new File(GlobalVariable.templatePath).mkdirs();
+			File destFolder = new File(GlobalVariable.templatePath + "/"
+					+ GlobalVariable.deploymentFolderPath + "/" + unit.getType()
+					+ unit.getName());
+
+			if (!srcFolder.exists()) {
+				System.out.println("Directory does not exist.");
+				System.exit(0);
+			} else {
+				try {
+					GenFiller.copyFolder(srcFolder, destFolder);
+				} catch (IOException e) {
+					e.printStackTrace();
+					System.exit(0);
+				}
+			}
+			
+		}
+		
 
 	}
 

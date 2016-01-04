@@ -33,6 +33,7 @@ public class DeviceCompiler {
 				getNetworkAddress(), getRegionValues(), getRegionLabel(),
 				deviceAbilities, getMobileFlag(), getProtocol(),
 				getDeviceDescription(), getDataBase());
+		
 		SymbolTable.addDeviceinSymblTable(device);
 	}
 

@@ -163,7 +163,7 @@ public class SourceFileDumper {
 				|| unit.getFileCategory().equals("AndroidLogic")
 				|| unit.getFileCategory().equals("AndroidGuiImpl")
 				|| unit.getFileCategory().equals("AndroidStorageImpl")
-				|| unit.getFileCategory().equals("AndroidFactory")
+				|| unit.getFileCategory().equals("AndroidGuiFactory")
 				|| unit.getFileCategory().equals("AndroidGuiLogic")
 		        || unit.getFileCategory().equals("AndroidSensorLogic")) {
 			// Do nothing
@@ -200,7 +200,16 @@ public class SourceFileDumper {
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
 		}
-		
+		/*else if (unit.getFileCategory().equals("AndroidGuiImpl")) {
+			new File(GlobalVariable.templatePath +  "EndUserApp"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + deviceType
+					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
+		}
+		*/
 		
 		else {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
@@ -302,22 +311,30 @@ public class SourceFileDumper {
 		}
 
 		else if (unit.getFileCategory().equals("AndroidGuiLogic")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+			/*new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.logicDirPath).mkdirs();
 			file = new File(GlobalVariable.templatePath + deviceType
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.logicDirPath + "/"
+					+ unit.getFileNameToGenerate());*/
+			new File(GlobalVariable.templatePath + "EndUserApp"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath + "EndUserApp"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath + "/"
 					+ unit.getFileNameToGenerate());
+			
 		}
 
 		
-		else if (unit.getFileCategory().equals("AndroidFactory")) {
-			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
+		else if (unit.getFileCategory().equals("AndroidGuiFactory")) {
+			new File(GlobalVariable.templatePath + "EndUserApp"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.factoryDirPath).mkdirs();
-			file = new File(GlobalVariable.templatePath + deviceType
-					+ "DeviceDrivers" + GlobalVariable.outputDirPath
+			file = new File(GlobalVariable.templatePath 
+					+ "EndUserApp" + GlobalVariable.outputDirPath
 					+ GlobalVariable.factoryDirPath + "/"
 					+ unit.getFileNameToGenerate());		
 		}
@@ -329,7 +346,8 @@ public class SourceFileDumper {
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
-		} else if (unit.getFileCategory().equals("AndroidFactory")) {
+		} 
+		 else if (unit.getFileCategory().equals("AndroidFactory")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.factoryDirPath).mkdirs();
@@ -377,7 +395,7 @@ public class SourceFileDumper {
 					+ unit.getFileNameToGenerate());
 		}
 
-		else if (unit.getFileCategory().equals("AndroidGuiImpl")) {
+		/*else if (unit.getFileCategory().equals("AndroidGuiImpl")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath).mkdirs();
@@ -385,10 +403,31 @@ public class SourceFileDumper {
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.deviceImplDirPath + "/"
 					+ unit.getFileNameToGenerate());
+		} */
+		
+		else if (unit.getFileCategory().equals("AndroidGuiImpl")) {
+			new File(GlobalVariable.templatePath + "EndUserApp"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath  
+					+ "EndUserApp" + GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceImplDirPath + "/"
+					+ unit.getFileNameToGenerate());
 		} 
 		
 	
 		else {
+			
+			/*
+			new File(GlobalVariable.templatePath + "EndUserApp"
+					+ GlobalVariable.outputDirPath
+					+ GlobalVariable.frameworkDirPath).mkdirs();
+			file = new File(GlobalVariable.templatePath  
+					+ "EndUserApp" + GlobalVariable.outputDirPath
+					+ GlobalVariable.frameworkDirPath + "/"
+					+ unit.getFileNameToGenerate());*/
+			
+			
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"
 					+ GlobalVariable.outputDirPath
 					+ GlobalVariable.frameworkDirPath).mkdirs();
@@ -396,6 +435,9 @@ public class SourceFileDumper {
 					+ "DeviceDrivers" + GlobalVariable.outputDirPath
 					+ GlobalVariable.frameworkDirPath + "/"
 					+ unit.getFileNameToGenerate());
+			
+			
+			
 
 		}
 

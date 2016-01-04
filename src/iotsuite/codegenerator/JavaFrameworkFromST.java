@@ -307,7 +307,7 @@ public class JavaFrameworkFromST {
 				new MyAttributeRenderer());
 
 		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java",
-				templateOfGUIDriver, "AndroidFactory", "gui", guiDriver);
+				templateOfGUIDriver, "AndroidGuiFactory", "gui", guiDriver);
 	}
 	
 	

@@ -13,12 +13,12 @@ public class Device implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String name;
-	// private String id;
+     //private String id;
 	private String type;
 	private String networkAddress;
 
 	private List<String> regionIDs = new ArrayList<String>();
-	private List<String> regionLabels = new ArrayList<String>();
+  private List<String> regionLabels = new ArrayList<String>();
 	private Set<String> abilities = new HashSet<String>();
 	private String myMobileFlag;
 	private String myProtocol;
@@ -29,7 +29,6 @@ public class Device implements Serializable {
 			List<String> regionIDs, List<String> regionLabels,
 			Set<String> abilities, String mobileFlag, String protocol,
 			String deviceDescription, String database) {
-
 		this.name = name;
 
 		this.type = type;
