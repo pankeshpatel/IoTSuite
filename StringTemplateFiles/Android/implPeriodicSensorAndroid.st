@@ -5,8 +5,9 @@ import logic.*;
 import android.content.Context;
 import android.content.Intent;
 import iotsuite.android.sensingframework.*;
+import iotsuite.android.sensingframework.ProbeKeys.TemperatureSensorKeys;
+import iotsuite.android.extended.sensingframework.*;
 import com.google.gson.JsonObject;
-import iotsuite.android.sensingframework.ProbeKeys.*;
 import iotsuite.android.sensingmiddleware.ISensorListener;
 import iotsuite.android.sensingmiddleware.PubSubsSensingFramework;
 import java.util.Random;
@@ -51,7 +52,7 @@ $SensorDriver.name$Keys, ISensorListener  {
 	   //listener$generatedInfo.name$ = handler;
 	    while (duration <= SAMPLE_DURATION) {
               try {
-                  handler.onNewtempMeasurement(this.gettempMeasurement());
+                  handler.onNew$generatedInfo.name; format="avoidCapital"$(this.get$generatedInfo.name; format="avoidCapital"$());
                   Thread.sleep(SAMPLE_PERIOD);
    				duration  = duration  + SAMPLE_PERIOD;
               } catch (InterruptedException e) {
@@ -83,14 +84,15 @@ $SensorDriver.name$Keys, ISensorListener  {
         double randomNumber = (double) (fraction + aStart);
         return randomNumber;
     }
-
-    private TempStruct gettempMeasurement() {
+ $SensorDriver.allGeneratedInfo:{ generatedInfo | 
+    private $generatedInfo.type$ get$generatedInfo.name; format="avoidCapital"$() {
 
         int START = 20;
         int END = 40;
         Random random = new Random();
         double tempValue = showRandomInteger(START, END, random);
-        return new TempStruct(tempValue, "C");
+        return new $generatedInfo.type$(tempValue, "C");
     }
+    }; separator="\n"$
 
 }

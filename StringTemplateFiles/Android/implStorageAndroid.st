@@ -4,7 +4,7 @@ import framework.*;
 
 public class Android$Storageservice.name$ implements I$Storageservice.name$ {
 
-     public AndroidProfileDB() {
+     public Android$Storageservice.name$() {
   
       }
 

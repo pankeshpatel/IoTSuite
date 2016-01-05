@@ -7,8 +7,7 @@ import android.content.Intent;
 import com.google.gson.JsonObject;
 import iotsuite.android.sensingmiddleware.ISensorListener;
 import iotsuite.android.sensingmiddleware.PubSubsSensingFramework;
-import iotsuite.android.extended.sensingframework.BadgeReaderKeys;
-import iotsuite.android.extended.sensingframework.BadgeReaderSensorProbe;
+import iotsuite.android.extended.sensingframework.*;
 
 
 
@@ -17,6 +16,8 @@ $SensorDriver.name$Keys, ISensorListener  {
 	
 	private PubSubsSensingFramework pubSubSensingFramework = null;
 	
+	
+  
 	$SensorDriver.allGeneratedInfo:{ generatedInfo | 
 		   	   
       private static boolean $generatedInfo.name; format="avoidCapital"$Condition= false;
