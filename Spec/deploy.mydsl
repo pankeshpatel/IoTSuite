@@ -3,7 +3,7 @@ devices:
        location:
             Room: 1;
         platform: NodeJS;    
-        resources:TemperatureSensor;
+        resources:TemperatureSensor,HumiditySensor,BadgeReader,YahooWeatherService,SmokeDetector;
 		protocol: mqtt;  
 		description: "temperature Sensor Running on Raspberry Pi";
 	D2:

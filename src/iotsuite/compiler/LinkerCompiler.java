@@ -41,6 +41,7 @@ public class LinkerCompiler {
 
 						List<String> convertedTempJavaSEStringDeviceLinker = convertListFromSet(tempJavaSEStringDeviceLinker);
 
+						
 						// For deviceImpI package
 						copyDeviceDriversGeneratedFromVocabulary(
 								GlobalVariable.JAVASE_ENABLED_DEVICES,
@@ -148,8 +149,10 @@ public class LinkerCompiler {
 					
 					List<String> convertedTempNodeJSStringDeviceLinker = convertListFromSet(tempNodeJSStringDeviceLinker);
 					
-					//	System.out.println("ConvertedTempNodeStringDeviceLinker is..."+convertedTempNodeJSStringDeviceLinker);
-						for(int j=0;j< convertedTempNodeJSStringDeviceLinker.size();j++) 
+														 
+					 
+					 
+						for(int j=0;j<convertedTempNodeJSStringDeviceLinker.size();j++) 
 						{
 							
 							if((convertedTempNodeJSStringDeviceLinker.get(j)).contains(GlobalVariable.USER_INTERACTION_DASHBOARD))
@@ -169,7 +172,7 @@ public class LinkerCompiler {
 								//NodeJS  Sensor and actuator 				
 							
 								copyNodeJSSensorGeneratedFromVocabulary(GlobalVariable.NODEJS_ENABLED_DEVICES,
-										listOfFiles[i].getName(), convertedTempNodeJSStringDeviceLinker);					
+										listOfFiles[i].getName(), convertedTempNodeJSStringDeviceLinker.get(j));					
 								
 							
 							}
@@ -405,7 +408,7 @@ public class LinkerCompiler {
 	
 	// NodeJS  Sensor
 	
-		public static void copyNodeJSSensorGeneratedFromVocabulary(String type,
+	/*	public static void copyNodeJSSensorGeneratedFromVocabulary(String type,
 				String name, List<String> softwareComponmentNameToPick) {
 		
 		
@@ -423,8 +426,28 @@ public class LinkerCompiler {
 				e.printStackTrace();
 			}
 
-		}
+		}*/
 	
+	
+	public static void copyNodeJSSensorGeneratedFromVocabulary(String type,
+			String name, String softwareComponmentNameToPick) {
+	
+	
+	
+		File srcFile = new File(GlobalVariable.templatePath + "/" + type
+				+ "DeviceDrivers" + "/src/deviceImpl/" + type
+				+ softwareComponmentNameToPick+ ".js");
+
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name
+				+ "/src/deviceImpl");
+		try {
+			FileUtils.copyFileToDirectory(srcFile, destFolder);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
 	//Server.js
 	
 	public static void copyNodeJSServerGeneratedFromVocabulary(String type,

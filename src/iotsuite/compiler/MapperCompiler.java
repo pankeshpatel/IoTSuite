@@ -58,6 +58,9 @@ public class MapperCompiler {
 		Map<Device, Set<String>> taskMapper = MappingAlgoCompiler.mapTasks(
 				deviceList, mappingConstraintList);
 
+		
+	//	System.out.println("DeviceList..."+deviceList+ "taskMapper.."+taskMapper+ " Deployment Scope...."+mappingConstraintList);
+		
 		for (Entry<Device, Set<String>> entry : taskMapper.entrySet()) {
 
 			Device device = MergeDeviceAbilities(entry.getKey(),
