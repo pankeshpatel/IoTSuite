@@ -56,6 +56,7 @@ devices:
         resources: ;
 		protocol: mqtt;  
 		description: "calculate Avg Temp";
+	
 	D9:
        location:
             Room: 1;
@@ -70,6 +71,7 @@ devices:
         resources: ;
 		protocol: mqtt;  
 		description: "fire State";
+	
 	D11:
        location:
             Room: 1;
@@ -77,13 +79,15 @@ devices:
         resources: ;
 		protocol: mqtt;  
 		description: "fire Controller";
-	D12:
+		
+    D12:
        location:
             Room: 1;
         platform: JavaSE;    
         resources: ;
 		protocol: mqtt;  
 		description: "display Controller";
+	
 	D13:
        location:
             Room: 1;

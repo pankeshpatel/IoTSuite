@@ -88,23 +88,36 @@ public class LinkerCompiler {
 
 						List<String> convertedTempJavaSEStringDeviceLinker = convertListFromSet(tempJavaSEStringDeviceLinker);
 
+						for(int j=0;j<convertedTempJavaSEStringDeviceLinker.size();j++)
+						{
 						// For logic package
+					/*	copyApplicationLogicArchitectureSpecification(
+								GlobalVariable.JAVASE_ENABLED_DEVICES,
+								listOfFiles[i].getName(),
+								convertedTempJavaSEStringDeviceLinker);*/
+						
 						copyApplicationLogicArchitectureSpecification(
 								GlobalVariable.JAVASE_ENABLED_DEVICES,
 								listOfFiles[i].getName(),
-								convertedTempJavaSEStringDeviceLinker);
+								convertedTempJavaSEStringDeviceLinker.get(j));
 
 						// For Framework package
+						/*copyFrameworkArchitectureSpecification(
+								GlobalVariable.JAVASE_ENABLED_DEVICES,
+								listOfFiles[i].getName(),
+								convertedTempJavaSEStringDeviceLinker);*/
+
 						copyFrameworkArchitectureSpecification(
 								GlobalVariable.JAVASE_ENABLED_DEVICES,
 								listOfFiles[i].getName(),
-								convertedTempJavaSEStringDeviceLinker);
-
+								convertedTempJavaSEStringDeviceLinker.get(j));
+						
 						// For Framework - Struct component
 						copyFrameworkGeneratedFromVocabularyForStruct(
 								GlobalVariable.JAVASE_ENABLED_DEVICES,
 								listOfFiles[i].getName(), "Struct");
-
+						}
+						
 						Set<String> noAbilitiesJavaSEDevicesForLinker = MappingAlgoCompiler.mappingOutputForLinker
 								.get(listOfFiles[i].getName().substring(6));
 
@@ -835,7 +848,7 @@ public class LinkerCompiler {
 		}
 
 	}
-	public static void copyApplicationLogicArchitectureSpecification(
+	/*public static void copyApplicationLogicArchitectureSpecification(
 			String type, String name, List<String> softwareComponmentNameToPick) {
 
 		File srcFile = new File(GlobalVariable.templatePath + "/"
@@ -852,9 +865,30 @@ public class LinkerCompiler {
 			e.printStackTrace();
 		}
 
-	}
+	}*/
 
-	public static void copyFrameworkArchitectureSpecification(String type,
+	
+	
+	public static void copyApplicationLogicArchitectureSpecification(
+			String type, String name, String softwareComponmentNameToPick) {
+
+		File srcFile = new File(GlobalVariable.templatePath + "/"
+				+ "ApplicationLogic/src/logic/" + "Logic"
+				+ softwareComponmentNameToPick+ ".java");
+
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
+				+ "logic");
+
+		try {
+			FileUtils.copyFileToDirectory(srcFile, destFolder);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	/*public static void copyFrameworkArchitectureSpecification(String type,
 			String name, List<String> softwareComponmentNameToPick) {
 
 		File srcFile = new File(GlobalVariable.templatePath + "/"
@@ -870,8 +904,29 @@ public class LinkerCompiler {
 			e.printStackTrace();
 		}
 
-	}
+	}*/
 
+	
+	
+	
+	public static void copyFrameworkArchitectureSpecification(String type,
+			String name, String softwareComponmentNameToPick) {
+
+		File srcFile = new File(GlobalVariable.templatePath + "/"
+				+ "ApplicationLogic/src/framework/"
+				+ softwareComponmentNameToPick+ ".java");
+
+		File destFolder = new File(GlobalVariable.templatePath + "/"
+				+ GlobalVariable.deploymentFolderPath + "/" + name + "/src/"
+				+ "framework");
+		try {
+			FileUtils.copyFileToDirectory(srcFile, destFolder);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
 	// Some general function...
 	public static void copyFiles(File srcFolder, File destFolder) {
 		// make sure source exists
