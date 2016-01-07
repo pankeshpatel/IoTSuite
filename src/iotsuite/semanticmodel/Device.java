@@ -15,28 +15,33 @@ public class Device implements Serializable {
 	private String name;
      //private String id;
 	private String type;
-	private String networkAddress;
+	//private String networkAddress;
 
-	private List<String> regionIDs = new ArrayList<String>();
-  private List<String> regionLabels = new ArrayList<String>();
+	//private List<String> regionIDs = new ArrayList<String>();
+  //private List<String> regionLabels = new ArrayList<String>();
 	private Set<String> abilities = new HashSet<String>();
-	private String myMobileFlag;
+	//private String myMobileFlag;
 	private String myProtocol;
 	private String myDescription;
 	private String myDatabase;
 
-	public Device(String name, String type, String networkAddress,
+	/*public Device(String name, String type, String networkAddress,
 			List<String> regionIDs, List<String> regionLabels,
 			Set<String> abilities, String mobileFlag, String protocol,
+			String deviceDescription, String database) */
+	
+	
+	public Device(String name, String type,
+			Set<String> abilities,  String protocol,
 			String deviceDescription, String database) {
 		this.name = name;
 
 		this.type = type;
-		this.networkAddress = networkAddress;
+		/*this.networkAddress = networkAddress;
 		this.regionIDs = regionIDs;
-		this.regionLabels = regionLabels;
+		this.regionLabels = regionLabels;*/
 		this.abilities = abilities;
-		this.myMobileFlag = mobileFlag;
+		//this.myMobileFlag = mobileFlag;
 		this.myProtocol = protocol;
 		this.myDescription = deviceDescription;
 		this.myDatabase = database;
@@ -64,7 +69,7 @@ public class Device implements Serializable {
 		return type;
 	}
 
-	public String getNetworkAddress() {
+	/*public String getNetworkAddress() {
 		return networkAddress;
 	}
 
@@ -78,15 +83,15 @@ public class Device implements Serializable {
 
 		// System.out.println("Value of region is"+regionIDs+"In Device.java file");
 		return regionIDs;
-	}
+	}*/
 
 	public Set<String> getAbilities() {
 		return abilities;
 	}
 
-	public String getMobileFlag() {
+	/*public String getMobileFlag() {
 		return myMobileFlag;
-	}
+	}*/
 
 	private String packageName;
 

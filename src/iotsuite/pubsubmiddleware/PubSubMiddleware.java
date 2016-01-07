@@ -2,7 +2,6 @@ package iotsuite.pubsubmiddleware;
 
 import java.util.HashSet;
 import java.util.Hashtable;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -28,10 +27,11 @@ public class PubSubMiddleware {
 		return singletonInstance;
 	}*/
 
-	public void subscribe(Subscriber s, String eventSignature,
-			List<String> regionInfo) {
-
-		registerNewSubscriber(s, eventSignature, regionInfo);
+	/*public void subscribe(Subscriber s, String eventSignature,
+			List<String> regionInfo) {*/
+	public void subscribe(Subscriber s, String eventSignature) {
+		//registerNewSubscriber(s, eventSignature, regionInfo);
+		registerNewSubscriber(s, eventSignature);
 	}
 
 	public void publish(String eventName, Object arg) {
@@ -71,9 +71,9 @@ public class PubSubMiddleware {
 		return subscriberMap.get(eventName);
 	}
 
-	private void registerNewSubscriber(Subscriber s, String eSig,
-			List<String> regionInfo) {
-
+	/*private void registerNewSubscriber(Subscriber s, String eSig,
+			List<String> regionInfo) {*/
+	private void registerNewSubscriber(Subscriber s, String eSig) {
 		/*if (regionSubscriber.containsKey(regionInfo)) {
 			Set<Subscriber> tempSet = regionSubscriber.get(regionInfo);
 			tempSet.add(s);
