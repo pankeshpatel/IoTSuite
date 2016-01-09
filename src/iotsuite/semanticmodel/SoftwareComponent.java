@@ -12,13 +12,16 @@ public abstract class SoftwareComponent<I extends Information> {
 	private String name;
 	private Set<I> generateInfo = new HashSet<I>();
 	private Set<I> consumeInfo = new HashSet<I>();
+	
+	private List<TempConsumeInfo> myTempConsumeInfo = new ArrayList<TempConsumeInfo>();
 
 	public SoftwareComponent(String name, Set<I> generateInfo,
-			Set<I> consumeInfo) {
+			Set<I> consumeInfo, List<TempConsumeInfo> tempConsumeInfo) {
 		super();
 		this.name = name;
 		this.generateInfo = generateInfo;
 		this.consumeInfo = consumeInfo;
+		this.myTempConsumeInfo = tempConsumeInfo;
 	}
 
 	public boolean isGeneratedInfo() {
@@ -57,6 +60,10 @@ public abstract class SoftwareComponent<I extends Information> {
 		ArrayList<I> allConsumedInfo = new ArrayList<I>();
 		allConsumedInfo.addAll(getConsumeInfo());
 		return allConsumedInfo;
+	}
+	
+	public List<TempConsumeInfo> getTempAllConsumeInfo() {
+		return myTempConsumeInfo;
 	}
 
 	/*

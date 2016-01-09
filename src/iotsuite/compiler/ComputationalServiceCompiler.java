@@ -12,6 +12,7 @@ import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Information;
 import iotsuite.semanticmodel.Parameter;
 import iotsuite.semanticmodel.StructField;
+import iotsuite.semanticmodel.TempConsumeInfo;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -30,8 +31,13 @@ public class ComputationalServiceCompiler {
 	private Parameter parameter;
 	private int sampleValue;
 	public static List<ConsumeInfo> consumeInfoForSensor;
+	public List<List<ConsumeInfo>> tempConsumeInfoForSensor= new ArrayList<List<ConsumeInfo>>();
 	public static List<ConsumeInfo> consumeInfoForStorage;
-	public static String consumeInfoName;
+	public static String consumeInfoName; 
+	public List<TempConsumeInfo> tempListofConsumeInfo = new ArrayList<TempConsumeInfo>();
+		String tempConsumeInfoType;
+		String tempConsumInfoStructFieldName;
+		String tempConsumInfoStructFieldType;
 
 	public static List<StructField> StructFieldSet = new ArrayList<StructField>();
 
@@ -66,16 +72,24 @@ public class ComputationalServiceCompiler {
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
 				getOperation(), getStructFieldSet(), getSampleValue(),
-				getConsumeInfoFieldForSensor(), getConsumeInfoFieldForStorage());
+				getConsumeInfoFieldForSensor(), getConsumeInfoFieldForStorage(),  getTempConsomeInfoForSensor() );
 	}
 
 	public List<ConsumeInfo> getConsumeInfoFieldForSensor() {
 
-		consumeInfoForSensor = iotsuite.parser.SymbolTable.consumeInfoForSensor
-				.get(consumeInfoName);
+		consumeInfoForSensor = iotsuite.parser.SymbolTable.consumeInfoForSensor.get(consumeInfoName);
 		return consumeInfoForSensor;
 
+	} 
+	
+	public List<TempConsumeInfo> getTempConsomeInfoForSensor(){
+		return tempListofConsumeInfo;
 	}
+	
+/*	public List<List<ConsumeInfo>> getListOfListConsumeInfoFieldForSensor(){
+		return tempConsumeInfoForSensor;
+
+	}*/
 
 	public List<ConsumeInfo> getConsumeInfoFieldForStorage() {
 
@@ -120,8 +134,16 @@ public class ComputationalServiceCompiler {
 	public void addConsumedInfo(String variableName) {
 
 		consumeInfoName = variableName;
-		consumedInfo.add(new Information(variableName, new DataType(
-				getDatafromSymblTable(variableName))));
+		consumedInfo.add(new Information(variableName, new DataType(getDatafromSymblTable(variableName)))); 
+		consumeInfoForSensor = iotsuite.parser.SymbolTable.consumeInfoForSensor.get(consumeInfoName); 
+		 tempConsumeInfoForSensor.add(consumeInfoForSensor); 
+		 
+		 tempConsumeInfoType = consumeInfoForSensor.get(0).getConsumeInfoType();		 
+		tempListofConsumeInfo.add(new TempConsumeInfo(variableName, tempConsumeInfoType, consumeInfoForSensor ));
+
+		 
+		 
+
 	}
 
 	public String getDatafromSymblTable(String variableName) {

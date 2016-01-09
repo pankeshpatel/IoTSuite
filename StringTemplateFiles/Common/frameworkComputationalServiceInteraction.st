@@ -66,27 +66,32 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         public void notifyReceived(String eventName, Object arg) { 
         try {	
         
-         $CS.allConsumedInfo:{ consumedInfo | 
-             if (eventName.equals("$consumedInfo.name$"))  
+        
+        $CS.tempAllConsumeInfo:{ consumedInfo | 
+             if (eventName.equals("$consumedInfo.TempConsumeInfoName$"))  
             { 
            Logger.log(myDeviceInfo.getName(),"$CS.name$",
-            "Notification Received $consumedInfo.name$");
+            "Notification Received $consumedInfo.TempConsumeInfoName$");
             JsonObject jsonObject = new JsonParser().parse(arg.toString()).getAsJsonObject();
-            $CS.allConsumeInfoFields:{ consumeInfoField |
+            
+             $consumedInfo.TempListOfSingleConsumeInfo:{ consumeInfoField |
           
             $consumeInfoField.consumeInfoStructFieldType$ $consumeInfoField.consumeInfoStructField$  =jsonObject.get("$consumeInfoField.consumeInfoStructField$").getAs$consumeInfoField.consumeInfoStructFieldType;format="capital"$();
           
-          }; separator="\n"$ 
+          }; separator="\n"$  
           
-          $consumedInfo.type$ $consumedInfo.type;format="avoidCapital"$ = new $consumedInfo.type$(
-           $CS.allConsumeInfoFields:{ consumeInfoField |
+           $consumedInfo.TempConsumeInfoType$ $consumedInfo.TempConsumeInfoType;format="avoidCapital"$ = new $consumedInfo.TempConsumeInfoType$(
+           $consumedInfo.TempListOfSingleConsumeInfo:{ consumeInfoField |
            $consumeInfoField.consumeInfoStructField$
           }; separator=","$); 
-           onNew$consumedInfo.name$(($consumedInfo.type$) $consumedInfo.type;format="avoidCapital"$); 
+           onNew$consumedInfo.TempConsumeInfoName$(($consumedInfo.TempConsumeInfoType$) $consumedInfo.TempConsumeInfoType;format="avoidCapital"$); 
+          
            
-         //  onNew$consumedInfo.name; format="capital"$Received(($CS.allConsumedInfo:{ consumedInfo | $consumedInfo.type$}$) arg);
         }
-        }$  
+        }$       
+        
+        
+    
           
          $CS.allDataAccess:{ dataAccess |
         if (eventName.equals("$dataAccess.dataAccessName; format="avoidCapital"$")) {

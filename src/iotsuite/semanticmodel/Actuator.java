@@ -15,7 +15,7 @@ public class Actuator extends SoftwareComponent<Information> {
 	public Actuator(String name, Set<Action> actionsList,
 			Set<Information> generateInfo, Set<Information> consumeInfo,
 			List<String> fieldName) {
-		super(name, generateInfo, consumeInfo);
+		super(name, generateInfo, consumeInfo, null);
 		this.actions = actionsList;
 		Actuator.fieldName = fieldName;
 

@@ -29,7 +29,7 @@ public class Storage extends SoftwareComponent {
 			List<String> structFieldName, Set<Action> actionsList,
 			List<String> actionStructFieldName) {
 
-		super(name, null, null);
+		super(name, null, null, null);
 		this.dataAccess = dataAccess;
 		this.fieldWithSQL = fieldwithSQL;
 		this.fieldName = fieldName;

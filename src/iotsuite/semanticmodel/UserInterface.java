@@ -39,7 +39,7 @@ public class UserInterface extends SoftwareComponent<Information> {
 
 		// super(name, generateInfo, consumeInfo, "NoInstance");
 
-		super(name, generateInfo, consumeInfo);
+		super(name, generateInfo, consumeInfo, null);
 		this.lowername = lowername;
 		this.commands = commandsList;
 		this.dataAccess = dataAccess;

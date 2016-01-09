@@ -30,7 +30,7 @@ public class Sensor extends SoftwareComponent<SensorMeasurement> {
 			List<StructField> eventDrivenField, List<StructField> periodicField) {
 
 		// super(name, generateInfo, consumeInfo, "NoInstance");
-		super(name, generateInfo, consumeInfo);
+		super(name, generateInfo, consumeInfo, null);
 		// Sensor.eventDrivenFieldName = eventDrivenFieldName;
 		Sensor.eventDrivenField = eventDrivenField;
 		Sensor.periodicField = periodicField;

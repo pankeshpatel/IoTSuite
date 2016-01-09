@@ -174,6 +174,9 @@ public class SensorCompiler {
 	public void generateTagCode() {
 		generateSensorInteraction_SensorCompiler();
 		
+		if (GlobalVariable.activity
+				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
+		
 		if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 			generateJavaSESensorLogic_SensorCompiler();
 			generateJavaSESensorFactory_SensorCompiler();
@@ -192,7 +195,7 @@ public class SensorCompiler {
 			generateSensorListener_SensorCompiler(sensorDriver
 					.getAllGeneratedInfo().get(i));
 		}
-
+		}
 		
 	}
 
