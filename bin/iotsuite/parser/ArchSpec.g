@@ -132,6 +132,7 @@ csGeneratedInfoForAggregator_def:
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     context.constructAggregatorSymblTable($CAPITALIZED_ID.text);
      context.constructGUISymblTable($lc_id.text, $CAPITALIZED_ID.text);   
+      context.constructConsumeInfoSymblTable($lc_id.text, $CAPITALIZED_ID.text);
     }
 ;
 
@@ -141,6 +142,8 @@ csGeneratedInfo_def:
     { context.currentComputationalService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     context.constructGUISymblTable($lc_id.text, $CAPITALIZED_ID.text);
+     context.constructConsumeInfoSymblTable($lc_id.text, $CAPITALIZED_ID.text); 
+    
      }
 ;
   

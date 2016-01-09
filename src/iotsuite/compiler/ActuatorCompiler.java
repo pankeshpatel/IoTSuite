@@ -63,16 +63,14 @@ public class ActuatorCompiler {
 				generateJavaSEActuatorLogic_ActuatorCompiler();
 				generateJavaSEActuatorFactory_ActuatorCompiler();
 				generateJavaSEActuator_ActuatorCompiler();
-				
+
 			}
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
 				generateAndroidActuatorLogic_ActuatorCompiler();
 				generateAndroidActuatorFactory_ActuatorCompiler();
 				generateActuatorAndroid_ActuatorCompiler();
 			}
-			
-			
-			
+
 			generateActuatorInterface_ActuatorCompiler();
 		}
 	}
@@ -93,8 +91,6 @@ public class ActuatorCompiler {
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 	}
-
-	
 
 	private void generateActuatorAndroid_ActuatorCompiler() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();

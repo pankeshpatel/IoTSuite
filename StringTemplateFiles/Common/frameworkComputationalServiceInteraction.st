@@ -71,8 +71,18 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
             { 
            Logger.log(myDeviceInfo.getName(),"$CS.name$",
             "Notification Received $consumedInfo.name$");
+            JsonObject jsonObject = new JsonParser().parse(arg.toString()).getAsJsonObject();
+            $CS.allConsumeInfoFields:{ consumeInfoField |
           
-           onNew$consumedInfo.name$(($consumedInfo.type$) arg); 
+            $consumeInfoField.consumeInfoStructFieldType$ $consumeInfoField.consumeInfoStructField$  =jsonObject.get("$consumeInfoField.consumeInfoStructField$").getAs$consumeInfoField.consumeInfoStructFieldType;format="capital"$();
+          
+          }; separator="\n"$ 
+          
+          $consumedInfo.type$ $consumedInfo.type;format="avoidCapital"$ = new $consumedInfo.type$(
+           $CS.allConsumeInfoFields:{ consumeInfoField |
+           $consumeInfoField.consumeInfoStructField$
+          }; separator=","$); 
+           onNew$consumedInfo.name$(($consumedInfo.type$) $consumedInfo.type;format="avoidCapital"$); 
            
          //  onNew$consumedInfo.name; format="capital"$Received(($CS.allConsumedInfo:{ consumedInfo | $consumedInfo.type$}$) arg);
         }
@@ -82,8 +92,21 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         if (eventName.equals("$dataAccess.dataAccessName; format="avoidCapital"$")) {
         Logger.log(myDeviceInfo.getName(), "Proximity",
             "Notification Received Profile");
-
-        onNew$dataAccess.dataAccessName; format="avoidCapital"$Received(( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}; separator="\n"$) arg);
+             JsonObject jsonObject = new JsonParser().parse(arg.toString()).getAsJsonObject();
+              $CS.allConsumeInfoFieldsForStorage:{ consumeInfoFieldForStorage |
+          
+            $consumeInfoFieldForStorage.consumeInfoStructFieldType$ $consumeInfoFieldForStorage.consumeInfoStructField$  =jsonObject.get("$consumeInfoFieldForStorage.consumeInfoStructField$").getAs$consumeInfoFieldForStorage.consumeInfoStructFieldType;format="capital"$();
+          
+          }; separator="\n"$ 
+          
+         $CS.allGeneratedInfo:{ generatedInfo |
+         
+         $generatedInfo.type$ $generatedInfo.type;format="avoidCapital"$ = new $generatedInfo.type$( $CS.allConsumeInfoFieldsForStorage:{ consumeInfoFieldForStorage |
+         $consumeInfoFieldForStorage.consumeInfoStructField$};separator=","$
+         );
+         };separator="\n"$
+          
+        onNew$dataAccess.dataAccessName; format="avoidCapital"$Received( $CS.allGeneratedInfo:{ generatedInfo |($generatedInfo.type$) $generatedInfo.type;format="avoidCapital"$};separator="\n"$);
        }
         }$        
         
@@ -112,9 +135,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 		    
 		public abstract void onNew$dataAccess.dataAccessName; format="avoidCapital"$Received($CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}$  arg);	   		
 	   	public void subscribe$dataAccess.dataAccessName; format="capital"$() {
-	   		    
-	   	
-					
+	  			
 			 /* List<String> regionInfo = new ArrayList<String>(); 
 			regionInfo.add("*"); */ 					
 		    this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="avoidCapital"$");

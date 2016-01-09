@@ -6,6 +6,7 @@ import iotsuite.codegenerator.SourceFileDumper;
 import iotsuite.common.GlobalVariable;
 import iotsuite.parser.SymbolTable;
 import iotsuite.semanticmodel.Action;
+import iotsuite.semanticmodel.ConsumeInfo;
 import iotsuite.semanticmodel.DataAccess;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Information;
@@ -18,7 +19,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-
 import java.util.Set;
 
 public class StorageCompiler {
@@ -37,13 +37,14 @@ public class StorageCompiler {
 	HashMap<String, String> SQLtype = new HashMap<String, String>();
 	private Set<Action> storageActionList = new HashSet<Action>();
 	private Parameter actionParameter;
+	public static List<ConsumeInfo> consumeInfoForStorage;
 
 	public StorageCompiler() {
 
 	}
 
-	public void createStorageObject() {		
-		
+	public void createStorageObject() {
+
 		storageService = new Storage(getStorageServiceName(),
 				getDataAccessList(), null, getAllFieldName(),
 				getAllFieldSQLvariable(), getStructField(),
@@ -137,6 +138,9 @@ public class StorageCompiler {
 	}
 
 	public void addGeneratedInfo(String variableName, String variableType) {
+
+		consumeInfoForStorage = iotsuite.parser.SymbolTable.consumeInfoForSensor
+				.get(variableName);
 		generatedInfo = new Information(variableName,
 				new DataType(variableType));
 	}

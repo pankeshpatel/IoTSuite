@@ -15,8 +15,8 @@ softwareComponents:
 			  consume tempPref from Proximity;
 			  command SetTemp(setTemp) to Heater;   
 		  FireState
-			  consume roomAvgTempMeasurement from AvgTemp;
-			  consume smokeMeasurement from SmokeDetector;
+		      consume roomAvgTempMeasurement from AvgTemp;
+		      consume smokeMeasurement from SmokeDetector;
 			  generate smokeValue:SmokeStruct;
 			FireController
 			  consume smokeValue from FireState;

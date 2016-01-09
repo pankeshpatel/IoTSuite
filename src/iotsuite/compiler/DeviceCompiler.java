@@ -29,15 +29,15 @@ public class DeviceCompiler {
 	}
 
 	public void addDeviceObj() {
-		/*device = new Device(getDeviceName(), getDeviceType(),
-				getNetworkAddress(), getRegionValues(), getRegionLabel(),
-				deviceAbilities, getMobileFlag(), getProtocol(),
-				getDeviceDescription(), getDataBase());*/
-		
-		
-		device = new Device(getDeviceName(), getDeviceType(),
-				deviceAbilities, getProtocol(),
-				getDeviceDescription(), getDataBase());
+		/*
+		 * device = new Device(getDeviceName(), getDeviceType(),
+		 * getNetworkAddress(), getRegionValues(), getRegionLabel(),
+		 * deviceAbilities, getMobileFlag(), getProtocol(),
+		 * getDeviceDescription(), getDataBase());
+		 */
+
+		device = new Device(getDeviceName(), getDeviceType(), deviceAbilities,
+				getProtocol(), getDeviceDescription(), getDataBase());
 		SymbolTable.addDeviceinSymblTable(device);
 	}
 

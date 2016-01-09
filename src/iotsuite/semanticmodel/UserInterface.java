@@ -1,6 +1,7 @@
 package iotsuite.semanticmodel;
 
 import iotsuite.common.GlobalVariable;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -33,7 +34,8 @@ public class UserInterface extends SoftwareComponent<Information> {
 			Set<Information> generateInfo, Set<Information> consumeInfo,
 			Set<DataAccess> dataAccess, String struct, Widget reqWidgets,
 			List<StructField> fields, List<StructField> fieldForNotify,
-			List<String> notifyMeasurement, List<String> notifyStructName,String notifyFrom) {
+			List<String> notifyMeasurement, List<String> notifyStructName,
+			String notifyFrom) {
 
 		// super(name, generateInfo, consumeInfo, "NoInstance");
 
@@ -46,14 +48,13 @@ public class UserInterface extends SoftwareComponent<Information> {
 		this.fieldsForNotify = fieldForNotify;
 		this.notifyMeasurement = notifyMeasurement;
 		this.notifyStructName = notifyStructName;
-		this.notifyFrom=notifyFrom;
+		this.notifyFrom = notifyFrom;
 	}
 
-	
-	public String getNotifyFrom(){
+	public String getNotifyFrom() {
 		return UserInterface.notifyFrom;
 	}
-	
+
 	public List<String> getAllNotifyMeasurement() {
 
 		return notifyMeasurement;

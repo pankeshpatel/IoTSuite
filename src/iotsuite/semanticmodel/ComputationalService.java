@@ -16,10 +16,16 @@ public class ComputationalService extends SoftwareComponent<Information> {
 	public List<StructField> fields = new ArrayList<StructField>();
 	public static int sampleValue;
 
+	// Following structure is used to store consumeInfoField for Sensor
+	public static List<ConsumeInfo> consumeInfoField;
+	// Following structure is used to store consumeInfoField for Storage
+	public static List<ConsumeInfo> consumeInfoFieldForStorage;
+
 	public ComputationalService(String name, Set<Information> generateInfo,
 			Set<Information> consumeInfo, Set<DataAccess> dataAccess,
 			Set<Action> actions, String operation, List<StructField> fields,
-			int sampleValue) {
+			int sampleValue, List<ConsumeInfo> consumeInfoFieldForSensor,
+			List<ConsumeInfo> consumeInfoForStorage) {
 
 		super(name, generateInfo, consumeInfo);
 		this.dataAccess = dataAccess;
@@ -27,6 +33,8 @@ public class ComputationalService extends SoftwareComponent<Information> {
 		this.operatation = operation;
 		this.fields = fields;
 		ComputationalService.sampleValue = sampleValue;
+		ComputationalService.consumeInfoField = consumeInfoFieldForSensor;
+		ComputationalService.consumeInfoFieldForStorage = consumeInfoForStorage;
 	}
 
 	public List<StructField> getFields() {
@@ -37,6 +45,26 @@ public class ComputationalService extends SoftwareComponent<Information> {
 		ArrayList<StructField> allStructFields = new ArrayList<StructField>();
 		allStructFields.addAll(getFields());
 		return allStructFields;
+	}
+
+	public List<ConsumeInfo> getConsumeInfoFields() {
+		return consumeInfoField;
+	}
+
+	public List<ConsumeInfo> getAllConsumeInfoFields() {
+		ArrayList<ConsumeInfo> allConsumeInfoFields = new ArrayList<ConsumeInfo>();
+		allConsumeInfoFields.addAll(getConsumeInfoFields());
+		return allConsumeInfoFields;
+	}
+
+	public List<ConsumeInfo> getConsumeInfoFieldsForStorage() {
+		return consumeInfoFieldForStorage;
+	}
+
+	public List<ConsumeInfo> getAllConsumeInfoFieldsForStorage() {
+		ArrayList<ConsumeInfo> allConsumeInfoFields = new ArrayList<ConsumeInfo>();
+		allConsumeInfoFields.addAll(getConsumeInfoFieldsForStorage());
+		return allConsumeInfoFields;
 	}
 
 	public String getOperation() {

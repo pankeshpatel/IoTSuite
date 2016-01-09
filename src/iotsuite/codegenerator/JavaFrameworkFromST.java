@@ -49,6 +49,23 @@ public class JavaFrameworkFromST {
 				+ sensorDriver.getName() + ".java", templateOfSensorDriver,
 				"JavaSESensorImpl", "sensor", sensorDriver);
 	}
+	
+	
+	// JavaSE Tag Impl
+		public CompilationUnit generateJavaSETagImpl(
+				Sensor sensorDriver) {
+			StringTemplate templateOfSensorDriver = group
+					.getInstanceOf("JavaSE/implTagJavaSE");
+			templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
+
+			templateOfSensorDriver.registerRenderer(String.class,
+					new MyAttributeRenderer());
+
+			return new CompilationUnit(GlobalVariable.JAVASE_ENABLED_DEVICES
+					+ sensorDriver.getName() + ".java", templateOfSensorDriver,
+					"JavaSESensorImpl", "sensor", sensorDriver);
+		}
+	
 
 	public CompilationUnit generateComputationalServiceFactory(
 			ComputationalService computationalService) {
@@ -160,8 +177,6 @@ public class JavaFrameworkFromST {
 				+ actuatorDriver.getName() + ".java", templateOfActuatorDriver,
 				"JavaSEActuatorImpl", "actuator", actuatorDriver);
 	}
-
-	
 
 	// JavaSE Actuator Factory
 	public CompilationUnit generateJavaSEActuatorFactory(Actuator actuatorDriver) {
@@ -309,8 +324,7 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java",
 				templateOfGUIDriver, "AndroidGuiFactory", "gui", guiDriver);
 	}
-	
-	
+
 	// Android Periodic Sensor
 	public CompilationUnit generateAndroidPeriodicSensorImpl(Sensor sensorDriver) {
 		StringTemplate templateOfSensorDriver = group
@@ -403,7 +417,6 @@ public class JavaFrameworkFromST {
 	 * Common code - start
 	 */
 
-	
 	// User interface
 	public CompilationUnit generateJavaSEUserInterfaceLogic(
 			UserInterface guiDriver) {
@@ -432,8 +445,6 @@ public class JavaFrameworkFromST {
 				templateOfGUIDriver, "AndroidGuiLogic", "gui", guiDriver);
 	}
 
-	
-	
 	// For generating listener for GUI.
 	public CompilationUnit generateUserInterfaceListener(UserInterface guiDriver) {
 		StringTemplate templateOfGUIDriver = group
@@ -446,44 +457,36 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit("Listener" + guiDriver.getName() + ".java",
 				templateOfGUIDriver, "Listener", "gui", guiDriver);
 	}
-	
-	
-	
-	
-	
 
-	
 	// Node.js
-		public CompilationUnit generateVisualization_Server(UserInterface guiDriver) {
-			StringTemplate templateOfGUIDriver = group
-					.getInstanceOf("JavaSE/server");
-			templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+	public CompilationUnit generateVisualization_Server(UserInterface guiDriver) {
+		StringTemplate templateOfGUIDriver = group
+				.getInstanceOf("JavaSE/server");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 
-			templateOfGUIDriver.registerRenderer(String.class,
-					new MyAttributeRenderer());
+		templateOfGUIDriver.registerRenderer(String.class,
+				new MyAttributeRenderer());
 
-			return new CompilationUnit("server" + ".js", templateOfGUIDriver,
+		return new CompilationUnit("server" + ".js", templateOfGUIDriver,
 
-					"server", "gui", guiDriver);
+		"server", "gui", guiDriver);
 
-				
+	}
 
-		}
+	// Client
+	public CompilationUnit generateVisualization_Client(UserInterface guiDriver) {
+		StringTemplate templateOfGUIDriver = group
+				.getInstanceOf("JavaSE/client");
 
-		// Client
-		public CompilationUnit generateVisualization_Client(UserInterface guiDriver) {
-			StringTemplate templateOfGUIDriver = group
-					.getInstanceOf("JavaSE/client");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 
-			templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		templateOfGUIDriver.registerRenderer(String.class,
+				new MyAttributeRenderer());
 
-			templateOfGUIDriver.registerRenderer(String.class,
-					new MyAttributeRenderer());
+		return new CompilationUnit("client" + ".html",
 
-			return new CompilationUnit("client" + ".html",
-
-					templateOfGUIDriver, "client", "gui", guiDriver);
-		}
+		templateOfGUIDriver, "client", "gui", guiDriver);
+	}
 
 	// ComputationalService
 	public CompilationUnit generateAggregatorComputationalServiceLogic(
@@ -560,7 +563,6 @@ public class JavaFrameworkFromST {
 				templateOfGUIDriver, "Interface", "gui", guiDriver);
 	}
 
-	
 	public CompilationUnit generateSensorListener(
 			SensorMeasurement sensorMeasurement) {
 		StringTemplate templateOfSensorDriver = group

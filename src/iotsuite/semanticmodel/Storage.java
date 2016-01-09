@@ -16,10 +16,11 @@ public class Storage extends SoftwareComponent {
 	public List<StructField> structField = new ArrayList<StructField>();
 	private Set<Action> actions = new HashSet<Action>();
 	public List<String> actionStructFieldName = new ArrayList<String>();
-
 	public String databaseName = "iotsuiteuser";
-
 	public String id;
+	// Following structure is used to store fieldName,fieldType and StructName
+	// (ex- TempStruct,tempValue and double)
+	public static List<ConsumeInfo> consumeInfoFieldsForStorage;
 
 	@SuppressWarnings("unchecked")
 	public Storage(String name, Set<DataAccess> dataAccess,
@@ -37,6 +38,17 @@ public class Storage extends SoftwareComponent {
 		this.actions = actionsList;
 		this.actionStructFieldName = actionStructFieldName;
 
+	}
+
+	public List<ConsumeInfo> getConsumeInfoFieldsForSensor() {
+		consumeInfoFieldsForStorage = iotsuite.compiler.StorageCompiler.consumeInfoForStorage;
+		return consumeInfoFieldsForStorage;
+	}
+
+	public List<ConsumeInfo> getAllConsumeInfoFieldsForSensors() {
+		ArrayList<ConsumeInfo> allConsumeInfoFields = new ArrayList<ConsumeInfo>();
+		allConsumeInfoFields.addAll(getConsumeInfoFieldsForSensor());
+		return allConsumeInfoFields;
 	}
 
 	public Set<Action> getActions() {

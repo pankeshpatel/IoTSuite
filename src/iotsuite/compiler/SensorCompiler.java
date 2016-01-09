@@ -4,6 +4,7 @@ import iotsuite.codegenerator.CompilationUnit;
 import iotsuite.codegenerator.JavaFrameworkFromST;
 import iotsuite.codegenerator.SourceFileDumper;
 import iotsuite.common.GlobalVariable;
+import iotsuite.semanticmodel.ConsumeInfo;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Sensor;
 import iotsuite.semanticmodel.SensorMeasurement;
@@ -20,30 +21,44 @@ public class SensorCompiler {
 	private Set<SensorMeasurement> generatedInfo = new HashSet<SensorMeasurement>();
 	private List<StructField> eventDrivenField = new ArrayList<StructField>();
 	private List<StructField> periodicField = new ArrayList<StructField>();
-	//public static List<String> eventDrivenFieldName;
+	// public static List<String> eventDrivenFieldName;
 	public static String samplePeriod;
 	public static String sampleDuration;
+	public static String expressionValue;
+	public static List<ConsumeInfo> consumeInfoForSensor;
+
+	// public static String measurementName;
 
 	public SensorCompiler() {
 	}
 
 	public SensorCompiler(String sensorName) {
-		sensorDriver = new Sensor(sensorName, getGeneratedInfo(), null, getEventDrivenFields(),getPeriodicFields());
+		sensorDriver = new Sensor(sensorName, getGeneratedInfo(), null,
+				getEventDrivenFields(), getPeriodicFields());
 	}
 
-	/*private List<String> getEventDrivenFieldName() {
-		return eventDrivenFieldName;
-	}*/
+	/*
+	 * private List<String> getEventDrivenFieldName() { return
+	 * eventDrivenFieldName; }
+	 */
 
-	private  List<StructField> getEventDrivenFields() {
-		this.eventDrivenField=iotsuite.parser.SymbolTable.StructFieldSetForEventDriven;
+	private List<StructField> getEventDrivenFields() {
+		this.eventDrivenField = iotsuite.parser.SymbolTable.StructFieldSetForEventDriven;
 		return eventDrivenField;
 	}
 
-	private  List<StructField> getPeriodicFields() {
-		this.periodicField=iotsuite.parser.SymbolTable.StructFieldSetForPeriodic;
+	private List<StructField> getPeriodicFields() {
+		this.periodicField = iotsuite.parser.SymbolTable.StructFieldSetForPeriodic;
 		return periodicField;
 	}
+
+	/*
+	 * public List<ConsumeInfo> getConsumeInfoFiledsForSensors(){
+	 * consumeInfoForSensor
+	 * =iotsuite.parser.SymbolTable.consumeInfoForSensor.get(measurementName);
+	 * return consumeInfoForSensor; }
+	 */
+
 	// Getter and Setter of GeneratedInfo
 	public Set<SensorMeasurement> getGeneratedInfo() {
 		return generatedInfo;
@@ -51,7 +66,8 @@ public class SensorCompiler {
 
 	public void addSensorMeasurement(String measurementName,
 			String measurementStruct, StructCompiler struct) {
-
+		consumeInfoForSensor = iotsuite.parser.SymbolTable.consumeInfoForSensor
+				.get(measurementName);
 		SensorMeasurement sensorMeasurement = new SensorMeasurement(
 				measurementName, new DataType(measurementStruct), struct);
 		generatedInfo.add(sensorMeasurement);
@@ -67,6 +83,13 @@ public class SensorCompiler {
 	public void addSensorMeasurementSampleDuration(String sampleDuration) {
 
 		SensorCompiler.sampleDuration = sampleDuration;
+	}
+
+	// Following method is for Event Driven Expression
+	public void addEventDrivenExpression(String expressionName) {
+
+		SensorCompiler.expressionValue = expressionName;
+
 	}
 
 	// This function will generate code for Periodic Sensor
@@ -126,7 +149,9 @@ public class SensorCompiler {
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 				generateJavaSESensorLogic_SensorCompiler();
 				generateJavaSESensorFactory_SensorCompiler();
+				//generateJavaSE_TagCompiler();
 				generateSensorJavaSE_EventDrivenSensorCompiler();
+				
 			}
 
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
@@ -143,6 +168,32 @@ public class SensorCompiler {
 
 		}
 
+	}
+	
+	// Generate Code for Tag 
+	public void generateTagCode() {
+		generateSensorInteraction_SensorCompiler();
+		
+		if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
+			generateJavaSESensorLogic_SensorCompiler();
+			generateJavaSESensorFactory_SensorCompiler();
+			generateJavaSE_TagCompiler();
+			
+		}
+
+		if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
+			generateAndroidSensorLogic_SensorCompiler();
+			generateAndroidSensorFactory_SensorCompiler();
+			generateSensorAndroid_EventDrivenSensorCompiler();
+
+		}
+		generateSensorInterface_SensorCompiler();
+		for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
+			generateSensorListener_SensorCompiler(sensorDriver
+					.getAllGeneratedInfo().get(i));
+		}
+
+		
 	}
 
 	// Sensor's Interaction
@@ -209,6 +260,18 @@ public class SensorCompiler {
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}
 
+	
+	// For Tag
+	
+	private void generateJavaSE_TagCompiler() {
+		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
+		CompilationUnit generateCU = generateSensorImplFactory
+				.generateJavaSETagImpl(sensorDriver);
+		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
+		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
+	}
+
+	
 	private void generateSensorAndroid_PeriodicSensorCompiler() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorImplFactory
@@ -242,7 +305,6 @@ public class SensorCompiler {
 		dumpGeneratedSensorListener.dumpCompilationUnit(generateCU);
 	}
 
-	
 	
 
 }

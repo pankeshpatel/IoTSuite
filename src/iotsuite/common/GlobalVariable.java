@@ -28,20 +28,20 @@ public class GlobalVariable {
 
 	public static final String JAVASE_ENABLED_DEVICES = "JavaSE";
 	public static final String ANDROID_ENABLED_DEVICES = "Android";
-	public static final String NODEJS_ENABLED_DEVICES="NodeJS";
+	public static final String NODEJS_ENABLED_DEVICES = "NodeJS";
 
 	public static final boolean ENABLE_JAVASE_CODE_GENERATATION = true;
 	// Set false, if you do not want to generate JavaSE code
 
 	public static final boolean ENABLE_ANDROID_CODE_GENERATION = true;
 	// Set true, if you want to generate Android code
-	
+
 	public static final boolean ENABLE_NodeJS_CODE_GENERATION = true;
 	// Set true, if you want to generate NOde.js code
-	
+
 	public static final boolean DEVELOPMENT_METHODOLOGY = true;
 	// set "yes" if you want to use development methodology
-	
+
 	// Following is for End User Interaction
 	public static final String USER_INTERACTION_DASHBOARD = "DashBoard";
 	public static final String USER_INTERACTION_ENDUSERAPP = "EndUserApp";

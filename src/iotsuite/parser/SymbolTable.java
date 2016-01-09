@@ -9,6 +9,7 @@ import iotsuite.compiler.MapperCompiler;
 import iotsuite.compiler.SensorCompiler;
 import iotsuite.compiler.StorageCompiler;
 import iotsuite.compiler.StructCompiler;
+import iotsuite.semanticmodel.ConsumeInfo;
 import iotsuite.semanticmodel.DataAccess;
 import iotsuite.semanticmodel.DeploymentScope;
 import iotsuite.semanticmodel.Device;
@@ -82,6 +83,12 @@ public class SymbolTable {
 	 * arrayFieldType = new String[10][2];
 	 */
 
+	// HasMap for ConsumeInfo
+	public static Map<String, List<ConsumeInfo>> consumeInfoForSensor = new HashMap<String, List<ConsumeInfo>>();
+	// public static List<ConsumeInfo> consumeInfo = new
+	// ArrayList<ConsumeInfo>();
+	// static ConsumeInfo consumeInfoFields;
+
 	static String[][] arrayFieldName = new String[200][200];
 	static String[][] arrayFieldType = new String[200][200];
 	public static int rowCount = 0;
@@ -104,8 +111,8 @@ public class SymbolTable {
 	}
 
 	public static void constructDataAccessSymblTable(String dataAccessKey,
-			Set<DataAccess> dataAccessObj) {		
-		
+			Set<DataAccess> dataAccessObj) {
+
 		dataAccessSymblTable.put(dataAccessKey, dataAccessObj);
 
 	}
@@ -193,10 +200,49 @@ public class SymbolTable {
 	public void constructEventDrivenSymblTable(String eventDrivenStructName) {
 		searchForEventDrivenSensorFields(eventDrivenStructName);
 	}
-	
+
 	public void constructPeriodicSymbltable(String periodicStructName) {
 		searchForPeriodicSensorFields(periodicStructName);
-		
+
+	}
+
+	public void constructConsumeInfoSymblTable(String consumeInfoName,
+			String consumeInfoType) {
+
+		for (int i = 0; i < 10; i++) {
+
+			if (arrayFieldName[i][0] != null) {
+				if (arrayFieldName[i][0].equals(consumeInfoType))
+
+				{
+
+					if (consumeInfoForSensor.containsKey(consumeInfoName)) {
+						List<ConsumeInfo> consumeInfo = consumeInfoForSensor
+								.get(consumeInfoName);
+						ConsumeInfo consumeInfoFields = new ConsumeInfo(
+								consumeInfoType, arrayFieldName[i][1],
+								arrayFieldType[i][1]);
+						consumeInfo.add(consumeInfoFields);
+						consumeInfoForSensor.put(consumeInfoName, consumeInfo);
+						// System.out.println("consumeInfo.....Map..."+consumeInfoForSensor);
+
+					} else {
+						ConsumeInfo consumeInfoFields = new ConsumeInfo(
+								consumeInfoType, arrayFieldName[i][1],
+								arrayFieldType[i][1]);
+						List<ConsumeInfo> consumeInfo = new ArrayList<ConsumeInfo>();
+						consumeInfo.add(consumeInfoFields);
+						// System.out.println("consume Info List is..."+consumeInfoFields);
+						consumeInfoForSensor.put(consumeInfoName, consumeInfo);
+						// System.out.println("consumeInfo.....Map..."+consumeInfoForPeriodicSensor);
+
+					}
+
+				}
+			}
+
+		}
+
 	}
 
 	private void insertFieldType(String structName, String fieldType) {
@@ -235,15 +281,15 @@ public class SymbolTable {
 
 						if (!eventDrivenFieldName.contains(tempEventFieldName
 								.get(j))) {
-							
-							
+
 							eventDrivenFieldName.add(arrayFieldName[i][1]);
-							FieldForEventDriven = new StructField(arrayFieldName[i][1],
-									new PrimitiveType(arrayFieldType[i][1]));
-							
-							StructFieldSetForEventDriven.add(FieldForEventDriven);
-							
-							
+							FieldForEventDriven = new StructField(
+									arrayFieldName[i][1], new PrimitiveType(
+											arrayFieldType[i][1]));
+
+							StructFieldSetForEventDriven
+									.add(FieldForEventDriven);
+
 						}
 					}
 				}
@@ -251,10 +297,8 @@ public class SymbolTable {
 
 		}
 	}
-	
-	
-	
-	public static void  searchForPeriodicSensorFields(String periodicStructName){
+
+	public static void searchForPeriodicSensorFields(String periodicStructName) {
 		List<String> tempPeriodicFieldName = new ArrayList<String>();
 		for (int i = 0; i < 10; i++) {
 
@@ -267,15 +311,14 @@ public class SymbolTable {
 
 						if (!periodicFieldName.contains(tempPeriodicFieldName
 								.get(j))) {
-							
-							
+
 							periodicFieldName.add(arrayFieldName[i][1]);
-							FieldForPeriodic = new StructField(arrayFieldName[i][1],
-									new PrimitiveType(arrayFieldType[i][1]));
-							
+							FieldForPeriodic = new StructField(
+									arrayFieldName[i][1], new PrimitiveType(
+											arrayFieldType[i][1]));
+
 							StructFieldSetForPeriodic.add(FieldForPeriodic);
-							
-							
+
 						}
 					}
 				}
@@ -283,7 +326,6 @@ public class SymbolTable {
 
 		}
 	}
-	
 
 	private static void searchStructFieldNameForAggregator(
 			String aggregatorStructName) {
@@ -296,8 +338,7 @@ public class SymbolTable {
 							new PrimitiveType(arrayFieldType[i][1]));
 
 					StructFieldSet.add(Field);
-					
-					
+
 				}
 			}
 		}
@@ -320,39 +361,34 @@ public class SymbolTable {
 
 	}
 
-	
-	
-
-	
-	
 	public static void searchStructFieldNameForNotifyGUI(
 			String notifyGUIStructName) {
 		List<String> tempEventFieldName = new ArrayList<String>();
 		for (int i = 0; i < 10; i++) {
 			if (arrayFieldName[i][0] != null) {
 				if (arrayFieldName[i][0].equals(notifyGUIStructName)) {
-					
+
 					tempEventFieldName.add(arrayFieldName[i][1]);
 					for (int j = 0; j < tempEventFieldName.size(); j++) {
-						
+
 						if (!eventDrivenFieldName.contains(tempEventFieldName
 								.get(j))) {
-							
+
 							eventDrivenFieldName.add(arrayFieldName[i][1]);
-					FieldForGUINotify = new StructField(arrayFieldName[i][1],
-							new PrimitiveType(arrayFieldType[i][1]));
+							FieldForGUINotify = new StructField(
+									arrayFieldName[i][1], new PrimitiveType(
+											arrayFieldType[i][1]));
 
-					StructFieldSetForGUINotify.add(FieldForGUINotify);
+							StructFieldSetForGUINotify.add(FieldForGUINotify);
 
+						}
+
+					}
 				}
 
 			}
 		}
-			
 	}
-		}
-	}
-
 
 	private void searchForActuatorFields() {
 		for (int i = 0; i < 10; i++) {
@@ -426,7 +462,5 @@ public class SymbolTable {
 	public SymbolTable() {
 
 	}
-
-	
 
 }

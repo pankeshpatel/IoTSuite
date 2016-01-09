@@ -1,7 +1,7 @@
 structs:
 	 TempStruct
         tempValue : double;
-        unitOfMeasurement : String;	
+        unitOfMeasurement : String;
        HumidityStruct
       	  humidityValue : double;
       	  unitOfMeasurement : String;      	  
@@ -22,8 +22,8 @@ resources:
             	sample period 1000 for 6000000;   
         eventDrivenSensors:
 			SmokeDetector
-        	   generate smokeMeasurement : SmokeStruct;
-        	   onCondition smokeCondition;
+        	   generate smokeMeasurement : SmokeStruct; 
+        	   onCondition smokeValue>650 PPM;
         requestBasedSensors:
             YahooWeatherService
               generate weatherMeasurement : TempStruct accessed-by locationID: String;      

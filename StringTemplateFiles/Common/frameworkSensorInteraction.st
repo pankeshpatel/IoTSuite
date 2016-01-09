@@ -22,7 +22,7 @@ public abstract class  $SensorDriver.name$ implements Runnable {
        
         Logger.log(myDeviceInfo.getName(), "$SensorDriver.name$",
 				"Publishing $generatedInfo.name$");   
-          String data = gson.toJson(newValue);
+          String data = gson.toJson(newValue);          
         this.myPubSubMiddleware.publish("$generatedInfo.name; format="avoidCapital"$", data);
 		}
     } 

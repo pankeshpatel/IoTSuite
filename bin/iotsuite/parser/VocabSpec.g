@@ -74,7 +74,8 @@ tagsensor_def:
     {context.currentSensor = new SensorCompiler($CAPITALIZED_ID.text);}
     (sensorMeasurementForTag_def ';')* 
    // (sensoreventMeasurement_def ';')*
-   {context.currentSensor.generateEventDrivenSensorCode();}
+   //{context.currentSensor.generateEventDrivenSensorCode();}
+   {context.currentSensor.generateTagCode();}
 
 ;
 
@@ -108,9 +109,11 @@ webServiceGeneratedInfo_def :
     'generate' lc_id ':'  CAPITALIZED_ID   
    {
      context.constructStorageSymblTable($CAPITALIZED_ID.text);
+      context.constructConsumeInfoSymblTable($lc_id.text, $CAPITALIZED_ID.text);
      context.currentStorageService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text);  
       context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
    context.constructResponseTypeSymblTable($lc_id.text, $CAPITALIZED_ID.text);
+   
     
    }   
 ;
@@ -125,26 +128,34 @@ webServicedataIndex_def:
 sensorMeasurementForEventDriven_def:
 'generate' lc_id ':'  CAPITALIZED_ID  
     {  
+     context.constructConsumeInfoSymblTable($lc_id.text, $CAPITALIZED_ID.text);
     context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text , context.getStructSymblTable($CAPITALIZED_ID.text) ); 
+   
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     context.constructEventDrivenSymblTable($CAPITALIZED_ID.text);
+    
      } 
 ;
 
 sensorMeasurementForTag_def:
 'generate' lc_id ':'  CAPITALIZED_ID  
     {  
+    context.constructConsumeInfoSymblTable($lc_id.text, $CAPITALIZED_ID.text);
     context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text , context.getStructSymblTable($CAPITALIZED_ID.text) ); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
+     
   //  context.constructEventDrivenSymblTable($CAPITALIZED_ID.text);
      } 
 ;
 sensorMeasurementForPeriodic_def : 
     'generate' lc_id ':'  CAPITALIZED_ID        
     {      
+     context.constructConsumeInfoSymblTable($lc_id.text, $CAPITALIZED_ID.text);
     context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text , context.getStructSymblTable($CAPITALIZED_ID.text) ); 
+    
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);  
     context.constructPeriodicSymbltable($CAPITALIZED_ID.text);
+   
     } 
 ;
  
@@ -167,8 +178,12 @@ context.currentSensor.addSensorMeasurementSampleDuration($INT.text);
 ;
 
 sensoreventMeasurement_def: 
-('onCondition' (ID |',' ID)*)*
+('onCondition' (EXPRESSION)(UNIT) )* 
+{
+context.currentSensor.addEventDrivenExpression($EXPRESSION.text);
+}
 ;
+
 
 actuator_def:
    CAPITALIZED_ID
@@ -226,13 +241,16 @@ storageDataAccess_def :
     { context.currentStorageService.addDataAccess(); }
 ;
 
-storageGeneratedInfo_def :
+storageGeneratedInfo_def : 
     'generate' lc_id ':'  CAPITALIZED_ID
     {
      context.constructStorageSymblTable($CAPITALIZED_ID.text);
-     context.currentStorageService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text);  
+      context.constructResponseTypeSymblTable($lc_id.text, $CAPITALIZED_ID.text);
+      context.constructConsumeInfoSymblTable($lc_id.text, $CAPITALIZED_ID.text); 
+      context.currentStorageService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text);        
       context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
-    context.constructResponseTypeSymblTable($lc_id.text, $CAPITALIZED_ID.text);
+   
+    
    
     }
 ;
@@ -258,10 +276,16 @@ primitiveType:
 
 
 ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' | '0'..'9')* ;
+
+EXPRESSION : 'a'..'z'  ('a'..'z' | 'A'..'Z')* ('>' |'<'|'=')* ('0'..'9')*;
+
    
 INT : '0'..'9'('0'..'9')* ;
 
-
+UNIT :   (id = 'PPM' | id = 'miliseconds' | id = 'seconds' | id = 'minutes' | id = 'ppm')   
+;     
+    
+ 
 CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )*;
 
 WS: ('\t' | ' ' | '\r' | '\n' | '\u000C')+ {$channel = HIDDEN;};

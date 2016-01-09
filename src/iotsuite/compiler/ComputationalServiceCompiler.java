@@ -6,6 +6,7 @@ import iotsuite.codegenerator.SourceFileDumper;
 import iotsuite.parser.SymbolTable;
 import iotsuite.semanticmodel.Action;
 import iotsuite.semanticmodel.ComputationalService;
+import iotsuite.semanticmodel.ConsumeInfo;
 import iotsuite.semanticmodel.DataAccess;
 import iotsuite.semanticmodel.DataType;
 import iotsuite.semanticmodel.Information;
@@ -28,6 +29,9 @@ public class ComputationalServiceCompiler {
 	private String computationalServiceName;
 	private Parameter parameter;
 	private int sampleValue;
+	public static List<ConsumeInfo> consumeInfoForSensor;
+	public static List<ConsumeInfo> consumeInfoForStorage;
+	public static String consumeInfoName;
 
 	public static List<StructField> StructFieldSet = new ArrayList<StructField>();
 
@@ -61,7 +65,22 @@ public class ComputationalServiceCompiler {
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getGeneratedInfo(),
 				getConsumedInfo(), getDataAccessList(), getActionList(),
-				getOperation(), getStructFieldSet(), getSampleValue());
+				getOperation(), getStructFieldSet(), getSampleValue(),
+				getConsumeInfoFieldForSensor(), getConsumeInfoFieldForStorage());
+	}
+
+	public List<ConsumeInfo> getConsumeInfoFieldForSensor() {
+
+		consumeInfoForSensor = iotsuite.parser.SymbolTable.consumeInfoForSensor
+				.get(consumeInfoName);
+		return consumeInfoForSensor;
+
+	}
+
+	public List<ConsumeInfo> getConsumeInfoFieldForStorage() {
+
+		return consumeInfoForStorage;
+
 	}
 
 	public List<StructField> getStructFieldSet() {
@@ -74,6 +93,9 @@ public class ComputationalServiceCompiler {
 	}
 
 	public void getDataAccessListFromSymblTable(String dataAccessStr) {
+
+		consumeInfoForStorage = iotsuite.parser.SymbolTable.consumeInfoForSensor
+				.get(dataAccessStr);
 		this.dataAccessList = SymbolTable
 				.getDataAccessSymblTable(dataAccessStr);
 	}
@@ -96,6 +118,8 @@ public class ComputationalServiceCompiler {
 	}
 
 	public void addConsumedInfo(String variableName) {
+
+		consumeInfoName = variableName;
 		consumedInfo.add(new Information(variableName, new DataType(
 				getDatafromSymblTable(variableName))));
 	}
@@ -123,6 +147,7 @@ public class ComputationalServiceCompiler {
 		for (int i = 0; i < computationalService.getAllConsumedInfo().size(); i++) {
 			generateComputationalServiceListener_ComputationalServiceCompiler(computationalService
 					.getAllConsumedInfo().get(i));
+
 		}
 
 		generateImplComputationalService_ComputationalServiceCompiler();

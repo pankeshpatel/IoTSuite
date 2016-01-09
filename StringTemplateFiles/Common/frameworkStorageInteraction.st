@@ -5,6 +5,10 @@ import iotsuite.semanticmodel.*;
 import iotsuite.common.*;
 import java.util.ArrayList;
 import java.util.List;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 
 public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
 	
@@ -45,13 +49,17 @@ protected void postInitialize() {
 			if (eventName.equals("get$dataAccess.dataAccessName$")) {
 				Logger.log(myDeviceInfo.getName(),"$Storageservice.name$",
 					"CommandReceived get$dataAccess.dataAccessName$");
-				onNew$dataAccess.dataAccessName$RequestReceived((String) arg);
+					 JsonObject jsonObject = new JsonParser().parse(arg.toString()).getAsJsonObject();
+					
+					 onNew$dataAccess.dataAccessName$RequestReceived((String) arg);
 			}
 		}$
 		
 		$Storageservice.allActions:{ action |
 		    if (eventName.equals("$action.name$") ) { 
-		    	Logger.log( myDeviceInfo.getName() ,"$Storageservice.name$" , "$action.name$ has been received");      	
+		    	Logger.log( myDeviceInfo.getName() ,"$Storageservice.name$" , "$action.name$ has been received"); 
+		    	
+		     	
 				   $action.name$($action.allParameter:{ param | ($param.type$)arg }; separator=", "$);		   
 		      } 
 		    }$

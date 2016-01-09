@@ -58,24 +58,23 @@ public class MapperCompiler {
 		Map<Device, Set<String>> taskMapper = MappingAlgoCompiler.mapTasks(
 				deviceList, mappingConstraintList);
 
-		
-	//	System.out.println("DeviceList..."+deviceList+ "taskMapper.."+taskMapper+ " Deployment Scope...."+mappingConstraintList);
-		
+		// System.out.println("DeviceList..."+deviceList+
+		// "taskMapper.."+taskMapper+
+		// " Deployment Scope...."+mappingConstraintList);
+
 		for (Entry<Device, Set<String>> entry : taskMapper.entrySet()) {
 
 			Device device = MergeDeviceAbilities(entry.getKey(),
 					entry.getValue(), "DBServer");
 
-			if(device.getType().equals("NodeJS")){
+			if (device.getType().equals("NodeJS")) {
 				multiplyTemplate(device);
-			}		
-			else{
+			} else {
 				multiplyTemplate(device);
 				genearateStartupCode(device);
 				genearateExecutionCode(device);
 				genearateProjectFileCode(device);
 			}
-			
 
 		}
 	}
@@ -98,15 +97,16 @@ public class MapperCompiler {
 			}
 		}
 
-	/*	return new Device(device.getName(), device.getType(),
-				device.getNetworkAddress(), device.getRegion(),
-				device.getRegionLabels(), resultAbilities,
-				device.getMobileFlag(), device.getProtocol(),
-				device.getDescription(), device.getDatabase());*/
-		return new Device(device.getName(), device.getType(),
-				resultAbilities,device.getProtocol(),
-				device.getDescription(), device.getDatabase());
-	
+		/*
+		 * return new Device(device.getName(), device.getType(),
+		 * device.getNetworkAddress(), device.getRegion(),
+		 * device.getRegionLabels(), resultAbilities, device.getMobileFlag(),
+		 * device.getProtocol(), device.getDescription(), device.getDatabase());
+		 */
+		return new Device(device.getName(), device.getType(), resultAbilities,
+				device.getProtocol(), device.getDescription(),
+				device.getDatabase());
+
 	}
 
 	/*
@@ -126,17 +126,16 @@ public class MapperCompiler {
 			generateDeviceManifest(unit);
 		}
 
-		if(unit.getAbilities().contains(GlobalVariable.USER_INTERACTION_ENDUSERAPP))
-		{
-			
-						
+		if (unit.getAbilities().contains(
+				GlobalVariable.USER_INTERACTION_ENDUSERAPP)) {
+
 			File srcFolder = new File(GlobalVariable.templatePath + "/"
-					+ "DeviceDrivers" + "/" +"EndUserApp");
+					+ "DeviceDrivers" + "/" + "EndUserApp");
 
 			new File(GlobalVariable.templatePath).mkdirs();
 			File destFolder = new File(GlobalVariable.templatePath + "/"
-					+ GlobalVariable.deploymentFolderPath + "/" + unit.getType()
-					+ unit.getName());
+					+ GlobalVariable.deploymentFolderPath + "/"
+					+ unit.getType() + unit.getName());
 
 			if (!srcFolder.exists()) {
 				System.out.println("Directory does not exist.");
@@ -149,19 +148,17 @@ public class MapperCompiler {
 					System.exit(0);
 				}
 			}
-		}
-		else
-			
+		} else
+
 		{
-			
-			
+
 			File srcFolder = new File(GlobalVariable.templatePath + "/"
 					+ "DeviceDrivers" + "/" + unit.getType());
 
 			new File(GlobalVariable.templatePath).mkdirs();
 			File destFolder = new File(GlobalVariable.templatePath + "/"
-					+ GlobalVariable.deploymentFolderPath + "/" + unit.getType()
-					+ unit.getName());
+					+ GlobalVariable.deploymentFolderPath + "/"
+					+ unit.getType() + unit.getName());
 
 			if (!srcFolder.exists()) {
 				System.out.println("Directory does not exist.");
@@ -174,9 +171,8 @@ public class MapperCompiler {
 					System.exit(0);
 				}
 			}
-			
+
 		}
-		
 
 	}
 

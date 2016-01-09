@@ -185,7 +185,9 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
       String query  = "SELECT * FROM  iotsuiteuser.$Storageservice.name$ WHERE $Storageservice.id$=" + index;
       resultSet = statement.executeQuery(query);
       resultSet.next();
-      tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type;format="capital"$("$structField.name$")};separator=","$   );
+                  
+      tempPreference = new $dataAccess.generatedInfo.type$( $Storageservice.ConsumeInfoFieldsForSensor:{consumeInfoFieldsForSensor |
+            resultSet.get$consumeInfoFieldsForSensor.consumeInfoStructFieldType;format="capital"$("$consumeInfoFieldsForSensor.consumeInfoStructField$")};separator=","$   );
     } catch (Exception e) {
       System.err.println("Got an exception! ");
       System.err.println(e.getMessage());
@@ -200,7 +202,13 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
             .executeQuery("SELECT * FROM $Storageservice.name$ WHERE $Storageservice.id$ = "
                 + index);
         resultSet.next();
-        tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type;format="capital"$("$structField.name$")};separator=","$   );
+        
+        
+       
+       tempPreference = new $dataAccess.generatedInfo.type$(  $Storageservice.ConsumeInfoFieldsForSensor:{consumeInfoFieldsForSensor |
+        resultSet.get$consumeInfoFieldsForSensor.consumeInfoStructFieldType;format="capital"$("$consumeInfoFieldsForSensor.consumeInfoStructField$")};separator=","$   );
+        
+        //tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | resultSet.get$structField.type;format="capital"$("$structField.name$")};separator=","$   );
        } catch (Exception e) {
         System.err.println("Got an exception! ");
         System.err.println(e.getMessage());
@@ -220,8 +228,13 @@ public class JavaSE$Storageservice.name$ implements I$Storageservice.name$ {
              DBCursor cursor = collection.find(findObject);  
               while (cursor.hasNext()) {        
                BasicDBObject dbObject = (BasicDBObject)cursor.next();
-               tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | dbObject.
-               get$structField.type;format="capital"$("$structField.name$")};separator=","$   );
+               
+           
+          
+          tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.ConsumeInfoFieldsForSensor:{consumeInfoFieldsForSensor | dbObject.
+          get$consumeInfoFieldsForSensor.consumeInfoStructFieldType;format="capital"$("$consumeInfoFieldsForSensor.consumeInfoStructField$")};separator=","$);
+             /*  tempPreference = new $dataAccess.generatedInfo.type$($Storageservice.allStructField:{structField | dbObject.
+               get$structField.type;format="capital"$("$structField.name$")};separator=","$   ); */ 
                      
                }
            

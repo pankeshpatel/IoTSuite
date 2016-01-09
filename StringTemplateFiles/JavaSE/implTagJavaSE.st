@@ -37,15 +37,30 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$,IDataList
      pubSubSensingFramework.registerForSensorData(this, "$generatedInfo.name;format="avoidCapital"$");
      }; separator="\n"$
      SensorFactory.initializeSensingFramework("$SensorDriver.name$");
-     if($SensorDriver.expressionValue$)
-      {
-      JsonObject publishData = new JsonObject(); 
-    $SensorDriver.ConsumeInfoFieldsForSensor:{ consumeInfoFieldsForSensor |    
+     
+      JsonObject publishData = new JsonObject();
+          
+    /*  $SensorDriver.allEventDivenFields:{eventDrivenField | 
+       publishData.addProperty("$eventDrivenField.name$", $eventDrivenField.name$);
+          
+  }$   */ 
+  
+  
+    $SensorDriver.ConsumeInfoFieldsForSensor:{ consumeInfoFieldsForSensor |
+    
     publishData.addProperty("$consumeInfoFieldsForSensor.consumeInfoStructField$",$consumeInfoFieldsForSensor.consumeInfoStructField$);
-    }; separator="\n"$    
+          
+               
+          }; separator="\n"$  
+     
+    
     pubSubSensingFramework.publish("$SensorDriver.name$", publishData);
-  }    
+ 
+     
+    
   } 
+  
+ 
   $SensorDriver.allGeneratedInfo:{ generatedInfo | 
    @Override
    public void get$generatedInfo.name; format="avoidCapital"$(Listener$generatedInfo.name$ handler){
@@ -56,16 +71,24 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$,IDataList
    public  $generatedInfo.type$ get$generatedInfo.name; format="avoidCapital"$(){
        return null;
    }*/
-}; separator="\n"$  
+}; separator="\n"$
+
+  
+  
+  
   
   @Override
-public void onDataReceived(String eventName, JsonObject data) {    
+public void onDataReceived(String eventName, JsonObject data) {
+    
+    
      $SensorDriver.allGeneratedInfo:{ generatedInfo | 
      if(eventName.equals("$generatedInfo.name; format="avoidCapital"$"))
-     {    
+     {
+    
      $SensorDriver.ConsumeInfoFieldsForSensor:{ consumeInfoFieldsForSensor |
-     $consumeInfoFieldsForSensor.consumeInfoStructField$=data.get("$consumeInfoFieldsForSensor.consumeInfoStructField$").getAs$consumeInfoFieldsForSensor.consumeInfoStructFieldType;format="capital"$();
-     }; separator="\n"$
+           $consumeInfoFieldsForSensor.consumeInfoStructField$=data.get("$consumeInfoFieldsForSensor.consumeInfoStructField$").getAs$consumeInfoFieldsForSensor.consumeInfoStructFieldType;format="capital"$();
+         }; separator="\n"$
+         
      handler$generatedInfo.name$.onNew$generatedInfo.name$(new  $generatedInfo.type$ ( $SensorDriver.ConsumeInfoFieldsForSensor:{ consumeInfoFieldsForSensor |  $consumeInfoFieldsForSensor.consumeInfoStructField$};separator="," $) );
      
             

@@ -16,7 +16,11 @@ $SensorDriver.name$Keys, ISensorListener  {
 	
 	private PubSubsSensingFramework pubSubSensingFramework = null;
 	
-	
+	 $SensorDriver.ConsumeInfoFieldsForSensor:{ consumeInfoFieldsForSensor |
+          
+            $consumeInfoFieldsForSensor.consumeInfoStructFieldType$ $consumeInfoFieldsForSensor.consumeInfoStructField$ ;
+          
+          }; separator="\n"$ 
   
 	$SensorDriver.allGeneratedInfo:{ generatedInfo | 
 		   	   
@@ -89,9 +93,11 @@ $SensorDriver.name$Keys, ISensorListener  {
     		$SensorDriver.name$Data = dataEvent;
     		 $SensorDriver.allGeneratedInfo:{ generatedInfo |
     		 
+    		   		 
+    		 
     		 if (eventName.equals("$generatedInfo.name$Event")) {
-          listener$generatedInfo.name$.onNew$generatedInfo.name$(new $generatedInfo.type$("1",
-          "$generatedInfo.name$"));
+          listener$generatedInfo.name$.onNew$generatedInfo.name$(new $generatedInfo.type$( $SensorDriver.ConsumeInfoFieldsForSensor:{ consumeInfoFieldsForSensor |
+            $consumeInfoFieldsForSensor.consumeInfoStructField$};separator="," $));
     }
     		 
     		 }; separator="\n"$ 

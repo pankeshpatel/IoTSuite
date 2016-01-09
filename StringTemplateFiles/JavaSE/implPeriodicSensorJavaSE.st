@@ -19,9 +19,17 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$,IDataList
 	public static Listener$generatedInfo.name$ listener$generatedInfo.name$;
 	}; separator="\n"$
 	
-	 $SensorDriver.allPeriodicFields:{periodicField | 
+	
+	
+	$SensorDriver.ConsumeInfoFieldsForSensor:{ consumeInfoFieldsForSensor |
+          
+            $consumeInfoFieldsForSensor.consumeInfoStructFieldType$ $consumeInfoFieldsForSensor.consumeInfoStructField$ ;
+          
+          }; separator="\n"$ 
+	
+	/*  $SensorDriver.allPeriodicFields:{periodicField | 
   $periodicField.type;format="capital"$ $periodicField.name$;
-  }$
+  }$ */ 
 
 	
 	 public JavaSE$SensorDriver.name$(Device deviceInfo) { 
@@ -59,10 +67,21 @@ public class JavaSE$SensorDriver.name$ implements I$SensorDriver.name$,IDataList
 
 $SensorDriver.allGeneratedInfo:{ generatedInfo | 
     if (eventName.equals("$SensorDriver.name$-Result")) {
-     $SensorDriver.allPeriodicFields:{periodicField | 
+    
+    $SensorDriver.ConsumeInfoFieldsForSensor:{ consumeInfoFieldsForSensor |
+          
+    $consumeInfoFieldsForSensor.consumeInfoStructField$=data.get("$consumeInfoFieldsForSensor.consumeInfoStructField$").getAs$consumeInfoFieldsForSensor.consumeInfoStructFieldType;format="capital"$();
+          
+          }; separator="\n"$ 
+    
+    listener$generatedInfo.name$.onNew$generatedInfo.name$(new $generatedInfo.type$(  $SensorDriver.ConsumeInfoFieldsForSensor:{ consumeInfoFieldsForSensor | $consumeInfoFieldsForSensor.consumeInfoStructField$} ;separator=","$ ));   
+    
+    /* $SensorDriver.allPeriodicFields:{periodicField | 
     $periodicField.name$=data.get("$periodicField.name$").getAs$periodicField.type;format="capital"$();
-    }$
-       listener$generatedInfo.name$.onNew$generatedInfo.name$(new $generatedInfo.type$( $SensorDriver.allPeriodicFields:{periodicField |$periodicField.name$} ;separator=","$ ));
+    }$ 
+    
+    
+       listener$generatedInfo.name$.onNew$generatedInfo.name$(new $generatedInfo.type$( $SensorDriver.allPeriodicFields:{periodicField |$periodicField.name$} ;separator=","$ )); */ 
     
 
     }
