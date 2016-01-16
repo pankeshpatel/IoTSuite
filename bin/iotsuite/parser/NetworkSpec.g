@@ -38,7 +38,7 @@ device_def:
     'resources' ':' (abilities_def)?  ';'
     'protocol' ':' (protocol_value)* ';' 
     ('database' ':' database_def ';')*        
-     'description' ':'  (description_def )* ';'             
+     ('description' ':' description_def ';')*               
     { context.currentNetwork.addDeviceObj();}
 ; 
    
@@ -80,7 +80,7 @@ CAPITALIZED_ID
  
 MOBILEFLAG :  'true' | 'false' 
    ;
-
+ 
       
  
 ID  : ('a'..'z'  ('a'..'z' | 'A'..'Z' )* ('0'..'9')*)| '0'..'9'('0'..'9')*|'*' ;
@@ -90,4 +90,4 @@ DESCRIPTION_ID:   ('a'..'z'|'0'..'9')('a'..'z'|'A'..'Z'|'0'..'9'|' ')* ;
 CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )* ('0'..'9')*;
 
  
-WS: ('\t' | ' ' | '\r' | '\n' | '\u000C')+ {$channel = HIDDEN;};
+WS: ('\t' | ' ' | '\r' | '\n' | '\u000C')+ {$channel = HIDDEN;};  

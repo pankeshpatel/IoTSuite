@@ -121,9 +121,9 @@ controller_def:
 ;
   
 csOperation_def :
-    'COMPUTE(' CAPITALIZED_ID'_BY_SAMPLE' ',' INT ')'  
+    'COMPUTE' '(' CAPITALIZED_ID'_BY_SAMPLE'  ',' INT ')'  
     { context.currentComputationalService.addOperation($CAPITALIZED_ID.text,$INT.text);  }  
-;
+;   
   
 csGeneratedInfoForAggregator_def:
  'generate' lc_id ':'  CAPITALIZED_ID

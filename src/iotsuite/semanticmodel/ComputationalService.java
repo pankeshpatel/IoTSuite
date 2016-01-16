@@ -42,6 +42,7 @@ public class ComputationalService extends SoftwareComponent<Information> {
 	}	
 	
 	
+	@Override
 	public List<TempConsumeInfo>  getTempAllConsumeInfo() {
 		return listOfListTempConsumeInfo;
 	}

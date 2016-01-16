@@ -48,7 +48,7 @@ public class UserInterface extends SoftwareComponent<Information> {
 		this.fieldsForNotify = fieldForNotify;
 		this.notifyMeasurement = notifyMeasurement;
 		this.notifyStructName = notifyStructName;
-		this.notifyFrom = notifyFrom;
+		UserInterface.notifyFrom = notifyFrom;
 	}
 
 	public String getNotifyFrom() {
