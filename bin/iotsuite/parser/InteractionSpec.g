@@ -24,9 +24,9 @@ interactionSpec :
     { context = new SymbolTable();
     }   
     ('structs' ':' )*
-       (struct_def)+   
-     'resources' ':'
-       'userInteractions' ':'    
+       (struct_def)*    
+    ( 'resources' ':' )* 
+        ('userInteractions' ':' )*    
           (gui_def)*        
 ;      
 
