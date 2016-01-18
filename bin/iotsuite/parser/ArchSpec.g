@@ -25,7 +25,7 @@ archSpec :
     context.currentMappingConstraint = new MapperCompiler(); 
     }       
     ('structs' ':' struct_def)*  
-    'softwareComponents' ':' (component_def )* 
+    ('softwareComponents' ':')* (component_def )*  
 ;   
   
 component_def :

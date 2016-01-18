@@ -1,5 +1,4 @@
-softwareComponents:
-	computationalService:
+computationalService:
 		Common:
 			AvgTemp
 				consume tempMeasurement from TemperatureSensor;
