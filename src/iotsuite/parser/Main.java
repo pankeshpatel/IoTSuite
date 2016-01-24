@@ -9,6 +9,9 @@ import iotsuite.semanticmodel.Device;
 
 import java.util.List;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
 
@@ -24,13 +27,23 @@ public class Main {
 
 			ANTLRFileStream vocStream = new ANTLRFileStream(
 					GlobalVariable.vocabSpec);
+			if (vocStream.size() == 0) {
+				JFrame frame = new JFrame("Vocab Warning");
+
+				JOptionPane.showMessageDialog(frame,
+						"Vocab specification should not be empty",
+						"Vocab parser warning", JOptionPane.WARNING_MESSAGE);
+				System.exit(0);
+
+			}
+
 			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 			vocParser.vocabSpec();
-			// GenFiller.copyDeviceDrivers();
 
 		}
+		// GenFiller.copyDeviceDrivers();
 
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_USERINTERACTION)) {
@@ -44,6 +57,16 @@ public class Main {
 
 			ANTLRFileStream interactionStream = new ANTLRFileStream(
 					GlobalVariable.interactionSpec);
+			if (interactionStream.size() == 0) {
+				JFrame frame = new JFrame("Interaction Warning");
+				JOptionPane.showMessageDialog(frame,
+						"User-Interaction specification should not be empty",
+						"User-Interaction parser warning",
+						JOptionPane.WARNING_MESSAGE);
+				System.exit(0);
+
+			}
+
 			InteractionSpecLexer interactionLexer = new InteractionSpecLexer(
 					interactionStream);
 			CommonTokenStream interactionTokens = new CommonTokenStream(
@@ -78,6 +101,16 @@ public class Main {
 
 			ANTLRFileStream archStream = new ANTLRFileStream(
 					GlobalVariable.archSpec);
+
+			if (archStream.size() == 0) {
+				JFrame frame = new JFrame("Arch Warning");
+
+				JOptionPane.showMessageDialog(frame,
+						"Arch specification should not be empty",
+						"Arch parser warning", JOptionPane.WARNING_MESSAGE);
+				System.exit(0);
+
+			}
 			ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
 			CommonTokenStream archTokens = new CommonTokenStream(archLexer);
 			ArchSpecParser archParser = new ArchSpecParser(archTokens);
@@ -109,6 +142,17 @@ public class Main {
 
 			ANTLRFileStream deploymentStream = new ANTLRFileStream(
 					GlobalVariable.deploymentSpec);
+			if (deploymentStream.size() == 0) {
+				JFrame frame = new JFrame("Deploy Warning");
+
+				JOptionPane.showMessageDialog(frame,
+						"Deployment specification should not be empty",
+						"Deployment parser warning",
+						JOptionPane.WARNING_MESSAGE);
+				System.exit(0);
+
+			}
+
 			NetworkSpecLexer deploymentLexer = new NetworkSpecLexer(
 					deploymentStream);
 			CommonTokenStream deploymentTokens = new CommonTokenStream(
@@ -126,4 +170,5 @@ public class Main {
 		}
 
 	}
+
 }
