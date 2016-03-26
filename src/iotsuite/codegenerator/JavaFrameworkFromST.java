@@ -773,6 +773,21 @@ public class JavaFrameworkFromST {
 
 			return new CompilationUnit(".project", templateOfDevice,
 					"deviceProject", device.getName(), device);
+			
+		}
+		
+		// For NodeJS-enabled devices
+		if(device.getType().equals(GlobalVariable.NODEJS_ENABLED_DEVICES)){
+			StringTemplate templateOfDevice = group
+					.getInstanceOf("NodeJS/eclipseProjectNodeJS");
+			
+			templateOfDevice.setAttribute("device", device);
+			templateOfDevice.registerRenderer(String.class,
+					new MyAttributeRenderer());
+			
+			return new CompilationUnit(".project", templateOfDevice,
+					"deviceProject", device.getName(), device);
+			
 		}
 
 		return null;

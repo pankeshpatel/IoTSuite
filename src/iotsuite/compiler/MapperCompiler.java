@@ -69,6 +69,7 @@ public class MapperCompiler {
 
 			if (device.getType().equals("NodeJS")) {
 				multiplyTemplate(device);
+				genearateProjectFileCode(device);
 			} else {
 				multiplyTemplate(device);
 				genearateStartupCode(device);

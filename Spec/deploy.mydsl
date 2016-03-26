@@ -3,10 +3,38 @@ devices:
 		location:
 			Room:1;
 			platform:NodeJS;
-			resources:TemperatureSensor, HumiditySensor, BadgeReader , SmokeDetector,YahooWeatherService;
+			resources:TemperatureSensor;
 			protocol:mqtt;
 			
-	 D2:
+	D2:
+		location:
+			Room:1;
+			platform:NodeJS;
+			resources:HumiditySensor;
+			protocol:mqtt;
+			
+	D3:
+		location:
+			Room:1;
+			platform:NodeJS;
+			resources:BadgeReader;
+			protocol:mqtt;
+			
+	D4:
+		location:
+			Room:1;
+			platform:NodeJS;
+			resources:SmokeDetector;
+			protocol:mqtt;
+			
+	D5:
+		location:
+			Room:1;
+			platform:NodeJS;
+			resources:YahooWeatherService;
+			protocol:mqtt;								
+			
+	 D6:
 	 	location:
 	 		Room:1;
 	 		platform:JavaSE;
@@ -14,63 +42,63 @@ devices:
 	 		protocol:mqtt;
 	 		database:MySQL;
 	 	
-	 D3:
+	 D7:
 	 	location:
 	 		Room:1;
 	 		platform:JavaSE;
 	 		resources:;
 	 		protocol:mqtt;
 	 		
-	 D4:
+	 D8:
 	 	location:
 	 		Room:1;	
 	 		platform:JavaSE;
 	 		resources:;
 	 		protocol:mqtt;
 	 		
-	  D5:
+	  D9:
 	 	location:
 	 		Room:1;	
 	 		platform:JavaSE;
 	 		resources:;
 	 		protocol:mqtt;
 	 		
-	 D6:
+	 D10:
 	 	location:
 	 		Room:1;	
 	 		platform:JavaSE;
 	 		resources:;
 	 		protocol:mqtt;
 	 			
-	  D7:
+	  D11:
 	 	location:
 	 		Room:1;	
 	 		platform:JavaSE;
 	 		resources:;
 	 		protocol:mqtt;
 	 		
-	  D8:
+	  D12:
 	 	location:
 	 		Room:1;	
 	 		platform:JavaSE;
 	 		resources:;
 	 		protocol:mqtt;
 	 		
-	 D9:
+	 D13:
 	 	location:
 	 		Room:1;
 	 		platform:NodeJS;
 	 		resources:Heater;
 	 		protocol:mqtt;
 	 		
-	 D10:	
+	 D14:	
 	 	location:
 	 		Room:1;
 	 		platform:Android;
 	 		resources:EndUserApp;
 	 		protocol:mqtt; 
 	 		
-	D11: 
+	D15: 
 		location:
 			Room:1;
 			platform:NodeJS;

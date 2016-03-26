@@ -47,7 +47,7 @@ structField_def:
   
 
 abilities_def : 
-  ('sensors' ':'   sensor_def)+
+  ('sensors' ':'   sensor_def)*
    ('tags' ':' (tagsensor_def)*)* 
    ('actuators' ':' (actuator_def)*)*
    ('storages'  ':' (ss_def)* )*     

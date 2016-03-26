@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2016-01-24 17:17:53
+// $ANTLR 3.5.1 S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g 2016-03-26 14:14:08
  
 package iotsuite.parser;
 import iotsuite.compiler.*;  
@@ -237,14 +237,13 @@ public class VocabSpecParser extends Parser {
 
 
 	// $ANTLR start "abilities_def"
-	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:49:1: abilities_def : ( 'sensors' ':' sensor_def )+ ( 'tags' ':' ( tagsensor_def )* )* ( 'actuators' ':' ( actuator_def )* )* ( 'storages' ':' ( ss_def )* )* ;
+	// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:49:1: abilities_def : ( 'sensors' ':' sensor_def )* ( 'tags' ':' ( tagsensor_def )* )* ( 'actuators' ':' ( actuator_def )* )* ( 'storages' ':' ( ss_def )* )* ;
 	public final void abilities_def() throws RecognitionException {
 		try {
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:49:15: ( ( 'sensors' ':' sensor_def )+ ( 'tags' ':' ( tagsensor_def )* )* ( 'actuators' ':' ( actuator_def )* )* ( 'storages' ':' ( ss_def )* )* )
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:50:3: ( 'sensors' ':' sensor_def )+ ( 'tags' ':' ( tagsensor_def )* )* ( 'actuators' ':' ( actuator_def )* )* ( 'storages' ':' ( ss_def )* )*
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:49:15: ( ( 'sensors' ':' sensor_def )* ( 'tags' ':' ( tagsensor_def )* )* ( 'actuators' ':' ( actuator_def )* )* ( 'storages' ':' ( ss_def )* )* )
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:50:3: ( 'sensors' ':' sensor_def )* ( 'tags' ':' ( tagsensor_def )* )* ( 'actuators' ':' ( actuator_def )* )* ( 'storages' ':' ( ss_def )* )*
 			{
-			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:50:3: ( 'sensors' ':' sensor_def )+
-			int cnt3=0;
+			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:50:3: ( 'sensors' ':' sensor_def )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -267,11 +266,8 @@ public class VocabSpecParser extends Parser {
 					break;
 
 				default :
-					if ( cnt3 >= 1 ) break loop3;
-					EarlyExitException eee = new EarlyExitException(3, input);
-					throw eee;
+					break loop3;
 				}
-				cnt3++;
 			}
 
 			// S:\\Thesis\\DevelopmentFramework\\ToolSuite\\IoTSuite\\src\\iotsuite\\parser\\VocabSpec.g:51:4: ( 'tags' ':' ( tagsensor_def )* )*
@@ -2006,7 +2002,7 @@ public class VocabSpecParser extends Parser {
 	public static final BitSet FOLLOW_13_in_vocabSpec77 = new BitSet(new long[]{0x0000000000000010L});
 	public static final BitSet FOLLOW_struct_def_in_vocabSpec80 = new BitSet(new long[]{0x0000000100000010L});
 	public static final BitSet FOLLOW_32_in_vocabSpec90 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_13_in_vocabSpec92 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_13_in_vocabSpec92 = new BitSet(new long[]{0x0000002C00200000L});
 	public static final BitSet FOLLOW_abilities_def_in_vocabSpec94 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_CAPITALIZED_ID_in_struct_def113 = new BitSet(new long[]{0x0000000000000042L});
 	public static final BitSet FOLLOW_structField_def_in_struct_def127 = new BitSet(new long[]{0x0000000000004000L});

@@ -69,6 +69,11 @@ public class SourceFileDumper {
 						GlobalVariable.templatePath);
 			}
 
+			if(GlobalVariable.ENABLE_NodeJS_CODE_GENERATION){
+				generateCodeForMappingActivitity(template,
+						GlobalVariable.deviceNodeJSType,
+						GlobalVariable.templatePath);
+			}
 			/*
 			 * if(GlobalVariable.ENABLE_NodeJS_CODE_GENERATION){
 			 * 
