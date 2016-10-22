@@ -1,0 +1,13 @@
+computationalService:                                                       
+	Custom:                    
+		 Proximity
+		 	consume badgeDetected from BadgeReader;
+			consume badgeDisappeared from BadgeReader;
+			request profile to ProfileDB;
+			generate tempPref: TempStruct;
+		RoomController
+			consume tempPref from Proximity;
+			command Off() to Heater;
+			command SetTemp(setTemp) to Heater;
+						 	    
+			
