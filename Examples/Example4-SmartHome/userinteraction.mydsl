@@ -1,0 +1,16 @@
+structs:
+	VisualizeStruct
+	    tempValue:double;
+	    humidityValue:double;
+	    yahooTempValue:double; 
+	FireStateStruct
+		fireValue:String;  
+		timeStamp:String;	    
+resources:
+    userInteractions:
+		EndUserApp							
+			notify FireNotify(fireNotify:FireStateStruct) from FireController;
+	    DashBoard
+		    notify DisplaySensorMeasurement(sensorMeasurement:VisualizeStruct) from DisplayController; 
+	 	
+	 	  		 	     	
