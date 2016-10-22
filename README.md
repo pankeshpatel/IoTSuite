@@ -41,6 +41,19 @@ We provide IoTSuite in two versions:
   
   To install user version - refer our [wiki pages](https://github.com/pankeshlinux/IoTSuite/wiki)
 
+## Examples
+
+using IoTSuite, many innovative class of IoT applications can be developed including from typical 
+
+* Sense-Compute-Control (E.g., Regulating Temperature using heater and temperature sensor)
+* Personalized HAVAC involving cloud/non-cloud based database services
+* Involving user using Mobile Application (E.g., Notifying to users when fire is detected)
+* Real-time data Visualization on DashBoard 
+
+We have been working on the above mentioned class of applications, available in Examples folders 
+[here](https://github.com/pankeshlinux/IoTSuite/tree/master/Examples)
+ 
+  
 
 
 ## Authors
