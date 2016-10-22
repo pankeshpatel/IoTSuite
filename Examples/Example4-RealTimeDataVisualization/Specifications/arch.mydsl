@@ -1,0 +1,7 @@
+computationalService:     
+ Custom:                                                                 
+	DataVisualizer                                                  
+		consume tempMeasurement from TemperatureSensor;                  
+		consume humidityMeasurement from HumiditySensor;                
+		consume weatherMeasurement from YahooWeatherService;    
+		command DisplaySensorMeasurement(sensorMeasurement) to DashBoard; 

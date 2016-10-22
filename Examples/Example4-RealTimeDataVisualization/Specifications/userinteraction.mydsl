@@ -1,0 +1,9 @@
+structs:																									
+ 	VisualizationStruct                                                                                    
+   		tempValue:double;                                                                                   
+   		humidityValue:double;                                                                               
+   		yahooTempValue:double;                                                 
+resources:                                                                                                 
+ 	userInteractions:                                                                                       
+  		DashBoard                                                                                           
+   			notify DisplaySensorMeasurement(sensorMeasurement : VisualizationStruct) from DataVisualizer; 
