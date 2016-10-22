@@ -1,0 +1,9 @@
+structs:																									
+ 	FireStateStruct                                                                                           
+  		fireValue:String;                                                                                   
+  		timeStamp:String;                                                                               
+resources:                                                                                                 
+ 	userInteractions:                                                                                       
+  		EndUserApp                                                                                          
+  			notify FireNotify(fireNotify:FireStateStruct) from FireController;                           
+		

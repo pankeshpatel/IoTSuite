@@ -1,0 +1,21 @@
+structs:																					
+ TempStruct                                                                            
+	tempValue: double;                                                                  
+	unitOfMeasurement : String;    
+ SmokeStruct                                                                             
+	smokeValue:double;                                                                  
+	unitOfMeasurement:String;                                                              
+resources:                                                                                 
+ sensors:   	
+  periodicSensors:                                                                    
+	TemperatureSensor                                                               
+	 generate tempMeasurement:TempStruct;                                     
+	 sample period 1000 for 6000000;                                              
+  eventDrivenSensors:                                                                 
+	SmokeDetector                                                                   
+	 generate smokeMeasurement:SmokeStruct;                                        
+	 onCondition smokeValue>650 PPM ;    
+  actuators:                                                                            
+	Alarm                                                                           
+	 action On();                   
+					

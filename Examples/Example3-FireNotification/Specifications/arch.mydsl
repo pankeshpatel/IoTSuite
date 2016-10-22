@@ -1,0 +1,16 @@
+computationalService:                                                       
+ 	Common:                                                                 
+  		RoomAvgTemp                                                             
+   			consume tempMeasurement from TemperatureSensor;                  
+   			COMPUTE (AVG_BY_SAMPLE,5);                                    
+   			generate roomAvgTempMeasurement :TempStruct;     
+ 	Custom:                    
+  		FireState                                                          
+   			consume roomAvgTempMeasurement from RoomAvgTemp;                 
+   			consume smokeMeasurement from SmokeDetector;
+   			generate smokeValue:SmokeStruct;                            
+  		FireController                                                     
+   			consume smokeValue from FireState;                              
+   			command On() to Alarm;                                        
+   			command FireNotify(fireNotify) to EndUserApp;  	 	    
+			
