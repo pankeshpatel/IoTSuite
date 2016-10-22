@@ -1,0 +1,1 @@
+Implemented using nma node in Node-RED

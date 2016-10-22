@@ -1,0 +1,3 @@
+Implemented using FreeDashBoard...
+---We need to first select database (e.x.- Yahoo Weather Service, Dweeet.io etc.)
+---Need to add Pane in to DashBoard for particular database
