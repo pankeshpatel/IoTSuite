@@ -1,0 +1,67 @@
+<html>
+<head>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+ <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script type="text/javascript"
+	src="https://www.google.com/jsapi?autoload={
+    'modules':[{
+      'name':'visualization',
+      'version':'1',
+      'packages':['corechart']
+    }]
+  }">
+</script>
+</head>
+<body>
+	<div id="chart" style="width: 1500px; height: 700px"></div>
+	<script>
+    $(document).ready(function () {
+        var maxDataPoints = 10;
+        var chart = new google.visualization.LineChart($('#chart')[0]); 
+        var data = google.visualization.arrayToDataTable([ 
+            ['Time','Current Temperature','Current Humidity','Yahoo Temp'],
+            [getTime(), 0,0,0]
+        ]); 
+        var options = { 
+            title: 'Visualization of Environment Parameters',
+            hAxis: {title: 'Time', titleTextStyle: {color: '#333'}}, //Added hAxis and vAxis label
+            vAxis: {title: 'temp and humidity Value',  minValue: 0, titleTextStyle: {color: '#333'}},
+            curveType: 'function',
+            animation: {
+                duration: 1000,
+                easing: 'in'
+            },
+            legend: {position: 'bottom'}
+        };
+        function addDataPoint(dataPoint) { 
+        	console.log(dataPoint.value);
+            if (data.getNumberOfRows() > maxDataPoints) {
+                data.removeRow(0);
+            }
+            data.addRow([getTime(), dataPoint.value,dataPoint.value1,dataPoint.value2]);
+            chart.draw(data, options); 
+        }
+        function getTime() {
+            var d = new Date();
+            return d.toLocaleTimeString();
+        }
+        var socket = io.connect('http://localhost:8686');
+		  socket.on('sensorData', function (data) {		    
+		     //console.log(data);
+		   // var data1 = JSON.parse(data)
+		    //socket.emit('my other event', { my: 'data' });
+		    addDataPoint(data); //JSON.parse(data)
+		  });
+       /*  function doPoll() { 
+            $.getJSON('http://localhost:8686/temperatureData',
+                        function (result) {
+            	        //console.log(result);
+                        addDataPoint(result); 
+                        setTimeout(doPoll,5000);
+                    });
+            }
+        doPoll(); */
+    });
+	</script>
+</body>
+</html>
