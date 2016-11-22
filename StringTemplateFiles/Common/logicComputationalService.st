@@ -23,6 +23,7 @@ public class  Logic$CS.name$ extends $CS.name$  {
     $CS.allDataAccess:{ dataAccess |     
       public void onNew$dataAccess.dataAccessName; format="avoidCapital"$Received( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type$}$ arg)
       {
+      
         //TODO : write code here        
       }     
   }$
