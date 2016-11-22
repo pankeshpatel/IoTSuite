@@ -20,14 +20,15 @@ public class ComputationalService extends SoftwareComponent<Information> {
 	public static List<ConsumeInfo> consumeInfoField;
 	// Following structure is used to store consumeInfoField for Storage
 	public static List<ConsumeInfo> consumeInfoFieldForStorage;
-	//public static List<List<ConsumeInfo>> listOfListConsumeInfo; 
-	public  List<TempConsumeInfo> listOfListTempConsumeInfo;
+	// public static List<List<ConsumeInfo>> listOfListConsumeInfo;
+	public List<TempConsumeInfo> listOfListTempConsumeInfo;
 
 	public ComputationalService(String name, Set<Information> generateInfo,
 			Set<Information> consumeInfo, Set<DataAccess> dataAccess,
 			Set<Action> actions, String operation, List<StructField> fields,
 			int sampleValue, List<ConsumeInfo> consumeInfoFieldForSensor,
-			List<ConsumeInfo> consumeInfoForStorage, List<TempConsumeInfo> listOfListTempConsumeInfo) {
+			List<ConsumeInfo> consumeInfoForStorage,
+			List<TempConsumeInfo> listOfListTempConsumeInfo) {
 
 		super(name, generateInfo, consumeInfo, listOfListTempConsumeInfo);
 		this.dataAccess = dataAccess;
@@ -37,21 +38,14 @@ public class ComputationalService extends SoftwareComponent<Information> {
 		ComputationalService.sampleValue = sampleValue;
 		ComputationalService.consumeInfoField = consumeInfoFieldForSensor;
 		ComputationalService.consumeInfoFieldForStorage = consumeInfoForStorage;
-		//this.listOfListConsumeInfo = listofListConsumeInfo ; 
+		// this.listOfListConsumeInfo = listofListConsumeInfo ;
 		this.listOfListTempConsumeInfo = listOfListTempConsumeInfo;
-	}	
-	
-	
+	}
+
 	@Override
-	public List<TempConsumeInfo>  getTempAllConsumeInfo() {
+	public List<TempConsumeInfo> getTempAllConsumeInfo() {
 		return listOfListTempConsumeInfo;
 	}
-	
-
-	
-	
-	
-	
 
 	public List<StructField> getFields() {
 		return fields;

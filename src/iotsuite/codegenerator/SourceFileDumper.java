@@ -69,7 +69,7 @@ public class SourceFileDumper {
 						GlobalVariable.templatePath);
 			}
 
-			if(GlobalVariable.ENABLE_NodeJS_CODE_GENERATION){
+			if (GlobalVariable.ENABLE_NodeJS_CODE_GENERATION) {
 				generateCodeForMappingActivitity(template,
 						GlobalVariable.deviceNodeJSType,
 						GlobalVariable.templatePath);
@@ -107,7 +107,6 @@ public class SourceFileDumper {
 					+ GlobalVariable.logicDirPath + "/"
 					+ unit.getFileNameToGenerate());
 		}
-	
 
 		else if (unit.getFileCategory().equals("JavaSESensorLogic")) {
 			new File(GlobalVariable.templatePath + deviceType + "DeviceDrivers"

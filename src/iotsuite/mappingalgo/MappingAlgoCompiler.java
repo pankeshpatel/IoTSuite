@@ -2,7 +2,6 @@ package iotsuite.mappingalgo;
 
 import iotsuite.semanticmodel.DeploymentScope;
 import iotsuite.semanticmodel.Device;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;

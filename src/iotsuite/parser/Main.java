@@ -18,7 +18,7 @@ import org.antlr.runtime.CommonTokenStream;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		/*long lStartTime = new Date().getTime();*/
+		/* long lStartTime = new Date().getTime(); */
 		GlobalVariable.activity = args[0];
 		GlobalVariable.templatePath = args[1];
 
@@ -165,12 +165,14 @@ public class Main {
 			MapperCompiler.mappingFileGenerator(deviceList,
 					mappingConstraintList);
 			LinkerCompiler.linkerAlgo();
-					
+
 		}
-		
-		/*long lEndTime = new Date().getTime();
-		long difference = lEndTime - lStartTime;
-		System.out.println("Elapsed milliseconds: " + difference);*/
+
+		/*
+		 * long lEndTime = new Date().getTime(); long difference = lEndTime -
+		 * lStartTime; System.out.println("Elapsed milliseconds: " +
+		 * difference);
+		 */
 		GenFiller.copyLinking();
 	}
 

@@ -1,112 +1,35 @@
-devices:
-	D1:
-		location:
-			Room:1;
-			platform:NodeJS;
-			resources:TemperatureSensor;
-			protocol:mqtt;
-			
-	D2:
-		location:
-			Room:1;
-			platform:NodeJS;
-			resources:HumiditySensor;
-			protocol:mqtt;
-			
-	D3:
-		location:
-			Room:1;
-			platform:NodeJS;
-			resources:BadgeReader;
-			protocol:mqtt;
-			
-	D4:
-		location:
-			Room:1;
-			platform:NodeJS;
-			resources:SmokeDetector;
-			protocol:mqtt;
-			
-	D5:
-		location:
-			Room:1;
-			platform:NodeJS;
-			resources:YahooWeatherService;
-			protocol:mqtt;								
-			
-	 D6:
-	 	location:
-	 		Room:1;
-	 		platform:JavaSE;
-	 		resources:ProfileDB;
-	 		protocol:mqtt;
-	 		database:MySQL;
-	 	
-	 D7:
-	 	location:
-	 		Room:1;
-	 		platform:JavaSE;
-	 		resources:;
-	 		protocol:mqtt;
+devices:												
+   BadgeReaderMgmtDevice:                                                
+		    location:                                       
+			  Room:1;                                         
+			platform: NodeJS;                                 
+			resources: BadgeReader;                     
+			protocol: mqtt;                                  
+	DatabaseSrvDevice:                                                  
+			location:                                       
+	 		  Room: 1;                                  
+	 		platform: JavaSE;                           
+	 		resources: ProfileDB;                     
+	 		protocol: mqtt;                          
+	 		database: MySQL; 
+	ResourceMgmtDevice1:                                                
+			location:                                       
+	 		  Room: 1;                                  
+	 		platform: ;                           
+	 		resources: JavaSE;                      
+	 		protocol: mqtt; 
+	ResourceMgmtDevice2:                                                
+			location:                                       
+	 		  Room: 1;                                  
+	 		platform: NodeJS;                           
+	 		resources: ;                      
+	 		protocol: mqtt;    		
+	HeaterMgmtDevice:                                                
+			location:                                       
+	 		  Room: 1;                                  
+	 		platform: JavaSE;                           
+	 		resources: Heater;                      
+	 		protocol: mqtt;          
 	 		
-	 D8:
-	 	location:
-	 		Room:1;	
-	 		platform:JavaSE;
-	 		resources:;
-	 		protocol:mqtt;
-	 		
-	  D9:
-	 	location:
-	 		Room:1;	
-	 		platform:JavaSE;
-	 		resources:;
-	 		protocol:mqtt;
-	 		
-	 D10:
-	 	location:
-	 		Room:1;	
-	 		platform:JavaSE;
-	 		resources:;
-	 		protocol:mqtt;
-	 			
-	  D11:
-	 	location:
-	 		Room:1;	
-	 		platform:JavaSE;
-	 		resources:;
-	 		protocol:mqtt;
-	 		
-	  D12:
-	 	location:
-	 		Room:1;	
-	 		platform:JavaSE;
-	 		resources:;
-	 		protocol:mqtt;
-	 		
-	 D13:
-	 	location:
-	 		Room:1;
-	 		platform:NodeJS;
-	 		resources:Heater;
-	 		protocol:mqtt;
-	 		
-	 D14:	
-	 	location:
-	 		Room:1;
-	 		platform:Android;
-	 		resources:EndUserApp;
-	 		protocol:mqtt; 
-	 		
-	D15: 
-		location:
-			Room:1;
-			platform:NodeJS;
-			resources:DashBoard;
-			protocol:mqtt;
-								
-												
-	 		
-	 					
-			 
-			 
+	                      
+	 		                           

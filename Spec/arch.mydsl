@@ -1,28 +1,13 @@
-computationalService:
-		Common:
-			AvgTemp
-				consume tempMeasurement from TemperatureSensor;
-				COMPUTE (AVG_BY_SAMPLE,5);
-				generate roomAvgTempMeasurement :TempStruct;
-		Custom:
-			Proximity
-				consume badgeDetected from BadgeReader;
-				request profile to ProfileDB;
-				generate tempPref: TempStruct;
-			TempController
-				consume roomAvgTempMeasurement from AvgTemp;
-				consume tempPref from Proximity;
-				command SetTemp(setTemp) to Heater;
-			 FireState
-			 	consume roomAvgTempMeasurement from AvgTemp;
-			 	consume smokeMeasurement from SmokeDetector;
-			 	generate smokeValue:SmokeStruct;
-			 FireController 
-			 	consume smokeValue from FireState;
-			 	command On() to Alarm;
-			 	command FireNotify(fireNotify) to EndUserApp;			 	
-			 DisplayController
-			 	consume tempMeasurement from TemperatureSensor;
-			 	consume humidityMeasurement from HumiditySensor;
-			 	consume weatherMeasurement from YahooWeatherService;
-			 	command DisplaySensorMeasurement(sensorMeasurement) to DashBoard;				 
+computationalService:                                                       
+	Custom:                    
+		 Proximity
+		 	consume badgeDetected from BadgeReader;
+			consume badgeDisappeared from BadgeReader;
+			request profile to ProfileDB;
+			generate tempPref: TempStruct;
+		RoomController
+			consume tempPref from Proximity;
+			command Off() to Heater;
+			command SetTemp(setTemp) to Heater;
+						 	    
+			

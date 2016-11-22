@@ -149,9 +149,9 @@ public class SensorCompiler {
 			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
 				generateJavaSESensorLogic_SensorCompiler();
 				generateJavaSESensorFactory_SensorCompiler();
-				//generateJavaSE_TagCompiler();
+				// generateJavaSE_TagCompiler();
 				generateSensorJavaSE_EventDrivenSensorCompiler();
-				
+
 			}
 
 			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
@@ -169,34 +169,34 @@ public class SensorCompiler {
 		}
 
 	}
-	
-	// Generate Code for Tag 
+
+	// Generate Code for Tag
 	public void generateTagCode() {
 		generateSensorInteraction_SensorCompiler();
-		
+
 		if (GlobalVariable.activity
 				.equals(GlobalVariable.ACTIVITY_GENERATE_DEVICEDRIVER)) {
-		
-		if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
-			generateJavaSESensorLogic_SensorCompiler();
-			generateJavaSESensorFactory_SensorCompiler();
-			generateJavaSE_TagCompiler();
-			
+
+			if (GlobalVariable.ENABLE_JAVASE_CODE_GENERATATION) {
+				generateJavaSESensorLogic_SensorCompiler();
+				generateJavaSESensorFactory_SensorCompiler();
+				generateJavaSE_TagCompiler();
+
+			}
+
+			if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
+				generateAndroidSensorLogic_SensorCompiler();
+				generateAndroidSensorFactory_SensorCompiler();
+				generateSensorAndroid_EventDrivenSensorCompiler();
+
+			}
+			generateSensorInterface_SensorCompiler();
+			for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
+				generateSensorListener_SensorCompiler(sensorDriver
+						.getAllGeneratedInfo().get(i));
+			}
 		}
 
-		if (GlobalVariable.ENABLE_ANDROID_CODE_GENERATION) {
-			generateAndroidSensorLogic_SensorCompiler();
-			generateAndroidSensorFactory_SensorCompiler();
-			generateSensorAndroid_EventDrivenSensorCompiler();
-
-		}
-		generateSensorInterface_SensorCompiler();
-		for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
-			generateSensorListener_SensorCompiler(sensorDriver
-					.getAllGeneratedInfo().get(i));
-		}
-		}
-		
 	}
 
 	// Sensor's Interaction
@@ -263,9 +263,8 @@ public class SensorCompiler {
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}
 
-	
 	// For Tag
-	
+
 	private void generateJavaSE_TagCompiler() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorImplFactory
@@ -274,7 +273,6 @@ public class SensorCompiler {
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}
 
-	
 	private void generateSensorAndroid_PeriodicSensorCompiler() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorImplFactory
@@ -307,7 +305,5 @@ public class SensorCompiler {
 		SourceFileDumper dumpGeneratedSensorListener = new SourceFileDumper();
 		dumpGeneratedSensorListener.dumpCompilationUnit(generateCU);
 	}
-
-	
 
 }

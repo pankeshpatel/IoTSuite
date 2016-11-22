@@ -49,23 +49,20 @@ public class JavaFrameworkFromST {
 				+ sensorDriver.getName() + ".java", templateOfSensorDriver,
 				"JavaSESensorImpl", "sensor", sensorDriver);
 	}
-	
-	
+
 	// JavaSE Tag Impl
-		public CompilationUnit generateJavaSETagImpl(
-				Sensor sensorDriver) {
-			StringTemplate templateOfSensorDriver = group
-					.getInstanceOf("JavaSE/implTagJavaSE");
-			templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
+	public CompilationUnit generateJavaSETagImpl(Sensor sensorDriver) {
+		StringTemplate templateOfSensorDriver = group
+				.getInstanceOf("JavaSE/implTagJavaSE");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 
-			templateOfSensorDriver.registerRenderer(String.class,
-					new MyAttributeRenderer());
+		templateOfSensorDriver.registerRenderer(String.class,
+				new MyAttributeRenderer());
 
-			return new CompilationUnit(GlobalVariable.JAVASE_ENABLED_DEVICES
-					+ sensorDriver.getName() + ".java", templateOfSensorDriver,
-					"JavaSESensorImpl", "sensor", sensorDriver);
-		}
-	
+		return new CompilationUnit(GlobalVariable.JAVASE_ENABLED_DEVICES
+				+ sensorDriver.getName() + ".java", templateOfSensorDriver,
+				"JavaSESensorImpl", "sensor", sensorDriver);
+	}
 
 	public CompilationUnit generateComputationalServiceFactory(
 			ComputationalService computationalService) {
@@ -488,6 +485,41 @@ public class JavaFrameworkFromST {
 		templateOfGUIDriver, "client", "gui", guiDriver);
 	}
 
+	
+	
+	// ComputationalService Common component for Node.js
+		public CompilationUnit generateAggregatorComputationalServiceLogicNodejs(
+				ComputationalService computationalService) {
+
+			StringTemplate templateOfComputationalService = group
+					.getInstanceOf("Common/logicAggComputationalServiceNodejs");
+			templateOfComputationalService.setAttribute("CS", computationalService);
+
+			templateOfComputationalService.registerRenderer(String.class,
+					new MyAttributeRenderer());
+
+			return new CompilationUnit("Logic" + computationalService.getName()
+					+ ".js", templateOfComputationalService, "Logic", "Future",
+					computationalService);
+		}
+	
+		// ComputationalService Custom component for Node.js
+		public CompilationUnit generateComputationalServiceLogicNodejs(
+				ComputationalService computationalService) {
+
+			StringTemplate templateOfComputationalService = group
+					.getInstanceOf("Common/logicComputationalServiceNodejs");
+			templateOfComputationalService.setAttribute("CS", computationalService);
+
+			templateOfComputationalService.registerRenderer(String.class,
+					new MyAttributeRenderer());
+
+			return new CompilationUnit("Logic" + computationalService.getName()
+					+ ".js", templateOfComputationalService, "Logic", "Future",
+					computationalService);
+		}
+	
+	
 	// ComputationalService
 	public CompilationUnit generateAggregatorComputationalServiceLogic(
 			ComputationalService computationalService) {
@@ -773,21 +805,21 @@ public class JavaFrameworkFromST {
 
 			return new CompilationUnit(".project", templateOfDevice,
 					"deviceProject", device.getName(), device);
-			
+
 		}
-		
+
 		// For NodeJS-enabled devices
-		if(device.getType().equals(GlobalVariable.NODEJS_ENABLED_DEVICES)){
+		if (device.getType().equals(GlobalVariable.NODEJS_ENABLED_DEVICES)) {
 			StringTemplate templateOfDevice = group
 					.getInstanceOf("NodeJS/eclipseProjectNodeJS");
-			
+
 			templateOfDevice.setAttribute("device", device);
 			templateOfDevice.registerRenderer(String.class,
 					new MyAttributeRenderer());
-			
+
 			return new CompilationUnit(".project", templateOfDevice,
 					"deviceProject", device.getName(), device);
-			
+
 		}
 
 		return null;

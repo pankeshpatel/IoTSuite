@@ -12,7 +12,7 @@ public abstract class SoftwareComponent<I extends Information> {
 	private String name;
 	private Set<I> generateInfo = new HashSet<I>();
 	private Set<I> consumeInfo = new HashSet<I>();
-	
+
 	private List<TempConsumeInfo> myTempConsumeInfo = new ArrayList<TempConsumeInfo>();
 
 	public SoftwareComponent(String name, Set<I> generateInfo,
@@ -61,7 +61,7 @@ public abstract class SoftwareComponent<I extends Information> {
 		allConsumedInfo.addAll(getConsumeInfo());
 		return allConsumedInfo;
 	}
-	
+
 	public List<TempConsumeInfo> getTempAllConsumeInfo() {
 		return myTempConsumeInfo;
 	}
