@@ -2,34 +2,34 @@ devices:
    BadgeReaderMgmtDevice:                                                
 		    location:                                       
 			  Room:1;                                         
-			platform: NodeJS;                                 
-			resources: BadgeReader;                     
-			protocol: mqtt;                                  
+			platform:NodeJS;                                 
+			resources:BadgeReader;                     
+			protocol:mqtt;                                  
 	DatabaseSrvDevice:                                                  
 			location:                                       
-	 		  Room: 1;                                  
-	 		platform: JavaSE;                           
-	 		resources: ProfileDB;                     
-	 		protocol: mqtt;                          
-	 		database: MySQL; 
+	 		  Room:1;                                  
+	 		platform:JavaSE;                           
+	 		resources:ProfileDB;                     
+	 		protocol:mqtt;                          
+	 		database:MySQL; 
 	ResourceMgmtDevice1:                                                
 			location:                                       
-	 		  Room: 1;                                  
-	 		platform: JavaSE;                           
-	 		resources: ;                      
-	 		protocol: mqtt; 
+	 		  Room:1;                                  
+	 		platform:JavaSE;                           
+	 		resources:;                      
+	 		protocol:mqtt; 
 	ResourceMgmtDevice2:                                                
 			location:                                       
-	 		  Room: 1;                                  
-	 		platform: JavaSE;                           
-	 		resources: ;                      
-	 		protocol: mqtt;    		
+	 		  Room:1;                                  
+	 		platform:JavaSE;                           
+	 		resources:;                      
+	 		protocol:mqtt;    		
 	HeaterMgmtDevice:                                                
 			location:                                       
-	 		  Room: 1;                                  
-	 		platform: JavaSE;                           
-	 		resources: Heater;                      
-	 		protocol: mqtt;          
+	 		  Room:1;                                  
+	 		platform:JavaSE;                           
+	 		resources:Heater;                      
+	 		protocol:mqtt;          
 	 		
 	                      
 	 		                           

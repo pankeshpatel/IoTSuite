@@ -4,7 +4,7 @@ structs:
 		unitOfMeasurement : String;																				
 	BadgeStruct                                                                             
 		badgeID: String;                                                                    
-		badgeEvent:String;                                                                  
+		badgeEvent:String;                                                                 
 	                                                         
 resources:                                                                                 
 		tags:	                                                                            

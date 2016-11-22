@@ -1,14 +1,13 @@
-structs:	
-	TempStruct                                                                              
+structs:
+	 TempStruct                                                                              
 		tempValue: double;                                                                  
 		unitOfMeasurement : String;																				
 	BadgeStruct                                                                             
 		badgeID: String;                                                                    
-		badgeEvent:String;                                                                  
-	                                                         
-resources:                                                                                 
-		tags:	                                                                            
-			BadgeReader                                                                     
+		badgeEvent:String;        	 	     	  
+resources:
+        tags:
+        	BadgeReader                                                                     
 				generate badgeDetected: BadgeStruct;    
 				generate badgeDisappeared: BadgeStruct;                                    
 		actuators:                                                                          
@@ -17,4 +16,4 @@ resources:
 				action SetTemp(setTemp:TempStruct);				                                         
 		storages:                                                                           
 			ProfileDB                                                                       
-				generate profile:TempStruct accessed-by badgeID:String;						
+				generate profile:TempStruct accessed-by badgeID:String;	
