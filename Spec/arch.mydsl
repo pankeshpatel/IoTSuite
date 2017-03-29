@@ -1,5 +1,5 @@
-computationalService:
-		Custom:                    
+computationalService:                                                       
+	Custom:                    
 		 Proximity
 		 	consume badgeDetected from BadgeReader;
 			consume badgeDisappeared from BadgeReader;
@@ -9,3 +9,5 @@ computationalService:
 			consume tempPref from Proximity;
 			command Off() to Heater;
 			command SetTemp(setTemp) to Heater;
+						 	    
+			

@@ -41,6 +41,7 @@ public class Main {
 			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 			vocParser.vocabSpec();
+			System.exit(0);
 
 		}
 		// GenFiller.copyDeviceDrivers();
@@ -174,6 +175,7 @@ public class Main {
 		 * difference);
 		 */
 		GenFiller.copyLinking();
+
 	}
 
 }

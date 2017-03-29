@@ -195,6 +195,7 @@ public class ComputationalServiceCompiler {
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 
 	}
+
 	// Node.js aggregator
 	public void generateNodejsAggregatorComputationalServiceLogic_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
@@ -203,10 +204,7 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
-	
-	
-	
-	
+
 	public void generateAggregatorComputationalServiceLogic_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
@@ -215,9 +213,8 @@ public class ComputationalServiceCompiler {
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
 
-
 	// Computational service for Nodejs
-	
+
 	public void generateNodejsComputationalServiceLogic_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
@@ -225,8 +222,7 @@ public class ComputationalServiceCompiler {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
-	
-	
+
 	public void generateComputationalServiceLogic_ComputationalServiceCompiler() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService

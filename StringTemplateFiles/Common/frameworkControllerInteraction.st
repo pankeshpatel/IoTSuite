@@ -38,7 +38,11 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
     $CS.allActions:{ action |
     protected  void $action.name; format="capital"$($action.allParameter:{ param | $param.type$ arg }; separator=" , "$) {
   	    Logger.log( myDeviceInfo.getName() ,"$CS.name$" , "Sending command $action.name$");
+  	    
+  	    // old line
     	this.myPubSubMiddleware.publish("$action.name; format="capital"$", $if(action.Parameter)$ $action.allParameter: { param | arg }; separator=" , "$ $else$ null $endif$);     
+    	
+    	//this.myPubSubMiddleware.publish("$action.name; format="capital"$", $if(action.Parameter)$ $action.allParameter: { param | arg }; separator=" , "$ $else$ "" $endif$);
     }
 }; separator="\n"$   
 

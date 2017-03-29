@@ -485,41 +485,38 @@ public class JavaFrameworkFromST {
 		templateOfGUIDriver, "client", "gui", guiDriver);
 	}
 
-	
-	
 	// ComputationalService Common component for Node.js
-		public CompilationUnit generateAggregatorComputationalServiceLogicNodejs(
-				ComputationalService computationalService) {
+	public CompilationUnit generateAggregatorComputationalServiceLogicNodejs(
+			ComputationalService computationalService) {
 
-			StringTemplate templateOfComputationalService = group
-					.getInstanceOf("Common/logicAggComputationalServiceNodejs");
-			templateOfComputationalService.setAttribute("CS", computationalService);
+		StringTemplate templateOfComputationalService = group
+				.getInstanceOf("Common/logicAggComputationalServiceNodejs");
+		templateOfComputationalService.setAttribute("CS", computationalService);
 
-			templateOfComputationalService.registerRenderer(String.class,
-					new MyAttributeRenderer());
+		templateOfComputationalService.registerRenderer(String.class,
+				new MyAttributeRenderer());
 
-			return new CompilationUnit("Logic" + computationalService.getName()
-					+ ".js", templateOfComputationalService, "Logic", "Future",
-					computationalService);
-		}
-	
-		// ComputationalService Custom component for Node.js
-		public CompilationUnit generateComputationalServiceLogicNodejs(
-				ComputationalService computationalService) {
+		return new CompilationUnit("Logic" + computationalService.getName()
+				+ ".js", templateOfComputationalService, "Logic", "Future",
+				computationalService);
+	}
 
-			StringTemplate templateOfComputationalService = group
-					.getInstanceOf("Common/logicComputationalServiceNodejs");
-			templateOfComputationalService.setAttribute("CS", computationalService);
+	// ComputationalService Custom component for Node.js
+	public CompilationUnit generateComputationalServiceLogicNodejs(
+			ComputationalService computationalService) {
 
-			templateOfComputationalService.registerRenderer(String.class,
-					new MyAttributeRenderer());
+		StringTemplate templateOfComputationalService = group
+				.getInstanceOf("Common/logicComputationalServiceNodejs");
+		templateOfComputationalService.setAttribute("CS", computationalService);
 
-			return new CompilationUnit("Logic" + computationalService.getName()
-					+ ".js", templateOfComputationalService, "Logic", "Future",
-					computationalService);
-		}
-	
-	
+		templateOfComputationalService.registerRenderer(String.class,
+				new MyAttributeRenderer());
+
+		return new CompilationUnit("Logic" + computationalService.getName()
+				+ ".js", templateOfComputationalService, "Logic", "Future",
+				computationalService);
+	}
+
 	// ComputationalService
 	public CompilationUnit generateAggregatorComputationalServiceLogic(
 			ComputationalService computationalService) {

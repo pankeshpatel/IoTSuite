@@ -17,7 +17,7 @@ public class Storage extends SoftwareComponent {
 	private Set<Action> actions = new HashSet<Action>();
 	public List<String> actionStructFieldName = new ArrayList<String>();
 	public String databaseName = "iotsuiteuser";
-	public String id;
+	public static String id;
 	// Following structure is used to store fieldName,fieldType and StructName
 	// (ex- TempStruct,tempValue and double)
 	public static List<ConsumeInfo> consumeInfoFieldsForStorage;
@@ -70,7 +70,8 @@ public class Storage extends SoftwareComponent {
 	}
 
 	public List<String> getAllfieldName() {
-		id = fieldName.get(0);
+		
+	//	id = fieldName.get(0);
 		return fieldName;
 	}
 
@@ -79,6 +80,8 @@ public class Storage extends SoftwareComponent {
 	}
 
 	public List<StructField> getAllStructField() {
+		id = fieldName.get(0);
+	//	System.out.println("id is "+id+"all field name is"+fieldName);
 		ArrayList<StructField> allStructFields = new ArrayList<StructField>();
 		allStructFields.addAll(getstructField());
 		return allStructFields;

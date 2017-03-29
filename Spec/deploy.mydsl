@@ -2,7 +2,7 @@ devices:
    BadgeReaderMgmtDevice:                                                
 		    location:                                       
 			  Room:1;                                         
-			platform:NodeJS;                                 
+			platform:JavaSE;                                 
 			resources:BadgeReader;                     
 			protocol:mqtt;                                  
 	DatabaseSrvDevice:                                                  
@@ -15,13 +15,13 @@ devices:
 	ResourceMgmtDevice1:                                                
 			location:                                       
 	 		  Room:1;                                  
-	 		platform:NodeJS;                           
+	 		platform:JavaSE;                           
 	 		resources:;                      
 	 		protocol:mqtt; 
 	ResourceMgmtDevice2:                                                
 			location:                                       
 	 		  Room:1;                                  
-	 		platform:NodeJS;                           
+	 		platform:JavaSE;                           
 	 		resources:;                      
 	 		protocol:mqtt;    		
 	HeaterMgmtDevice:                                                
@@ -29,4 +29,7 @@ devices:
 	 		  Room:1;                                  
 	 		platform:JavaSE;                           
 	 		resources:Heater;                      
-	 		protocol:mqtt;           
+	 		protocol:mqtt;          
+	 		
+	                      
+	 		                           

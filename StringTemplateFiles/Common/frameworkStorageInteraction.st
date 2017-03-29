@@ -14,6 +14,7 @@ public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
 	
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
+	Gson gson = new Gson(); 
 
     
 	public $Storageservice.name$(PubSubMiddleware pubSubM,  Device deviceInfo) {     
@@ -33,10 +34,10 @@ protected void postInitialize() {
 
 	$Storageservice.allDataAccess:{ dataAccess |  
 	protected void set$dataAccess.dataAccessName; format="capital"$ 
-	($dataAccess.generatedInfo.type$  new$dataAccess.dataAccessName; format="avoidCapital"$Value ){
+	($dataAccess.generatedInfo.type$  newValue ){
 	
-	
-	myPubSubMiddleware.publish("$dataAccess.dataAccessName$", new$dataAccess.dataAccessName$Value);
+	           String data = gson.toJson(newValue);  
+	myPubSubMiddleware.publish("$dataAccess.dataAccessName$", data);
 	}
 	
    }$
@@ -49,9 +50,8 @@ protected void postInitialize() {
 			if (eventName.equals("get$dataAccess.dataAccessName$")) {
 				Logger.log(myDeviceInfo.getName(),"$Storageservice.name$",
 					"CommandReceived get$dataAccess.dataAccessName$");
-					 JsonObject jsonObject = new JsonParser().parse(arg.toString()).getAsJsonObject();
-					
-					 onNew$dataAccess.dataAccessName$RequestReceived((String) arg);
+	
+					 onNew$dataAccess.dataAccessName$RequestReceived(arg.toString()); 
 			}
 		}$
 		

@@ -36,7 +36,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
   	    $action.allParameter:{ param |  String data = gson.toJson(arg);}; separator=","$
   	    
   	    
-    	this.myPubSubMiddleware.publish("$action.name; format="capital"$", $if(action.Parameter)$ $action.allParameter: { param | data }; separator=" , "$ $else$ null $endif$);     
+    	this.myPubSubMiddleware.publish("$action.name; format="capital"$", $if(action.Parameter)$ $action.allParameter: { param | data }; separator=" , "$ $else$ "" $endif$);     
     }
 }; separator="\n"$	
 		

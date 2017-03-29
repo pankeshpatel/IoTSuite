@@ -88,6 +88,7 @@ public class StorageCompiler {
 		getAllFieldType();
 		getStructField();
 		getStructFieldName();
+	//	System.out.println("File name is"+fieldName.get(0)+ "in compiler");
 		return fieldName;
 	}
 
